@@ -77,8 +77,8 @@ Columnas: Fecha, Nombre, WhatsApp, Correo, Negocio o marca, Redes donde publica,
 
 ## 4. Estilo tecnológico
 
-- **Colores** (`src/index.css`): fondo casi negro azulado, **cian eléctrico** (`--tech`) para los detalles técnicos y **rojo solo en el botón principal**.
-- **Píxeles** (`src/components/Pixel.jsx` y `PixelField.jsx`): logo "S" en pixel art, campo de píxeles animado de fondo, separador de píxeles, esquinas tipo visor (HUD) en el video y el calendario, y la línea técnica que se "decodifica" al cargar.
+- **Colores** (`src/index.css`): fondo casi negro azulado y **cian eléctrico** (`--tech`) para los detalles técnicos y los botones de agendar.
+- **Píxeles** (`src/components/Pixel.jsx` y `PixelField.jsx`): logo "SPR" en pixel art (se edita en el dibujo `LOGO` de `Pixel.jsx`), campo de píxeles animado de fondo, separador de píxeles, esquinas tipo visor (HUD) en el video y el calendario, y la línea técnica que se "decodifica" al cargar.
 - **Tipografía**: Inter para textos y JetBrains Mono para etiquetas técnicas.
 - **Fondo 3D** (`src/components/Background3D.jsx`): un icosaedro en líneas cian con una nube de píxeles que gira en sentido contrario.
   - Se descarga aparte y **después** de que la página ya se ve.
@@ -88,7 +88,7 @@ Columnas: Fecha, Nombre, WhatsApp, Correo, Negocio o marca, Redes donde publica,
 
 ## 5. Accesibilidad
 
-Contraste verificado: texto principal 17.7:1, texto secundario 7.7:1, placeholders 5.5:1, cian 11.2:1, texto del botón rojo 4.8:1. Foco visible en todos los controles, botones y opciones de 44px o más, labels en todos los campos y errores anunciados al lector de pantalla.
+Contraste verificado: texto principal 17.7:1, texto secundario 7.7:1, placeholders 5.5:1, cian 11.2:1, texto de los botones 11.2:1. Foco visible en todos los controles, botones y opciones de 44px o más, labels en todos los campos y errores anunciados al lector de pantalla.
 
 ## 6. Publicar
 

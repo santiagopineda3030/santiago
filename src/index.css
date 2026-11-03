@@ -2,11 +2,11 @@
 
 /* =========================================================================
    COLORES — estilo tecnológico
-   · Cian eléctrico (--tech) para detalles: píxeles, líneas, 3D, estados.
-   · Rojo (--accent) SOLO para el botón principal.
+   · Cian eléctrico (--tech) para detalles: píxeles, líneas, 3D, estados
+     y también para los botones de agendar (--accent).
    Contraste verificado sobre --bg (#05070a):
      --fg 17.7:1 · --fg-2 7.7:1 · --placeholder 5.5:1 · --tech 11.2:1
-     texto del botón (#ffffff) sobre --accent 4.8:1
+     texto del botón (--on-accent #05070a) sobre --accent 11.2:1
    ========================================================================= */
 :root {
   --bg: #05070a;
@@ -17,9 +17,9 @@
   --placeholder: #74889f;
   --tech: #22d3ee;
   --tech-soft: rgba(34, 211, 238, 0.14);
-  --accent: #e02020;
-  --accent-hover: #c41818;
-  --on-accent: #ffffff;
+  --accent: #22d3ee;        /* botones de agendar: mismo cian de la página */
+  --accent-hover: #67e8f9;
+  --on-accent: #05070a;
   --line: rgba(148, 190, 230, 0.12);
   --line-strong: rgba(148, 190, 230, 0.26);
 
@@ -82,7 +82,7 @@ body {
     color: var(--tech);
   }
 
-  /* Botón principal: el único elemento rojo de la página */
+  /* Botones de agendar (cian, como el resto de la página) */
   .btn-primary {
     position: relative;
     display: inline-flex;

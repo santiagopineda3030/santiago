@@ -78,7 +78,7 @@ export default function Hero() {
       <div className="mx-auto max-w-5xl px-5 pb-16 pt-10 text-center md:px-8 md:pb-24 md:pt-16">
         {/* Marca: logo pixel + nombre */}
         <p data-hero className="inline-flex items-center gap-3 text-sm font-medium tracking-[0.08em] text-fg">
-          <PixelLogo size={3} className="text-tech" />
+          <PixelLogo size={3} label="SPR" className="h-[21px] w-auto text-tech md:h-7" />
           {marca}
         </p>
 

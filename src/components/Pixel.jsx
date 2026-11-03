@@ -4,32 +4,35 @@ import { useEffect, useState } from 'react'
    Piezas de estilo "pixel"
    ========================================================================== */
 
-/* Logo "S" en pixel art (7x9). Cada 1 es un píxel encendido. */
-const S = [
-  '0111110',
-  '1100011',
-  '1100000',
-  '0111100',
-  '0001110',
-  '0000011',
-  '1100011',
-  '0111110',
+/* Logo "SPR" en pixel art: 3 letras de 5x7 con un espacio entre ellas.
+   Cada # es un píxel encendido. Para cambiar el logo, edita este dibujo. */
+const LOGO = [
+  '.###. ####. ####.',
+  '#...# #...# #...#',
+  '#.... #...# #...#',
+  '.###. ####. ####.',
+  '....# #.... #.#..',
+  '#...# #.... #..#.',
+  '.###. #.... #...#',
 ]
 
-export function PixelLogo({ size = 4, className = '' }) {
+export function PixelLogo({ size = 3, className = '', label }) {
+  const ancho = LOGO[0].length
   const celdas = []
-  S.forEach((fila, y) =>
+  LOGO.forEach((fila, y) =>
     [...fila].forEach((c, x) => {
-      if (c === '1') celdas.push({ x, y, d: (x + y) * 35 })
+      if (c === '#') celdas.push({ x, y, d: x * 28 + y * 18 })
     }),
   )
   return (
     <svg
-      width={7 * size}
-      height={S.length * size}
-      viewBox={`0 0 7 ${S.length}`}
+      width={ancho * size}
+      height={LOGO.length * size}
+      viewBox={`0 0 ${ancho} ${LOGO.length}`}
       shapeRendering="crispEdges"
-      aria-hidden="true"
+      role={label ? 'img' : undefined}
+      aria-label={label}
+      aria-hidden={label ? undefined : true}
       className={`pixel-logo ${className}`}
     >
       {celdas.map(({ x, y, d }) => (
