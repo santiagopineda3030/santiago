@@ -1,39 +1,65 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import { Icosahedron, PerformanceMonitor } from '@react-three/drei'
+import { IcosahedronGeometry } from 'three'
 
 /**
- * Fondo 3D del hero: un icosaedro en wireframe que gira muy lento,
- * con una luz roja suave que llega desde abajo.
+ * Fondo 3D del hero (estilo tecnológico):
+ * - Un icosaedro en líneas cian que gira muy lento.
+ * - Una nube de "píxeles" cuadrados alrededor, girando en sentido contrario.
  * Este archivo se carga de forma diferida (ver Hero.jsx).
  *
  * lite = true → versión liviana para móvil: menos detalle,
  * resolución 1x y ~30 cuadros por segundo.
  */
+const CIAN = '#22d3ee'
+
 function Forma({ lite }) {
-  const ref = useRef()
+  const malla = useRef()
+  const nube = useRef()
   const { viewport } = useThree()
   // Tamaño relativo a la pantalla para que en móvil no tape todo
   const escala = Math.min(0.92, viewport.width / 5.2)
 
+  // Posiciones de los píxeles: vértices de una esfera geodésica más grande
+  const posiciones = useMemo(() => {
+    const g = new IcosahedronGeometry(2.55, lite ? 2 : 3)
+    const arr = g.getAttribute('position').array
+    const vistos = new Set()
+    const unicos = []
+    for (let i = 0; i < arr.length; i += 3) {
+      const k = `${arr[i].toFixed(3)},${arr[i + 1].toFixed(3)},${arr[i + 2].toFixed(3)}`
+      if (vistos.has(k)) continue
+      vistos.add(k)
+      unicos.push(arr[i], arr[i + 1], arr[i + 2])
+    }
+    g.dispose()
+    return new Float32Array(unicos)
+  }, [lite])
+
   useFrame((_, delta) => {
-    if (!ref.current) return
     const d = Math.min(delta, 0.1)
-    ref.current.rotation.y += d * 0.06
-    ref.current.rotation.x += d * 0.025
+    if (malla.current) {
+      malla.current.rotation.y += d * 0.06
+      malla.current.rotation.x += d * 0.025
+    }
+    if (nube.current) nube.current.rotation.y -= d * 0.035
   })
 
   return (
-    <Icosahedron ref={ref} args={[1.9, lite ? 1 : 2]} scale={escala} rotation={[0.4, 0.2, 0]}>
-      <meshStandardMaterial
-        wireframe
-        color="#8a8a8a"
-        roughness={1}
-        metalness={0}
-        transparent
-        opacity={lite ? 0.32 : 0.28}
-      />
-    </Icosahedron>
+    <group scale={escala}>
+      <Icosahedron ref={malla} args={[1.9, lite ? 1 : 2]} rotation={[0.4, 0.2, 0]}>
+        <meshBasicMaterial wireframe color={CIAN} transparent opacity={lite ? 0.12 : 0.13} />
+      </Icosahedron>
+
+      {/* Píxeles: los puntos sin textura se dibujan cuadrados */}
+      <points ref={nube} rotation={[0.2, 0, 0.1]}>
+        <bufferGeometry>
+          <bufferAttribute attach="attributes-position" args={[posiciones, 3]} />
+        </bufferGeometry>
+        <pointsMaterial color={CIAN} size={lite ? 0.05 : 0.04} sizeAttenuation transparent opacity={0.55} depthWrite={false} />
+      </points>
+    </group>
   )
 }
 
@@ -68,9 +94,6 @@ export default function Background3D({ lite = false, visible = true }) {
       >
         <PerformanceMonitor onDecline={() => setDpr(1)} />
         {lite && <Ticker30fps activo={visible} />}
-        <ambientLight intensity={0.55} />
-        {/* Luz roja suave y baja: el único toque de color del fondo */}
-        <directionalLight position={[-1.5, -3, 1.5]} intensity={2.4} color="#e02020" />
         <Forma lite={lite} />
       </Canvas>
     </div>

@@ -75,18 +75,20 @@ Columnas: Fecha, Nombre, WhatsApp, Correo, Negocio o marca, Redes donde publica,
 
 ---
 
-## 4. Fondo 3D
+## 4. Estilo tecnológico
 
-Un icosaedro en líneas que gira muy lento detrás del titular, con una luz roja baja (`src/components/Background3D.jsx`).
-
-- Se descarga aparte y **después** de que la página ya se ve: nunca retrasa el titular ni el video.
-- **Celular:** versión liviana (menos detalle, resolución 1x, ~30 cuadros por segundo).
-- **Desactivado** con *reducir movimiento* o *ahorro de datos*, y en pausa cuando sale de la pantalla.
-- Si el dispositivo no soporta 3D, simplemente no aparece.
+- **Colores** (`src/index.css`): fondo casi negro azulado, **cian eléctrico** (`--tech`) para los detalles técnicos y **rojo solo en el botón principal**.
+- **Píxeles** (`src/components/Pixel.jsx` y `PixelField.jsx`): logo "S" en pixel art, campo de píxeles animado de fondo, separador de píxeles, esquinas tipo visor (HUD) en el video y el calendario, y la línea técnica que se "decodifica" al cargar.
+- **Tipografía**: Inter para textos y JetBrains Mono para etiquetas técnicas.
+- **Fondo 3D** (`src/components/Background3D.jsx`): un icosaedro en líneas cian con una nube de píxeles que gira en sentido contrario.
+  - Se descarga aparte y **después** de que la página ya se ve.
+  - **Celular:** versión liviana (menos detalle, resolución 1x, ~30 cuadros por segundo).
+  - **Desactivado** con *reducir movimiento* o *ahorro de datos*, y en pausa cuando sale de la pantalla.
+- Con *reducir movimiento* activado no hay animaciones: el campo de píxeles queda quieto, el texto no se decodifica y el cursor no parpadea.
 
 ## 5. Accesibilidad
 
-Contraste verificado: texto principal 18.2:1, texto secundario 7.6:1, placeholders 5.7:1, texto del botón rojo 4.8:1. Foco visible en todos los controles, botones y opciones de 44px o más, labels en todos los campos y errores anunciados al lector de pantalla.
+Contraste verificado: texto principal 17.7:1, texto secundario 7.7:1, placeholders 5.5:1, cian 11.2:1, texto del botón rojo 4.8:1. Foco visible en todos los controles, botones y opciones de 44px o más, labels en todos los campos y errores anunciados al lector de pantalla.
 
 ## 6. Publicar
 

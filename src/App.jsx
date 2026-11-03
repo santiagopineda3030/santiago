@@ -6,6 +6,7 @@ import Hero from './components/Hero.jsx'
 import Agenda from './components/Agenda.jsx'
 import Footer from './components/Footer.jsx'
 import StickyCTA from './components/StickyCTA.jsx'
+import PixelField from './components/PixelField.jsx'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -42,6 +43,8 @@ export default function App() {
 
   return (
     <>
+      {/* Fondo de píxeles animado (detrás de toda la página) */}
+      <PixelField />
       <Hero />
       <main>
         <Agenda />

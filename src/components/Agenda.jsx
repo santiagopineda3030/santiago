@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { agenda } from '../content.js'
 import { IconAlert, IconCalendar, IconCheck } from './Icons.jsx'
+import { HudCorners, PixelDivider } from './Pixel.jsx'
 
 /* URLs privadas: se configuran en el archivo .env (ver README.md) */
 const APPS_SCRIPT_URL = import.meta.env.VITE_APPS_SCRIPT_URL || ''
@@ -120,7 +121,9 @@ export default function Agenda() {
         {estado !== 'listo' ? (
           <>
             <div data-reveal className="text-center">
-              <h2 className="text-balance text-3xl font-medium leading-tight tracking-[-0.02em] md:text-[2.75rem]">
+              <PixelDivider className="mb-10" />
+              <p className="tag">{`// ${agenda.etiqueta}`}</p>
+              <h2 className="mt-4 text-balance text-3xl font-medium leading-tight tracking-[-0.02em] md:text-[2.75rem]">
                 {agenda.titulo}
               </h2>
               <p className="mx-auto mt-4 max-w-md text-pretty text-fg-2 md:text-lg">{agenda.intro}</p>
@@ -132,9 +135,9 @@ export default function Agenda() {
               data-oculta-cta
               onSubmit={enviar}
               noValidate
-              className="relative mt-12 grid gap-7 rounded-2xl border border-line bg-surface p-6 sm:p-9"
+              className="relative mt-12 grid gap-7 rounded-lg border border-line-strong bg-surface p-6 sm:p-9"
             >
-              <Campo id="nombre" label={campos.nombre.label} error={errores.nombre}>
+              <Campo id="nombre" n="01" label={campos.nombre.label} error={errores.nombre}>
                 <input
                   id="nombre"
                   data-campo="nombre"
@@ -150,7 +153,7 @@ export default function Agenda() {
                 />
               </Campo>
 
-              <Campo id="whatsapp" label={campos.whatsapp.label} ayuda={campos.whatsapp.ayuda} error={errores.whatsapp}>
+              <Campo id="whatsapp" n="02" label={campos.whatsapp.label} ayuda={campos.whatsapp.ayuda} error={errores.whatsapp}>
                 <input
                   id="whatsapp"
                   data-campo="whatsapp"
@@ -167,7 +170,7 @@ export default function Agenda() {
                 />
               </Campo>
 
-              <Campo id="correo" label={campos.correo.label} error={errores.correo}>
+              <Campo id="correo" n="03" label={campos.correo.label} error={errores.correo}>
                 <input
                   id="correo"
                   data-campo="correo"
@@ -184,7 +187,7 @@ export default function Agenda() {
                 />
               </Campo>
 
-              <Campo id="negocio" label={campos.negocio.label} error={errores.negocio}>
+              <Campo id="negocio" n="04" label={campos.negocio.label} error={errores.negocio}>
                 <textarea
                   id="negocio"
                   data-campo="negocio"
@@ -200,7 +203,10 @@ export default function Agenda() {
               </Campo>
 
               <fieldset aria-describedby={errores.redes ? 'redes-error' : undefined}>
-                <legend className="label">{campos.redes.label}</legend>
+                <legend className="label">
+                  <span className="label-n" aria-hidden="true">05</span>
+                  {campos.redes.label}
+                </legend>
                 <div className="grid grid-cols-2 gap-2.5">
                   {campos.redes.opciones.map((red, i) => {
                     const on = datos.redes.includes(red)
@@ -215,8 +221,8 @@ export default function Agenda() {
                           aria-invalid={!!errores.redes}
                         />
                         <span
-                          className={`flex h-5 w-5 shrink-0 items-center justify-center rounded-[6px] border ${
-                            on ? 'border-fg bg-fg text-bg' : 'border-line-strong'
+                          className={`flex h-5 w-5 shrink-0 items-center justify-center rounded-[3px] border ${
+                            on ? 'border-tech bg-tech text-bg' : 'border-line-strong'
                           }`}
                         >
                           {on && <IconCheck className="h-3.5 w-3.5" strokeWidth={2.4} />}
@@ -230,7 +236,10 @@ export default function Agenda() {
               </fieldset>
 
               <fieldset aria-describedby={errores.inversion ? 'inversion-error' : undefined}>
-                <legend className="label">{campos.inversion.label}</legend>
+                <legend className="label">
+                  <span className="label-n" aria-hidden="true">06</span>
+                  {campos.inversion.label}
+                </legend>
                 <div className="grid gap-2.5">
                   {campos.inversion.opciones.map((op, i) => {
                     const on = datos.inversion === op
@@ -248,10 +257,10 @@ export default function Agenda() {
                         />
                         <span
                           className={`flex h-5 w-5 shrink-0 items-center justify-center rounded-full border ${
-                            on ? 'border-fg' : 'border-line-strong'
+                            on ? 'border-tech' : 'border-line-strong'
                           }`}
                         >
-                          {on && <span className="h-2.5 w-2.5 rounded-full bg-fg" />}
+                          {on && <span className="h-2.5 w-2.5 rounded-full bg-tech" />}
                         </span>
                         {op}
                       </Opcion>
@@ -284,13 +293,16 @@ export default function Agenda() {
         ) : (
           <div ref={exitoRef} tabIndex={-1} data-oculta-cta className="scroll-mt-6 outline-none">
             <div className="text-center">
-              <h2 className="text-balance text-3xl font-medium leading-tight tracking-[-0.02em] md:text-[2.75rem]">
+              <p className="tag">{'// Datos recibidos ✓'}</p>
+              <h2 className="mt-4 text-balance text-3xl font-medium leading-tight tracking-[-0.02em] md:text-[2.75rem]">
                 {agenda.exito.titulo(nombreCorto)}
               </h2>
               <p className="mx-auto mt-4 max-w-md text-pretty text-fg-2 md:text-lg">{agenda.exito.texto}</p>
             </div>
 
-            <div className="mt-10 overflow-hidden rounded-2xl border border-line bg-surface">
+            <div className="relative mt-12">
+              <HudCorners />
+            <div className="overflow-hidden rounded-lg border border-line-strong bg-surface">
               {/* CALENDARIO: pegar aquí el embed
                   → el link va en el archivo .env → VITE_CALENDAR_URL
                     (Calendly, Google Calendar o Cal.com) */}
@@ -302,10 +314,11 @@ export default function Agenda() {
                 />
               ) : (
                 <div className="flex aspect-[4/5] flex-col items-center justify-center gap-4 p-6 text-center sm:aspect-[4/3]">
-                  <IconCalendar className="h-8 w-8 text-fg-2" />
+                  <IconCalendar className="h-8 w-8 text-tech" />
                   <p className="text-fg-2">{agenda.exito.sinCalendario}</p>
                 </div>
               )}
+            </div>
             </div>
           </div>
         )}
@@ -314,10 +327,15 @@ export default function Agenda() {
   )
 }
 
-function Campo({ id, label, ayuda, error, children }) {
+function Campo({ id, n, label, ayuda, error, children }) {
   return (
     <div>
       <label htmlFor={id} className="label">
+        {n && (
+          <span className="label-n" aria-hidden="true">
+            {n}
+          </span>
+        )}
         {label}
       </label>
       {children}
@@ -334,9 +352,9 @@ function Campo({ id, label, ayuda, error, children }) {
 function Opcion({ activa, invalida, children }) {
   return (
     <label
-      className={`flex min-h-12 cursor-pointer select-none items-center gap-3 rounded-xl border px-4 py-3 text-[0.975rem] transition-colors duration-150 has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-fg has-[:focus-visible]:[outline-style:solid] ${
+      className={`flex min-h-12 cursor-pointer select-none items-center gap-3 rounded-md border px-4 py-3 text-[0.975rem] transition-colors duration-150 has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-tech has-[:focus-visible]:[outline-style:solid] ${
         activa
-          ? 'border-fg text-fg'
+          ? 'border-tech bg-tech-soft text-fg'
           : invalida
             ? 'border-fg/70 text-fg'
             : 'border-line-strong text-fg hover:border-fg-2'

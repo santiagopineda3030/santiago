@@ -1,24 +1,27 @@
 @import "tailwindcss";
 
 /* =========================================================================
-   COLORES (dark-minimal-red-dna)
-   El rojo es el ÚNICO acento y se usa solo en el botón principal.
-   Contraste verificado sobre --bg (#0a0a0a):
-     --fg 18.2:1 · --fg-2 7.6:1 · --placeholder 5.7:1
+   COLORES — estilo tecnológico
+   · Cian eléctrico (--tech) para detalles: píxeles, líneas, 3D, estados.
+   · Rojo (--accent) SOLO para el botón principal.
+   Contraste verificado sobre --bg (#05070a):
+     --fg 17.7:1 · --fg-2 7.7:1 · --placeholder 5.5:1 · --tech 11.2:1
      texto del botón (#ffffff) sobre --accent 4.8:1
    ========================================================================= */
 :root {
-  --bg: #0a0a0a;
-  --surface: #141414;
-  --surface-2: #1c1c1c;
-  --fg: #f5f5f5;
-  --fg-2: #a0a0a0;
-  --placeholder: #8a8a8a;
+  --bg: #05070a;
+  --surface: #0a0f15;
+  --surface-2: #101821;
+  --fg: #e6f1ff;
+  --fg-2: #8ea2b8;
+  --placeholder: #74889f;
+  --tech: #22d3ee;
+  --tech-soft: rgba(34, 211, 238, 0.14);
   --accent: #e02020;
   --accent-hover: #c41818;
   --on-accent: #ffffff;
-  --line: rgba(255, 255, 255, 0.1);
-  --line-strong: rgba(255, 255, 255, 0.22);
+  --line: rgba(148, 190, 230, 0.12);
+  --line-strong: rgba(148, 190, 230, 0.26);
 
   color-scheme: dark;
 }
@@ -29,10 +32,13 @@
   --color-surface-2: var(--surface-2);
   --color-fg: var(--fg);
   --color-fg-2: var(--fg-2);
+  --color-tech: var(--tech);
+  --color-tech-soft: var(--tech-soft);
   --color-accent: var(--accent);
   --color-line: var(--line);
   --color-line-strong: var(--line-strong);
   --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
 html {
@@ -55,25 +61,37 @@ body {
   overflow-x: hidden;
 }
 
-/* Foco visible en todo lo interactivo (en la capa base para que
-   las clases de Tailwind como outline-none puedan anularlo) */
+::selection { background: var(--tech); color: var(--bg); }
+
+/* Foco visible (cian) en todo lo interactivo */
 @layer base {
   :where(a, button, input, textarea, [tabindex]):focus-visible {
-    outline: 2px solid var(--fg);
+    outline: 2px solid var(--tech);
     outline-offset: 3px;
   }
 }
 
 @layer components {
+  /* Etiqueta técnica en monoespaciada: "// 01 — AGENDA" */
+  .tag {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--tech);
+  }
+
   /* Botón principal: el único elemento rojo de la página */
   .btn-primary {
+    position: relative;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 0.6rem;
     min-height: 3.5rem;
     padding: 0 2rem;
-    border-radius: 999px;
+    border-radius: 10px;
     background: var(--accent);
     color: var(--on-accent);
     font-weight: 500;
@@ -87,11 +105,19 @@ body {
   .btn-primary:disabled { opacity: 0.7; cursor: progress; }
 
   .label {
-    display: block;
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
     margin-bottom: 0.5rem;
     font-size: 0.975rem;
     font-weight: 500;
     color: var(--fg);
+  }
+  .label-n {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--tech);
   }
 
   .field {
@@ -99,18 +125,18 @@ body {
     width: 100%;
     min-height: 3.25rem;
     padding: 0.8rem 1rem;
-    border-radius: 12px;
+    border-radius: 8px;
     background: var(--bg);
     border: 1px solid var(--line-strong);
     color: var(--fg);
     font: inherit;
     font-size: 1rem; /* 16px: evita el zoom automático en iPhone */
+    caret-color: var(--tech);
     transition: border-color 160ms ease;
   }
   .field::placeholder { color: var(--placeholder); opacity: 1; }
-  .field:hover { border-color: rgba(255, 255, 255, 0.36); }
-  .field:focus-visible { outline-offset: 2px; }
-  /* Error: borde claro y grueso (sin rojo: el rojo es solo del botón) */
+  .field:hover { border-color: rgba(148, 190, 230, 0.42); }
+  .field:focus-visible { outline-offset: 2px; border-color: var(--tech); }
   .field[aria-invalid="true"] {
     border-color: var(--fg);
     border-width: 2px;
@@ -118,6 +144,35 @@ body {
   }
 }
 
+/* Cursor de terminal que parpadea */
+.cursor-block {
+  display: inline-block;
+  width: 0.55em;
+  height: 1.05em;
+  margin-left: 0.2em;
+  vertical-align: -0.15em;
+  background: var(--tech);
+  animation: parpadeo 1.1s steps(1, end) infinite;
+}
+@keyframes parpadeo {
+  50% { opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cursor-block { animation: none; }
+}
+
 /* Estado inicial de las animaciones de entrada (GSAP las revela).
    Sin JS o con "reducir movimiento" todo se ve normal. */
 .js-anim [data-reveal] { opacity: 0; }
+
+/* Logo pixel: los píxeles se encienden uno a uno al cargar */
+.pixel-logo rect {
+  animation: pixel-in 420ms steps(2, end) both;
+}
+@keyframes pixel-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pixel-logo rect { animation: none; }
+}

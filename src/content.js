@@ -7,7 +7,10 @@
 export const marca = 'Santiago'
 
 export const hero = {
+  /* Línea técnica encima del titular (se "decodifica" al cargar) */
+  etiqueta: 'IA · Automatización · Redes',
   titular: 'Automatiza tus redes sociales con IA',
+  resaltado: 'IA', // palabra del titular que va en cian (déjala vacía para no resaltar)
   subtitulo: 'Mira este video y agenda tu llamada',
 }
 
@@ -22,12 +25,16 @@ export const video = {
      Si usas YouTube y la dejas vacía, se usa la miniatura del video. */
   portada: '',
   textoSinVideo: 'Video de introducción',
+  /* Textos de la barra técnica debajo del video */
+  archivo: 'intro.mp4',
+  detalle: 'HD · 16:9',
 }
 
 export const ctaPrincipal = 'Agendar mi llamada'
 export const ctaFijoMovil = 'Agendar llamada'
 
 export const agenda = {
+  etiqueta: 'Paso final · Agenda',
   titulo: 'Agenda tu llamada de 30 minutos',
   intro: 'Completa tus datos y elige el horario que mejor te quede.',
 
@@ -70,4 +77,5 @@ export const footer = {
   /* WhatsApp: número con código de país, sin + ni espacios (ej: 573001234567) */
   whatsapp: { texto: 'WhatsApp', numero: '[NÚMERO]', mensaje: 'Hola Santiago, vi tu video y tengo una pregunta.' },
   lema: 'Aprende IA y automatiza tus redes',
+  estado: 'Sistema activo',
 }

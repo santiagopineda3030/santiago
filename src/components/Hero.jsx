@@ -2,6 +2,7 @@ import { Component, Suspense, lazy, useEffect, useRef, useState } from 'react'
 import { marca, hero, ctaPrincipal } from '../content.js'
 import VideoIntro from './VideoIntro.jsx'
 import { IconArrowDown } from './Icons.jsx'
+import { DecodeText, PixelLogo } from './Pixel.jsx'
 
 // El 3D se descarga aparte y solo cuando el navegador está libre
 const Background3D = lazy(() => import('./Background3D.jsx'))
@@ -75,19 +76,30 @@ export default function Hero() {
       </div>
 
       <div className="mx-auto max-w-5xl px-5 pb-16 pt-10 text-center md:px-8 md:pb-24 md:pt-16">
-        <p data-hero className="text-sm font-medium tracking-[0.08em] text-fg-2">
+        {/* Marca: logo pixel + nombre */}
+        <p data-hero className="inline-flex items-center gap-3 text-sm font-medium tracking-[0.08em] text-fg">
+          <PixelLogo size={3} className="text-tech" />
           {marca}
         </p>
 
+        {/* Línea técnica que se "decodifica" al cargar */}
+        <DecodeText
+          as="p"
+          text={`[ ${hero.etiqueta} ]`}
+          delay={400}
+          className="tag mt-12 block md:mt-20"
+        />
+
         <h1
           data-hero
-          className="mx-auto mt-14 max-w-3xl text-balance text-[2.5rem] font-medium leading-[1.08] tracking-[-0.03em] sm:text-6xl md:mt-24 md:text-7xl"
+          className="mx-auto mt-5 max-w-3xl text-balance text-[2.5rem] font-medium leading-[1.08] tracking-[-0.03em] sm:text-6xl md:mt-6 md:text-7xl"
         >
-          {hero.titular}
+          <Resaltar texto={hero.titular} palabra={hero.resaltado} />
         </h1>
 
         <p data-hero className="mx-auto mt-5 max-w-md text-pretty text-lg text-fg-2 md:mt-7 md:text-xl">
           {hero.subtitulo}
+          <span className="cursor-block" aria-hidden="true" />
         </p>
 
         <div data-hero className="mt-12 md:mt-20">
@@ -104,5 +116,18 @@ export default function Hero() {
         </div>
       </div>
     </header>
+  )
+}
+
+/* Pinta en cian la palabra indicada del titular (ej: "IA") */
+function Resaltar({ texto, palabra }) {
+  if (!palabra || !texto.includes(palabra)) return texto
+  const i = texto.lastIndexOf(palabra)
+  return (
+    <>
+      {texto.slice(0, i)}
+      <span className="text-tech">{palabra}</span>
+      {texto.slice(i + palabra.length)}
+    </>
   )
 }
