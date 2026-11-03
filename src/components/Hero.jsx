@@ -1,63 +1,107 @@
-import { MARCA, MARCA_LEMA, VIDEO_CLASE_URL } from '../config.js'
-import VideoEmbed from './VideoEmbed.jsx'
+import { Component, Suspense, lazy, useEffect, useRef, useState } from 'react'
+import { marca, hero, ctaPrincipal } from '../content.js'
+import VideoIntro from './VideoIntro.jsx'
 import { IconArrowDown } from './Icons.jsx'
 
+// El 3D se descarga aparte y solo cuando el navegador está libre
+const Background3D = lazy(() => import('./Background3D.jsx'))
+
+/* Si el dispositivo no soporta WebGL, simplemente no mostramos el fondo */
+class SinFondoSiFalla extends Component {
+  state = { error: false }
+  static getDerivedStateFromError() {
+    return { error: true }
+  }
+  render() {
+    return this.state.error ? null : this.props.children
+  }
+}
+
+function useFondo3D() {
+  const [modo, setModo] = useState(null) // null | 'full' | 'lite'
+
+  useEffect(() => {
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    const ahorroDatos = navigator.connection?.saveData === true
+    if (reduce || ahorroDatos) return
+
+    const movil = window.matchMedia('(max-width: 767px), (pointer: coarse)').matches
+    const activar = () => setModo(movil ? 'lite' : 'full')
+
+    // Esperamos a que la página cargue y el navegador esté libre
+    let idle
+    const programar = () => {
+      idle =
+        'requestIdleCallback' in window
+          ? window.requestIdleCallback(activar, { timeout: 2500 })
+          : window.setTimeout(activar, 1200)
+    }
+    if (document.readyState === 'complete') programar()
+    else window.addEventListener('load', programar, { once: true })
+
+    return () => {
+      window.removeEventListener('load', programar)
+      if ('cancelIdleCallback' in window) window.cancelIdleCallback(idle)
+      window.clearTimeout(idle)
+    }
+  }, [])
+
+  return modo
+}
+
 export default function Hero() {
+  const modo = useFondo3D()
+  const zonaRef = useRef(null)
+  const [enPantalla, setEnPantalla] = useState(true)
+
+  // Pausamos el 3D cuando el titular sale de la pantalla
+  useEffect(() => {
+    if (!zonaRef.current) return
+    const io = new IntersectionObserver(([e]) => setEnPantalla(e.isIntersecting))
+    io.observe(zonaRef.current)
+    return () => io.disconnect()
+  }, [])
+
   return (
-    <header className="relative">
-      {/* Barra superior: nombre de la marca */}
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-5 md:px-8 md:py-7">
-        <a href="#" className="flex items-baseline gap-2 text-fg" aria-label={`${MARCA} — inicio`}>
-          {/* FOTO/LOGO: si tienes logo, reemplaza este texto por <img src="/logo.svg" alt="Santiago" className="h-7" /> */}
-          <span className="text-lg font-medium tracking-tight">{MARCA}</span>
-          <span className="hidden text-sm text-fg-3 sm:inline">| {MARCA_LEMA}</span>
-        </a>
-        <a href="#agenda" className="btn-ghost hidden min-h-10 px-5 text-sm md:inline-flex">
-          Agendar llamada
-        </a>
+    <header className="relative isolate">
+      {/* Fondo 3D detrás del titular */}
+      <div ref={zonaRef} className="absolute inset-x-0 top-0 -z-10 h-[440px] overflow-hidden sm:h-[500px] md:h-[540px]">
+        {modo && (
+          <SinFondoSiFalla>
+            <Suspense fallback={null}>
+              <Background3D lite={modo === 'lite'} visible={enPantalla} />
+            </Suspense>
+          </SinFondoSiFalla>
+        )}
       </div>
 
-      <div className="mx-auto max-w-6xl px-5 pb-20 pt-4 text-center md:px-8 md:pb-32 md:pt-16">
-        {/* TEXTO: etiqueta pequeña */}
-        <p data-reveal className="eyebrow inline-flex items-center rounded-full border border-line-strong px-4 py-1.5">
-          Clase gratuita
+      <div className="mx-auto max-w-5xl px-5 pb-16 pt-10 text-center md:px-8 md:pb-24 md:pt-16">
+        <p data-hero className="text-sm font-medium tracking-[0.08em] text-fg-2">
+          {marca}
         </p>
 
-        {/* TEXTO: titular principal */}
         <h1
-          data-reveal
-          className="mx-auto mt-6 max-w-4xl text-balance text-[2.15rem] font-medium leading-[1.1] tracking-[-0.025em] sm:text-5xl md:mt-9 md:text-6xl lg:text-[4.25rem]"
+          data-hero
+          className="mx-auto mt-14 max-w-3xl text-balance text-[2.5rem] font-medium leading-[1.08] tracking-[-0.03em] sm:text-6xl md:mt-24 md:text-7xl"
         >
-          Cómo automatizar tus redes sociales con IA:{' '}
-          <span className="text-fg-2">Claude edita y publica por ti</span>
+          {hero.titular}
         </h1>
 
-        {/* TEXTO: subtítulo */}
-        <p data-reveal className="mx-auto mt-5 max-w-xl text-pretty text-lg text-fg-2 md:mt-8 md:text-xl">
-          Mira el video completo antes de agendar tu llamada
+        <p data-hero className="mx-auto mt-5 max-w-md text-pretty text-lg text-fg-2 md:mt-7 md:text-xl">
+          {hero.subtitulo}
         </p>
 
-        {/* ============================================================
-            <!-- VIDEO_CLASE -->
-            Video principal de la clase. Pega el link de embed de YouTube
-            o Vimeo en src/config.js → VIDEO_CLASE_URL
-            ============================================================ */}
-        <div data-reveal className="mx-auto mt-8 max-w-5xl md:mt-14">
-          <VideoEmbed
-            src={VIDEO_CLASE_URL}
-            title="Clase gratuita: cómo automatizar tus redes sociales con IA"
-            label="Video de la clase"
-            hint="Pega el link de YouTube o Vimeo en VIDEO_CLASE_URL"
-          />
+        <div data-hero className="mt-12 md:mt-20">
+          {/* VIDEO_INTRO: pegar aquí el embed de YouTube o Vimeo
+              → el link va en src/content.js → video.url */}
+          <VideoIntro />
         </div>
 
-        <div data-reveal className="mt-10 flex flex-col items-center gap-4 md:mt-12">
-          <a href="#agenda" data-cta-hero className="btn-primary w-full max-w-sm sm:w-auto sm:px-10">
-            Quiero agendar mi llamada
+        <div data-hero className="mt-10 md:mt-12">
+          <a href="#agenda" data-cta-principal className="btn-primary w-full max-w-sm sm:w-auto sm:px-10">
+            {ctaPrincipal}
             <IconArrowDown className="h-5 w-5" />
           </a>
-          {/* TEXTO: nota debajo del botón */}
-          <p className="text-sm text-fg-3">La llamada no tiene costo. Primero vemos si el programa es para ti.</p>
         </div>
       </div>
     </header>

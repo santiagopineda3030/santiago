@@ -1,115 +1,102 @@
 import { useEffect, useRef, useState } from 'react'
-import { APPS_SCRIPT_URL, CALENDARIO_URL, PROGRAMA, whatsappLink } from '../config.js'
-import { IconCalendar, IconCheck, IconArrowRight } from './Icons.jsx'
+import { agenda } from '../content.js'
+import { IconAlert, IconCalendar, IconCheck } from './Icons.jsx'
 
-/* TEXTO: opciones de las preguntas de filtro */
-const REDES = ['Instagram', 'TikTok', 'YouTube', 'Facebook', 'LinkedIn', 'X / Twitter', 'Aún no publico']
-const INVERSION = ['Sí', 'No', 'Necesito más información']
+/* URLs privadas: se configuran en el archivo .env (ver README.md) */
+const APPS_SCRIPT_URL = import.meta.env.VITE_APPS_SCRIPT_URL || ''
+const CALENDAR_URL = import.meta.env.VITE_CALENDAR_URL || ''
 
+const { campos, errores: msg } = agenda
 const INICIAL = { nombre: '', whatsapp: '', correo: '', negocio: '', redes: [], inversion: '', web: '' }
-const STORAGE_KEY = 'agenda-enviada'
+const ORDEN = ['nombre', 'whatsapp', 'correo', 'negocio', 'redes', 'inversion']
 
 function validar(d) {
   const e = {}
-  if (d.nombre.trim().length < 2) e.nombre = 'Escribe tu nombre.'
-  if (d.whatsapp.replace(/\D/g, '').length < 7) e.whatsapp = 'Escribe tu número con código de país.'
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(d.correo.trim())) e.correo = 'Revisa tu correo.'
-  if (d.negocio.trim().length < 2) e.negocio = 'Cuéntanos qué negocio o marca tienes.'
-  if (d.redes.length === 0) e.redes = 'Elige al menos una opción.'
-  if (!d.inversion) e.inversion = 'Elige una opción.'
+  if (d.nombre.trim().length < 2) e.nombre = msg.nombre
+  const digitos = d.whatsapp.replace(/\D/g, '')
+  if (digitos.length < 8 || digitos.length > 15) e.whatsapp = msg.whatsapp
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(d.correo.trim())) e.correo = msg.correo
+  if (d.negocio.trim().length < 2) e.negocio = msg.negocio
+  if (d.redes.length === 0) e.redes = msg.redes
+  if (!d.inversion) e.inversion = msg.inversion
   return e
 }
 
-/* Lee los parámetros UTM del link (útil para saber si vienen de Instagram) */
+/* Guarda de dónde viene la visita (ej: ?utm_source=instagram) */
 function origen() {
   const p = new URLSearchParams(window.location.search)
-  return ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content']
+  return ['utm_source', 'utm_medium', 'utm_campaign']
     .map((k) => p.get(k))
     .filter(Boolean)
     .join(' / ')
 }
 
-/* Si usas Calendly, rellenamos nombre y correo automáticamente */
+/* Si el calendario es de Calendly, rellena nombre y correo */
 function urlCalendario(base, { nombre, correo }) {
-  if (!base) return ''
   if (!base.includes('calendly.com')) return base
-  const url = new URL(base)
-  url.searchParams.set('name', nombre)
-  url.searchParams.set('email', correo)
-  return url.toString()
+  try {
+    const u = new URL(base)
+    u.searchParams.set('name', nombre)
+    u.searchParams.set('email', correo)
+    return u.toString()
+  } catch {
+    return base
+  }
 }
 
 export default function Agenda() {
   const [datos, setDatos] = useState(INICIAL)
   const [errores, setErrores] = useState({})
   const [estado, setEstado] = useState('idle') // idle | enviando | listo | error
-  const pasoDosRef = useRef(null)
+  const formRef = useRef(null)
+  const exitoRef = useRef(null)
 
-  // Si la persona ya envió el formulario (y recarga la página), mostramos el calendario
-  useEffect(() => {
-    try {
-      const guardado = JSON.parse(sessionStorage.getItem(STORAGE_KEY) || 'null')
-      if (guardado) {
-        setDatos((d) => ({ ...d, ...guardado }))
-        setEstado('listo')
-      }
-    } catch {
-      /* sin almacenamiento disponible: no pasa nada */
-    }
-  }, [])
+  const limpiarError = (campo) => errores[campo] && setErrores((e) => ({ ...e, [campo]: undefined }))
 
-  const set = (campo) => (ev) => {
+  const onTexto = (campo) => (ev) => {
     setDatos((d) => ({ ...d, [campo]: ev.target.value }))
-    if (errores[campo]) setErrores((e) => ({ ...e, [campo]: undefined }))
+    limpiarError(campo)
   }
 
-  const toggleRed = (red) => {
+  const onRed = (red) => {
     setDatos((d) => ({
       ...d,
       redes: d.redes.includes(red) ? d.redes.filter((r) => r !== red) : [...d.redes, red],
     }))
-    if (errores.redes) setErrores((e) => ({ ...e, redes: undefined }))
+    limpiarError('redes')
   }
 
   async function enviar(ev) {
     ev.preventDefault()
     const e = validar(datos)
     setErrores(e)
-    if (Object.keys(e).length) {
-      const primero = Object.keys(e)[0]
-      document.querySelector(`[data-campo="${primero}"]`)?.focus()
+    const primero = ORDEN.find((k) => e[k])
+    if (primero) {
+      formRef.current?.querySelector(`[data-campo="${primero}"]`)?.focus()
       return
     }
 
-    // Campo trampa para bots: si viene lleno, fingimos éxito y no enviamos nada
-    if (datos.web) {
-      setEstado('listo')
-      return
-    }
+    // Campo trampa anti-spam: si un bot lo llena, no enviamos nada
+    if (datos.web) return setEstado('listo')
 
     setEstado('enviando')
-    const payload = new URLSearchParams({
-      nombre: datos.nombre.trim(),
-      whatsapp: datos.whatsapp.trim(),
-      correo: datos.correo.trim(),
-      negocio: datos.negocio.trim(),
-      redes: datos.redes.join(', '),
-      inversion: datos.inversion,
-      origen: origen(),
-      pagina: window.location.href,
-    })
-
     try {
       if (APPS_SCRIPT_URL) {
-        // mode: 'no-cors' evita problemas de CORS con Google Apps Script.
-        await fetch(APPS_SCRIPT_URL, { method: 'POST', mode: 'no-cors', body: payload })
+        await fetch(APPS_SCRIPT_URL, {
+          method: 'POST',
+          mode: 'no-cors', // Google Apps Script no devuelve CORS: enviamos sin leer la respuesta
+          body: new URLSearchParams({
+            nombre: datos.nombre.trim(),
+            whatsapp: datos.whatsapp.trim(),
+            correo: datos.correo.trim(),
+            negocio: datos.negocio.trim(),
+            redes: datos.redes.join(', '),
+            inversion: datos.inversion,
+            origen: origen(),
+          }),
+        })
       } else {
-        console.warn('[Agenda] APPS_SCRIPT_URL está vacío: los datos NO se guardaron. Configúralo en src/config.js')
-      }
-      try {
-        sessionStorage.setItem(STORAGE_KEY, JSON.stringify({ nombre: datos.nombre, correo: datos.correo }))
-      } catch {
-        /* ignorar */
+        console.warn('[Agenda] Falta VITE_APPS_SCRIPT_URL en .env: los datos NO se guardaron.')
       }
       setEstado('listo')
     } catch (err) {
@@ -118,296 +105,254 @@ export default function Agenda() {
     }
   }
 
-  // Al pasar al paso 2, llevamos a la persona al calendario
   useEffect(() => {
-    if (estado === 'listo' && pasoDosRef.current) {
-      pasoDosRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
-      pasoDosRef.current.focus({ preventScroll: true })
-    }
+    if (estado !== 'listo' || !exitoRef.current) return
+    exitoRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    exitoRef.current.focus({ preventScroll: true })
   }, [estado])
 
-  const listo = estado === 'listo'
-  const nombreCorto = datos.nombre.trim().split(' ')[0]
+  const nombreCorto = datos.nombre.trim().split(/\s+/)[0]
+  const hayErrores = ORDEN.some((k) => errores[k])
 
   return (
-    <section id="agenda" data-cta-hide className="scroll-mt-4 border-t border-line">
-      <div className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-32">
-        <div className="grid gap-12 lg:grid-cols-[1fr_1.35fr] lg:gap-20">
-          {/* Columna de texto */}
-          <div className="lg:sticky lg:top-12 lg:self-start">
-            <p data-reveal className="eyebrow">
-              Agenda tu llamada
-            </p>
-            {/* TEXTO: título de la sección del formulario */}
-            <h2
+    <section id="agenda" className="scroll-mt-6 px-5 pb-24 pt-20 md:px-8 md:pb-32 md:pt-28">
+      <div className="mx-auto max-w-xl">
+        {estado !== 'listo' ? (
+          <>
+            <div data-reveal className="text-center">
+              <h2 className="text-balance text-3xl font-medium leading-tight tracking-[-0.02em] md:text-[2.75rem]">
+                {agenda.titulo}
+              </h2>
+              <p className="mx-auto mt-4 max-w-md text-pretty text-fg-2 md:text-lg">{agenda.intro}</p>
+            </div>
+
+            <form
+              ref={formRef}
               data-reveal
-              className="mt-4 text-balance text-3xl font-medium leading-[1.15] tracking-[-0.02em] md:text-5xl"
+              data-oculta-cta
+              onSubmit={enviar}
+              noValidate
+              className="relative mt-12 grid gap-7 rounded-2xl border border-line bg-surface p-6 sm:p-9"
             >
-              Hablemos de tu caso
-            </h2>
-            <p data-reveal className="mt-5 text-pretty text-lg text-fg-2">
-              En la llamada vemos cómo publicas hoy, qué te quita más tiempo y si {PROGRAMA} encaja contigo. Sin
-              compromiso.
-            </p>
+              <Campo id="nombre" label={campos.nombre.label} error={errores.nombre}>
+                <input
+                  id="nombre"
+                  data-campo="nombre"
+                  type="text"
+                  autoComplete="name"
+                  className="field"
+                  placeholder={campos.nombre.placeholder}
+                  value={datos.nombre}
+                  onChange={onTexto('nombre')}
+                  aria-invalid={!!errores.nombre}
+                  aria-describedby={errores.nombre ? 'nombre-error' : undefined}
+                  required
+                />
+              </Campo>
 
-            <ol data-reveal className="mt-10 space-y-4" aria-label="Pasos">
-              {['Completa tus datos', 'Elige el día y la hora'].map((paso, i) => {
-                const hecho = listo && i === 0
-                const activo = listo ? i === 1 : i === 0
-                return (
-                  <li key={paso} className="flex items-center gap-4">
-                    <span
-                      className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full border text-sm tabular-nums transition-colors ${
-                        activo ? 'border-fg text-fg' : 'border-line-strong text-fg-3'
-                      }`}
-                    >
-                      {hecho ? <IconCheck className="h-4 w-4" /> : i + 1}
-                    </span>
-                    <span className={activo ? 'text-fg' : 'text-fg-3'}>{paso}</span>
-                  </li>
-                )
-              })}
-            </ol>
-          </div>
+              <Campo id="whatsapp" label={campos.whatsapp.label} ayuda={campos.whatsapp.ayuda} error={errores.whatsapp}>
+                <input
+                  id="whatsapp"
+                  data-campo="whatsapp"
+                  type="tel"
+                  inputMode="tel"
+                  autoComplete="tel"
+                  className="field"
+                  placeholder={campos.whatsapp.placeholder}
+                  value={datos.whatsapp}
+                  onChange={onTexto('whatsapp')}
+                  aria-invalid={!!errores.whatsapp}
+                  aria-describedby={errores.whatsapp ? 'whatsapp-ayuda whatsapp-error' : 'whatsapp-ayuda'}
+                  required
+                />
+              </Campo>
 
-          {/* Columna del formulario / calendario */}
-          <div data-reveal>
-            {!listo ? (
-              <form
-                onSubmit={enviar}
-                noValidate
-                className="relative rounded-2xl border border-line bg-surface p-6 sm:p-8 md:p-10"
-                aria-label="Formulario para agendar llamada"
-              >
-                <div className="grid gap-6">
-                  <Campo id="nombre" label="Nombre" error={errores.nombre}>
-                    <input
-                      id="nombre"
-                      data-campo="nombre"
-                      className="field"
-                      type="text"
-                      autoComplete="name"
-                      placeholder="Tu nombre"
-                      value={datos.nombre}
-                      onChange={set('nombre')}
-                      aria-invalid={!!errores.nombre}
-                      aria-describedby={errores.nombre ? 'nombre-error' : undefined}
-                    />
-                  </Campo>
+              <Campo id="correo" label={campos.correo.label} error={errores.correo}>
+                <input
+                  id="correo"
+                  data-campo="correo"
+                  type="email"
+                  inputMode="email"
+                  autoComplete="email"
+                  className="field"
+                  placeholder={campos.correo.placeholder}
+                  value={datos.correo}
+                  onChange={onTexto('correo')}
+                  aria-invalid={!!errores.correo}
+                  aria-describedby={errores.correo ? 'correo-error' : undefined}
+                  required
+                />
+              </Campo>
 
-                  <div className="grid gap-6 sm:grid-cols-2">
-                    <Campo id="whatsapp" label="WhatsApp" error={errores.whatsapp}>
-                      <input
-                        id="whatsapp"
-                        data-campo="whatsapp"
-                        className="field"
-                        type="tel"
-                        inputMode="tel"
-                        autoComplete="tel"
-                        placeholder="+57 300 123 4567"
-                        value={datos.whatsapp}
-                        onChange={set('whatsapp')}
-                        aria-invalid={!!errores.whatsapp}
-                        aria-describedby={errores.whatsapp ? 'whatsapp-error' : undefined}
-                      />
-                    </Campo>
-                    <Campo id="correo" label="Correo" error={errores.correo}>
-                      <input
-                        id="correo"
-                        data-campo="correo"
-                        className="field"
-                        type="email"
-                        inputMode="email"
-                        autoComplete="email"
-                        placeholder="tu@correo.com"
-                        value={datos.correo}
-                        onChange={set('correo')}
-                        aria-invalid={!!errores.correo}
-                        aria-describedby={errores.correo ? 'correo-error' : undefined}
-                      />
-                    </Campo>
-                  </div>
+              <Campo id="negocio" label={campos.negocio.label} error={errores.negocio}>
+                <textarea
+                  id="negocio"
+                  data-campo="negocio"
+                  rows={3}
+                  className="field min-h-24 resize-y"
+                  placeholder={campos.negocio.placeholder}
+                  value={datos.negocio}
+                  onChange={onTexto('negocio')}
+                  aria-invalid={!!errores.negocio}
+                  aria-describedby={errores.negocio ? 'negocio-error' : undefined}
+                  required
+                />
+              </Campo>
 
-                  <div className="my-1 h-px bg-line" />
-
-                  <Campo id="negocio" label="¿Qué negocio o marca tienes?" error={errores.negocio}>
-                    <textarea
-                      id="negocio"
-                      data-campo="negocio"
-                      className="field min-h-24 resize-y"
-                      rows={3}
-                      placeholder="Ej: tienda de ropa, consultorio, marca personal…"
-                      value={datos.negocio}
-                      onChange={set('negocio')}
-                      aria-invalid={!!errores.negocio}
-                      aria-describedby={errores.negocio ? 'negocio-error' : undefined}
-                    />
-                  </Campo>
-
-                  <fieldset aria-describedby={errores.redes ? 'redes-error' : undefined}>
-                    <legend className="mb-3 text-[0.95rem] font-medium">¿En qué redes publicas hoy?</legend>
-                    <div className="flex flex-wrap gap-2">
-                      {REDES.map((red, i) => {
-                        const on = datos.redes.includes(red)
-                        return (
-                          <label
-                            key={red}
-                            className={`inline-flex min-h-11 cursor-pointer select-none items-center gap-2 rounded-full border px-4 text-[0.95rem] transition-colors duration-150 has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-fg ${
-                              on ? 'border-fg bg-fg text-bg' : 'border-line-strong text-fg-2 hover:border-fg-2'
-                            }`}
-                          >
-                            <input
-                              type="checkbox"
-                              className="sr-only"
-                              data-campo={i === 0 ? 'redes' : undefined}
-                              checked={on}
-                              onChange={() => toggleRed(red)}
-                            />
-                            {on && <IconCheck className="h-4 w-4" />}
-                            {red}
-                          </label>
-                        )
-                      })}
-                    </div>
-                    <Error id="redes-error" msg={errores.redes} />
-                  </fieldset>
-
-                  <fieldset aria-describedby={errores.inversion ? 'inversion-error' : undefined}>
-                    <legend className="mb-3 text-[0.95rem] font-medium">
-                      ¿Estás en posición de invertir en un acompañamiento personalizado?
-                    </legend>
-                    <div className="grid gap-2 sm:grid-cols-[1fr_1fr_2fr]">
-                      {INVERSION.map((op, i) => {
-                        const on = datos.inversion === op
-                        return (
-                          <label
-                            key={op}
-                            className={`flex min-h-12 cursor-pointer items-center gap-3 rounded-xl border px-4 py-3 text-[0.95rem] transition-colors duration-150 has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-fg ${
-                              on ? 'border-fg text-fg' : 'border-line-strong text-fg-2 hover:border-fg-2'
-                            }`}
-                          >
-                            <input
-                              type="radio"
-                              name="inversion"
-                              value={op}
-                              className="sr-only"
-                              data-campo={i === 0 ? 'inversion' : undefined}
-                              checked={on}
-                              onChange={set('inversion')}
-                            />
-                            <span
-                              className={`flex h-5 w-5 shrink-0 items-center justify-center rounded-full border ${
-                                on ? 'border-fg' : 'border-line-strong'
-                              }`}
-                            >
-                              {on && <span className="h-2.5 w-2.5 rounded-full bg-fg" />}
-                            </span>
-                            {op}
-                          </label>
-                        )
-                      })}
-                    </div>
-                    <Error id="inversion-error" msg={errores.inversion} />
-                  </fieldset>
-
-                  {/* Campo trampa anti-spam: invisible para personas */}
-                  <div className="absolute -left-[9999px]" aria-hidden="true">
-                    <label>
-                      Sitio web
-                      <input type="text" tabIndex={-1} autoComplete="off" value={datos.web} onChange={set('web')} />
-                    </label>
-                  </div>
-
-                  {estado === 'error' && (
-                    <p role="alert" className="rounded-xl border border-line-strong p-4 text-sm text-fg-2">
-                      No pudimos enviar tus datos. Revisa tu conexión e inténtalo otra vez, o{' '}
-                      <a className="text-fg underline underline-offset-4" href={whatsappLink()} target="_blank" rel="noreferrer">
-                        escríbeme por WhatsApp
-                      </a>
-                      .
-                    </p>
-                  )}
-
-                  <button type="submit" className="btn-primary mt-2 w-full" disabled={estado === 'enviando'}>
-                    {estado === 'enviando' ? 'Enviando…' : 'Elegir mi horario'}
-                    {estado !== 'enviando' && <IconArrowRight className="h-5 w-5" />}
-                  </button>
-
-                  {/* TEXTO: aviso de privacidad del formulario */}
-                  <p className="text-center text-xs leading-relaxed text-fg-3">
-                    Al enviar aceptas que te contacte por WhatsApp o correo sobre el programa. Tus datos no se comparten
-                    con terceros. <a href="#aviso-legal" className="underline underline-offset-2 hover:text-fg-2">Aviso legal</a>
-                  </p>
+              <fieldset aria-describedby={errores.redes ? 'redes-error' : undefined}>
+                <legend className="label">{campos.redes.label}</legend>
+                <div className="grid grid-cols-2 gap-2.5">
+                  {campos.redes.opciones.map((red, i) => {
+                    const on = datos.redes.includes(red)
+                    return (
+                      <Opcion key={red} activa={on} invalida={!!errores.redes}>
+                        <input
+                          type="checkbox"
+                          className="peer sr-only"
+                          data-campo={i === 0 ? 'redes' : undefined}
+                          checked={on}
+                          onChange={() => onRed(red)}
+                          aria-invalid={!!errores.redes}
+                        />
+                        <span
+                          className={`flex h-5 w-5 shrink-0 items-center justify-center rounded-[6px] border ${
+                            on ? 'border-fg bg-fg text-bg' : 'border-line-strong'
+                          }`}
+                        >
+                          {on && <IconCheck className="h-3.5 w-3.5" strokeWidth={2.4} />}
+                        </span>
+                        {red}
+                      </Opcion>
+                    )
+                  })}
                 </div>
-              </form>
-            ) : (
-              <div
-                ref={pasoDosRef}
-                tabIndex={-1}
-                className="scroll-mt-6 rounded-2xl border border-line bg-surface p-4 outline-none sm:p-6 md:p-8"
-              >
-                <div className="px-2 pb-6 pt-2 sm:px-0">
-                  <p className="eyebrow">Paso 2 de 2</p>
-                  <h3 className="mt-3 text-2xl font-medium tracking-tight md:text-3xl">
-                    {nombreCorto ? `Gracias, ${nombreCorto}.` : 'Gracias.'} Ahora elige tu horario
-                  </h3>
-                  <p className="mt-3 text-fg-2">Reserva el espacio que mejor te quede. Te llegará la confirmación a tu correo.</p>
+                <Error id="redes-error" texto={errores.redes} />
+              </fieldset>
+
+              <fieldset aria-describedby={errores.inversion ? 'inversion-error' : undefined}>
+                <legend className="label">{campos.inversion.label}</legend>
+                <div className="grid gap-2.5">
+                  {campos.inversion.opciones.map((op, i) => {
+                    const on = datos.inversion === op
+                    return (
+                      <Opcion key={op} activa={on} invalida={!!errores.inversion}>
+                        <input
+                          type="radio"
+                          name="inversion"
+                          value={op}
+                          className="peer sr-only"
+                          data-campo={i === 0 ? 'inversion' : undefined}
+                          checked={on}
+                          onChange={onTexto('inversion')}
+                          aria-invalid={!!errores.inversion}
+                        />
+                        <span
+                          className={`flex h-5 w-5 shrink-0 items-center justify-center rounded-full border ${
+                            on ? 'border-fg' : 'border-line-strong'
+                          }`}
+                        >
+                          {on && <span className="h-2.5 w-2.5 rounded-full bg-fg" />}
+                        </span>
+                        {op}
+                      </Opcion>
+                    )
+                  })}
                 </div>
+                <Error id="inversion-error" texto={errores.inversion} />
+              </fieldset>
 
-                {/* ============================================================
-                    <!-- CALENDARIO -->
-                    Calendario para reservar la llamada. Pega el link de tu
-                    agenda (Calendly, Google Calendar, Cal.com) en
-                    src/config.js → CALENDARIO_URL
-                    ============================================================ */}
-                {CALENDARIO_URL ? (
-                  <iframe
-                    src={urlCalendario(CALENDARIO_URL, datos)}
-                    title="Calendario para agendar tu llamada"
-                    className="h-[720px] w-full rounded-xl border-0 bg-bg md:h-[760px]"
-                    loading="lazy"
-                  />
-                ) : (
-                  <div className="flex aspect-[4/5] w-full flex-col items-center justify-center gap-4 rounded-xl border border-dashed border-line-strong bg-bg p-6 text-center sm:aspect-video">
-                    <IconCalendar className="h-8 w-8 text-fg-2" />
-                    <span className="eyebrow">Calendario</span>
-                    <span className="max-w-xs text-sm text-fg-3">Pega el link de tu agenda en CALENDARIO_URL</span>
-                  </div>
-                )}
-
-                <p className="mt-5 px-2 text-center text-sm text-fg-3 sm:px-0">
-                  ¿Ningún horario te sirve?{' '}
-                  <a className="text-fg-2 underline underline-offset-4 hover:text-fg" href={whatsappLink('Hola Santiago, llené el formulario pero no encuentro un horario que me sirva.')} target="_blank" rel="noreferrer">
-                    Escríbeme por WhatsApp
-                  </a>
-                </p>
+              {/* Campo trampa anti-spam: invisible para personas */}
+              <div className="absolute -left-[9999px] h-px w-px overflow-hidden" aria-hidden="true">
+                <label>
+                  Sitio web
+                  <input type="text" tabIndex={-1} autoComplete="off" value={datos.web} onChange={onTexto('web')} />
+                </label>
               </div>
-            )}
+
+              <div className="grid gap-4 pt-1">
+                <div aria-live="polite" className="empty:hidden">
+                  {hayErrores && <Error texto={msg.resumen} />}
+                  {estado === 'error' && <Error texto={msg.envio} />}
+                </div>
+                <button type="submit" className="btn-primary w-full" disabled={estado === 'enviando'}>
+                  {estado === 'enviando' ? agenda.enviando : agenda.boton}
+                </button>
+                <p className="text-center text-sm text-fg-2">{agenda.privacidad}</p>
+              </div>
+            </form>
+          </>
+        ) : (
+          <div ref={exitoRef} tabIndex={-1} data-oculta-cta className="scroll-mt-6 outline-none">
+            <div className="text-center">
+              <h2 className="text-balance text-3xl font-medium leading-tight tracking-[-0.02em] md:text-[2.75rem]">
+                {agenda.exito.titulo(nombreCorto)}
+              </h2>
+              <p className="mx-auto mt-4 max-w-md text-pretty text-fg-2 md:text-lg">{agenda.exito.texto}</p>
+            </div>
+
+            <div className="mt-10 overflow-hidden rounded-2xl border border-line bg-surface">
+              {/* CALENDARIO: pegar aquí el embed
+                  → el link va en el archivo .env → VITE_CALENDAR_URL
+                    (Calendly, Google Calendar o Cal.com) */}
+              {CALENDAR_URL ? (
+                <iframe
+                  src={urlCalendario(CALENDAR_URL, datos)}
+                  title="Calendario para agendar tu llamada"
+                  className="block h-[720px] w-full border-0"
+                />
+              ) : (
+                <div className="flex aspect-[4/5] flex-col items-center justify-center gap-4 p-6 text-center sm:aspect-[4/3]">
+                  <IconCalendar className="h-8 w-8 text-fg-2" />
+                  <p className="text-fg-2">{agenda.exito.sinCalendario}</p>
+                </div>
+              )}
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </section>
   )
 }
 
-function Campo({ id, label, error, children }) {
+function Campo({ id, label, ayuda, error, children }) {
   return (
     <div>
-      <label htmlFor={id} className="mb-2 block text-[0.95rem] font-medium">
+      <label htmlFor={id} className="label">
         {label}
       </label>
       {children}
-      <Error id={`${id}-error`} msg={error} />
+      {ayuda && (
+        <p id={`${id}-ayuda`} className="mt-2 text-sm text-fg-2">
+          {ayuda}
+        </p>
+      )}
+      <Error id={`${id}-error`} texto={error} />
     </div>
   )
 }
 
-function Error({ id, msg }) {
-  if (!msg) return null
+function Opcion({ activa, invalida, children }) {
   return (
-    <p id={id} className="mt-2 text-sm text-fg-2">
-      <span className="mr-1.5 inline-block h-1.5 w-1.5 -translate-y-0.5 rounded-full bg-accent align-middle" aria-hidden="true" />
-      {msg}
+    <label
+      className={`flex min-h-12 cursor-pointer select-none items-center gap-3 rounded-xl border px-4 py-3 text-[0.975rem] transition-colors duration-150 has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-fg has-[:focus-visible]:[outline-style:solid] ${
+        activa
+          ? 'border-fg text-fg'
+          : invalida
+            ? 'border-fg/70 text-fg'
+            : 'border-line-strong text-fg hover:border-fg-2'
+      }`}
+    >
+      {children}
+    </label>
+  )
+}
+
+function Error({ id, texto }) {
+  if (!texto) return null
+  return (
+    <p id={id} role={id ? undefined : 'alert'} className="mt-2.5 flex items-start gap-2 text-sm font-medium text-fg">
+      <IconAlert className="mt-px h-[18px] w-[18px] shrink-0" />
+      {texto}
     </p>
   )
 }

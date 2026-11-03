@@ -1,6 +1,6 @@
 /**
  * Google Apps Script — recibe el formulario de la landing y lo guarda en Google Sheets.
- * Instrucciones completas en README.md → "Conectar el formulario con Google Sheets".
+ * Instrucciones paso a paso en README.md → "Conectar el formulario con Google Sheets".
  */
 
 // Nombre de la pestaña donde se guardan los datos (se crea sola si no existe)
@@ -19,7 +19,6 @@ const COLUMNAS = [
   ['redes', 'Redes donde publica'],
   ['inversion', '¿Puede invertir?'],
   ['origen', 'Origen (UTM)'],
-  ['pagina', 'Página'],
 ];
 
 function doPost(e) {

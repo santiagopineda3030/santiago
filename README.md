@@ -1,121 +1,93 @@
-# Landing "Clase gratuita + agenda tu llamada"
+# Santiago | Aprende IA y automatiza tus redes
 
-**Santiago | Aprende IA y automatiza tus redes** — página de una sola sección para que el visitante vea la clase y agende una llamada para **Redes Automatizadas 1 a 1**.
+Landing de una sola página con **un solo objetivo**: que la persona vea el video de introducción y agende una llamada de 30 minutos.
 
-Hecha con React + Vite + Tailwind CSS. GSAP solo para animaciones suaves de entrada. Pensada primero para móvil.
+React + Vite + Tailwind CSS · GSAP (animaciones de entrada) · React Three Fiber + drei (fondo 3D). Pensada primero para celular.
 
 ---
 
-## 1. Correr la página en tu computador
+## 1. Correr la página
 
 Necesitas [Node.js](https://nodejs.org) 20 o superior.
 
 ```bash
 npm install
-npm run dev       # abre http://localhost:5173
-npm run build     # genera la versión final en /dist
+cp .env.example .env   # luego completa los valores (paso 3)
+npm run dev            # abre http://localhost:5173
+npm run build          # versión final en /dist
 ```
 
 ---
 
 ## 2. Qué cambiar y dónde
 
-Casi todo se cambia en **`src/config.js`**:
+| Qué | Dónde |
+|---|---|
+| Todos los textos (titular, formulario, errores, footer) | `src/content.js` |
+| Video de introducción | `src/content.js` → `video.url` (marcador `VIDEO_INTRO` en `src/components/Hero.jsx`) |
+| Instagram y WhatsApp | `src/content.js` → `footer` (reemplaza `[NÚMERO]`) |
+| URL de Google Sheets | `.env` → `VITE_APPS_SCRIPT_URL` |
+| Calendario | `.env` → `VITE_CALENDAR_URL` (marcador `CALENDARIO` en `src/components/Agenda.jsx`) |
+| Colores | variables al inicio de `src/index.css` |
+| Título para Google y al compartir | `index.html` |
 
-| Qué | Variable en `src/config.js` | Marcador en el código |
-|---|---|---|
-| Video principal de la clase | `VIDEO_CLASE_URL` | `<!-- VIDEO_CLASE -->` en `src/components/Hero.jsx` |
-| Video corto (antes y después) | `VIDEO_CORTO_URL` y `VIDEO_CORTO_FORMATO` | `<!-- VIDEO_CORTO -->` en `src/components/VideoCorto.jsx` |
-| Calendario | `CALENDARIO_URL` | `<!-- CALENDARIO -->` en `src/components/Agenda.jsx` |
-| Google Sheets | `APPS_SCRIPT_URL` | — |
-| WhatsApp e Instagram | `WHATSAPP_NUMERO`, `WHATSAPP_MENSAJE`, `INSTAGRAM_URL`, `INSTAGRAM_USUARIO` | — |
+**Link del video (embed):**
+- YouTube: *Compartir → Insertar* → copia lo que está dentro de `src="..."` → `https://www.youtube.com/embed/ABC123`. Súbelo como **No listado** si solo quieres que lo vean desde la página.
+- Vimeo: *Compartir → Insertar* → `https://player.vimeo.com/video/123456789`.
 
-Otros puntos (busca los comentarios `TEXTO:`, `FOTO:` y los marcadores):
+El reproductor solo se carga cuando la persona toca *play*, así la página abre rápido desde Instagram. Con YouTube se usa la miniatura del video como portada automáticamente.
 
-- **Testimonios en video y capturas**: `src/components/Resultados.jsx` → `<!-- TESTIMONIO_1 -->`, `<!-- TESTIMONIO_2 -->`, `<!-- TESTIMONIO_3 -->`, `<!-- CAPTURA_1 -->`… Las fotos van en la carpeta `public/` (ej. `public/captura-1.jpg` → `src: '/captura-1.jpg'`).
-- **Preguntas frecuentes**: `src/components/FAQ.jsx` (lo que está entre `[corchetes]` es para completar).
-- **Para quién es / Qué vas a lograr**: `src/components/ParaQuien.jsx` y `src/components/Logros.jsx`.
-- **Aviso legal**: `src/components/Footer.jsx`.
-- **Colores**: variables al inicio de `src/index.css` (`--bg-primary`, `--accent`, etc.).
-- **Título para Google y al compartir**: `index.html`.
-
-### Cómo obtener el link "embed" de los videos
-
-- **YouTube**: abre el video → *Compartir* → *Insertar* → copia solo lo que está dentro de `src="..."`.
-  Queda así: `https://www.youtube.com/embed/ABC123xyz`. Puedes agregar `?rel=0&modestbranding=1` al final.
-  Tip: sube la clase como **"No listado"** para que solo la vean quienes llegan a la página.
-- **Vimeo**: *Compartir* → *Insertar* → copia el `src`. Queda así: `https://player.vimeo.com/video/123456789`.
-
-### Calendario
-
-- **Calendly**: usa el link de tu evento, por ejemplo
-  `https://calendly.com/tu-usuario/llamada?hide_gdpr_banner=1&background_color=141414&text_color=f5f5f5&primary_color=e02020`
-  (la página rellena automáticamente el nombre y el correo que la persona escribió en el formulario).
-- **Google Calendar (agenda de citas)**: *Página de reservas* → *Compartir* → *Insertar* → copia el `src`.
-- **Cal.com**: `https://cal.com/tu-usuario/llamada?embed=true&theme=dark`.
+**Link del calendario:**
+- Calendly: `https://calendly.com/tu-usuario/llamada-30-min?hide_gdpr_banner=1&background_color=141414&text_color=f5f5f5&primary_color=e02020` (la página rellena sola el nombre y el correo).
+- Google Calendar (agenda de citas): *Página de reservas → Compartir → Insertar* → copia el `src`.
+- Cal.com: `https://cal.com/tu-usuario/30min?embed=true&theme=dark`.
 
 ---
 
 ## 3. Conectar el formulario con Google Sheets (paso a paso)
 
-Cada persona que llena el formulario queda guardada como una fila en tu Google Sheet.
+Cada persona que llena el formulario queda guardada como una fila en tu hoja.
 
-1. **Crea la hoja.** Entra a [sheets.new](https://sheets.new) y ponle un nombre, por ejemplo *Leads – Redes Automatizadas*.
-2. **Abre Apps Script.** En la hoja, menú **Extensiones → Apps Script**. Se abre un editor con un archivo `Código.gs`.
-3. **Pega el código.** Borra todo lo que hay en `Código.gs` y pega el contenido de [`google-apps-script/Code.gs`](google-apps-script/Code.gs) de este proyecto.
-   - Opcional: en `CORREO_AVISO` escribe tu correo si quieres recibir un email por cada registro.
-4. **Guarda** (ícono del disquete o `Ctrl/Cmd + S`). Ponle un nombre al proyecto, por ejemplo *Formulario landing*.
-5. **Publica el script.** Botón azul **Implementar → Nueva implementación**.
-   - En el engranaje ⚙️ de "Seleccionar tipo", elige **Aplicación web**.
-   - *Descripción*: `Formulario landing`.
-   - *Ejecutar como*: **Yo** (tu correo).
-   - *Quién tiene acceso*: **Cualquier persona**. (Esto es necesario para que la página pueda enviar datos; nadie puede leer tu hoja con esa URL, solo enviar filas nuevas).
+1. **Crea la hoja.** Entra a [sheets.new](https://sheets.new) y ponle un nombre, por ejemplo *Leads – Llamadas*.
+2. **Abre Apps Script.** Menú **Extensiones → Apps Script**. Se abre un editor con el archivo `Código.gs`.
+3. **Pega el código.** Borra todo lo que hay y pega el contenido de [`google-apps-script/Code.gs`](google-apps-script/Code.gs).
+   - Opcional: en `CORREO_AVISO` escribe tu correo para recibir un email por cada registro nuevo.
+4. **Guarda** (`Ctrl/Cmd + S`) y ponle nombre al proyecto, por ejemplo *Formulario landing*.
+5. **Publícalo como aplicación web.** Botón azul **Implementar → Nueva implementación**.
+   - En el engranaje ⚙️ junto a "Seleccionar tipo", elige **Aplicación web**.
+   - *Ejecutar como*: **Yo**.
+   - *Quién tiene acceso*: **Cualquier persona** (necesario para que la página pueda enviar datos; con esa URL nadie puede leer tu hoja, solo agregar filas).
    - Clic en **Implementar**.
-6. **Autoriza.** Google te pedirá permisos: *Autorizar acceso* → elige tu cuenta → si aparece "Google no verificó esta app", clic en **Configuración avanzada → Ir a Formulario landing (no seguro)** → **Permitir**. Es normal: el script es tuyo.
-7. **Copia la URL.** Al terminar verás la **URL de la aplicación web**, que termina en `/exec`. Cópiala.
-8. **Pégala en la página.** En `src/config.js`:
-   ```js
-   export const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/XXXXXXXX/exec'
+6. **Autoriza.** *Autorizar acceso* → elige tu cuenta. Si aparece "Google no verificó esta app": **Configuración avanzada → Ir a Formulario landing (no seguro) → Permitir**. Es normal: el script es tuyo.
+7. **Copia la URL** de la aplicación web (termina en `/exec`).
+8. **Pégala en `.env`:**
    ```
-9. **Prueba.** Abre esa URL en el navegador: debe decir `"El script está funcionando."`. Luego llena el formulario de la página y revisa que aparezca la fila en la pestaña **Leads** (se crea sola con los títulos de las columnas).
+   VITE_APPS_SCRIPT_URL=https://script.google.com/macros/s/XXXXXXXX/exec
+   ```
+   Reinicia `npm run dev`. Si publicas en Vercel o Netlify, agrega la misma variable en *Settings → Environment Variables* y vuelve a publicar.
+9. **Prueba.** Abre la URL `/exec` en el navegador: debe decir `"El script está funcionando."`. Luego llena el formulario y revisa la pestaña **Leads** (se crea sola con los títulos).
 
-> **Importante:** si después cambias el código del script, debes ir a **Implementar → Administrar implementaciones → ✏️ Editar → Versión: Nueva versión → Implementar**. Así la URL sigue siendo la misma. Si creas una *nueva implementación*, la URL cambia y tendrás que actualizar `APPS_SCRIPT_URL`.
+> Si después cambias el código del script: **Implementar → Administrar implementaciones → ✏️ → Versión: Nueva versión → Implementar**. Así la URL no cambia.
 
-Columnas que se guardan: Fecha, Nombre, WhatsApp, Correo, Negocio o marca, Redes donde publica, ¿Puede invertir?, Origen (UTM) y Página.
+Columnas: Fecha, Nombre, WhatsApp, Correo, Negocio o marca, Redes donde publica, ¿Puede invertir?, Origen (UTM).
 
-**Tip para Instagram:** en el link de tu bio o historias agrega parámetros UTM, por ejemplo
-`https://tu-pagina.com/?utm_source=instagram&utm_medium=bio`. Quedarán guardados en la columna *Origen*.
-
----
-
-## 4. Publicar la página
-
-La forma más simple: [Vercel](https://vercel.com) o [Netlify](https://netlify.com).
-
-1. Sube este repositorio a GitHub (ya lo está).
-2. En Vercel/Netlify: *New project* → elige el repositorio.
-3. Configuración: *Build command* `npm run build`, *Output directory* `dist`.
-4. Publica y conecta tu dominio si tienes uno.
+**Tip:** en el link de tu bio de Instagram agrega `?utm_source=instagram&utm_medium=bio`. Quedará guardado en la columna *Origen*.
 
 ---
 
-## Estructura
+## 4. Fondo 3D
 
-```
-src/
-  config.js              ← links, URLs y datos de contacto
-  index.css              ← colores (variables CSS) y estilos base
-  App.jsx                ← orden de las secciones + animaciones GSAP
-  components/
-    Hero.jsx             ← 1. Clase gratuita + video principal
-    ParaQuien.jsx        ← 2. Para quién es
-    Logros.jsx           ← 3. Qué vas a lograr
-    Resultados.jsx       ← 4. Testimonios y capturas
-    VideoCorto.jsx       ← 5. Segundo video corto
-    Agenda.jsx           ← 6. Formulario + calendario
-    FAQ.jsx              ← 7. Preguntas frecuentes
-    Footer.jsx           ← 8. WhatsApp, Instagram y aviso legal
-    StickyCTA.jsx        ← Botón fijo "Agendar llamada" (solo móvil)
-google-apps-script/
-  Code.gs                ← código para pegar en Google Apps Script
-```
+Un icosaedro en líneas que gira muy lento detrás del titular, con una luz roja baja (`src/components/Background3D.jsx`).
+
+- Se descarga aparte y **después** de que la página ya se ve: nunca retrasa el titular ni el video.
+- **Celular:** versión liviana (menos detalle, resolución 1x, ~30 cuadros por segundo).
+- **Desactivado** con *reducir movimiento* o *ahorro de datos*, y en pausa cuando sale de la pantalla.
+- Si el dispositivo no soporta 3D, simplemente no aparece.
+
+## 5. Accesibilidad
+
+Contraste verificado: texto principal 18.2:1, texto secundario 7.6:1, placeholders 5.7:1, texto del botón rojo 4.8:1. Foco visible en todos los controles, botones y opciones de 44px o más, labels en todos los campos y errores anunciados al lector de pantalla.
+
+## 6. Publicar
+
+[Vercel](https://vercel.com) o [Netlify](https://netlify.com): *New project* → elige el repositorio → *Build command* `npm run build`, *Output* `dist` → agrega las variables de `.env` → *Deploy*.

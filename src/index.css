@@ -1,38 +1,37 @@
 @import "tailwindcss";
 
 /* =========================================================================
-   COLORES DE LA MARCA
-   Cambia aquí los colores y se actualiza toda la página.
-   Regla: el rojo (--accent) se usa SOLO para la acción principal.
+   COLORES (dark-minimal-red-dna)
+   El rojo es el ÚNICO acento y se usa solo en el botón principal.
+   Contraste verificado sobre --bg (#0a0a0a):
+     --fg 18.2:1 · --fg-2 7.6:1 · --placeholder 5.7:1
+     texto del botón (#ffffff) sobre --accent 4.8:1
    ========================================================================= */
 :root {
-  --bg-primary: #0a0a0a;      /* fondo principal (casi negro) */
-  --bg-secondary: #141414;    /* tarjetas y superficies */
-  --bg-tertiary: #1c1c1c;     /* hover / elevación sutil */
-  --text-primary: #f5f5f5;    /* texto principal (blanco suave) */
-  --text-secondary: #a0a0a0;  /* texto de apoyo */
-  --text-muted: #6b6b6b;      /* notas pequeñas, placeholders */
-  --accent: #e02020;          /* color de acento: botón principal */
+  --bg: #0a0a0a;
+  --surface: #141414;
+  --surface-2: #1c1c1c;
+  --fg: #f5f5f5;
+  --fg-2: #a0a0a0;
+  --placeholder: #8a8a8a;
+  --accent: #e02020;
   --accent-hover: #c41818;
-  --border: rgba(255, 255, 255, 0.08);
-  --border-strong: rgba(255, 255, 255, 0.16);
+  --on-accent: #ffffff;
+  --line: rgba(255, 255, 255, 0.1);
+  --line-strong: rgba(255, 255, 255, 0.22);
 
   color-scheme: dark;
 }
 
-/* Conecta las variables con las clases de Tailwind (bg-bg, text-fg, etc.) */
 @theme inline {
-  --color-bg: var(--bg-primary);
-  --color-surface: var(--bg-secondary);
-  --color-surface-2: var(--bg-tertiary);
-  --color-fg: var(--text-primary);
-  --color-fg-2: var(--text-secondary);
-  --color-fg-3: var(--text-muted);
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-fg: var(--fg);
+  --color-fg-2: var(--fg-2);
   --color-accent: var(--accent);
-  --color-accent-hover: var(--accent-hover);
-  --color-line: var(--border);
-  --color-line-strong: var(--border-strong);
-
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
   --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
 }
 
@@ -40,102 +39,84 @@ html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
 }
-
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
 
 body {
-  background: var(--bg-primary);
-  color: var(--text-primary);
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
   font-family: var(--font-sans);
+  font-weight: 400;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
 }
 
-::selection {
-  background: var(--accent);
-  color: var(--text-primary);
+/* Foco visible en todo lo interactivo (en la capa base para que
+   las clases de Tailwind como outline-none puedan anularlo) */
+@layer base {
+  :where(a, button, input, textarea, [tabindex]):focus-visible {
+    outline: 2px solid var(--fg);
+    outline-offset: 3px;
+  }
 }
 
 @layer components {
-/* Etiqueta pequeña en mayúsculas encima de cada título */
-.eyebrow {
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--text-secondary);
-}
+  /* Botón principal: el único elemento rojo de la página */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    min-height: 3.5rem;
+    padding: 0 2rem;
+    border-radius: 999px;
+    background: var(--accent);
+    color: var(--on-accent);
+    font-weight: 500;
+    font-size: 1.0625rem;
+    line-height: 1.2;
+    transition: background-color 180ms ease, transform 180ms ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .btn-primary:hover { background: var(--accent-hover); }
+  .btn-primary:active { transform: scale(0.98); }
+  .btn-primary:disabled { opacity: 0.7; cursor: progress; }
 
-/* Botón principal (rojo) — uno por pantalla */
-.btn-primary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.6rem;
-  min-height: 3.5rem;
-  padding: 0 2rem;
-  border-radius: 999px;
-  background: var(--accent);
-  color: var(--text-primary);
-  font-weight: 500;
-  font-size: 1.0625rem;
-  transition: background-color 180ms ease, transform 180ms ease;
-}
-.btn-primary:hover { background: var(--accent-hover); }
-.btn-primary:active { transform: scale(0.98); }
-.btn-primary:disabled { opacity: 0.6; cursor: not-allowed; }
+  .label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.975rem;
+    font-weight: 500;
+    color: var(--fg);
+  }
 
-/* Botón secundario (contorno) */
-.btn-ghost {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.6rem;
-  min-height: 3rem;
-  padding: 0 1.5rem;
-  border-radius: 999px;
-  border: 1px solid var(--border-strong);
-  color: var(--text-primary);
-  font-weight: 500;
-  transition: border-color 180ms ease, background-color 180ms ease;
-}
-.btn-ghost:hover {
-  border-color: var(--text-secondary);
-  background: var(--bg-tertiary);
-}
-}
-
-:where(a, button, input, textarea, summary, label):focus-visible {
-  outline: 2px solid var(--text-primary);
-  outline-offset: 3px;
-}
-
-@layer components {
-/* Campos del formulario */
-.field {
-  width: 100%;
-  min-height: 3.25rem;
-  padding: 0.85rem 1rem;
-  border-radius: 12px;
-  background: var(--bg-primary);
-  border: 1px solid var(--border-strong);
-  color: var(--text-primary);
-  font-size: 1rem; /* 16px evita el zoom automático en iPhone */
-  transition: border-color 160ms ease;
-}
-.field::placeholder { color: var(--text-muted); }
-.field:hover { border-color: rgba(255, 255, 255, 0.28); }
-.field:focus { outline: none; border-color: var(--text-primary); }
-.field[aria-invalid="true"] { border-color: var(--accent); }
+  .field {
+    display: block;
+    width: 100%;
+    min-height: 3.25rem;
+    padding: 0.8rem 1rem;
+    border-radius: 12px;
+    background: var(--bg);
+    border: 1px solid var(--line-strong);
+    color: var(--fg);
+    font: inherit;
+    font-size: 1rem; /* 16px: evita el zoom automático en iPhone */
+    transition: border-color 160ms ease;
+  }
+  .field::placeholder { color: var(--placeholder); opacity: 1; }
+  .field:hover { border-color: rgba(255, 255, 255, 0.36); }
+  .field:focus-visible { outline-offset: 2px; }
+  /* Error: borde claro y grueso (sin rojo: el rojo es solo del botón) */
+  .field[aria-invalid="true"] {
+    border-color: var(--fg);
+    box-shadow: inset 0 0 0 1px var(--fg);
+  }
 }
 
 /* Estado inicial de las animaciones de entrada (GSAP las revela).
-   Si JS falla o el usuario prefiere menos movimiento, se ve todo normal. */
+   Sin JS o con "reducir movimiento" todo se ve normal. */
 .js-anim [data-reveal] { opacity: 0; }
-@media (prefers-reduced-motion: reduce) {
-  .js-anim [data-reveal] { opacity: 1; }
-}
