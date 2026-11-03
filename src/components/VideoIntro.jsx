@@ -29,11 +29,22 @@ function conAutoplay(url) {
 export default function VideoIntro() {
   const [reproduciendo, setReproduciendo] = useState(false)
   const hayVideo = Boolean(video.url)
-  const portada = video.portada || (hayVideo ? miniaturaYouTube(video.url) : '')
+  const portada = video.portada || miniaturaYouTube(video.url)
 
   return (
     <div className="relative mx-auto aspect-video w-full overflow-hidden rounded-2xl border border-line-strong bg-surface">
-      {reproduciendo && hayVideo ? (
+      {!hayVideo ? (
+        /* Sin video todavía: espacio reservado (no es un botón porque no hace nada) */
+        <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
+          <span
+            aria-hidden="true"
+            className="flex h-16 w-16 items-center justify-center rounded-full border border-line-strong bg-bg/70 text-fg md:h-20 md:w-20"
+          >
+            <IconPlay className="ml-1 h-6 w-6 md:h-7 md:w-7" />
+          </span>
+          <p className="text-sm text-fg-2">{video.textoSinVideo}</p>
+        </div>
+      ) : reproduciendo ? (
         <iframe
           src={conAutoplay(video.url)}
           title={video.titulo}
@@ -45,12 +56,9 @@ export default function VideoIntro() {
       ) : (
         <button
           type="button"
-          onClick={() => hayVideo && setReproduciendo(true)}
-          aria-label={hayVideo ? `Reproducir: ${video.titulo}` : `${video.titulo} (próximamente)`}
-          aria-disabled={!hayVideo}
-          className={`group absolute inset-0 flex h-full w-full flex-col items-center justify-center gap-4 focus-visible:outline-offset-[-4px] ${
-            hayVideo ? 'cursor-pointer' : 'cursor-default'
-          }`}
+          onClick={() => setReproduciendo(true)}
+          aria-label={`Reproducir: ${video.titulo}`}
+          className="group absolute inset-0 flex h-full w-full cursor-pointer items-center justify-center focus-visible:outline-offset-[-4px]"
         >
           {portada && (
             <img
@@ -62,7 +70,6 @@ export default function VideoIntro() {
           <span className="relative flex h-16 w-16 items-center justify-center rounded-full border border-line-strong bg-bg/70 text-fg transition-transform duration-200 group-hover:scale-105 md:h-20 md:w-20">
             <IconPlay className="ml-1 h-6 w-6 md:h-7 md:w-7" />
           </span>
-          {!hayVideo && <span className="relative text-sm text-fg-2">{video.textoSinVideo}</span>}
         </button>
       )}
     </div>

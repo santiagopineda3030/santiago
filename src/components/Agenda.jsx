@@ -226,7 +226,7 @@ export default function Agenda() {
                     )
                   })}
                 </div>
-                <Error id="redes-error" texto={errores.redes} />
+                <MensajeError id="redes-error" texto={errores.redes} />
               </fieldset>
 
               <fieldset aria-describedby={errores.inversion ? 'inversion-error' : undefined}>
@@ -258,7 +258,7 @@ export default function Agenda() {
                     )
                   })}
                 </div>
-                <Error id="inversion-error" texto={errores.inversion} />
+                <MensajeError id="inversion-error" texto={errores.inversion} />
               </fieldset>
 
               {/* Campo trampa anti-spam: invisible para personas */}
@@ -271,8 +271,8 @@ export default function Agenda() {
 
               <div className="grid gap-4 pt-1">
                 <div aria-live="polite" className="empty:hidden">
-                  {hayErrores && <Error texto={msg.resumen} />}
-                  {estado === 'error' && <Error texto={msg.envio} />}
+                  {hayErrores && <MensajeError texto={msg.resumen} />}
+                  {estado === 'error' && <MensajeError texto={msg.envio} />}
                 </div>
                 <button type="submit" className="btn-primary w-full" disabled={estado === 'enviando'}>
                   {estado === 'enviando' ? agenda.enviando : agenda.boton}
@@ -326,7 +326,7 @@ function Campo({ id, label, ayuda, error, children }) {
           {ayuda}
         </p>
       )}
-      <Error id={`${id}-error`} texto={error} />
+      <MensajeError id={`${id}-error`} texto={error} />
     </div>
   )
 }
@@ -347,10 +347,10 @@ function Opcion({ activa, invalida, children }) {
   )
 }
 
-function Error({ id, texto }) {
+function MensajeError({ id, texto }) {
   if (!texto) return null
   return (
-    <p id={id} role={id ? undefined : 'alert'} className="mt-2.5 flex items-start gap-2 text-sm font-medium text-fg">
+    <p id={id} className="mt-2.5 flex items-start gap-2 text-sm font-medium text-fg">
       <IconAlert className="mt-px h-[18px] w-[18px] shrink-0" />
       {texto}
     </p>

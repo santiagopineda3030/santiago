@@ -29,20 +29,19 @@ function useFondo3D() {
     const activar = () => setModo(movil ? 'lite' : 'full')
 
     // Esperamos a que la página cargue y el navegador esté libre
-    let idle
+    const conIdle = 'requestIdleCallback' in window
+    let id
     const programar = () => {
-      idle =
-        'requestIdleCallback' in window
-          ? window.requestIdleCallback(activar, { timeout: 2500 })
-          : window.setTimeout(activar, 1200)
+      id = conIdle ? window.requestIdleCallback(activar, { timeout: 2500 }) : window.setTimeout(activar, 1200)
     }
     if (document.readyState === 'complete') programar()
     else window.addEventListener('load', programar, { once: true })
 
     return () => {
       window.removeEventListener('load', programar)
-      if ('cancelIdleCallback' in window) window.cancelIdleCallback(idle)
-      window.clearTimeout(idle)
+      if (id === undefined) return
+      if (conIdle) window.cancelIdleCallback(id)
+      else window.clearTimeout(id)
     }
   }, [])
 
