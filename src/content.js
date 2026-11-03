@@ -35,7 +35,7 @@ export const ctaFijoMovil = 'Agendar llamada'
 
 export const agenda = {
   etiqueta: 'Paso final · Agenda',
-  titulo: 'Agenda tu llamada de 30 minutos',
+  titulo: 'Agenda tu llamada de 10 minutos',
   intro: 'Completa tus datos y elige el horario que mejor te quede.',
 
   campos: {

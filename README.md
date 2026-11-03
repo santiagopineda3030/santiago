@@ -1,6 +1,6 @@
 # Santiago | Aprende IA y automatiza tus redes
 
-Landing de una sola página con **un solo objetivo**: que la persona vea el video de introducción y agende una llamada de 30 minutos.
+Landing de una sola página con **un solo objetivo**: que la persona vea el video de introducción y agende una llamada de 10 minutos.
 
 React + Vite + Tailwind CSS · GSAP (animaciones de entrada) · React Three Fiber + drei (fondo 3D). Pensada primero para celular.
 
@@ -38,9 +38,9 @@ npm run build          # versión final en /dist
 El reproductor solo se carga cuando la persona toca *play*, así la página abre rápido desde Instagram. Con YouTube se usa la miniatura del video como portada automáticamente.
 
 **Link del calendario:**
-- Calendly: `https://calendly.com/tu-usuario/llamada-30-min?hide_gdpr_banner=1&background_color=141414&text_color=f5f5f5&primary_color=e02020` (la página rellena sola el nombre y el correo).
+- Calendly: `https://calendly.com/tu-usuario/llamada-10-min?hide_gdpr_banner=1&background_color=0a0f15&text_color=e6f1ff&primary_color=22d3ee` (la página rellena sola el nombre y el correo).
 - Google Calendar (agenda de citas): *Página de reservas → Compartir → Insertar* → copia el `src`.
-- Cal.com: `https://cal.com/tu-usuario/30min?embed=true&theme=dark`.
+- Cal.com: `https://cal.com/tu-usuario/10min?embed=true&theme=dark`.
 
 ---
 
