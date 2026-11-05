@@ -1,8 +1,9 @@
 # Guion diario de Noticias IA (lo hace una tarea programada cada mañana)
 
-Tarea programada "Guion diario Noticias IA": corre **todos los días a las 5:43 a. m. (Bogotá)** en una sesión nueva
-de Claude Code con este repositorio y los conectores de Google Drive y Google Sheets. Su instrucción es: seguir
-este archivo. Para cambiar cómo se hace el guion, se cambia este archivo (no la tarea).
+Tarea programada "Guion diario Noticias IA" (`trig_01BFVwdMKp5sUs5icvey15m3`): corre **todos los días a las
+5:43 a. m. (Bogotá)** dentro de la sesión de Claude Code "YouTube Shorts automático" (la que tiene Drive y Sheets
+conectados; una sesión nueva creada por tarea no traía los conectores). Su instrucción es: hacer pull y seguir este
+archivo. Para cambiar cómo se hace el guion, se cambia este archivo (no la tarea).
 
 ## Carpetas (Drive)
 | Qué | ID |
