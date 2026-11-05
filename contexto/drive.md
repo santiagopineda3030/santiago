@@ -32,6 +32,7 @@ Las carpetas viejas `<red> › 1. Guiones` se mandaron a la papelera el 5 nov (s
 |---|---|---|---|
 | Guía de edición · Noticias IA | Instagram › 3. Recursos | `1c6WFwKiaYtGi4osN8CVu6A0slpj4tBzQm8FeDhqkbWk` | `drive-respaldo/recursos/guia-edicion-noticias-ia.md` |
 | v1 · Noticias IA · Día 1 | Guiones › Instagram › 3. Guiones terminados | `1ScuWZ3VeW2XJI4GK4EK5vzZUZEK_5A-Yq88E4Lf0NZo` | `drive-respaldo/guiones/v1-noticias-ia-dia-1.md` |
+| v2 · Noticias IA · 5 nov (IG / TikTok / YouTube) | Guiones › <red> › 3. Guiones terminados | `1Fx4bSKRtpNNWTNy7Z79FjQ-oVNLOi3RTciB23hVdctc` / `12wfQXep2QZ9zcASTM8Xrv6sGXlBtEkJk6wl5-u9Xoz4` / `1mTJx80-AgQcB7n8sUunnlq13XxUNCwHp_Lx2xikJ__Q` | `drive-respaldo/guiones/v2-noticias-ia-5-nov.md` |
 | Recursos y reglas · TikTok | TikTok › 3. Recursos | `1tLRRrTK-EVVp7xzarUpt2r1GmV_gP_1UpwlR8lAA5RE` | `drive-respaldo/recursos/recursos-y-reglas-tiktok.md` |
 | Recursos y reglas · YouTube | YouTube › 3. Recursos | `1wh7VcclA6mRRc3klYYAP12viCKVLQs8Wr-mptmkWG4c` | `drive-respaldo/recursos/recursos-y-reglas-youtube.md` |
 | Recursos y reglas · Anuncios (Meta) | Anuncios (Meta) › 3. Recursos | `1OYm-fAvq_5uiMJgZkZA82JC5HaD0HEnBp-OzxKUNZdY` | `drive-respaldo/recursos/recursos-y-reglas-meta-ads.md` |

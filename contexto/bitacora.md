@@ -1,6 +1,7 @@
 # Bitácora (lo más nuevo arriba, una línea por cosa hecha)
 
 ## 5 nov 2026
+- Guion v2 (noticias 5 nov) revisado con Santi y terminado: cambiamos centros de datos por Universal Music vs. Anthropic, CTA de seguir. Docs nuevos en `3. Guiones terminados` (IG/TikTok/YouTube), los en frío a la papelera. Hoja fila v2: Estado `Grabar`, Ángulo, links y Título YouTube. Copia: `drive-respaldo/guiones/v2-noticias-ia-5-nov.md`.
 - Chats ordenados por carpeta (etiquetas `area:`), archivados Insta automático y YouTube Shorts automático (todo está en GitHub). Registro en `chats.md`. Aviso de las 5:05 movido a Santi · Base. Santi sigue desde Santi · Base.
 - Carpetas 📁 Instagram, TikTok, YouTube, Anuncios (Meta), Guiones creadas como chats visibles con mensaje de presentación (las de dentro de Base no se veían en la barra lateral: archivadas). IDs en CLAUDE.md.
 - Todo renombrado a **Kit de edición ContentIA** (sin Work in Tech): `kit-wit.md` → `kit-contentia.md`, los 3 docs de Recursos rehechos (IDs nuevos en `drive.md`; los viejos a la papelera).
