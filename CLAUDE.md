@@ -48,7 +48,9 @@ claude.ai (proyectos, documentos, chats). Si algo cambia, se actualiza aquí.
 - **Cada video publicado se marca también en Google Calendar** (calendario principal de Santiago):
   título `✅ Publicado · <título original>`, color verde (colorId 10), hora real de publicación,
   y en la descripción las redes, la hora y el link del video en Drive. Sin notificaciones.
-- Publicación automática en Instagram: **falta `META_TOKEN` e `IG_ID`** (pendiente de conectar con Meta).
+- Publicación automática en Instagram: app de Meta "Publicador Santi" (App ID 1462889889116914), página de Facebook
+  "Santi • content IA" (id 1468491546343867), **IG_ID = 17841438740412085**. Falta guardar `META_TOKEN`
+  (token de página que no vence) en Propiedades del script y llenar CONFIG en Code.gs.
 
 ## Herramientas que ya están montadas en este repositorio
 - `editor-noticias/`: editor de video propio (ffmpeg + Whisper + animaciones). Flujo que funcionó en v1:
