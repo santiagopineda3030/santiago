@@ -29,7 +29,7 @@ from editar import ffmpeg, normalizar, probar
 PRE, POST = 0.06, 0.07
 SIL_DB, SIL_MIN, SIL_MARGEN = -34, 0.16, 0.05
 GRUPO_MAX = 4.0          # cada ~4 s cambia el zoom
-COLA_CTA = 2.2
+COLA_CTA = 3.0
 SR = 48000
 GANANCIA_SFX = {"whoosh": 0.32, "pop": 0.28, "ding": 0.22, "golpe": 0.42, "alerta": 0.22, "teclas": 0.3}
 
@@ -161,12 +161,20 @@ def main():
             ini, fin = max(0.0, c["desde"] - PRE), min(infos[ci]["dur"], c["hasta"] + POST)
             ws = alinear(c["texto"], palabras_de(trozos[ci], c["desde"], c["hasta"]), c["desde"], c["hasta"])
             acum, zoom = 0.0, 1.0 if k == 0 else zooms[len(plan) % len(zooms)]
-            for (x, y) in sin_pausas(ini, fin, sil[ci]):
+            tramos = sin_pausas(ini, fin, sil[ci])
+            # cada palabra va al tramo más cercano (ninguna se pierde) y se ajusta a sus bordes
+            asignadas = {i: [] for i in range(len(tramos))}
+            for w in ws:
+                m = (w["s"] + w["e"]) / 2
+                i = min(range(len(tramos)), key=lambda i: 0 if tramos[i][0] <= m <= tramos[i][1]
+                        else min(abs(m - tramos[i][0]), abs(m - tramos[i][1])))
+                x, y = tramos[i]
+                asignadas[i].append(dict(w, s=min(max(w["s"], x), y - 0.05), e=max(min(w["e"], y), x + 0.05)))
+            for i, (x, y) in enumerate(tramos):
                 if acum > GRUPO_MAX:
                     zoom, acum = zooms[(zooms.index(zoom) + 1) % len(zooms)], 0.0
-                pw = [w for w in ws if x - 0.02 <= (w["s"] + w["e"]) / 2 <= y + 0.02]
                 pz = {"seccion": s["titulo"], "clip": ci, "ini": round(x, 3), "fin": round(y, 3), "zoom": zoom,
-                      "palabras": pw}
+                      "palabras": asignadas[i]}
                 plan.append(pz)
                 sec["piezas"].append(pz)
                 acum += y - x
@@ -215,8 +223,8 @@ def main():
                 print(f"  ! no encontré «{g['en']}» (n={g.get('n', 1)}) en {sec['titulo']}")
                 continue
             eventos.append((hits[g.get("n", 1) - 1]["s"] + g.get("offset", 0.0), g["dur"], g))
-    cta_ini = total - 2.6
-    eventos.append((cta_ini + 0.2, COLA_CTA + 2.2, {"tipo": "emoji", "ch": edl.get("cta_emoji", "💬"), "x": 870, "y": 840,
+    cta_ini = total - 0.1  # la pregunta aparece justo cuando termina de hablar
+    eventos.append((cta_ini + 0.15, COLA_CTA - 0.1, {"tipo": "emoji", "ch": edl.get("cta_emoji", "💬"), "x": 870, "y": 840,
                                                     "tam": 200}))
     graficos = []
     for i, (t0, dur, g) in enumerate(sorted(eventos, key=lambda e: e[0])):
