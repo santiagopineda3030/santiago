@@ -19,7 +19,15 @@ Raíz **ContentIA** · `1LvKFGptavlfPDXzj48OVJZR7Yos2VIFC`
 
 Las carpetas viejas `<red> › 1. Guiones` se mandaron a la papelera el 5 nov (sus 2 documentos se movieron antes).
 
+## Edición de videos (5 nov, noche) · `1d-q-IQvGntqwJBuLkk5arAwd2AytkCzi`
+Un solo video para Instagram, TikTok y YouTube Shorts. Se movieron aquí las carpetas de Instagram (mismos IDs, los scripts siguen igual):
+| Carpeta | ID | Antes |
+|---|---|---|
+| 1. Videos en frío | `1GFl-0CSYI8afA0tzKGa0AVmM7FC-d4ON` | Instagram › 2. Crudo sin editar |
+| 2. Videos terminados | `1A1zlwXyvR-l2CZcJ6dnHUp-SZXnEcUGT` | Instagram › 4. Contenido editado (la lee la publicación automática) |
+
 ## Carpetas de cada red (lo que queda: 2, 3, 4)
+Ojo: en Instagram la 2 y la 4 ya no están aquí (se movieron a Edición de videos). Las de TikTok y YouTube siguen vacías.
 | Red | Carpeta red | 2. Crudo sin editar | 3. Recursos | 4. Contenido editado |
 |---|---|---|---|---|
 | Instagram | `1nfrSKYOha17VFAuvj-0-NLShZ8x32o-U` | `1GFl-0CSYI8afA0tzKGa0AVmM7FC-d4ON` | `1Hd3rJljSfAr6ehoBet0xeFJIk1Fz84Rn` | `1A1zlwXyvR-l2CZcJ6dnHUp-SZXnEcUGT` |

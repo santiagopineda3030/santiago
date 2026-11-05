@@ -18,7 +18,7 @@
  *  4. Copiar la URL de la aplicación web (termina en /exec).
  */
 const SUBIDAS = {
-  CARPETA_EDITADOS: '1A1zlwXyvR-l2CZcJ6dnHUp-SZXnEcUGT', // Instagram › 4. Contenido editado
+  CARPETA_EDITADOS: '1A1zlwXyvR-l2CZcJ6dnHUp-SZXnEcUGT', // Edición de videos › 2. Videos terminados (antes Instagram › 4. Contenido editado)
   MAX_MB: 30,
 };
 

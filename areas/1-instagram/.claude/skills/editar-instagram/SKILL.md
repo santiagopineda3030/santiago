@@ -16,7 +16,7 @@ Español, pasos cortos. Santi dirige y revisa; Claude edita. Espera su OK donde 
 5. **Auditoría:** gancho en los primeros 3 s · ningún corte se come palabras (alargar el borde si la voz sigue) · sin silencios
    (VAD) · subtítulos 2–4 palabras sin errores · zona segura (x 120–960, y 250–1500) · voz −14 LUFS · 45–75 s · H.264 ≤ 30 MB ·
    nada de herramientas en pantalla · CTA del guion.
-6. **Entregar [OK]:** subir con el buzón a Instagram › `4. Contenido editado`, link en la COLA, Estado **Revisión**.
+6. **Entregar [OK]:** subir con el buzón a Edición de videos › `2. Videos terminados`, link en la COLA, Estado **Revisión**.
    Escribir la descripción (3–5 líneas, primera = gancho, emoji solo al cierre, 5 hashtags) y poner Publicación = `Listo`.
 
 **Corrección:** versión nueva (1.1, 1.2…; la anterior se queda), "Hecho: …" en la columna Corrección, vuelve a Revisión.

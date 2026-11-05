@@ -16,7 +16,8 @@ Español, tuteo, frases cortas (Santi suele estar en el iPad). Este chat **solo 
     G Instrucciones · H Estado · I Corrección · J Editado (link) · K Entregado · L Notas.
     Estados: Por editar → Editando → Revisión → Corrección → Entregado.
 - Drive › **Guiones** › <red> › `2. Guiones en frío`: guiones que la tarea de las 4:35 dejó y falta revisar.
-- Drive › <red> › `2. Crudo sin editar`: crudos nuevos que aún no tienen fila en la COLA.
+- Drive › Edición de videos › `1. Videos en frío`: crudos nuevos que aún no tienen fila en la COLA.
+- Videos para editar → chat **📁 Edición de videos** (skill `editar-video`, `areas/5-edicion-videos`).
 
 ## 2. Contarle qué hay (máximo 8 líneas, por prioridad)
 1. **Corrección** (lo que Santi devolvió). Siempre primero.

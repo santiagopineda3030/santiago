@@ -42,10 +42,11 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
   | `areas/2-tiktok` | `editar-tiktok` | Recursos y reglas · TikTok |
   | `areas/3-youtube` | `editar-youtube` | Recursos y reglas · YouTube |
   | `areas/4-anuncios-meta` | `editar-anuncio` | Recursos y reglas · Anuncios (Meta) |
+| `areas/5-edicion-videos` | `editar-video` | Edita lo de `1. Videos en frío`, revisa con Santi, sube a `2. Videos terminados` y programa |
 - **Chats:** `Santi · Base` (`session_01McnvqwgYFW5FkckcrCQLTM`) y `Santi · Preguntas` (`session_01McnvqsAY6qsuVP5J8RGKgS`), fijados arriba a mano; un chat por pieza con etiqueta `area:<red>`.
   - Carpetas (chats al mismo nivel que Base, cada uno se presenta en su primer mensaje): 📁 Instagram
     `session_01Mcnvqs7Mruj2n8hLGHzTTS` · 📁 TikTok `session_01Mcnvqun84DQpBZzc9mkVNF` · 📁 YouTube `session_01McnvqtEmdYchkSMiZkWiyW` ·
-    📁 Anuncios (Meta) `session_01McnvqspjmNbL6TY5zg81DQ` · 📁 Guiones `session_01McnvqsoboeaDTB6ormVrbC`.
+    📁 Anuncios (Meta) `session_01McnvqspjmNbL6TY5zg81DQ` · 📁 Guiones `session_01McnvqsoboeaDTB6ormVrbC` · 📁 Edición de videos (ID en `contexto/chats.md`).
     (Las creadas desde Base quedaban escondidas dentro de él: archivadas.) Los chats de cada pieza los abre Base.
 - **Correcciones que son regla** → "Ajustes de Santi" del documento de la red (Drive + copia en `drive-respaldo/recursos/`) + bitácora.
 
@@ -82,9 +83,9 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
 | Sistema (Code.gs, Subidas.gs, prompt) | 0. Sistema | `1SlcWLrDd6LfoA_PRwedJ4MeVFIL_0HxL` |
 | **Guiones** (todas las redes) | Guiones › <red> › 1. Ideas / 2. Guiones en frío / 3. Guiones terminados | `15J5tBsxY1o98Eee_v0jEH98mE720Ql8s` |
 | Ideas IG / En frío IG / Terminados IG | Guiones › Instagram › … | `1qosYx_N0AKGhGMweD3nJtLZtUwNDlud_` / `1xmfC0MN5kSMKIJMRpb4XSwhGZChCy0t5` / `1Kx0aOb41wOsZLvxPAt1fNY83eFe-7O2p` |
-| Crudos IG | Instagram › 2. Crudo sin editar | `1GFl-0CSYI8afA0tzKGa0AVmM7FC-d4ON` |
+| Videos en frío (crudos, las 3 redes) | Edición de videos › 1. Videos en frío | `1GFl-0CSYI8afA0tzKGa0AVmM7FC-d4ON` |
 | Recursos IG (guía de edición) | Instagram › 3. Recursos | `1Hd3rJljSfAr6ehoBet0xeFJIk1Fz84Rn` |
-| Editados IG | Instagram › 4. Contenido editado | `1A1zlwXyvR-l2CZcJ6dnHUp-SZXnEcUGT` |
+| Videos terminados (los lee la publicación automática) | Edición de videos › 2. Videos terminados | `1A1zlwXyvR-l2CZcJ6dnHUp-SZXnEcUGT` |
 | TikTok / YouTube / Anuncios (Meta) | misma estructura: 2. Crudo, 3. Recursos, 4. Editado (vacías) | todos los IDs en `contexto/drive.md` |
 
 ## El plan de contenido (hoja) — reglas que no se rompen
