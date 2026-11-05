@@ -42,9 +42,10 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
   | `areas/3-youtube` | `editar-youtube` | Recursos y reglas · YouTube |
   | `areas/4-anuncios-meta` | `editar-anuncio` | Recursos y reglas · Anuncios (Meta) |
 - **Chats:** `Santi · Base` (`session_01McnvqwgYFW5FkckcrCQLTM`) y `Santi · Preguntas` (`session_01McnvqsAY6qsuVP5J8RGKgS`), fijados arriba a mano; un chat por pieza con etiqueta `area:<red>`.
-  - Carpetas dentro de Santi · Base (sesiones hijas): 📁 Instagram `session_01McnvqsnZJDNhChWPFwuM4e` · 📁 TikTok
-    `session_01McnvqukeWXzvfm8nD6rYWA` · 📁 YouTube `session_01McnvqsGKNWbhEv5p5PC4Lf` · 📁 Anuncios (Meta)
-    `session_01Mcnvqv8FHEf8sxomT5QN7z` · 📁 Guiones `session_01McnvqsRifPpBmx6GWoVy7Y`. Los chats de cada pieza los abre Base.
+  - Carpetas (chats al mismo nivel que Base, cada uno se presenta en su primer mensaje): 📁 Instagram
+    `session_01Mcnvqs7Mruj2n8hLGHzTTS` · 📁 TikTok `session_01Mcnvqun84DQpBZzc9mkVNF` · 📁 YouTube `session_01McnvqtEmdYchkSMiZkWiyW` ·
+    📁 Anuncios (Meta) `session_01McnvqspjmNbL6TY5zg81DQ` · 📁 Guiones `session_01McnvqsoboeaDTB6ormVrbC`.
+    (Las creadas desde Base quedaban escondidas dentro de él: archivadas.) Los chats de cada pieza los abre Base.
 - **Correcciones que son regla** → "Ajustes de Santi" del documento de la red (Drive + copia en `drive-respaldo/recursos/`) + bitácora.
 
 ## Quién es y cómo hablarle
