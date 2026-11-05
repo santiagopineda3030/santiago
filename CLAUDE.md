@@ -10,6 +10,7 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
   | `contexto/bitacora.md` | Para saber qué se hizo y qué quedó a medias |
   | `contexto/instagram-meta.md` | Publicación automática, token, errores de Meta |
   | `contexto/youtube.md` | YouTube Shorts automático: columnas, instalación, riesgo de video privado |
+  | `contexto/tiktok.md` | TikTok: borrador automático (plan A), app de TikTok, auditoría |
   | `contexto/ai-work.md` | Oferta, embudo, entrega, pendientes del negocio |
   | `contexto/estudio-de-mercado.md` | Textos de venta, guiones de leads |
   | `editor-noticias/README.md` | Editar videos |
@@ -34,7 +35,7 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
 - Estudio de mercado: `contexto/estudio-de-mercado.md`.
 
 ## Contenido diario: Noticias de IA
-- **Todos los días a las 11:00 a. m.** (Bogotá), con las 5 noticias del día anterior. Del 5 al 18 de nov 2026.
+- **Todos los días a las 11:00 a. m.** (Bogotá, siempre a las 11, no otra hora), con las 5 noticias del día anterior. Del 5 al 18 de nov 2026.
 - Estructura: Gancho → Viral 1 → Viral 2 → Polémica 1 → Polémica 2 → Útil → CTA.
 - Guía de edición (Drive, Instagram › 3. Recursos): vertical 1080×1920, 45–75 s, H.264 ≤ 30 MB,
   subtítulos 2–4 palabras con palabras clave en rojo, título por noticia, gancho en los primeros 3 s,
@@ -77,7 +78,8 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
 
 ## Pendientes grandes (en orden)
 1. Confirmar la primera publicación automática real (Instagram ya conectado e instalado).
-2. YouTube Shorts: **funcionando** (canal @santimediayt, probado 5 nov). Sale con la misma aprobación de IG. Siguiente: TikTok.
+2. YouTube Shorts: **funcionando** (canal @santimediayt, probado 5 nov). Sale con la misma aprobación de IG.
+   TikTok plan A (borrador + correo): código listo, falta crear la app e instalar (`contexto/tiktok.md`).
 3. Carpeta de ideas: `ContentIA › 0. Ideas › <Red> › <MES AAAA> › <AAAA-MM-DD> · <tema>` y tarea diaria
    que deja la idea/guion de Noticias IA listo cada mañana.
 4. Del plan AI Work: nombre de las redes y bio, clase gratis, módulos, plantilla del cerebro, CRM.

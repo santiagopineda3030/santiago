@@ -9,7 +9,8 @@
  *  3. Se escribe la descripción y se pasa a "Listo". Lo "Listo" sin fecha recibe el siguiente día libre a la HORA.
  *  4. Quien aprueba cambia Publicación → "Publicar". A la fecha y hora de la fila se publica solo en Instagram
  *     y queda marcado en Google Calendar ("✅ Publicado · …", verde, sin notificaciones).
- *  5. En esa misma vuelta el video sale también en YouTube Shorts (YouTube.gs, columnas "YouTube" y "Link YouTube").
+ *  5. En esa misma vuelta el video sale también en YouTube Shorts (YouTube.gs, columnas "YouTube" y "Link YouTube")
+ *     y llega a TikTok como borrador (TikTok.gs, columnas "TikTok" y "Link TikTok").
  *
  * El token de Meta (token de página que no vence) va en Configuración del proyecto › Propiedades del script
  * › META_TOKEN. Nunca en este código.
@@ -51,6 +52,7 @@ function instalar() {
   crearMes_(new Date(hoy.getFullYear(), hoy.getMonth() + 1, 1));
   crearCola_();
   prepararYouTube_();
+  prepararTikTok_();
   ScriptApp.getProjectTriggers().forEach(t => ScriptApp.deleteTrigger(t));
   ScriptApp.newTrigger('publicarPendientes').timeBased().everyMinutes(15).create();
   ScriptApp.newTrigger('traerVideosNuevos').timeBased().everyHours(1).create();
@@ -71,6 +73,8 @@ function onOpen() {
     .addItem('Repintar calendario', 'pintarCalendario')
     .addItem('Probar conexión con Instagram', 'probarConexion')
     .addItem('Probar conexión con YouTube', 'probarYouTube')
+    .addItem('Conectar TikTok', 'conectarTikTok')
+    .addItem('Probar conexión con TikTok', 'probarTikTok')
     .addToUi();
 }
 
@@ -118,6 +122,7 @@ function crearMes_(fecha) {
   sh.getRange(1, col('Publicación')).setNote('Solo cambia a "Publicar" cuando apruebes. Lo demás lo pone el script.');
   sh.getRange(1, col('Hora')).setNote('Hora local, ej. 11:00. Vacía = ' + CONFIG.HORA + ' al asignar fecha.');
   prepararYouTube_(); // columnas Título YouTube · YouTube · Link YouTube
+  prepararTikTok_();  // columnas TikTok · Link TikTok
 }
 
 /** COLA POR EDITAR: filas 1–2 contadores, fila 3 encabezados, datos desde la 4. */
@@ -162,7 +167,7 @@ function planes_() {
       fecha: h['fecha'], prod: h['estado'], angulo: h['angulo'], explicacion: h['explicacion'], guion: h['guion'],
       video: h['link video editado'], desc: h['descripcion de instagram'], codigo: h['#'], archivo: h['archivo'],
       hora: h['hora'], estado: h['publicacion'], link: h['link publicado'], tipo: h['tipo'], contenedor: h['contenedor'],
-      yttitulo: h['titulo youtube'], yt: h['youtube'], ytlink: h['link youtube'] } };
+      yttitulo: h['titulo youtube'], yt: h['youtube'], ytlink: h['link youtube'], tt: h['tiktok'], ttlink: h['link tiktok'] } };
   }).filter(Boolean);
 }
 
@@ -358,6 +363,7 @@ function publicarPendientes() {
       if (Date.now() - inicio > 4 * 60 * 1000) return; // Apps Script corta a los 6 min: sigue en la próxima vuelta
       const est = f.v(i, 'estado');
       if (String(f.v(i, 'yt')).trim() === 'Publicar') youtubeFila_(f, i, false); // subida a YouTube pedida a mano
+      tiktokFila_(f, i, false); // TikTok pedido a mano, o revisar si ya publicaste el borrador
       if (!['Publicar', 'Programado', 'Publicando'].includes(est)) return;
       try {
         if (est === 'Publicando') { revisar_(f, i); return; }
@@ -368,6 +374,7 @@ function publicarPendientes() {
           return;
         }
         youtubeFila_(f, i, true); // primero YouTube: si falla, queda "Error" en su columna e Instagram sigue
+        tiktokFila_(f, i, true);  // luego TikTok (borrador + correo): igual, nunca frena a Instagram
         subir_(f, i, file);
         revisar_(f, i);
       } catch (e) {
@@ -446,7 +453,9 @@ function marcarEnCalendario_(f, i, cuando, link) {
   try {
     const fin = new Date(cuando.getTime() + 15 * 60 * 1000);
     const yt = String(f.v(i, 'yt')) === 'Publicado' ? String(f.v(i, 'ytlink')) : '';
-    const desc = 'Redes: Instagram (' + CONFIG.CUENTA + ')' + (yt ? ' · YouTube Shorts' : '') + '\n' +
+    const tt = ['En borradores', 'Publicado'].includes(String(f.v(i, 'tt'))) ? String(f.v(i, 'tt')) : '';
+    const desc = 'Redes: Instagram (' + CONFIG.CUENTA + ')' + (yt ? ' · YouTube Shorts' : '') +
+      (tt ? ' · TikTok (' + tt.toLowerCase() + ')' : '') + '\n' +
       'Hora: ' + Utilities.formatDate(cuando, tz_(), 'dd/MM/yyyy HH:mm') + '\n' +
       'Video en Drive: ' + (f.v(i, 'video') || '—') + '\n' +
       'Instagram: ' + link + (yt ? '\nYouTube: ' + yt : '');
