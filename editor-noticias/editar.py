@@ -137,6 +137,15 @@ def leer_guion(path):
 
 
 # --------------------------------------------------------------------------- transcripción
+def audio_16k(clip):
+    """Audio del clip en mono 16 kHz (lo que usa Whisper), extraído con ffmpeg."""
+    import numpy as np
+
+    pcm = subprocess.run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-i", str(clip), "-vn",
+                          "-ac", "1", "-ar", "16000", "-f", "s16le", "-"], check=True, capture_output=True).stdout
+    return np.frombuffer(pcm, np.int16).astype(np.float32) / 32768.0
+
+
 def transcribir(clips, carpeta, modelo):
     carpeta.mkdir(parents=True, exist_ok=True)
     resultado, pendientes = {}, []
@@ -153,7 +162,7 @@ def transcribir(clips, carpeta, modelo):
         wm = WhisperModel(modelo, device="cpu", compute_type="int8")
         for c in pendientes:
             print(f"· Transcribiendo {c.name}…", flush=True)
-            segs, _ = wm.transcribe(str(c), language="es", word_timestamps=True,
+            segs, _ = wm.transcribe(audio_16k(c), language="es", word_timestamps=True,
                                     initial_prompt=PROMPT_WHISPER, condition_on_previous_text=False,
                                     vad_filter=False, beam_size=5)
             palabras = [{"w": w.word.strip(), "s": round(w.start, 3), "e": round(w.end, 3)}
@@ -258,7 +267,9 @@ def generar_ass(plan, secciones, gancho_texto, ruta):
         fin_frase = re.search(r"[.,;:?!…]$", w["w"])
         siguiente = palabras[i + 1] if i + 1 < len(palabras) else None
         hueco = siguiente and siguiente["s"] - w["e"] > 0.35
-        if len(actual) >= 4 or (len(actual) >= 2 and (fin_frase or hueco)) or not siguiente:
+        largo = len(" ".join(x["w"] for x in actual))
+        no_cabe = siguiente and largo + 1 + len(siguiente["w"]) > 17  # una sola línea en 1080 px
+        if len(actual) >= 4 or no_cabe or (len(actual) >= 2 and (fin_frase or hueco)) or not siguiente:
             grupos.append(actual)
             actual = []
     if actual:
@@ -295,7 +306,7 @@ ScaledBorderAndShadow: yes
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Sub,Inter Black,92,{BLANCO},{BLANCO},{NEGRO},{NEGRO},0,0,0,0,100,100,0,0,1,7,0,2,80,80,560,1
+Style: Sub,Inter Black,92,{BLANCO},{BLANCO},{NEGRO},{NEGRO},0,0,0,0,100,100,0,0,1,7,0,2,80,80,400,1
 Style: Titulo,Inter Black,66,{BLANCO},{BLANCO},{ACENTO},{ACENTO},0,0,0,0,100,100,1,0,3,18,0,8,80,80,260,1
 Style: Gancho,Inter Black,104,{BLANCO},{BLANCO},{NEGRO},{NEGRO},0,0,0,0,100,100,0,0,1,9,0,8,70,70,330,1
 Style: CTA,Inter Black,72,{BLANCO},{BLANCO},{ACENTO},{ACENTO},0,0,0,0,100,100,0,0,3,22,0,8,90,90,380,1
@@ -309,13 +320,17 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 
 
 # --------------------------------------------------------------------------- render
+CENTRO_X = 0.5  # dónde está la persona en el cuadro (0 = izquierda, 1 = derecha)
+
+
 def filtro_encuadre(info, zoom):
-    """Escala y recorta al centro para 9:16 con el zoom indicado."""
+    """Escala y recorta a 9:16 alrededor de CENTRO_X con el zoom indicado."""
     if info["w"] / info["h"] >= W / H:  # más ancho que 9:16 → ajustar alto
         esc = f"scale=-2:{int(H * zoom) // 2 * 2}"
     else:
         esc = f"scale={int(W * zoom) // 2 * 2}:-2"
-    return f"{esc}:flags=lanczos,crop={W}:{H},setsar=1,fps={FPS},format=yuv420p"
+    x = f"max(0\\,min(iw-{W}\\,iw*{CENTRO_X}-{W}/2))"
+    return f"{esc}:flags=lanczos,crop={W}:{H}:{x}:(ih-{H})/2,setsar=1,fps={FPS},format=yuv420p"
 
 
 def render(plan, clips, infos, tmp):
@@ -380,8 +395,11 @@ def main():
                     help="texto grande de los primeros 3 s (guía, sección 3)")
     ap.add_argument("--modelo", default="small", help="modelo de Whisper: base, small, medium")
     ap.add_argument("--pausa", type=float, default=0.30, help="silencio máximo que se deja (s)")
+    ap.add_argument("--centro-x", type=float, default=0.5, help="posición horizontal de la persona (0–1)")
     ap.add_argument("--solo-plan", action="store_true", help="solo transcribir y armar el plan, sin render")
     a = ap.parse_args()
+    global CENTRO_X
+    CENTRO_X = a.centro_x
 
     clips = sorted(p for p in Path(a.videos).iterdir() if p.suffix.lower() in {".mp4", ".mov", ".m4v"})
     if not clips:

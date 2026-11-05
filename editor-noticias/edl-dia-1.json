@@ -1,0 +1,49 @@
+{
+  "nota": "Lista de cortes elegida a mano, toma por toma, a partir de la transcripción por trozos. Tiempos en segundos del clip crudo. 'texto' = subtítulo corregido.",
+  "gancho_texto": "Google amenaza a los colegios",
+  "cta": "¿Y tú qué opinas de estas noticias del día de ayer?",
+  "secciones": [
+    {"titulo": "Gancho", "tipo": "gancho", "cortes": [
+      {"clip": "0105", "desde": 5.56, "hasta": 8.33, "texto": "La empresa que creó Claude acaba de lanzar algo que da miedo."},
+      {"clip": "0105", "desde": 9.81, "hasta": 11.57, "texto": "Google amenazando a los colegios."},
+      {"clip": "0105", "desde": 36.43, "hasta": 40.97, "texto": "Estas son las 5 noticias más importantes de la IA que pasaron el día de ayer, 4 de noviembre."}
+    ]},
+    {"titulo": "Viral 1 — Anthropic", "tipo": "noticia", "etiqueta": "VIRAL · ANTHROPIC", "cortes": [
+      {"clip": "0104", "desde": 0.00, "hasta": 3.57, "texto": "Anthropic, la empresa de Claude, le acaba de advertir a sus inversionistas"},
+      {"clip": "0104", "desde": 5.82, "hasta": 8.92, "texto": "que estamos cerca del momento en que la IA se actualice por sí sola."},
+      {"clip": "0104", "desde": 23.02, "hasta": 26.50, "texto": "Hacer gran parte del trabajo ella sola, sin que ningún humano la supervise."},
+      {"clip": "0104", "desde": 29.70, "hasta": 32.11, "texto": "O sea, la IA ayudando a crecer más IAs."},
+      {"clip": "0104", "desde": 35.16, "hasta": 37.75, "texto": "Ojo, dicen que todavía no está 100% comprobado."},
+      {"clip": "0104", "desde": 40.47, "hasta": 45.62, "texto": "Y por eso la tienen 100% supervisada por humanos para que ella misma no tome sus propias decisiones."}
+    ]},
+    {"titulo": "Viral 2 — SETI", "tipo": "noticia", "etiqueta": "VIRAL · SETI", "cortes": [
+      {"clip": "0103", "desde": 18.56, "hasta": 24.40, "texto": "Un grupo de científicos que escucha el espacio con antenas gigantes por si alguna vez llega a ver alguna notificación del espacio."},
+      {"clip": "0103", "desde": 29.99, "hasta": 32.15, "texto": "Ahora la maneja totalmente una IA."},
+      {"clip": "0103", "desde": 34.51, "hasta": 38.07, "texto": "Lo que antes le tomaba semanas revisar, ahora le toma horas."},
+      {"clip": "0103", "desde": 42.88, "hasta": 45.15, "texto": "Así que si alguna vez llegamos a encontrar vida allá…"},
+      {"clip": "0103", "desde": 46.86, "hasta": 48.35, "texto": "puede que nos avise una IA."}
+    ]},
+    {"titulo": "Polémica 1 — Google", "tipo": "noticia", "etiqueta": "POLÉMICA · GOOGLE", "cortes": [
+      {"clip": "0098", "desde": 7.86, "hasta": 11.32, "texto": "Google acaba de decir a los colegios: si no quieren mi IA para sus estudiantes,"},
+      {"clip": "0098", "desde": 18.22, "hasta": 19.86, "texto": "también los quito del buscador de Google."},
+      {"clip": "0098", "desde": 21.77, "hasta": 22.73, "texto": "O todo o nada."},
+      {"clip": "0098", "desde": 24.26, "hasta": 27.25, "texto": "Es decir, si los colegios le quitan Gemini a sus estudiantes,"},
+      {"clip": "0098", "desde": 29.45, "hasta": 31.36, "texto": "Google también los dejará sin Google."}
+    ]},
+    {"titulo": "Polémica 2 — Apple", "tipo": "noticia", "etiqueta": "POLÉMICA · APPLE", "cortes": [
+      {"clip": "0094", "desde": 1.53, "hasta": 5.38, "texto": "Apple está convirtiendo a Siri en una IA que puede hacer cosas por ti dentro de tus apps."},
+      {"clip": "0094", "desde": 9.05, "hasta": 12.78, "texto": "Pero al mismo tiempo le advirtió a sus inversionistas que esta IA se puede descontrolar:"},
+      {"clip": "0094", "desde": 15.09, "hasta": 17.14, "texto": "hacer cosas sin permiso o no obedecer."},
+      {"clip": "0094", "desde": 21.45, "hasta": 25.25, "texto": "Y al mismo tiempo, avisan que esta IA se puede salir de control."},
+      {"clip": "0094", "desde": 27.79, "hasta": 29.94, "texto": "Así que tengan mucho cuidado con su Siri."}
+    ]},
+    {"titulo": "Útil — Revolut", "tipo": "noticia", "etiqueta": "ÚTIL · REVOLUT", "cortes": [
+      {"clip": "0102", "desde": 0.00, "hasta": 2.79, "texto": "Revolut, uno de los bancos digitales más grandes del mundo,"},
+      {"clip": "0102", "desde": 5.93, "hasta": 8.57, "texto": "le pagaba a otras empresas cada vez que usaba la IA."},
+      {"clip": "0102", "desde": 16.97, "hasta": 19.11, "texto": "Como pagar Uber todos los días, a todo momento."},
+      {"clip": "0102", "desde": 25.53, "hasta": 28.55, "texto": "Entonces instala una IA gratuita a sus computadores,"},
+      {"clip": "0102", "desde": 31.09, "hasta": 34.43, "texto": "como comprarse su propio carro en vez de usar Uber todos los días,"},
+      {"clip": "0102", "desde": 40.83, "hasta": 44.10, "texto": "y gastó un 90% menos de sus ingresos mensuales."}
+    ]}
+  ]
+}
