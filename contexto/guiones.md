@@ -20,6 +20,9 @@ Una subcarpeta por red (Instagram, TikTok, YouTube, Anuncios (Meta)) y dentro de
 2. Santiago abre una sesión con Claude: revisan, corrigen y Claude **mueve** el documento a `3. Guiones terminados`
    (no copiar: mover, para que no queden dos versiones).
 3. Santiago graba → `2. Crudo sin editar` → Claude edita → `4. Contenido editado`.
+- **Limpieza (regla de Santi, 5 nov):** al terminar un guion, el guion en frío va a la papelera. Cuando el video del día
+  se publica, su guion terminado y su idea también van a la papelera (antes, copia en `drive-respaldo/guiones/`).
+  La carpeta Guiones solo guarda lo que está en curso. Excepción: SCRIPT VIDEO GRATIS (clase gratis) no se borra.
 - Claude no crea otra tarea de guiones. Solo corrige esa, cuando Santiago lo pide.
 
 ## Recursos por red (montado 5 nov)

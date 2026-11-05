@@ -13,5 +13,8 @@ Estilo: CLAUDE.md (Gancho → Viral 1 → Viral 2 → Polémica 1 → Polémica 
    nada de herramientas ni configuración, CTA correcto. Proponer cambios concretos (frase vieja → frase nueva).
 3. Con lo que diga Santi, corregir el guion (si hay versiones viejas por red, corregirlas igual).
 4. Con su OK: **mover** (no copiar) el guion a `3. Guiones terminados`. La idea se queda en `1. Ideas`.
+   Si no se puede mover con el texto nuevo, crear el terminado y mandar **el guion en frío a la papelera**
+   (regla de Santi, 5 nov: al terminar un guion, el en frío se borra; nunca quedan dos versiones).
+   La idea y el terminado se borran cuando el video ya esté publicado (lo hace la rutina diaria).
 5. En la hoja (pestaña del mes, fila del código): Estado `Grabar`. No tocar otras columnas.
 6. Copia del guion terminado en `drive-respaldo/guiones/` + línea en la bitácora + commit + push.
