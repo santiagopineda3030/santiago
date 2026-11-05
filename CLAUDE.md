@@ -9,6 +9,7 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
   |---|---|
   | `contexto/bitacora.md` | Para saber qué se hizo y qué quedó a medias |
   | `contexto/instagram-meta.md` | Publicación automática, token, errores de Meta |
+  | `contexto/youtube.md` | YouTube Shorts automático: columnas, instalación, riesgo de video privado |
   | `contexto/ai-work.md` | Oferta, embudo, entrega, pendientes del negocio |
   | `contexto/estudio-de-mercado.md` | Textos de venta, guiones de leads |
   | `editor-noticias/README.md` | Editar videos |
@@ -76,7 +77,7 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
 
 ## Pendientes grandes (en orden)
 1. Confirmar la primera publicación automática real (Instagram ya conectado e instalado).
-2. YouTube Shorts automático + una hoja de plan por red (YouTube, TikTok).
+2. YouTube Shorts: código listo (`YouTube.gs`), falta instalar y probar con v1. Luego TikTok.
 3. Carpeta de ideas: `ContentIA › 0. Ideas › <Red> › <MES AAAA> › <AAAA-MM-DD> · <tema>` y tarea diaria
    que deja la idea/guion de Noticias IA listo cada mañana.
 4. Del plan AI Work: nombre de las redes y bio, clase gratis, módulos, plantilla del cerebro, CRM.

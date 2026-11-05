@@ -1,6 +1,8 @@
 # Bitácora (lo más nuevo arriba, una línea por cosa hecha)
 
 ## 5 nov 2026
+- YouTube Shorts automático: `YouTube.gs` + `appsscript.json` listos en el repo (misma fila y misma
+  aprobación que IG). Falta que Santiago lo instale y probar con v1. Detalle: `youtube.md`.
 - Instagram conectado a Meta y script del plan instalado: publica solo cuando la fila está en `Publicar`
   y marca el evento verde en Google Calendar. Detalle: `instagram-meta.md`.
 - v1 "Noticias IA · Día 1" (v1 1.2) editado por Claude, subido a Drive con el buzón, publicado a mano a las 15:00

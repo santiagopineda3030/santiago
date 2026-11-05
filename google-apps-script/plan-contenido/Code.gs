@@ -9,6 +9,7 @@
  *  3. Se escribe la descripción y se pasa a "Listo". Lo "Listo" sin fecha recibe el siguiente día libre a la HORA.
  *  4. Quien aprueba cambia Publicación → "Publicar". A la fecha y hora de la fila se publica solo en Instagram
  *     y queda marcado en Google Calendar ("✅ Publicado · …", verde, sin notificaciones).
+ *  5. En esa misma vuelta el video sale también en YouTube Shorts (YouTube.gs, columnas "YouTube" y "Link YouTube").
  *
  * El token de Meta (token de página que no vence) va en Configuración del proyecto › Propiedades del script
  * › META_TOKEN. Nunca en este código.
@@ -49,6 +50,7 @@ function instalar() {
   crearMes_(hoy);
   crearMes_(new Date(hoy.getFullYear(), hoy.getMonth() + 1, 1));
   crearCola_();
+  prepararYouTube_();
   ScriptApp.getProjectTriggers().forEach(t => ScriptApp.deleteTrigger(t));
   ScriptApp.newTrigger('publicarPendientes').timeBased().everyMinutes(15).create();
   ScriptApp.newTrigger('traerVideosNuevos').timeBased().everyHours(1).create();
@@ -68,6 +70,7 @@ function onOpen() {
     .addItem('Crear pestaña del mes siguiente', 'crearMesSiguiente')
     .addItem('Repintar calendario', 'pintarCalendario')
     .addItem('Probar conexión con Instagram', 'probarConexion')
+    .addItem('Probar conexión con YouTube', 'probarYouTube')
     .addToUi();
 }
 
@@ -114,6 +117,7 @@ function crearMes_(fecha) {
   sh.getRange(1, col('#')).setNote('Lo pone el script. El editor empieza el nombre del archivo con este código: "v7 1.0 tema.mp4"');
   sh.getRange(1, col('Publicación')).setNote('Solo cambia a "Publicar" cuando apruebes. Lo demás lo pone el script.');
   sh.getRange(1, col('Hora')).setNote('Hora local, ej. 11:00. Vacía = ' + CONFIG.HORA + ' al asignar fecha.');
+  prepararYouTube_(); // columnas Título YouTube · YouTube · Link YouTube
 }
 
 /** COLA POR EDITAR: filas 1–2 contadores, fila 3 encabezados, datos desde la 4. */
@@ -157,7 +161,8 @@ function planes_() {
     return { sh, col: {
       fecha: h['fecha'], prod: h['estado'], angulo: h['angulo'], explicacion: h['explicacion'], guion: h['guion'],
       video: h['link video editado'], desc: h['descripcion de instagram'], codigo: h['#'], archivo: h['archivo'],
-      hora: h['hora'], estado: h['publicacion'], link: h['link publicado'], tipo: h['tipo'], contenedor: h['contenedor'] } };
+      hora: h['hora'], estado: h['publicacion'], link: h['link publicado'], tipo: h['tipo'], contenedor: h['contenedor'],
+      yttitulo: h['titulo youtube'], yt: h['youtube'], ytlink: h['link youtube'] } };
   }).filter(Boolean);
 }
 
@@ -352,6 +357,7 @@ function publicarPendientes() {
     planes_().map(leer_).forEach(f => f.vals.forEach((r, i) => {
       if (Date.now() - inicio > 4 * 60 * 1000) return; // Apps Script corta a los 6 min: sigue en la próxima vuelta
       const est = f.v(i, 'estado');
+      if (String(f.v(i, 'yt')).trim() === 'Publicar') youtubeFila_(f, i, false); // subida a YouTube pedida a mano
       if (!['Publicar', 'Programado', 'Publicando'].includes(est)) return;
       try {
         if (est === 'Publicando') { revisar_(f, i); return; }
@@ -361,6 +367,7 @@ function publicarPendientes() {
           if (est !== 'Programado') { f.set(i, 'estado', 'Programado'); f.set(i, 'link', ''); }
           return;
         }
+        youtubeFila_(f, i, true); // primero YouTube: si falla, queda "Error" en su columna e Instagram sigue
         subir_(f, i, file);
         revisar_(f, i);
       } catch (e) {
@@ -438,10 +445,11 @@ function marcarEnCalendario_(f, i, cuando, link) {
   if (!CONFIG.MARCAR_CALENDARIO) return;
   try {
     const fin = new Date(cuando.getTime() + 15 * 60 * 1000);
-    const desc = 'Redes: Instagram (' + CONFIG.CUENTA + ')\n' +
+    const yt = String(f.v(i, 'yt')) === 'Publicado' ? String(f.v(i, 'ytlink')) : '';
+    const desc = 'Redes: Instagram (' + CONFIG.CUENTA + ')' + (yt ? ' · YouTube Shorts' : '') + '\n' +
       'Hora: ' + Utilities.formatDate(cuando, tz_(), 'dd/MM/yyyy HH:mm') + '\n' +
       'Video en Drive: ' + (f.v(i, 'video') || '—') + '\n' +
-      'Publicación: ' + link;
+      'Instagram: ' + link + (yt ? '\nYouTube: ' + yt : '');
     const ev = CalendarApp.getDefaultCalendar().createEvent('✅ Publicado · ' + titulo_(f, i), cuando, fin, { description: desc });
     ev.setColor(CalendarApp.EventColor.GREEN);
     ev.removeAllReminders();
