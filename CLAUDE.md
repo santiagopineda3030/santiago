@@ -77,7 +77,7 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
 
 ## Pendientes grandes (en orden)
 1. Confirmar la primera publicación automática real (Instagram ya conectado e instalado).
-2. YouTube Shorts: instalado (canal @santimediayt), falta probar con v1 (columna YouTube = Publicar). Luego TikTok.
+2. YouTube Shorts: instalado (canal @santimediayt), v1 se subió a mano; la primera prueba automática es el próximo video aprobado. Luego TikTok.
 3. Carpeta de ideas: `ContentIA › 0. Ideas › <Red> › <MES AAAA> › <AAAA-MM-DD> · <tema>` y tarea diaria
    que deja la idea/guion de Noticias IA listo cada mañana.
 4. Del plan AI Work: nombre de las redes y bio, clase gratis, módulos, plantilla del cerebro, CRM.

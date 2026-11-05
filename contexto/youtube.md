@@ -25,7 +25,7 @@
 3. ⚙️ Configuración › marcar "Mostrar el archivo de manifiesto" › `appsscript.json` › reemplazar todo por el del repo.
 4. Reemplazar `Code.gs` entero y crear el archivo `YouTube` (+ › Script) con `YouTube.gs`.
 5. Elegir `probarYouTube` › Ejecutar › Autorizar (pide permiso de YouTube) → debe salir el nombre del canal.
-6. Prueba real: en la fila de v1 poner `Publicar` en la columna **YouTube** → revisar el Short en YouTube Studio.
+6. v1 ya lo subió Santiago a mano (marcado `Publicado`). La primera prueba real es el próximo video aprobado.
 
 ## Riesgo conocido
 YouTube deja **privados (bloqueados)** los videos subidos por proyectos de API sin verificar. Si pasa, la columna
