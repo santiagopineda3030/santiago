@@ -1,6 +1,7 @@
 # Bitácora (lo más nuevo arriba, una línea por cosa hecha)
 
 ## 5 nov 2026
+- Borrada la tarea de guion diario de las 5:43 que había creado Claude: Santiago ya tiene la suya a las 4:35 p. m. La carpeta `0. Ideas › Instagram › NOVIEMBRE 2026` quedó creada (vacía).
 - Plan de licencias para clientes aprobado y guardado (`licencias.md`). Se construye al final, no ahora.
 - TikTok: al crear la app en developers.tiktok.com le salió un error a Santiago. En pausa; pedirle captura del error al retomar.
 - Carpeta `0. Ideas › Instagram › NOVIEMBRE 2026` creada y procedimiento del guion diario (`guion-diario.md`).
