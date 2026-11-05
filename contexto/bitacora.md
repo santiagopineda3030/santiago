@@ -1,6 +1,7 @@
 # Bitácora (lo más nuevo arriba, una línea por cosa hecha)
 
 ## 5 nov 2026
+- Chats ordenados por carpeta (etiquetas `area:`), archivados Insta automático y YouTube Shorts automático (todo está en GitHub). Registro en `chats.md`. Aviso de las 5:05 movido a Santi · Base. Santi sigue desde Santi · Base.
 - Carpetas 📁 Instagram, TikTok, YouTube, Anuncios (Meta), Guiones creadas como chats visibles con mensaje de presentación (las de dentro de Base no se veían en la barra lateral: archivadas). IDs en CLAUDE.md.
 - Todo renombrado a **Kit de edición ContentIA** (sin Work in Tech): `kit-wit.md` → `kit-contentia.md`, los 3 docs de Recursos rehechos (IDs nuevos en `drive.md`; los viejos a la papelera).
 - Claude organizado como **Kit de edición ContentIA**: skills `rutina-diaria`, `preguntas`, `agregar-referente`, `revisar-guion` y `areas/1-instagram`, `2-tiktok`, `3-youtube`, `4-anuncios-meta` (CLAUDE.md + skill cada una). Chats Santi · Base y Santi · Preguntas. `.claude/settings.json` de permisos NO se creó (lo bloqueó el modo auto).

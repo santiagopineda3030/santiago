@@ -9,6 +9,7 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
   |---|---|
   | `contexto/bitacora.md` | Para saber qué se hizo y qué quedó a medias |
   | `contexto/drive.md` | Mapa completo de Drive con todos los IDs |
+  | `contexto/chats.md` | Lista de chats (activos y archivados), su carpeta y tareas programadas |
   | `contexto/kit-contentia.md` | Kit de edición ContentIA: áreas, skills y documentos de reglas por red |
   | `contexto/tarea-guion-diario.md` | Texto exacto de la tarea de las 4:35 p. m. (para corregirla o recrearla) |
   | `drive-respaldo/` | Copias de lo importante de Drive (guía de edición, instructivo del sistema, guiones) |
