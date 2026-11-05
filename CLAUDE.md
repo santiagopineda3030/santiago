@@ -41,7 +41,7 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
   | `areas/2-tiktok` | `editar-tiktok` | Recursos y reglas · TikTok |
   | `areas/3-youtube` | `editar-youtube` | Recursos y reglas · YouTube |
   | `areas/4-anuncios-meta` | `editar-anuncio` | Recursos y reglas · Anuncios (Meta) |
-- **Chats:** `Santi · Base` y `Santi · Preguntas` fijados arriba; un chat por pieza con etiqueta `area:<red>`.
+- **Chats:** `Santi · Base` (`session_01McnvqwgYFW5FkckcrCQLTM`) y `Santi · Preguntas` (`session_01McnvqsAY6qsuVP5J8RGKgS`), fijados arriba a mano; un chat por pieza con etiqueta `area:<red>`.
 - **Correcciones que son regla** → "Ajustes de Santi" del documento de la red (Drive + copia en `drive-respaldo/recursos/`) + bitácora.
 
 ## Quién es y cómo hablarle
