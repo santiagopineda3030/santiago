@@ -12,6 +12,7 @@ claude.ai (proyectos, documentos, chats). Si algo cambia, se actualiza aquí.
 ## El negocio (detalle en `contexto/ai-work.md`)
 - Marca personal de IA. Una sola oferta high ticket: **Cerebro de Contenido**, **$2.500 pago único**,
   vendida por **llamada**. Modelo *Done With You*: montamos, el cliente llena, su **Gestor IA** revisa.
+- Instagram: **@soysanti_content_ia** (cuenta profesional).
 - Público: dueños de negocio sin tiempo para contenido. Redes: **Instagram, TikTok, YouTube** (Facebook no).
 - Embudo: videos (noticias de IA + videos de leads) → "comenta CLAUDE" → clase gratis (~3 min) →
   web con video + formulario + calendario → sheet de leads → setter → closer.
