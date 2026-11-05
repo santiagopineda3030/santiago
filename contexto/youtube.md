@@ -1,7 +1,8 @@
-# YouTube Shorts: publicación automática (instalado 5 nov 2026, falta la prueba real con v1)
+# YouTube Shorts: publicación automática (instalado y probado 5 nov 2026)
 
 - Canal: **Soy Santi media YT** (@santimediayt), en santiagopineda3030@gmail.com.
 - `probarYouTube` corrió bien el 5 nov 13:12 y creó las columnas en la hoja.
+- Prueba real 5 nov: subió v1 sola (shorts/6-jhDrkqmfM), sin aviso de privado. Funciona por el disparador de 15 min.
 
 ## Cómo funciona
 - Misma hoja, misma fila, misma aprobación: cuando Santiago pone `Publicar` y llega la fecha y hora,
