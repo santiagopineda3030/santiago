@@ -32,6 +32,8 @@ Cuando Santi escoja una pieza ("trabajemos el v2", "revisemos el guion de hoy"):
   (ej. `v2 · Noticias IA 6 nov`), **tags** con su área (`area:instagram`, `area:tiktok`, `area:youtube`, `area:meta`,
   `area:guiones`) y **prompt** con la fila completa + "usa el CLAUDE.md y la skill de `areas/<área>`". Antes, buscar con
   `list_sessions` si la pieza ya tiene chat y mandarlo a ese. Decirle en una línea: "Te abrí *v2 · Noticias IA* en Instagram."
+- Las carpetas de cada área ya existen dentro de este chat (IDs en `CLAUDE.md`, sección "Cómo está organizado Claude"):
+  si Santi quiere trabajar "en la carpeta" de una red, mandar la pieza a esa sesión con `send_message`.
 - Si no está disponible: trabajar la pieza aquí mismo siguiendo `areas/<área>/CLAUDE.md` y su skill.
 - Guiones → skill `revisar-guion`. Video de Instagram → `areas/1-instagram`. TikTok → `areas/2-tiktok`.
   YouTube → `areas/3-youtube`. Anuncios → `areas/4-anuncios-meta`.

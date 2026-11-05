@@ -1,6 +1,7 @@
 # Bitácora (lo más nuevo arriba, una línea por cosa hecha)
 
 ## 5 nov 2026
+- Carpetas dentro de Santi · Base: 📁 Instagram, TikTok, YouTube, Anuncios (Meta), Guiones (IDs en CLAUDE.md).
 - Todo renombrado a **Kit de edición ContentIA** (sin Work in Tech): `kit-wit.md` → `kit-contentia.md`, los 3 docs de Recursos rehechos (IDs nuevos en `drive.md`; los viejos a la papelera).
 - Claude organizado como **Kit de edición ContentIA**: skills `rutina-diaria`, `preguntas`, `agregar-referente`, `revisar-guion` y `areas/1-instagram`, `2-tiktok`, `3-youtube`, `4-anuncios-meta` (CLAUDE.md + skill cada una). Chats Santi · Base y Santi · Preguntas. `.claude/settings.json` de permisos NO se creó (lo bloqueó el modo auto).
 - Leído el kit de referencia que compartió Santi. Creados "Recursos y reglas" en TikTok, YouTube y Anuncios (Meta) › 3. Recursos, adaptados a la marca. Copias en `drive-respaldo/recursos/`, mapa en `kit-contentia.md`. Falta revisarlos juntos.
