@@ -31,3 +31,4 @@
 
 ## Pendiente de seguridad
 - Cambiar `CLAVE_SUBIDA` (la actual salió en el chat) y ponerla en el entorno como `SUBIDA_CLAVE`.
+- 5 nov 2026 · 5:06 p. m. · Revisión de la tarea de las 4:35: corrió bien (idea + 3 guiones en frío v2 IG/TikTok/YouTube + fila v2 en Noviembre). Santi ya lo está revisando en 📁 Guiones.
