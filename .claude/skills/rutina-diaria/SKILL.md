@@ -41,7 +41,11 @@ Cuando Santi escoja una pieza ("trabajemos el v2", "revisemos el guion de hoy"):
 
 ## 4. Archivar lo terminado (cada mañana)
 Pieza terminada = Estado **Entregado** en la COLA y **Publicado** en la pestaña del mes. Archivar su chat
-(`list_sessions` + `archive_session`; archivar no borra). Nunca borrar nada de Drive.
+(`list_sessions` + `archive_session`; archivar no borra).
+- **Limpieza de Guiones (regla de Santi, 5 nov):** si el video del día ya está **Publicado**, mandar a la papelera de Drive
+  su guion terminado y su idea (en todas las redes), después de comprobar que hay copia en `drive-respaldo/guiones/`
+  (si no hay, hacerla antes). No tocar otras carpetas de Drive ni el guion de la clase gratis (SCRIPT VIDEO GRATIS).
+  Anotar en la bitácora qué se borró.
 
 ## 5. Cerrar el día ("cierro el día")
 Resumen de 3–5 líneas: qué quedó listo, qué sigue pendiente, reglas nuevas. Escribirlo en `contexto/bitacora.md`
