@@ -8,6 +8,9 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
   | Archivo | Cuándo leerlo |
   |---|---|
   | `contexto/bitacora.md` | Para saber qué se hizo y qué quedó a medias |
+  | `contexto/drive.md` | Mapa completo de Drive con todos los IDs |
+  | `contexto/tarea-guion-diario.md` | Texto exacto de la tarea de las 4:35 p. m. (para corregirla o recrearla) |
+  | `drive-respaldo/` | Copias de lo importante de Drive (guía de edición, instructivo del sistema, guiones) |
   | `contexto/instagram-meta.md` | Publicación automática, token, errores de Meta |
   | `contexto/youtube.md` | YouTube Shorts automático: columnas, instalación, riesgo de video privado |
   | `contexto/guiones.md` | Carpetas de guiones (ideas, en frío, terminados), recursos por red, tarea de las 4:35 p. m. |
@@ -18,6 +21,9 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
   | `editor-noticias/README.md` | Editar videos |
 - **Al terminar cada tarea:** una línea en `contexto/bitacora.md`, actualizar este archivo si cambió algo
   importante, y commit + push a GitHub. Sin esperar a que lo pida.
+- **Todo lo que se cree o cambie fuera del repo** (carpetas de Drive, tareas programadas, documentos de reglas) se guarda
+  aquí también: IDs en `contexto/drive.md`, textos de tareas en `contexto/`, copias de documentos en `drive-respaldo/`.
+  Santiago revisa GitHub y quiere encontrar TODO.
 - Una sesión nueva por tarea grande: todo queda aquí, no hace falta un chat largo.
 
 ## Quién es y cómo hablarle
@@ -49,11 +55,12 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
 | Carpeta raíz | ContentIA | `1LvKFGptavlfPDXzj48OVJZR7Yos2VIFC` |
 | Plan de contenido IG (hoja) | Plan contenido orgánico - ContentIA | `1lvs82vX8Pj3rHmVZyUj9cUh6dOm5srjbVDwzvWUyku4` |
 | Sistema (Code.gs, Subidas.gs, prompt) | 0. Sistema | `1SlcWLrDd6LfoA_PRwedJ4MeVFIL_0HxL` |
-| Guiones IG | Instagram › 1. Guiones | `1uXn5Scfl7lNsCLGJioJxwoFFkGGxv7hX` |
+| **Guiones** (todas las redes) | Guiones › <red> › 1. Ideas / 2. Guiones en frío / 3. Guiones terminados | `15J5tBsxY1o98Eee_v0jEH98mE720Ql8s` |
+| Ideas IG / En frío IG / Terminados IG | Guiones › Instagram › … | `1qosYx_N0AKGhGMweD3nJtLZtUwNDlud_` / `1xmfC0MN5kSMKIJMRpb4XSwhGZChCy0t5` / `1Kx0aOb41wOsZLvxPAt1fNY83eFe-7O2p` |
 | Crudos IG | Instagram › 2. Crudo sin editar | `1GFl-0CSYI8afA0tzKGa0AVmM7FC-d4ON` |
 | Recursos IG (guía de edición) | Instagram › 3. Recursos | `1Hd3rJljSfAr6ehoBet0xeFJIk1Fz84Rn` |
 | Editados IG | Instagram › 4. Contenido editado | `1A1zlwXyvR-l2CZcJ6dnHUp-SZXnEcUGT` |
-| TikTok / YouTube / Anuncios (Meta) | misma estructura 1–4, vacías | — |
+| TikTok / YouTube / Anuncios (Meta) | misma estructura: 2. Crudo, 3. Recursos, 4. Editado (vacías) | todos los IDs en `contexto/drive.md` |
 
 ## El plan de contenido (hoja) — reglas que no se rompen
 - Pestaña del mes (Noviembre…): una fila por idea; código `#` = v1, v2…
@@ -82,8 +89,8 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
 1. Confirmar la primera publicación automática real (Instagram ya conectado e instalado).
 2. YouTube Shorts: **funcionando** (canal @santimediayt, probado 5 nov). Sale con la misma aprobación de IG.
    TikTok plan A (borrador + correo): código listo, falta crear la app e instalar (`contexto/tiktok.md`).
-3. Guiones: **siguiente sesión** (`contexto/guiones.md`). El guion diario lo hace la tarea de Santiago de las 4:35 p. m.
-   (no crear otra). Montar carpetas Ideas / Guiones en frío / Guiones terminados, documentos de recursos de TikTok,
-   YouTube y Meta Ads, organizar TikTok y el guion del video de mañana.
+3. Guiones (`contexto/guiones.md`): carpeta **Guiones** montada (5 nov). La tarea de las 4:35 p. m. deja la idea y el
+   guion en frío y avisa; luego se revisa juntos y se mueve a terminados. Falta: documentos de recursos de TikTok,
+   YouTube y Meta Ads (Santiago los manda) y organizar TikTok.
 3b. Repartir el Cerebro a clientes sin que lo compartan: plan aprobado (`contexto/licencias.md`), se monta AL FINAL.
 4. Del plan AI Work: nombre de las redes y bio, clase gratis, módulos, plantilla del cerebro, CRM.

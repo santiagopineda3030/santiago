@@ -1,6 +1,9 @@
 # Bitácora (lo más nuevo arriba, una línea por cosa hecha)
 
 ## 5 nov 2026
+- Carpeta **Guiones** creada en Drive (por red: 1. Ideas, 2. Guiones en frío, 3. Guiones terminados). Carpetas viejas `1. Guiones` a la papelera; v1 → IG terminados, SCRIPT VIDEO GRATIS → YouTube en frío.
+- Tarea de las 4:35 actualizada: guarda idea + guion en frío en las carpetas nuevas y avisa a Santiago para revisar juntos.
+- Guardado en GitHub lo que faltaba: `drive.md` (todos los IDs), `tarea-guion-diario.md` (texto de la tarea), `drive-respaldo/` (guía de edición, instructivo, guiones).
 - Tarea de las 4:35 p. m. actualizada: ahora hace el guion en 3 versiones (Instagram, TikTok, YouTube). Carpeta `0. Ideas` a la papelera.
 - Definido cómo organizar los guiones (`guiones.md`). Se monta en la sesión siguiente.
 - Borrada la tarea de guion diario de las 5:43 que había creado Claude: Santiago ya tiene la suya a las 4:35 p. m. La carpeta `0. Ideas › Instagram › NOVIEMBRE 2026` quedó creada (vacía).

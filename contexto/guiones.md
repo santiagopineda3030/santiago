@@ -1,30 +1,31 @@
-# Guiones: cómo se organizan (definido por Santiago el 5 nov 2026, se monta en la sesión siguiente)
+# Guiones: cómo se organizan (montado el 5 nov 2026)
 
-## La tarea que ya existe (de Santiago, no tocar sin que lo pida)
-- Tarea programada de Claude **"Guion diario noticias IA"** · `trig_01Tui42SjjCMBURNMXnotpz4` · **4:35 p. m. Bogotá** todos los días.
-- Investiga las noticias de IA **de ese mismo día** y escribe el guion para publicar **al día siguiente a las 11:00**
-  en **3 versiones** (desde el 5 nov, a pedido de Santiago), mismo código v<N>, una sola fila en la hoja:
-  - Instagram → `Instagram › 1. Guiones` (`1uXn5Scfl7lNsCLGJioJxwoFFkGGxv7hX`)
-  - TikTok → `TikTok › 1. Guiones` (`11I86ELsLogLU1IBthqMrYyMjaF-X_yeQ`) + "Descripción de TikTok"
-  - YouTube → `YouTube › 1. Guiones` (`1ytWreKR_oUTbBqfmHwtgZcD3rakZA35z`) + "Título" y "Descripción de YouTube" con #Shorts
-- Claude y Santiago **solo corrigen** esa tarea y organizan el guion. Claude no crea otra tarea de guiones.
-- Cuando exista la carpeta nueva, hay que ajustar el prompt de esa tarea para que guarde en "Guiones en frío".
+## La carpeta (Drive › ContentIA › Guiones · `15J5tBsxY1o98Eee_v0jEH98mE720Ql8s`)
+Una subcarpeta por red (Instagram, TikTok, YouTube, Anuncios (Meta)) y dentro de cada una:
+1. **1. Ideas**: ideas de videos. Las monta Santiago y también la tarea de las 4:35 (las 5 noticias del día + reemplazos).
+2. **2. Guiones en frío**: borrador que escribe Claude a partir de la idea.
+3. **3. Guiones terminados**: el guion revisado juntos (Santiago + Claude), listo para grabar.
+- Todos los IDs: `contexto/drive.md`.
+- Las carpetas viejas `<red> › 1. Guiones` se borraron (papelera). La carpeta `0. Ideas` también.
+- Lo que había: v1 (Día 1, ya publicado) → Instagram › 3. Guiones terminados. SCRIPT VIDEO GRATIS (clase gratis) →
+  YouTube › 2. Guiones en frío (falta revisarlo juntos y decidir dónde va).
+- Copias de los guiones en el repo: `drive-respaldo/guiones/`.
 
-## Carpeta de guiones que hay que montar
-Por cada red (Instagram, TikTok, YouTube, Anuncios Meta), dentro de su "1. Guiones":
-1. **Ideas**: Santiago monta las ideas de los videos.
-2. **Guiones en frío**: Claude revisa la idea y escribe el guion (borrador).
-3. **Guiones terminados**: el guion ya revisado juntos, listo para grabar.
+## Flujo diario
+1. **4:35 p. m.** la tarea de Santiago (`trig_01Tui42SjjCMBURNMXnotpz4`, texto completo en `contexto/tarea-guion-diario.md`):
+   investiga, guarda la IDEA en `1. Ideas`, escribe el GUION EN FRÍO en las 3 redes (IG, TikTok, YouTube),
+   anota la fila en la hoja (Estado `Guion`) y avisa con un push: "🟢 Guion en frío listo para revisar juntos".
+2. Santiago abre una sesión con Claude: revisan, corrigen y Claude **mueve** los 3 documentos a `3. Guiones terminados`
+   (no copiar: mover, para que no queden dos versiones).
+3. Santiago graba → `2. Crudo sin editar` → Claude edita → `4. Contenido editado`.
+- Claude no crea otra tarea de guiones. Solo corrige esa, cuando Santiago lo pide.
 
-## Recursos por red
-- Las reglas de Instagram (cómo le gusta la edición + recursos) están en `Instagram › 3. Recursos`
-  (`1Hd3rJljSfAr6ehoBet0xeFJIk1Fz84Rn`). Leerlas como modelo.
-- Santiago va a mandar los recursos de TikTok, YouTube y Meta Ads en la sesión nueva.
-- Hacer en cada `3. Recursos` un documento **"Recursos y reglas"**: ideas de edición, estilo, ejemplos, para que Claude
-  se guíe al escribir guiones y editar.
+## Recursos por red (pendiente)
+- Instagram › 3. Recursos tiene la "Guía de edición · Noticias IA" (copia: `drive-respaldo/recursos/guia-edicion-noticias-ia.md`).
+- Santiago va a mandar los recursos de TikTok, YouTube y Meta Ads. Con eso: en cada `3. Recursos` un documento
+  **"Recursos y reglas"** (edición, estilo, ejemplos) y copia en `drive-respaldo/recursos/`.
 
-## Orden en la sesión nueva
-1. Leer `Instagram › 3. Recursos`. 2. Montar Ideas / Guiones en frío / Guiones terminados.
+## Orden de lo que sigue
+1. ✅ Carpeta Guiones con Ideas / Guiones en frío / Guiones terminados (5 nov).
+2. Revisar con Santiago el guion en frío que sale hoy a las 4:35 y pasarlo a terminados.
 3. Documentos de recursos de TikTok, YouTube y Meta Ads con lo que mande Santiago. 4. Organizar TikTok.
-5. Guion para grabar el video de mañana.
-- La carpeta `ContentIA › 0. Ideas` se borró (papelera) el 5 nov: las ideas van dentro de los guiones de cada red.
