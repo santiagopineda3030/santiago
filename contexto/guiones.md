@@ -13,11 +13,11 @@ Una subcarpeta por red (Instagram, TikTok, YouTube, Anuncios (Meta)) y dentro de
 
 ## Flujo diario
 - **Regla de Santi (5 nov):** Instagram, TikTok y YouTube Shorts usan el MISMO guion. Solo el guion de YouTube largo es distinto.
-  (La tarea de las 4:35 todavía escribe 3 versiones: falta que Santi diga si se ajusta.)
+  La tarea de las 4:35 ya está ajustada: deja 1 idea y 1 guion en frío en Guiones › Instagram (con descripción de TikTok y título/descripción de Shorts).
 1. **4:35 p. m.** la tarea de Santiago (`trig_01Tui42SjjCMBURNMXnotpz4`, texto completo en `contexto/tarea-guion-diario.md`):
-   investiga, guarda la IDEA en `1. Ideas`, escribe el GUION EN FRÍO en las 3 redes (IG, TikTok, YouTube),
+   investiga, guarda la IDEA en Instagram › `1. Ideas`, escribe UN guion en frío (sirve para IG, TikTok y Shorts) en Instagram › `2. Guiones en frío`,
    anota la fila en la hoja (Estado `Guion`) y avisa con un push: "🟢 Guion en frío listo para revisar juntos".
-2. Santiago abre una sesión con Claude: revisan, corrigen y Claude **mueve** los 3 documentos a `3. Guiones terminados`
+2. Santiago abre una sesión con Claude: revisan, corrigen y Claude **mueve** el documento a `3. Guiones terminados`
    (no copiar: mover, para que no queden dos versiones).
 3. Santiago graba → `2. Crudo sin editar` → Claude edita → `4. Contenido editado`.
 - Claude no crea otra tarea de guiones. Solo corrige esa, cuando Santiago lo pide.

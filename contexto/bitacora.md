@@ -34,3 +34,4 @@
 - 5 nov 2026 · 5:06 p. m. · Revisión de la tarea de las 4:35: corrió bien (idea + 3 guiones en frío v2 IG/TikTok/YouTube + fila v2 en Noviembre). Santi ya lo está revisando en 📁 Guiones.
 - 5 nov 2026 · Regla de Santi: un solo guion corto para IG, TikTok y Shorts; aparte solo YouTube largo. Pedido a 📁 YouTube: idea + guion en frío de un video largo con un tema que esté funcionando.
 - 5 nov 2026 · 📁 YouTube: yt1 (primer video largo 16:9) "La IA es mi equipo de contenido". Idea en Guiones › YouTube › 1. Ideas (`1x1xDEDmxwLtrVW6rpeCGFyBAmTg0AVHVUROZzBaZepY`) y guion en frío en 2. Guiones en frío (`1QI-jj0qiMkXPY0QqXBkCgr4fKfa8qi801MX1Ce8mX04`). Copias: `drive-respaldo/guiones/yt1-*.md`. Falta revisarlo con Santi; los datos [ ] los pone él.
+- 5 nov 2026 · 5:30 p. m. · Tarea de las 4:35 ajustada (pedido de Santi): 1 idea + 1 guion en frío en Guiones › Instagram para IG, TikTok y Shorts; YouTube largo va aparte. Texto nuevo en contexto/tarea-guion-diario.md.
