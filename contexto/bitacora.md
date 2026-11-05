@@ -1,6 +1,7 @@
 # Bitácora (lo más nuevo arriba, una línea por cosa hecha)
 
 ## 5 nov 2026
+- Tarea de las 4:35 p. m. actualizada: ahora hace el guion en 3 versiones (Instagram, TikTok, YouTube). Carpeta `0. Ideas` a la papelera.
 - Definido cómo organizar los guiones (`guiones.md`). Se monta en la sesión siguiente.
 - Borrada la tarea de guion diario de las 5:43 que había creado Claude: Santiago ya tiene la suya a las 4:35 p. m. La carpeta `0. Ideas › Instagram › NOVIEMBRE 2026` quedó creada (vacía).
 - Plan de licencias para clientes aprobado y guardado (`licencias.md`). Se construye al final, no ahora.
