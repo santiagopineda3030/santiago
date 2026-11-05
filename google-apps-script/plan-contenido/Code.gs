@@ -15,7 +15,7 @@
  */
 
 const CONFIG = {
-  CUENTA: '@soysanti_content_ia',                        // solo para el título del calendario
+  CUENTA: '@soysanti__content_ia',                       // solo para el título del calendario
   IG_ID: '17841438740412085',                            // id de la cuenta profesional de Instagram. Vacío = sin publicar
   CARPETA_EDITADOS: '1A1zlwXyvR-l2CZcJ6dnHUp-SZXnEcUGT', // ContentIA › Instagram › 4. Contenido editado
   HORA: '11:00',                                         // hora por defecto (Bogotá)

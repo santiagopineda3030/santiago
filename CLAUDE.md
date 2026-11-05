@@ -12,7 +12,7 @@ claude.ai (proyectos, documentos, chats). Si algo cambia, se actualiza aquí.
 ## El negocio (detalle en `contexto/ai-work.md`)
 - Marca personal de IA. Una sola oferta high ticket: **Cerebro de Contenido**, **$2.500 pago único**,
   vendida por **llamada**. Modelo *Done With You*: montamos, el cliente llena, su **Gestor IA** revisa.
-- Instagram: **@soysanti_content_ia** (cuenta profesional).
+- Instagram: **@soysanti__content_ia** (dos guiones bajos; cuenta profesional).
 - Público: dueños de negocio sin tiempo para contenido. Redes: **Instagram, TikTok, YouTube** (Facebook no).
 - Embudo: videos (noticias de IA + videos de leads) → "comenta CLAUDE" → clase gratis (~3 min) →
   web con video + formulario + calendario → sheet de leads → setter → closer.
@@ -49,8 +49,8 @@ claude.ai (proyectos, documentos, chats). Si algo cambia, se actualiza aquí.
   título `✅ Publicado · <título original>`, color verde (colorId 10), hora real de publicación,
   y en la descripción las redes, la hora y el link del video en Drive. Sin notificaciones.
 - Publicación automática en Instagram: app de Meta "Publicador Santi" (App ID 1462889889116914), página de Facebook
-  "Santi • content IA" (id 1468491546343867), **IG_ID = 17841438740412085**. Falta guardar `META_TOKEN`
-  (token de página que no vence) en Propiedades del script. Código de la hoja: `google-apps-script/plan-contenido/Code.gs`
+  "Santi • content IA" (id 1468491546343867), **IG_ID = 17841438740412085**. **Conectado el 5 nov 2026** (`probarConexion` OK, cupo 100/día);
+  `META_TOKEN` = token de página guardado en Propiedades del script. Código de la hoja: `google-apps-script/plan-contenido/Code.gs`
   (al publicar solo, el script crea el evento verde en Google Calendar; necesita el permiso de calendar en appsscript.json).
 
 ## Herramientas que ya están montadas en este repositorio
@@ -64,7 +64,7 @@ claude.ai (proyectos, documentos, chats). Si algo cambia, se actualiza aquí.
 - Landing de la llamada: `src/` (React + Vite + Tailwind, estilo tecnológico cian, logo SPR en píxeles).
 
 ## Pendientes grandes (en orden)
-1. Conectar Instagram a Meta para publicar solo (`META_TOKEN`, `IG_ID`).
+1. ~~Conectar Instagram a Meta~~ (hecho 5 nov). Falta: correr `instalar` y probar la primera publicación automática.
 2. YouTube Shorts automático + una hoja de plan por red (YouTube, TikTok).
 3. Carpeta de ideas: `ContentIA › 0. Ideas › <Red> › <MES AAAA> › <AAAA-MM-DD> · <tema>` y tarea diaria
    que deja la idea/guion de Noticias IA listo cada mañana.
