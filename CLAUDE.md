@@ -10,6 +10,7 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
   | `contexto/bitacora.md` | Para saber qué se hizo y qué quedó a medias |
   | `contexto/instagram-meta.md` | Publicación automática, token, errores de Meta |
   | `contexto/youtube.md` | YouTube Shorts automático: columnas, instalación, riesgo de video privado |
+  | `contexto/guiones.md` | Carpetas de guiones (ideas, en frío, terminados), recursos por red, tarea de las 4:35 p. m. |
   | `contexto/tiktok.md` | TikTok: borrador automático (plan A), app de TikTok, auditoría |
   | `contexto/licencias.md` | Plan para entregar carpetas a clientes sin que las compartan (se monta al final) |
   | `contexto/ai-work.md` | Oferta, embudo, entrega, pendientes del negocio |
@@ -81,8 +82,8 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
 1. Confirmar la primera publicación automática real (Instagram ya conectado e instalado).
 2. YouTube Shorts: **funcionando** (canal @santimediayt, probado 5 nov). Sale con la misma aprobación de IG.
    TikTok plan A (borrador + correo): código listo, falta crear la app e instalar (`contexto/tiktok.md`).
-3. Guion diario: lo genera **la tarea programada de Santiago a las 4:35 p. m.** (no la hace Claude por su cuenta).
-   Claude y Santiago solo corrigen las tareas y organizan el guion. Siguiente sesión: documentos de reglas de guion
-   para TikTok, YouTube y Meta Ads (como los de Instagram), organizar TikTok y el guion del video del día siguiente.
+3. Guiones: **siguiente sesión** (`contexto/guiones.md`). El guion diario lo hace la tarea de Santiago de las 4:35 p. m.
+   (no crear otra). Montar carpetas Ideas / Guiones en frío / Guiones terminados, documentos de recursos de TikTok,
+   YouTube y Meta Ads, organizar TikTok y el guion del video de mañana.
 3b. Repartir el Cerebro a clientes sin que lo compartan: plan aprobado (`contexto/licencias.md`), se monta AL FINAL.
 4. Del plan AI Work: nombre de las redes y bio, clase gratis, módulos, plantilla del cerebro, CRM.
