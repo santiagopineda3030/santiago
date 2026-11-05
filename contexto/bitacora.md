@@ -1,6 +1,7 @@
 # Bitácora (lo más nuevo arriba, una línea por cosa hecha)
 
 ## 5 nov 2026
+- YouTube instalado en Apps Script: `probarYouTube` OK, canal @santimediayt. Falta la prueba real con v1.
 - YouTube Shorts automático: `YouTube.gs` + `appsscript.json` listos en el repo (misma fila y misma
   aprobación que IG). Falta que Santiago lo instale y probar con v1. Detalle: `youtube.md`.
 - Instagram conectado a Meta y script del plan instalado: publica solo cuando la fila está en `Publicar`
