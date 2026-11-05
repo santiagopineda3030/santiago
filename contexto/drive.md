@@ -36,5 +36,7 @@ Las carpetas viejas `<red> › 1. Guiones` se mandaron a la papelera el 5 nov (s
 | Recursos y reglas · YouTube | YouTube › 3. Recursos | `1wh7VcclA6mRRc3klYYAP12viCKVLQs8Wr-mptmkWG4c` | `drive-respaldo/recursos/recursos-y-reglas-youtube.md` |
 | Recursos y reglas · Anuncios (Meta) | Anuncios (Meta) › 3. Recursos | `1OYm-fAvq_5uiMJgZkZA82JC5HaD0HEnBp-OzxKUNZdY` | `drive-respaldo/recursos/recursos-y-reglas-meta-ads.md` |
 | SCRIPT VIDEO GRATIS (clase gratis) | Guiones › YouTube › 2. Guiones en frío | `1PPbtO17uzy8m4e-aB6cQXXxrPYqJ5iYpuqipRQuOjsM` | `drive-respaldo/guiones/script-video-gratis.md` |
+| yt1 · Idea · La IA es mi equipo de contenido | Guiones › YouTube › 1. Ideas | `1x1xDEDmxwLtrVW6rpeCGFyBAmTg0AVHVUROZzBaZepY` | `drive-respaldo/guiones/yt1-idea.md` |
+| yt1 · Guion en frío · La IA es mi equipo de contenido | Guiones › YouTube › 2. Guiones en frío | `1QI-jj0qiMkXPY0QqXBkCgr4fKfa8qi801MX1Ce8mX04` | `drive-respaldo/guiones/yt1-guion-en-frio.md` |
 
 Kit de edición ContentIA (áreas, skills y reglas por red): `contexto/kit-contentia.md`.
