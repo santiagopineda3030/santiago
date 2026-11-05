@@ -46,7 +46,7 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
 - **Chats:** `Santi · Base` (`session_01McnvqwgYFW5FkckcrCQLTM`) y `Santi · Preguntas` (`session_01McnvqsAY6qsuVP5J8RGKgS`), fijados arriba a mano; un chat por pieza con etiqueta `area:<red>`.
   - Carpetas (chats al mismo nivel que Base, cada uno se presenta en su primer mensaje): 📁 Instagram
     `session_01Mcnvqs7Mruj2n8hLGHzTTS` · 📁 TikTok `session_01Mcnvqun84DQpBZzc9mkVNF` · 📁 YouTube `session_01McnvqtEmdYchkSMiZkWiyW` ·
-    📁 Anuncios (Meta) `session_01McnvqspjmNbL6TY5zg81DQ` · 📁 Guiones `session_01McnvqsoboeaDTB6ormVrbC` · 📁 Edición de videos (ID en `contexto/chats.md`).
+    📁 Anuncios (Meta) `session_01McnvqspjmNbL6TY5zg81DQ` · 📁 Guiones `session_01McnvqsoboeaDTB6ormVrbC` · 📁 Edición de videos `session_01McnvqvgdvcfNzme6m5dsJP`.
     (Las creadas desde Base quedaban escondidas dentro de él: archivadas.) Los chats de cada pieza los abre Base.
 - **Correcciones que son regla** → "Ajustes de Santi" del documento de la red (Drive + copia en `drive-respaldo/recursos/`) + bitácora.
 
