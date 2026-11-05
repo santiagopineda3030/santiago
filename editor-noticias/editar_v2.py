@@ -35,6 +35,29 @@ GANANCIA_SFX = {"whoosh": 0.32, "pop": 0.28, "ding": 0.22, "golpe": 0.42, "alert
 
 
 # --------------------------------------------------------------------------- audio
+def voz_vad(clip):
+    """Tramos donde hay VOZ (detector Silero de faster-whisper), en segundos del clip."""
+    from faster_whisper.vad import VadOptions, get_speech_timestamps
+
+    pcm = subprocess.run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-i", str(clip), "-vn", "-ac", "1",
+                          "-ar", "16000", "-f", "s16le", "-"], capture_output=True, check=True).stdout
+    audio = np.frombuffer(pcm, np.int16).astype(np.float32) / 32768
+    ts = get_speech_timestamps(audio, VadOptions(threshold=0.45, min_silence_duration_ms=130, speech_pad_ms=30))
+    return [(t["start"] / 16000, t["end"] / 16000) for t in ts]
+
+
+def tramos_con_voz(a, b, voz, antes=0.04, despues=0.06, unir=0.10):
+    """Deja solo los momentos con voz dentro de [a, b] (con un poquito de aire) y une los muy cercanos."""
+    tr = [(max(a, s - antes), min(b, e + despues)) for s, e in voz if e > a and s < b]
+    out = []
+    for x, y in tr:
+        if out and x - out[-1][1] < unir:
+            out[-1] = (out[-1][0], max(out[-1][1], y))
+        elif y - x > 0.08:
+            out.append((x, y))
+    return out or [(a, b)]
+
+
 def silencios(clip):
     err = subprocess.run(["ffmpeg", "-hide_banner", "-i", str(clip), "-vn", "-af",
                           f"silencedetect=noise={SIL_DB}dB:d={SIL_MIN}", "-f", "null", "-"],
@@ -143,7 +166,8 @@ def main():
     cod = {re.search(r"_(\d{4})_", c.name).group(1): i for i, c in enumerate(clips)}
     infos = [probar(c) for c in clips]
     trozos = {i: json.loads((Path(a.trozos) / f"{c.stem}.json").read_text()) for i, c in enumerate(clips)}
-    sil = {i: silencios(c) for i, c in enumerate(clips)}
+    print("· Detectando voz en cada clip…", flush=True)
+    vad = {i: voz_vad(c) for i, c in enumerate(clips)}
     salida = Path(a.salida)
     tmp = salida / "_tmp"
     shutil.rmtree(tmp, ignore_errors=True)
@@ -161,7 +185,7 @@ def main():
             ini, fin = max(0.0, c["desde"] - PRE), min(infos[ci]["dur"], c["hasta"] + POST)
             ws = alinear(c["texto"], palabras_de(trozos[ci], c["desde"], c["hasta"]), c["desde"], c["hasta"])
             acum, zoom = 0.0, 1.0 if k == 0 else zooms[len(plan) % len(zooms)]
-            tramos = sin_pausas(ini, fin, sil[ci])
+            tramos = tramos_con_voz(ini, fin, vad[ci])
             # cada palabra va al tramo más cercano (ninguna se pierde) y se ajusta a sus bordes
             asignadas = {i: [] for i in range(len(tramos))}
             for w in ws:

@@ -338,14 +338,19 @@ def render(plan, clips, infos, tmp):
     lista = []
     for i, pz in enumerate(plan):
         out = tmp / f"pieza_{i:03d}.mp4"
-        dur = pz["fin"] - pz["ini"]
+        # Duración redondeada a cuadros enteros e IGUAL para video y audio:
+        # así no se acumula desfase al unir las piezas.
+        n = max(1, round((pz["fin"] - pz["ini"]) * FPS))
+        dur = n / FPS
         fade = min(0.02, dur / 4)
-        ffmpeg("-ss", f"{pz['ini']:.3f}", "-t", f"{dur:.3f}", "-i", str(clips[pz["clip"]]),
-               "-vf", filtro_encuadre(infos[pz["clip"]], pz["zoom"]),
-               "-af", f"aresample=48000,afade=t=in:d={fade:.3f},afade=t=out:st={max(0, dur - fade):.3f}:d={fade:.3f}",
+        ffmpeg("-ss", f"{pz['ini']:.3f}", "-t", f"{dur + 0.1:.3f}", "-i", str(clips[pz["clip"]]),
+               "-map", "0:v:0", "-map", "0:a:0",
+               "-vf", filtro_encuadre(infos[pz["clip"]], pz["zoom"]), "-frames:v", str(n),
+               "-af", f"aresample=48000,apad,atrim=0:{dur:.6f},afade=t=in:d={fade:.3f},"
+                      f"afade=t=out:st={max(0, dur - fade):.4f}:d={fade:.3f}",
                "-ac", "2", "-c:v", "libx264", "-preset", "veryfast", "-crf", "16",
                "-c:a", "pcm_s16le", "-f", "mov", str(out))
-        pz["dur_real"] = probar(out)["dur"]
+        pz["dur_real"] = dur
         lista.append(out)
     lst = tmp / "lista.txt"
     lst.write_text("".join(f"file '{p.as_posix()}'\n" for p in lista))

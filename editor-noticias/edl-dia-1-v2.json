@@ -29,6 +29,15 @@
    ],
    "graficos": [
     {
+     "tipo": "logo",
+     "en": "empresa",
+     "offset": -0.15,
+     "dur": 2.6,
+     "logo": "anthropic",
+     "texto": "la empresa que creó Claude",
+     "y": 175
+    },
+    {
      "tipo": "emoji",
      "en": "miedo",
      "offset": -0.1,
