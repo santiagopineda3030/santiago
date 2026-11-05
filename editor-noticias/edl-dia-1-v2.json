@@ -1,0 +1,560 @@
+{
+ "nota": "v1.1: nuevo orden (Apple, Revolut, Google, Anthropic, SETI), cortes ajustados y gráficos anclados a palabras.",
+ "gancho_texto": "Google amenaza a los colegios",
+ "cta": "¿Y tú qué opinas de estas noticias del día de ayer?",
+ "cta_emoji": "💬",
+ "secciones": [
+  {
+   "titulo": "Gancho",
+   "tipo": "gancho",
+   "cortes": [
+    {
+     "clip": "0105",
+     "desde": 5.56,
+     "hasta": 8.33,
+     "texto": "La empresa que creó Claude acaba de lanzar algo que da miedo."
+    },
+    {
+     "clip": "0105",
+     "desde": 9.81,
+     "hasta": 11.57,
+     "texto": "Google amenazando a los colegios."
+    },
+    {
+     "clip": "0105",
+     "desde": 36.43,
+     "hasta": 40.97,
+     "texto": "Estas son las 5 noticias más importantes de la IA que pasaron el día de ayer, 4 de noviembre."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "emoji",
+     "en": "miedo",
+     "offset": -0.1,
+     "dur": 1.3,
+     "ch": "😱",
+     "x": 880,
+     "y": 820
+    },
+    {
+     "tipo": "logo",
+     "en": "Google",
+     "dur": 1.8,
+     "logo": "google",
+     "texto": "vs. los colegios"
+    },
+    {
+     "tipo": "emoji",
+     "en": "colegios",
+     "dur": 1.2,
+     "ch": "🏫",
+     "x": 190,
+     "y": 860
+    },
+    {
+     "tipo": "texto",
+     "en": "5",
+     "offset": -0.1,
+     "dur": 3.0,
+     "lineas": [
+      "TOP 5 NOTICIAS DE IA",
+      "4 de noviembre de 2026"
+     ],
+     "ch": "📰"
+    }
+   ]
+  },
+  {
+   "titulo": "Polémica 2 — Apple",
+   "tipo": "noticia",
+   "etiqueta": "POLÉMICA · APPLE",
+   "cortes": [
+    {
+     "clip": "0094",
+     "desde": 1.53,
+     "hasta": 5.38,
+     "texto": "Apple está convirtiendo a Siri en una IA que puede hacer cosas por ti dentro de tus apps."
+    },
+    {
+     "clip": "0094",
+     "desde": 9.05,
+     "hasta": 12.78,
+     "texto": "Pero al mismo tiempo le advirtió a sus inversionistas que esta IA se puede descontrolar:"
+    },
+    {
+     "clip": "0094",
+     "desde": 15.09,
+     "hasta": 17.14,
+     "texto": "hacer cosas sin permiso o no obedecer."
+    },
+    {
+     "clip": "0094",
+     "desde": 21.45,
+     "hasta": 25.25,
+     "texto": "Y al mismo tiempo, avisan que esta IA se puede salir de control."
+    },
+    {
+     "clip": "0094",
+     "desde": 27.79,
+     "hasta": 29.94,
+     "texto": "Así que tengan mucho cuidado con su Siri."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "logo",
+     "en": "Apple",
+     "dur": 1.8,
+     "logo": "apple",
+     "texto": "Siri con IA",
+     "y": 600
+    },
+    {
+     "tipo": "telefono",
+     "en": "cosas",
+     "dur": 2.4,
+     "x": 850,
+     "y": 560
+    },
+    {
+     "tipo": "emoji",
+     "en": "inversionistas",
+     "dur": 1.2,
+     "ch": "💼",
+     "x": 190,
+     "y": 860
+    },
+    {
+     "tipo": "alerta",
+     "en": "descontrolar",
+     "offset": -0.3,
+     "dur": 2.6,
+     "texto": "PODRÍA DESCONTROLARSE"
+    },
+    {
+     "tipo": "emoji",
+     "en": "permiso",
+     "dur": 1.1,
+     "ch": "🚫",
+     "x": 890,
+     "y": 860
+    },
+    {
+     "tipo": "sello",
+     "en": "salir",
+     "offset": -0.1,
+     "dur": 1.8,
+     "texto": "FUERA DE CONTROL"
+    },
+    {
+     "tipo": "emoji",
+     "en": "Siri",
+     "n": 2,
+     "dur": 1.3,
+     "ch": "😬",
+     "x": 880,
+     "y": 830
+    }
+   ]
+  },
+  {
+   "titulo": "Útil — Revolut",
+   "tipo": "noticia",
+   "etiqueta": "ÚTIL · REVOLUT",
+   "cortes": [
+    {
+     "clip": "0102",
+     "desde": 0.0,
+     "hasta": 2.79,
+     "texto": "Revolut, uno de los bancos digitales más grandes del mundo,"
+    },
+    {
+     "clip": "0102",
+     "desde": 5.93,
+     "hasta": 8.57,
+     "texto": "le pagaba a otras empresas cada vez que usaba la IA."
+    },
+    {
+     "clip": "0102",
+     "desde": 16.97,
+     "hasta": 19.11,
+     "texto": "Como pagar Uber todos los días, a todo momento."
+    },
+    {
+     "clip": "0102",
+     "desde": 25.53,
+     "hasta": 28.55,
+     "texto": "Entonces instala una IA gratuita a sus computadores,"
+    },
+    {
+     "clip": "0102",
+     "desde": 31.09,
+     "hasta": 34.43,
+     "texto": "como comprarse su propio carro en vez de usar Uber todos los días,"
+    },
+    {
+     "clip": "0102",
+     "desde": 40.83,
+     "hasta": 44.1,
+     "texto": "y gastó un 90% menos de sus ingresos mensuales."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "logo",
+     "en": "Revolut",
+     "dur": 2.0,
+     "logo": "revolut",
+     "texto": "Banco digital",
+     "y": 600
+    },
+    {
+     "tipo": "emoji",
+     "en": "pagaba",
+     "dur": 1.3,
+     "ch": "💸",
+     "x": 890,
+     "y": 860
+    },
+    {
+     "tipo": "logo",
+     "en": "Uber",
+     "dur": 1.9,
+     "logo": "uber",
+     "texto": "pagar cada vez que lo usas"
+    },
+    {
+     "tipo": "texto",
+     "en": "gratuita",
+     "offset": -0.3,
+     "dur": 2.0,
+     "lineas": [
+      "IA GRATIS",
+      "en sus propios computadores"
+     ],
+     "ch": "🖥️"
+    },
+    {
+     "tipo": "comparacion",
+     "cubrir": {
+      "clip": "0102",
+      "desde": 31.0,
+      "hasta": 34.5
+     }
+    },
+    {
+     "tipo": "contador",
+     "en": "90%",
+     "offset": -0.2,
+     "dur": 2.6,
+     "desde": 0,
+     "hasta": -90,
+     "formato": "{v:.0f}%",
+     "etiqueta": "menos gasto"
+    }
+   ]
+  },
+  {
+   "titulo": "Polémica 1 — Google",
+   "tipo": "noticia",
+   "etiqueta": "POLÉMICA · GOOGLE",
+   "cortes": [
+    {
+     "clip": "0098",
+     "desde": 7.86,
+     "hasta": 11.32,
+     "texto": "Google acaba de decir a los colegios: si no quieren mi IA para sus estudiantes,"
+    },
+    {
+     "clip": "0098",
+     "desde": 18.22,
+     "hasta": 19.86,
+     "texto": "también los quito del buscador de Google."
+    },
+    {
+     "clip": "0098",
+     "desde": 21.77,
+     "hasta": 22.73,
+     "texto": "O todo o nada."
+    },
+    {
+     "clip": "0098",
+     "desde": 24.26,
+     "hasta": 27.25,
+     "texto": "Es decir, si los colegios le quitan Gemini a sus estudiantes,"
+    },
+    {
+     "clip": "0098",
+     "desde": 29.45,
+     "hasta": 31.36,
+     "texto": "Google también los dejará sin Google."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "logo",
+     "en": "Google",
+     "dur": 1.9,
+     "logo": "google",
+     "texto": "le advierte a los colegios",
+     "y": 600
+    },
+    {
+     "tipo": "emoji",
+     "en": "colegios",
+     "dur": 1.3,
+     "ch": "🏫",
+     "x": 190,
+     "y": 860
+    },
+    {
+     "tipo": "buscador",
+     "en": "buscador",
+     "offset": -0.4,
+     "dur": 2.1,
+     "texto": "colegios"
+    },
+    {
+     "tipo": "sello",
+     "en": "todo",
+     "offset": -0.1,
+     "dur": 1.5,
+     "texto": "O TODO O NADA"
+    },
+    {
+     "tipo": "logo",
+     "en": "Gemini",
+     "dur": 1.8,
+     "logo": "gemini",
+     "texto": "la IA de Google"
+    },
+    {
+     "tipo": "emoji",
+     "en": "Google",
+     "n": 4,
+     "dur": 1.3,
+     "ch": "🤯",
+     "x": 880,
+     "y": 830
+    }
+   ]
+  },
+  {
+   "titulo": "Viral 1 — Anthropic",
+   "tipo": "noticia",
+   "etiqueta": "VIRAL · ANTHROPIC",
+   "cortes": [
+    {
+     "clip": "0104",
+     "desde": 0.0,
+     "hasta": 3.57,
+     "texto": "Anthropic, la empresa de Claude, le acaba de advertir a sus inversionistas"
+    },
+    {
+     "clip": "0104",
+     "desde": 5.82,
+     "hasta": 8.92,
+     "texto": "que estamos cerca del momento en que la IA se actualice por sí sola."
+    },
+    {
+     "clip": "0104",
+     "desde": 23.02,
+     "hasta": 26.5,
+     "texto": "Hacer gran parte del trabajo ella sola, sin que ningún humano la supervise."
+    },
+    {
+     "clip": "0104",
+     "desde": 29.7,
+     "hasta": 32.11,
+     "texto": "O sea, la IA ayudando a crecer más IAs."
+    },
+    {
+     "clip": "0104",
+     "desde": 35.16,
+     "hasta": 37.75,
+     "texto": "Ojo, dicen que todavía no está 100% comprobado."
+    },
+    {
+     "clip": "0104",
+     "desde": 40.47,
+     "hasta": 45.62,
+     "texto": "Y por eso la tienen 100% supervisada por humanos para que ella misma no tome sus propias decisiones."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "logo",
+     "en": "Anthropic",
+     "dur": 2.2,
+     "logo": "anthropic",
+     "texto": "la empresa de Claude",
+     "y": 600
+    },
+    {
+     "tipo": "emoji",
+     "en": "inversionistas",
+     "dur": 1.2,
+     "ch": "💼",
+     "x": 890,
+     "y": 860
+    },
+    {
+     "tipo": "texto",
+     "en": "actualice",
+     "offset": -0.2,
+     "dur": 2.2,
+     "lineas": [
+      "SE ACTUALIZA SOLA",
+      "la IA mejorándose a sí misma"
+     ],
+     "ch": "🔄"
+    },
+    {
+     "tipo": "emoji",
+     "en": "humano",
+     "dur": 1.2,
+     "ch": "🙅",
+     "x": 190,
+     "y": 860
+    },
+    {
+     "tipo": "iaia",
+     "cubrir": {
+      "clip": "0104",
+      "desde": 29.55,
+      "hasta": 32.25
+     }
+    },
+    {
+     "tipo": "emoji",
+     "en": "comprobado",
+     "dur": 1.2,
+     "ch": "🤔",
+     "x": 890,
+     "y": 860
+    },
+    {
+     "tipo": "barra",
+     "en": "supervisada",
+     "offset": -0.4,
+     "dur": 2.8,
+     "texto": "SUPERVISADA POR HUMANOS"
+    }
+   ]
+  },
+  {
+   "titulo": "Viral 2 — SETI",
+   "tipo": "noticia",
+   "etiqueta": "VIRAL · SETI",
+   "cortes": [
+    {
+     "clip": "0103",
+     "desde": 18.56,
+     "hasta": 24.4,
+     "texto": "Un grupo de científicos que escucha el espacio con antenas gigantes por si alguna vez llega a ver alguna notificación del espacio."
+    },
+    {
+     "clip": "0103",
+     "desde": 29.99,
+     "hasta": 32.15,
+     "texto": "Ahora la maneja totalmente una IA."
+    },
+    {
+     "clip": "0103",
+     "desde": 34.51,
+     "hasta": 38.07,
+     "texto": "Lo que antes le tomaba semanas revisar, ahora le toma horas."
+    },
+    {
+     "clip": "0103",
+     "desde": 42.88,
+     "hasta": 45.15,
+     "texto": "Así que si alguna vez llegamos a encontrar vida allá…"
+    },
+    {
+     "clip": "0103",
+     "desde": 46.86,
+     "hasta": 48.35,
+     "texto": "puede que nos avise una IA."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "foto",
+     "en": "antenas",
+     "offset": -0.15,
+     "dur": 2.4,
+     "foto": "foto_antena2.jpg",
+     "etiqueta": "Radiotelescopio",
+     "foco": [
+      0.35,
+      0.5
+     ]
+    },
+    {
+     "tipo": "foto",
+     "en": "notificación",
+     "offset": -0.4,
+     "dur": 1.9,
+     "foto": "foto_antena1.jpg",
+     "etiqueta": "Escuchando el espacio",
+     "foco": [
+      0.75,
+      0.5
+     ]
+    },
+    {
+     "tipo": "texto",
+     "en": "maneja",
+     "offset": -0.1,
+     "dur": 2.0,
+     "lineas": [
+      "AHORA LAS CONTROLA",
+      "una inteligencia artificial"
+     ],
+     "ch": "🤖"
+    },
+    {
+     "tipo": "cambio",
+     "en": "semanas",
+     "offset": -0.2,
+     "dur": 2.4,
+     "antes": "SEMANAS",
+     "despues": "HORAS",
+     "ch": "⏱️"
+    },
+    {
+     "tipo": "foto",
+     "en": "vida",
+     "offset": -0.7,
+     "dur": 2.3,
+     "foto": "foto_cielo2.jpg",
+     "foco": [
+      0.5,
+      0.5
+     ]
+    },
+    {
+     "tipo": "emoji",
+     "en": "vida",
+     "offset": -0.3,
+     "dur": 1.7,
+     "ch": "👽",
+     "x": 540,
+     "y": 760,
+     "tam": 260
+    },
+    {
+     "tipo": "emoji",
+     "en": "IA",
+     "n": 2,
+     "dur": 1.3,
+     "ch": "🤖",
+     "x": 880,
+     "y": 830
+    }
+   ]
+  }
+ ]
+}

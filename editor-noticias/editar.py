@@ -363,12 +363,15 @@ def exportar(base, ass, destino, max_mb=30.0):
     m = json.loads(r.stderr[r.stderr.rfind("{"):r.stderr.rfind("}") + 1])
     audio_f = (f"loudnorm=I=-14:TP=-1.5:LRA=11:measured_I={m['input_i']}:measured_TP={m['input_tp']}:"
                f"measured_LRA={m['input_lra']}:measured_thresh={m['input_thresh']}:offset={m['target_offset']}:linear=true")
-    ass_esc = str(ass).replace("\\", "/").replace(":", "\\:").replace("'", "\\'")
+    vf = []
+    if ass:
+        ass_esc = str(ass).replace("\\", "/").replace(":", "\\:").replace("'", "\\'")
+        vf = ["-vf", f"ass='{ass_esc}'"]
     objetivo = max_mb * 0.93
     for intento in range(3):
         v_kbps = int(min(9000, objetivo * 8192 / dur - 160))
         log = destino.parent / "pass"
-        comunes = ["-i", str(base), "-vf", f"ass='{ass_esc}'", "-c:v", "libx264", "-preset", "medium",
+        comunes = ["-i", str(base), *vf, "-c:v", "libx264", "-preset", "medium",
                    "-profile:v", "high", "-pix_fmt", "yuv420p", "-b:v", f"{v_kbps}k",
                    "-maxrate", f"{int(v_kbps * 1.6)}k", "-bufsize", f"{v_kbps * 2}k", "-r", str(FPS),
                    "-passlogfile", str(log)]
