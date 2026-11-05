@@ -1,6 +1,7 @@
 # Bitácora (lo más nuevo arriba, una línea por cosa hecha)
 
 ## 5 nov 2026
+- Carpeta `0. Ideas › Instagram › NOVIEMBRE 2026` creada y procedimiento del guion diario (`guion-diario.md`).
 - TikTok plan A: `TikTok.gs` listo (borrador + correo con la descripción). Falta crear la app en TikTok e instalar. Detalle: `tiktok.md`.
 - ✅ Prueba automática de YouTube OK (13:30 aprox.): el script subió v1 → https://youtube.com/shorts/6-jhDrkqmfM (duplicado de prueba; Santiago lo borra en Studio).
 - v1 subido a YouTube a mano por Santiago: en la hoja, fila v1 › YouTube = Publicado. La prueba automática queda para el próximo video.
