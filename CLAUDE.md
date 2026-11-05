@@ -64,7 +64,7 @@ claude.ai (proyectos, documentos, chats). Si algo cambia, se actualiza aquí.
 - Landing de la llamada: `src/` (React + Vite + Tailwind, estilo tecnológico cian, logo SPR en píxeles).
 
 ## Pendientes grandes (en orden)
-1. ~~Conectar Instagram a Meta~~ (hecho 5 nov). Falta: correr `instalar` y probar la primera publicación automática.
+1. ~~Conectar Instagram a Meta~~ (hecho 5 nov). `instalar` corrido el 5 nov 12:44 (tareas cada 15 min / cada hora / al editar). Falta: primera publicación automática real.
 2. YouTube Shorts automático + una hoja de plan por red (YouTube, TikTok).
 3. Carpeta de ideas: `ContentIA › 0. Ideas › <Red> › <MES AAAA> › <AAAA-MM-DD> · <tema>` y tarea diaria
    que deja la idea/guion de Noticias IA listo cada mañana.
