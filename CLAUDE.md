@@ -12,6 +12,7 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
   | `contexto/youtube.md` | YouTube Shorts automático: columnas, instalación, riesgo de video privado |
   | `contexto/guion-diario.md` | Tarea de las 5:43 a. m.: guion diario de Noticias IA (pasos, carpetas, hoja) |
   | `contexto/tiktok.md` | TikTok: borrador automático (plan A), app de TikTok, auditoría |
+  | `contexto/licencias.md` | Plan para entregar carpetas a clientes sin que las compartan (se monta al final) |
   | `contexto/ai-work.md` | Oferta, embudo, entrega, pendientes del negocio |
   | `contexto/estudio-de-mercado.md` | Textos de venta, guiones de leads |
   | `editor-noticias/README.md` | Editar videos |
@@ -83,5 +84,5 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
    TikTok plan A (borrador + correo): código listo, falta crear la app e instalar (`contexto/tiktok.md`).
 3. Guion diario: carpeta `ContentIA › 0. Ideas › Instagram › <MES AAAA> › <AAAA-MM-DD> · Noticias IA` y tarea
    programada 5:43 a. m. que deja guion + fila en la hoja (`contexto/guion-diario.md`). Montado el 5 nov.
-3b. Repartir las carpetas a clientes sin que las compartan (token/acceso): por definir con Santiago.
+3b. Repartir el Cerebro a clientes sin que lo compartan: plan aprobado (`contexto/licencias.md`), se monta AL FINAL.
 4. Del plan AI Work: nombre de las redes y bio, clase gratis, módulos, plantilla del cerebro, CRM.

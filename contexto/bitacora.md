@@ -1,6 +1,7 @@
 # Bitácora (lo más nuevo arriba, una línea por cosa hecha)
 
 ## 5 nov 2026
+- Plan de licencias para clientes aprobado y guardado (`licencias.md`). Se construye al final, no ahora.
 - TikTok: al crear la app en developers.tiktok.com le salió un error a Santiago. En pausa; pedirle captura del error al retomar.
 - Carpeta `0. Ideas › Instagram › NOVIEMBRE 2026` creada y procedimiento del guion diario (`guion-diario.md`).
 - TikTok plan A: `TikTok.gs` listo (borrador + correo con la descripción). Falta crear la app en TikTok e instalar. Detalle: `tiktok.md`.
