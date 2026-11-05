@@ -9,6 +9,7 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
   |---|---|
   | `contexto/bitacora.md` | Para saber qué se hizo y qué quedó a medias |
   | `contexto/drive.md` | Mapa completo de Drive con todos los IDs |
+  | `contexto/kit-wit.md` | Kit de edición de Work in Tech (de donde salen las reglas de TikTok, YouTube y Meta) |
   | `contexto/tarea-guion-diario.md` | Texto exacto de la tarea de las 4:35 p. m. (para corregirla o recrearla) |
   | `drive-respaldo/` | Copias de lo importante de Drive (guía de edición, instructivo del sistema, guiones) |
   | `contexto/instagram-meta.md` | Publicación automática, token, errores de Meta |
@@ -90,7 +91,7 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
 2. YouTube Shorts: **funcionando** (canal @santimediayt, probado 5 nov). Sale con la misma aprobación de IG.
    TikTok plan A (borrador + correo): código listo, falta crear la app e instalar (`contexto/tiktok.md`).
 3. Guiones (`contexto/guiones.md`): carpeta **Guiones** montada (5 nov). La tarea de las 4:35 p. m. deja la idea y el
-   guion en frío y avisa; luego se revisa juntos y se mueve a terminados. Falta: documentos de recursos de TikTok,
-   YouTube y Meta Ads (Santiago los manda) y organizar TikTok.
+   guion en frío y avisa; luego se revisa juntos y se mueve a terminados. Recursos y reglas de TikTok, YouTube y Meta:
+   creados (5 nov, desde el kit de WIT: `contexto/kit-wit.md`), falta revisarlos juntos. Falta organizar TikTok.
 3b. Repartir el Cerebro a clientes sin que lo compartan: plan aprobado (`contexto/licencias.md`), se monta AL FINAL.
 4. Del plan AI Work: nombre de las redes y bio, clase gratis, módulos, plantilla del cerebro, CRM.

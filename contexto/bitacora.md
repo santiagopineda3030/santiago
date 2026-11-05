@@ -1,6 +1,7 @@
 # Bitácora (lo más nuevo arriba, una línea por cosa hecha)
 
 ## 5 nov 2026
+- Leído el kit de edición de Work in Tech (compartido por Santi). Creados "Recursos y reglas" en TikTok, YouTube y Anuncios (Meta) › 3. Recursos, adaptados a la marca. Copias en `drive-respaldo/recursos/`, mapa en `kit-wit.md`. Falta revisarlos juntos.
 - Carpeta **Guiones** creada en Drive (por red: 1. Ideas, 2. Guiones en frío, 3. Guiones terminados). Carpetas viejas `1. Guiones` a la papelera; v1 → IG terminados, SCRIPT VIDEO GRATIS → YouTube en frío.
 - Tarea de las 4:35 actualizada: guarda idea + guion en frío en las carpetas nuevas y avisa a Santiago para revisar juntos.
 - Guardado en GitHub lo que faltaba: `drive.md` (todos los IDs), `tarea-guion-diario.md` (texto de la tarea), `drive-respaldo/` (guía de edición, instructivo, guiones).

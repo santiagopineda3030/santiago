@@ -20,12 +20,13 @@ Una subcarpeta por red (Instagram, TikTok, YouTube, Anuncios (Meta)) y dentro de
 3. Santiago graba → `2. Crudo sin editar` → Claude edita → `4. Contenido editado`.
 - Claude no crea otra tarea de guiones. Solo corrige esa, cuando Santiago lo pide.
 
-## Recursos por red (pendiente)
-- Instagram › 3. Recursos tiene la "Guía de edición · Noticias IA" (copia: `drive-respaldo/recursos/guia-edicion-noticias-ia.md`).
-- Santiago va a mandar los recursos de TikTok, YouTube y Meta Ads. Con eso: en cada `3. Recursos` un documento
-  **"Recursos y reglas"** (edición, estilo, ejemplos) y copia en `drive-respaldo/recursos/`.
+## Recursos por red (montado 5 nov)
+- Instagram › 3. Recursos: "Guía de edición · Noticias IA" (copia: `drive-respaldo/recursos/guia-edicion-noticias-ia.md`).
+- TikTok, YouTube y Anuncios (Meta) › 3. Recursos: un doc **"Recursos y reglas · <red>"** sacado del kit de Work in Tech
+  y adaptado a la marca (fuente: `contexto/kit-wit.md`; copias en `drive-respaldo/recursos/`). Falta revisarlos con Santi.
+- Música: no se copiaron las pistas del kit (licencia de WIT). Pendiente elegir música libre de derechos.
 
 ## Orden de lo que sigue
 1. ✅ Carpeta Guiones con Ideas / Guiones en frío / Guiones terminados (5 nov).
 2. Revisar con Santiago el guion en frío que sale hoy a las 4:35 y pasarlo a terminados.
-3. Documentos de recursos de TikTok, YouTube y Meta Ads con lo que mande Santiago. 4. Organizar TikTok.
+3. ✅ Documentos de recursos de TikTok, YouTube y Meta Ads (falta revisarlos juntos). 4. Organizar TikTok.
