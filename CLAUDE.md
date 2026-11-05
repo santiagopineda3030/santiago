@@ -44,6 +44,9 @@ claude.ai (proyectos, documentos, chats). Si algo cambia, se actualiza aquí.
 - Nunca poner `Publicar` si el video no está en Drive: el script lo marca Error y deja de enlazarlo.
 - Descripción: 3–5 líneas, la primera es el gancho, sin datos inventados, emoji solo en el cierre, 5 hashtags.
 - COLA POR EDITAR: fila por pieza; al entregar → `Entregado` + link + fecha.
+- **Cada video publicado se marca también en Google Calendar** (calendario principal de Santiago):
+  título `✅ Publicado · <título original>`, color verde (colorId 10), hora real de publicación,
+  y en la descripción las redes, la hora y el link del video en Drive. Sin notificaciones.
 - Publicación automática en Instagram: **falta `META_TOKEN` e `IG_ID`** (pendiente de conectar con Meta).
 
 ## Herramientas que ya están montadas en este repositorio
