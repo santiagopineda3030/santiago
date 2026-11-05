@@ -27,6 +27,23 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
   Santiago revisa GitHub y quiere encontrar TODO.
 - Una sesión nueva por tarea grande: todo queda aquí, no hace falta un chat largo.
 
+## Cómo está organizado Claude (como el kit de WIT, 5 nov)
+- **Al empezar cada chat:**
+  - Si el chat se llama **Santi · Base** o Santi dice "¿qué hay hoy?" → skill `rutina-diaria` (prioriza, abre un chat por pieza, cierra el día; no edita).
+  - Si se llama **Santi · Preguntas** o pregunta cómo funciona algo → skill `preguntas` (responde con la memoria; no edita).
+  - Si es el chat de **una pieza** (título `<código> · <tema>`) → seguir el `CLAUDE.md` y la skill de su área.
+  - Link de un video que le gusta ("agrega este referente") → skill `agregar-referente`.
+  - Aviso "🟢 Guion en frío listo" o "revisemos el guion" → skill `revisar-guion`.
+- **Áreas** (`areas/<área>/CLAUDE.md` + su skill en `areas/<área>/.claude/skills/`):
+  | Área | Skill | Reglas (Drive › <red> › 3. Recursos) |
+  |---|---|---|
+  | `areas/1-instagram` | `editar-instagram` | Guía de edición · Noticias IA |
+  | `areas/2-tiktok` | `editar-tiktok` | Recursos y reglas · TikTok |
+  | `areas/3-youtube` | `editar-youtube` | Recursos y reglas · YouTube |
+  | `areas/4-anuncios-meta` | `editar-anuncio` | Recursos y reglas · Anuncios (Meta) |
+- **Chats:** `Santi · Base` y `Santi · Preguntas` fijados arriba; un chat por pieza con etiqueta `area:<red>`.
+- **Correcciones que son regla** → "Ajustes de Santi" del documento de la red (Drive + copia en `drive-respaldo/recursos/`) + bitácora.
+
 ## Quién es y cómo hablarle
 - **Santiago Pineda** (santiagopineda3030@gmail.com), Colombia, zona horaria **America/Bogota**.
 - **Siempre en español**, tuteo, frases cortas y simples. Explicar paso a paso, con capturas si hace falta.
