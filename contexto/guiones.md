@@ -12,6 +12,8 @@ Una subcarpeta por red (Instagram, TikTok, YouTube, Anuncios (Meta)) y dentro de
 - Copias de los guiones en el repo: `drive-respaldo/guiones/`.
 
 ## Flujo diario
+- **Regla de Santi (5 nov):** Instagram, TikTok y YouTube Shorts usan el MISMO guion. Solo el guion de YouTube largo es distinto.
+  (La tarea de las 4:35 todavía escribe 3 versiones: falta que Santi diga si se ajusta.)
 1. **4:35 p. m.** la tarea de Santiago (`trig_01Tui42SjjCMBURNMXnotpz4`, texto completo en `contexto/tarea-guion-diario.md`):
    investiga, guarda la IDEA en `1. Ideas`, escribe el GUION EN FRÍO en las 3 redes (IG, TikTok, YouTube),
    anota la fila en la hoja (Estado `Guion`) y avisa con un push: "🟢 Guion en frío listo para revisar juntos".

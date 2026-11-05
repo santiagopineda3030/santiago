@@ -68,6 +68,8 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
 ## Contenido diario: Noticias de IA
 - **Todos los días a las 11:00 a. m.** (Bogotá, siempre a las 11, no otra hora), con las 5 noticias del día anterior. Del 5 al 18 de nov 2026.
 - Estructura: Gancho → Viral 1 → Viral 2 → Polémica 1 → Polémica 2 → Útil → CTA.
+- **Un solo guion corto para Instagram, TikTok y YouTube Shorts** (es el mismo video). Lo único que se escribe aparte es el
+  guion de **YouTube largo** (16:9, tema que esté funcionando en el momento). Regla de Santi, 5 nov.
 - Guía de edición (Drive, Instagram › 3. Recursos): vertical 1080×1920, 45–75 s, H.264 ≤ 30 MB,
   subtítulos 2–4 palabras con palabras clave en rojo, título por noticia, gancho en los primeros 3 s,
   voz a −14 LUFS. Nombre del archivo: `v<código> <versión> <tema>.mp4` (ej. `v1 1.2 noticias-dia-1.mp4`).
