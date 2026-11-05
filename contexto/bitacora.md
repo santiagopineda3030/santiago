@@ -40,3 +40,4 @@
 - 5 nov 2026 · 5:30 p. m. · Tarea de las 4:35 ajustada (pedido de Santi): 1 idea + 1 guion en frío en Guiones › Instagram para IG, TikTok y Shorts; YouTube largo va aparte. Texto nuevo en contexto/tarea-guion-diario.md.
 - 5 nov 2026 · noche · Carpeta **Edición de videos** en Drive (1d-q-IQvGntqwJBuLkk5arAwd2AytkCzi): se movieron ahí Instagram › 2. Crudo → 1. Videos en frío y 4. Contenido editado → 2. Videos terminados (mismos IDs, scripts sin cambios). Área areas/5-edicion-videos + skill editar-video. revisar-guion ajustada a un solo guion.
 - 5 nov 2026 · noche · Chat 📁 Edición de videos creado (session_01McnvqvgdvcfNzme6m5dsJP, area:edicion).
+- 5 nov 2026 · noche · LÉEME en Drive › Edición de videos y presentación pedida al chat 📁 Edición de videos.

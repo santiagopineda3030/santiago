@@ -25,6 +25,7 @@ Un solo video para Instagram, TikTok y YouTube Shorts. Se movieron aquí las car
 |---|---|---|
 | 1. Videos en frío | `1GFl-0CSYI8afA0tzKGa0AVmM7FC-d4ON` | Instagram › 2. Crudo sin editar |
 | 2. Videos terminados | `1A1zlwXyvR-l2CZcJ6dnHUp-SZXnEcUGT` | Instagram › 4. Contenido editado (la lee la publicación automática) |
+| LÉEME · Cómo funciona Edición de videos (doc) | `1SyKFkbphx4PTdDc52s7lys34E7RwepnB0FxzjZ0pTCQ` | nuevo |
 
 ## Carpetas de cada red (lo que queda: 2, 3, 4)
 Ojo: en Instagram la 2 y la 4 ya no están aquí (se movieron a Edición de videos). Las de TikTok y YouTube siguen vacías.
