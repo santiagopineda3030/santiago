@@ -1,5 +1,5 @@
 # SCRIPT VIDEO GRATIS — clase gratis (~3 min) (copia)
-Drive: Guiones › YouTube › 2. Guiones en frío · id `1PPbtO17uzy8m4e-aB6cQXXxrPYqJ5iYpuqipRQuOjsM`
+Drive: Guiones › YouTube › 2. Guiones en frío · id `19i-NcxFPADR_evGmriCbwcf_Qj9rt6U7uG-8H0jlstY`
 (estaba en YouTube › 1. Guiones; es el video de la web del embudo, falta revisarlo juntos)
 
 ## 1. Gancho

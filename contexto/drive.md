@@ -39,12 +39,12 @@ Ojo: en Instagram la 2 y la 4 ya no están aquí (se movieron a Edición de vide
 | Documento | Dónde | ID | Copia en el repo |
 |---|---|---|---|
 | Guía de edición · Noticias IA | Instagram › 3. Recursos | `1c6WFwKiaYtGi4osN8CVu6A0slpj4tBzQm8FeDhqkbWk` | `drive-respaldo/recursos/guia-edicion-noticias-ia.md` |
-| v1 · Noticias IA · Día 1 | Guiones › Instagram › 3. Guiones terminados | `1ScuWZ3VeW2XJI4GK4EK5vzZUZEK_5A-Yq88E4Lf0NZo` | `drive-respaldo/guiones/v1-noticias-ia-dia-1.md` |
+| v1 · Noticias IA · Día 1 (en la papelera de Drive, 5 nov) | — | `1ScuWZ3VeW2XJI4GK4EK5vzZUZEK_5A-Yq88E4Lf0NZo` | `drive-respaldo/guiones/v1-noticias-ia-dia-1.md` |
 | v2 · Noticias IA · 5 nov (IG / TikTok / YouTube) | Guiones › <red> › 3. Guiones terminados | `1Fx4bSKRtpNNWTNy7Z79FjQ-oVNLOi3RTciB23hVdctc` / `12wfQXep2QZ9zcASTM8Xrv6sGXlBtEkJk6wl5-u9Xoz4` / `1mTJx80-AgQcB7n8sUunnlq13XxUNCwHp_Lx2xikJ__Q` | `drive-respaldo/guiones/v2-noticias-ia-5-nov.md` |
 | Recursos y reglas · TikTok | TikTok › 3. Recursos | `1tLRRrTK-EVVp7xzarUpt2r1GmV_gP_1UpwlR8lAA5RE` | `drive-respaldo/recursos/recursos-y-reglas-tiktok.md` |
 | Recursos y reglas · YouTube | YouTube › 3. Recursos | `1wh7VcclA6mRRc3klYYAP12viCKVLQs8Wr-mptmkWG4c` | `drive-respaldo/recursos/recursos-y-reglas-youtube.md` |
 | Recursos y reglas · Anuncios (Meta) | Anuncios (Meta) › 3. Recursos | `1OYm-fAvq_5uiMJgZkZA82JC5HaD0HEnBp-OzxKUNZdY` | `drive-respaldo/recursos/recursos-y-reglas-meta-ads.md` |
-| SCRIPT VIDEO GRATIS (clase gratis) | Guiones › YouTube › 2. Guiones en frío | `1PPbtO17uzy8m4e-aB6cQXXxrPYqJ5iYpuqipRQuOjsM` | `drive-respaldo/guiones/script-video-gratis.md` |
+| SCRIPT VIDEO GRATIS (clase gratis) | Guiones › YouTube › 2. Guiones en frío | `19i-NcxFPADR_evGmriCbwcf_Qj9rt6U7uG-8H0jlstY` | `drive-respaldo/guiones/script-video-gratis.md` |
 | yt1 · Idea · La IA es mi equipo de contenido | Guiones › YouTube › 1. Ideas | `1x1xDEDmxwLtrVW6rpeCGFyBAmTg0AVHVUROZzBaZepY` | `drive-respaldo/guiones/yt1-idea.md` |
 | yt1 · Guion en frío · La IA es mi equipo de contenido | Guiones › YouTube › 2. Guiones en frío | `1QI-jj0qiMkXPY0QqXBkCgr4fKfa8qi801MX1Ce8mX04` | `drive-respaldo/guiones/yt1-guion-en-frio.md` |
 

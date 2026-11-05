@@ -63,7 +63,7 @@ Un solo embudo que termina en una llamada; al principio Santiago hace de setter 
 1. **Contenido:** videos de noticias de IA y videos de leads en Instagram, TikTok y YouTube.
 2. **Llamado:** "comenta CLAUDE y te mando una clase gratis".
 3. **Clase gratis (≈3 min):** muestra el qué, nunca el cómo, y cierra en "agenda una llamada".
-   Guion: [SCRIPT VIDEO GRATIS](https://docs.google.com/document/d/1PPbtO17uzy8m4e-aB6cQXXxrPYqJ5iYpuqipRQuOjsM/edit).
+   Guion: [SCRIPT VIDEO GRATIS](https://docs.google.com/document/d/19i-NcxFPADR_evGmriCbwcf_Qj9rt6U7uG-8H0jlstY/edit).
 4. **Web:** video de intro + formulario con 3 preguntas filtro + calendario para agendar.
 5. **Sheet de leads:** cada registro llega a "Leads — Llamadas 1 a 1".
 6. **Setter:** contacta y confirma la llamada.
