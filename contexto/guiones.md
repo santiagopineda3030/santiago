@@ -22,9 +22,9 @@ Una subcarpeta por red (Instagram, TikTok, YouTube, Anuncios (Meta)) y dentro de
 
 ## Recursos por red (montado 5 nov)
 - Instagram › 3. Recursos: "Guía de edición · Noticias IA" (copia: `drive-respaldo/recursos/guia-edicion-noticias-ia.md`).
-- TikTok, YouTube y Anuncios (Meta) › 3. Recursos: un doc **"Recursos y reglas · <red>"** sacado del kit de Work in Tech
-  y adaptado a la marca (fuente: `contexto/kit-wit.md`; copias en `drive-respaldo/recursos/`). Falta revisarlos con Santi.
-- Música: no se copiaron las pistas del kit (licencia de WIT). Pendiente elegir música libre de derechos.
+- TikTok, YouTube y Anuncios (Meta) › 3. Recursos: un doc **"Recursos y reglas · <red>"** del Kit de edición ContentIA
+  (`contexto/kit-contentia.md`; copias en `drive-respaldo/recursos/`). Falta revisarlos con Santi.
+- Música: pendiente elegir música libre de derechos.
 
 ## Orden de lo que sigue
 1. ✅ Carpeta Guiones con Ideas / Guiones en frío / Guiones terminados (5 nov).

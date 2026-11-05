@@ -1,8 +1,9 @@
 # Bitácora (lo más nuevo arriba, una línea por cosa hecha)
 
 ## 5 nov 2026
-- Claude organizado como el kit de WIT: skills `rutina-diaria`, `preguntas`, `agregar-referente`, `revisar-guion` y `areas/1-instagram`, `2-tiktok`, `3-youtube`, `4-anuncios-meta` (CLAUDE.md + skill cada una). Chats Santi · Base y Santi · Preguntas. `.claude/settings.json` de permisos NO se creó (lo bloqueó el modo auto).
-- Leído el kit de edición de Work in Tech (compartido por Santi). Creados "Recursos y reglas" en TikTok, YouTube y Anuncios (Meta) › 3. Recursos, adaptados a la marca. Copias en `drive-respaldo/recursos/`, mapa en `kit-wit.md`. Falta revisarlos juntos.
+- Todo renombrado a **Kit de edición ContentIA** (sin Work in Tech): `kit-wit.md` → `kit-contentia.md`, los 3 docs de Recursos rehechos (IDs nuevos en `drive.md`; los viejos a la papelera).
+- Claude organizado como **Kit de edición ContentIA**: skills `rutina-diaria`, `preguntas`, `agregar-referente`, `revisar-guion` y `areas/1-instagram`, `2-tiktok`, `3-youtube`, `4-anuncios-meta` (CLAUDE.md + skill cada una). Chats Santi · Base y Santi · Preguntas. `.claude/settings.json` de permisos NO se creó (lo bloqueó el modo auto).
+- Leído el kit de referencia que compartió Santi. Creados "Recursos y reglas" en TikTok, YouTube y Anuncios (Meta) › 3. Recursos, adaptados a la marca. Copias en `drive-respaldo/recursos/`, mapa en `kit-contentia.md`. Falta revisarlos juntos.
 - Carpeta **Guiones** creada en Drive (por red: 1. Ideas, 2. Guiones en frío, 3. Guiones terminados). Carpetas viejas `1. Guiones` a la papelera; v1 → IG terminados, SCRIPT VIDEO GRATIS → YouTube en frío.
 - Tarea de las 4:35 actualizada: guarda idea + guion en frío en las carpetas nuevas y avisa a Santiago para revisar juntos.
 - Guardado en GitHub lo que faltaba: `drive.md` (todos los IDs), `tarea-guion-diario.md` (texto de la tarea), `drive-respaldo/` (guía de edición, instructivo, guiones).

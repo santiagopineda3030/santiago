@@ -9,7 +9,7 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
   |---|---|
   | `contexto/bitacora.md` | Para saber qué se hizo y qué quedó a medias |
   | `contexto/drive.md` | Mapa completo de Drive con todos los IDs |
-  | `contexto/kit-wit.md` | Kit de edición de Work in Tech (de donde salen las reglas de TikTok, YouTube y Meta) |
+  | `contexto/kit-contentia.md` | Kit de edición ContentIA: áreas, skills y documentos de reglas por red |
   | `contexto/tarea-guion-diario.md` | Texto exacto de la tarea de las 4:35 p. m. (para corregirla o recrearla) |
   | `drive-respaldo/` | Copias de lo importante de Drive (guía de edición, instructivo del sistema, guiones) |
   | `contexto/instagram-meta.md` | Publicación automática, token, errores de Meta |
@@ -27,7 +27,7 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
   Santiago revisa GitHub y quiere encontrar TODO.
 - Una sesión nueva por tarea grande: todo queda aquí, no hace falta un chat largo.
 
-## Cómo está organizado Claude (como el kit de WIT, 5 nov)
+## Cómo está organizado Claude · Kit de edición ContentIA (5 nov)
 - **Al empezar cada chat:**
   - Si el chat se llama **Santi · Base** o Santi dice "¿qué hay hoy?" → skill `rutina-diaria` (prioriza, abre un chat por pieza, cierra el día; no edita).
   - Si se llama **Santi · Preguntas** o pregunta cómo funciona algo → skill `preguntas` (responde con la memoria; no edita).
@@ -109,6 +109,6 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
    TikTok plan A (borrador + correo): código listo, falta crear la app e instalar (`contexto/tiktok.md`).
 3. Guiones (`contexto/guiones.md`): carpeta **Guiones** montada (5 nov). La tarea de las 4:35 p. m. deja la idea y el
    guion en frío y avisa; luego se revisa juntos y se mueve a terminados. Recursos y reglas de TikTok, YouTube y Meta:
-   creados (5 nov, desde el kit de WIT: `contexto/kit-wit.md`), falta revisarlos juntos. Falta organizar TikTok.
+   creados (5 nov, Kit ContentIA: `contexto/kit-contentia.md`), falta revisarlos juntos. Falta organizar TikTok.
 3b. Repartir el Cerebro a clientes sin que lo compartan: plan aprobado (`contexto/licencias.md`), se monta AL FINAL.
 4. Del plan AI Work: nombre de las redes y bio, clase gratis, módulos, plantilla del cerebro, CRM.

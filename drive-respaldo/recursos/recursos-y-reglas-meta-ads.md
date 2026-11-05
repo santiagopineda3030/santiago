@@ -1,6 +1,6 @@
 # Recursos y reglas · Anuncios (Meta)
 
-*Para que Claude escriba y edite los anuncios de Meta (Instagram/Facebook Ads) de ContentIA siempre con el mismo estilo. Basado en el kit de edición que pasó Santiago (Work in Tech: área Anuncios, skill editar-anuncio, sección "Anuncios verticales" y "VSL" de EDICION.md) y adaptado a la marca de Santi. Oferta: **Cerebro de Contenido**, se vende por **llamada**.*
+*Para que Claude escriba y edite los anuncios de Meta (Instagram/Facebook Ads) de ContentIA siempre con el mismo estilo. Parte del Kit de edición ContentIA (Claude: `areas/4-anuncios-meta`). Oferta: **Cerebro de Contenido**, se vende por **llamada**.*
 
 ## 1. Qué entra
 - Un anuncio = un guion con código (ej. A1) y un **referente** (link de un anuncio que nos guste o un estilo ya aprobado).

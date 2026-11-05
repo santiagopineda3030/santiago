@@ -1,6 +1,6 @@
 # Recursos y reglas · TikTok
 
-*Para que Claude escriba y edite los videos de TikTok de ContentIA siempre con el mismo estilo. Basado en el kit de edición que pasó Santiago (Work in Tech, 6. Recursos › Kit de edición WIT, reglas de reels orgánicos y cascada) y adaptado a la marca de Santi. Si algo choca con la Guía de edición de Instagram, manda la de Instagram.*
+*Para que Claude escriba y edite los videos de TikTok de ContentIA siempre con el mismo estilo. Parte del Kit de edición ContentIA (Claude: `areas/2-tiktok`). Si algo choca con la Guía de edición de Instagram, manda la de Instagram.*
 
 ## 1. Qué se publica en TikTok
 - El mismo video de **Noticias IA** de Instagram (v‹N›), con su guion de TikTok (gancho más directo, frases más cortas).
@@ -19,7 +19,7 @@
 - **Cierre**: la pregunta del CTA en pantalla (≤ 12 palabras).
 
 ## 4. Diseño
-- Fondo oscuro liso, cámara centrada. Acento **rojo** para palabras clave (no el amarillo de WIT).
+- Fondo oscuro liso, cámara centrada. Acento **rojo** para palabras clave.
 - Punch-in (acercamiento) de ~1,08 en tramos alternos para disimular los cortes; un cambio visual cada 3–5 s.
 - **Zona segura**: todo el texto dentro de x 120–960, y 250–1500. En TikTok, dejar libre la columna derecha (botones de like, comentar, compartir) y la franja de abajo (usuario y descripción).
 - Nada tapa la cara.
@@ -56,7 +56,7 @@
 
 ## 10. Referentes y recursos
 - Referentes de la Guía de Instagram (Jon Hernández, Xavier Mitjana, DotCSV, Juan Pe Navarro). Santi agrega aquí los de TikTok: link + qué copiar (formato, no contenido) + qué NO copiar.
-- Música: elegir pistas libres de derechos (Pexels, Pixabay o una licencia propia). Las del kit WIT son de su licencia.
+- Música: elegir pistas libres de derechos (Pexels, Pixabay o una licencia propia).
 
 ## 11. Ajustes de Santi
 (Escribe aquí lo que quieras cambiar después de ver cada edición.)

@@ -1,6 +1,6 @@
 # Recursos y reglas · YouTube
 
-*Para que Claude escriba y edite los videos de YouTube de ContentIA (canal @santimediayt) siempre con el mismo estilo. Basado en el kit de edición que pasó Santiago (Work in Tech, reglas de YouTube: `REGLAS.md`, `EDICION.md`, skill editar-youtube) y adaptado a la marca de Santi.*
+*Para que Claude escriba y edite los videos de YouTube de ContentIA (canal @santimediayt) siempre con el mismo estilo. Parte del Kit de edición ContentIA (Claude: `areas/3-youtube`).*
 
 ## A. YouTube Shorts (lo que se publica hoy)
 Es el mismo video vertical de Noticias IA, con su guion de YouTube.
@@ -49,7 +49,7 @@ Es el mismo video vertical de Noticias IA, con su guion de YouTube.
 
 ## D. Referentes y recursos
 - Referentes de la Guía de Instagram (Jon Hernández — canal @la_inteligencia_artificial, Xavier Mitjana, DotCSV, Juan Pe Navarro). Santi agrega aquí los de YouTube: link + qué copiar + qué NO copiar.
-- Música libre de derechos (las pistas del kit WIT son de su licencia).
+- Música libre de derechos.
 
 ## E. Ajustes de Santi
 (Escribe aquí lo que quieras cambiar después de ver cada edición.)

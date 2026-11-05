@@ -32,9 +32,9 @@ Las carpetas viejas `<red> › 1. Guiones` se mandaron a la papelera el 5 nov (s
 |---|---|---|---|
 | Guía de edición · Noticias IA | Instagram › 3. Recursos | `1c6WFwKiaYtGi4osN8CVu6A0slpj4tBzQm8FeDhqkbWk` | `drive-respaldo/recursos/guia-edicion-noticias-ia.md` |
 | v1 · Noticias IA · Día 1 | Guiones › Instagram › 3. Guiones terminados | `1ScuWZ3VeW2XJI4GK4EK5vzZUZEK_5A-Yq88E4Lf0NZo` | `drive-respaldo/guiones/v1-noticias-ia-dia-1.md` |
-| Recursos y reglas · TikTok | TikTok › 3. Recursos | `1dKWoMyjNJXETFRt3GDCerXCsi3ZnvPERhu0JBXrw_Wc` | `drive-respaldo/recursos/recursos-y-reglas-tiktok.md` |
-| Recursos y reglas · YouTube | YouTube › 3. Recursos | `1agCoN-vo8nvxHD5DQ5_7mH1VcuFsb8HkB5YFRv70tvY` | `drive-respaldo/recursos/recursos-y-reglas-youtube.md` |
-| Recursos y reglas · Anuncios (Meta) | Anuncios (Meta) › 3. Recursos | `19T-vGmR4vk0tIwatxPMJ6TbenocYVOwiEdwEutq-YwQ` | `drive-respaldo/recursos/recursos-y-reglas-meta-ads.md` |
+| Recursos y reglas · TikTok | TikTok › 3. Recursos | `1tLRRrTK-EVVp7xzarUpt2r1GmV_gP_1UpwlR8lAA5RE` | `drive-respaldo/recursos/recursos-y-reglas-tiktok.md` |
+| Recursos y reglas · YouTube | YouTube › 3. Recursos | `1wh7VcclA6mRRc3klYYAP12viCKVLQs8Wr-mptmkWG4c` | `drive-respaldo/recursos/recursos-y-reglas-youtube.md` |
+| Recursos y reglas · Anuncios (Meta) | Anuncios (Meta) › 3. Recursos | `1OYm-fAvq_5uiMJgZkZA82JC5HaD0HEnBp-OzxKUNZdY` | `drive-respaldo/recursos/recursos-y-reglas-meta-ads.md` |
 | SCRIPT VIDEO GRATIS (clase gratis) | Guiones › YouTube › 2. Guiones en frío | `1PPbtO17uzy8m4e-aB6cQXXxrPYqJ5iYpuqipRQuOjsM` | `drive-respaldo/guiones/script-video-gratis.md` |
 
-Fuente de las reglas de TikTok/YouTube/Meta: kit de Work in Tech (solo lectura), ver `contexto/kit-wit.md`.
+Kit de edición ContentIA (áreas, skills y reglas por red): `contexto/kit-contentia.md`.
