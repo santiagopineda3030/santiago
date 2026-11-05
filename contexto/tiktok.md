@@ -23,5 +23,6 @@
 7. Pedir la auditoría (necesita páginas de Términos y Privacidad públicas y un video demo) para pasar a directo.
 
 ## Pendiente / dudas
+- 5 nov: Santiago tuvo un error al crear la app (parte A). Retomar pidiendo captura del error.
 - Confirmar que el sandbox deja mandar borradores reales a su cuenta (si no, hay que pedir revisión de la app).
 - La landing aún no está publicada: Términos y Privacidad hay que alojarlos en algún lado para la auditoría.
