@@ -43,3 +43,14 @@ Doc reorganizado: pestaña **1. Mercado hispanohablante** (nueva), **2. Avatar y
 - **Precios:** community manager junior Colombia COP 1,5–2 M/mes (18–24 M/año); México ~2,5 M COP; España 6,7–9 M COP; gestión de redes en México MXN 1.800–9.000/mes.
   Cerebro ≈ COP 10 M una vez (tasa aprox. 4.000).
 - **Conclusión:** vender **clientes y qué publicar** antes que "tiempo"; Done With You; simple por fuera; video corto en varias redes. Empezar por Colombia.
+
+## Competencia en español y conclusión (6 nov 2026, cierre del estudio)
+- **Nadie en español hace lo mismo** (sistema propio, montado, con la cara y voz del dueño, pago único). Competencia indirecta:
+  apps de IA por suscripción en inglés (GEN, AutoClips, Klip: el dueño configura, paga cada mes, a menudo sin su cara),
+  agencias de IA LatAm (CreaTuSite, AIVA: mensual, el sistema es de ellos), cursos (Proyectum IA: lo hace él), community manager/agencia.
+- Mar azul en la **forma**, no en el problema: ya hay dinero gastándose; el reto es educar → la prueba (redes de Santi) pesa mucho.
+- **Conclusión:** saben que redes e IA sirven, casi nadie las tiene funcionando porque no sabe cómo (qué publicar, no le vende).
+  Cerebro = instalado, pago único USD 2.500 (~10 M COP) < 1 año de CM junior (18–24 M COP).
+- **Santi lo entendió así (6 nov):** correcto. Ajustes: el 6,8% es IA en general en LatAm (no solo redes ni solo Colombia); no es "pereza",
+  es "no sabe cómo / no le vende"; $2.500 es único (no mensual) y el cliente paga herramientas aparte; el Gestor IA es de su equipo (el nuestro es upsell).
+- **Encuesta:** `google-apps-script/encuesta/CrearEncuesta.gs` (Apps Script que crea el Google Form de 10 preguntas). Falta que Santi la corra y la mande a 10–20 dueños.
