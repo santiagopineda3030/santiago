@@ -120,7 +120,14 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
 1. v2 1.3 a Instagram + YouTube Shorts a las 11:00 (MP4 en 2. Videos terminados; descripción más corta). TikTok no automático.
 2. ✅ Estudio de mercado hispano cerrado (`contexto/estudio-de-mercado.md`). Sigue: 6 decisiones de la oferta, encuesta a dueños, TikTok, Meta Ads (último).
 
-## Pendientes grandes (en orden)
+## Hoja de ruta hasta el 18 de nov 2026 (TODO listo: página, oferta, código) · orden de Santi, 6 nov
+1. **Oferta** (Santi · Base): cerrar las 6 decisiones → `contexto/ai-work.md` + pestaña 2 del estudio.
+2. **TikTok** (chat 📁 TikTok): organizarlo + subida automática.
+3. **Meta Ads** (chat 📁 Anuncios (Meta)).
+4. **Recordarle a Santi al terminar Meta Ads:** terminar los **guiones de YouTube** (yt1 largo, clase gratis) en 📁 YouTube y
+   arrancar el **curso** (módulos grabados) y la parte técnica para vender y publicitar.
+5. Revisión final de página, oferta y código antes del 18 nov.
+
 1. Confirmar la primera publicación automática real (Instagram ya conectado e instalado).
 2. YouTube Shorts: **funcionando** (canal @santimediayt, probado 5 nov). Sale con la misma aprobación de IG.
    TikTok plan A (borrador + correo): código listo, falta crear la app e instalar (`contexto/tiktok.md`).

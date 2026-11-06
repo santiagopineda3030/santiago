@@ -19,6 +19,9 @@ Español, tuteo, frases cortas (Santi trabaja desde el PC). Este chat **solo pri
 - Drive › Edición de videos › `1. Videos en frío`: crudos nuevos que aún no tienen fila en la COLA.
 - Videos para editar → chat **📁 Edición de videos** (skill `editar-video`, `areas/5-edicion-videos`).
 
+## 1b. Hoja de ruta al 18 nov
+Revisar "Hoja de ruta hasta el 18 de nov" en `CLAUDE.md` y recordarle a Santi el siguiente paso (sobre todo: tras Meta Ads → guiones de YouTube + curso).
+
 ## 2. Contarle qué hay (máximo 8 líneas, por prioridad)
 1. **Corrección** (lo que Santi devolvió). Siempre primero.
 2. **Guion en frío** sin revisar (sobre todo el del video de mañana a las 11:00).
