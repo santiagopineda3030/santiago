@@ -117,22 +117,25 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
   Necesita en el entorno `SUBIDA_URL` y `SUBIDA_CLAVE`.
 - Landing de la llamada: `src/` (React + Vite + Tailwind, estilo tecnológico cian, logo SPR en píxeles).
 
-## Lo próximo (6 nov) · detalle en `contexto/bitacora.md` › Plan del día
-1. v2 1.3 a Instagram + YouTube Shorts a las 11:00 (MP4 en 2. Videos terminados; descripción más corta). TikTok no automático.
-2. ✅ Estudio de mercado hispano cerrado (`contexto/estudio-de-mercado.md`). Sigue: 6 decisiones de la oferta, encuesta a dueños, TikTok, Meta Ads (último).
+## Hoja de ruta hasta el 18 de nov 2026 (prioridad acordada con Santi, 6 nov) · TODO automatizado
+Flujo: Santi sube crudos a "Videos en frío" → Claude edita, sube, organiza hoja y calendario → publica solo → Claude da ideas de guiones.
+Estudio de mercado ✅ (`contexto/estudio-de-mercado.md`) · Oferta ✅ (`contexto/ai-work.md`) · Producto: `contexto/producto.md`.
+**A. Que el sistema funcione solo (es lo que se vende)**
+1. Pruebas diarias: v3 (7 nov) en IG + YouTube automático; luego TikTok. · 2. TikTok automático (📁 TikTok).
+3. Ideas de guiones automáticas además de las noticias: **videos de leads** y **YouTube largo** (falta una tarea programada).
+**B. Que entren leads**
+4. Guiones de videos de leads ("comenta CLAUDE"). · 5. Automatizar "comenta CLAUDE" → DM con la clase gratis.
+6. Grabar el video gratis (~3 min). · 7. Web: 3 preguntas filtro + calendario + hoja de leads; subirla con dominio,
+   política de privacidad y términos. · 8. Nombre de las redes + bio.
+**C. Que se pueda vender y entregar**
+9. Guion de la llamada de venta. · 10. Skool: crear comunidad, módulos con tareas. · 11. Carpetas plantilla de Drive.
+12. Tracker de alumnos. · 13. Bienvenida + formulario de onboarding. · 14. Protección del Drive (`licencias.md`).
+**D. Escalar**
+15. Meta Ads (📁 Anuncios (Meta), de último). · 16. Guiones de YouTube largos (📁 YouTube) — recordárselo a Santi al
+   terminar Meta Ads, junto con arrancar el curso. · 17. Revisión final antes del 18.
+Después del 18: método de pago, setter y closer.
 
-## Hoja de ruta hasta el 18 de nov 2026 (TODO listo: página, oferta, código) · orden de Santi, 6 nov
-1. **Oferta** (Santi · Base): cerrar las 6 decisiones → `contexto/ai-work.md` + pestaña 2 del estudio.
-2. **TikTok** (chat 📁 TikTok): organizarlo + subida automática.
-3. **Meta Ads** (chat 📁 Anuncios (Meta)).
-4. **Recordarle a Santi al terminar Meta Ads:** terminar los **guiones de YouTube** (yt1 largo, clase gratis) en 📁 YouTube y
-   arrancar el **curso** (módulos grabados) y la parte técnica para vender y publicitar.
-5. **Producto** (`contexto/producto.md`): Skool (crear), carpetas plantilla, tracker de alumnos, landing + video gratis.
-6. **Lo que también falta (lista del 6 nov):** nombre de las redes + bio · automatización "comenta CLAUDE" → DM con la clase
-   gratis · web: 3 preguntas filtro + calendario + hoja de leads conectada · guion de la llamada de venta · formulario de
-   onboarding + bienvenida al pagar · política de privacidad y términos en la web (Meta Ads los pide) · dominio.
-7. Revisión final de página, oferta y código antes del 18 nov. Pago, setter y closer: después del 18.
-
+## Pendientes grandes (estado técnico)
 1. Confirmar la primera publicación automática real (Instagram ya conectado e instalado).
 2. YouTube Shorts: **funcionando** (canal @santimediayt, probado 5 nov). Sale con la misma aprobación de IG.
    TikTok plan A (borrador + correo): código listo, falta crear la app e instalar (`contexto/tiktok.md`).
