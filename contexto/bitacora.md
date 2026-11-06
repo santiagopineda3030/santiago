@@ -98,3 +98,4 @@
 - 5 nov 2026 · 9:15 p. m. · Santi subió v2 1.3 a 2. Videos terminados › NOVIEMBRE 2026 (1mBbvjteomgGWBwJQHyXUGcrjmOlkoYy3). Copia en TikTok › 4. Contenido editado (1i83oWmTSDI_UXAqO_Osj1UnEtYSTS_7k, a mano). Hoja: H3 link, M3 Publicar (aprobado por Santi en el chat: IG + Shorts 6 nov 11:00). COLA v2 Entregado. Tarea de las 8:00 cambiada a solo revisar.
 - 6 nov 2026 · 8:00 a. m. · Revisión: v2 1.3 en Programado (IG + Shorts 11:00). Sin errores.
 - 6 nov 2026 · 3:40 p. m. · 📁 TikTok: app de TikTok creada (org ContentIA, app ContentIA Publicador, sandbox Pruebas, Redirect URI puesta, cuenta soysanti_media). Falta llenar info básica + links, Apply changes y conectar.
+- 6 nov 2026 · Términos y Privacidad de la app de TikTok creados en TikTok › 3. Recursos y abiertos con link (IDs en drive.md). Web URL = perfil de Instagram.
