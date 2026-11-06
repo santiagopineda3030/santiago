@@ -128,7 +128,7 @@ Plan maestro (doc): https://claude.ai/artifact/PnzCmT7dUjbUxnE5Qtg7r1 · Hecho: 
 | Sáb 8 | **Meta Ads**: cuenta publicitaria, píxel, campaña en borrador (sin gastar) |
 | Dom 9 | **Día de guiones**: guiones del mes (videos de leads + YouTube largos + video gratis) |
 | Lun 10 | **Grabar** los videos del mes y el video gratis |
-| Mar 11 | **Web**: preguntas filtro, calendario, hoja de leads, privacidad y términos, dominio; subirla |
+| Mar 11 | **Análisis de la encuesta** (Santi la hace en persona en negocios, plazo martes) · **Web**: preguntas filtro, calendario, hoja de leads, privacidad y términos, dominio; subirla |
 | Mié 12 | **Guion de la llamada de venta** · crear **Skool** y la estructura de módulos con tareas |
 | Jue 13 | **Carpetas plantilla** de Drive (sin datos de Santi) |
 | Vie 14 | **Grabar los módulos** del curso |

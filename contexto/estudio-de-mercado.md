@@ -55,3 +55,4 @@ Doc reorganizado: pestaña **1. Mercado hispanohablante** (nueva), **2. Avatar y
   es "no sabe cómo / no le vende"; $2.500 es único (no mensual) y el cliente paga herramientas aparte; el Gestor IA es de su equipo (el nuestro es upsell).
 - **Encuesta:** `google-apps-script/encuesta/CrearEncuesta.gs` (Apps Script que crea el Google Form de 10 preguntas). Falta que Santi la corra y la mande a 10–20 dueños.
 - ✅ Encuesta creada por Santi (6 nov): Form `1CVQwGceqYQo_EoAcjVO-zFKJadF3MuOXo-EkOg1lvAg` · editar https://docs.google.com/forms/d/1CVQwGceqYQo_EoAcjVO-zFKJadF3MuOXo-EkOg1lvAg/edit · para compartir: https://forms.gle/BEE2ZSexndMxFYXN7. Meta: 10–20 respuestas.
+- Encuesta: Santi la hace **en persona** en negocios (por WhatsApp/correo no responden). Plazo: **martes 11 nov** → análisis ese día.
