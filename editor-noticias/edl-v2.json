@@ -1,0 +1,450 @@
+{
+ "nota": "v2 1.0: Noticias IA del 5 nov. Tomas elegidas de un solo crudo (última toma buena).",
+ "gancho_texto": "OpenAI creó una IA hacker",
+ "cta": "Sígueme para no perderte ninguna",
+ "cta_emoji": "🔔",
+ "claves": [
+  "openai",
+  "chatgpt",
+  "firefox",
+  "linux",
+  "musk",
+  "universal",
+  "music",
+  "hacker",
+  "gemini",
+  "omni",
+  "flash",
+  "ads",
+  "anthropic",
+  "claude"
+ ],
+ "secciones": [
+  {
+   "titulo": "Gancho",
+   "tipo": "gancho",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 7.297,
+     "hasta": 10.52,
+     "texto": "OpenAI acaba de crear una IA hacker que no la deja utilizar a cualquiera."
+    },
+    {
+     "clip": "0001",
+     "desde": 19.65,
+     "hasta": 22.964,
+     "texto": "La líder de Claude Code acaba de pasar de Anthropic a OpenAI."
+    },
+    {
+     "clip": "0001",
+     "desde": 40.586,
+     "hasta": 44.468,
+     "texto": "Estas son las 5 noticias más importantes de la IA de ayer, día 5 de noviembre."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "logo",
+     "en": "OpenAI",
+     "offset": -0.15,
+     "dur": 2.4,
+     "logo": "openai",
+     "texto": "creó una IA hacker",
+     "y": 175
+    },
+    {
+     "tipo": "emoji",
+     "en": "hacker",
+     "dur": 1.3,
+     "ch": "🕵️",
+     "x": 880,
+     "y": 820
+    },
+    {
+     "tipo": "cambio",
+     "en": "pasar",
+     "offset": -0.2,
+     "dur": 2.2,
+     "antes": "ANTHROPIC",
+     "despues": "OPENAI",
+     "ch": "🚪"
+    },
+    {
+     "tipo": "texto",
+     "en": "5",
+     "offset": -0.1,
+     "dur": 3.0,
+     "lineas": [
+      "TOP 5 NOTICIAS DE IA",
+      "5 de noviembre de 2026"
+     ],
+     "ch": "📰"
+    }
+   ]
+  },
+  {
+   "titulo": "Viral 1 — OpenAI",
+   "tipo": "noticia",
+   "etiqueta": "VIRAL · OPENAI",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 55.193,
+     "hasta": 59.793,
+     "texto": "OpenAI acaba de crear una IA hacker que encuentra fallas en algunas aplicaciones."
+    },
+    {
+     "clip": "0001",
+     "desde": 84.517,
+     "hasta": 88.695,
+     "texto": "En pruebas encontró 81 fallas graves en Firefox que nadie se había dado cuenta."
+    },
+    {
+     "clip": "0001",
+     "desde": 99.842,
+     "hasta": 102.394,
+     "texto": "Y supo cómo atacar casi mil fallas en Linux."
+    },
+    {
+     "clip": "0001",
+     "desde": 106.117,
+     "hasta": 109.04,
+     "texto": "Uno de los sistemas más utilizados por los servidores en internet."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "logo",
+     "en": "OpenAI",
+     "dur": 2.0,
+     "logo": "openai",
+     "texto": "GPT-6 Cyber",
+     "y": 600
+    },
+    {
+     "tipo": "emoji",
+     "en": "hacker",
+     "dur": 1.3,
+     "ch": "👨‍💻",
+     "x": 880,
+     "y": 840
+    },
+    {
+     "tipo": "logo",
+     "en": "Firefox",
+     "offset": -0.2,
+     "dur": 2.2,
+     "logo": "firefoxbrowser",
+     "texto": "81 fallas que nadie había visto"
+    },
+    {
+     "tipo": "logo",
+     "en": "Linux",
+     "offset": -0.2,
+     "dur": 2.0,
+     "logo": "linux",
+     "texto": "casi 1.000 fallas"
+    },
+    {
+     "tipo": "emoji",
+     "en": "internet",
+     "dur": 1.3,
+     "ch": "🌐",
+     "x": 880,
+     "y": 840
+    }
+   ]
+  },
+  {
+   "titulo": "Viral 2 — Claude Code",
+   "tipo": "noticia",
+   "etiqueta": "VIRAL · CLAUDE CODE",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 124.007,
+     "hasta": 126.489,
+     "texto": "Cat Wu, la líder del producto de Claude Code."
+    },
+    {
+     "clip": "0001",
+     "desde": 129.877,
+     "hasta": 131.536,
+     "texto": "Se fue de Anthropic a OpenAI."
+    },
+    {
+     "clip": "0001",
+     "desde": 136.874,
+     "hasta": 140.437,
+     "texto": "Y es la tercera persona de ese equipo que pasa de Anthropic a OpenAI."
+    },
+    {
+     "clip": "0001",
+     "desde": 145.958,
+     "hasta": 148.497,
+     "texto": "¿Tú crees que Claude va a quedar atrás de ChatGPT?"
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "logo",
+     "en": "Claude",
+     "offset": -0.6,
+     "dur": 2.0,
+     "logo": "anthropic",
+     "texto": "Cat Wu · líder de Claude Code",
+     "y": 600
+    },
+    {
+     "tipo": "cambio",
+     "en": "fue",
+     "offset": -0.1,
+     "dur": 2.0,
+     "antes": "ANTHROPIC",
+     "despues": "OPENAI",
+     "ch": "🚪"
+    },
+    {
+     "tipo": "texto",
+     "en": "tercera",
+     "offset": -0.1,
+     "dur": 2.4,
+     "lineas": [
+      "3 SALIDAS",
+      "en dos semanas"
+     ],
+     "ch": "🏃"
+    },
+    {
+     "tipo": "emoji",
+     "en": "ChatGPT",
+     "offset": -0.3,
+     "dur": 1.6,
+     "ch": "🤔",
+     "x": 880,
+     "y": 830
+    }
+   ]
+  },
+  {
+   "titulo": "Polémica 1 — Universal Music",
+   "tipo": "noticia",
+   "etiqueta": "POLÉMICA · UNIVERSAL MUSIC",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 184.198,
+     "hasta": 190.049,
+     "texto": "Universal Music y otras dos disqueras le piden a Anthropic más de 3 mil millones de dólares."
+    },
+    {
+     "clip": "0001",
+     "desde": 197.005,
+     "hasta": 201.581,
+     "texto": "Ya que dicen que Claude aprendió la letra de más de 20 mil canciones sin pagar nada."
+    },
+    {
+     "clip": "0001",
+     "desde": 205.789,
+     "hasta": 209.159,
+     "texto": "Esta semana Claude se tranquilizó ya que ganó la primera parte de la demanda."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "texto",
+     "en": "Universal",
+     "offset": -0.1,
+     "dur": 2.2,
+     "lineas": [
+      "UNIVERSAL MUSIC",
+      "+ 2 disqueras"
+     ],
+     "ch": "🎵",
+     "y": 600
+    },
+    {
+     "tipo": "sello",
+     "en": "millones",
+     "offset": -0.2,
+     "dur": 1.9,
+     "texto": "US$3.000 MILLONES"
+    },
+    {
+     "tipo": "texto",
+     "en": "20",
+     "offset": -0.1,
+     "dur": 2.3,
+     "lineas": [
+      "20.000 CANCIONES",
+      "sin pagar nada"
+     ],
+     "ch": "🎶"
+    },
+    {
+     "tipo": "barra",
+     "en": "ganó",
+     "offset": -0.3,
+     "dur": 2.4,
+     "texto": "PRIMER ROUND PARA CLAUDE"
+    },
+    {
+     "tipo": "emoji",
+     "en": "demanda",
+     "dur": 1.3,
+     "ch": "⚖️",
+     "x": 880,
+     "y": 840
+    }
+   ]
+  },
+  {
+   "titulo": "Polémica 2 — 164 demandas",
+   "tipo": "noticia",
+   "etiqueta": "POLÉMICA · 164 DEMANDAS",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 220.147,
+     "hasta": 222.714,
+     "texto": "Y no es la única demanda que ha habido esta semana."
+    },
+    {
+     "clip": "0001",
+     "desde": 234.674,
+     "hasta": 239.325,
+     "texto": "Ya van 164 demandas por derechos de autor hacia empresas de IA."
+    },
+    {
+     "clip": "0001",
+     "desde": 243.548,
+     "hasta": 246.368,
+     "texto": "Las tres más nuevas son contra la empresa de Elon Musk."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "emoji",
+     "en": "demanda",
+     "dur": 1.3,
+     "ch": "⚖️",
+     "x": 880,
+     "y": 840
+    },
+    {
+     "tipo": "contador",
+     "en": "164",
+     "offset": -0.2,
+     "dur": 2.6,
+     "desde": 0,
+     "hasta": 164,
+     "formato": "{v:.0f}",
+     "etiqueta": "demandas contra la IA"
+    },
+    {
+     "tipo": "logo",
+     "en": "Musk",
+     "offset": -0.6,
+     "dur": 2.0,
+     "logo": "x",
+     "texto": "la empresa de IA de Elon Musk"
+    }
+   ]
+  },
+  {
+   "titulo": "Útil — Gemini",
+   "tipo": "noticia",
+   "etiqueta": "ÚTIL · GEMINI OMNI FLASH",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 261.33,
+     "hasta": 263.198,
+     "texto": "Google lanzó Gemini Omni Flash."
+    },
+    {
+     "clip": "0001",
+     "desde": 293.316,
+     "hasta": 297.052,
+     "texto": "Hace videos de 15 segundos en vertical por más o menos un dólar."
+    },
+    {
+     "clip": "0001",
+     "desde": 308.539,
+     "hasta": 310.005,
+     "texto": "Y ya está en Google Ads."
+    },
+    {
+     "clip": "0001",
+     "desde": 317.023,
+     "hasta": 320.317,
+     "texto": "O sea, el video de tu anuncio puede valer lo mismo que la taza de un café."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "logo",
+     "en": "Gemini",
+     "offset": -0.2,
+     "dur": 2.0,
+     "logo": "googlegemini",
+     "texto": "Gemini Omni Flash",
+     "y": 600
+    },
+    {
+     "tipo": "texto",
+     "en": "15",
+     "offset": -0.1,
+     "dur": 2.0,
+     "lineas": [
+      "VIDEOS DE 15 s",
+      "en vertical"
+     ],
+     "ch": "📱"
+    },
+    {
+     "tipo": "texto",
+     "en": "dólar",
+     "offset": -0.4,
+     "dur": 1.8,
+     "lineas": [
+      "≈ US$1",
+      "por video"
+     ],
+     "ch": "💵"
+    },
+    {
+     "tipo": "logo",
+     "en": "Ads",
+     "offset": -0.5,
+     "dur": 1.8,
+     "logo": "googleads",
+     "texto": "dentro de Google Ads"
+    },
+    {
+     "tipo": "emoji",
+     "en": "café",
+     "offset": -0.2,
+     "dur": 1.6,
+     "ch": "☕",
+     "x": 880,
+     "y": 830
+    }
+   ]
+  },
+  {
+   "titulo": "CTA",
+   "tipo": "cta",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 328.971,
+     "hasta": 332.248,
+     "texto": "Y ya sabes, sígueme para ver las noticias de IA más importantes todos los días."
+    }
+   ],
+   "graficos": []
+  }
+ ]
+}

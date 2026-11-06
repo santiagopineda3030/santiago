@@ -41,3 +41,4 @@
 - 5 nov 2026 · noche · Carpeta **Edición de videos** en Drive (1d-q-IQvGntqwJBuLkk5arAwd2AytkCzi): se movieron ahí Instagram › 2. Crudo → 1. Videos en frío y 4. Contenido editado → 2. Videos terminados (mismos IDs, scripts sin cambios). Área areas/5-edicion-videos + skill editar-video. revisar-guion ajustada a un solo guion.
 - 5 nov 2026 · noche · Chat 📁 Edición de videos creado (session_01McnvqvgdvcfNzme6m5dsJP, area:edicion).
 - 5 nov 2026 · noche · LÉEME en Drive › Edición de videos y presentación pedida al chat 📁 Edición de videos.
+- 6 nov 2026 · 📁 Edición de videos: v2 1.0 (noticias 5 nov) editado con editor-noticias (edl-v2.json, 75 s, −14 LUFS, 27 MB). Enviado a Santi para revisar. Crudo abierto con enlace para bajarlo: Santi debe volverlo a Restringido.

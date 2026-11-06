@@ -89,7 +89,7 @@ def ass_v2(palabras, secciones, gancho, cta, ruta):
         sig = palabras[i + 1] if i + 1 < len(palabras) else None
         largo = len(" ".join(x["w"] for x in actual))
         if (len(actual) >= 4 or (sig and largo + 1 + len(sig["w"]) > 17) or not sig
-                or (len(actual) >= 2 and (re.search(r"[.,;:?!…]$", w["w"]) or sig["s"] - w["e"] > 0.35))):
+                or re.search(r"[.?!…]$", w["w"]) or (len(actual) >= 2 and (re.search(r"[,;:]$", w["w"]) or sig["s"] - w["e"] > 0.35))):
             grupos.append(actual)
             actual = []
     ev = []

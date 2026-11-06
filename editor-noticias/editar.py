@@ -353,7 +353,7 @@ def render(plan, clips, infos, tmp):
         pz["dur_real"] = dur
         lista.append(out)
     lst = tmp / "lista.txt"
-    lst.write_text("".join(f"file '{p.as_posix()}'\n" for p in lista))
+    lst.write_text("".join(f"file '{p.resolve().as_posix()}'\n" for p in lista))
     base = tmp / "base.mov"
     ffmpeg("-f", "concat", "-safe", "0", "-i", str(lst), "-c", "copy", str(base))
     return base
