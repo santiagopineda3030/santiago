@@ -8,12 +8,11 @@
 2. **Corrección de TikTok** (Santi dice qué, en 📁 TikTok).
 3. **Estudio de mercado:** analizar bien el avatar, armar bien la oferta (Cerebro de Contenido, $2.500) y cómo se va a
    vender (llamada, setter → closer). Base: `contexto/estudio-de-mercado.md` y `contexto/ai-work.md`.
-3b. **Arreglar la subida de videos a Drive:** Claude no puede subir videos pesados. El buzón de Apps Script
-   (`editor-noticias/subir-drive/`) tiene límite de tamaño por envío, y además faltan `SUBIDA_URL` y `SUBIDA_CLAVE` en el entorno.
-   Opciones: subir por partes (upload reanudable de Drive) o conectar una cuenta de servicio. Decidir con Santi.
 4. A las 4:35 p. m. llega el guion del v3 (ya un solo guion para las 3 redes) → revisarlo en 📁 Guiones.
 5. Pendientes que siguen: revisar yt1 (YouTube largo) con Santi; revisar los "Recursos y reglas" de TikTok, YouTube y Meta;
    el crudo del v2 quedó con enlace abierto (Santi debe volverlo a Restringido); cambiar `CLAVE_SUBIDA`.
+
+- (Subida de videos pesados a Drive: Santi ya encontró la solución el 5 nov en la noche. No va en el plan.)
 
 ## 5 nov 2026 · Cierre del día (resumen por carpeta)
 - **Santi · Base:** creado como chat de rutina diaria. Regla: un solo guion para IG, TikTok y Shorts (YouTube largo aparte).
