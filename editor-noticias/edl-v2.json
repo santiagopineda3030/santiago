@@ -1,5 +1,5 @@
 {
- "nota": "v2 1.1: cortes sin mirar las notas (mirada.py), 6 escenas a pantalla completa, zona segura.",
+ "nota": "v2 1.2: más animaciones donde mira a un lado + bordes recortados/sostenidos con mirada estricta.",
  "gancho_texto": "OpenAI creó una IA hacker",
  "cta": "Sígueme para no perderte ninguna",
  "cta_emoji": "🔔",
@@ -206,7 +206,7 @@
      "tipo": "fuga",
      "en": "tercera",
      "offset": -0.3,
-     "dur": 2.6,
+     "dur": 3.4,
      "de": "anthropic",
      "a": "openai",
      "texto": "3 salidas en dos semanas",
@@ -217,7 +217,7 @@
      "tipo": "carrera",
      "cubrir": {
       "clip": "0001",
-      "desde": 146.45,
+      "desde": 146.3,
       "hasta": 148.45
      },
      "a": "Claude",
@@ -271,13 +271,6 @@
      "titulo": "DISQUERAS VS. ANTHROPIC"
     },
     {
-     "tipo": "sello",
-     "en": "millones",
-     "offset": -0.2,
-     "dur": 1.9,
-     "texto": "US$3.000 MILLONES"
-    },
-    {
      "tipo": "texto",
      "en": "20",
      "offset": -0.1,
@@ -302,6 +295,15 @@
      "ch": "⚖️",
      "x": 880,
      "y": 840
+    },
+    {
+     "tipo": "billetes",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 188.6,
+      "hasta": 190.1
+     },
+     "hasta": 3000
     }
    ]
   },
@@ -411,23 +413,6 @@
      "ch": "📱"
     },
     {
-     "tipo": "logo",
-     "en": "Ads",
-     "offset": -0.5,
-     "dur": 1.8,
-     "logo": "googleads",
-     "texto": "dentro de Google Ads"
-    },
-    {
-     "tipo": "emoji",
-     "en": "café",
-     "offset": -0.2,
-     "dur": 1.6,
-     "ch": "☕",
-     "x": 880,
-     "y": 830
-    },
-    {
      "tipo": "precio",
      "cubrir": {
       "clip": "0001",
@@ -437,6 +422,25 @@
      "precio": "≈ US$1",
      "sub": "por video de 15 s",
      "logo": "googlegemini"
+    },
+    {
+     "tipo": "anuncio",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 308.5,
+      "hasta": 310.0
+     },
+     "logo": "googleads"
+    },
+    {
+     "tipo": "igual",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 318.7,
+      "hasta": 320.35
+     },
+     "texto": "El video de tu anuncio",
+     "sub": "cuesta lo mismo que un café"
     }
    ]
   },

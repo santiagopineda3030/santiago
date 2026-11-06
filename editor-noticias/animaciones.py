@@ -724,6 +724,87 @@ def g_precio(dur, precio="≈ US$1", sub="por video de 15 s", ruta_logo=None):
     return Grafico(dur, (0, 0, W, H), cuadro, "ding")
 
 
+def g_billetes(dur, hasta=3000, titulo="LO QUE PIDEN LAS DISQUERAS"):
+    """Billetes que caen y un contador que sube hasta US$X millones."""
+    import random
+    rnd = random.Random(9)
+    fondo = _fondo_oscuro()
+    bill = emoji("💵", 110)
+    caidas = [(rnd.uniform(150, 930), rnd.uniform(0, 0.8), rnd.uniform(-25, 25)) for _ in range(18)]
+
+    def cuadro(t):
+        a, _ = _entrada_salida(t, dur)
+        im = fondo.copy()
+        _titulo_escena(im, titulo, 450)
+        for x, t0, giro in caidas:
+            k = clamp((t - t0) / 0.9)
+            if 0 < k < 1:
+                pegar_centro(im, bill.rotate(giro * k * 3, expand=True), x, 520 + 820 * ease_in_out(k))
+        v = round(hasta * ease_out(clamp(t / (dur * 0.7))))
+        pegar_centro(im, texto_img(f"US${v:,}".replace(",", "."), 130, ROJO), W / 2, 900)
+        pegar_centro(im, texto_img("MILLONES DE DÓLARES", 58, BLANCO), W / 2, 1030)
+        return con_alfa(im, a)
+
+    return Grafico(dur, (0, 0, W, H), cuadro, "ding")
+
+
+def g_anuncio(dur, ruta_logo=None, titulo="YA ESTÁ EN GOOGLE ADS"):
+    """Panel de campaña de anuncios: el video hecho con IA se sube y se activa."""
+    fondo = _fondo_oscuro()
+    panel = tarjeta(820, 700, relleno=(245, 245, 248, 255), radio=30, borde=(0, 0, 0, 0))
+    if ruta_logo:
+        pegar_centro(panel, logo(ruta_logo, 80, 300), 120, 80)
+    pegar_centro(panel, texto_img("Nueva campaña", 46, TINTA), 470, 80)
+    ok = texto_img("✓ ACTIVA", 50, (20, 150, 70))
+
+    def cuadro(t):
+        a, _ = _entrada_salida(t, dur)
+        im = fondo.copy()
+        _titulo_escena(im, titulo, 450, ROJO)
+        p = panel.copy()
+        d = ImageDraw.Draw(p)
+        k = ease_out(clamp(t / (dur * 0.55)))
+        d.rounded_rectangle((60, 170, 300, 600), 22, fill=(60, 30, 120, 255))
+        d.polygon([(150, 340), (150, 430), (220, 385)], fill=BLANCO + (230,))
+        pegar_centro(p, texto_img("Video con IA · 15 s", 40, TINTA), 560, 230)
+        d.rounded_rectangle((340, 300, 780, 340), 20, fill=(220, 220, 228, 255))
+        d.rounded_rectangle((340, 300, 340 + int(440 * k), 340), 20, fill=ROJO + (255,))
+        pegar_centro(p, texto_img(f"Subiendo {round(100 * k)}%", 36, TINTA, negra=False), 560, 390)
+        kk = ease_out_back(clamp((t - dur * 0.6) / 0.25))
+        if kk > 0:
+            pegar_centro(p, escalar(ok, kk), 560, 520)
+        im.alpha_composite(p, (130, 560))
+        return con_alfa(im, a)
+
+    return Grafico(dur, (0, 0, W, H), cuadro, "pop")
+
+
+def g_igual(dur, izq="☕", der="🎬", texto="El video de tu anuncio", sub="por lo que cuesta un café"):
+    """Dos cosas que valen lo mismo: emoji = emoji, con texto."""
+    fondo = _fondo_oscuro()
+    e1, e2 = emoji(izq, 230), emoji(der, 230)
+    ig = texto_img("=", 150, BLANCO)
+    t1, t2 = texto_ajustado(texto, 64, 840, BLANCO), texto_ajustado(sub, 50, 840, ROJO)
+
+    def cuadro(t):
+        a, _ = _entrada_salida(t, dur)
+        im = fondo.copy()
+        k1, k2, k3 = (ease_out_back(clamp((t - d) / 0.3)) for d in (0.0, 0.2, 0.4))
+        if k1 > 0:
+            pegar_centro(im, escalar(e1, k1), 270, 780)
+        if k2 > 0:
+            pegar_centro(im, escalar(ig, k2), W / 2, 780)
+        if k3 > 0:
+            pegar_centro(im, escalar(e2, k3), 810, 780)
+        kt = ease_out(clamp((t - 0.35) / 0.3))
+        if kt > 0:
+            pegar_centro(im, con_alfa(t1, kt), W / 2, 1050)
+            pegar_centro(im, con_alfa(t2, kt), W / 2, 1140)
+        return con_alfa(im, a)
+
+    return Grafico(dur, (0, 0, W, H), cuadro, "pop")
+
+
 def g_transicion(dur=0.32):
     """Barrido diagonal rojo entre noticias."""
     def cuadro(t):

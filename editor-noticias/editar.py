@@ -333,6 +333,15 @@ def filtro_encuadre(info, zoom):
     return f"{esc}:flags=lanczos,crop={W}:{H}:{x}:(ih-{H})/2,setsar=1,fps={FPS},format=yuv420p"
 
 
+def congelar(pz, dur):
+    """Sostiene el primer/último cuadro bueno (mirando a cámara) mientras sigue el audio."""
+    c0, c1 = pz.get("congelar", (0.0, 0.0))
+    if c0 <= 0 and c1 <= 0:
+        return ""
+    return (f"trim=start={c0:.3f}:end={max(c0 + 0.05, dur - c1):.3f},setpts=PTS-STARTPTS,"
+            f"tpad=start_mode=clone:start_duration={c0:.3f}:stop_mode=clone:stop_duration={c1 + 0.3:.3f},")
+
+
 def render(plan, clips, infos, tmp):
     tmp.mkdir(parents=True, exist_ok=True)
     lista = []
@@ -345,7 +354,7 @@ def render(plan, clips, infos, tmp):
         fade = min(0.02, dur / 4)
         ffmpeg("-ss", f"{pz['ini']:.3f}", "-t", f"{dur + 0.1:.3f}", "-i", str(clips[pz["clip"]]),
                "-map", "0:v:0", "-map", "0:a:0",
-               "-vf", filtro_encuadre(infos[pz["clip"]], pz["zoom"]), "-frames:v", str(n),
+               "-vf", congelar(pz, dur) + filtro_encuadre(infos[pz["clip"]], pz["zoom"]), "-frames:v", str(n),
                "-af", f"aresample=48000,apad,atrim=0:{dur:.6f},afade=t=in:d={fade:.3f},"
                       f"afade=t=out:st={max(0, dur - fade):.4f}:d={fade:.3f}",
                "-ac", "2", "-c:v", "libx264", "-preset", "veryfast", "-crf", "16",

@@ -59,9 +59,10 @@ def tramos_con_voz(a, b, voz, antes=0.04, despues=0.06, unir=0.10):
     return out or [(a, b)]
 
 
-def mirada_mala(m, umbral=1.6):
-    """Tramos (s, e) en que la persona NO mira a la cámara (cabeza girada o mirando las notas)."""
-    ok = [r for r in m if r["cara"]]
+def mirada_mala(m, umbral=1.6, minimo=0.2, rangos=None):
+    """Tramos (s, e) en que la persona NO mira a la cámara (cabeza girada o mirando las notas).
+    La postura "mirando a cámara" es la mediana dentro de los rangos usados (las tomas elegidas)."""
+    ok = [r for r in m if r["cara"] and (not rangos or any(a <= r["t"] <= b for a, b in rangos))]
     Y = float(np.median([r["yaw"] for r in ok]))
     P = float(np.median([r["pitch"] for r in ok]))
     malos, cur = [], None
@@ -74,7 +75,7 @@ def mirada_mala(m, umbral=1.6):
             cur = None
     if cur:
         malos.append(tuple(cur))
-    return [(a, b) for a, b in malos if b - a >= 0.2]
+    return [(a, b) for a, b in malos if b - a >= minimo - 1e-6]
 
 
 def recortar_mirada(tramos, palabras, malos, aire=0.03):
@@ -194,6 +195,12 @@ def construir(g, dur, assets):
         return A.g_carrera(dur, g["a"], g["b"], g["pregunta"])
     if t == "precio":
         return A.g_precio(dur, g["precio"], g["sub"], f"{assets}/logo_{g['logo']}.png" if g.get("logo") else None)
+    if t == "billetes":
+        return A.g_billetes(dur, g.get("hasta", 3000), g.get("titulo", "LO QUE PIDEN LAS DISQUERAS"))
+    if t == "anuncio":
+        return A.g_anuncio(dur, f"{assets}/logo_{g['logo']}.png" if g.get("logo") else None, g.get("titulo", "YA ESTÁ EN GOOGLE ADS"))
+    if t == "igual":
+        return A.g_igual(dur, g.get("izq", "☕"), g.get("der", "🎬"), g["texto"], g["sub"])
     if t == "transicion":
         return A.g_transicion(dur)
     raise ValueError(t)
@@ -208,6 +215,8 @@ def main():
     ap.add_argument("--salida", default="salida")
     ap.add_argument("--nombre", default="v1 1.1 noticias-dia-1.mp4")
     ap.add_argument("--mirada", help="JSON de mirada.py: recorta los bordes donde no se mira a cámara")
+    ap.add_argument("--umbral-mirada", type=float, default=1.0)
+    ap.add_argument("--congelar-max", type=float, default=0.5, help="máx. s de imagen sostenida en cada borde")
     ap.add_argument("--centro-x", type=float, default=0.53)
     a = ap.parse_args()
     editar.CENTRO_X = a.centro_x
@@ -220,7 +229,9 @@ def main():
     trozos = {i: json.loads((Path(a.trozos) / f"{c.stem}.json").read_text()) for i, c in enumerate(clips)}
     print("· Detectando voz en cada clip…", flush=True)
     vad = {i: voz_vad(c) for i, c in enumerate(clips)}
-    mir = mirada_mala(json.loads(Path(a.mirada).read_text())) if a.mirada else None
+    mir_json = json.loads(Path(a.mirada).read_text()) if a.mirada else None
+    rangos = [(c["desde"], c["hasta"]) for s_ in edl["secciones"] for c in s_["cortes"]]
+    mir = mirada_mala(mir_json, a.umbral_mirada, 0.1, rangos) if mir_json else None
     salida = Path(a.salida)
     tmp = salida / "_tmp"
     shutil.rmtree(tmp, ignore_errors=True)
@@ -257,6 +268,20 @@ def main():
                 plan.append(pz)
                 sec["piezas"].append(pz)
                 acum += y - x
+    if mir:
+        for pz in plan:
+            c0 = c1 = 0.0
+            for x, y in mir:
+                if x <= pz["ini"] + 0.05 and y > pz["ini"]:
+                    c0 = max(c0, y - pz["ini"])
+                if y >= pz["fin"] - 0.05 and x < pz["fin"]:
+                    c1 = max(c1, pz["fin"] - x)
+            largo = pz["fin"] - pz["ini"]
+            c0 = c0 if c0 <= a.congelar_max else 0.0
+            c1 = c1 if c1 <= a.congelar_max else 0.0
+            if c0 + c1 < largo - 0.3 and (c0 or c1):
+                pz["congelar"] = (round(c0, 3), round(c1, 3))
+        print(f"· {sum('congelar' in p for p in plan)} bordes con imagen sostenida (mirada)", flush=True)
     print(f"· {len(plan)} piezas · {sum(p['fin'] - p['ini'] for p in plan):.1f} s", flush=True)
 
     # ---------------------------------------------------------------- 2. video base
