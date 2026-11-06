@@ -31,6 +31,7 @@ SIL_DB, SIL_MIN, SIL_MARGEN = -34, 0.16, 0.05
 GRUPO_MAX = 4.0          # cada ~4 s cambia el zoom
 COLA_CTA = 3.0
 SR = 48000
+CLAVES_EXTRA = set()   # palabras clave en rojo que agrega cada EDL ("claves": [...])
 GANANCIA_SFX = {"whoosh": 0.32, "pop": 0.28, "ding": 0.22, "golpe": 0.42, "alerta": 0.22, "teclas": 0.3}
 
 
@@ -81,7 +82,7 @@ def sin_pausas(a, b, sil):
 
 # --------------------------------------------------------------------------- subtítulos (ASS v2)
 def ass_v2(palabras, secciones, gancho, cta, ruta):
-    claves = {"anthropic", "claude", "seti", "google", "gemini", "apple", "siri", "revolut", "ia", "ias", "uber"}
+    claves = {"anthropic", "claude", "seti", "google", "gemini", "apple", "siri", "revolut", "ia", "ias", "uber"} | CLAVES_EXTRA
     grupos, actual = [], []
     for i, w in enumerate(palabras):
         actual.append(w)
@@ -162,6 +163,7 @@ def main():
     editar.CENTRO_X = a.centro_x
 
     edl = json.loads(Path(a.edl).read_text(encoding="utf-8"))
+    CLAVES_EXTRA.update(normalizar(c) for c in edl.get("claves", []))
     clips = sorted(p for p in Path(a.videos).iterdir() if p.suffix.lower() == ".mp4")
     cod = {re.search(r"_(\d{4})_", c.name).group(1): i for i, c in enumerate(clips)}
     infos = [probar(c) for c in clips]

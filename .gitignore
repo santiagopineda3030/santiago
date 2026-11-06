@@ -5,3 +5,7 @@ dist
 .env
 __pycache__/
 *.pyc
+editor-noticias/crudos*/
+editor-noticias/salida*/
+editor-noticias/*.log
+editor-noticias/assets-v2/*.svg
