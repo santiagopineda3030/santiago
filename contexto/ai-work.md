@@ -136,4 +136,15 @@ Meta: todo listo para captar leads el 18 de noviembre de 2026.
 | Garantía | Acompañamiento hasta que el Cerebro publique solo **30 días seguidos** |
 | Herramientas que paga el cliente | **Solo Claude, $20–100/mes** (Drive, Sheets y Apps Script gratis) |
 | Bono | **Análisis de la cuenta y opciones de mejora** |
-| Quién monta el Cerebro | **PENDIENTE**: Santi va a explicar cómo queda (dijo "la instalación sería de ellos", ~1 semana si son juiciosos) |
+| Quién monta el Cerebro | **El cliente lo instala** con guía (~1 semana): nosotros entregamos plantillas de Drive + curso en Skool + clase 1 a 1 + 2 sesiones/semana por 2 meses |
+
+## Modelo de venta y entrega (definido por Santi, 6 nov 2026)
+1. Lead → **setter** (agenda/califica) → **closer** (llamada de venta).
+2. Tras la compra: **clase 1 a 1 de 20–30 min** explicando el modelo y cómo funciona.
+3. Acceso a **Skool** con el curso: cómo montar todo el proceso paso a paso.
+4. Entrega de **carpetas de Drive plantilla**, cada una con lo que debe tener: código (Apps Script), edición, hoja (Sheet)…
+   El cliente monta y organiza; si hace falta pega el Apps Script (se va definiendo).
+5. **2 sesiones en vivo por semana durante 2 meses** para dudas + garantía (acompañamiento hasta 30 días publicando solo).
+- Nota: antes Skool estaba "descartado" como oferta aparte; ahora es solo la **plataforma de entrega** del curso.
+- Pendiente después: que no dupliquen ni compartan el Drive → plan en `licencias.md`.
+- Por definir: contenido exacto del Skool (módulos) y de cada carpeta de Drive plantilla.
