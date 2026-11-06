@@ -27,9 +27,20 @@ con los videos de Santi para dejarlo estable y venderlo. Clase 1 a 1: la da Sant
 6. **Problemas comunes**: token vencido, video privado en YouTube, errores en la hoja.
 7. **Bono**: análisis de la cuenta y opciones de mejora.
 
+## Tracker de alumnos (pedido de Santi, 6 nov)
+- Cada módulo de Skool trae **tareas**. El tracker registra quién hizo qué y cuándo (ej. "Pepito hizo las tareas del módulo 1 el sábado").
+- Con esos datos se hace un **análisis por alumno** que se le entrega en la llamada semanal.
+- Por definir: si sale de Skool (exportar o API) o de un Google Form por tarea → hoja "Tracker de alumnos".
+
+## Después del 18 nov (no ahora)
+- Método de pago de los $2.500 (aún no hay: Wompi, Mercado Pago, Stripe, PayPal, Hotmart…).
+- Setter y closer: por ahora Santi hace todo.
+
 ## Por hacer antes del 18 nov
 - [ ] Pruebas diarias: v3, v4… publicando solos en IG + YouTube (+ TikTok cuando esté).
 - [ ] Crear la comunidad de Skool (Santi aún no la tiene).
 - [ ] Versión "plantilla" de cada carpeta, sin datos de Santi (como la de Juanita).
 - [ ] Grabar los módulos.
 - [ ] Protección contra duplicar/compartir (`licencias.md`).
+- [ ] **Tracker de alumnos** (tareas por módulo + análisis para la llamada semanal).
+- [ ] **Landing:** mejoras y subirla (la web existe en `src/`); grabar el **video gratis** que va en la página → agendar llamada.

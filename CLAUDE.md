@@ -127,7 +127,8 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
 3. **Meta Ads** (chat 📁 Anuncios (Meta)).
 4. **Recordarle a Santi al terminar Meta Ads:** terminar los **guiones de YouTube** (yt1 largo, clase gratis) en 📁 YouTube y
    arrancar el **curso** (módulos grabados) y la parte técnica para vender y publicitar.
-5. Revisión final de página, oferta y código antes del 18 nov.
+5. **Producto** (`contexto/producto.md`): Skool (crear), carpetas plantilla, tracker de alumnos, landing + video gratis.
+6. Revisión final de página, oferta y código antes del 18 nov. Pago, setter y closer: después del 18.
 
 1. Confirmar la primera publicación automática real (Instagram ya conectado e instalado).
 2. YouTube Shorts: **funcionando** (canal @santimediayt, probado 5 nov). Sale con la misma aprobación de IG.
