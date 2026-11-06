@@ -5,7 +5,7 @@ description: Edita los videos que Santi subió a "Edición de videos › 1. Vide
 
 # Editar y programar un video (en frío → terminado → programado)
 
-Español, frases cortas (Santi suele estar en el iPad). Espera su OK donde dice **[OK]**.
+Español, frases cortas (Santi trabaja desde el PC). Espera su OK donde dice **[OK]**.
 Un solo video sirve para **Instagram, TikTok y YouTube Shorts**. IDs en `areas/5-edicion-videos/CLAUDE.md`.
 
 1. **Buscar:** listar `1. Videos en frío` (archivos nuevos). Con el código (v<N>) o la fecha, encontrar la fila en la hoja

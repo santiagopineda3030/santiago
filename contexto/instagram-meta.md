@@ -30,7 +30,7 @@
 Si Meta responde error 190, el token venció o es inválido: repetir 3–5.
 
 ## Lecciones de la conexión
-- Santiago trabaja en iPad: al copiar código, que use el botón de copiar del bloque (una vez se pegó el texto del
+- (Antes, en iPad) al copiar código, que use el botón de copiar del bloque (una vez se pegó el texto del
   chat dentro de Code.gs y dio "SyntaxError: Unexpected identifier 'está'").
 - Pedir capturas tapando tokens y claves. Nunca pedir el token por el chat.
 - Cuando pide "el código completo", darlo entero en un solo bloque, listo para reemplazar todo.
