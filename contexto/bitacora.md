@@ -42,3 +42,4 @@
 - 5 nov 2026 · noche · Chat 📁 Edición de videos creado (session_01McnvqvgdvcfNzme6m5dsJP, area:edicion).
 - 5 nov 2026 · noche · LÉEME en Drive › Edición de videos y presentación pedida al chat 📁 Edición de videos.
 - 6 nov 2026 · 📁 Edición de videos: v2 1.0 (noticias 5 nov) editado con editor-noticias (edl-v2.json, 75 s, −14 LUFS, 27 MB). Enviado a Santi para revisar. Crudo abierto con enlace para bajarlo: Santi debe volverlo a Restringido.
+- 6 nov 2026 · v2 1.1: pedido de Santi → cortes sin mirar las notas (nuevo mirada.py con YuNet: recorta bordes y tapa con escenas), 6 escenas a pantalla completa (hacker, fuga, versus, lluvia de demandas, carrera, precio), gráficos dentro de la zona segura (x 120–960, y 250–1500), subtítulos más arriba, cola del CTA mirando a cámara.

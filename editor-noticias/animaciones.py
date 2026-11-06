@@ -514,6 +514,216 @@ def g_ia_crea_ia(dur, titulo="IA creando mejores IA"):
     return Grafico(dur, (0, 0, W, H), cuadro, "whoosh")
 
 
+# --------------------------------------------------------------------------- escenas a pantalla completa (v2)
+# Todo el contenido dentro de la zona segura de Instagram: x 120–960, y 250–1500.
+def _titulo_escena(im, texto, y=330, color=BLANCO):
+    y = max(y, 450)  # debajo del título de la noticia (y ≈ 250–380)
+    pegar_centro(im, texto_ajustado(texto, 60, 820, color), W / 2, y)
+
+
+def g_hacker(dur, total=81, etiqueta="fallas graves encontradas", titulo="IA HACKER DE OPENAI", ruta_logo=None):
+    """Terminal que escribe código solo y va marcando fallas en rojo; contador que sube."""
+    import random
+    rnd = random.Random(4)
+    fondo = _fondo_oscuro()
+    trozos = ["scan(target)", "for f in files:", "  check(f)", "exploit?", "buffer_overflow", "auth.bypass()",
+              "0x7ffe3a91", "if leak:", "  report()", "sandbox.escape", "parse(input)", "heap.alloc(4096)"]
+    lineas = [(rnd.choice(trozos), rnd.random() < 0.3) for _ in range(14)]
+    term = tarjeta(820, 540, relleno=(8, 12, 10, 255), radio=28, borde=(255, 255, 255, 70))
+    lg = logo_blanco(ruta_logo, 90, 300) if ruta_logo else None
+    f = fuente(34, negra=False)
+
+    def cuadro(t):
+        a, _ = _entrada_salida(t, dur)
+        im = fondo.copy()
+        _titulo_escena(im, titulo, 330, ROJO)
+        tm = term.copy()
+        d = ImageDraw.Draw(tm)
+        visibles = int(clamp(t / (dur * 0.75)) * len(lineas)) + 1
+        y0 = 40
+        for i, (txt, falla) in enumerate(lineas[:visibles][-10:]):
+            col = (90, 255, 140, 255)
+            if falla:
+                d.rounded_rectangle((24, y0 + i * 48 - 6, 796, y0 + i * 48 + 40), 8, fill=(150, 14, 14, 255))
+                col = BLANCO + (255,)
+                txt = "⚠ FALLA · " + txt
+            d.text((40, y0 + i * 48), "> " + txt, font=f, fill=col)
+        im.alpha_composite(tm, (130, 540))
+        k = ease_out(clamp(t / (dur * 0.8)))
+        n = texto_img(f"{round(total * k)}", 150, ROJO)
+        pegar_centro(im, n, W / 2, 1180)
+        pegar_centro(im, texto_ajustado(etiqueta, 44, 820, BLANCO, negra=False), W / 2, 1295)
+        return con_alfa(im, a)
+
+    return Grafico(dur, (0, 0, W, H), cuadro, "teclas")
+
+
+def g_fuga(dur, logo_a, logo_b, n=3, texto="3 salidas en dos semanas", titulo="EL EQUIPO DE CLAUDE CODE"):
+    """Personas que se pasan de una empresa a otra, una por una."""
+    fondo = _fondo_oscuro()
+    ca = tarjeta(300, 220, relleno=(255, 255, 255, 250), borde=(0, 0, 0, 0))
+    pegar_centro(ca, logo(logo_a, 110, 240), 150, 110)
+    cb = tarjeta(300, 220, relleno=(255, 255, 255, 250), borde=(0, 0, 0, 0))
+    pegar_centro(cb, logo(logo_b, 110, 240), 150, 110)
+    per = emoji("🧑‍💻", 120)
+    xa, xb, y = 280, 800, 820
+
+    def cuadro(t):
+        a, _ = _entrada_salida(t, dur)
+        im = fondo.copy()
+        _titulo_escena(im, titulo, 360)
+        pegar_centro(im, ca, xa, y)
+        pegar_centro(im, cb, xb, y)
+        llegadas = 0
+        for i in range(n):
+            k = ease_in_out(clamp((t - 0.25 - i * (dur - 0.9) / n) / 0.55))
+            if k >= 1:
+                llegadas += 1
+            x = xa + (xb - xa) * k
+            yy = y + 230 - math.sin(math.pi * k) * 200
+            pegar_centro(im, per, x + (i - (n - 1) / 2) * 95 * k, yy)
+        cont = texto_img(f"{llegadas}", 130, ROJO)
+        pegar_centro(im, cont, W / 2, 1200)
+        pegar_centro(im, texto_ajustado(texto, 46, 820, BLANCO, negra=False), W / 2, 1320)
+        d = ImageDraw.Draw(im)
+        d.line((xa + 170, y, xb - 170, y), fill=(255, 255, 255, 90), width=6)
+        d.polygon([(xb - 170, y), (xb - 195, y - 16), (xb - 195, y + 16)], fill=(255, 255, 255, 140))
+        return con_alfa(im, a)
+
+    return Grafico(dur, (0, 0, W, H), cuadro, "whoosh")
+
+
+def g_versus(dur, izq, der, sello, titulo="DEMANDA"):
+    """Dos partes enfrentadas y un sello que cae al final. izq/der = (texto, ruta_logo o None, emoji o None)."""
+    fondo = _fondo_oscuro()
+
+    def panel(txt, lg, ch, rojo):
+        c = tarjeta(360, 420, relleno=(150, 14, 14, 255) if rojo else (28, 28, 34, 255), borde=(255, 255, 255, 70))
+        if lg:
+            pegar_centro(c, logo_blanco(lg, 110, 280), 180, 160)
+        elif ch:
+            pegar_centro(c, emoji(ch, 150), 180, 160)
+        pegar_centro(c, texto_ajustado(txt, 46, 320, BLANCO), 180, 330)
+        return c
+
+    p1, p2 = panel(*izq, True), panel(*der, False)
+    vs = texto_img("VS", 100, BLANCO)
+    st = texto_img(sello, 74, BLANCO)
+    sl = tarjeta(st.width + 70, st.height + 50, relleno=ROJO + (255,), radio=18, borde=(255, 255, 255, 230))
+    pegar_centro(sl, st, sl.width / 2, sl.height / 2)
+    sl = sl.rotate(-6, resample=Image.BICUBIC, expand=True)
+    mazo = emoji("⚖️", 150)
+
+    def cuadro(t):
+        a, _ = _entrada_salida(t, dur)
+        im = fondo.copy()
+        _titulo_escena(im, titulo, 340)
+        k1, k2 = ease_out(clamp(t / 0.35)), ease_out(clamp((t - 0.15) / 0.35))
+        im.alpha_composite(p1, (int(-360 + (130 + 360) * k1), 560))
+        im.alpha_composite(p2, (int(W + (W - 130 - 360 - W) * k2), 560))
+        kv = ease_out_back(clamp((t - 0.4) / 0.25))
+        if kv > 0:
+            pegar_centro(im, escalar(vs, kv), W / 2, 770)
+        ks = clamp((t - dur * 0.45) / 0.18)
+        if ks > 0:
+            s = 2.2 - 1.2 * ease_out(ks)
+            pegar_centro(im, con_alfa(escalar(sl, s), ks), W / 2, 1100)
+            pegar_centro(im, mazo, W / 2, 1280)
+        return con_alfa(im, a)
+
+    return Grafico(dur, (0, 0, W, H), cuadro, "golpe")
+
+
+def g_lluvia(dur, total=164, etiqueta="demandas por derechos de autor", titulo="DEMANDAS CONTRA LA IA"):
+    """Cuadrícula de documentos que se van llenando de rojo hasta el total."""
+    fondo = _fondo_oscuro()
+    cols, filas = 14, 12
+    ox, oy, paso = 150, 530, 54
+
+    def cuadro(t):
+        a, _ = _entrada_salida(t, dur)
+        im = fondo.copy()
+        _titulo_escena(im, titulo, 360)
+        d = ImageDraw.Draw(im)
+        k = ease_out(clamp(t / (dur * 0.75)))
+        n = round(total * k)
+        for i in range(cols * filas):
+            x, y = ox + (i % cols) * paso, oy + (i // cols) * paso
+            if i < n:
+                d.rounded_rectangle((x, y, x + 40, y + 48), 6, fill=ROJO + (255,))
+                d.line((x + 8, y + 16, x + 32, y + 16), fill=BLANCO + (220,), width=3)
+                d.line((x + 8, y + 28, x + 28, y + 28), fill=BLANCO + (220,), width=3)
+            elif i < total:
+                d.rounded_rectangle((x, y, x + 40, y + 48), 6, outline=(255, 255, 255, 60), width=2)
+        pegar_centro(im, texto_img(f"{n}", 150, BLANCO), W / 2, 1220)
+        pegar_centro(im, texto_ajustado(etiqueta, 44, 820, BLANCO, negra=False), W / 2, 1320)
+        return con_alfa(im, a)
+
+    return Grafico(dur, (0, 0, W, H), cuadro, "teclas")
+
+
+def g_carrera(dur, a_txt="Claude", b_txt="ChatGPT", pregunta="¿Claude se queda atrás?"):
+    """Dos barras que compiten; la de b se adelanta y aparece la pregunta."""
+    fondo = _fondo_oscuro()
+    la, lb = texto_img(a_txt, 54, BLANCO), texto_img(b_txt, 54, BLANCO)
+    q = texto_ajustado(pregunta, 66, 840, BLANCO)
+    ch = emoji("🤔", 160)
+
+    def cuadro(t):
+        al, _ = _entrada_salida(t, dur)
+        im = fondo.copy()
+        _titulo_escena(im, "LA CARRERA DE LA IA", 360, ROJO)
+        d = ImageDraw.Draw(im)
+        k = ease_out(clamp(t / (dur * 0.7)))
+        for i, (lab, final, col) in enumerate(((la, 0.55, (90, 90, 104, 255)), (lb, 0.92, ROJO + (255,)))):
+            y = 620 + i * 230
+            im.alpha_composite(lab, (140, y - 70))
+            d.rounded_rectangle((140, y, 940, y + 90), 45, fill=(40, 40, 48, 255))
+            d.rounded_rectangle((140, y, 140 + max(90, int(800 * final * k)), y + 90), 45, fill=col)
+        kq = ease_out_back(clamp((t - dur * 0.55) / 0.3))
+        if kq > 0:
+            pegar_centro(im, escalar(q, kq), W / 2, 1150)
+            pegar_centro(im, escalar(ch, kq), W / 2, 1290)
+        return con_alfa(im, al)
+
+    return Grafico(dur, (0, 0, W, H), cuadro, "whoosh")
+
+
+def g_precio(dur, precio="≈ US$1", sub="por video de 15 s", ruta_logo=None):
+    """Un celular con un video vertical que se reproduce, y el precio comparado con un café."""
+    fondo = _fondo_oscuro()
+    tel = tarjeta(330, 600, relleno=(20, 20, 26, 255), radio=46, borde=(255, 255, 255, 160))
+    lg = logo_blanco(ruta_logo, 70, 260) if ruta_logo else None
+    cafe = emoji("☕", 130)
+    pr = texto_img(precio, 96, ROJO)
+    sb = texto_ajustado(sub, 42, 460, BLANCO, negra=False)
+
+    def cuadro(t):
+        a, _ = _entrada_salida(t, dur)
+        im = fondo.copy()
+        _titulo_escena(im, "VIDEOS CON IA", 340)
+        if lg:
+            pegar_centro(im, lg, W / 2, 540)
+        tm = tel.copy()
+        d = ImageDraw.Draw(tm)
+        d.rounded_rectangle((22, 60, 308, 540), 22, fill=(60, 30, 120, 255))
+        d.polygon([(135, 250), (135, 350), (215, 300)], fill=BLANCO + (230,))
+        d.rounded_rectangle((40, 515, 40 + int(250 * clamp(t / dur)), 525), 5, fill=ROJO + (255,))
+        k = ease_out_back(clamp(t / 0.35))
+        pegar_centro(im, escalar(tm, 0.6 + 0.4 * k), 330, 860)
+        kp = ease_out_back(clamp((t - 0.35) / 0.3))
+        if kp > 0:
+            pegar_centro(im, escalar(pr, kp), 740, 760)
+            pegar_centro(im, escalar(sb, kp), 740, 850)
+        kc = ease_out_back(clamp((t - 0.7) / 0.3))
+        if kc > 0:
+            pegar_centro(im, escalar(texto_img("=", 90, BLANCO), kc), 640, 1010)
+            pegar_centro(im, escalar(cafe, kc), 780, 1010)
+        return con_alfa(im, a)
+
+    return Grafico(dur, (0, 0, W, H), cuadro, "ding")
+
+
 def g_transicion(dur=0.32):
     """Barrido diagonal rojo entre noticias."""
     def cuadro(t):

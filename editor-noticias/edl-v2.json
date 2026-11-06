@@ -1,5 +1,5 @@
 {
- "nota": "v2 1.0: Noticias IA del 5 nov. Tomas elegidas de un solo crudo (última toma buena).",
+ "nota": "v2 1.1: cortes sin mirar las notas (mirada.py), 6 escenas a pantalla completa, zona segura.",
  "gancho_texto": "OpenAI creó una IA hacker",
  "cta": "Sígueme para no perderte ninguna",
  "cta_emoji": "🔔",
@@ -51,7 +51,7 @@
      "dur": 2.4,
      "logo": "openai",
      "texto": "creó una IA hacker",
-     "y": 175
+     "y": 760
     },
     {
      "tipo": "emoji",
@@ -68,7 +68,8 @@
      "dur": 2.2,
      "antes": "ANTHROPIC",
      "despues": "OPENAI",
-     "ch": "🚪"
+     "ch": "🚪",
+     "y": 760
     },
     {
      "tipo": "texto",
@@ -115,20 +116,16 @@
    ],
    "graficos": [
     {
-     "tipo": "logo",
-     "en": "OpenAI",
-     "dur": 2.0,
-     "logo": "openai",
-     "texto": "GPT-6 Cyber",
-     "y": 600
-    },
-    {
-     "tipo": "emoji",
-     "en": "hacker",
-     "dur": 1.3,
-     "ch": "👨‍💻",
-     "x": 880,
-     "y": 840
+     "tipo": "hacker",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 55.1,
+      "hasta": 57.2
+     },
+     "total": 81,
+     "etiqueta": "fallas graves en Firefox",
+     "titulo": "IA HACKER DE OPENAI",
+     "logo": "openai"
     },
     {
      "tipo": "logo",
@@ -206,24 +203,26 @@
      "ch": "🚪"
     },
     {
-     "tipo": "texto",
+     "tipo": "fuga",
      "en": "tercera",
-     "offset": -0.1,
-     "dur": 2.4,
-     "lineas": [
-      "3 SALIDAS",
-      "en dos semanas"
-     ],
-     "ch": "🏃"
+     "offset": -0.3,
+     "dur": 2.6,
+     "de": "anthropic",
+     "a": "openai",
+     "texto": "3 salidas en dos semanas",
+     "titulo": "EL EQUIPO DE CLAUDE CODE",
+     "personas": 3
     },
     {
-     "tipo": "emoji",
-     "en": "ChatGPT",
-     "offset": -0.3,
-     "dur": 1.6,
-     "ch": "🤔",
-     "x": 880,
-     "y": 830
+     "tipo": "carrera",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 146.45,
+      "hasta": 148.45
+     },
+     "a": "Claude",
+     "b": "ChatGPT",
+     "pregunta": "¿Claude se queda atrás?"
     }
    ]
   },
@@ -253,16 +252,23 @@
    ],
    "graficos": [
     {
-     "tipo": "texto",
-     "en": "Universal",
-     "offset": -0.1,
-     "dur": 2.2,
-     "lineas": [
-      "UNIVERSAL MUSIC",
-      "+ 2 disqueras"
+     "tipo": "versus",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 184.05,
+      "hasta": 186.4
+     },
+     "izq": [
+      "Universal Music + 2",
+      null,
+      "🎵"
      ],
-     "ch": "🎵",
-     "y": 600
+     "der": [
+      "Anthropic",
+      "anthropic"
+     ],
+     "sello": "US$3.000 MILLONES",
+     "titulo": "DISQUERAS VS. ANTHROPIC"
     },
     {
      "tipo": "sello",
@@ -333,22 +339,23 @@
      "y": 840
     },
     {
-     "tipo": "contador",
-     "en": "164",
-     "offset": -0.2,
-     "dur": 2.6,
-     "desde": 0,
-     "hasta": 164,
-     "formato": "{v:.0f}",
-     "etiqueta": "demandas contra la IA"
-    },
-    {
      "tipo": "logo",
      "en": "Musk",
      "offset": -0.6,
      "dur": 2.0,
      "logo": "x",
      "texto": "la empresa de IA de Elon Musk"
+    },
+    {
+     "tipo": "lluvia",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 234.55,
+      "hasta": 236.8
+     },
+     "total": 164,
+     "etiqueta": "demandas por derechos de autor",
+     "titulo": "DEMANDAS CONTRA LA IA"
     }
    ]
   },
@@ -404,17 +411,6 @@
      "ch": "📱"
     },
     {
-     "tipo": "texto",
-     "en": "dólar",
-     "offset": -0.4,
-     "dur": 1.8,
-     "lineas": [
-      "≈ US$1",
-      "por video"
-     ],
-     "ch": "💵"
-    },
-    {
      "tipo": "logo",
      "en": "Ads",
      "offset": -0.5,
@@ -430,6 +426,17 @@
      "ch": "☕",
      "x": 880,
      "y": 830
+    },
+    {
+     "tipo": "precio",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 295.7,
+      "hasta": 297.6
+     },
+     "precio": "≈ US$1",
+     "sub": "por video de 15 s",
+     "logo": "googlegemini"
     }
    ]
   },

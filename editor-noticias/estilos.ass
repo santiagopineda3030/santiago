@@ -7,7 +7,7 @@ ScaledBorderAndShadow: yes
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Sub,Inter Black,92,&H00FFFFFF,&H00FFFFFF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,7,0,2,80,80,400,1
+Style: Sub,Inter Black,86,&H00FFFFFF,&H00FFFFFF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,7,0,2,120,120,440,1
 Style: Titulo,Inter Black,62,&H00FFFFFF,&H00FFFFFF,&H002020E0,&H002020E0,0,0,0,0,100,100,1,0,3,18,0,8,80,80,250,1
 Style: Gancho,Inter Black,104,&H00FFFFFF,&H00FFFFFF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,9,0,8,70,70,330,1
 Style: CTA,Inter Black,72,&H00FFFFFF,&H00FFFFFF,&H002020E0,&H002020E0,0,0,0,0,100,100,0,0,3,22,0,8,90,90,380,1

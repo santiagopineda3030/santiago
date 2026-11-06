@@ -59,6 +59,41 @@ def tramos_con_voz(a, b, voz, antes=0.04, despues=0.06, unir=0.10):
     return out or [(a, b)]
 
 
+def mirada_mala(m, umbral=1.6):
+    """Tramos (s, e) en que la persona NO mira a la cámara (cabeza girada o mirando las notas)."""
+    ok = [r for r in m if r["cara"]]
+    Y = float(np.median([r["yaw"] for r in ok]))
+    P = float(np.median([r["pitch"] for r in ok]))
+    malos, cur = [], None
+    for r in m:
+        mal = (not r["cara"]) or max(abs(r["yaw"] - Y) / 0.12, abs(r["pitch"] - P) / 0.10) >= umbral
+        if mal:
+            cur = [r["t"], r["t"] + 0.1] if cur is None else [cur[0], r["t"] + 0.1]
+        elif cur:
+            malos.append(tuple(cur))
+            cur = None
+    if cur:
+        malos.append(tuple(cur))
+    return [(a, b) for a, b in malos if b - a >= 0.2]
+
+
+def recortar_mirada(tramos, palabras, malos, aire=0.03):
+    """Quita de los bordes de cada tramo los momentos en que no mira a cámara, sin comerse palabras."""
+    out = []
+    for x, y in tramos:
+        ws = [w for w in palabras if w["e"] > x and w["s"] < y]
+        p0 = min((w["s"] for w in ws), default=y)
+        p1 = max((w["e"] for w in ws), default=x)
+        for a, b in malos:
+            if a <= x + 0.05 and b > x:      # mira a otro lado al empezar
+                x = min(max(x, b), max(x, p0 - aire))
+            if b >= y - 0.05 and a < y:      # mira a otro lado al terminar
+                y = max(min(y, a), min(y, p1 + aire))
+        if y - x > 0.08:
+            out.append((x, y))
+    return out or tramos
+
+
 def silencios(clip):
     err = subprocess.run(["ffmpeg", "-hide_banner", "-i", str(clip), "-vn", "-af",
                           f"silencedetect=noise={SIL_DB}dB:d={SIL_MIN}", "-f", "null", "-"],
@@ -145,6 +180,20 @@ def construir(g, dur, assets):
                                dur, f"{assets}/logo_uber.png")
     if t == "iaia":
         return A.g_ia_crea_ia(dur)
+    if t == "hacker":
+        return A.g_hacker(dur, g.get("total", 81), g.get("etiqueta", "fallas graves encontradas"), g.get("titulo", "IA HACKER"),
+                          f"{assets}/logo_{g['logo']}.png" if g.get("logo") else None)
+    if t == "fuga":
+        return A.g_fuga(dur, f"{assets}/logo_{g['de']}.png", f"{assets}/logo_{g['a']}.png", g.get("personas", 3), g["texto"], g["titulo"])
+    if t == "versus":
+        lado = lambda l: (l[0], f"{assets}/logo_{l[1]}.png" if l[1] else None, l[2] if len(l) > 2 else None)
+        return A.g_versus(dur, lado(g["izq"]), lado(g["der"]), g["sello"], g.get("titulo", "DEMANDA"))
+    if t == "lluvia":
+        return A.g_lluvia(dur, g["total"], g["etiqueta"], g["titulo"])
+    if t == "carrera":
+        return A.g_carrera(dur, g["a"], g["b"], g["pregunta"])
+    if t == "precio":
+        return A.g_precio(dur, g["precio"], g["sub"], f"{assets}/logo_{g['logo']}.png" if g.get("logo") else None)
     if t == "transicion":
         return A.g_transicion(dur)
     raise ValueError(t)
@@ -158,6 +207,7 @@ def main():
     ap.add_argument("--assets", required=True)
     ap.add_argument("--salida", default="salida")
     ap.add_argument("--nombre", default="v1 1.1 noticias-dia-1.mp4")
+    ap.add_argument("--mirada", help="JSON de mirada.py: recorta los bordes donde no se mira a cámara")
     ap.add_argument("--centro-x", type=float, default=0.53)
     a = ap.parse_args()
     editar.CENTRO_X = a.centro_x
@@ -170,6 +220,7 @@ def main():
     trozos = {i: json.loads((Path(a.trozos) / f"{c.stem}.json").read_text()) for i, c in enumerate(clips)}
     print("· Detectando voz en cada clip…", flush=True)
     vad = {i: voz_vad(c) for i, c in enumerate(clips)}
+    mir = mirada_mala(json.loads(Path(a.mirada).read_text())) if a.mirada else None
     salida = Path(a.salida)
     tmp = salida / "_tmp"
     shutil.rmtree(tmp, ignore_errors=True)
@@ -188,6 +239,8 @@ def main():
             ws = alinear(c["texto"], palabras_de(trozos[ci], c["desde"], c["hasta"]), c["desde"], c["hasta"])
             acum, zoom = 0.0, 1.0 if k == 0 else zooms[len(plan) % len(zooms)]
             tramos = tramos_con_voz(ini, fin, vad[ci])
+            if mir is not None:
+                tramos = recortar_mirada(tramos, palabras_de(trozos[ci], c["desde"], c["hasta"]), mir)
             # cada palabra va al tramo más cercano (ninguna se pierde) y se ajusta a sus bordes
             asignadas = {i: [] for i in range(len(tramos))}
             for w in ws:
@@ -209,8 +262,14 @@ def main():
     # ---------------------------------------------------------------- 2. video base
     base = editar.render(plan, clips, infos, tmp / "piezas")
     base_cola = tmp / "base_cola.mov"
-    ffmpeg("-i", str(base), "-vf", f"tpad=stop_mode=clone:stop_duration={COLA_CTA}",
-           "-af", f"apad=pad_dur={COLA_CTA}", "-c:v", "libx264", "-preset", "veryfast", "-crf", "14",
+    # cola del CTA: congela un cuadro de ~0,35 s antes del final (mirando a cámara), no el último
+    total_base = sum(p["dur_real"] for p in plan)
+    foto = tmp / "cola.png"
+    ffmpeg("-ss", f"{max(0, total_base - 0.35):.3f}", "-i", str(base), "-frames:v", "1", str(foto))
+    ffmpeg("-i", str(base), "-loop", "1", "-t", f"{COLA_CTA}", "-framerate", str(editar.FPS), "-i", str(foto),
+           "-f", "lavfi", "-t", f"{COLA_CTA}", "-i", "anullsrc=r=48000:cl=stereo",
+           "-filter_complex", "[1:v]format=yuv420p,setsar=1[f];[0:v][0:a][f][2:a]concat=n=2:v=1:a=1[v][a]",
+           "-map", "[v]", "-map", "[a]", "-c:v", "libx264", "-preset", "veryfast", "-crf", "14",
            "-c:a", "pcm_s16le", str(base_cola))
 
     # ---------------------------------------------------------------- 3. línea de tiempo
@@ -256,6 +315,12 @@ def main():
     for i, (t0, dur, g) in enumerate(sorted(eventos, key=lambda e: e[0])):
         t0 = max(0.0, t0)
         gr = construir(g, dur, a.assets)
+        x, y, w, h = gr.caja
+        if w < A.W:  # no es pantalla completa → dentro de la zona segura de Instagram
+            m = 0.12  # las cajas traen margen transparente alrededor del dibujo
+            x = int(min(max(x, 120 - w * m), 960 - w * (1 - m)))
+            y = int(min(max(y, 250 - h * m), 1500 - h * (1 - m)))
+            gr.caja = (x, y, w, h)
         ruta = gr.render(tmp / f"graf_{i:02d}.mov")
         graficos.append((t0, gr.caja, ruta))
         if gr.sonido:
