@@ -119,7 +119,7 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
 
 ## Hoja de ruta día por día hasta el 18 de nov 2026 (acordada con Santi, 6 nov) · TODO automatizado
 Flujo: Santi sube crudos a "Videos en frío" → Claude edita, sube, organiza hoja y calendario → publica solo → Claude da ideas de guiones.
-Hecho: estudio de mercado (`estudio-de-mercado.md`), oferta (`ai-work.md`), producto (`producto.md`), nombre de marca (ContentIA).
+Plan maestro (doc): https://claude.ai/artifact/PnzCmT7dUjbUxnE5Qtg7r1 · Hecho: estudio de mercado (`estudio-de-mercado.md`), oferta (`ai-work.md`), producto (`producto.md`), nombre de marca (ContentIA).
 **Todos los días:** prueba automática de las 11:00 (IG + YouTube, luego TikTok) y revisar el guion de las 4:35.
 | Día | Qué |
 |---|---|

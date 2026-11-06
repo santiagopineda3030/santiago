@@ -10,6 +10,7 @@
 - Estudio de mercado rehecho con datos hispanohablantes (pestaña 1 nueva; pestaña 2 avatar y oferta con datos LatAm). Resumen en `estudio-de-mercado.md`.
 - Estudio de mercado CERRADO: competencia en español + conclusión en el doc. Encuesta como Apps Script (`google-apps-script/encuesta/`).
 - Encuesta a dueños creada en Google Forms (`1CVQwGceqYQo_EoAcjVO-zFKJadF3MuOXo-EkOg1lvAg`). Falta mandarla a 10–20 dueños.
+- Plan maestro "AI Work — vamos por esos 10k" (https://claude.ai/artifact/PnzCmT7dUjbUxnE5Qtg7r1) actualizado: oferta cerrada, modelo de entrega (clase 1 a 1, Skool, plantillas, tracker) y plan día por día al 18 nov.
 - Santi ahora trabaja desde el PC (no iPad). Memoria actualizada.
 - Calendar 6 nov: borrado el evento de plan "📰 Noticias IA · Video 2" (quedaba doble con el ✅ Publicado). Code.gs y YouTube.gs enviados a Santi como archivo para pegarlos en Apps Script.
 
