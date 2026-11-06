@@ -5,6 +5,7 @@
 - Limpieza: idea (3 copias) y guiones terminados del v2 (IG/TikTok/YouTube) a la papelera. Copias: `drive-respaldo/guiones/v2-idea.md` y `v2-noticias-ia-5-nov.md`.
 - Código de publicación arreglado (IG no salió por pasarse de 6 min). Detalle: `instagram-meta.md`. Falta que Santi lo pegue en Apps Script.
 - Santi ahora trabaja desde el PC (no iPad). Memoria actualizada.
+- Calendar 6 nov: borrado el evento de plan "📰 Noticias IA · Video 2" (quedaba doble con el ✅ Publicado). Code.gs y YouTube.gs enviados a Santi como archivo para pegarlos en Apps Script.
 
 ## 6 nov 2026 · Plan del día (lo dejó Santi al cerrar el 5 nov)
 1. **Publicar v2 1.3 en Instagram y YouTube Shorts a las 11:00.** Falta que el MP4 `v2 1.3 noticias-5-nov.mp4` esté en
