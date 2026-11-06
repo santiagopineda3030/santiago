@@ -11,7 +11,7 @@ funcionando con ese mismo sistema.
 
 - **Público:** dueños de negocio y empresarios de cualquier sector que necesitan contenido constante y no tienen tiempo.
 - **Redes:** Instagram, TikTok y YouTube. Facebook descartado.
-- **Nombre de las redes:** por definir. Opciones en la mesa: CerebrIA, ContenIA.
+- **Nombre de las redes:** ContentIA (Santi dice que ya lo definió; IG @soysanti__content_ia).
 - **Bio de Instagram (propuesta):** nombre "Cerebro de Contenido con IA" + "Te montamos un sistema con IA que crea
   tus guiones, edita tus videos y los publica en IG, TikTok, YouTube y Meta Ads 🚀 👇 Agenda tu llamada".
 - **Estudio de mercado:** ver `estudio-de-mercado.md`.

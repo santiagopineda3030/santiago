@@ -117,23 +117,26 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
   Necesita en el entorno `SUBIDA_URL` y `SUBIDA_CLAVE`.
 - Landing de la llamada: `src/` (React + Vite + Tailwind, estilo tecnológico cian, logo SPR en píxeles).
 
-## Hoja de ruta hasta el 18 de nov 2026 (prioridad acordada con Santi, 6 nov) · TODO automatizado
+## Hoja de ruta día por día hasta el 18 de nov 2026 (acordada con Santi, 6 nov) · TODO automatizado
 Flujo: Santi sube crudos a "Videos en frío" → Claude edita, sube, organiza hoja y calendario → publica solo → Claude da ideas de guiones.
-Estudio de mercado ✅ (`contexto/estudio-de-mercado.md`) · Oferta ✅ (`contexto/ai-work.md`) · Producto: `contexto/producto.md`.
-**A. Que el sistema funcione solo (es lo que se vende)**
-1. Pruebas diarias: v3 (7 nov) en IG + YouTube automático; luego TikTok. · 2. TikTok automático (📁 TikTok).
-3. Ideas de guiones automáticas además de las noticias: **videos de leads** y **YouTube largo** (falta una tarea programada).
-**B. Que entren leads**
-4. Guiones de videos de leads ("comenta CLAUDE"). · 5. Automatizar "comenta CLAUDE" → DM con la clase gratis.
-6. Grabar el video gratis (~3 min). · 7. Web: 3 preguntas filtro + calendario + hoja de leads; subirla con dominio,
-   política de privacidad y términos. · 8. Nombre de las redes + bio.
-**C. Que se pueda vender y entregar**
-9. Guion de la llamada de venta. · 10. Skool: crear comunidad, módulos con tareas. · 11. Carpetas plantilla de Drive.
-12. Tracker de alumnos. · 13. Bienvenida + formulario de onboarding. · 14. Protección del Drive (`licencias.md`).
-**D. Escalar**
-15. Meta Ads (📁 Anuncios (Meta), de último). · 16. Guiones de YouTube largos (📁 YouTube) — recordárselo a Santi al
-   terminar Meta Ads, junto con arrancar el curso. · 17. Revisión final antes del 18.
-Después del 18: método de pago, setter y closer.
+Hecho: estudio de mercado (`estudio-de-mercado.md`), oferta (`ai-work.md`), producto (`producto.md`), nombre de marca (ContentIA).
+**Todos los días:** prueba automática de las 11:00 (IG + YouTube, luego TikTok) y revisar el guion de las 4:35.
+| Día | Qué |
+|---|---|
+| Jue 6 | ✅ Oferta cerrada. Arrancar **TikTok** (📁 TikTok) |
+| Vie 7 | Revisar que el v3 salga solo. Terminar **TikTok automático**. Arrancar **Meta Ads** (📁 Anuncios (Meta)) |
+| Sáb 8 | **Meta Ads**: cuenta publicitaria, píxel, campaña en borrador (sin gastar) |
+| Dom 9 | **Día de guiones**: guiones del mes (videos de leads + YouTube largos + video gratis) |
+| Lun 10 | **Grabar** los videos del mes y el video gratis |
+| Mar 11 | **Web**: preguntas filtro, calendario, hoja de leads, privacidad y términos, dominio; subirla |
+| Mié 12 | **Guion de la llamada de venta** · crear **Skool** y la estructura de módulos con tareas |
+| Jue 13 | **Carpetas plantilla** de Drive (sin datos de Santi) |
+| Vie 14 | **Grabar los módulos** del curso |
+| Sáb 15 | **Tracker de alumnos** + bienvenida y onboarding |
+| Dom 16 | **Protección del Drive** (`licencias.md`) |
+| Lun 17 | **Meta Ads** lista para encender + revisión final de todo |
+| Mar 18 | **Todo listo**: lanzar |
+No va por ahora: automatizar "comenta CLAUDE" (Santi, 6 nov). Después del 18: pago, setter y closer.
 
 ## Pendientes grandes (estado técnico)
 1. Confirmar la primera publicación automática real (Instagram ya conectado e instalado).
