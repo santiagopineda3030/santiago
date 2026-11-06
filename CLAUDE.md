@@ -113,6 +113,10 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
   Necesita en el entorno `SUBIDA_URL` y `SUBIDA_CLAVE`.
 - Landing de la llamada: `src/` (React + Vite + Tailwind, estilo tecnológico cian, logo SPR en píxeles).
 
+## Lo próximo (6 nov) · detalle en `contexto/bitacora.md` › Plan del día
+1. v2 1.3 a Instagram + YouTube Shorts a las 11:00 (MP4 en 2. Videos terminados; descripción más corta). TikTok no automático.
+2. Corrección de TikTok. 3. Estudio de mercado: avatar, oferta y cómo se vende.
+
 ## Pendientes grandes (en orden)
 1. Confirmar la primera publicación automática real (Instagram ya conectado e instalado).
 2. YouTube Shorts: **funcionando** (canal @santimediayt, probado 5 nov). Sale con la misma aprobación de IG.

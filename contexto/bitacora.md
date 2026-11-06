@@ -1,6 +1,32 @@
 # Bitácora (lo más nuevo arriba, una línea por cosa hecha)
 
-## 5 nov 2026
+## 6 nov 2026 · Plan del día (lo dejó Santi al cerrar el 5 nov)
+1. **Publicar v2 1.3 en Instagram y YouTube Shorts a las 11:00.** Falta que el MP4 `v2 1.3 noticias-5-nov.mp4` esté en
+   Edición de videos › 2. Videos terminados (a las 11 p. m. del 5 nov todavía no estaba). La tarea de las 8:00 a. m.
+   (`trig_01REenA1WUgwAVqQZsAdqVPa`, en 📁 Edición de videos) lo busca: si está, pone el link y `Publicar`; si no, avisa a Santi.
+   Descripción: Santi la quiere **un poco más corta** (revisar la de la fila v2 antes de las 11). TikTok NO va automático.
+2. **Corrección de TikTok** (Santi dice qué, en 📁 TikTok).
+3. **Estudio de mercado:** analizar bien el avatar, armar bien la oferta (Cerebro de Contenido, $2.500) y cómo se va a
+   vender (llamada, setter → closer). Base: `contexto/estudio-de-mercado.md` y `contexto/ai-work.md`.
+4. A las 4:35 p. m. llega el guion del v3 (ya un solo guion para las 3 redes) → revisarlo en 📁 Guiones.
+5. Pendientes que siguen: revisar yt1 (YouTube largo) con Santi; revisar los "Recursos y reglas" de TikTok, YouTube y Meta;
+   el crudo del v2 quedó con enlace abierto (Santi debe volverlo a Restringido); cambiar `CLAVE_SUBIDA`.
+
+## 5 nov 2026 · Cierre del día (resumen por carpeta)
+- **Santi · Base:** creado como chat de rutina diaria. Regla: un solo guion para IG, TikTok y Shorts (YouTube largo aparte).
+  Tarea de las 4:35 ajustada a 1 idea + 1 guion. Carpeta Edición de videos montada y su chat. Cierre del día.
+- **Guiones carpetas organización:** Kit ContentIA (áreas, skills, carpetas Guiones en Drive, Recursos y reglas por red,
+  chats por carpeta). Regla de borrar guiones viejos.
+- **📁 Guiones:** v2 revisado y terminado (cambio: centros de datos → Universal Music vs. Anthropic; CTA de seguir). Hoja v2 en Grabar.
+- **📁 YouTube:** yt1 (primer video largo) idea + guion en frío, falta revisarlo. Shorts automático funcionando desde la mañana.
+- **📁 Edición de videos:** v2 editado (1.0 → 1.3: detector de mirada, escenas, zona segura, música original). Aprobado.
+  Hoja v2 en Editado/Listo. Falta el MP4 en Drive (no hay buzón en el entorno).
+- **📁 Instagram:** publicación automática conectada (Meta) y evento en Calendar. v1 publicado.
+- **📁 TikTok:** plan A listo en código; la app de TikTok dio error al crearla (pausa). Mañana: corrección de TikTok.
+- **📁 Anuncios (Meta):** solo se creó la carpeta y sus "Recursos y reglas". Sin piezas todavía.
+- **Santi · Preguntas:** creado, sin cambios.
+
+## 5 nov 2026 · Detalle
 - Regla nueva de Santi: borrar lo viejo de Guiones (en frío al terminar; terminado + idea al publicar). Guardada en CLAUDE.md, `guiones.md`, skills `revisar-guion` y `rutina-diaria`.
 - Limpieza de Guiones en Drive: v1 (Día 1) a la papelera (copia en `drive-respaldo/`). SCRIPT VIDEO GRATIS se borró por error y se restauró como copia con ID nuevo `19i-NcxFPADR_evGmriCbwcf_Qj9rt6U7uG-8H0jlstY` (YouTube › 2. Guiones en frío). Quedan solo los de hoy (v2, yt1) + clase gratis.
 - Guion v2 (noticias 5 nov) revisado con Santi y terminado: cambiamos centros de datos por Universal Music vs. Anthropic, CTA de seguir. Docs nuevos en `3. Guiones terminados` (IG/TikTok/YouTube), los en frío a la papelera. Hoja fila v2: Estado `Grabar`, Ángulo, links y Título YouTube. Copia: `drive-respaldo/guiones/v2-noticias-ia-5-nov.md`.
@@ -31,9 +57,6 @@
 - Buzón de Apps Script (`Subidas.gs`) funcionando para que Claude suba videos a Drive.
 - Memoria pasada de claude.ai a este repositorio (CLAUDE.md + contexto/).
 - Landing de la llamada terminada (`src/`).
-
-## Pendiente de seguridad
-- Cambiar `CLAVE_SUBIDA` (la actual salió en el chat) y ponerla en el entorno como `SUBIDA_CLAVE`.
 - 5 nov 2026 · 5:06 p. m. · Revisión de la tarea de las 4:35: corrió bien (idea + 3 guiones en frío v2 IG/TikTok/YouTube + fila v2 en Noviembre). Santi ya lo está revisando en 📁 Guiones.
 - 5 nov 2026 · Regla de Santi: un solo guion corto para IG, TikTok y Shorts; aparte solo YouTube largo. Pedido a 📁 YouTube: idea + guion en frío de un video largo con un tema que esté funcionando.
 - 5 nov 2026 · 📁 YouTube: yt1 (primer video largo 16:9) "La IA es mi equipo de contenido". Idea en Guiones › YouTube › 1. Ideas (`1x1xDEDmxwLtrVW6rpeCGFyBAmTg0AVHVUROZzBaZepY`) y guion en frío en 2. Guiones en frío (`1QI-jj0qiMkXPY0QqXBkCgr4fKfa8qi801MX1Ce8mX04`). Copias: `drive-respaldo/guiones/yt1-*.md`. Falta revisarlo con Santi; los datos [ ] los pone él.
@@ -46,3 +69,6 @@
 - 6 nov 2026 · v2 1.2: mirada con postura de las tomas usadas (umbral 1.0), 13 bordes con imagen sostenida (audio sigue), 3 escenas nuevas (billetes, Google Ads, café = video). Revisado: casi sin miradas al lado.
 - 6 nov 2026 · v2 1.3: música de fondo original (musica.py, lo-fi 88 BPM sintetizado aquí, sin derechos de terceros) a −21 dB bajo la voz y −6 dB más cuando habla (--musica). Total −14 LUFS.
 - 5 nov 2026 · 9 p. m. · v2 1.3 aprobado por Santi. Hoja: fila v2 Editado, descripción corta, Archivo, 11:00, Publicación Listo; COLA fila v2 (Revisión). Falta que Santi suba el MP4 a 2. Videos terminados (no hay SUBIDA_URL/CLAVE en el entorno). Tarea programada 6 nov 8:00 (trig_01REenA1WUgwAVqQZsAdqVPa): copiar a TikTok › 4. Contenido editado, link y Publicar (IG + Shorts; TikTok a mano).
+
+## Pendiente de seguridad
+- Cambiar `CLAVE_SUBIDA` (la actual salió en el chat) y ponerla en el entorno como `SUBIDA_CLAVE`.
