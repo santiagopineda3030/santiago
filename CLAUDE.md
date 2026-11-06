@@ -123,8 +123,8 @@ Plan maestro (doc): https://claude.ai/artifact/PnzCmT7dUjbUxnE5Qtg7r1 · Hecho: 
 **Todos los días:** prueba automática de las 11:00 (IG + YouTube, luego TikTok) y revisar el guion de las 4:35.
 | Día | Qué |
 |---|---|
-| Jue 6 | ✅ Oferta cerrada. Arrancar **TikTok** (📁 TikTok) |
-| Vie 7 | Revisar que el v3 salga solo. Terminar **TikTok automático**. Arrancar **Meta Ads** (📁 Anuncios (Meta)) |
+| Jue 6 | ✅ Oferta cerrada. ✅ **TikTok** instalado y conectado (sandbox, sale a borradores después de IG; directo listo con interruptor apagado) |
+| Vie 7 | Revisar que el v3 salga solo (IG → YouTube → TikTok a borradores). **TikTok: permisos** para publicar solo (auditoría, `tiktok.md`). Arrancar **Meta Ads** (📁 Anuncios (Meta)) |
 | Sáb 8 | **Meta Ads**: cuenta publicitaria, píxel, campaña en borrador (sin gastar) |
 | Dom 9 | **Día de guiones**: guiones del mes (videos de leads + YouTube largos + video gratis) |
 | Lun 10 | **Grabar** los videos del mes y el video gratis |
