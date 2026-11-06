@@ -44,3 +44,4 @@
 - 6 nov 2026 · 📁 Edición de videos: v2 1.0 (noticias 5 nov) editado con editor-noticias (edl-v2.json, 75 s, −14 LUFS, 27 MB). Enviado a Santi para revisar. Crudo abierto con enlace para bajarlo: Santi debe volverlo a Restringido.
 - 6 nov 2026 · v2 1.1: pedido de Santi → cortes sin mirar las notas (nuevo mirada.py con YuNet: recorta bordes y tapa con escenas), 6 escenas a pantalla completa (hacker, fuga, versus, lluvia de demandas, carrera, precio), gráficos dentro de la zona segura (x 120–960, y 250–1500), subtítulos más arriba, cola del CTA mirando a cámara.
 - 6 nov 2026 · v2 1.2: mirada con postura de las tomas usadas (umbral 1.0), 13 bordes con imagen sostenida (audio sigue), 3 escenas nuevas (billetes, Google Ads, café = video). Revisado: casi sin miradas al lado.
+- 6 nov 2026 · v2 1.3: música de fondo original (musica.py, lo-fi 88 BPM sintetizado aquí, sin derechos de terceros) a −21 dB bajo la voz y −6 dB más cuando habla (--musica). Total −14 LUFS.

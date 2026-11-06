@@ -59,6 +59,27 @@ def tramos_con_voz(a, b, voz, antes=0.04, despues=0.06, unir=0.10):
     return out or [(a, b)]
 
 
+def musica_de_fondo(ruta, voz, db=-21.0, bajar=6.0):
+    """Música bajita bajo la voz: a `db` dB de la voz, y `bajar` dB menos mientras se habla (ducking)."""
+    with wave.open(str(ruta)) as f:
+        m = np.frombuffer(f.readframes(f.getnframes()), np.int16).astype(np.float32).reshape(-1, 2) / 32768
+    n = len(voz)
+    m = np.tile(m, (n // len(m) + 1, 1))[:n]
+    rms = lambda x: float(np.sqrt(np.mean(x ** 2)) + 1e-9)
+    hablando = np.abs(voz).mean(1)
+    win = int(0.05 * SR)
+    e = np.convolve(hablando, np.ones(win) / win, "same")
+    umbral = np.percentile(e, 60) * 0.35
+    activo = (e > umbral).astype(np.float32)
+    suave = int(0.25 * SR)
+    activo = np.convolve(activo, np.ones(suave) / suave, "same")
+    v_rms = rms(voz[e > umbral]) if (e > umbral).any() else rms(voz)
+    g = v_rms / rms(m) * 10 ** (db / 20)
+    gan = g * (10 ** (-bajar / 20) * activo + (1 - activo))
+    fade = np.minimum(1, np.arange(n) / (1.0 * SR)) * np.minimum(1, (n - np.arange(n)) / (2.0 * SR))
+    return m * (gan * fade)[:, None]
+
+
 def mirada_mala(m, umbral=1.6, minimo=0.2, rangos=None):
     """Tramos (s, e) en que la persona NO mira a la cámara (cabeza girada o mirando las notas).
     La postura "mirando a cámara" es la mediana dentro de los rangos usados (las tomas elegidas)."""
@@ -217,6 +238,8 @@ def main():
     ap.add_argument("--mirada", help="JSON de mirada.py: recorta los bordes donde no se mira a cámara")
     ap.add_argument("--umbral-mirada", type=float, default=1.0)
     ap.add_argument("--congelar-max", type=float, default=0.5, help="máx. s de imagen sostenida en cada borde")
+    ap.add_argument("--musica", help="WAV de música de fondo (48 kHz estéreo)")
+    ap.add_argument("--musica-db", type=float, default=-21.0, help="nivel de la música bajo la voz (dB)")
     ap.add_argument("--centro-x", type=float, default=0.53)
     a = ap.parse_args()
     editar.CENTRO_X = a.centro_x
@@ -362,6 +385,8 @@ def main():
                           "-ar", str(SR), "-f", "s16le", "-"], capture_output=True, check=True).stdout
     voz = np.frombuffer(pcm, np.int16).astype(np.float32).reshape(-1, 2) / 32768
     mezcla = voz.copy()
+    if a.musica:
+        mezcla += musica_de_fondo(a.musica, voz, a.musica_db)
     banco = A.sonidos(SR)
     for t0, nombre in sfx:
         s = banco[nombre] * GANANCIA_SFX.get(nombre, 0.3)
