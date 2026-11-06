@@ -50,3 +50,6 @@ Ojo: en Instagram la 2 y la 4 ya no están aquí (se movieron a Edición de vide
 | yt1 · Guion en frío · La IA es mi equipo de contenido | Guiones › YouTube › 2. Guiones en frío | `1QI-jj0qiMkXPY0QqXBkCgr4fKfa8qi801MX1Ce8mX04` | `drive-respaldo/guiones/yt1-guion-en-frio.md` |
 
 Kit de edición ContentIA (áreas, skills y reglas por red): `contexto/kit-contentia.md`.
+
+## Código Bueno Instagram para Juanita (6 nov) · `1QdFwOA0CVx_8jlRSCfHYuHqnlPlFYoNg` (Mi unidad, fuera de ContentIA)
+Versión solo Instagram del script arreglado, sin datos de Santi (CONFIG vacío). Code.gs `1FssmoYNrU9GFtKrfeDVJ_eJQwe0O0PzT` · appsscript.json `1DGGj9bFUUWn8gVTr_RXxvFsEOsRrbBqm` · LÉEME `1g3iV0q02gN89-RibgBc4R9Yk-XOl7xlG7s40t7ubx6I`. Copia: `compartir/juanita-instagram/`. Santi la comparte él.
