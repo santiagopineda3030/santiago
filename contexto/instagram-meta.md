@@ -47,3 +47,4 @@ Si Meta responde error 190, el token venció o es inválido: repetir 3–5.
   Sin esperas largas en `revisar_`. TikTok: solo si `TikTok.gs` está instalado (`typeof tiktokFila_`), y por ahora a mano.
 - Probado con simulación en node (4 vueltas): IG publicado en la 1ª o 2ª vuelta, YouTube en la 2ª.
 - **Instalar:** Santi pega `Code.gs` y `YouTube.gs` del repo en Apps Script (reemplazar todo) y guarda. No hay que volver a autorizar.
+- ✅ 6 nov 13:06: Santi pegó Code.gs y YouTube.gs arreglados (sobre su versión instalada, sin TikTok.gs). probarConexion OK (0 de 100 publicaciones por API ese día = IG no salió solo). No hizo falta `instalar`. Prueba real: v3 el 7 nov.

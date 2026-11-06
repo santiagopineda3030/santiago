@@ -4,6 +4,7 @@
 - v2 publicado: YouTube automático (https://youtube.com/shorts/4g60EpRpGFc); Instagram y TikTok a mano por Santi. Hoja: Estado y Publicación = Publicado. Evento verde en Calendar (11:00 aprox.).
 - Limpieza: idea (3 copias) y guiones terminados del v2 (IG/TikTok/YouTube) a la papelera. Copias: `drive-respaldo/guiones/v2-idea.md` y `v2-noticias-ia-5-nov.md`.
 - Código de publicación arreglado (IG no salió por pasarse de 6 min). Detalle: `instagram-meta.md`. Falta que Santi lo pegue en Apps Script.
+- Código de publicación arreglado instalado por Santi en Apps Script (13:06, probarConexion OK). Prueba real con v3 el 7 nov.
 - Santi ahora trabaja desde el PC (no iPad). Memoria actualizada.
 - Calendar 6 nov: borrado el evento de plan "📰 Noticias IA · Video 2" (quedaba doble con el ✅ Publicado). Code.gs y YouTube.gs enviados a Santi como archivo para pegarlos en Apps Script.
 
