@@ -100,3 +100,4 @@
 - 6 nov 2026 · 3:40 p. m. · 📁 TikTok: app de TikTok creada (org ContentIA, app ContentIA Publicador, sandbox Pruebas, Redirect URI puesta, cuenta soysanti_media). Falta llenar info básica + links, Apply changes y conectar.
 - 6 nov 2026 · Términos y Privacidad de la app de TikTok creados en TikTok › 3. Recursos y abiertos con link (IDs en drive.md). Web URL = perfil de Instagram.
 - 6 nov 2026 · Code.gs + TikTok.gs: TikTok vuelve a salir solo (queda Pendiente a la hora de IG y sube en la vuelta siguiente, cuenta como paso pesado). Falta que Santi pegue los dos archivos.
+- 6 nov 2026 · 4:15 p. m. · 📁 TikTok: INSTALADO. Santi pegó TikTok.gs + Code.gs, puso las claves del sandbox y conectó la cuenta (✅ TikTok conectado). Falta probar con un video real y pedir la auditoría.

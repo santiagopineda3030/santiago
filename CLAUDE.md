@@ -141,7 +141,7 @@ No va por ahora: automatizar "comenta CLAUDE" (Santi, 6 nov). Después del 18: p
 ## Pendientes grandes (estado técnico)
 1. Confirmar la primera publicación automática real (Instagram ya conectado e instalado).
 2. YouTube Shorts: **funcionando** (canal @santimediayt, probado 5 nov). Sale con la misma aprobación de IG.
-   TikTok plan A (borrador + correo): código listo, falta crear la app e instalar (`contexto/tiktok.md`).
+   TikTok plan A (borrador + correo): **instalado y conectado 6 nov** (sandbox; sale ~15–30 min después de IG a borradores). Falta: primera prueba real y auditoría para publicación directa (`contexto/tiktok.md`).
 3. Guiones (`contexto/guiones.md`): carpeta **Guiones** montada (5 nov). La tarea de las 4:35 p. m. deja la idea y el
    guion en frío y avisa; luego se revisa juntos y se mueve a terminados. Recursos y reglas de TikTok, YouTube y Meta:
    creados (5 nov, Kit ContentIA: `contexto/kit-contentia.md`), falta revisarlos juntos. Falta organizar TikTok.

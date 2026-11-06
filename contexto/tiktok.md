@@ -1,4 +1,4 @@
-# TikTok: plan A (borrador automático) · código listo 5 nov 2026, falta instalar
+# TikTok: plan A (borrador automático) · INSTALADO y conectado 6 nov 2026 (sandbox)
 
 ## Cómo funciona
 - Misma fila y misma aprobación que IG/YouTube. A la hora, `publicarPendientes` manda el video a TikTok como
@@ -35,3 +35,11 @@
     (Términos, Privacidad, sitio web). Siguiente: links, Apply changes, claves del Sandbox a Propiedades, pegar código.
 - Confirmar que el sandbox deja mandar borradores reales a su cuenta (si no, hay que pedir revisión de la app).
 - La landing aún no está publicada: Términos y Privacidad hay que alojarlos en algún lado para la auditoría.
+
+## 6 nov 2026 · instalado
+- Santi pegó `TikTok.gs` (quedó como "TikTok.gs.gs", funciona igual) y el `Code.gs` nuevo; corrió `instalar` (OK: IG + Calendar).
+- Propiedades: `TIKTOK_CLIENT_KEY` y `TIKTOK_CLIENT_SECRET` del **Sandbox Pruebas** (no de Production).
+- Plan IG › Conectar TikTok → "✅ TikTok conectado". El menú Plan IG queda escondido en "..." si la ventana es angosta.
+- Términos y Privacidad: Google Docs públicos (IDs en `drive.md`). Web URL = perfil de Instagram (cambiar a la web cuando exista).
+- Siguiente: Probar conexión con TikTok, prueba real (v3, 7 nov 11:00 → TikTok ~11:30 a borradores) y luego auditoría
+  (Production: ícono, mismos links, video demo) para publicación directa.
