@@ -369,7 +369,8 @@ function publicarPendientes() {
       const yt = String(f.v(i, 'yt')).trim();
       // YouTube: pedido a mano ("Publicar") o pendiente porque Instagram ya arrancó ("Pendiente").
       if ((yt === 'Publicar' || yt === 'Pendiente') && puedo()) { youtubeFila_(f, i, true); pesado = true; }
-      if (typeof tiktokFila_ === 'function' && puedo()) tiktokFila_(f, i, false); // TikTok pedido a mano o revisar borrador
+      // TikTok: pedido a mano, "Pendiente" porque Instagram ya arrancó, o revisar si ya publicaste el borrador.
+      if (typeof tiktokFila_ === 'function' && puedo() && tiktokFila_(f, i)) pesado = true;
       if (!['Publicar', 'Programado', 'Publicando'].includes(est)) return;
       try {
         if (est === 'Publicando') { revisar_(f, i); return; } // liviano: solo pregunta a Instagram
@@ -380,8 +381,9 @@ function publicarPendientes() {
           return;
         }
         if (!puedo()) return; // ya hubo un paso pesado en esta vuelta: sigue en la próxima
-        // Llegó la hora: primero Instagram (lo más importante). YouTube queda "Pendiente" para la próxima vuelta (TikTok: a mano por ahora).
+        // Llegó la hora: primero Instagram (lo más importante). YouTube y TikTok quedan "Pendiente" para las próximas vueltas.
         if (f.col.yt && yt === '') f.set(i, 'yt', 'Pendiente');
+        if (f.col.tt && String(f.v(i, 'tt')).trim() === '') f.set(i, 'tt', 'Pendiente');
         SpreadsheetApp.flush();
         pesado = true;
         subir_(f, i, file); // deja la fila en "Publicando"

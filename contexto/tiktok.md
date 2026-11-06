@@ -7,6 +7,8 @@
 - Por qué borrador: TikTok solo deja publicar en público a apps auditadas. Cuando aprueben la app, se cambia a
   publicación directa (`video.publish`, endpoint `/post/publish/video/init/` con `post_info`).
 - Código: `google-apps-script/plan-contenido/TikTok.gs` + ganchos en `Code.gs`; `appsscript.json` suma `script.send_mail`.
+- 6 nov: arreglado para que salga solo: a la hora, IG primero; la columna TikTok queda `Pendiente` y sube en la
+  vuelta siguiente (después de YouTube), un paso pesado por vuelta.
 - Columnas: **TikTok** (vacía = va con IG · `No` · `Publicar` = ya · el script pone `Subiendo`, `En borradores`,
   `Publicado`, `Error`) y **Link TikTok**. Cada 15 min revisa si el borrador ya se publicó.
 - Tokens en Propiedades del script: `TIKTOK_CLIENT_KEY`, `TIKTOK_CLIENT_SECRET` (los pone Santiago),

@@ -14,7 +14,7 @@
  *  3. En la hoja: menú Plan IG › Conectar TikTok › abrir el link › Autorizar.
  *  4. Plan IG › Probar conexión con TikTok.
  *
- * Columna "TikTok": vacía = va con Instagram · "No" = no subir · "Publicar" = mandarla ya ·
+ * Columna "TikTok": vacía = va con Instagram (el script la pone "Pendiente" a la hora) · "No" = no subir · "Publicar" = mandarla ya ·
  * el script pone "Subiendo", "En borradores", "Publicado" o "Error". Nunca se reintenta solo.
  */
 
@@ -24,7 +24,7 @@ const TT = {
   API: 'https://open.tiktokapis.com/v2',
   AUTH: 'https://www.tiktok.com/v2/auth/authorize/',
   SCOPES: 'user.info.basic,video.upload',
-  ESTADOS: ['Publicar', 'No', 'Subiendo', 'En borradores', 'Publicado', 'Error'],
+  ESTADOS: ['Publicar', 'Pendiente', 'No', 'Subiendo', 'En borradores', 'Publicado', 'Error'],
   COLUMNAS: ['TikTok', 'Link TikTok']
 };
 
@@ -127,13 +127,14 @@ function probarTikTok() {
 
 /* ---------- Envío ---------- */
 
-/** Lo llama publicarPendientes, después de YouTube. Nunca rompe Instagram. aprobada = llegó su hora. */
-function tiktokFila_(f, i, aprobada) {
-  if (!TT.ACTIVO || !f.col.tt) return;
+/** Lo llama publicarPendientes en cada vuelta. Nunca rompe Instagram. */
+/** Devuelve true si subió un video (paso pesado). */
+function tiktokFila_(f, i) {
+  if (!TT.ACTIVO || !f.col.tt) return false;
   const est = String(f.v(i, 'tt')).trim();
-  if (est === 'En borradores') { revisarTikTok_(f, i); return; }
-  if (!(est === 'Publicar' || (est === '' && aprobada))) return;
-  if (!ttProp_('TIKTOK_REFRESH')) return; // sin conectar: no marca nada
+  if (est === 'En borradores') { revisarTikTok_(f, i); return false; }
+  if (!(est === 'Publicar' || est === 'Pendiente')) return false;
+  if (!ttProp_('TIKTOK_REFRESH')) return false; // sin conectar: queda en Pendiente
   f.set(i, 'tt', 'Subiendo');
   SpreadsheetApp.flush(); // si se corta a mitad queda "Subiendo" y no se manda dos veces
   try {
@@ -153,6 +154,7 @@ function tiktokFila_(f, i, aprobada) {
     f.set(i, 'tt', 'Error');
     f.set(i, 'ttlink', ('TikTok: ' + (e.message || e)).slice(0, 300));
   }
+  return true;
 }
 
 /** Pregunta a TikTok si ya publicaste el borrador. */

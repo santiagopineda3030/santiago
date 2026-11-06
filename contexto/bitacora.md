@@ -99,3 +99,4 @@
 - 6 nov 2026 · 8:00 a. m. · Revisión: v2 1.3 en Programado (IG + Shorts 11:00). Sin errores.
 - 6 nov 2026 · 3:40 p. m. · 📁 TikTok: app de TikTok creada (org ContentIA, app ContentIA Publicador, sandbox Pruebas, Redirect URI puesta, cuenta soysanti_media). Falta llenar info básica + links, Apply changes y conectar.
 - 6 nov 2026 · Términos y Privacidad de la app de TikTok creados en TikTok › 3. Recursos y abiertos con link (IDs en drive.md). Web URL = perfil de Instagram.
+- 6 nov 2026 · Code.gs + TikTok.gs: TikTok vuelve a salir solo (queda Pendiente a la hora de IG y sube en la vuelta siguiente, cuenta como paso pesado). Falta que Santi pegue los dos archivos.
