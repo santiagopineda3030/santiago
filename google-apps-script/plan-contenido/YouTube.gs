@@ -19,7 +19,7 @@ const YT = {
   PRIVACIDAD: 'public',          // 'public' · 'unlisted' · 'private'
   CATEGORIA: '28',               // Ciencia y tecnología
   IDIOMA: 'es',
-  ESTADOS: ['Publicar', 'No', 'Subiendo', 'Publicado', 'Error'],
+  ESTADOS: ['Publicar', 'Pendiente', 'No', 'Subiendo', 'Publicado', 'Error'],
   COLUMNAS: ['Título YouTube', 'YouTube', 'Link YouTube']
 };
 
@@ -63,7 +63,8 @@ function probarYouTube() {
 function youtubeFila_(f, i, aprobada) {
   if (!YT.ACTIVO || !f.col.yt) return;
   const est = String(f.v(i, 'yt')).trim();
-  if (!(est === 'Publicar' || (est === '' && aprobada))) return;
+  // "Pendiente" = Instagram ya arrancó con esta fila y YouTube va en la vuelta siguiente (lo pone publicarPendientes).
+  if (!(est === 'Publicar' || est === 'Pendiente' || (est === '' && aprobada))) return;
   f.set(i, 'yt', 'Subiendo');
   SpreadsheetApp.flush(); // si el script se corta a mitad, la fila queda "Subiendo" y no se sube dos veces
   try {

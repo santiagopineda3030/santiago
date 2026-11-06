@@ -358,25 +358,36 @@ function publicarPendientes() {
   const lock = LockService.getScriptLock();
   if (!lock.tryLock(1000)) return; // otra vuelta sigue corriendo
   const inicio = Date.now();
+  // Apps Script corta a los 6 min SIN avisar (no pasa por el catch y la fila queda "Programado").
+  // Por eso cada vuelta hace como máximo UN paso pesado (subir a Instagram, subir a YouTube o subir a TikTok)
+  // y ninguno empieza si ya van más de 90 s. Lo que falte sigue en la próxima vuelta (cada 15 min).
+  let pesado = false;
+  const puedo = () => !pesado && Date.now() - inicio < 90 * 1000;
   try {
     planes_().map(leer_).forEach(f => f.vals.forEach((r, i) => {
-      if (Date.now() - inicio > 4 * 60 * 1000) return; // Apps Script corta a los 6 min: sigue en la próxima vuelta
       const est = f.v(i, 'estado');
-      if (String(f.v(i, 'yt')).trim() === 'Publicar') youtubeFila_(f, i, false); // subida a YouTube pedida a mano
-      tiktokFila_(f, i, false); // TikTok pedido a mano, o revisar si ya publicaste el borrador
+      const yt = String(f.v(i, 'yt')).trim();
+      // YouTube: pedido a mano ("Publicar") o pendiente porque Instagram ya arrancó ("Pendiente").
+      if ((yt === 'Publicar' || yt === 'Pendiente') && puedo()) { youtubeFila_(f, i, true); pesado = true; }
+      if (typeof tiktokFila_ === 'function' && puedo()) tiktokFila_(f, i, false); // TikTok pedido a mano o revisar borrador
       if (!['Publicar', 'Programado', 'Publicando'].includes(est)) return;
       try {
-        if (est === 'Publicando') { revisar_(f, i); return; }
+        if (est === 'Publicando') { revisar_(f, i); return; } // liviano: solo pregunta a Instagram
         const file = archivo_(f.v(i, 'video'));
         if (!String(f.v(i, 'desc')).trim()) throw new Error('Falta la descripción');
         if (cuando_(f.v(i, 'fecha'), f.d(i, 'hora')) > new Date()) {
           if (est !== 'Programado') { f.set(i, 'estado', 'Programado'); f.set(i, 'link', ''); }
           return;
         }
-        youtubeFila_(f, i, true); // primero YouTube: si falla, queda "Error" en su columna e Instagram sigue
-        tiktokFila_(f, i, true);  // luego TikTok (borrador + correo): igual, nunca frena a Instagram
-        subir_(f, i, file);
-        revisar_(f, i);
+        if (!puedo()) return; // ya hubo un paso pesado en esta vuelta: sigue en la próxima
+        // Llegó la hora: primero Instagram (lo más importante). YouTube queda "Pendiente" para la próxima vuelta (TikTok: a mano por ahora).
+        if (f.col.yt && yt === '') f.set(i, 'yt', 'Pendiente');
+        SpreadsheetApp.flush();
+        pesado = true;
+        subir_(f, i, file); // deja la fila en "Publicando"
+        SpreadsheetApp.flush();
+        Utilities.sleep(30000); // Instagram suele procesar en menos de 1 min: una sola revisión rápida
+        revisar_(f, i);        // si aún no está, la próxima vuelta lo publica
       } catch (e) {
         const msg = String(e.message || e);
         const props = PropertiesService.getScriptProperties(), clave = 'reintentos_' + idDe_(f.v(i, 'video'));
@@ -421,17 +432,12 @@ function subir_(f, i, file) {
   f.set(i, 'link', 'Instagram procesando el video');
 }
 
-/** Espera a que Instagram procese el video (hasta ~2 min por vuelta) y lo publica. */
+/** Pregunta a Instagram si ya procesó el video; si sí, lo publica. Si no, sigue en la próxima vuelta. */
 function revisar_(f, i) {
   const id = String(f.v(i, 'contenedor'));
   if (!id) throw new Error('Se perdió el contenedor: vuelve a poner Publicar');
-  let st;
-  for (let k = 0; k < 12; k++) {
-    st = graph_('get', id, { fields: 'status_code,status' });
-    if (st.status_code !== 'IN_PROGRESS') break;
-    Utilities.sleep(10000);
-  }
-  if (st.status_code === 'IN_PROGRESS') return; // sigue en la próxima vuelta
+  const st = graph_('get', id, { fields: 'status_code,status' }); // una sola pregunta: nada de esperas largas
+  if (st.status_code === 'IN_PROGRESS') { f.set(i, 'link', 'Instagram procesando el video (sigue en 15 min)'); return; }
   if (st.status_code === 'PUBLISHED') { f.set(i, 'estado', 'Publicado'); f.set(i, 'contenedor', ''); return; } // ya salió en otra vuelta
   if (st.status_code !== 'FINISHED') throw new Error('Instagram: ' + st.status_code + ' · ' + (st.status || ''));
   const pub = graph_('post', CONFIG.IG_ID + '/media_publish', { creation_id: id });

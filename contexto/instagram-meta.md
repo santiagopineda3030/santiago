@@ -34,3 +34,16 @@ Si Meta responde error 190, el token venció o es inválido: repetir 3–5.
   chat dentro de Code.gs y dio "SyntaxError: Unexpected identifier 'está'").
 - Pedir capturas tapando tokens y claves. Nunca pedir el token por el chat.
 - Cuando pide "el código completo", darlo entero en un solo bloque, listo para reemplazar todo.
+
+
+## 6 nov 2026 · Falla: v2 salió en YouTube pero no en Instagram
+- Hoja: Publicación quedó en `Programado` sin error y YouTube = `Publicado`. Santi lo subió a mano a IG y TikTok.
+- Causa más probable: a las 11:00 una sola vuelta de `publicarPendientes` subía a YouTube (28 MB), luego a Instagram y
+  esperaba hasta 2 min. Apps Script corta a los 6 min **sin pasar por el catch**, así que la fila quedó en `Programado`.
+  (Confirmar en Apps Script › Ejecuciones: "Se excedió el tiempo máximo de ejecución".)
+- Arreglo (Code.gs + YouTube.gs): cada vuelta hace **un solo paso pesado** y ninguno empieza pasados 90 s.
+  1) A la hora: sube a Instagram, YouTube queda `Pendiente`, espera 30 s y revisa una vez (si ya procesó, publica).
+  2) Vuelta siguiente (15 min): sube a YouTube; si IG seguía procesando, lo publica.
+  Sin esperas largas en `revisar_`. TikTok: solo si `TikTok.gs` está instalado (`typeof tiktokFila_`), y por ahora a mano.
+- Probado con simulación en node (4 vueltas): IG publicado en la 1ª o 2ª vuelta, YouTube en la 2ª.
+- **Instalar:** Santi pega `Code.gs` y `YouTube.gs` del repo en Apps Script (reemplazar todo) y guarda. No hay que volver a autorizar.

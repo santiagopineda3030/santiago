@@ -1,5 +1,11 @@
 # Bitácora (lo más nuevo arriba, una línea por cosa hecha)
 
+## 6 nov 2026 · Hecho
+- v2 publicado: YouTube automático (https://youtube.com/shorts/4g60EpRpGFc); Instagram y TikTok a mano por Santi. Hoja: Estado y Publicación = Publicado. Evento verde en Calendar (11:00 aprox.).
+- Limpieza: idea (3 copias) y guiones terminados del v2 (IG/TikTok/YouTube) a la papelera. Copias: `drive-respaldo/guiones/v2-idea.md` y `v2-noticias-ia-5-nov.md`.
+- Código de publicación arreglado (IG no salió por pasarse de 6 min). Detalle: `instagram-meta.md`. Falta que Santi lo pegue en Apps Script.
+- Santi ahora trabaja desde el PC (no iPad). Memoria actualizada.
+
 ## 6 nov 2026 · Plan del día (lo dejó Santi al cerrar el 5 nov)
 1. **Publicar v2 1.3 en Instagram y YouTube Shorts a las 11:00.** Falta que el MP4 `v2 1.3 noticias-5-nov.mp4` esté en
    Edición de videos › 2. Videos terminados (a las 11 p. m. del 5 nov todavía no estaba). La tarea de las 8:00 a. m.

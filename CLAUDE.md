@@ -55,7 +55,8 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
 ## Quién es y cómo hablarle
 - **Santiago Pineda** (santiagopineda3030@gmail.com), Colombia, zona horaria **America/Bogota**.
 - **Siempre en español**, tuteo, frases cortas y simples. Explicar paso a paso, con capturas si hace falta.
-  Muchas veces trabaja desde el **iPad**: dar instrucciones que se puedan seguir ahí.
+  Desde el 6 nov trabaja desde su **PC** (ya no el iPad): las instrucciones pueden ser para computador.
+  Claude corre en la nube y no ve el PC; si hace falta trabajar en archivos del PC, Santi abre Claude Desktop o `claude remote-control` allí.
 - Nunca pedirle claves, tokens ni contraseñas por el chat (van en Propiedades del script o en el entorno).
 
 ## El negocio (detalle en `contexto/ai-work.md`)
@@ -100,7 +101,9 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
 - **Cada video publicado se marca también en Google Calendar** (calendario principal de Santiago):
   título `✅ Publicado · <título original>`, color verde (colorId 10), hora real de publicación,
   y en la descripción las redes, la hora y el link del video en Drive. Sin notificaciones.
-- Publicación automática en Instagram: **conectada** (5 nov 2026). IG_ID `17841438740412085`, token en
+- Publicación automática en Instagram: **conectada** (5 nov 2026). **6 nov:** el v2 salió en YouTube pero NO en Instagram
+  (la vuelta se pasó de 6 min). Código arreglado: un paso pesado por vuelta (IG primero, YouTube en la siguiente). Falta que
+  Santi pegue `Code.gs` y `YouTube.gs` nuevos en Apps Script. IG_ID `17841438740412085`, token en
   Propiedades del script (`META_TOKEN`). Código: `google-apps-script/plan-contenido/Code.gs`. Detalle: `contexto/instagram-meta.md`.
 
 ## Herramientas que ya están montadas en este repositorio
