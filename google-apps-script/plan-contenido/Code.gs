@@ -9,8 +9,8 @@
  *  3. Se escribe la descripción y se pasa a "Listo". Lo "Listo" sin fecha recibe el siguiente día libre a la HORA.
  *  4. Quien aprueba cambia Publicación → "Publicar". A la fecha y hora de la fila se publica solo en Instagram
  *     y queda marcado en Google Calendar ("✅ Publicado · …", verde, sin notificaciones).
- *  5. En esa misma vuelta el video sale también en YouTube Shorts (YouTube.gs, columnas "YouTube" y "Link YouTube")
- *     y llega a TikTok como borrador (TikTok.gs, columnas "TikTok" y "Link TikTok").
+ *  5. Primero sale en Instagram; en las vueltas siguientes (cada 15 min) sale en YouTube Shorts (YouTube.gs) y llega a
+ *     TikTok como borrador (TikTok.gs, columnas "TikTok" y "Link TikTok"). Un solo paso pesado por vuelta (límite de 6 min).
  *
  * El token de Meta (token de página que no vence) va en Configuración del proyecto › Propiedades del script
  * › META_TOKEN. Nunca en este código.
