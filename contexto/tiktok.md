@@ -23,6 +23,13 @@
 7. Pedir la auditoría (necesita páginas de Términos y Privacidad públicas y un video demo) para pasar a directo.
 
 ## Pendiente / dudas
-- 5 nov: Santiago tuvo un error al crear la app (parte A). Retomar pidiendo captura del error.
+- 6 nov: **app creada** en developers.tiktok.com. El error de ayer era que ahora TikTok exige una *organización*.
+  - Organización **ContentIA** (Org ID `7705137509315019796`) › app **ContentIA Publicador** (tipo Other).
+  - Sandbox **Pruebas**: plataforma Web, Login Kit + Content Posting API (Direct Post apagado), scopes
+    `user.info.basic` + `video.upload`, target user **soysanti_media**.
+  - Script ID (hoja del plan): `1N_00QeBrzzAoUwcmInJBEkHs2rPnvQNeF0jd15DQc5lZgVdbmQ9ZYNpr` → Redirect URI
+    `https://script.google.com/macros/d/1N_00QeBrzzAoUwcmInJBEkHs2rPnvQNeF0jd15DQc5lZgVdbmQ9ZYNpr/usercallback` (ya pegada).
+  - Ícono: `tiktok-app/icono-contentia-1024.png`. Faltaba para "Apply changes": ícono, categoría, descripción y links
+    (Términos, Privacidad, sitio web). Siguiente: links, Apply changes, claves del Sandbox a Propiedades, pegar código.
 - Confirmar que el sandbox deja mandar borradores reales a su cuenta (si no, hay que pedir revisión de la app).
 - La landing aún no está publicada: Términos y Privacidad hay que alojarlos en algún lado para la auditoría.
