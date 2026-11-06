@@ -1,5 +1,12 @@
 # Bitácora (lo más nuevo arriba, una línea por cosa hecha)
 
+## 6 nov 2026 · Cierre de la sesión de Santi · Base
+- Hecho hoy: hoja y Calendar del v2 · código de publicación arreglado e instalado · carpeta Juanita · estudio de mercado
+  hispano cerrado + encuesta (https://forms.gle/BEE2ZSexndMxFYXN7) · oferta cerrada · modelo de entrega y producto
+  (`producto.md`) · plan maestro y hoja de ruta día por día al 18 nov (CLAUDE.md).
+- Hoy sigue Santi: TikTok (📁 TikTok), Meta Ads (📁 Anuncios (Meta)), guion v3 de las 4:35 → grabar → Videos en frío → 📁 Edición de videos.
+- Mañana 7 nov: ver si el v3 sale solo a las 11:00 (IG y luego YouTube). Encuesta en persona hasta el martes 11.
+
 ## 6 nov 2026 · Hecho
 - v2 publicado: YouTube automático (https://youtube.com/shorts/4g60EpRpGFc); Instagram y TikTok a mano por Santi. Hoja: Estado y Publicación = Publicado. Evento verde en Calendar (11:00 aprox.).
 - Limpieza: idea (3 copias) y guiones terminados del v2 (IG/TikTok/YouTube) a la papelera. Copias: `drive-respaldo/guiones/v2-idea.md` y `v2-noticias-ia-5-nov.md`.
