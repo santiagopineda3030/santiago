@@ -126,3 +126,14 @@ Meta: todo listo para captar leads el 18 de noviembre de 2026.
 - Dónde viven las clases y la comunidad (plataforma de entrega).
 - Formulario de onboarding y cómo se cobra el pago único.
 - Cuándo y cómo entra el success manager, y comisiones de setter y closer.
+
+## Decisiones de la oferta (6 nov 2026, Santi)
+| Decisión | Quedó |
+|---|---|
+| Precio | **$2.500 pago único**, sin precio de fundador |
+| Upsell Gestor IA gestionado | **$100/mes**, opcional (Santi dijo "unos 300 mil COP"; a 4.000 COP/USD son ~400 mil: confirmar) |
+| Sesiones en vivo + chat | **2 meses**, 2 sesiones por semana para dudas |
+| Garantía | Acompañamiento hasta que el Cerebro publique solo **30 días seguidos** |
+| Herramientas que paga el cliente | **Solo Claude, $20–100/mes** (Drive, Sheets y Apps Script gratis) |
+| Bono | **Análisis de la cuenta y opciones de mejora** |
+| Quién monta el Cerebro | **PENDIENTE**: Santi va a explicar cómo queda (dijo "la instalación sería de ellos", ~1 semana si son juiciosos) |
