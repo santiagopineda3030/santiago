@@ -31,3 +31,15 @@ siempre los **$2.500 únicos** contra el costo mensual de una agencia o un edito
   con precio especial a cambio de testimonio. Pendiente que Santi decida: precio fundador, precio Gestor IA mensual,
   duración de sesiones en vivo, costo de herramientas, garantía, bonos.
 - **Cuenta para 10k/mes (supuestos):** 4 ventas ← 16 llamadas ← 24 agendadas ← 240 ven la clase ← 480 comentarios.
+
+## 6 nov 2026 (tarde) · Mercado hispanohablante — Santi pidió dejar EE. UU./Reino Unido y enfocarse en habla hispana
+Doc reorganizado: pestaña **1. Mercado hispanohablante** (nueva), **2. Avatar y oferta** (datos cambiados a LatAm), "Primer estudio (4 nov)".
+- **IA en pymes LatAm (ILIA 2026, CENIA/CEPAL):** pequeñas 6,8% · medianas 12,8% · grandes 27,6% (vs 24/41/66% en España, Portugal y otros).
+  Colombia 56,8 pts (adoptante), México 52,0.
+- **Colombia (GoDaddy/Advanis, ene. 2025):** 83% dice que las redes son clave para vender, 58% no llega al público, 51% no convierte
+  seguidores en clientes, 48% no sabe qué publicar, 41% no usa IA, solo 28% dice que le falta tiempo.
+- **México:** 5,45 M de mipymes; 37% con presupuesto de marketing, 65% sin estrategia (INEGI vía Shortway).
+- **Tendencia 2026 (Cyberclick/Metricool, España/México/Colombia):** reto n.º 1 saturación (52%); alcance Reels −35%; video corto manda; TikTok crece.
+- **Precios:** community manager junior Colombia COP 1,5–2 M/mes (18–24 M/año); México ~2,5 M COP; España 6,7–9 M COP; gestión de redes en México MXN 1.800–9.000/mes.
+  Cerebro ≈ COP 10 M una vez (tasa aprox. 4.000).
+- **Conclusión:** vender **clientes y qué publicar** antes que "tiempo"; Done With You; simple por fuera; video corto en varias redes. Empezar por Colombia.

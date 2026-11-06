@@ -7,6 +7,7 @@
 - Código de publicación arreglado instalado por Santi en Apps Script (13:06, probarConexion OK). Prueba real con v3 el 7 nov.
 - Carpeta "Código Bueno Instagram para Juanita" en Drive (solo Instagram, sin datos de Santi). Copia en `compartir/juanita-instagram/`.
 - Estudio de mercado: pestaña nueva "Avatar a fondo y oferta" en el doc (https://claude.ai/artifact/FYvisqxemd2djcUQgZoCBs). Resumen en `estudio-de-mercado.md`. Faltan decisiones de Santi sobre la oferta.
+- Estudio de mercado rehecho con datos hispanohablantes (pestaña 1 nueva; pestaña 2 avatar y oferta con datos LatAm). Resumen en `estudio-de-mercado.md`.
 - Santi ahora trabaja desde el PC (no iPad). Memoria actualizada.
 - Calendar 6 nov: borrado el evento de plan "📰 Noticias IA · Video 2" (quedaba doble con el ✅ Publicado). Code.gs y YouTube.gs enviados a Santi como archivo para pegarlos en Apps Script.
 
