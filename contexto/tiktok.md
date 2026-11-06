@@ -44,3 +44,26 @@
 - appsscript.json con `script.send_mail` instalado 6 nov (antes faltaba: sin él no llega el correo). probarTikTok OK.
 - Siguiente: prueba real (v3, 7 nov 11:00 → TikTok ~11:30 a borradores) y luego auditoría
   (Production: ícono, mismos links, video demo) para publicación directa.
+
+## Plan B · publicación directa (código listo 6 nov, interruptor APAGADO)
+- `TikTok.gs` › `TT.DIRECTO: false`. En `true`: pregunta `creator_info`, publica con `/post/publish/video/init/`
+  (caption = descripción, privacidad `TT.PRIVACIDAD`; si TikTok no la deja usa `SELF_ONLY` y lo avisa en Link TikTok),
+  columna pasa por `Publicando` → `Publicado`. Pide el scope `video.publish` (hay que volver a Conectar TikTok).
+- Sin auditoría aprobada todo lo directo sale en PRIVADO. Por eso el interruptor sigue apagado hasta que aprueben.
+
+### Pasos para la auditoría (después de que el v3 salga bien a borradores)
+1. Sandbox Pruebas: prender **Direct Post** (scope `video.publish`) › Apply changes.
+2. `TT.DIRECTO: true` › Plan IG › Conectar TikTok otra vez › subir un video de prueba (sale privado).
+3. Grabar la pantalla de ese flujo (hoja → Publicar → aparece en TikTok) = **video demo** (mp4, < 50 MB).
+4. Production: mismos datos (ícono, categoría, descripción, links, Redirect URI), Login Kit + Content Posting API
+   con Direct Post, scopes `user.info.basic`, `video.upload`, `video.publish`. Ideal: web propia (día 11) en vez del Instagram.
+5. Submit for review con los textos de abajo. Cuando aprueben: claves de Production a Propiedades, Conectar TikTok, listo.
+
+### Textos para el formulario (inglés)
+- **How Login Kit is used:** "The account owner logs in once with Login with TikTok from our private content plan
+  (a Google Sheet with Apps Script) to authorize the app. We only read basic profile info to show which account is connected."
+- **How video.upload is used:** "When the owner approves a video in the content plan, the app uploads that video to the
+  owner's TikTok inbox as a draft so they can review, edit and post it."
+- **How video.publish is used:** "The owner schedules their own original videos in the content plan, writing the caption
+  and approving each one. At the scheduled time the app posts it to the owner's own account, using the privacy and
+  interaction settings allowed by creator_info. Only the owner's account is used; no other users' data is accessed."

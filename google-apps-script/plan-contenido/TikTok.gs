@@ -20,11 +20,15 @@
 
 const TT = {
   ACTIVO: true,                                   // false = apaga TikTok sin tocar Instagram ni YouTube
+  // INTERRUPTOR · false = llega a borradores (plan A). true = se publica solo (plan B).
+  // Antes de ponerlo en true: la app debe tener "Direct Post" + scope video.publish, y hay que volver a
+  // Conectar TikTok. Mientras TikTok no apruebe la auditoría, lo publicado queda en PRIVADO (solo tú lo ves).
+  DIRECTO: false,
+  PRIVACIDAD: 'PUBLIC_TO_EVERYONE',               // con DIRECTO: a quién se muestra (si TikTok no lo deja, usa SELF_ONLY)
   CORREO: 'santiagopineda3030@gmail.com',         // a dónde llega el aviso con la descripción para copiar
   API: 'https://open.tiktokapis.com/v2',
   AUTH: 'https://www.tiktok.com/v2/auth/authorize/',
-  SCOPES: 'user.info.basic,video.upload',
-  ESTADOS: ['Publicar', 'Pendiente', 'No', 'Subiendo', 'En borradores', 'Publicado', 'Error'],
+  ESTADOS: ['Publicar', 'Pendiente', 'No', 'Subiendo', 'En borradores', 'Publicando', 'Publicado', 'Error'],
   COLUMNAS: ['TikTok', 'Link TikTok']
 };
 
@@ -52,6 +56,7 @@ function prepararTikTok_() {
 
 /* ---------- Conexión (OAuth) ---------- */
 
+const ttScopes_ = () => 'user.info.basic,video.upload' + (TT.DIRECTO ? ',video.publish' : '');
 const ttProp_ = k => String(PropertiesService.getScriptProperties().getProperty(k) || '').trim();
 const ttRegreso_ = () => 'https://script.google.com/macros/d/' + ScriptApp.getScriptId() + '/usercallback';
 
@@ -60,7 +65,7 @@ function conectarTikTok() {
   const key = ttProp_('TIKTOK_CLIENT_KEY');
   if (!key || !ttProp_('TIKTOK_CLIENT_SECRET')) throw new Error('Faltan TIKTOK_CLIENT_KEY y TIKTOK_CLIENT_SECRET en Propiedades del script');
   const state = ScriptApp.newStateToken().withMethod('tiktokVolver').withTimeout(600).createToken();
-  const url = TT.AUTH + '?client_key=' + encodeURIComponent(key) + '&scope=' + encodeURIComponent(TT.SCOPES) +
+  const url = TT.AUTH + '?client_key=' + encodeURIComponent(key) + '&scope=' + encodeURIComponent(ttScopes_()) +
     '&response_type=code&redirect_uri=' + encodeURIComponent(ttRegreso_()) + '&state=' + encodeURIComponent(state);
   console.log('Abre este link para conectar TikTok: ' + url);
   try {
@@ -132,7 +137,7 @@ function probarTikTok() {
 function tiktokFila_(f, i) {
   if (!TT.ACTIVO || !f.col.tt) return false;
   const est = String(f.v(i, 'tt')).trim();
-  if (est === 'En borradores') { revisarTikTok_(f, i); return false; }
+  if (est === 'En borradores' || est === 'Publicando') { revisarTikTok_(f, i); return false; }
   if (!(est === 'Publicar' || est === 'Pendiente')) return false;
   if (!ttProp_('TIKTOK_REFRESH')) return false; // sin conectar: queda en Pendiente
   f.set(i, 'tt', 'Subiendo');
@@ -140,12 +145,30 @@ function tiktokFila_(f, i) {
   try {
     const file = archivo_(f.v(i, 'video'));
     const size = file.getSize();
-    const ini = tt_('/post/publish/inbox/video/init/', {
-      source_info: { source: 'FILE_UPLOAD', video_size: size, chunk_size: size, total_chunk_count: 1 } });
+    const fuente = { source: 'FILE_UPLOAD', video_size: size, chunk_size: size, total_chunk_count: 1 };
+    let ini, privada = false;
+    if (TT.DIRECTO) {
+      // Plan B: publicación directa. TikTok dice qué privacidad deja usar a esta cuenta/app.
+      const info = tt_('/post/publish/creator_info/query/', {});
+      const opciones = info.privacy_level_options || [];
+      const privacidad = opciones.includes(TT.PRIVACIDAD) ? TT.PRIVACIDAD : 'SELF_ONLY';
+      privada = privacidad === 'SELF_ONLY';
+      ini = tt_('/post/publish/video/init/', { source_info: fuente, post_info: {
+        title: String(f.v(i, 'desc')).trim().slice(0, 2200), privacy_level: privacidad,
+        disable_comment: !!info.comment_disabled, disable_duet: !!info.duet_disabled, disable_stitch: !!info.stitch_disabled,
+        brand_content_toggle: false, brand_organic_toggle: false } });
+    } else {
+      ini = tt_('/post/publish/inbox/video/init/', { source_info: fuente });
+    }
     const r = UrlFetchApp.fetch(ini.upload_url, { method: 'put', contentType: 'video/mp4', muteHttpExceptions: true,
       payload: file.getBlob().getBytes(), headers: { 'Content-Range': 'bytes 0-' + (size - 1) + '/' + size } });
     if (r.getResponseCode() >= 300) throw new Error('Subida ' + r.getResponseCode() + ': ' + r.getContentText().slice(0, 200));
     PropertiesService.getScriptProperties().setProperty('tt_' + idDe_(f.v(i, 'video')), ini.publish_id);
+    if (TT.DIRECTO) {
+      f.set(i, 'tt', 'Publicando');
+      f.set(i, 'ttlink', 'TikTok procesando el video' + (privada ? ' (sale en PRIVADO: la app aún no está aprobada)' : ''));
+      return true;
+    }
     f.set(i, 'tt', 'En borradores');
     f.set(i, 'ttlink', 'Llegó a tus borradores de TikTok: publícalo antes de 24 h (' +
       Utilities.formatDate(new Date(), tz_(), 'dd/MM HH:mm') + ')');
@@ -157,7 +180,7 @@ function tiktokFila_(f, i) {
   return true;
 }
 
-/** Pregunta a TikTok si ya publicaste el borrador. */
+/** Pregunta a TikTok si ya se publicó (borrador que publicaste tú, o publicación directa). */
 function revisarTikTok_(f, i) {
   const id = ttProp_('tt_' + idDe_(f.v(i, 'video')));
   if (!id || !ttProp_('TIKTOK_REFRESH')) return;
