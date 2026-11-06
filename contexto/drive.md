@@ -53,3 +53,5 @@ Kit de edición ContentIA (áreas, skills y reglas por red): `contexto/kit-conte
 
 ## Código Bueno Instagram para Juanita (6 nov) · `1QdFwOA0CVx_8jlRSCfHYuHqnlPlFYoNg` (Mi unidad, fuera de ContentIA)
 Versión solo Instagram del script arreglado, sin datos de Santi (CONFIG vacío). Code.gs `1FssmoYNrU9GFtKrfeDVJ_eJQwe0O0PzT` · appsscript.json `1DGGj9bFUUWn8gVTr_RXxvFsEOsRrbBqm` · LÉEME `1g3iV0q02gN89-RibgBc4R9Yk-XOl7xlG7s40t7ubx6I`. Copia: `compartir/juanita-instagram/`. Santi la comparte él.
+
+| Encuesta "Tu negocio y las redes" (Google Form, 6 nov) | Mi unidad | `1CVQwGceqYQo_EoAcjVO-zFKJadF3MuOXo-EkOg1lvAg` | código: `google-apps-script/encuesta/CrearEncuesta.gs` |
