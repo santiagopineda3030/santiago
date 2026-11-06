@@ -19,6 +19,7 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
   | `contexto/tiktok.md` | TikTok: borrador automático (plan A), app de TikTok, auditoría |
   | `contexto/licencias.md` | Plan para entregar carpetas a clientes sin que las compartan (se monta al final) |
   | `contexto/ai-work.md` | Oferta, embudo, entrega, pendientes del negocio |
+  | `contexto/producto.md` | Qué recibe el cliente: carpetas plantilla, módulos de Skool, requisitos |
   | `contexto/estudio-de-mercado.md` | Textos de venta, guiones de leads |
   | `editor-noticias/README.md` | Editar videos |
 - **Al terminar cada tarea:** una línea en `contexto/bitacora.md`, actualizar este archivo si cambió algo

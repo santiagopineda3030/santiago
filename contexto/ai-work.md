@@ -148,3 +148,4 @@ Meta: todo listo para captar leads el 18 de noviembre de 2026.
 - Nota: antes Skool estaba "descartado" como oferta aparte; ahora es solo la **plataforma de entrega** del curso.
 - Pendiente después: que no dupliquen ni compartan el Drive → plan en `licencias.md`.
 - Por definir: contenido exacto del Skool (módulos) y de cada carpeta de Drive plantilla.
+- 6 nov: clase 1 a 1 la da Santi por ahora. El cliente edita igual que Santi (Claude Code). Skool: falta crearlo. Detalle del producto: `contexto/producto.md`.

@@ -1,0 +1,35 @@
+# Producto: lo que se entrega al cliente (borrador 6 nov 2026)
+
+El cliente recibe **el mismo sistema que usa Santi** (sus redes son la prueba). Hasta el 18 nov: hacer muchas pruebas
+con los videos de Santi para dejarlo estable y venderlo. Clase 1 a 1: la da Santi por ahora.
+
+## Requisitos del cliente
+- Cuenta de Google (Drive, Sheets, Apps Script: gratis).
+- **Claude con Claude Code** (plan Max ~$100/mes si edita video seguido; Pro $20 si no).
+- Instagram profesional + página de Facebook (para publicar), canal de YouTube, cuenta de TikTok.
+
+## Carpetas de Drive plantilla (lo que se copia por cliente)
+| Carpeta | Qué lleva | Viene de |
+|---|---|---|
+| 0. Sistema | Code.gs, YouTube.gs, TikTok.gs, appsscript.json + LÉEME de instalación | `google-apps-script/plan-contenido/` |
+| Plan de contenido (hoja) | Pestañas del mes, COLA POR EDITAR, CAL IG, columnas de YouTube/TikTok | hoja de Santi, vacía |
+| Guiones | Ideas / Guiones en frío / Guiones terminados + plantilla de guion | `contexto/guiones.md` |
+| Edición de videos | 1. Videos en frío / 2. Videos terminados + LÉEME | `areas/5-edicion-videos` |
+| Recursos | Guía de edición y reglas por red (con "Ajustes del cliente") | `drive-respaldo/recursos/` |
+| Repositorio de Claude | Memoria (CLAUDE.md), skills, editor de video | este repo, versión plantilla |
+
+## Módulos del curso en Skool (borrador)
+1. **Bienvenida**: qué es el Cerebro y cómo se ve funcionando (sin mostrar herramientas en redes, aquí sí se explican).
+2. **Instalación (semana 1)**: copiar carpetas, conectar Instagram/Meta, YouTube, TikTok, pegar el Apps Script, probar.
+3. **Carga**: llenar la marca, referentes, B-roll, guía de edición propia.
+4. **Rutina diaria**: guion → grabar → subir a "Videos en frío" → Claude edita → revisar → programar.
+5. **Gestor IA**: cómo revisar y aprobar (checklist), qué corregir, cuándo poner "Publicar".
+6. **Problemas comunes**: token vencido, video privado en YouTube, errores en la hoja.
+7. **Bono**: análisis de la cuenta y opciones de mejora.
+
+## Por hacer antes del 18 nov
+- [ ] Pruebas diarias: v3, v4… publicando solos en IG + YouTube (+ TikTok cuando esté).
+- [ ] Crear la comunidad de Skool (Santi aún no la tiene).
+- [ ] Versión "plantilla" de cada carpeta, sin datos de Santi (como la de Juanita).
+- [ ] Grabar los módulos.
+- [ ] Protección contra duplicar/compartir (`licencias.md`).
