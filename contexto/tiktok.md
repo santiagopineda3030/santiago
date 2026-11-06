@@ -41,5 +41,6 @@
 - Propiedades: `TIKTOK_CLIENT_KEY` y `TIKTOK_CLIENT_SECRET` del **Sandbox Pruebas** (no de Production).
 - Plan IG › Conectar TikTok → "✅ TikTok conectado". El menú Plan IG queda escondido en "..." si la ventana es angosta.
 - Términos y Privacidad: Google Docs públicos (IDs en `drive.md`). Web URL = perfil de Instagram (cambiar a la web cuando exista).
-- Siguiente: Probar conexión con TikTok, prueba real (v3, 7 nov 11:00 → TikTok ~11:30 a borradores) y luego auditoría
+- appsscript.json con `script.send_mail` instalado 6 nov (antes faltaba: sin él no llega el correo). probarTikTok OK.
+- Siguiente: prueba real (v3, 7 nov 11:00 → TikTok ~11:30 a borradores) y luego auditoría
   (Production: ícono, mismos links, video demo) para publicación directa.

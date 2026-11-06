@@ -102,3 +102,4 @@
 - 6 nov 2026 · Code.gs + TikTok.gs: TikTok vuelve a salir solo (queda Pendiente a la hora de IG y sube en la vuelta siguiente, cuenta como paso pesado). Falta que Santi pegue los dos archivos.
 - 6 nov 2026 · 4:15 p. m. · 📁 TikTok: INSTALADO. Santi pegó TikTok.gs + Code.gs, puso las claves del sandbox y conectó la cuenta (✅ TikTok conectado). Falta probar con un video real y pedir la auditoría.
 - 6 nov 2026 · 4:25 p. m. · Probar conexión con TikTok OK ("TikTok conectado: Santiago"). Primera prueba real: v3, 7 nov (IG 11:00 → TikTok ~11:30 a borradores + correo).
+- 6 nov 2026 · 4:31 p. m. · appsscript.json instalado con script.send_mail (faltaba) y permisos aceptados: probarTikTok OK. TikTok listo para la prueba del v3 (7 nov).
