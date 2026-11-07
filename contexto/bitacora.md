@@ -115,3 +115,4 @@
 - 6 nov 2026 · 4:25 p. m. · Probar conexión con TikTok OK ("TikTok conectado: Santiago"). Primera prueba real: v3, 7 nov (IG 11:00 → TikTok ~11:30 a borradores + correo).
 - 6 nov 2026 · 4:31 p. m. · appsscript.json instalado con script.send_mail (faltaba) y permisos aceptados: probarTikTok OK. TikTok listo para la prueba del v3 (7 nov).
 - 6 nov 2026 · TikTok plan B (publicación directa) programado en TikTok.gs con interruptor TT.DIRECTO (apagado). Pasos y textos de la auditoría en contexto/tiktok.md.
+- 7 nov 2026 · 📁 Edición de videos: v3 1.0 (noticias 6 nov) editado y enviado a Santi. Crudo vertical 4K 120 fps (7,6 GB): mirada solo en tomas usadas, zoom base 1.4 + centro-y 0.53, 6 escenas nuevas (hack banco, SWAT, países, itinerario, resumen IA, app), música. 74,5 s, −14 LUFS, 27 MB. Crudo abierto con enlace: Santi debe volverlo a Restringido.

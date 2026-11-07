@@ -321,16 +321,19 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 
 # --------------------------------------------------------------------------- render
 CENTRO_X = 0.5  # dónde está la persona en el cuadro (0 = izquierda, 1 = derecha)
+CENTRO_Y = 0.5  # centro vertical del recorte (0 = arriba, 1 = abajo)
+ZOOM_BASE = 1.0  # acercamiento base (crudos vertical con mucho espacio arriba: 1.3–1.4)
 
 
 def filtro_encuadre(info, zoom):
     """Escala y recorta a 9:16 alrededor de CENTRO_X con el zoom indicado."""
+    zoom = zoom * ZOOM_BASE
     if info["w"] / info["h"] >= W / H:  # más ancho que 9:16 → ajustar alto
         esc = f"scale=-2:{int(H * zoom) // 2 * 2}"
     else:
         esc = f"scale={int(W * zoom) // 2 * 2}:-2"
     x = f"max(0\\,min(iw-{W}\\,iw*{CENTRO_X}-{W}/2))"
-    return f"{esc}:flags=lanczos,crop={W}:{H}:{x}:(ih-{H})/2,setsar=1,fps={FPS},format=yuv420p"
+    return f"{esc}:flags=lanczos,crop={W}:{H}:{x}:max(0\\,min(ih-{H}\\,ih*{CENTRO_Y}-{H}/2)),setsar=1,fps={FPS},format=yuv420p"
 
 
 def congelar(pz, dur):

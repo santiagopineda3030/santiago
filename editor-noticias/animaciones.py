@@ -517,6 +517,8 @@ def g_ia_crea_ia(dur, titulo="IA creando mejores IA"):
 # --------------------------------------------------------------------------- escenas a pantalla completa (v2)
 # Todo el contenido dentro de la zona segura de Instagram: x 120–960, y 250–1500.
 def _titulo_escena(im, texto, y=330, color=BLANCO):
+    if not texto:
+        return
     y = max(y, 450)  # debajo del título de la noticia (y ≈ 250–380)
     pegar_centro(im, texto_ajustado(texto, 60, 820, color), W / 2, y)
 
@@ -872,8 +874,9 @@ def g_swat(dur, titulo="EL SWAT DE LA IA", sub="Estados Unidos"):
     cx, cy, r = W / 2, 860, 330
     hk = emoji("🦹", 96)
     objetivos = [(-160, -120), (170, -60), (-60, 170), (120, 190), (-220, 60)]
-    placa = tarjeta(560, 130, relleno=ROJO + (255,), radio=20, borde=(255, 255, 255, 230))
-    pegar_centro(placa, texto_img(titulo, 60, BLANCO), 280, 65)
+    tt = texto_ajustado(titulo, 60, 760, BLANCO)
+    placa = tarjeta(tt.width + 80, 130, relleno=ROJO + (255,), radio=20, borde=(255, 255, 255, 230))
+    pegar_centro(placa, tt, placa.width / 2, 65)
     sb = texto_emoji("🇺🇸", sub, 46)
 
     def cuadro(t):

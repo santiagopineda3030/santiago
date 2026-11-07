@@ -252,9 +252,13 @@ def main():
     ap.add_argument("--congelar-max", type=float, default=0.5, help="máx. s de imagen sostenida en cada borde")
     ap.add_argument("--musica", help="WAV de música de fondo (48 kHz estéreo)")
     ap.add_argument("--musica-db", type=float, default=-21.0, help="nivel de la música bajo la voz (dB)")
+    ap.add_argument("--centro-y", type=float, default=0.5)
+    ap.add_argument("--zoom-base", type=float, default=1.0)
     ap.add_argument("--centro-x", type=float, default=0.53)
     a = ap.parse_args()
     editar.CENTRO_X = a.centro_x
+    editar.CENTRO_Y = a.centro_y
+    editar.ZOOM_BASE = a.zoom_base
 
     edl = json.loads(Path(a.edl).read_text(encoding="utf-8"))
     CLAVES_EXTRA.update(normalizar(c) for c in edl.get("claves", []))
