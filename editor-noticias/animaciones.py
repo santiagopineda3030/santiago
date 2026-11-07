@@ -805,6 +805,241 @@ def g_igual(dur, izq="☕", der="🎬", texto="El video de tu anuncio", sub="por
     return Grafico(dur, (0, 0, W, H), cuadro, "pop")
 
 
+# --------------------------------------------------------------------------- escenas v3 (6 nov)
+def texto_emoji(ch, texto, tam, color=BLANCO, negra=True):
+    """Emoji a color + texto en la misma línea (la fuente Inter no dibuja emojis)."""
+    e = emoji(ch, int(tam * 1.15))
+    tx = texto_img(texto, tam, color, negra)
+    im = Image.new("RGBA", (e.width + 14 + tx.width, max(e.height, tx.height)), (0, 0, 0, 0))
+    im.alpha_composite(e, (0, (im.height - e.height) // 2))
+    im.alpha_composite(tx, (e.width + 14, (im.height - tx.height) // 2))
+    return im
+
+
+def _banco(tam=360, color=BLANCO):
+    im = Image.new("RGBA", (tam, tam), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    w = tam
+    d.polygon([(w * 0.08, w * 0.34), (w * 0.5, w * 0.08), (w * 0.92, w * 0.34)], fill=color + (255,))
+    d.rectangle((w * 0.1, w * 0.36, w * 0.9, w * 0.42), fill=color + (255,))
+    for i in range(5):
+        x = w * (0.16 + i * 0.16)
+        d.rectangle((x, w * 0.46, x + w * 0.07, w * 0.8), fill=color + (255,))
+    d.rectangle((w * 0.06, w * 0.82, w * 0.94, w * 0.9), fill=color + (255,))
+    return im
+
+
+def g_hack_banco(dur, hasta=1_000_000, titulo="IAs ATACANDO BANCOS"):
+    """Gancho: banco bajo ataque, lluvia de código rojo, alerta parpadeando y dinero que se va."""
+    import random
+    rnd = random.Random(11)
+    f = fuente(34, negra=False)
+    cols = [(x, rnd.uniform(0, 1), rnd.uniform(500, 1100)) for x in range(130, 960, 46)]
+    chars = "01$#@!ABCDEF0x7F"
+    banco = _banco(380)
+    banco_r = _banco(380, ROJO)
+    alerta = tarjeta(520, 110, relleno=ROJO + (255,), radio=24, borde=(255, 255, 255, 230))
+    pegar_centro(alerta, texto_img("⚠ ATAQUE CON IA", 54, BLANCO), 260, 55)
+
+    def cuadro(t):
+        a, _ = _entrada_salida(t, dur, 0.1)
+        im = Image.new("RGBA", (W, H), (18, 4, 6, 255))
+        d = ImageDraw.Draw(im)
+        for x, fase, vel in cols:
+            y0 = ((fase * 1400 + t * vel) % 1400) + 250
+            for k in range(9):
+                yy = y0 - k * 40
+                if 250 <= yy <= 1500:
+                    d.text((x, yy), rnd.choice(chars), font=f, fill=(255, 60, 60, max(20, 230 - k * 26)))
+        _titulo_escena(im, titulo, 450)
+        sacudida = 10 * math.sin(t * 60) * clamp(1 - t / 0.5)
+        roja = int(t * 6) % 2 == 0
+        pegar_centro(im, banco_r if roja else banco, W / 2 + sacudida, 760)
+        ka = ease_out_back(clamp((t - 0.15) / 0.25))
+        if ka > 0:
+            pegar_centro(im, escalar(alerta, ka), W / 2, 1010)
+        v = round(hasta * ease_out(clamp((t - 0.2) / (dur * 0.7))))
+        pegar_centro(im, texto_img(f"-US${v:,}".replace(",", "."), 104, ROJO), W / 2, 1180)
+        pegar_centro(im, texto_img("robados con IA", 44, BLANCO, negra=False), W / 2, 1270)
+        return con_alfa(im, a)
+
+    return Grafico(dur, (0, 0, W, H), cuadro, "alerta")
+
+
+def g_swat(dur, titulo="EL SWAT DE LA IA", sub="Estados Unidos"):
+    """Gancho: radar que barre y marca a los hackers con una X; placa de SWAT que cae."""
+    fondo = _fondo_oscuro()
+    cx, cy, r = W / 2, 860, 330
+    hk = emoji("🦹", 96)
+    objetivos = [(-160, -120), (170, -60), (-60, 170), (120, 190), (-220, 60)]
+    placa = tarjeta(560, 130, relleno=ROJO + (255,), radio=20, borde=(255, 255, 255, 230))
+    pegar_centro(placa, texto_img(titulo, 60, BLANCO), 280, 65)
+    sb = texto_emoji("🇺🇸", sub, 46)
+
+    def cuadro(t):
+        a, _ = _entrada_salida(t, dur, 0.1)
+        im = fondo.copy()
+        d = ImageDraw.Draw(im)
+        for k in (1, 0.66, 0.33):
+            d.ellipse((cx - r * k, cy - r * k, cx + r * k, cy + r * k), outline=(90, 255, 140, 120), width=4)
+        d.line((cx - r, cy, cx + r, cy), fill=(90, 255, 140, 60), width=2)
+        d.line((cx, cy - r, cx, cy + r), fill=(90, 255, 140, 60), width=2)
+        ang = t * 4.2
+        for j in range(18):
+            aa = ang - j * 0.04
+            d.line((cx, cy, cx + r * math.cos(aa), cy + r * math.sin(aa)), fill=(90, 255, 140, 200 - j * 11), width=6)
+        for ox, oy in objetivos:
+            pegar_centro(im, hk, cx + ox, cy + oy)
+            a_obj = math.atan2(oy, ox) % (2 * math.pi)
+            if ang % (2 * math.pi) > a_obj or ang > 2 * math.pi:
+                d.line((cx + ox - 50, cy + oy - 50, cx + ox + 50, cy + oy + 50), fill=ROJO + (255,), width=14)
+                d.line((cx + ox + 50, cy + oy - 50, cx + ox - 50, cy + oy + 50), fill=ROJO + (255,), width=14)
+        kp = clamp((t - 0.1) / 0.2)
+        if kp > 0:
+            pegar_centro(im, con_alfa(escalar(placa, 2.0 - ease_out(kp)), kp), W / 2, 450)
+            pegar_centro(im, con_alfa(sb, kp), W / 2, 560)
+        return con_alfa(im, a)
+
+    return Grafico(dur, (0, 0, W, H), cuadro, "golpe")
+
+
+def g_paises(dur, titulo="ALERTA EN LOS BANCOS"):
+    """Dos países en alerta con anillos rojos que laten."""
+    fondo = _fondo_oscuro()
+
+    def panel(flag, nombre, txt):
+        c = tarjeta(360, 470, relleno=(28, 28, 34, 255), borde=(255, 255, 255, 70))
+        pegar_centro(c, emoji(flag, 150), 180, 140)
+        pegar_centro(c, texto_img(nombre, 50, BLANCO), 180, 270)
+        pegar_centro(c, texto_ajustado(txt, 36, 320, BLANCO, negra=False), 180, 370)
+        return c
+
+    p1 = panel("🇮🇳", "India", "alerta a todos sus bancos")
+    p2 = panel("🇰🇷", "Corea del Sur", "una IA ya hackeó bancos")
+
+    def cuadro(t):
+        a, _ = _entrada_salida(t, dur)
+        im = fondo.copy()
+        _titulo_escena(im, titulo, 450, ROJO)
+        d = ImageDraw.Draw(im)
+        for i, (p, x) in enumerate(((p1, 130), (p2, 590))):
+            k = ease_out_back(clamp((t - i * 0.2) / 0.3))
+            if k <= 0:
+                continue
+            pul = (t * 1.6 + i * 0.5) % 1
+            rr = 200 + 140 * pul
+            ccx, ccy = x + 180, 780
+            d.ellipse((ccx - rr, ccy - rr, ccx + rr, ccy + rr), outline=ROJO + (int(200 * (1 - pul)),), width=8)
+            pegar_centro(im, escalar(p, k), ccx, ccy)
+        return con_alfa(im, a)
+
+    return Grafico(dur, (0, 0, W, H), cuadro, "alerta")
+
+
+def g_itinerario(dur, ruta_logo=None, titulo="TU AGENTE DE VIAJES CON IA"):
+    """Celular con un mapa: la ruta se dibuja entre pines y aparecen las partes del viaje."""
+    fondo = _fondo_oscuro()
+    lg = logo_blanco(ruta_logo, 80, 300) if ruta_logo else None
+    pines = [(70, 420), (170, 300), (250, 360), (210, 170)]
+    items = [("✈️", "Vuelo"), ("🏠", "Dónde dormir"), ("🗺️", "Mapa"), ("📸", "Fotos")]
+
+    def cuadro(t):
+        a, _ = _entrada_salida(t, dur)
+        im = fondo.copy()
+        _titulo_escena(im, titulo, 450)
+        if lg:
+            pegar_centro(im, lg, W / 2, 545)
+        tel = tarjeta(330, 600, relleno=(232, 240, 236, 255), radio=46, borde=(255, 255, 255, 200))
+        d = ImageDraw.Draw(tel)
+        for gx in range(0, 330, 40):
+            d.line((gx, 0, gx, 600), fill=(200, 214, 206, 255), width=2)
+        for gy in range(0, 600, 40):
+            d.line((0, gy, 330, gy), fill=(200, 214, 206, 255), width=2)
+        k = clamp(t / (dur * 0.6)) * (len(pines) - 1)
+        for i in range(len(pines) - 1):
+            f = clamp(k - i)
+            if f > 0:
+                (x0, y0), (x1, y1) = pines[i], pines[i + 1]
+                d.line((x0, y0, x0 + (x1 - x0) * f, y0 + (y1 - y0) * f), fill=ROJO + (255,), width=8)
+        for i, (x, y) in enumerate(pines):
+            if k >= i - 0.05:
+                d.ellipse((x - 16, y - 16, x + 16, y + 16), fill=ROJO + (255,), outline=BLANCO + (255,), width=4)
+        im.alpha_composite(tel, (140, 640))
+        for i, txt in enumerate(items):
+            ki = ease_out_back(clamp((t - 0.3 - i * 0.22) / 0.25))
+            if ki > 0:
+                c = tarjeta(380, 100, relleno=(28, 28, 34, 255), radio=22, borde=(255, 255, 255, 80))
+                pegar_centro(c, texto_emoji(txt[0], txt[1], 40), 190, 50)
+                pegar_centro(im, escalar(c, ki), 720, 720 + i * 125)
+        return con_alfa(im, a)
+
+    return Grafico(dur, (0, 0, W, H), cuadro, "pop")
+
+
+def g_resumen_ia(dur, porcentaje=-7.4, titulo="LA IA DE GOOGLE VS. USA TODAY"):
+    """Búsqueda: aparece el resumen con IA arriba, el link al periódico se hunde y caen los ingresos."""
+    fondo = _fondo_oscuro()
+    caja = tarjeta(820, 100, relleno=(255, 255, 255, 255), radio=50, borde=(0, 0, 0, 0))
+    resumen = tarjeta(820, 250, relleno=(232, 236, 255, 255), radio=26, borde=(0, 0, 0, 0))
+    pegar_centro(resumen, texto_emoji("✨", "Resumen con IA", 44, (60, 60, 140)), 240, 50)
+    dr = ImageDraw.Draw(resumen)
+    for i, w in enumerate((720, 680, 560)):
+        dr.rounded_rectangle((40, 100 + i * 45, 40 + w, 122 + i * 45), 10, fill=(190, 196, 230, 255))
+    link = tarjeta(820, 120, relleno=(255, 255, 255, 255), radio=22, borde=(0, 0, 0, 0))
+    pegar_centro(link, texto_img("USA TODAY · la noticia completa", 38, (30, 30, 160)), 410, 60)
+    q = "noticias de hoy"
+
+    def cuadro(t):
+        a, _ = _entrada_salida(t, dur)
+        im = fondo.copy()
+        _titulo_escena(im, titulo, 450)
+        c = caja.copy()
+        n = int(clamp(t / 0.5) * len(q))
+        pegar_centro(c, texto_emoji("🔍", q[:n] or " ", 40, TINTA, negra=False), 410, 50)
+        im.alpha_composite(c, (130, 540))
+        kr = ease_out(clamp((t - 0.5) / 0.3))
+        y_link = 680 + int(280 * kr)
+        if kr > 0:
+            im.alpha_composite(con_alfa(resumen, kr), (130, 670))
+        im.alpha_composite(con_alfa(link, 1 - 0.6 * kr), (130, y_link))
+        kc = clamp((t - 0.8) / 0.4)
+        if kc > 0:
+            v = porcentaje * ease_out(kc)
+            pegar_centro(im, texto_img(f"{v:.1f} %".replace(".", ","), 120, ROJO), W / 2, 1230)
+            pegar_centro(im, texto_img("en sus ingresos", 44, BLANCO, negra=False), W / 2, 1330)
+        return con_alfa(im, a)
+
+    return Grafico(dur, (0, 0, W, H), cuadro, "whoosh")
+
+
+def g_app(dur, titulo="CURSOR CREA LA APP COMPLETA", pedido="Hazme una app de reservas"):
+    """Escribes lo que quieres y se va armando la app: base de datos, inicio de sesión, link y seguridad."""
+    fondo = _fondo_oscuro()
+    pasos = ["Base de datos", "Inicio de sesión", "Link para compartir", "Revisión de seguridad"]
+    f = fuente(38, negra=False)
+
+    def cuadro(t):
+        a, _ = _entrada_salida(t, dur)
+        im = fondo.copy()
+        _titulo_escena(im, titulo, 450, ROJO)
+        ed = tarjeta(820, 120, relleno=(8, 12, 10, 255), radio=22, borde=(255, 255, 255, 70))
+        n = int(clamp(t / 0.6) * len(pedido))
+        ImageDraw.Draw(ed).text((36, 38), "> " + pedido[:n] + ("_" if int(t * 4) % 2 else ""), font=f,
+                                fill=(90, 255, 140, 255))
+        im.alpha_composite(ed, (130, 540))
+        for i, p in enumerate(pasos):
+            k = ease_out_back(clamp((t - 0.6 - i * 0.25) / 0.25))
+            if k <= 0:
+                continue
+            c = tarjeta(820, 110, relleno=(28, 28, 34, 255), radio=22, borde=(255, 255, 255, 70))
+            pegar_centro(c, texto_img(p, 46, BLANCO), 360, 55)
+            pegar_centro(c, texto_img("✓", 60, (90, 255, 140)), 760, 55)
+            pegar_centro(im, escalar(c, k), W / 2, 760 + i * 135)
+        return con_alfa(im, a)
+
+    return Grafico(dur, (0, 0, W, H), cuadro, "ding")
+
+
 def g_transicion(dur=0.32):
     """Barrido diagonal rojo entre noticias."""
     def cuadro(t):

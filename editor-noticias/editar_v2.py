@@ -222,6 +222,18 @@ def construir(g, dur, assets):
         return A.g_anuncio(dur, f"{assets}/logo_{g['logo']}.png" if g.get("logo") else None, g.get("titulo", "YA ESTÁ EN GOOGLE ADS"))
     if t == "igual":
         return A.g_igual(dur, g.get("izq", "☕"), g.get("der", "🎬"), g["texto"], g["sub"])
+    if t == "hack_banco":
+        return A.g_hack_banco(dur, g.get("hasta", 1_000_000), g.get("titulo", "IAs ATACANDO BANCOS"))
+    if t == "swat":
+        return A.g_swat(dur, g.get("titulo", "EL SWAT DE LA IA"), g.get("sub", "Estados Unidos"))
+    if t == "paises":
+        return A.g_paises(dur, g.get("titulo", "ALERTA EN LOS BANCOS"))
+    if t == "itinerario":
+        return A.g_itinerario(dur, f"{assets}/logo_{g['logo']}.png" if g.get("logo") else None, g.get("titulo", "TU AGENTE DE VIAJES CON IA"))
+    if t == "resumen_ia":
+        return A.g_resumen_ia(dur, g.get("porcentaje", -7.4), g.get("titulo", "LA IA DE GOOGLE VS. USA TODAY"))
+    if t == "app":
+        return A.g_app(dur, g.get("titulo", "CURSOR CREA LA APP COMPLETA"), g.get("pedido", "Hazme una app de reservas"))
     if t == "transicion":
         return A.g_transicion(dur)
     raise ValueError(t)
