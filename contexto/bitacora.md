@@ -1,5 +1,8 @@
 # Bitácora (lo más nuevo arriba, una línea por cosa hecha)
 
+## 8 nov 2026
+- Meta paso 3: app Publicador Santi agregada a las Apps del negocio soysanti__content_ia (requisito para crear usuarios del sistema).
+
 ## 7 nov 2026 (madrugada) · Cierre del día (resumen de todas las carpetas)
 - **Santi · Base:** v2 marcado publicado + Calendar · código IG arreglado e instalado (un paso pesado por vuelta) · carpeta Juanita ·
   estudio de mercado hispano + competencia + encuesta · oferta cerrada · modelo de entrega/producto · hoja de ruta al 18 · plan maestro ·
