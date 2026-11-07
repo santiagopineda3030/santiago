@@ -59,3 +59,13 @@
 Portfolio comercial (negocio): **soysanti__content_ia** (2 páginas, 2 personas). Hay 2 negocios vacíos "Prueba 1" y "Prueba 1.1": no se usan.
 Cuenta publicitaria: **ContentIA Ads**, ID `1449021934086792` (en la API: `act_1449021934086792`).
 Datos (no secretos) cuando existan: ID de cuenta publicitaria (`act_…`), ID del píxel, ID del usuario del sistema.
+
+## Dónde quedamos (7 nov, noche) → seguir el 8 nov
+- Hechos: paso 1 (cuenta ContentIA Ads `act_1449021934086792`, USD, Bogotá) y paso 2 (API de marketing + app unida al negocio).
+- **Siguiente: paso 3, usuario del sistema.** Santi estaba en Configuración › Personas y no encontraba "Usuarios del sistema"
+  (el menú solo muestra iconos). Probar: `business.facebook.com/latest/settings/system_users`, o pasar el mouse sobre el
+  icono de tarjeta de persona, o abrir el menú con el icono ▯▷ de abajo. Crear `Robot ContentIA`, rol **Administrador**.
+- Luego: asignarle cuenta publicitaria, página, IG y la app (control total) → paso 4 token → paso 5 píxel.
+- Pendientes de Santi: costo por lead objetivo (semáforo) y hora del reporte (propuesta 8:00 a. m.); pegar en Drive la regla
+  "reporte de rentabilidad sincero, no se cambia el CTA" en Ajustes de Santi.
+- Guía en el chat: paso a paso con captura en cada pantalla (le funcionó bien).
