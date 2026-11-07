@@ -39,6 +39,9 @@
 ## 6 nov 2026
 - Guion v3 (noticias 6 nov, publica 7 nov) revisado con Santi y terminado: salió Anthropic/METR; entran hackers con IA en bancos + Claude en tu banco, y el "SWAT de la IA" (DOJ). Orden de Santi: Polémica 1 → Viral 1 → Viral 2 → Polémica 2 → Útil. Doc `1Lxkueghx4_c3Ba4EYWk-_mR3YWR0brMl7v94R7dFP5M` en IG › 3. Guiones terminados; en frío a la papelera. Hoja fila v3: `Grabar`, Ángulo, links, Título YouTube. Copia: `drive-respaldo/guiones/v3-noticias-ia-6-nov.md`.
 
+## 7 nov 2026
+- Anuncios (Meta): acordado el flujo y el plan de automatización (subida en pausa + Santi activa y paga + reporte diario). Nada instalado aún. Detalle: `anuncios-meta.md`.
+
 ## 5 nov 2026 · Cierre del día (resumen por carpeta)
 - **Santi · Base:** creado como chat de rutina diaria. Regla: un solo guion para IG, TikTok y Shorts (YouTube largo aparte).
   Tarea de las 4:35 ajustada a 1 idea + 1 guion. Carpeta Edición de videos montada y su chat. Cierre del día.

@@ -16,6 +16,7 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
   | `contexto/instagram-meta.md` | Publicación automática, token, errores de Meta |
   | `contexto/youtube.md` | YouTube Shorts automático: columnas, instalación, riesgo de video privado |
   | `contexto/guiones.md` | Carpetas de guiones (ideas, en frío, terminados), recursos por red, tarea de las 4:35 p. m. |
+  | `contexto/anuncios-meta.md` | Anuncios Meta: flujo acordado, plan de automatización, qué falta |
   | `contexto/tiktok.md` | TikTok: borrador automático (plan A), app de TikTok, auditoría |
   | `contexto/licencias.md` | Plan para entregar carpetas a clientes sin que las compartan (se monta al final) |
   | `contexto/ai-work.md` | Oferta, embudo, entrega, pendientes del negocio |
