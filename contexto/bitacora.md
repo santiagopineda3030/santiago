@@ -153,3 +153,4 @@
 - 7 nov 13:23 · ✅ probarSubidaInstagram: Instagram aceptó el v3 (FINISHED) con video_url desde Drive. Código instalado por Santi. Mañana v4 es la prueba real.
 - 7 nov 13:40 · Drive: v1, v2 y v3 editados → papelera (ya publicados en todo). Idea v3 copiada a drive-respaldo/guiones/v3-idea.md y a la papelera. Ya no quedan crudos. Hoja v3: TikTok Publicado. Santi debe vaciar la papelera.
 - 7 nov 13:50 · Regla nueva (Santi): Claude pone 'Publicar' en la hoja cuando Santi lo confirma en el chat (antes lo ponía Santi).
+- 7 nov 13:58 · Buzón de subida: clave nueva (Santi), URL guardada en editor-noticias/subir-drive/LEEME.md, prueba OK. Falta: Santi pone SUBIDA_URL y SUBIDA_CLAVE en el entorno (los chats nuevos los leen).
