@@ -55,3 +55,5 @@ Ficha de cada referente: Código (R1, R2…) · Nombre del formato · Formato (9
 
 ## 9. Ajustes de Santi
 (Escribe aquí lo que quieras cambiar después de ver cada edición.)
+- **7 nov 2026:** Cuando Santi quiera pasar un video ya editado a anuncios, Claude primero hace un **reporte de
+  rentabilidad 100% sincero** (Sí / No / Sí con cambios, con razones). **No se cambia el CTA** del video.

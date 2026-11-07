@@ -11,4 +11,7 @@ Este chat trabaja **un anuncio**. Reglas generales: `CLAUDE.md` de la raíz. Pas
    Santi aprueba y lo sube a Ads Manager. **Claude nunca toca Ads Manager. Nunca renombrar un anuncio entregado.**
 4. **No se edita si:** no hay guion con código, no hay referente, o el referente está "por aprobar". Avisar a Santi.
 5. **VSL / clase gratis:** cada cifra sale del guion o de la landing (`src/`). Si no está, preguntar.
-6. **Reglas nuevas:** a "Ajustes de Santi" del documento (Drive + copia del repo) + bitácora.
+6. **Video ya editado → anuncio** (Santi: "quiero subir este a anuncios"): primero un **reporte de rentabilidad
+   100% sincero** (Sí / No / Sí con cambios, con razones). Si no es rentable, decirlo claro. Si Santi aprueba:
+   copia con nombre de anuncio en `4. Contenido editado`. **No se cambia el CTA.** Detalle: `contexto/anuncios-meta.md`.
+7. **Reglas nuevas:** a "Ajustes de Santi" del documento (Drive + copia del repo) + bitácora.

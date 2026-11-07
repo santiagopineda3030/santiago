@@ -20,3 +20,10 @@ Español, pasos cortos. Santi dirige y aprueba; Claude edita. Espera su OK donde
 7. **Listo:** Anuncios (Meta) › `4. Contenido editado` como `<MERCADO>_<ÁNGULO>_<código>_v<n>.mp4`.
 
 **Corrección:** versión nueva (v2, v3…; la anterior se queda), nunca renombrar lo entregado. Regla nueva → "Ajustes de Santi".
+
+**Video ya editado → anuncio** ("quiero subir este a anuncios"):
+1. Buscar el video en Drive y sus números orgánicos (vistas, retención, guardados, compartidos).
+2. **Reporte de rentabilidad, 100% sincero:** veredicto **Sí / No / Sí con cambios** + 3–5 razones (gancho en 3 s,
+   oferta clara, lleva a la llamada, duración, riesgo de rechazo de Meta, números orgánicos). Si no conviene, decirlo claro.
+3. **[OK]** de Santi → copia en Anuncios (Meta) › `4. Contenido editado` como `<MERCADO>_<ÁNGULO>_<código>_v<n>.mp4`.
+   No se toca el CTA ni el video. Santi pone presupuesto y activa.

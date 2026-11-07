@@ -3,10 +3,12 @@
 ## Flujo acordado con Santi
 1. Un video ya editado (orgánico, en Instagram › 4. Contenido editado) o un anuncio hecho desde guion (A1, A2…).
 2. Santi dice en la carpeta 📁 Anuncios (Meta): "quiero subir este video a anuncios".
-3. Claude hace una **copia** en Anuncios (Meta) › 4. Contenido editado con nombre de anuncio
-   `<MERCADO>_<ÁNGULO>_<código>_v<n>.mp4` (el orgánico se queda igual) y le pasa la auditoría de Meta
-   (sección 6 de "Recursos y reglas · Anuncios (Meta)"). Si el cierre dice "Comenta CLAUDE", se cambia
-   por "Agenda tu llamada" → versión nueva, con OK de Santi.
+3. **Análisis de rentabilidad (100% sincero):** antes de subir nada, Claude le hace a Santi un reporte corto
+   y le dice **Sí / No / Sí con cambios**, con las razones. Mira: números orgánicos del video (vistas,
+   retención, guardados, compartidos), gancho en los primeros 3 s, si se entiende la oferta y si lleva a la
+   llamada, duración, y si Meta lo podría rechazar. Si no es rentable, se dice claro y no se sube.
+   Si Santi dice que sí: copia en Anuncios (Meta) › 4. Contenido editado con nombre
+   `<MERCADO>_<ÁNGULO>_<código>_v<n>.mp4` (el orgánico se queda igual). **No se cambia el CTA** (regla de Santi, 7 nov).
 4. Un script sube el video a Meta y crea el anuncio **EN PAUSA** (cuando esté instalado).
 5. **Santi pone presupuesto y le da Activar.** Sin su clic no se gasta nada.
 6. Reporte diario: gasto, leads, costo por lead, retención → hoja + aviso corto.
