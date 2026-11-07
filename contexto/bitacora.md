@@ -150,3 +150,4 @@
 - 7 nov 13:10 · probarSubidaInstagram mostró el error real: la subida a Instagram responde 400 ProcessingFailedError cuando el video va como blob (los 3 'reintentos' eran esto). Arreglo: subir en partes de 4 MB leídas de Drive con Range (sin memoria de más, bytes normales). Falta probar.
 - 7 nov 13:15 · Subida por partes: Instagram responde 206 PartialRequest a cada parte (es normal, retriable). Arreglado: 206 se acepta y sigue con la siguiente parte.
 - 7 nov 13:25 · IG no acepta partes (OffsetInvalid: max offset 0). Nuevo método: Instagram descarga el video desde Drive (video_url de drive.usercontent). El script abre el link solo mientras IG procesa y lo vuelve privado (cerrarLink_ + seguro de 30 min). Falta probar.
+- 7 nov 13:23 · ✅ probarSubidaInstagram: Instagram aceptó el v3 (FINISHED) con video_url desde Drive. Código instalado por Santi. Mañana v4 es la prueba real.

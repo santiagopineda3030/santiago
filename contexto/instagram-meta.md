@@ -48,3 +48,11 @@ Si Meta responde error 190, el token venció o es inválido: repetir 3–5.
 - Probado con simulación en node (4 vueltas): IG publicado en la 1ª o 2ª vuelta, YouTube en la 2ª.
 - **Instalar:** Santi pega `Code.gs` y `YouTube.gs` del repo en Apps Script (reemplazar todo) y guarda. No hay que volver a autorizar.
 - ✅ 6 nov 13:06: Santi pegó Code.gs y YouTube.gs arreglados (sobre su versión instalada, sin TikTok.gs). probarConexion OK (0 de 100 publicaciones por API ese día = IG no salió solo). No hizo falta `instalar`. Prueba real: v3 el 7 nov.
+
+## 7 nov 2026 · Cómo sube el video ahora (método definitivo)
+- Fallaron: `getBytes()` (Out of memory con 27,5 MB), blob como payload (`400 ProcessingFailedError`), por partes (`OffsetInvalidError`: rupload no guarda partes).
+- **Funciona (probado 13:22, FINISHED):** `POST /{IG_ID}/media` con `media_type=REELS` y `video_url=https://drive.usercontent.google.com/download?id=<ID>&export=download&confirm=t`.
+  El script pone el video "cualquiera con el link" (`abrirLink_`), y lo devuelve a como estaba apenas IG termina (`cerrarLink_`, en `revisar_`/catch/prueba). Seguro: `cerrarLinksViejos_` cierra cualquier link abierto > 30 min.
+- Prueba sin publicar: menú Plan IG › Probar subida a Instagram (o `probarSubidaInstagram`, código en `PRUEBA_IG`).
+- El motivo de cualquier rechazo queda escrito en "Link publicado" (con pista en español, `pistaIG_`).
+- TikTok.gs: `payload: file.getBlob()` (sí funciona en TikTok, probado 12:17).
