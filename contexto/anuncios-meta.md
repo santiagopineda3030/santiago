@@ -47,7 +47,7 @@
 ## Lista para montar la automatización (7 nov; Santi no pone anuncios todavía)
 | # | Paso | Quién | Estado |
 |---|---|---|---|
-| 1 | Cuenta publicitaria **ContentIA Ads** creada 7 nov en el portfolio **soysanti__content_ia** (zona America/Bogota, divisa elegida por Santi — revisar si USD o COP). Santi con acceso total. Sin método de pago | Santi | ✅ (falta anotar ID completo, empieza por 144902…) |
+| 1 | Cuenta publicitaria **ContentIA Ads** creada 7 nov en el portfolio **soysanti__content_ia** (zona America/Bogota, divisa elegida por Santi — revisar si USD o COP). Santi con acceso total. Sin método de pago | Santi | ✅ ID `act_1449021934086792` |
 | 2 | App "Publicador Santi" (`1462889889116914`): agregar producto **Marketing API** | Santi | ⏳ |
 | 3 | **Usuario del sistema** (admin) en el negocio + asignarle cuenta publicitaria, página, IG y la app | Santi | ⏳ |
 | 4 | Token del usuario del sistema (no vence) con `ads_management`, `ads_read`, `business_management` → Propiedades del script `META_ADS_TOKEN` | Santi (guiado) | ⏳ |
@@ -57,4 +57,5 @@
 | 8 | Píxel en la web (`src/`) | Claude | ⏳ |
 | 9 | Prueba: campaña y anuncio **en pausa** (sin gastar) | Claude + Santi | ⏳ |
 Portfolio comercial (negocio): **soysanti__content_ia** (2 páginas, 2 personas). Hay 2 negocios vacíos "Prueba 1" y "Prueba 1.1": no se usan.
+Cuenta publicitaria: **ContentIA Ads**, ID `1449021934086792` (en la API: `act_1449021934086792`).
 Datos (no secretos) cuando existan: ID de cuenta publicitaria (`act_…`), ID del píxel, ID del usuario del sistema.
