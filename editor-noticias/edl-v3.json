@@ -1,5 +1,5 @@
 {
- "nota": "v3 1.0: Noticias IA del 6 nov. Un crudo vertical (proxy 1260x2240).",
+ "nota": "v3 1.1: animaciones antes de la palabra (adelanto 0,3 s), India y −7,4 % a tiempo, luz 'cine', música más movida y alta.",
  "gancho_texto": "IAs atacando bancos",
  "cta": "Sígueme para no perderte ninguna",
  "cta_emoji": "🔔",
@@ -112,12 +112,16 @@
    ],
    "graficos": [
     {
-     "tipo": "emoji",
-     "en": "alerta",
-     "dur": 1.3,
-     "ch": "🚨",
-     "x": 840,
-     "y": 840
+     "tipo": "texto",
+     "en": "India",
+     "offset": 0,
+     "dur": 2.4,
+     "lineas": [
+      "INDIA",
+      "alerta a todos sus bancos"
+     ],
+     "ch": "🇮🇳",
+     "y": 620
     },
     {
      "tipo": "emoji",
@@ -130,7 +134,7 @@
     {
      "tipo": "paises",
      "en": "Corea",
-     "offset": -0.5,
+     "offset": -0.2,
      "dur": 2.4,
      "titulo": "ALERTA EN LOS BANCOS"
     },
@@ -325,16 +329,20 @@
     {
      "tipo": "resumen_ia",
      "en": "resumen",
-     "offset": -0.9,
-     "dur": 2.8
+     "offset": -0.4,
+     "dur": 2.6,
+     "porcentaje": null
     },
     {
-     "tipo": "emoji",
-     "en": "ingresos",
-     "dur": 1.4,
-     "ch": "📉",
-     "x": 840,
-     "y": 840
+     "tipo": "contador",
+     "en": "7,4",
+     "offset": 0,
+     "dur": 2.4,
+     "desde": 0,
+     "hasta": -7.4,
+     "formato": "{v:.1f} %",
+     "etiqueta": "en sus ingresos",
+     "y": 620
     }
    ]
   },

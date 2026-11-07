@@ -212,7 +212,7 @@ def g_contador(desde, hasta, formato, etiqueta, dur, cy=560):
         k = ease_out(clamp((t - 0.15) / 1.1))
         v = desde + (hasta - desde) * k
         c = tarjeta(cw, chh)
-        pegar_centro(c, texto_img(formato.format(v=v), 150, ROJO), cw / 2, 120)
+        pegar_centro(c, texto_img(formato.format(v=v).replace(".", ","), 150, ROJO), cw / 2, 120)
         pegar_centro(c, texto_img(etiqueta, 40, BLANCO, negra=False), cw / 2, 228)
         d = ImageDraw.Draw(c)
         d.rounded_rectangle((70, 268, cw - 70, 290), 11, fill=(255, 255, 255, 40))
@@ -1006,7 +1006,7 @@ def g_resumen_ia(dur, porcentaje=-7.4, titulo="LA IA DE GOOGLE VS. USA TODAY"):
             im.alpha_composite(con_alfa(resumen, kr), (130, 670))
         im.alpha_composite(con_alfa(link, 1 - 0.6 * kr), (130, y_link))
         kc = clamp((t - 0.8) / 0.4)
-        if kc > 0:
+        if kc > 0 and porcentaje is not None:
             v = porcentaje * ease_out(kc)
             pegar_centro(im, texto_img(f"{v:.1f} %".replace(".", ","), 120, ROJO), W / 2, 1230)
             pegar_centro(im, texto_img("en sus ingresos", 44, BLANCO, negra=False), W / 2, 1330)

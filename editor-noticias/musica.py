@@ -5,7 +5,9 @@ import sys, wave
 import numpy as np
 SR = 48000
 ruta, dur = sys.argv[1], float(sys.argv[2])
-bpm = 88; beat = 60 / bpm; n = int(dur * SR)
+bpm = float(sys.argv[3]) if len(sys.argv) > 3 else 88
+ENERGIA = float(sys.argv[4]) if len(sys.argv) > 4 else 1.0  # >1: bombo/aro/hi-hat más marcados
+beat = 60 / bpm; n = int(dur * SR)
 t = np.arange(n) / SR
 rng = np.random.default_rng(3)
 out = np.zeros((n, 2))
@@ -43,19 +45,19 @@ for c in range(int(dur / compas) + 1):
         kp = np.arange(int(0.45 * SR)) / SR
         f = nota(m)
         pl = (np.sin(2 * np.pi * f * kp) + 0.3 * np.sin(4 * np.pi * f * kp)) * env(0.45, 0.003, 0.16)
-        poner(pl * 0.06, t0 + i * beat / 2, -0.4 if i % 2 else 0.4)
+        poner(pl * 0.06 * (1 + 0.4 * (ENERGIA - 1)), t0 + i * beat / 2, -0.4 if i % 2 else 0.4)
     # ritmo: bombo suave en 1 y 3, aro en 2 y 4, hi-hat en corcheas
     for b in range(4):
         tb = t0 + b * beat
         if b in (0, 2):
             kk = np.arange(int(0.25 * SR)) / SR
-            poner(np.sin(2 * np.pi * (55 + 60 * np.exp(-kk * 30)) * kk) * env(0.25, 0.002, 0.08) * 0.35, tb)
+            poner(np.sin(2 * np.pi * (55 + 60 * np.exp(-kk * 30)) * kk) * env(0.25, 0.002, 0.08) * 0.35 * ENERGIA, tb)
         else:
             m = int(0.12 * SR)
-            poner(rng.standard_normal(m) * env(0.12, 0.001, 0.03) * 0.06, tb)
-        for h in (0, 0.5):
+            poner(rng.standard_normal(m) * env(0.12, 0.001, 0.03) * 0.06 * ENERGIA ** 1.5, tb)
+        for h in ((0, 0.25, 0.5, 0.75) if ENERGIA > 1 else (0, 0.5)):
             m = int(0.04 * SR)
-            hh = np.diff(rng.standard_normal(m + 1)) * env(0.04, 0.001, 0.012) * 0.025
+            hh = np.diff(rng.standard_normal(m + 1)) * env(0.04, 0.001, 0.012) * 0.025 * ENERGIA ** 1.5
             poner(hh, tb + h * beat, 0.3)
 # filtro paso bajo suave (calidez lo-fi) y entrada/salida
 a = np.exp(-2 * np.pi * 4500 / SR)

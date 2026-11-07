@@ -322,6 +322,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 # --------------------------------------------------------------------------- render
 CENTRO_X = 0.5  # dónde está la persona en el cuadro (0 = izquierda, 1 = derecha)
 CENTRO_Y = 0.5  # centro vertical del recorte (0 = arriba, 1 = abajo)
+COLOR = ""  # filtro de color/luz opcional (ffmpeg), se aplica después del recorte
 ZOOM_BASE = 1.0  # acercamiento base (crudos vertical con mucho espacio arriba: 1.3–1.4)
 
 
@@ -333,7 +334,7 @@ def filtro_encuadre(info, zoom):
     else:
         esc = f"scale={int(W * zoom) // 2 * 2}:-2"
     x = f"max(0\\,min(iw-{W}\\,iw*{CENTRO_X}-{W}/2))"
-    return f"{esc}:flags=lanczos,crop={W}:{H}:{x}:max(0\\,min(ih-{H}\\,ih*{CENTRO_Y}-{H}/2)),setsar=1,fps={FPS},format=yuv420p"
+    return f"{esc}:flags=lanczos,crop={W}:{H}:{x}:max(0\\,min(ih-{H}\\,ih*{CENTRO_Y}-{H}/2)),setsar=1,{COLOR + "," if COLOR else ""}fps={FPS},format=yuv420p"
 
 
 def congelar(pz, dur):

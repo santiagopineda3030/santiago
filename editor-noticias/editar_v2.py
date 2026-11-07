@@ -31,6 +31,10 @@ SIL_DB, SIL_MIN, SIL_MARGEN = -34, 0.16, 0.05
 GRUPO_MAX = 4.0          # cada ~4 s cambia el zoom
 COLA_CTA = 3.0
 SR = 48000
+LUZ = {  # ajustes de luz con nombre
+    "cine": "curves=preset=increase_contrast,eq=brightness=0.07:saturation=1.38:gamma=1.2,"
+            "colorbalance=rs=-0.06:gs=-0.01:bs=0.1:rh=0.08:gh=0.02:bh=-0.05,vignette=PI/5,unsharp=5:5:0.7",
+}
 CLAVES_EXTRA = set()   # palabras clave en rojo que agrega cada EDL ("claves": [...])
 GANANCIA_SFX = {"whoosh": 0.32, "pop": 0.28, "ding": 0.22, "golpe": 0.42, "alerta": 0.22, "teclas": 0.3}
 
@@ -253,12 +257,15 @@ def main():
     ap.add_argument("--musica", help="WAV de música de fondo (48 kHz estéreo)")
     ap.add_argument("--musica-db", type=float, default=-21.0, help="nivel de la música bajo la voz (dB)")
     ap.add_argument("--centro-y", type=float, default=0.5)
+    ap.add_argument("--luz", default="", help="ajuste de luz: 'cine' o un filtro de ffmpeg")
+    ap.add_argument("--adelanto", type=float, default=0.3, help="s que cada animación sale antes de su palabra")
     ap.add_argument("--zoom-base", type=float, default=1.0)
     ap.add_argument("--centro-x", type=float, default=0.53)
     a = ap.parse_args()
     editar.CENTRO_X = a.centro_x
     editar.CENTRO_Y = a.centro_y
     editar.ZOOM_BASE = a.zoom_base
+    editar.COLOR = LUZ.get(a.luz, a.luz)
 
     edl = json.loads(Path(a.edl).read_text(encoding="utf-8"))
     CLAVES_EXTRA.update(normalizar(c) for c in edl.get("claves", []))
@@ -371,7 +378,7 @@ def main():
             if len(hits) < g.get("n", 1):
                 print(f"  ! no encontré «{g['en']}» (n={g.get('n', 1)}) en {sec['titulo']}")
                 continue
-            eventos.append((hits[g.get("n", 1) - 1]["s"] + g.get("offset", 0.0), g["dur"], g))
+            eventos.append((hits[g.get("n", 1) - 1]["s"] + g.get("offset", 0.0) - a.adelanto, g["dur"] + a.adelanto, g))
     cta_ini = total - 0.1  # la pregunta aparece justo cuando termina de hablar
     eventos.append((cta_ini + 0.15, COLA_CTA - 0.1, {"tipo": "emoji", "ch": edl.get("cta_emoji", "💬"), "x": 870, "y": 840,
                                                     "tam": 200}))
