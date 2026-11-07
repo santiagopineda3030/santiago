@@ -43,3 +43,17 @@
 
 ## Campaña sugerida
 1 campaña (objetivo: agendar llamada) · 1 público amplio · 3–5 anuncios · solo ubicaciones de Instagram.
+
+## Lista para montar la automatización (7 nov; Santi no pone anuncios todavía)
+| # | Paso | Quién | Estado |
+|---|---|---|---|
+| 1 | Cuenta publicitaria en Meta Business (zona Bogotá; moneda no se cambia después). Sin método de pago por ahora | Santi | ⏳ |
+| 2 | App "Publicador Santi" (`1462889889116914`): agregar producto **Marketing API** | Santi | ⏳ |
+| 3 | **Usuario del sistema** (admin) en el negocio + asignarle cuenta publicitaria, página, IG y la app | Santi | ⏳ |
+| 4 | Token del usuario del sistema (no vence) con `ads_management`, `ads_read`, `business_management` → Propiedades del script `META_ADS_TOKEN` | Santi (guiado) | ⏳ |
+| 5 | **Píxel** (Administrador de eventos › Conjunto de datos) → ID a este archivo | Santi | ⏳ |
+| 6 | Hoja **Tracker de anuncios** (pestañas Anuncios y Diario) + carpeta `5. Reportes` | Claude | ⏳ |
+| 7 | `Anuncios.gs`: reporte diario, subir en pausa, pausar a pedido | Claude | ⏳ |
+| 8 | Píxel en la web (`src/`) | Claude | ⏳ |
+| 9 | Prueba: campaña y anuncio **en pausa** (sin gastar) | Claude + Santi | ⏳ |
+Datos (no secretos) cuando existan: ID de cuenta publicitaria (`act_…`), ID del píxel, ID del usuario del sistema.
