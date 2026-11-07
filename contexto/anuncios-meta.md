@@ -11,7 +11,10 @@
    `<MERCADO>_<ÁNGULO>_<código>_v<n>.mp4` (el orgánico se queda igual). **No se cambia el CTA** (regla de Santi, 7 nov).
 4. Un script sube el video a Meta y crea el anuncio **EN PAUSA** (cuando esté instalado).
 5. **Santi pone presupuesto y le da Activar.** Sin su clic no se gasta nada.
-6. Reporte diario: gasto, leads, costo por lead, retención → hoja + aviso corto.
+6. **Apagar un anuncio:** si Santi dice "apaga el A1", Claude lo **pausa** por la API (no lo borra; se puede
+   volver a prender). Antes confirma cuál es (nombre + gasto de hoy). Claude **nunca** activa, sube presupuesto
+   ni crea gasto: eso solo lo hace Santi.
+7. Reporte diario: gasto, leads, costo por lead, retención → hoja + aviso corto.
 
 ## Orden para montarlo
 1. Primera campaña a mano (Santi aprende Ads Manager).
