@@ -8,7 +8,7 @@ Este chat trabaja **un anuncio**. Reglas generales: `CLAUDE.md` de la raíz. Pas
 2. **Insumos:** crudo en Anuncios (Meta) › `2. Crudo sin editar` · reglas en Anuncios (Meta) › `3. Recursos` ›
    "Recursos y reglas · Anuncios (Meta)" (copia: `drive-respaldo/recursos/recursos-y-reglas-meta-ads.md`) · referentes en ese documento.
 3. **Entrega:** Anuncios (Meta) › `4. Contenido editado` como `<MERCADO>_<ÁNGULO>_<código>_v<n>.mp4`, Estado **Listo**.
-   Santi aprueba y lo sube a Ads Manager. **Claude no activa anuncios ni toca presupuesto.** Solo puede **pausar** un anuncio cuando Santi lo pide (cuando esté instalado; `contexto/anuncios-meta.md`). Nunca renombrar un anuncio entregado.**
+   Santi aprueba y lo sube a Ads Manager. **Claude no activa anuncios ni toca presupuesto.** Solo puede **pausar** un anuncio cuando Santi lo pide (cuando esté instalado; `contexto/anuncios-meta.md`). **Nunca renombrar un anuncio entregado.**
 4. **No se edita si:** no hay guion con código, no hay referente, o el referente está "por aprobar". Avisar a Santi.
 5. **VSL / clase gratis:** cada cifra sale del guion o de la landing (`src/`). Si no está, preguntar.
 6. **Video ya editado → anuncio** (Santi: "quiero subir este a anuncios"): primero un **reporte de rentabilidad
