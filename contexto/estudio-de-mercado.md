@@ -56,3 +56,19 @@ Doc reorganizado: pestaña **1. Mercado hispanohablante** (nueva), **2. Avatar y
 - **Encuesta:** `google-apps-script/encuesta/CrearEncuesta.gs` (Apps Script que crea el Google Form de 10 preguntas). Falta que Santi la corra y la mande a 10–20 dueños.
 - ✅ Encuesta creada por Santi (6 nov): Form `1CVQwGceqYQo_EoAcjVO-zFKJadF3MuOXo-EkOg1lvAg` · editar https://docs.google.com/forms/d/1CVQwGceqYQo_EoAcjVO-zFKJadF3MuOXo-EkOg1lvAg/edit · para compartir: https://forms.gle/BEE2ZSexndMxFYXN7. Meta: 10–20 respuestas.
 - Encuesta: Santi la hace **en persona** en negocios (por WhatsApp/correo no responden). Plazo: **martes 11 nov** → análisis ese día.
+
+## Competidores para estudiar (7 nov 2026) — lo más parecido a ContentIA
+**En inglés (sí existe el modelo):**
+- **The AI Break · Content OS** (Luis y Rui Sousa, newsletter ~95k): https://theaibreaklp.com/content-os — sistema en **Claude Code**
+  con CLAUDE.md de voz de marca + 21 skills + carpeta inicial; escribe, diseña, hace videos con avatar IA y publica en LinkedIn, X,
+  Instagram, TikTok. **$197 pago único**, taller grabado de 2 h, comunidad en Telegram, garantía 7 días. Hazlo-tú-mismo. EL MÁS PARECIDO en tecnología.
+- **"I Built a $3,200 AI Content System in 1 Hour (Claude Code)"** (YouTube): https://www.youtube.com/watch?v=DnBtU1-g7P8 y guía de
+  aibusinesssystems.io (no abrió): enseñan a **venderle a clientes** sistemas de contenido con Claude Code por **$3K–5K**. Mismo precio que el nuestro.
+- Cursos Udemy: Claude Code para edición de video / Remotion (videos sin cara).
+**En español (nadie igual):**
+- **Creato Academy** (Anderson Victoria, Skool, 73 miembros): https://www.skool.com/creato-academy/about — contenido + automatizaciones con IA, $14/mes.
+- **Contenido Viral con IA** (Gustavo Estrada, Skool, $9/mes) y **Escuela de creadores IA** (Rodrigo Lagos, Skool, $9/mes): enseñan, low ticket.
+- Agencias: DANIA.AI (gestión con IA, mensual), Agentes IA Agency (CO/MX, mensual).
+**Lectura:** en inglés ya hay gente vendiendo exactamente esto (barato y hazlo-tú, o caro y hecho para el cliente). En español solo hay
+cursos baratos en Skool o agencias mensuales. Nadie en español vende el sistema propio con Claude Code + acompañamiento por $2.500.
+Para estudiar primero: la página de Content OS (cómo empaqueta: carpeta, skills, CLAUDE.md = igual a nuestras plantillas) y el video de $3.200.
