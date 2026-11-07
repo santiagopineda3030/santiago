@@ -98,7 +98,8 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
 ## El plan de contenido (hoja) — reglas que no se rompen
 - Pestaña del mes (Noviembre…): una fila por idea; código `#` = v1, v2…
 - **Publicación**: `Escribiendo descripción` → `Listo` (Claude) → `Publicar` (**solo Santiago aprueba**) →
-  `Programado` → `Publicado`. Claude nunca pone `Publicar` sin que Santiago lo diga.
+  `Programado` → `Publicado`. **Desde el 7 nov:** Claude le muestra a Santi el video y la descripción, Santi confirma en el chat
+  ("dale", "publícalo") y **Claude pone `Publicar`** en la hoja. Sin esa confirmación explícita, nunca.
 - Nunca poner `Publicar` si el video no está en Drive: el script lo marca Error y deja de enlazarlo.
 - Descripción: 3–5 líneas, la primera es el gancho, sin datos inventados, emoji solo en el cierre, 5 hashtags.
 - COLA POR EDITAR: fila por pieza; al entregar → `Entregado` + link + fecha.
