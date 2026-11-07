@@ -1,6 +1,7 @@
 # Bitácora (lo más nuevo arriba, una línea por cosa hecha)
 
 ## 8 nov 2026
+- Meta paso 3: usuario del sistema **ig contentia** (Admin, ID 61596519503349) creado. Falta asignarle activos.
 - Meta paso 3: app Publicador Santi agregada a las Apps del negocio soysanti__content_ia (requisito para crear usuarios del sistema).
 
 ## 7 nov 2026 (madrugada) · Cierre del día (resumen de todas las carpetas)

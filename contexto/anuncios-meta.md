@@ -58,6 +58,7 @@
 | 9 | Prueba: campaña y anuncio **en pausa** (sin gastar) | Claude + Santi | ⏳ |
 Portfolio comercial (negocio): **soysanti__content_ia** (2 páginas, 2 personas). Hay 2 negocios vacíos "Prueba 1" y "Prueba 1.1": no se usan.
 Cuenta publicitaria: **ContentIA Ads**, ID `1449021934086792` (en la API: `act_1449021934086792`).
+Usuario del sistema: **ig contentia** (Admin), ID `61596519503349` — creado 8 nov (Meta rechazó "Robot ContentIA" por mayúsculas).
 Datos (no secretos) cuando existan: ID de cuenta publicitaria (`act_…`), ID del píxel, ID del usuario del sistema.
 
 ## Dónde quedamos (7 nov, noche) → seguir el 8 nov
