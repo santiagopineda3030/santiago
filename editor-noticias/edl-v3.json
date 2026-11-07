@@ -121,7 +121,7 @@
       "alerta a todos sus bancos"
      ],
      "ch": "🇮🇳",
-     "y": 620
+     "y": 455
     },
     {
      "tipo": "emoji",
@@ -145,14 +145,15 @@
      "dur": 2.2,
      "logo": "claude",
      "texto": "ahora se conecta a tu banco",
-     "y": 620
+     "y": 455
     },
     {
      "tipo": "alerta",
      "en": "cuidado",
      "offset": -0.3,
      "dur": 2.4,
-     "texto": "CUIDADO CON TU BANCO"
+     "texto": "CUIDADO CON TU BANCO",
+     "y": 455
     }
    ]
   },
@@ -188,7 +189,7 @@
      "dur": 2.0,
      "logo": "airbnb",
      "texto": "agente de viajes con IA · 2027",
-     "y": 620
+     "y": 455
     },
     {
      "tipo": "itinerario",
@@ -248,14 +249,15 @@
       "de superinteligencia"
      ],
      "ch": "🇺🇸",
-     "y": 620
+     "y": 455
     },
     {
      "tipo": "sello",
      "en": "SWAT",
      "offset": -0.2,
      "dur": 1.6,
-     "texto": "SWAT DE IA"
+     "texto": "SWAT DE IA",
+     "y": 455
     },
     {
      "tipo": "swat",
@@ -270,7 +272,8 @@
      "en": "descontrolen.",
      "offset": -0.6,
      "dur": 2.0,
-     "texto": "VIGILA A LAS IAs"
+     "texto": "VIGILA A LAS IAs",
+     "y": 455
     }
    ]
   },
@@ -315,7 +318,7 @@
       "de los periódicos más grandes de EE. UU."
      ],
      "ch": "📰",
-     "y": 620
+     "y": 455
     },
     {
      "tipo": "logo",
@@ -324,7 +327,8 @@
      "offset": -0.3,
      "dur": 1.8,
      "logo": "googlegemini",
-     "texto": "la IA de Google"
+     "texto": "la IA de Google",
+     "y": 455
     },
     {
      "tipo": "resumen_ia",
@@ -342,7 +346,7 @@
      "hasta": -7.4,
      "formato": "{v:.1f} %",
      "etiqueta": "en sus ingresos",
-     "y": 620
+     "y": 455
     }
    ]
   },
@@ -381,7 +385,7 @@
       "apps completas con solo describirlas"
      ],
      "ch": "💻",
-     "y": 620
+     "y": 455
     },
     {
      "tipo": "app",
@@ -394,7 +398,8 @@
      "en": "seguridad",
      "offset": -0.3,
      "dur": 2.2,
-     "texto": "REVISA LA SEGURIDAD"
+     "texto": "REVISA LA SEGURIDAD",
+     "y": 455
     }
    ]
   },
