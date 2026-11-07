@@ -16,6 +16,19 @@
    ni crea gasto: eso solo lo hace Santi.
 7. Reporte diario: gasto, leads, costo por lead, retención → hoja + aviso corto.
 
+## Tracker + reporte diario (acordado 7 nov)
+- **Hoja "Tracker de anuncios"** (en Anuncios (Meta); ID a `drive.md` cuando se cree):
+  - Pestaña **Anuncios**: una fila por anuncio → código, nombre, video, fecha de inicio, presupuesto diario,
+    estado (Activo / Pausado), veredicto de rentabilidad inicial.
+  - Pestaña **Diario**: una fila por anuncio y por día → fecha, código, gasto, alcance, impresiones, frecuencia,
+    % que ve 3 s (gancho), % que lo ve completo, clics, CTR, leads/agendas, costo por lead, semáforo (verde/amarillo/rojo).
+  - El script llena la pestaña Diario solo cada mañana con los datos de Meta.
+- **Documento diario** "Reporte de anuncios · <fecha>" (Drive › Anuncios (Meta) › 5. Reportes): resumen del día,
+  cada anuncio comparado con los días anteriores, recomendación **Seguir / Vigilar / Pausar** con razones. 100% sincero.
+- Los primeros 3–4 días Meta está "aprendiendo": no se juzga un anuncio por un solo día.
+- **Santi (o su equipo) decide.** Si dice "pausa el A1", Claude lo pausa. Claude nunca pausa por su cuenta.
+- Falta definir con Santi: costo por lead objetivo (para el semáforo) y hora del reporte (propuesta: 8:00 a. m.).
+
 ## Orden para montarlo
 1. Primera campaña a mano (Santi aprende Ads Manager).
 2. Reporte diario (sin riesgo).
