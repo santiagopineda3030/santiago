@@ -454,8 +454,9 @@ function subirPorPartes_(file, uri) {
     const r = UrlFetchApp.fetch(uri, {
       method: 'post', contentType: 'application/octet-stream', payload: bytes, muteHttpExceptions: true,
       headers: { Authorization: 'OAuth ' + token_(), offset: String(off), file_size: String(size) } });
-    const txt = r.getContentText();
-    if (r.getResponseCode() !== 200 || /"success"\s*:\s*false|"error"|debug_info/.test(txt)) {
+    const txt = r.getContentText(), parcial = r.getResponseCode() === 206 && /PartialRequest/.test(txt);
+    // 206 "PartialRequest" = Instagram recibió esta parte y espera la siguiente (es lo normal hasta la última).
+    if (!parcial && (r.getResponseCode() !== 200 || /"success"\s*:\s*false|"error"|debug_info/.test(txt))) {
       throw new Error('Subida (parte desde el byte ' + off + ' de ' + size + ') ' + r.getResponseCode() + ': ' + txt.slice(0, 200));
     }
     console.log('Instagram recibió ' + Math.round((fin + 1) / size * 100) + '%');
