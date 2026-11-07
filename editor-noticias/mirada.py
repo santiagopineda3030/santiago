@@ -4,7 +4,10 @@ Uso: python3 mirada.py crudos/clip.MP4 salida/mirada-clip.json"""
 import json, subprocess, sys
 import cv2, numpy as np
 src, out = sys.argv[1], sys.argv[2]
-W, H, FPS = 960, 540, 10
+FPS = 10
+_wh = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height", "-of", "csv=p=0", src],
+                     capture_output=True, text=True).stdout.strip().split(",")
+W, H = (960, 540) if int(_wh[0]) >= int(_wh[1]) else (540, 960)  # respeta vertical u horizontal
 det = cv2.FaceDetectorYN.create(str(__import__('pathlib').Path(__file__).with_name('modelos') / 'yunet.onnx'), '', (W, H), 0.6)
 p = subprocess.Popen(["ffmpeg", "-v", "error", "-i", src, "-vf", f"fps={FPS},scale={W}:{H}", "-f", "rawvideo",
                       "-pix_fmt", "bgr24", "-"], stdout=subprocess.PIPE)

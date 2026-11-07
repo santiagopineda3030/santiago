@@ -1,0 +1,407 @@
+{
+ "nota": "v3 1.0: Noticias IA del 6 nov. Un crudo vertical (proxy 1260x2240).",
+ "gancho_texto": "IAs atacando bancos",
+ "cta": "Sígueme para no perderte ninguna",
+ "cta_emoji": "🔔",
+ "claves": [
+  "india",
+  "corea",
+  "claude",
+  "airbnb",
+  "swat",
+  "hackers",
+  "usa",
+  "today",
+  "google",
+  "gemini",
+  "cursor",
+  "bancos",
+  "banco",
+  "estados",
+  "unidos"
+ ],
+ "secciones": [
+  {
+   "titulo": "Gancho",
+   "tipo": "gancho",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 16.747,
+     "hasta": 19.33,
+     "texto": "IAs atacando bancos sacaron casi un millón de dólares."
+    },
+    {
+     "clip": "0001",
+     "desde": 28.573,
+     "hasta": 31.344,
+     "texto": "Estados Unidos acaba de crear una IA SWAT que ataca a hackers."
+    },
+    {
+     "clip": "0001",
+     "desde": 52.813,
+     "hasta": 57.09,
+     "texto": "Esas son las 5 noticias de IA más importantes que pasaron el día de ayer, 6 de noviembre."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "hack_banco",
+     "en": "bancos",
+     "offset": -0.15,
+     "dur": 2.1,
+     "hasta": 1000000,
+     "titulo": "IAs ATACANDO BANCOS"
+    },
+    {
+     "tipo": "swat",
+     "en": "SWAT",
+     "offset": -0.35,
+     "dur": 2.2,
+     "titulo": "EL SWAT DE LA IA",
+     "sub": "Estados Unidos"
+    },
+    {
+     "tipo": "texto",
+     "en": "5",
+     "offset": -0.1,
+     "dur": 3.0,
+     "lineas": [
+      "TOP 5 NOTICIAS DE IA",
+      "6 de noviembre de 2026"
+     ],
+     "ch": "📰"
+    }
+   ]
+  },
+  {
+   "titulo": "Polémica 1 — Hackers y bancos",
+   "tipo": "noticia",
+   "etiqueta": "POLÉMICA · HACKERS Y BANCOS",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 77.084,
+     "hasta": 79.343,
+     "texto": "India acaba de mandar una alerta a todos sus bancos."
+    },
+    {
+     "clip": "0001",
+     "desde": 89.372,
+     "hasta": 93.385,
+     "texto": "Avisando que hay hackers que utilizan la inteligencia artificial para sacar dinero de sus bancos."
+    },
+    {
+     "clip": "0001",
+     "desde": 114.19,
+     "hasta": 118.693,
+     "texto": "En Corea del Sur hay una herramienta que ya hackeó dos bancos y acaba de sacar más de un millón de dólares."
+    },
+    {
+     "clip": "0001",
+     "desde": 139.521,
+     "hasta": 143.215,
+     "texto": "Lo más loco es que Claude ahora se puede conectar a tu cuenta de banco para revisar tus gastos."
+    },
+    {
+     "clip": "0001",
+     "desde": 147.317,
+     "hasta": 150.107,
+     "texto": "Así que ten mucho cuidado con conectar una IA a tu cuenta de banco."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "emoji",
+     "en": "alerta",
+     "dur": 1.3,
+     "ch": "🚨",
+     "x": 840,
+     "y": 840
+    },
+    {
+     "tipo": "emoji",
+     "en": "hackers",
+     "dur": 1.3,
+     "ch": "🦹",
+     "x": 240,
+     "y": 860
+    },
+    {
+     "tipo": "paises",
+     "en": "Corea",
+     "offset": -0.5,
+     "dur": 2.4,
+     "titulo": "ALERTA EN LOS BANCOS"
+    },
+    {
+     "tipo": "logo",
+     "en": "Claude",
+     "offset": -0.2,
+     "dur": 2.2,
+     "logo": "claude",
+     "texto": "ahora se conecta a tu banco",
+     "y": 620
+    },
+    {
+     "tipo": "alerta",
+     "en": "cuidado",
+     "offset": -0.3,
+     "dur": 2.4,
+     "texto": "CUIDADO CON TU BANCO"
+    }
+   ]
+  },
+  {
+   "titulo": "Viral 1 — Airbnb",
+   "tipo": "noticia",
+   "etiqueta": "VIRAL · AIRBNB",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 166.365,
+     "hasta": 168.955,
+     "texto": "Airbnb en 2027 sacará un agente de IA."
+    },
+    {
+     "clip": "0001",
+     "desde": 189.325,
+     "hasta": 191.884,
+     "texto": "Que te arman mapas, fotos y comparaciones al instante."
+    },
+    {
+     "clip": "0001",
+     "desde": 210.179,
+     "hasta": 213.928,
+     "texto": "Es como si la IA armara un itinerario completo de tu viaje para que tú no lo tengas que hacer."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "logo",
+     "en": "Airbnb",
+     "offset": -0.1,
+     "dur": 2.0,
+     "logo": "airbnb",
+     "texto": "agente de viajes con IA · 2027",
+     "y": 620
+    },
+    {
+     "tipo": "itinerario",
+     "en": "mapas,",
+     "offset": -0.3,
+     "dur": 2.6,
+     "logo": "airbnb"
+    },
+    {
+     "tipo": "emoji",
+     "en": "itinerario",
+     "dur": 1.4,
+     "ch": "🧳",
+     "x": 840,
+     "y": 840
+    }
+   ]
+  },
+  {
+   "titulo": "Viral 2 — SWAT de la IA",
+   "tipo": "noticia",
+   "etiqueta": "VIRAL · EL SWAT DE LA IA",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 237.045,
+     "hasta": 239.995,
+     "texto": "Estados Unidos acaba de lanzar una fuerza especial de superinteligencia."
+    },
+    {
+     "clip": "0001",
+     "desde": 245.165,
+     "hasta": 246.489,
+     "texto": "Es un tipo SWAT de IA."
+    },
+    {
+     "clip": "0001",
+     "desde": 260.81,
+     "hasta": 263.107,
+     "texto": "Va a perseguir a hackers, a mafias y a estafadores."
+    },
+    {
+     "clip": "0001",
+     "desde": 303.596,
+     "hasta": 306.425,
+     "texto": "Y también va a vigilar que todas las IAs no se descontrolen."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "texto",
+     "en": "fuerza",
+     "offset": -0.2,
+     "dur": 2.2,
+     "lineas": [
+      "FUERZA ESPECIAL",
+      "de superinteligencia"
+     ],
+     "ch": "🇺🇸",
+     "y": 620
+    },
+    {
+     "tipo": "sello",
+     "en": "SWAT",
+     "offset": -0.2,
+     "dur": 1.6,
+     "texto": "SWAT DE IA"
+    },
+    {
+     "tipo": "swat",
+     "en": "perseguir",
+     "offset": -0.2,
+     "dur": 2.6,
+     "titulo": "VA POR LOS HACKERS",
+     "sub": "Estados Unidos"
+    },
+    {
+     "tipo": "alerta",
+     "en": "descontrolen.",
+     "offset": -0.6,
+     "dur": 2.0,
+     "texto": "VIGILA A LAS IAs"
+    }
+   ]
+  },
+  {
+   "titulo": "Polémica 2 — USA Today",
+   "tipo": "noticia",
+   "etiqueta": "POLÉMICA · USA TODAY",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 325.538,
+     "hasta": 328.529,
+     "texto": "USA Today, uno de los periódicos más grandes de Estados Unidos."
+    },
+    {
+     "clip": "0001",
+     "desde": 332.937,
+     "hasta": 335.262,
+     "texto": "Está perdiendo millones por culpa de Google Gemini."
+    },
+    {
+     "clip": "0001",
+     "desde": 352.486,
+     "hasta": 357.099,
+     "texto": "Ahora Gemini, antes de que entres a la página web, te da un resumen sin que tú tengas que entrar."
+    },
+    {
+     "clip": "0001",
+     "desde": 361.974,
+     "hasta": 365.308,
+     "texto": "Y esto ha hecho que sus ingresos cayeran hasta un 7,4 %."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "texto",
+     "en": "USA",
+     "offset": -0.1,
+     "dur": 2.2,
+     "lineas": [
+      "USA TODAY",
+      "de los periódicos más grandes de EE. UU."
+     ],
+     "ch": "📰",
+     "y": 620
+    },
+    {
+     "tipo": "logo",
+     "en": "Gemini",
+     "n": 1,
+     "offset": -0.3,
+     "dur": 1.8,
+     "logo": "googlegemini",
+     "texto": "la IA de Google"
+    },
+    {
+     "tipo": "resumen_ia",
+     "en": "resumen",
+     "offset": -0.9,
+     "dur": 2.8
+    },
+    {
+     "tipo": "emoji",
+     "en": "ingresos",
+     "dur": 1.4,
+     "ch": "📉",
+     "x": 840,
+     "y": 840
+    }
+   ]
+  },
+  {
+   "titulo": "Útil — Cursor",
+   "tipo": "noticia",
+   "etiqueta": "ÚTIL · CURSOR",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 410.869,
+     "hasta": 414.145,
+     "texto": "Cursor ahora crea una app completa con tan solo que tú se la describas."
+    },
+    {
+     "clip": "0001",
+     "desde": 422.475,
+     "hasta": 425.77,
+     "texto": "Crea base de datos, un inicio de sesión e incluso un link para compartir."
+    },
+    {
+     "clip": "0001",
+     "desde": 441.571,
+     "hasta": 444.418,
+     "texto": "Y sobre todo, revisa la seguridad antes de que tú la vayas a subir."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "texto",
+     "en": "Cursor",
+     "offset": -0.1,
+     "dur": 2.2,
+     "lineas": [
+      "CURSOR",
+      "apps completas con solo describirlas"
+     ],
+     "ch": "💻",
+     "y": 620
+    },
+    {
+     "tipo": "app",
+     "en": "base",
+     "offset": -0.4,
+     "dur": 3.0
+    },
+    {
+     "tipo": "barra",
+     "en": "seguridad",
+     "offset": -0.3,
+     "dur": 2.2,
+     "texto": "REVISA LA SEGURIDAD"
+    }
+   ]
+  },
+  {
+   "titulo": "CTA",
+   "tipo": "cta",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 466.324,
+     "hasta": 468.304,
+     "texto": "Sígueme para ver más noticias diarias."
+    }
+   ],
+   "graficos": []
+  }
+ ]
+}
