@@ -50,6 +50,8 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
     `session_01Mcnvqs7Mruj2n8hLGHzTTS` · 📁 TikTok `session_01Mcnvqun84DQpBZzc9mkVNF` · 📁 YouTube `session_01McnvqtEmdYchkSMiZkWiyW` ·
     📁 Anuncios (Meta) `session_01McnvqspjmNbL6TY5zg81DQ` · 📁 Guiones `session_01McnvqsoboeaDTB6ormVrbC` · 📁 Edición de videos `session_01McnvqvgdvcfNzme6m5dsJP`.
     (Las creadas desde Base quedaban escondidas dentro de él: archivadas.) Los chats de cada pieza los abre Base.
+- **Videos viejos se borran** (regla de Santi, 7 nov): cuando un video ya se publicó, su crudo va a la papelera y se revisa el
+  espacio de Drive; Santi vacía la papelera.
 - **Guiones viejos se borran** (regla de Santi, 5 nov): guion en frío → papelera al terminarlo; guion terminado + idea →
   papelera cuando el video se publica (antes, copia en `drive-respaldo/guiones/`). Nunca la clase gratis. Detalle: `contexto/guiones.md`.
 - **Correcciones que son regla** → "Ajustes de Santi" del documento de la red (Drive + copia en `drive-respaldo/recursos/`) + bitácora.

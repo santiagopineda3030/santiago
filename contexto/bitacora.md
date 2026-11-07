@@ -11,7 +11,7 @@
 - **📁 Anuncios (Meta):** flujo y plan acordados; cuenta **ContentIA Ads** `act_1449021934086792` (USD); API de marketing agregada.
   Quedó en el paso 3 (usuario del sistema), ver `anuncios-meta.md`.
 - **Mañana (7 nov):** 11:00 prueba real v3 (IG → YouTube → TikTok borradores) · Santi: arreglar subida automática de Edición de videos ·
-  terminar Meta Ads (paso 3+) · profundizar oferta, avatar y análisis de mercado (Santi trae el **nicho**).
+  terminar Meta Ads (paso 3+) · profundizar oferta, avatar y análisis de mercado (Santi trae el **nicho**) · **borrar videos viejos** de Drive.
 
 ## 7 nov 2026
 - Meta Ads: se paró en el paso 3 (usuario del sistema). Se sigue el 8 nov; detalle en `anuncios-meta.md` › "Dónde quedamos".
