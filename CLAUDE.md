@@ -118,7 +118,7 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
   3. `editar_v2.py` renderiza: cortes por detector de voz, audio sincronizado, animaciones, efectos.
   4. Revisar: transcribir el resultado, buscar silencios (VAD), hojas de cuadros, axe/consola si es web.
 - `editor-noticias/subir-drive/`: el **buzón de Apps Script** para que Claude suba videos a Drive solo.
-  Necesita en el entorno `SUBIDA_URL` y `SUBIDA_CLAVE`.
+  **Listo desde el 7 nov:** `SUBIDA_URL` y `SUBIDA_CLAVE` están en el entorno (los leen los chats nuevos). Uso: `./subir_drive.sh "<video>.mp4" "NOVIEMBRE 2026"`.
 - Landing de la llamada: `src/` (React + Vite + Tailwind, estilo tecnológico cian, logo SPR en píxeles).
 
 ## Hoja de ruta día por día hasta el 18 de nov 2026 (acordada con Santi, 6 nov) · TODO automatizado
