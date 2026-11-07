@@ -434,16 +434,33 @@ function subirContenedor_(file, caption) {
   if (mb > CONFIG.MAX_MB) throw new Error('El video pesa ' + Math.round(mb) + ' MB (máx. ' + CONFIG.MAX_MB + '): exportarlo más liviano');
   const c = graph_('post', CONFIG.IG_ID + '/media', {
     media_type: 'REELS', upload_type: 'resumable', caption: caption, share_to_feed: 'true' });
-  const r = UrlFetchApp.fetch(c.uri, {
-    method: 'post', contentType: 'application/octet-stream',
-    payload: file.getBlob(), // el blob directo: getBytes() con videos de ~28 MB se queda sin memoria
-    headers: { Authorization: 'OAuth ' + token_(), offset: '0', file_size: String(file.getSize()) },
-    muteHttpExceptions: true });
-  const txt = r.getContentText();
-  if (r.getResponseCode() !== 200 || /"success"\s*:\s*false|"error"/.test(txt)) {
-    throw new Error('Subida ' + r.getResponseCode() + ': ' + txt.slice(0, 200));
-  }
+  subirPorPartes_(file, c.uri);
   return c.id;
+}
+
+/**
+ * Sube el video a Instagram en partes de 4 MB, leídas de Drive una por una.
+ * Así nunca se carga el video entero en memoria (con 28 MB el script se quedaba sin memoria)
+ * y Instagram recibe bytes normales (enviado como "blob" lo rechazaba con ProcessingFailedError).
+ */
+function subirPorPartes_(file, uri) {
+  const size = file.getSize(), PARTE = 4 * 1024 * 1024;
+  const drive = 'https://www.googleapis.com/drive/v3/files/' + file.getId() + '?alt=media';
+  let off = 0;
+  while (off < size) {
+    const fin = Math.min(off + PARTE, size) - 1;
+    const bytes = UrlFetchApp.fetch(drive, { headers: { Authorization: 'Bearer ' + ScriptApp.getOAuthToken(),
+      Range: 'bytes=' + off + '-' + fin } }).getContent();
+    const r = UrlFetchApp.fetch(uri, {
+      method: 'post', contentType: 'application/octet-stream', payload: bytes, muteHttpExceptions: true,
+      headers: { Authorization: 'OAuth ' + token_(), offset: String(off), file_size: String(size) } });
+    const txt = r.getContentText();
+    if (r.getResponseCode() !== 200 || /"success"\s*:\s*false|"error"|debug_info/.test(txt)) {
+      throw new Error('Subida (parte desde el byte ' + off + ' de ' + size + ') ' + r.getResponseCode() + ': ' + txt.slice(0, 200));
+    }
+    console.log('Instagram recibió ' + Math.round((fin + 1) / size * 100) + '%');
+    off = fin + 1;
+  }
 }
 
 /** Explica en español los errores de Instagram más comunes al procesar un Reel. */
