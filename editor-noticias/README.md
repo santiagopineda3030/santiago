@@ -15,7 +15,34 @@ ffmpeg + Whisper (sin Descript ni otras plataformas).
 6. Normaliza la voz a **−14 LUFS** y exporta **H.264 ≤ 30 MB**: `v1 1.0 noticias-dia-1.mp4`.
 7. Deja `resumen.md` con qué clip y qué segundos usó para cada parte, para revisarlo.
 
-## Uso
+## Flujo actual (v2–v3, nov 2026) — el que hay que usar
+```bash
+pip install faster-whisper rapidfuzz opencv-python-headless cairosvg scipy   # una vez
+# 1. Bajar el crudo (Drive: compartir con enlace un rato; luego Santi lo vuelve a Restringido)
+curl -fL -o crudos-vN/DJI_2026MMDD000000_0001_D.MP4 "https://drive.usercontent.google.com/download?id=<ID>&export=download&confirm=t"
+# 2. Transcribir por trozos (ajustar initial_prompt de trozos.py con los nombres del guion)
+python3 trozos.py crudos-vN salida-vN/trozos
+# 3. Elegir tomas a mano → edl-vN.json (última toma buena; subtítulo con el mismo nº de palabras que Whisper)
+# 4. Mirada solo en las tomas elegidas (rangos JSON [[desde,hasta],...]; respeta video vertical)
+python3 mirada.py crudos-vN/<clip>.MP4 salida-vN/mirada.json "$(cat salida-vN/rangos.json)"
+# 5. Render
+python3 editar_v2.py --videos crudos-vN --edl edl-vN.json --trozos salida-vN/trozos --assets assets-v2 \
+  --salida salida-vN --mirada salida-vN/mirada.json --musica musica/lofi-energico.wav --musica-db -14 \
+  --luz cine --nombre "vN 1.0 tema.mp4" --centro-x 0.43 --centro-y 0.53 --zoom-base 1.4
+```
+- `--mirada`: recorta los bordes donde no mira a cámara y sostiene la imagen (el audio sigue). Lo que queda en medio
+  de una frase se tapa con una escena a pantalla completa (`"cubrir": {"clip","desde","hasta"}` en el EDL).
+- `--adelanto 0.3` (por defecto): cada animación sale 0,3 s antes de su palabra (pedido de Santi, 7 nov).
+- `--luz cine`: contraste, color cálido, viñeta y nitidez (pedido de Santi, 7 nov). `--zoom-base`/`--centro-y` para
+  crudos verticales con mucho espacio arriba (el del 6 nov: 1.4 / 0.53). Tarjetas de texto en `"y": 455` para no tapar la cara.
+- Música: `musica.py salida.wav <seg> <bpm> <energía>` compone una pista ORIGINAL (sin derechos). Santi la quiere
+  audible: `lofi-energico` (100 BPM, energía 1.6) a `--musica-db -14`.
+- Escenas (animaciones.py): hacker, fuga, versus, lluvia, carrera, precio, billetes, anuncio, igual, hack_banco, swat,
+  paises, itinerario, resumen_ia, app. Emojis dentro de texto: usar `texto_emoji` (Inter no dibuja emojis).
+- Crudos 4K 120 fps (7,6 GB): no hacer hojas de cuadros del crudo completo (decodificar tarda muchísimo); medir solo rangos.
+- Subir a Drive: el buzón necesita `SUBIDA_URL` y `SUBIDA_CLAVE` en el entorno (pendiente). Mientras, Santi sube el MP4.
+
+## Uso (versión vieja, v1)
 ```bash
 pip install faster-whisper rapidfuzz      # una vez
 ./descargar.sh crudos                      # baja los 6 videos de Drive (carpeta "nov 4")

@@ -14,10 +14,13 @@ Un solo video sirve para **Instagram, TikTok y YouTube Shorts**. IDs en `areas/5
 2. **Editar:** con `editor-noticias/` (README y flujo del `CLAUDE.md` de la raíz): `trozos.py` → `edl-<código>.json`
    (última toma buena, subtítulos del guion) → `editar_v2.py`. Seguir la Guía de edición (1080×1920, 45–75 s,
    subtítulos 2–4 palabras con clave en rojo, título por noticia, gancho en 3 s, −14 LUFS, H.264 ≤ 30 MB).
+   Comando completo y opciones en `editor-noticias/README.md` › "Flujo actual". Lo que Santi pidió (5–7 nov) y es regla:
+   cortes cuando mira a cámara (`--mirada`), muchas animaciones (gancho muy animado), zona segura, animación ANTES de la
+   palabra (`--adelanto`), luz `cine`, música original que SÍ se escuche (`lofi-energico`, −14 dB).
 3. **Auditar** antes de mostrar: igual que la skill `editar-instagram` paso 5.
 4. **Revisar juntos [OK]:** mandarle el video (SendUserFile) y una lista corta de qué hiciste. Corregir lo que diga
    (versión nueva 1.1, 1.2…). Si una corrección es regla → "Ajustes de Santi" de la Guía (Drive + `drive-respaldo/recursos/`).
-5. **Subir:** con el buzón (`editor-noticias/subir-drive/`, `SUBIDA_URL` y `SUBIDA_CLAVE`) a `2. Videos terminados`,
+5. **Subir:** (si no hay `SUBIDA_URL`/`SUBIDA_CLAVE`, Santi lo sube a mano y avisa; tú buscas el archivo y comparas el tamaño) con el buzón (`editor-noticias/subir-drive/`, `SUBIDA_URL` y `SUBIDA_CLAVE`) a `2. Videos terminados`,
    nombre `v<N> <versión> <tema>.mp4`. Link en la fila de la hoja (Link Video Editado, Archivo) y en la COLA → **Entregado** + fecha.
 6. **Programar:** la fecha y la hora salen de la hoja (columna Fecha; Noticias IA siempre a las **11:00**). Escribir la
    descripción (3–5 líneas, primera = gancho, emoji solo al cierre, 5 hashtags) y el Título YouTube. Redes:
