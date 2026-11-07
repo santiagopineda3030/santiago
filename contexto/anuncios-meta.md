@@ -48,7 +48,7 @@
 | # | Paso | Quién | Estado |
 |---|---|---|---|
 | 1 | Cuenta publicitaria **ContentIA Ads** creada 7 nov en el portfolio **soysanti__content_ia** (zona America/Bogota, divisa **USD**). Santi con acceso total. Sin método de pago | Santi | ✅ ID `act_1449021934086792` |
-| 2 | App "Publicador Santi" (`1462889889116914`): agregar producto **Marketing API** | Santi | ⏳ |
+| 2 | App "Publicador Santi" (`1462889889116914`): producto **API de marketing** agregado y app unida al negocio soysanti__content_ia (7 nov). Nivel de acceso Limited = suficiente para cuentas propias | Santi | ✅ |
 | 3 | **Usuario del sistema** (admin) en el negocio + asignarle cuenta publicitaria, página, IG y la app | Santi | ⏳ |
 | 4 | Token del usuario del sistema (no vence) con `ads_management`, `ads_read`, `business_management` → Propiedades del script `META_ADS_TOKEN` | Santi (guiado) | ⏳ |
 | 5 | **Píxel** (Administrador de eventos › Conjunto de datos) → ID a este archivo | Santi | ⏳ |

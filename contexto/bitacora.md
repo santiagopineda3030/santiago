@@ -1,6 +1,7 @@
 # Bitácora (lo más nuevo arriba, una línea por cosa hecha)
 
 ## 7 nov 2026
+- ✅ Meta paso 2: API de marketing agregada a Publicador Santi y app unida al negocio soysanti__content_ia.
 - ✅ Meta paso 1: cuenta publicitaria **ContentIA Ads** creada en soysanti__content_ia (Bogotá), ID `act_1449021934086792`.
 - Limpieza de Drive (pedido de Santi, quedaba sin espacio): a la papelera los crudos ya publicados: "5 de noviembre" (v2, 3,3 GB),
   carpeta "nov 4" (v1, 6 clips DJI, ~1,9 GB) y la copia del v2 en TikTok › 4. Contenido editado (27 MB). ~5,2 GB.
