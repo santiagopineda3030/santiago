@@ -403,8 +403,10 @@ function publicarPendientes() {
           f.set(i, 'estado', 'Error'); f.set(i, 'link', msg.slice(0, 300));
         }
         f.set(i, 'contenedor', '');
+        cerrarLink_(idDe_(f.v(i, 'video')));
       }
     }));
+    cerrarLinksViejos_();
     pintarCalendario();
   } finally {
     lock.releaseLock();
@@ -427,41 +429,54 @@ function subir_(f, i, file) {
   f.set(i, 'link', 'Instagram procesando el video');
 }
 
-/** Crea el contenedor y sube el video. Devuelve el id del contenedor. No publica nada. */
+/**
+ * Crea el contenedor del Reel. Devuelve su id. No publica nada.
+ * Instagram no acepta que el script le empuje el video (sin memoria con 28 MB, "blob" rechazado, por partes no).
+ * Por eso Instagram lo DESCARGA SOLO desde Drive: el video queda "cualquiera con el link" solo mientras
+ * Instagram lo procesa (1–2 min) y luego vuelve a quedar privado (cerrarLink_).
+ */
 function subirContenedor_(file, caption) {
   if (!CONFIG.IG_ID) throw new Error('Falta IG_ID en CONFIG (publicación automática no configurada)');
-  const mb = file.getSize() / 1048576;
-  if (mb > CONFIG.MAX_MB) throw new Error('El video pesa ' + Math.round(mb) + ' MB (máx. ' + CONFIG.MAX_MB + '): exportarlo más liviano');
-  const c = graph_('post', CONFIG.IG_ID + '/media', {
-    media_type: 'REELS', upload_type: 'resumable', caption: caption, share_to_feed: 'true' });
-  subirPorPartes_(file, c.uri);
-  return c.id;
+  abrirLink_(file);
+  try {
+    const url = 'https://drive.usercontent.google.com/download?id=' + file.getId() + '&export=download&confirm=t';
+    const c = graph_('post', CONFIG.IG_ID + '/media', {
+      media_type: 'REELS', video_url: url, caption: caption, share_to_feed: 'true' });
+    return c.id;
+  } catch (e) {
+    cerrarLink_(file.getId());
+    throw e;
+  }
 }
 
-/**
- * Sube el video a Instagram en partes de 4 MB, leídas de Drive una por una.
- * Así nunca se carga el video entero en memoria (con 28 MB el script se quedaba sin memoria)
- * y Instagram recibe bytes normales (enviado como "blob" lo rechazaba con ProcessingFailedError).
- */
-function subirPorPartes_(file, uri) {
-  const size = file.getSize(), PARTE = 4 * 1024 * 1024;
-  const drive = 'https://www.googleapis.com/drive/v3/files/' + file.getId() + '?alt=media';
-  let off = 0;
-  while (off < size) {
-    const fin = Math.min(off + PARTE, size) - 1;
-    const bytes = UrlFetchApp.fetch(drive, { headers: { Authorization: 'Bearer ' + ScriptApp.getOAuthToken(),
-      Range: 'bytes=' + off + '-' + fin } }).getContent();
-    const r = UrlFetchApp.fetch(uri, {
-      method: 'post', contentType: 'application/octet-stream', payload: bytes, muteHttpExceptions: true,
-      headers: { Authorization: 'OAuth ' + token_(), offset: String(off), file_size: String(size) } });
-    const txt = r.getContentText(), parcial = r.getResponseCode() === 206 && /PartialRequest/.test(txt);
-    // 206 "PartialRequest" = Instagram recibió esta parte y espera la siguiente (es lo normal hasta la última).
-    if (!parcial && (r.getResponseCode() !== 200 || /"success"\s*:\s*false|"error"|debug_info/.test(txt))) {
-      throw new Error('Subida (parte desde el byte ' + off + ' de ' + size + ') ' + r.getResponseCode() + ': ' + txt.slice(0, 200));
-    }
-    console.log('Instagram recibió ' + Math.round((fin + 1) / size * 100) + '%');
-    off = fin + 1;
+/** Pone el video "cualquiera con el link puede ver" y anota cómo estaba, para devolverlo igual. */
+function abrirLink_(file) {
+  const props = PropertiesService.getScriptProperties(), clave = 'link_' + file.getId();
+  if (!props.getProperty(clave)) {
+    props.setProperty(clave, JSON.stringify({ acceso: String(file.getSharingAccess()),
+      permiso: String(file.getSharingPermission()), desde: Date.now() }));
   }
+  file.setSharing(DriveApp.Access.ANYONE_WITH_LINK, DriveApp.Permission.VIEW);
+}
+
+/** Devuelve el video a como estaba (privado). Nunca rompe la publicación. */
+function cerrarLink_(id) {
+  const props = PropertiesService.getScriptProperties(), clave = 'link_' + id, antes = props.getProperty(clave);
+  if (!antes) return;
+  try {
+    const a = JSON.parse(antes);
+    DriveApp.getFileById(id).setSharing(DriveApp.Access[a.acceso] || DriveApp.Access.PRIVATE,
+      DriveApp.Permission[a.permiso] || DriveApp.Permission.NONE);
+    props.deleteProperty(clave);
+  } catch (e) { console.log('No se pudo volver a poner privado el video ' + id + ': ' + (e.message || e)); }
+}
+
+/** Seguro: cualquier video que siga con link abierto hace más de 30 min vuelve a quedar privado. */
+function cerrarLinksViejos_() {
+  const props = PropertiesService.getScriptProperties().getProperties();
+  Object.keys(props).filter(k => k.indexOf('link_') === 0).forEach(k => {
+    try { if (Date.now() - JSON.parse(props[k]).desde > 30 * 60 * 1000) cerrarLink_(k.slice(5)); } catch (e) { /* sigue */ }
+  });
 }
 
 /** Explica en español los errores de Instagram más comunes al procesar un Reel. */
@@ -492,11 +507,13 @@ function probarSubidaInstagram() {
     const st = graph_('get', id, { fields: 'status_code,status' });
     console.log('Instagram dice: ' + st.status_code + ' · ' + (st.status || ''));
     if (st.status_code !== 'IN_PROGRESS') {
+      cerrarLink_(file.getId());
       avisar_(st.status_code === 'FINISHED' ? '✅ Instagram aceptó el video (no se publicó).' :
         '❌ Instagram: ' + st.status_code + ' · ' + (st.status || '') + pistaIG_(st.status));
       return;
     }
   }
+  cerrarLink_(file.getId());
   avisar_('Instagram sigue procesando después de 3 min. Vuelve a probar más tarde.');
 }
 
@@ -506,6 +523,7 @@ function revisar_(f, i) {
   if (!id) throw new Error('Se perdió el contenedor: vuelve a poner Publicar');
   const st = graph_('get', id, { fields: 'status_code,status' }); // una sola pregunta: nada de esperas largas
   if (st.status_code === 'IN_PROGRESS') { f.set(i, 'link', 'Instagram procesando el video (sigue en 15 min)'); return; }
+  cerrarLink_(idDe_(f.v(i, 'video'))); // Instagram ya terminó de descargarlo: el video vuelve a quedar privado
   if (st.status_code === 'PUBLISHED') { f.set(i, 'estado', 'Publicado'); f.set(i, 'contenedor', ''); return; } // ya salió en otra vuelta
   if (st.status_code !== 'FINISHED') throw new Error('Instagram: ' + st.status_code + ' · ' + (st.status || '') + pistaIG_(st.status));
   const pub = graph_('post', CONFIG.IG_ID + '/media_publish', { creation_id: id });
