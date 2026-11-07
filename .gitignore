@@ -11,3 +11,6 @@ editor-noticias/*.log
 editor-noticias/assets-v2/*.svg
 editor-noticias/musica/*.wav
 para-santi/
+editor-noticias/proxy*/
+editor-noticias/__pycache__/
+editor-noticias/assets-v2/*.svg
