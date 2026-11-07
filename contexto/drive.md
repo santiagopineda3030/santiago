@@ -42,7 +42,8 @@ Ojo: en Instagram la 2 y la 4 ya no están aquí (se movieron a Edición de vide
 | Guía de edición · Noticias IA | Instagram › 3. Recursos | `1c6WFwKiaYtGi4osN8CVu6A0slpj4tBzQm8FeDhqkbWk` | `drive-respaldo/recursos/guia-edicion-noticias-ia.md` |
 | v1 · Noticias IA · Día 1 (en la papelera de Drive, 5 nov) | — | `1ScuWZ3VeW2XJI4GK4EK5vzZUZEK_5A-Yq88E4Lf0NZo` | `drive-respaldo/guiones/v1-noticias-ia-dia-1.md` |
 | v2 · Noticias IA · 5 nov (IG / TikTok / YouTube) | Guiones › <red> › 3. Guiones terminados | `1Fx4bSKRtpNNWTNy7Z79FjQ-oVNLOi3RTciB23hVdctc` / `12wfQXep2QZ9zcASTM8Xrv6sGXlBtEkJk6wl5-u9Xoz4` / `1mTJx80-AgQcB7n8sUunnlq13XxUNCwHp_Lx2xikJ__Q` | `drive-respaldo/guiones/v2-noticias-ia-5-nov.md` |
-| v3 · Noticias IA · 6 nov (IG, TikTok y Shorts) | Guiones › Instagram › 3. Guiones terminados | `1Lxkueghx4_c3Ba4EYWk-_mR3YWR0brMl7v94R7dFP5M` | `drive-respaldo/guiones/v3-noticias-ia-6-nov.md` |
+| v3 · Noticias IA · 6 nov (IG, TikTok y Shorts) | (en la papelera, publicado) | `1Lxkueghx4_c3Ba4EYWk-_mR3YWR0brMl7v94R7dFP5M` | `drive-respaldo/guiones/v3-noticias-ia-6-nov.md` |
+| v4 · Noticias IA · 7 nov (IG, TikTok y Shorts) | Guiones › Instagram › 3. Guiones terminados | `15tRqRp-r6rlHH7q8aRk8I9amq9SNu5OMApnq_ReQn_w` | `drive-respaldo/guiones/v4-noticias-ia-7-nov.md` |
 | Recursos y reglas · TikTok | TikTok › 3. Recursos | `1tLRRrTK-EVVp7xzarUpt2r1GmV_gP_1UpwlR8lAA5RE` | `drive-respaldo/recursos/recursos-y-reglas-tiktok.md` |
 | Recursos y reglas · YouTube | YouTube › 3. Recursos | `1wh7VcclA6mRRc3klYYAP12viCKVLQs8Wr-mptmkWG4c` | `drive-respaldo/recursos/recursos-y-reglas-youtube.md` |
 | Recursos y reglas · Anuncios (Meta) | Anuncios (Meta) › 3. Recursos | `1OYm-fAvq_5uiMJgZkZA82JC5HaD0HEnBp-OzxKUNZdY` | `drive-respaldo/recursos/recursos-y-reglas-meta-ads.md` |

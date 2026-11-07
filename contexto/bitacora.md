@@ -19,6 +19,7 @@
   terminar Meta Ads (paso 3+) · profundizar oferta, avatar y análisis de mercado (Santi trae el **nicho**) · **borrar videos viejos** de Drive.
 
 ## 7 nov 2026
+- Guion v4 (noticias 7 nov, publica 8 nov) revisado otra vez con Santi: sale Microsoft/Ámsterdam, entra GPT-6 Astra (OpenAI). Doc nuevo `15tRqRp-r6rlHH7q8aRk8I9amq9SNu5OMApnq_ReQn_w` en IG › 3. Guiones terminados; el terminado anterior a la papelera. Hoja fila v4: `Grabar`, Ángulo, link, Título YouTube. Limpieza: idea del v3 a la papelera (publicado). Copia: `drive-respaldo/guiones/v4-noticias-ia-7-nov.md`.
 - Meta Ads: se paró en el paso 3 (usuario del sistema). Se sigue el 8 nov; detalle en `anuncios-meta.md` › "Dónde quedamos".
 - ✅ Meta paso 2: API de marketing agregada a Publicador Santi y app unida al negocio soysanti__content_ia.
 - ✅ Meta paso 1: cuenta publicitaria **ContentIA Ads** creada en soysanti__content_ia (Bogotá), ID `act_1449021934086792`.
