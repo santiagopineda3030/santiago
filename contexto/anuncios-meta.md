@@ -70,3 +70,10 @@ Datos (no secretos) cuando existan: ID de cuenta publicitaria (`act_…`), ID de
 - Pendientes de Santi: costo por lead objetivo (semáforo) y hora del reporte (propuesta 8:00 a. m.); pegar en Drive la regla
   "reporte de rentabilidad sincero, no se cambia el CTA" en Ajustes de Santi.
 - Guía en el chat: paso a paso con captura en cada pantalla (le funcionó bien).
+
+## Dónde quedamos (8 nov) → seguir cuando Santi vuelva
+- Pasos 1, 2 y 3 ✅. **Siguiente: paso 4, token** del usuario del sistema "ig contentia".
+- Parte A: abrir Apps Script de la hoja del plan › ⚙️ Configuración del proyecto › Propiedades del script (pestaña abierta).
+- Parte B: Usuarios del sistema › ig contentia › Generar token › app Publicador Santi › caducidad **Nunca** › permisos
+  `ads_management`, `ads_read`, `business_management`, `pages_show_list`, `pages_read_engagement`, `instagram_basic`
+  → revisar captura antes de generar → pegar como `META_ADS_TOKEN` (nunca por el chat; se muestra una sola vez).

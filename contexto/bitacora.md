@@ -1,6 +1,7 @@
 # Bitácora (lo más nuevo arriba, una línea por cosa hecha)
 
 ## 8 nov 2026
+- Meta: pausa antes del paso 4 (token). Santi salió; instrucciones listas en `anuncios-meta.md` › "Dónde quedamos (8 nov)".
 - Meta paso 3: usuario del sistema **ig contentia** (Admin, ID 61596519503349) creado. Activos asignados (cuenta publicitaria sin acceso total). ✅ Paso 3 listo.
 - Meta paso 3: app Publicador Santi agregada a las Apps del negocio soysanti__content_ia (requisito para crear usuarios del sistema).
 
