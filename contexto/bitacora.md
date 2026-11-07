@@ -146,3 +146,4 @@
 - 7 nov 2026 · 8:00 a. m. · Revisión: v3 1.1 en Programado (11:00). Sin errores.
 - 7 nov 11:40 · v3: IG y TikTok fallaron con "Out of memory" (getBytes() de un video de 27,5 MB). Arreglo: payload = file.getBlob() en Code.gs y TikTok.gs. YouTube salió bien (orzaIcXFhdE). Santi aplica el cambio en Apps Script y pone TikTok en Pendiente.
 - 7 nov 12:37 · v3 tras arreglo de memoria: TikTok OK (borradores 12:17), YouTube OK, Instagram rechaza al procesar (3 de 3 reintentos; el código no guarda el motivo). Pendiente: ver mensaje del 4.º intento, Santi sube IG a mano, y guardar el motivo del error en el código.
+- 7 nov 12:45 · Code.gs: guarda el motivo del rechazo de IG en la hoja, pistas en español por código de error, revisa la respuesta de la subida, y nueva función probarSubidaInstagram (sube v3 SIN publicar y muestra qué dice Instagram). Fila v3 marcada Publicado (Santi sube IG a mano).

@@ -72,6 +72,7 @@ function onOpen() {
     .addItem('Crear pestaña del mes siguiente', 'crearMesSiguiente')
     .addItem('Repintar calendario', 'pintarCalendario')
     .addItem('Probar conexión con Instagram', 'probarConexion')
+    .addItem('Probar subida a Instagram (sin publicar)', 'probarSubidaInstagram')
     .addItem('Probar conexión con YouTube', 'probarYouTube')
     .addItem('Conectar TikTok', 'conectarTikTok')
     .addItem('Probar conexión con TikTok', 'probarTikTok')
@@ -392,11 +393,12 @@ function publicarPendientes() {
         revisar_(f, i);        // si aún no está, la próxima vuelta lo publica
       } catch (e) {
         const msg = String(e.message || e);
+        console.log('Instagram, fila ' + (i + 2) + ': ' + msg);
         const props = PropertiesService.getScriptProperties(), clave = 'reintentos_' + idDe_(f.v(i, 'video'));
         const n = Number(props.getProperty(clave) || 0) + 1;
         props.setProperty(clave, String(n));
         if (/ProcessingFailed|ERROR/.test(msg) && n <= 3) {
-          f.set(i, 'estado', 'Publicar'); f.set(i, 'link', 'Instagram falló al procesar: reintento ' + n + ' de 3');
+          f.set(i, 'estado', 'Publicar'); f.set(i, 'link', ('Instagram falló al procesar (reintento ' + n + ' de 3): ' + msg).slice(0, 300));
         } else {
           f.set(i, 'estado', 'Error'); f.set(i, 'link', msg.slice(0, 300));
         }
@@ -419,19 +421,65 @@ function archivo_(link) {
 
 /** Crea el contenedor de Reel y le sube el video de Drive en un solo envío. */
 function subir_(f, i, file) {
+  const id = subirContenedor_(file, String(f.v(i, 'desc')));
+  f.set(i, 'contenedor', id);
+  f.set(i, 'estado', 'Publicando');
+  f.set(i, 'link', 'Instagram procesando el video');
+}
+
+/** Crea el contenedor y sube el video. Devuelve el id del contenedor. No publica nada. */
+function subirContenedor_(file, caption) {
   if (!CONFIG.IG_ID) throw new Error('Falta IG_ID en CONFIG (publicación automática no configurada)');
   const mb = file.getSize() / 1048576;
   if (mb > CONFIG.MAX_MB) throw new Error('El video pesa ' + Math.round(mb) + ' MB (máx. ' + CONFIG.MAX_MB + '): exportarlo más liviano');
   const c = graph_('post', CONFIG.IG_ID + '/media', {
-    media_type: 'REELS', upload_type: 'resumable', caption: String(f.v(i, 'desc')), share_to_feed: 'true' });
+    media_type: 'REELS', upload_type: 'resumable', caption: caption, share_to_feed: 'true' });
   const r = UrlFetchApp.fetch(c.uri, {
-    method: 'post', contentType: 'application/octet-stream', payload: file.getBlob(), // el blob directo: getBytes() con videos de ~28 MB se queda sin memoria
+    method: 'post', contentType: 'application/octet-stream',
+    payload: file.getBlob(), // el blob directo: getBytes() con videos de ~28 MB se queda sin memoria
     headers: { Authorization: 'OAuth ' + token_(), offset: '0', file_size: String(file.getSize()) },
     muteHttpExceptions: true });
-  if (r.getResponseCode() !== 200) throw new Error('Subida ' + r.getResponseCode() + ': ' + r.getContentText().slice(0, 200));
-  f.set(i, 'contenedor', c.id);
-  f.set(i, 'estado', 'Publicando');
-  f.set(i, 'link', 'Instagram procesando el video');
+  const txt = r.getContentText();
+  if (r.getResponseCode() !== 200 || /"success"\s*:\s*false|"error"/.test(txt)) {
+    throw new Error('Subida ' + r.getResponseCode() + ': ' + txt.slice(0, 200));
+  }
+  return c.id;
+}
+
+/** Explica en español los errores de Instagram más comunes al procesar un Reel. */
+function pistaIG_(status) {
+  const s = String(status || '');
+  if (/2207026/.test(s)) return ' → Formato no soportado: exportar MP4 H.264, audio AAC 48 kHz, 30 fps, 1080×1920, con faststart.';
+  if (/2207008|2207027/.test(s)) return ' → El contenedor venció o no está listo: se vuelve a subir.';
+  if (/2207003|2207020/.test(s)) return ' → Instagram no pudo descargar el video (subida incompleta).';
+  if (/2207004|2207005|2207006/.test(s)) return ' → Video muy pesado o muy largo para Reels.';
+  return '';
+}
+
+/**
+ * PRUEBA SEGURA: sube a Instagram el video de la fila con el código de PRUEBA_IG, SIN PUBLICAR,
+ * y escribe en el registro lo que responde Instagram. Sirve para saber por qué rechaza un video.
+ * Correr desde el editor (▶) o desde el menú Plan IG. El contenedor sin publicar se borra solo en 24 h.
+ */
+const PRUEBA_IG = 'v3';
+function probarSubidaInstagram() {
+  const d = buscarCodigo_(planes_().map(leer_), PRUEBA_IG);
+  if (!d) throw new Error('No encontré la fila ' + PRUEBA_IG);
+  const file = archivo_(d.f.v(d.i, 'video'));
+  console.log('Video: ' + file.getName() + ' · ' + (file.getSize() / 1048576).toFixed(1) + ' MB');
+  const id = subirContenedor_(file, 'Prueba (no se publica)');
+  console.log('Subido. Contenedor ' + id + '. Esperando a Instagram…');
+  for (let k = 0; k < 12; k++) {
+    Utilities.sleep(15000);
+    const st = graph_('get', id, { fields: 'status_code,status' });
+    console.log('Instagram dice: ' + st.status_code + ' · ' + (st.status || ''));
+    if (st.status_code !== 'IN_PROGRESS') {
+      avisar_(st.status_code === 'FINISHED' ? '✅ Instagram aceptó el video (no se publicó).' :
+        '❌ Instagram: ' + st.status_code + ' · ' + (st.status || '') + pistaIG_(st.status));
+      return;
+    }
+  }
+  avisar_('Instagram sigue procesando después de 3 min. Vuelve a probar más tarde.');
 }
 
 /** Pregunta a Instagram si ya procesó el video; si sí, lo publica. Si no, sigue en la próxima vuelta. */
@@ -441,7 +489,7 @@ function revisar_(f, i) {
   const st = graph_('get', id, { fields: 'status_code,status' }); // una sola pregunta: nada de esperas largas
   if (st.status_code === 'IN_PROGRESS') { f.set(i, 'link', 'Instagram procesando el video (sigue en 15 min)'); return; }
   if (st.status_code === 'PUBLISHED') { f.set(i, 'estado', 'Publicado'); f.set(i, 'contenedor', ''); return; } // ya salió en otra vuelta
-  if (st.status_code !== 'FINISHED') throw new Error('Instagram: ' + st.status_code + ' · ' + (st.status || ''));
+  if (st.status_code !== 'FINISHED') throw new Error('Instagram: ' + st.status_code + ' · ' + (st.status || '') + pistaIG_(st.status));
   const pub = graph_('post', CONFIG.IG_ID + '/media_publish', { creation_id: id });
   const ahora = new Date();
   // Ya está publicado: se marca de una vez, para que un error de aquí en adelante nunca lo vuelva a publicar.
