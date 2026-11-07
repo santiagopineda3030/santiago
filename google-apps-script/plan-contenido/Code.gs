@@ -425,7 +425,7 @@ function subir_(f, i, file) {
   const c = graph_('post', CONFIG.IG_ID + '/media', {
     media_type: 'REELS', upload_type: 'resumable', caption: String(f.v(i, 'desc')), share_to_feed: 'true' });
   const r = UrlFetchApp.fetch(c.uri, {
-    method: 'post', contentType: 'application/octet-stream', payload: file.getBlob().getBytes(),
+    method: 'post', contentType: 'application/octet-stream', payload: file.getBlob(), // el blob directo: getBytes() con videos de ~28 MB se queda sin memoria
     headers: { Authorization: 'OAuth ' + token_(), offset: '0', file_size: String(file.getSize()) },
     muteHttpExceptions: true });
   if (r.getResponseCode() !== 200) throw new Error('Subida ' + r.getResponseCode() + ': ' + r.getContentText().slice(0, 200));

@@ -144,3 +144,4 @@
 - 6 nov 2026 · Crudo '5 de noviembre' (1F0GhGxZbTROns3TToqAkmmQFnVJsDA8M): ya no estaba (alguien lo borró antes). Videos en frío quedó vacía.
 - 6 nov 2026 · 9:25 p. m. · Santi subió v3 1.1 a 2. Videos terminados › NOVIEMBRE 2026 (1oA9J1mjs_bADNh0H-p1I27NcFg7C9gF1, mismo tamaño). Hoja: H4 link (lo puso el script), M4 Publicar (aprobado: prueba automática 7 nov 11:00, IG → YouTube → TikTok borradores). COLA v3 Entregado. Tarea 8:00 cambiada a solo revisar. Documentado el flujo actual del editor (README, skill editar-video). Mañana: arreglar la subida (SUBIDA_URL/CLAVE).
 - 7 nov 2026 · 8:00 a. m. · Revisión: v3 1.1 en Programado (11:00). Sin errores.
+- 7 nov 11:40 · v3: IG y TikTok fallaron con "Out of memory" (getBytes() de un video de 27,5 MB). Arreglo: payload = file.getBlob() en Code.gs y TikTok.gs. YouTube salió bien (orzaIcXFhdE). Santi aplica el cambio en Apps Script y pone TikTok en Pendiente.

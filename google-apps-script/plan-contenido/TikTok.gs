@@ -161,7 +161,7 @@ function tiktokFila_(f, i) {
       ini = tt_('/post/publish/inbox/video/init/', { source_info: fuente });
     }
     const r = UrlFetchApp.fetch(ini.upload_url, { method: 'put', contentType: 'video/mp4', muteHttpExceptions: true,
-      payload: file.getBlob().getBytes(), headers: { 'Content-Range': 'bytes 0-' + (size - 1) + '/' + size } });
+      payload: file.getBlob(), /* blob directo: getBytes() se queda sin memoria */ headers: { 'Content-Range': 'bytes 0-' + (size - 1) + '/' + size } });
     if (r.getResponseCode() >= 300) throw new Error('Subida ' + r.getResponseCode() + ': ' + r.getContentText().slice(0, 200));
     PropertiesService.getScriptProperties().setProperty('tt_' + idDe_(f.v(i, 'video')), ini.publish_id);
     if (TT.DIRECTO) {
