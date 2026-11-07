@@ -1,5 +1,18 @@
 # Bitácora (lo más nuevo arriba, una línea por cosa hecha)
 
+## 7 nov 2026 (madrugada) · Cierre del día (resumen de todas las carpetas)
+- **Santi · Base:** v2 marcado publicado + Calendar · código IG arreglado e instalado (un paso pesado por vuelta) · carpeta Juanita ·
+  estudio de mercado hispano + competencia + encuesta · oferta cerrada · modelo de entrega/producto · hoja de ruta al 18 · plan maestro ·
+  competidores para estudiar (Content OS, sistemas de $3K) · limpieza de Drive (Santi vació la papelera).
+- **📁 TikTok:** app en sandbox, conectada, sale a borradores tras IG; publicación directa lista (interruptor apagado). Falta auditoría.
+- **📁 Guiones:** guion v3 (noticias 6 nov) terminado.
+- **📁 Edición de videos:** v3 editado (1.0 → 1.1, aprobado), subido y **programado: Publicar, 7 nov 11:00**. Crudo y guion a la papelera.
+  Pendiente: arreglar la subida automática a Drive al terminar de editar.
+- **📁 Anuncios (Meta):** flujo y plan acordados; cuenta **ContentIA Ads** `act_1449021934086792` (USD); API de marketing agregada.
+  Quedó en el paso 3 (usuario del sistema), ver `anuncios-meta.md`.
+- **Mañana (7 nov):** 11:00 prueba real v3 (IG → YouTube → TikTok borradores) · Santi: arreglar subida automática de Edición de videos ·
+  terminar Meta Ads (paso 3+) · profundizar oferta, avatar y análisis de mercado (Santi trae el **nicho**).
+
 ## 7 nov 2026
 - Meta Ads: se paró en el paso 3 (usuario del sistema). Se sigue el 8 nov; detalle en `anuncios-meta.md` › "Dónde quedamos".
 - ✅ Meta paso 2: API de marketing agregada a Publicador Santi y app unida al negocio soysanti__content_ia.
