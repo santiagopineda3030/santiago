@@ -389,8 +389,16 @@ function publicarPendientes() {
         pesado = true;
         subir_(f, i, file); // deja la fila en "Publicando"
         SpreadsheetApp.flush();
-        Utilities.sleep(30000); // Instagram suele procesar en menos de 1 min: una sola revisión rápida
-        revisar_(f, i);        // si aún no está, la próxima vuelta lo publica
+        // Instagram tarda ~1–2 min (varios IN_PROGRESS antes de FINISHED). Preguntar cada 15 s hasta que termine,
+        // sin pasar de 4 min desde el inicio de la vuelta (Apps Script corta a los 6). Regla de Santi, 8 nov.
+        const cont = String(f.v(i, 'contenedor'));
+        for (let k = 0; k < 16 && Date.now() - inicio < 4 * 60 * 1000; k++) {
+          Utilities.sleep(15000);
+          const st = graph_('get', cont, { fields: 'status_code' });
+          console.log('Instagram dice: ' + st.status_code);
+          if (st.status_code !== 'IN_PROGRESS') break;
+        }
+        revisar_(f, i);        // publica si ya terminó; si de verdad sigue procesando, la próxima vuelta lo publica
       } catch (e) {
         const msg = String(e.message || e);
         console.log('Instagram, fila ' + (i + 2) + ': ' + msg);

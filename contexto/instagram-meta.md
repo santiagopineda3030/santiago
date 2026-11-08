@@ -64,3 +64,6 @@ Si Meta responde error 190, el token venció o es inválido: repetir 3–5.
 - Ojo al regenerarlo: buscar "instagram" en la lista y marcar `instagram_content_publish` (debe decir 7 seleccionadas).
   Sin ese permiso sale el error (#10) "Requires instagram_content_publish permission".
 - `META_ADS_TOKEN` (anuncios) es otro token del mismo robot. Detalle en `anuncios-meta.md`.
+- **Espera hasta FINISHED (8 nov, regla de Santi):** al llegar la hora, después de subir, `publicarPendientes` pregunta
+  cada 15 s (hasta 16 veces, sin pasar de 4 min desde el inicio de la vuelta) y publica apenas sale FINISHED.
+  Antes revisaba una sola vez a los 30 s y, si seguía IN_PROGRESS, publicaba 15 min tarde.
