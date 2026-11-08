@@ -185,3 +185,4 @@
 - 8 nov 10:12 · Santi: solo por hoy el v4 sale a las 4:00 p. m. (aún lo está terminando). Hoja: Hora 16:00, Publicación 'Listo' (falta Publicar al aprobar la versión final). Revisión de Base movida a 4:20 p. m. Mañana vuelve a las 11:00.
 - 8 nov 10:45 · Calendario: evento '📰 Noticias IA · Video 4' movido de 11:00 a 4:00 p. m. (aviso 15 min antes, 3:45).
 - 8 nov 11:00 · Santi: hoy hace las encuestas y manda los resultados a Base. Ahora va al píxel en 📁 Anuncios (avisado). Papelera de Drive después del video.
+- 8 nov · Santi: el v4 sale hoy a las 6:00 p. m. (antes 4 p. m.). Hoja L5 18:00, calendario movido a 18:00, revisión de Base 6:20 p. m. Sigue 'Listo' hasta que apruebe.
