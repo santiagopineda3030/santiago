@@ -95,3 +95,8 @@ Datos (no secretos) cuando existan: ID de cuenta publicitaria (`act_…`), ID de
    conjunto + anuncio desde `Anuncios.gs`, **EN PAUSA** (0 gasto). Santi lo revisa en el Administrador de anuncios.
 4. Si Santi quiere encenderlo: presupuesto mínimo (1–2 USD/día, tope total bajo). Requiere **método de pago** en ContentIA Ads
    (hoy no tiene): lo pone Santi. **Activar = Santi** (regla del área: Claude nunca activa ni sube presupuesto).
+
+## Cambio (8 nov, aviso de 📁 Edición de videos)
+- Santi: **hoy NO se sube el v4 a Meta Ads ni se crea ningún anuncio.** La prueba del anuncio en pausa pasa al **9 nov**.
+- Video a usar: **v4 2.2 noticias-7-nov.mp4** (Drive `1MnxyZS2-OT2y9ZMV4nD0qlkl3jKniLdS`), no el 1.2. Orgánico: 8 nov 18:00.
+- Píxel (paso 5): cuando Santi diga "hagamos el píxel".
