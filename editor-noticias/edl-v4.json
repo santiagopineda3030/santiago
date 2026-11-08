@@ -1,6 +1,6 @@
 {
- "nota": "v4 1.0: Noticias IA del 7 nov, estilo 'ia' (neón). Sin la noticia del hacker (no se grabó).",
- "gancho_texto": "Clonaron la voz con IA",
+ "nota": "v4 1.1: orden Wall Street → OpenAI → Voz clonada → Perplexity; luz limpia; sin cortes de audio por mirada; suspenso en el gancho.",
+ "gancho_texto": "Wall Street se desploma",
  "cta": "Sígueme para no perderte ninguna",
  "cta_emoji": "🔔",
  "claves": [
@@ -23,15 +23,15 @@
    "cortes": [
     {
      "clip": "0001",
-     "desde": 6.896,
-     "hasta": 10.273,
-     "texto": "Clonaron la voz con IA y se robaron más de 129 millones de dólares."
-    },
-    {
-     "clip": "0001",
      "desde": 15.386,
      "hasta": 19.165,
      "texto": "Wall Street perdió más de 2,3 billones de dólares en tan solo un día."
+    },
+    {
+     "clip": "0001",
+     "desde": 6.896,
+     "hasta": 10.273,
+     "texto": "Clonaron la voz con IA y se robaron más de 129 millones de dólares."
     },
     {
      "clip": "0001",
@@ -71,91 +71,8 @@
      "ch": "📰",
      "y": 455
     }
-   ]
-  },
-  {
-   "titulo": "Noticia 1 — Voz clonada",
-   "tipo": "noticia",
-   "etiqueta": "POLÉMICA · VOZ CLONADA",
-   "cortes": [
-    {
-     "clip": "0001",
-     "desde": 67.441,
-     "hasta": 70.578,
-     "texto": "Tres personas clonaron con IA la voz de directores y de abogados."
-    },
-    {
-     "clip": "0001",
-     "desde": 115.854,
-     "hasta": 120.733,
-     "texto": "Llamaban a las personas de contabilidad y les pedían el favor de que les transfieran un dinero."
-    },
-    {
-     "clip": "0001",
-     "desde": 152.035,
-     "hasta": 156.582,
-     "texto": "Con esta táctica clonaron a más de 100 personas y robaron más de 129 millones de dólares."
-    },
-    {
-     "clip": "0001",
-     "desde": 166.783,
-     "hasta": 170.166,
-     "texto": "A bancos, hospitales e incluso hasta una empresa de comida de perros."
-    }
    ],
-   "graficos": [
-    {
-     "tipo": "texto",
-     "en": "Tres",
-     "offset": 0,
-     "dur": 2.4,
-     "lineas": [
-      "3 PERSONAS",
-      "clonaron voces de jefes con IA"
-     ],
-     "ch": "🎭",
-     "y": 455
-    },
-    {
-     "tipo": "emoji",
-     "en": "Llamaban",
-     "dur": 1.4,
-     "ch": "📞",
-     "x": 840,
-     "y": 840
-    },
-    {
-     "tipo": "emoji",
-     "en": "transfieran",
-     "dur": 1.4,
-     "ch": "💸",
-     "x": 240,
-     "y": 860
-    },
-    {
-     "tipo": "contador",
-     "en": "129",
-     "offset": 0,
-     "dur": 2.6,
-     "desde": 0,
-     "hasta": 129,
-     "formato": "US${v:.0f} M",
-     "etiqueta": "millones de dólares robados",
-     "y": 455
-    },
-    {
-     "tipo": "texto",
-     "en": "bancos,",
-     "offset": 0,
-     "dur": 2.6,
-     "lineas": [
-      "BANCOS · HOSPITALES",
-      "y hasta comida de perros"
-     ],
-     "ch": "🐶",
-     "y": 455
-    }
-   ]
+   "gancho_texto": null
   },
   {
    "titulo": "Noticia 2 — Wall Street",
@@ -240,7 +157,7 @@
      "tipo": "contador",
      "en": "9%.",
      "offset": 0,
-     "dur": 2.2,
+     "dur": 1.5,
      "desde": 0,
      "hasta": -9,
      "formato": "{v:.0f} %",
@@ -271,12 +188,6 @@
      "desde": 317.249,
      "hasta": 319.459,
      "texto": "Rinde hasta un 40 % menos."
-    },
-    {
-     "clip": "0001",
-     "desde": 321.847,
-     "hasta": 324.606,
-     "texto": "Lo más loco es que OpenAI no sabe por qué."
     },
     {
      "clip": "0001",
@@ -317,14 +228,6 @@
     },
     {
      "tipo": "emoji",
-     "en": "sabe",
-     "dur": 1.4,
-     "ch": "🤷",
-     "x": 840,
-     "y": 840
-    },
-    {
-     "tipo": "emoji",
      "en": "peor.",
      "dur": 1.4,
      "ch": "😬",
@@ -335,8 +238,92 @@
      "tipo": "alerta",
      "en": "descontrolar?",
      "offset": -0.4,
-     "dur": 2.2,
+     "dur": 1.5,
      "texto": "¿SE VA A DESCONTROLAR?",
+     "y": 455
+    }
+   ]
+  },
+  {
+   "titulo": "Noticia 1 — Voz clonada",
+   "tipo": "noticia",
+   "etiqueta": "POLÉMICA · VOZ CLONADA",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 67.441,
+     "hasta": 70.578,
+     "texto": "Tres personas clonaron con IA la voz de directores y de abogados."
+    },
+    {
+     "clip": "0001",
+     "desde": 115.854,
+     "hasta": 120.733,
+     "texto": "Llamaban a las personas de contabilidad y les pedían el favor de que les transfieran un dinero."
+    },
+    {
+     "clip": "0001",
+     "desde": 152.035,
+     "hasta": 156.582,
+     "texto": "Con esta táctica clonaron a más de 100 personas y robaron más de 129 millones de dólares."
+    },
+    {
+     "clip": "0001",
+     "desde": 166.783,
+     "hasta": 170.166,
+     "texto": "A bancos, hospitales e incluso hasta una empresa de comida de perros."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "texto",
+     "en": "Tres",
+     "offset": 0,
+     "dur": 2.4,
+     "lineas": [
+      "3 PERSONAS",
+      "clonaron voces de jefes con IA"
+     ],
+     "ch": "🎭",
+     "y": 455
+    },
+    {
+     "tipo": "emoji",
+     "en": "Llamaban",
+     "dur": 1.4,
+     "ch": "📞",
+     "x": 840,
+     "y": 840
+    },
+    {
+     "tipo": "emoji",
+     "en": "transfieran",
+     "dur": 1.4,
+     "ch": "💸",
+     "x": 240,
+     "y": 860
+    },
+    {
+     "tipo": "contador",
+     "en": "129",
+     "offset": 0,
+     "dur": 2.6,
+     "desde": 0,
+     "hasta": 129,
+     "formato": "US${v:.0f} M",
+     "etiqueta": "millones de dólares robados",
+     "y": 455
+    },
+    {
+     "tipo": "texto",
+     "en": "bancos,",
+     "offset": 0,
+     "dur": 2.6,
+     "lineas": [
+      "BANCOS · HOSPITALES",
+      "y hasta comida de perros"
+     ],
+     "ch": "🐶",
      "y": 455
     }
    ]

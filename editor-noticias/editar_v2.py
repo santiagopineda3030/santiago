@@ -26,12 +26,14 @@ import animaciones as A
 import editar
 from editar import ffmpeg, normalizar, probar
 
-PRE, POST = 0.06, 0.07
+PRE, POST = 0.12, 0.18  # más aire: que ninguna palabra quede cortada (pedido de Santi, 7 nov)
 SIL_DB, SIL_MIN, SIL_MARGEN = -34, 0.16, 0.05
 GRUPO_MAX = 4.0          # cada ~4 s cambia el zoom
-COLA_CTA = 3.0
+COLA_CTA = 2.5
 SR = 48000
 LUZ = {  # ajustes de luz con nombre
+    "limpia": "hqdn3d=2:1:3:3,colorbalance=rs=-0.08:gs=-0.02:bs=0.08:rm=-0.07:bm=0.05:rh=-0.04:bh=0.03,"
+              "eq=brightness=0.05:contrast=1.14:saturation=1.08:gamma=1.1,unsharp=5:5:0.8",  # sin amarillo (7 nov)
     "cine": "curves=preset=increase_contrast,eq=brightness=0.07:saturation=1.38:gamma=1.2,"
             "colorbalance=rs=-0.06:gs=-0.01:bs=0.1:rh=0.08:gh=0.02:bh=-0.05,vignette=PI/5,unsharp=5:5:0.7",
 }
@@ -51,7 +53,7 @@ def voz_vad(clip):
     return [(t["start"] / 16000, t["end"] / 16000) for t in ts]
 
 
-def tramos_con_voz(a, b, voz, antes=0.04, despues=0.06, unir=0.10):
+def tramos_con_voz(a, b, voz, antes=0.10, despues=0.16, unir=0.12):
     """Deja solo los momentos con voz dentro de [a, b] (con un poquito de aire) y une los muy cercanos."""
     tr = [(max(a, s - antes), min(b, e + despues)) for s, e in voz if e > a and s < b]
     out = []
@@ -63,12 +65,37 @@ def tramos_con_voz(a, b, voz, antes=0.04, despues=0.06, unir=0.10):
     return out or [(a, b)]
 
 
-def musica_de_fondo(ruta, voz, db=-21.0, bajar=6.0):
-    """Música bajita bajo la voz: a `db` dB de la voz, y `bajar` dB menos mientras se habla (ducking)."""
+def _wav(ruta):
     with wave.open(str(ruta)) as f:
-        m = np.frombuffer(f.readframes(f.getnframes()), np.int16).astype(np.float32).reshape(-1, 2) / 32768
+        return np.frombuffer(f.readframes(f.getnframes()), np.int16).astype(np.float32).reshape(-1, 2) / 32768
+
+
+def musica_de_fondo(ruta, voz, db=-21.0, bajar=6.0, intro=None, corte=None, golpes=()):
+    """Música bajo la voz: a `db` dB de la voz, y `bajar` dB menos mientras se habla (ducking).
+    Con `intro`: suspenso hasta `corte` (s) y ahí entra la música principal (cruce de 0,4 s).
+    `golpes`: segundos donde suena un golpe grave (cambio de noticia)."""
+    m = _wav(ruta)
     n = len(voz)
     m = np.tile(m, (n // len(m) + 1, 1))[:n]
+    if intro and corte:
+        it = _wav(intro)
+        c = int(corte * SR)
+        x = int(0.4 * SR)
+        it = np.tile(it, (c // len(it) + 2, 1))[:c + x]
+        it = it / (np.sqrt(np.mean(it ** 2)) + 1e-9) * (np.sqrt(np.mean(m ** 2)) + 1e-9)
+        mm = m.copy()
+        mm[:c] = it[:c]
+        f = np.linspace(0, 1, min(x, n - c))[:, None]
+        mm[c:c + len(f)] = it[c:c + len(f)] * (1 - f) + m[c:c + len(f)] * f
+        m = mm
+    for gt in golpes:
+        i0 = int(max(0, gt - 0.05) * SR)
+        k = np.arange(int(0.9 * SR)) / SR
+        g = (np.sin(2 * np.pi * (40 + 70 * np.exp(-k * 8)) * k) * np.exp(-k * 4.5)
+             + 0.3 * np.random.default_rng(1).standard_normal(len(k)) * np.exp(-k * 30))
+        g = g / np.abs(g).max() * np.abs(m).max() * 1.6
+        j = min(n, i0 + len(g))
+        m[i0:j] += g[: j - i0, None]
     rms = lambda x: float(np.sqrt(np.mean(x ** 2)) + 1e-9)
     hablando = np.abs(voz).mean(1)
     win = int(0.05 * SR)
@@ -265,8 +292,9 @@ def main():
     ap.add_argument("--nombre", default="v1 1.1 noticias-dia-1.mp4")
     ap.add_argument("--mirada", help="JSON de mirada.py: recorta los bordes donde no se mira a cámara")
     ap.add_argument("--umbral-mirada", type=float, default=1.0)
-    ap.add_argument("--congelar-max", type=float, default=0.5, help="máx. s de imagen sostenida en cada borde")
+    ap.add_argument("--congelar-max", type=float, default=0.8, help="máx. s de imagen sostenida en cada borde")
     ap.add_argument("--musica", help="WAV de música de fondo (48 kHz estéreo)")
+    ap.add_argument("--musica-intro", help="WAV de suspenso para el gancho (entra la --musica cuando empieza la 1.ª noticia)")
     ap.add_argument("--musica-db", type=float, default=-21.0, help="nivel de la música bajo la voz (dB)")
     ap.add_argument("--centro-y", type=float, default=0.5)
     ap.add_argument("--estilo", default="ia", help="'ia' (neón, por defecto desde el 7 nov) o 'clasico' (rojo)")
@@ -312,8 +340,7 @@ def main():
             ws = alinear(c["texto"], palabras_de(trozos[ci], c["desde"], c["hasta"]), c["desde"], c["hasta"])
             acum, zoom = 0.0, 1.0 if k == 0 else zooms[len(plan) % len(zooms)]
             tramos = tramos_con_voz(ini, fin, vad[ci])
-            if mir is not None:
-                tramos = recortar_mirada(tramos, palabras_de(trozos[ci], c["desde"], c["hasta"]), mir)
+            # (7 nov) ya NO se recorta el audio por la mirada: solo se sostiene la imagen (congelar), así no se corta ninguna palabra
             # cada palabra va al tramo más cercano (ninguna se pierde) y se ajusta a sus bordes
             asignadas = {i: [] for i in range(len(tramos))}
             for w in ws:
@@ -425,7 +452,9 @@ def main():
     voz = np.frombuffer(pcm, np.int16).astype(np.float32).reshape(-1, 2) / 32768
     mezcla = voz.copy()
     if a.musica:
-        mezcla += musica_de_fondo(a.musica, voz, a.musica_db)
+        corte = secs[1]["ini"] if a.musica_intro and len(secs) > 1 else None
+        mezcla += musica_de_fondo(a.musica, voz, a.musica_db, intro=a.musica_intro, corte=corte,
+                                  golpes=[s_["ini"] for s_ in secs if s_["tipo"] == "noticia"])
     banco = A.sonidos(SR)
     for t0, nombre in sfx:
         s = banco[nombre] * GANANCIA_SFX.get(nombre, 0.3)
