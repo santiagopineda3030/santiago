@@ -238,6 +238,16 @@ def construir(g, dur, assets):
         return A.g_resumen_ia(dur, g.get("porcentaje", -7.4), g.get("titulo", "LA IA DE GOOGLE VS. USA TODAY"))
     if t == "app":
         return A.g_app(dur, g.get("titulo", "CURSOR CREA LA APP COMPLETA"), g.get("pedido", "Hazme una app de reservas"))
+    if t == "llamada":
+        return A.g_llamada(dur, g.get("hasta", 129_000_000), g.get("titulo", "VOZ CLONADA CON IA"), g.get("quien", "El jefe"))
+    if t == "bolsa":
+        return A.g_bolsa(dur, g.get("cifra", "-2,3 BILLONES"), g.get("sub", "en un solo día"), g.get("titulo", "WALL STREET SE DESPLOMA"))
+    if t == "ejercito":
+        return A.g_ejercito(dur, g.get("total", 300), g.get("titulo", "UN HACKER Y SU EJÉRCITO DE IA"))
+    if t == "nunca_duerme":
+        return A.g_nunca_duerme(dur, f"{assets}/logo_{g['logo']}.png" if g.get("logo") else None, g.get("precio", "200 dólares al mes"), g.get("titulo", "EL EMPLEADO QUE NUNCA DUERME"))
+    if t == "rebelde":
+        return A.g_rebelde(dur, g.get("titulo", "¿LA IA SE ESTÁ REBELANDO?"))
     if t == "transicion":
         return A.g_transicion(dur)
     raise ValueError(t)

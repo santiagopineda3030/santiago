@@ -1043,6 +1043,168 @@ def g_app(dur, titulo="CURSOR CREA LA APP COMPLETA", pedido="Hazme una app de re
     return Grafico(dur, (0, 0, W, H), cuadro, "ding")
 
 
+# --------------------------------------------------------------------------- escenas v4 (7 nov)
+def g_llamada(dur, hasta=129_000_000, titulo="VOZ CLONADA CON IA", quien="El jefe"):
+    """Gancho: celular sonando con una llamada del 'jefe', onda de voz y contador de dinero robado."""
+    fondo = Image.new("RGBA", (W, H), (14, 6, 8, 255))
+    tel = tarjeta(420, 640, relleno=(20, 20, 26, 255), radio=56, borde=(255, 255, 255, 170))
+    avatar = emoji("👔", 150)
+    nom = texto_img(quien, 52, BLANCO)
+    sub = texto_img("llamada entrante...", 34, (200, 200, 210), negra=False)
+
+    def cuadro(t):
+        a, _ = _entrada_salida(t, dur, 0.1)
+        im = fondo.copy()
+        _titulo_escena(im, titulo, 450, ROJO)
+        tm = tel.copy()
+        d = ImageDraw.Draw(tm)
+        for k in range(3):
+            pul = (t * 1.5 + k / 3) % 1
+            rr = 90 + 120 * pul
+            d.ellipse((210 - rr, 190 - rr, 210 + rr, 190 + rr), outline=(90, 255, 140, int(170 * (1 - pul))), width=5)
+        pegar_centro(tm, avatar, 210, 190)
+        pegar_centro(tm, nom, 210, 340)
+        pegar_centro(tm, sub, 210, 390)
+        for i in range(24):
+            h = 12 + 70 * abs(math.sin(t * 9 + i * 0.7)) * (0.4 + 0.6 * abs(math.sin(i * 1.3)))
+            x = 50 + i * 13.5
+            d.rounded_rectangle((x, 500 - h / 2, x + 8, 500 + h / 2), 4, fill=ROJO + (255,))
+        sac = 8 * math.sin(t * 50) * (1 if int(t * 3) % 2 == 0 else 0)
+        im.alpha_composite(tm, (int(W / 2 - 210 + sac), 520))
+        v = round(hasta * ease_out(clamp((t - 0.2) / (dur * 0.7))))
+        pegar_centro(im, texto_img(f"-US${v:,}".replace(",", "."), 92, ROJO), W / 2, 1250)
+        pegar_centro(im, texto_img("robados con su voz falsa", 42, BLANCO, negra=False), W / 2, 1340)
+        return con_alfa(im, a)
+
+    return Grafico(dur, (0, 0, W, H), cuadro, "alerta")
+
+
+def g_bolsa(dur, cifra="-2,3 BILLONES", sub="en un solo día", titulo="WALL STREET SE DESPLOMA"):
+    """Gráfico de bolsa que se cae en rojo, flecha hacia abajo y la cifra que golpea."""
+    import random
+    rnd = random.Random(5)
+    fondo = _fondo_oscuro()
+    puntos = [0.25]
+    for i in range(40):
+        puntos.append(puntos[-1] + rnd.uniform(-0.03, 0.04) if i < 16 else puntos[-1] + rnd.uniform(0.01, 0.06))
+    x0, x1, y0, y1 = 140, 940, 560, 1080
+
+    def cuadro(t):
+        a, _ = _entrada_salida(t, dur, 0.1)
+        im = fondo.copy()
+        _titulo_escena(im, titulo, 450, ROJO)
+        d = ImageDraw.Draw(im)
+        d.rectangle((x0, y0, x1, y1), outline=(255, 255, 255, 50), width=2)
+        n = max(2, int(clamp(t / (dur * 0.65)) * len(puntos)))
+        pts = [(x0 + (x1 - x0) * i / (len(puntos) - 1), y0 + (y1 - y0) * min(1, p)) for i, p in enumerate(puntos[:n])]
+        col = (90, 255, 140, 255) if n < 18 else ROJO + (255,)
+        d.line(pts, fill=col, width=10, joint="curve")
+        if n >= 18:
+            ex, ey = pts[-1]
+            d.polygon([(ex - 30, ey - 10), (ex + 30, ey - 10), (ex, ey + 40)], fill=ROJO + (255,))
+        kc = ease_out_back(clamp((t - dur * 0.55) / 0.25))
+        if kc > 0:
+            pegar_centro(im, escalar(texto_img(cifra, 104, ROJO), kc), W / 2, 1220)
+            pegar_centro(im, escalar(texto_img(sub, 44, BLANCO, negra=False), kc), W / 2, 1320)
+        return con_alfa(im, a)
+
+    return Grafico(dur, (0, 0, W, H), cuadro, "golpe")
+
+
+def g_ejercito(dur, total=300, titulo="UN HACKER Y SU EJÉRCITO DE IA"):
+    """Un hacker en el centro; aparecen decenas de agentes de IA y van robando llaves."""
+    import random
+    rnd = random.Random(8)
+    fondo = _fondo_oscuro()
+    hk = emoji("🦹", 170)
+    bot = emoji("🤖", 70)
+    llave = emoji("🔑", 60)
+    pos = [(rnd.uniform(160, 920), rnd.uniform(560, 1120)) for _ in range(28)]
+    pos = [p for p in pos if abs(p[0] - W / 2) > 120 or abs(p[1] - 840) > 120]
+
+    def cuadro(t):
+        a, _ = _entrada_salida(t, dur)
+        im = fondo.copy()
+        _titulo_escena(im, titulo, 450)
+        for i, (x, y) in enumerate(pos):
+            k = ease_out_back(clamp((t - i * 0.035) / 0.2))
+            if k > 0:
+                pegar_centro(im, escalar(bot, k), x, y)
+            kl = clamp((t - 0.6 - i * 0.03) / 0.3)
+            if 0 < kl < 1:
+                pegar_centro(im, llave, x + (W / 2 - x) * ease_in_out(kl), y + (840 - y) * ease_in_out(kl))
+        pegar_centro(im, hk, W / 2, 840)
+        v = round(total * ease_out(clamp((t - 0.5) / (dur * 0.6))))
+        pegar_centro(im, texto_emoji("🔑", f"{v} llaves robadas", 64, ROJO), W / 2, 1270)
+        pegar_centro(im, texto_img("de apps de iPhone", 42, BLANCO, negra=False), W / 2, 1360)
+        return con_alfa(im, a)
+
+    return Grafico(dur, (0, 0, W, H), cuadro, "teclas")
+
+
+def g_nunca_duerme(dur, ruta_logo=None, precio="200 dólares al mes", titulo="EL EMPLEADO QUE NUNCA DUERME"):
+    """Oficina de noche: un reloj que gira 24 h, un computador trabajando y avisos que llegan."""
+    fondo = Image.new("RGBA", (W, H), (10, 12, 30, 255))
+    d0 = ImageDraw.Draw(fondo)
+    import random
+    rnd = random.Random(3)
+    for _ in range(60):
+        x, y = rnd.uniform(0, W), rnd.uniform(250, 700)
+        d0.ellipse((x, y, x + 3, y + 3), fill=(255, 255, 255, 120))
+    lg = logo_blanco(ruta_logo, 80, 300) if ruta_logo else None
+    luna = emoji("🌙", 110)
+    avisos = [("🔔", "Un cliente dejó de comprar"), ("📋", "Plan para recuperarlo"), ("✅", "Te aviso para decidir")]
+
+    def cuadro(t):
+        a, _ = _entrada_salida(t, dur)
+        im = fondo.copy()
+        _titulo_escena(im, titulo, 450)
+        if lg:
+            pegar_centro(im, lg, W / 2, 545)
+        pegar_centro(im, luna, 860, 640)
+        d = ImageDraw.Draw(im)
+        cx, cy, r = 300, 780, 130
+        d.ellipse((cx - r, cy - r, cx + r, cy + r), outline=BLANCO + (220,), width=8)
+        ang = t * 7
+        d.line((cx, cy, cx + r * 0.8 * math.sin(ang), cy - r * 0.8 * math.cos(ang)), fill=ROJO + (255,), width=8)
+        d.line((cx, cy, cx + r * 0.5 * math.sin(ang / 12), cy - r * 0.5 * math.cos(ang / 12)), fill=BLANCO + (255,), width=10)
+        pegar_centro(im, texto_img("24 h", 60, BLANCO), cx, cy + r + 60)
+        for i, (ch, txt) in enumerate(avisos):
+            k = ease_out_back(clamp((t - 0.3 - i * 0.35) / 0.25))
+            if k > 0:
+                c = tarjeta(470, 100, relleno=(28, 28, 40, 255), radio=22, borde=(255, 255, 255, 80))
+                pegar_centro(c, texto_emoji(ch, txt, 30), 235, 50)
+                pegar_centro(im, escalar(c, k), 700, 740 + i * 120)
+        kp = ease_out(clamp((t - dur * 0.6) / 0.3))
+        if kp > 0:
+            pegar_centro(im, con_alfa(texto_img(precio, 70, ROJO), kp), W / 2, 1230)
+        return con_alfa(im, a)
+
+    return Grafico(dur, (0, 0, W, H), cuadro, "ding")
+
+
+def g_rebelde(dur, titulo="¿LA IA SE ESTÁ REBELANDO?"):
+    """Un robot que se niega: barra de rendimiento que cae −40 % y un signo de pregunta."""
+    fondo = _fondo_oscuro()
+    robot = emoji("🤖", 220)
+
+    def cuadro(t):
+        a, _ = _entrada_salida(t, dur)
+        im = fondo.copy()
+        _titulo_escena(im, titulo, 450, ROJO)
+        giro = 12 * math.sin(t * 6)
+        pegar_centro(im, robot.rotate(giro, resample=Image.BICUBIC, expand=True), W / 2, 760)
+        d = ImageDraw.Draw(im)
+        k = ease_out(clamp((t - 0.3) / (dur * 0.5)))
+        d.rounded_rectangle((140, 1000, 940, 1070), 35, fill=(40, 40, 48, 255))
+        d.rounded_rectangle((140, 1000, 140 + int(800 * (1 - 0.4 * k)), 1070), 35, fill=ROJO + (255,))
+        pegar_centro(im, texto_img(f"-{round(40 * k)} %", 110, ROJO), W / 2, 1200)
+        pegar_centro(im, texto_img("de rendimiento en seguridad", 40, BLANCO, negra=False), W / 2, 1300)
+        return con_alfa(im, a)
+
+    return Grafico(dur, (0, 0, W, H), cuadro, "alerta")
+
+
 def g_transicion(dur=0.32):
     """Barrido diagonal rojo entre noticias."""
     def cuadro(t):
