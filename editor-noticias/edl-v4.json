@@ -1,5 +1,5 @@
 {
- "nota": "v4 1.2: más recortes por mirada (escenas que tapan 3 momentos + imagen sostenida hasta 1,2 s).",
+ "nota": "v4 1.3: tomas según el guion (vuelven las frases que explican cada noticia).",
  "gancho_texto": "Wall Street se desploma",
  "cta": "Sígueme para no perderte ninguna",
  "cta_emoji": "🔔",
@@ -93,9 +93,21 @@
     },
     {
      "clip": "0001",
+     "desde": 213.121,
+     "hasta": 215.197,
+     "texto": "Los inversionistas vendieron sus acciones de IA."
+    },
+    {
+     "clip": "0001",
      "desde": 220.532,
      "hasta": 223.855,
      "texto": "Por miedo a que el nuevo Congreso les ponga las reglas en los centros de datos."
+    },
+    {
+     "clip": "0001",
+     "desde": 244.699,
+     "hasta": 246.569,
+     "texto": "Que son los edificios donde la IA funciona."
     },
     {
      "clip": "0001",
@@ -108,6 +120,12 @@
      "desde": 277.452,
      "hasta": 279.195,
      "texto": "Cayó hasta un 9%."
+    },
+    {
+     "clip": "0001",
+     "desde": 285.3,
+     "hasta": 287.914,
+     "texto": "Fue el peor día en la tecnología desde el 2020."
     }
    ],
    "graficos": [
@@ -163,6 +181,38 @@
      "formato": "{v:.0f} %",
      "etiqueta": "cayó Nvidia",
      "y": 455
+    },
+    {
+     "tipo": "texto",
+     "en": "edificios",
+     "offset": 0,
+     "dur": 2.0,
+     "lineas": [
+      "CENTROS DE DATOS",
+      "los edificios donde funciona la IA"
+     ],
+     "ch": "🏢",
+     "y": 455
+    },
+    {
+     "tipo": "texto",
+     "en": "peor",
+     "offset": 0,
+     "dur": 2.2,
+     "lineas": [
+      "EL PEOR DÍA",
+      "de la tecnología desde 2020"
+     ],
+     "ch": "📉",
+     "y": 455
+    },
+    {
+     "tipo": "emoji",
+     "en": "vendieron",
+     "dur": 1.4,
+     "ch": "💸",
+     "x": 840,
+     "y": 840
     }
    ]
   },
@@ -188,6 +238,12 @@
      "desde": 317.249,
      "hasta": 319.459,
      "texto": "Rinde hasta un 40 % menos."
+    },
+    {
+     "clip": "0001",
+     "desde": 321.847,
+     "hasta": 324.606,
+     "texto": "Lo más loco es que OpenAI no sabe por qué."
     },
     {
      "clip": "0001",
@@ -241,6 +297,14 @@
      "dur": 1.5,
      "texto": "¿SE VA A DESCONTROLAR?",
      "y": 455
+    },
+    {
+     "tipo": "emoji",
+     "en": "sabe",
+     "dur": 1.4,
+     "ch": "🤷",
+     "x": 840,
+     "y": 840
     }
    ]
   },
@@ -272,6 +336,12 @@
      "desde": 166.783,
      "hasta": 170.166,
      "texto": "A bancos, hospitales e incluso hasta una empresa de comida de perros."
+    },
+    {
+     "clip": "0001",
+     "desde": 173.804,
+     "hasta": 175.886,
+     "texto": "Por suerte, ya todos están arrestados."
     }
    ],
    "graficos": [
@@ -324,6 +394,15 @@
      "offset": -0.4,
      "dur": 2.2,
      "monto": "US$ ???.???"
+    },
+    {
+     "tipo": "emoji",
+     "en": "arrestados.",
+     "offset": -0.3,
+     "dur": 1.5,
+     "ch": "🚔",
+     "x": 840,
+     "y": 840
     }
    ]
   },
@@ -337,6 +416,12 @@
      "desde": 360.421,
      "hasta": 363.977,
      "texto": "Perplexity lanzó un modelo de IA que trabaja 24 horas por ti."
+    },
+    {
+     "clip": "0001",
+     "desde": 373.425,
+     "hasta": 375.881,
+     "texto": "Recuerdan todo y te escriben cuando tienes que decidir."
     },
     {
      "clip": "0001",
@@ -386,6 +471,15 @@
      "en": "cliente",
      "offset": -0.5,
      "dur": 3.4
+    },
+    {
+     "tipo": "emoji",
+     "en": "decidir.",
+     "offset": -0.2,
+     "dur": 1.4,
+     "ch": "📲",
+     "x": 840,
+     "y": 840
     }
    ]
   },
