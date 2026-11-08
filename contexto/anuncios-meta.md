@@ -77,3 +77,12 @@ Datos (no secretos) cuando existan: ID de cuenta publicitaria (`act_…`), ID de
 - Parte B: Usuarios del sistema › ig contentia › Generar token › app Publicador Santi › caducidad **Nunca** › permisos
   `ads_management`, `ads_read`, `business_management`, `pages_show_list`, `pages_read_engagement`, `instagram_basic`
   → revisar captura antes de generar → pegar como `META_ADS_TOKEN` (nunca por el chat; se muestra una sola vez).
+
+## ⚠️ URGENTE antes de la publicación de las 11:00 (8 nov, 21:06)
+- `probarConexion` falla: "(#10) Requires instagram_content_publish permission". `META_TOKEN` NO puede publicar en IG.
+- Arreglo: Usuarios del sistema › ig contentia › Generar token (Publicador Santi, Nunca) con `instagram_basic`,
+  `instagram_content_publish`, `pages_show_list`, `pages_read_engagement`, `business_management`, `ads_management`, `ads_read`
+  → pegar en `META_TOKEN` → `probarConexion` + `probarSubidaInstagram`.
+- Si `instagram_content_publish` no sale para el robot: volver al método del 5 nov (Graph API Explorer → token de página,
+  `contexto/instagram-meta.md` › "Cómo se sacó el token").
+- `META_ADS_TOKEN` está bien (probarAnuncios OK).

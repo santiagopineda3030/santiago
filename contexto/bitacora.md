@@ -1,6 +1,7 @@
 # Bitácora (lo más nuevo arriba, una línea por cosa hecha)
 
 ## 8 nov 2026
+- ⚠️ `META_TOKEN` sin permiso de publicar en IG (probarConexion 21:06 error #10). Hay que arreglarlo antes de las 11:00 del 9 nov. Pasos en `anuncios-meta.md`.
 - ✅ Meta: `probarAnuncios` OK (21:05) con META_ADS_TOKEN. `Anuncios.gs` instalado por Santi.
 - Meta paso 4: `META_ADS_TOKEN` creado. ⚠️ `META_TOKEN` quedó reemplazado por el token de anuncios (sin permiso de publicar en IG): arreglando con token del robot de 7 permisos antes de las 11:00.
 - Meta: pausa antes del paso 4 (token). Santi salió; instrucciones listas en `anuncios-meta.md` › "Dónde quedamos (8 nov)".
