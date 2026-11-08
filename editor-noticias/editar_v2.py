@@ -26,7 +26,7 @@ import animaciones as A
 import editar
 from editar import ffmpeg, normalizar, probar
 
-PRE, POST = 0.12, 0.18  # más aire: que ninguna palabra quede cortada (pedido de Santi, 7 nov)
+PRE, POST = 0.18, 0.18  # más aire: que ninguna palabra quede cortada (pedido de Santi, 7 nov)
 SIL_DB, SIL_MIN, SIL_MARGEN = -34, 0.16, 0.05
 GRUPO_MAX = 4.0          # cada ~4 s cambia el zoom
 COLA_CTA = 2.5
@@ -53,7 +53,7 @@ def voz_vad(clip):
     return [(t["start"] / 16000, t["end"] / 16000) for t in ts]
 
 
-def tramos_con_voz(a, b, voz, antes=0.10, despues=0.16, unir=0.12):
+def tramos_con_voz(a, b, voz, antes=0.16, despues=0.16, unir=0.12):
     """Deja solo los momentos con voz dentro de [a, b] (con un poquito de aire) y une los muy cercanos."""
     tr = [(max(a, s - antes), min(b, e + despues)) for s, e in voz if e > a and s < b]
     out = []
@@ -467,7 +467,10 @@ def main():
     ass_v2(palabras, secs, edl.get("gancho_texto"), (cta_ini, total + COLA_CTA, edl["cta"]), ass)
 
     # ---------------------------------------------------------------- 6. audio: voz + efectos
-    filtro_voz = ["-af", "highpass=f=90,afftdn=nr=20:nf=-32:tn=1,afftdn=nr=10:nf=-38"] if a.quitar_ruido else []
+    # Voz (8 nov): el filtro fuerte dejaba la voz "rara" (efecto agua). Ahora: ruido suave + ecualizador + compresor.
+    filtro_voz = ["-af", "highpass=f=85,afftdn=nr=9:nf=-30:tn=1,"
+                         "equalizer=f=180:t=q:w=1:g=1.5,equalizer=f=350:t=q:w=1.2:g=-2,equalizer=f=3200:t=q:w=1:g=3,"
+                         "acompressor=threshold=-22dB:ratio=3:attack=8:release=120:makeup=2,alimiter=limit=0.95"] if a.quitar_ruido else []
     pcm = subprocess.run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-i", str(base_cola), "-vn", *filtro_voz, "-ac", "2",
                           "-ar", str(SR), "-f", "s16le", "-"], capture_output=True, check=True).stdout
     voz = np.frombuffer(pcm, np.int16).astype(np.float32).reshape(-1, 2) / 32768
