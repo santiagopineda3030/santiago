@@ -1,6 +1,7 @@
 # Bitácora (lo más nuevo arriba, una línea por cosa hecha)
 
 ## 8 nov 2026
+- Meta paso 4: `META_ADS_TOKEN` creado. ⚠️ `META_TOKEN` quedó reemplazado por el token de anuncios (sin permiso de publicar en IG): arreglando con token del robot de 7 permisos antes de las 11:00.
 - Meta: pausa antes del paso 4 (token). Santi salió; instrucciones listas en `anuncios-meta.md` › "Dónde quedamos (8 nov)".
 - Meta paso 3: usuario del sistema **ig contentia** (Admin, ID 61596519503349) creado. Activos asignados (cuenta publicitaria sin acceso total). ✅ Paso 3 listo.
 - Meta paso 3: app Publicador Santi agregada a las Apps del negocio soysanti__content_ia (requisito para crear usuarios del sistema).
