@@ -187,3 +187,4 @@
 - 8 nov 11:00 · Santi: hoy hace las encuestas y manda los resultados a Base. Ahora va al píxel en 📁 Anuncios (avisado). Papelera de Drive después del video.
 - 8 nov · Santi: el v4 sale hoy a las 6:00 p. m. (antes 4 p. m.). Hoja L5 18:00, calendario movido a 18:00, revisión de Base 6:20 p. m. Sigue 'Listo' hasta que apruebe.
 - 8 nov 2026 · 2:35 p. m. · Santi regrabó el v4 (crudo 'Nov 7 ', 1yGtwmmtB52puaAy6DiCsTMHsRsLzv11O, en un centro comercial con ruido); el viejo IMG_1297 a la papelera. Publicación movida a las 18:00 (Santi). Nuevo trozos_vad.py: corta por detector de voz cuando hay ruido de fondo.
+- 8 nov 2026 · 3:00 p. m. · v4 2.0 (regrabación) renderizado y enviado: 93,3 s, ruido reducido, luz original, estilo ia, 5 noticias. Falta OK de Santi para subir y poner Publicar (18:00).
