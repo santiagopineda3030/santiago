@@ -1,5 +1,8 @@
 # Bitácora (lo más nuevo arriba, una línea por cosa hecha)
 
+## 8 nov 2026
+- ✅ Meta paso 6: hoja Tracker de anuncios (1rpHemhgypm3j85Nb1qx6yXvRIJchrbkZTT6Y84QkS2k) + carpeta 5. Reportes (1xWrXUpbmS47qvypWRcIZNylwiWMVLesn).
+
 ## 7 nov 2026 (noche, Bogotá) · Meta Ads pasos 3 y 4
 - Plan para el 8 nov guardado (píxel, tracker y prueba real del v4 como anuncio EN PAUSA): `anuncios-meta.md`. (anotado antes como "8 nov" por el reloj UTC)
 - Code.gs: Instagram ahora espera hasta FINISHED (pregunta cada 15 s, máx. 4 min) en vez de una sola revisión. ✅ Instalado por Santi 21:51 (730 líneas, probarConexion OK). `probarSubidaInstagram` OK 21:44.

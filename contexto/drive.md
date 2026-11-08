@@ -63,3 +63,9 @@ Versión solo Instagram del script arreglado, sin datos de Santi (CONFIG vacío)
 |---|---|
 | ContentIA Publicador · Terms of Service | `1lj3CY0AwXhTYrl2TrMDYivjYg3LIE7KV4TA59EPmTyM` |
 | ContentIA Publicador · Privacy Policy | `1nrUYF4kbXEmHJtX6KNjcSAx8gx55ogQ9rLI42Cvl1zA` |
+
+## Anuncios (Meta) · tracker y reportes (8 nov)
+| Qué | Dónde | ID |
+|---|---|---|
+| Tracker de anuncios - ContentIA (hoja) | Anuncios (Meta) | `1rpHemhgypm3j85Nb1qx6yXvRIJchrbkZTT6Y84QkS2k` |
+| 5. Reportes (reporte diario de anuncios) | Anuncios (Meta) | `1xWrXUpbmS47qvypWRcIZNylwiWMVLesn` |
