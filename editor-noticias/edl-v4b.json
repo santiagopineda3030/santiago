@@ -1,0 +1,511 @@
+{
+ "nota": "v4b 1.0: regrabación del v4 (centro comercial). Orden: Wall Street → OpenAI → Voz clonada → Hacker → Perplexity.",
+ "gancho_texto": "Wall Street se desploma",
+ "cta": "Sígueme para no perderte ninguna",
+ "cta_emoji": "🔔",
+ "claves": [
+  "wall",
+  "street",
+  "nvidia",
+  "openai",
+  "perplexity",
+  "congreso",
+  "contabilidad",
+  "bancos",
+  "hospitales",
+  "clonaron",
+  "voz",
+  "hacker",
+  "iphone",
+  "apple"
+ ],
+ "secciones": [
+  {
+   "titulo": "Gancho",
+   "tipo": "gancho",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 7.716,
+     "hasta": 11.58,
+     "texto": "Wall Street acaba de perder 2,3 billones de dólares en tan solo un día."
+    },
+    {
+     "clip": "0001",
+     "desde": 3.332,
+     "hasta": 6.716,
+     "texto": "Clonaron la voz con IA y se robaron más de 129 millones de dólares."
+    },
+    {
+     "clip": "0001",
+     "desde": 18.404,
+     "hasta": 22.204,
+     "texto": "Estas son las 5 noticias de IA más importantes que pasaron el día de ayer, 7 de noviembre."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "bolsa",
+     "en": "billones",
+     "offset": -0.1,
+     "dur": 2.2,
+     "cifra": "-2,3 BILLONES",
+     "sub": "en un solo día",
+     "titulo": ""
+    },
+    {
+     "tipo": "llamada",
+     "en": "robaron",
+     "offset": -0.1,
+     "dur": 2.3,
+     "hasta": 129000000,
+     "titulo": "VOZ CLONADA CON IA",
+     "quien": "El jefe"
+    },
+    {
+     "tipo": "texto",
+     "en": "5",
+     "offset": -0.1,
+     "dur": 3.0,
+     "lineas": [
+      "TOP 5 NOTICIAS DE IA",
+      "7 de noviembre de 2026"
+     ],
+     "ch": "📰",
+     "y": 455
+    }
+   ]
+  },
+  {
+   "titulo": "Wall Street",
+   "tipo": "noticia",
+   "etiqueta": "VIRAL · WALL STREET",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 94.372,
+     "hasta": 99.068,
+     "texto": "Wall Street, la bolsa más grande del mundo, acaba de perder 2,3 billones de dólares en tan solo un día."
+    },
+    {
+     "clip": "0001",
+     "desde": 111.588,
+     "hasta": 113.852,
+     "texto": "Los inversionistas comenzaron a vender sus acciones."
+    },
+    {
+     "clip": "0001",
+     "desde": 140.164,
+     "hasta": 143.164,
+     "texto": "Por miedo a que el nuevo Congreso les imponga leyes en los centros de datos de IA."
+    },
+    {
+     "clip": "0001",
+     "desde": 152.644,
+     "hasta": 154.716,
+     "texto": "Los cuales son los centros donde funciona la IA."
+    },
+    {
+     "clip": "0001",
+     "desde": 169.892,
+     "hasta": 174.62,
+     "texto": "Nvidia, la empresa que hace los chips más fuertes del mundo, acaba de perder un 9 % de sus acciones."
+    },
+    {
+     "clip": "0001",
+     "desde": 180.932,
+     "hasta": 183.228,
+     "texto": "Fue el peor día en la tecnología desde 2020."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "texto",
+     "en": "Wall",
+     "offset": 0,
+     "dur": 2.0,
+     "lineas": [
+      "WALL STREET",
+      "la bolsa más grande del mundo"
+     ],
+     "ch": "🏦",
+     "y": 455
+    },
+    {
+     "tipo": "bolsa",
+     "en": "perder",
+     "offset": -0.2,
+     "dur": 2.6,
+     "cifra": "-2,3 BILLONES",
+     "sub": "de dólares en un día",
+     "titulo": "WALL STREET"
+    },
+    {
+     "tipo": "venta",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 111.538,
+      "hasta": 113.902
+     }
+    },
+    {
+     "tipo": "datacenter",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 140.11399999999998,
+      "hasta": 154.76600000000002
+     },
+     "titulo": "CENTROS DE DATOS",
+     "sello": "NUEVAS LEYES"
+    },
+    {
+     "tipo": "chip",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 169.84199999999998,
+      "hasta": 174.67000000000002
+     },
+     "logo": "nvidia",
+     "pct": -9,
+     "titulo": "NVIDIA"
+    },
+    {
+     "tipo": "texto",
+     "en": "peor",
+     "offset": 0,
+     "dur": 2.2,
+     "lineas": [
+      "EL PEOR DÍA",
+      "de la tecnología desde 2020"
+     ],
+     "ch": "📉",
+     "y": 455
+    }
+   ]
+  },
+  {
+   "titulo": "OpenAI",
+   "tipo": "noticia",
+   "etiqueta": "POLÉMICA · OPENAI",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 190.116,
+     "hasta": 194.364,
+     "texto": "OpenAI descubrió que su nuevo modelo de IA trabaja muy mal cuando se le pide una única cosa."
+    },
+    {
+     "clip": "0001",
+     "desde": 202.276,
+     "hasta": 204.476,
+     "texto": "La cual es cómo hacer que la IA sea más segura."
+    },
+    {
+     "clip": "0001",
+     "desde": 208.676,
+     "hasta": 211.164,
+     "texto": "Se dieron cuenta de que rinde un 40 % menos."
+    },
+    {
+     "clip": "0001",
+     "desde": 247.716,
+     "hasta": 250.012,
+     "texto": "Y cuando le dijeron: ten cuidado con lo que estás haciendo,"
+    },
+    {
+     "clip": "0001",
+     "desde": 253.22,
+     "hasta": 254.652,
+     "texto": "rindió hasta mucho peor."
+    },
+    {
+     "clip": "0001",
+     "desde": 256.42,
+     "hasta": 257.948,
+     "texto": "¿Será que la IA se va a descontrolar?"
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "logo",
+     "en": "OpenAI",
+     "n": 1,
+     "offset": 0,
+     "dur": 2.2,
+     "logo": "openai",
+     "texto": "su nuevo modelo de IA",
+     "y": 455
+    },
+    {
+     "tipo": "rebelde",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 202.226,
+      "hasta": 211.214
+     },
+     "titulo": "TRABAJA MAL EN SEGURIDAD"
+    },
+    {
+     "tipo": "emoji",
+     "en": "peor.",
+     "dur": 1.4,
+     "ch": "😬",
+     "x": 840,
+     "y": 840
+    },
+    {
+     "tipo": "glitch",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 256.37,
+      "hasta": 257.998
+     },
+     "texto": "¿SE VA A DESCONTROLAR?"
+    }
+   ]
+  },
+  {
+   "titulo": "Voz clonada",
+   "tipo": "noticia",
+   "etiqueta": "POLÉMICA · VOZ CLONADA",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 44.772,
+     "hasta": 48.188,
+     "texto": "Tres personas clonaron con IA la voz de directores de empresas y ejecutivos."
+    },
+    {
+     "clip": "0001",
+     "desde": 69.572,
+     "hasta": 72.732,
+     "texto": "Llamaban a las personas de contabilidad y les pedían que les transfirieran un dinero."
+    },
+    {
+     "clip": "0001",
+     "desde": 75.204,
+     "hasta": 78.46,
+     "texto": "Con esa misma táctica se robaron hasta 129 millones de dólares."
+    },
+    {
+     "clip": "0001",
+     "desde": 79.684,
+     "hasta": 83.676,
+     "texto": "Este dinero viene de bancos, hospitales e incluso una empresa que vende comida para perros."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "texto",
+     "en": "Tres",
+     "offset": 0,
+     "dur": 2.4,
+     "lineas": [
+      "3 PERSONAS",
+      "clonaron voces de jefes con IA"
+     ],
+     "ch": "🎭",
+     "y": 455
+    },
+    {
+     "tipo": "transferencia",
+     "en": "pedían",
+     "offset": -0.3,
+     "dur": 2.4,
+     "monto": "US$ ???.???"
+    },
+    {
+     "tipo": "contador",
+     "en": "129",
+     "offset": 0,
+     "dur": 2.4,
+     "desde": 0,
+     "hasta": 129,
+     "formato": "US${v:.0f} M",
+     "etiqueta": "millones de dólares robados",
+     "y": 455
+    },
+    {
+     "tipo": "texto",
+     "en": "bancos,",
+     "offset": 0,
+     "dur": 2.6,
+     "lineas": [
+      "BANCOS · HOSPITALES",
+      "y hasta comida para perros"
+     ],
+     "ch": "🐶",
+     "y": 455
+    }
+   ]
+  },
+  {
+   "titulo": "Hacker",
+   "tipo": "noticia",
+   "etiqueta": "VIRAL · UN HACKER Y SU EJÉRCITO",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 272.35,
+     "hasta": 275.068,
+     "texto": "Un hacker puso a trabajar a más de 300 agentes de IA."
+    },
+    {
+     "clip": "0001",
+     "desde": 276.004,
+     "hasta": 278.012,
+     "texto": "Sin casi tocarlos por dos semanas."
+    },
+    {
+     "clip": "0001",
+     "desde": 288.164,
+     "hasta": 290.492,
+     "texto": "Robó más de 300 llaves y contraseñas de Apple."
+    },
+    {
+     "clip": "0001",
+     "desde": 297.06,
+     "hasta": 299.644,
+     "texto": "Dejando un poco desprotegidas las aplicaciones de iPhone."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "ejercito",
+     "en": "hacker",
+     "offset": -0.2,
+     "dur": 3.0,
+     "total": 300,
+     "titulo": "UN HACKER Y SU EJÉRCITO DE IA"
+    },
+    {
+     "tipo": "texto",
+     "en": "semanas.",
+     "offset": -0.5,
+     "dur": 1.8,
+     "lineas": [
+      "2 SEMANAS",
+      "casi sin tocarlos"
+     ],
+     "ch": "⏳",
+     "y": 455
+    },
+    {
+     "tipo": "contador",
+     "en": "300",
+     "offset": 0,
+     "dur": 2.2,
+     "desde": 0,
+     "hasta": 300,
+     "formato": "{v:.0f}",
+     "etiqueta": "llaves y contraseñas robadas",
+     "y": 455
+    },
+    {
+     "tipo": "alerta",
+     "en": "desprotegidas",
+     "offset": -0.3,
+     "dur": 2.0,
+     "texto": "APPS DE IPHONE EN RIESGO",
+     "y": 455
+    }
+   ]
+  },
+  {
+   "titulo": "Perplexity",
+   "tipo": "noticia",
+   "etiqueta": "ÚTIL · PERPLEXITY",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 316.9,
+     "hasta": 320.412,
+     "texto": "Perplexity acaba de lanzar un modelo de IA de agentes que trabajan 24 horas por ti."
+    },
+    {
+     "clip": "0001",
+     "desde": 329.732,
+     "hasta": 334.46,
+     "texto": "Recuerda todo lo que la gente te dice y te pide el favor de que respondas algunas cosas que sean necesarias."
+    },
+    {
+     "clip": "0001",
+     "desde": 342.788,
+     "hasta": 345.34,
+     "texto": "Por ejemplo, detecta a una persona que deja de comprarte"
+    },
+    {
+     "clip": "0001",
+     "desde": 357.156,
+     "hasta": 359.388,
+     "texto": "y hace un plan completo para que tú la recuperes."
+    },
+    {
+     "clip": "0001",
+     "desde": 360.132,
+     "hasta": 362.3,
+     "texto": "Esto por tan solo 200 dólares al mes."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "nunca_duerme",
+     "en": "24",
+     "offset": -0.4,
+     "dur": 2.8,
+     "logo": "perplexity",
+     "precio": "trabaja 24 horas por ti"
+    },
+    {
+     "tipo": "emoji",
+     "en": "necesarias.",
+     "offset": -0.4,
+     "dur": 1.4,
+     "ch": "📲",
+     "x": 840,
+     "y": 840
+    },
+    {
+     "tipo": "plan_cliente",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 342.738,
+      "hasta": 359.438
+     }
+    },
+    {
+     "tipo": "texto",
+     "en": "200",
+     "offset": 0,
+     "dur": 2.0,
+     "lineas": [
+      "200 DÓLARES",
+      "al mes"
+     ],
+     "ch": "💳",
+     "y": 455
+    }
+   ]
+  },
+  {
+   "titulo": "CTA",
+   "tipo": "cta",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 374.0,
+     "hasta": 375.58,
+     "texto": "Sígueme para ver noticias diarias."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "seguir",
+     "en": "Sígueme",
+     "offset": -0.1,
+     "dur": 4.4
+    }
+   ]
+  }
+ ]
+}

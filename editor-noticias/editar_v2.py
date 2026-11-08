@@ -314,6 +314,7 @@ def main():
     ap.add_argument("--musica-db", type=float, default=-21.0, help="nivel de la música bajo la voz (dB)")
     ap.add_argument("--centro-y", type=float, default=0.5)
     ap.add_argument("--estilo", default="ia", help="'ia' (neón, por defecto desde el 7 nov) o 'clasico' (rojo)")
+    ap.add_argument("--quitar-ruido", action="store_true", help="reduce el ruido de fondo de la voz (grabado en lugares con ruido)")
     ap.add_argument("--luz", default="", help="ajuste de luz: 'cine' o un filtro de ffmpeg")
     ap.add_argument("--adelanto", type=float, default=0.3, help="s que cada animación sale antes de su palabra")
     ap.add_argument("--zoom-base", type=float, default=1.0)
@@ -466,7 +467,8 @@ def main():
     ass_v2(palabras, secs, edl.get("gancho_texto"), (cta_ini, total + COLA_CTA, edl["cta"]), ass)
 
     # ---------------------------------------------------------------- 6. audio: voz + efectos
-    pcm = subprocess.run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-i", str(base_cola), "-vn", "-ac", "2",
+    filtro_voz = ["-af", "highpass=f=90,afftdn=nr=20:nf=-32:tn=1,afftdn=nr=10:nf=-38"] if a.quitar_ruido else []
+    pcm = subprocess.run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-i", str(base_cola), "-vn", *filtro_voz, "-ac", "2",
                           "-ar", str(SR), "-f", "s16le", "-"], capture_output=True, check=True).stdout
     voz = np.frombuffer(pcm, np.int16).astype(np.float32).reshape(-1, 2) / 32768
     mezcla = voz.copy()
