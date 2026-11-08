@@ -88,3 +88,10 @@ Datos (no secretos) cuando existan: ID de cuenta publicitaria (`act_…`), ID de
 - `META_ADS_TOKEN` está bien (probarAnuncios OK).
 
 ## Siguiente (8 nov): paso 5 píxel — Santi ya entendió qué es; se hace el 8 nov (Santi), luego pasos 6–9 (Claude: tracker, Anuncios.gs completo, píxel en la web, prueba en pausa).
+
+## Plan del dom 8 nov (de Santi, vía Santi · Base)
+1. Paso 5 píxel (Santi). 2. Paso 6 tracker (Claude).
+3. **Prueba real (paso 9):** con el v4 1.2 (Drive `18sCygcA-QkPtlJou_D7eKkjnxQlZc3Q-`, ya publicado orgánico) crear campaña +
+   conjunto + anuncio desde `Anuncios.gs`, **EN PAUSA** (0 gasto). Santi lo revisa en el Administrador de anuncios.
+4. Si Santi quiere encenderlo: presupuesto mínimo (1–2 USD/día, tope total bajo). Requiere **método de pago** en ContentIA Ads
+   (hoy no tiene): lo pone Santi. **Activar = Santi** (regla del área: Claude nunca activa ni sube presupuesto).
