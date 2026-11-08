@@ -1,5 +1,5 @@
 {
- "nota": "v4 1.4: donde Santi lee el guion o no sale en cuadro → animación a pantalla completa. Luz original.",
+ "nota": "v4 1.5: igual que 1.4 pero sin 'Lo más loco es que OpenAI no sabe por qué' (no se veía a Santi).",
  "gancho_texto": "Wall Street se desploma",
  "cta": "Sígueme para no perderte ninguna",
  "cta_emoji": "🔔",
@@ -218,12 +218,6 @@
     },
     {
      "clip": "0001",
-     "desde": 321.847,
-     "hasta": 324.606,
-     "texto": "Lo más loco es que OpenAI no sabe por qué."
-    },
-    {
-     "clip": "0001",
      "desde": 332.132,
      "hasta": 334.97,
      "texto": "Y cuando le pidieron el favor: ten cuidado y arregla tu problema,"
@@ -266,15 +260,6 @@
      "ch": "😬",
      "x": 840,
      "y": 840
-    },
-    {
-     "tipo": "misterio",
-     "cubrir": {
-      "clip": "0001",
-      "desde": 321.7,
-      "hasta": 324.7
-     },
-     "logo": "openai"
     },
     {
      "tipo": "glitch",
