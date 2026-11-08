@@ -190,3 +190,4 @@
 - 8 nov 2026 · 3:00 p. m. · v4 2.0 (regrabación) renderizado y enviado: 93,3 s, ruido reducido, luz original, estilo ia, 5 noticias. Falta OK de Santi para subir y poner Publicar (18:00).
 - 8 nov 2026 · 3:15 p. m. · v4 2.1 enviado: voz con ruido suave + EQ + compresor (la 2.0 sonaba rara), más aire al inicio de cada toma (PRE 0,18), música −16 dB. 95,2 s.
 - 8 nov 2026 · 4:40 p. m. · v4 2.2 (sin microsilencios: tramos_con_voz unir 0,65, PRE/POST 0,14; música −12 dB) subido con el buzón (1MnxyZS2-OT2y9ZMV4nD0qlkl3jKniLdS). Hoja v4: Editado, link, descripción con el hacker, título '5 noticias', 18:00, Publicar (Santi: 'ya se subiría a las 6'). COLA Entregado. v4 1.2 a la papelera. Tarea 7 p. m.: revisar publicación y limpiar crudo, guion e idea.
+- 8 nov 2026 · 4:45 p. m. · Santi dio luz verde al v4 2.2 (sale 18:00 en IG, YouTube y TikTok). Meta Ads: NO hoy (prueba mañana 9 nov); avisado al chat 📁 Anuncios. Santi graba otro video ahora para editar.
