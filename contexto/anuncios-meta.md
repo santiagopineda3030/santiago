@@ -49,8 +49,8 @@
 |---|---|---|---|
 | 1 | Cuenta publicitaria **ContentIA Ads** creada 7 nov en el portfolio **soysanti__content_ia** (zona America/Bogota, divisa **USD**). Santi con acceso total. Sin método de pago | Santi | ✅ ID `act_1449021934086792` |
 | 2 | App "Publicador Santi" (`1462889889116914`): producto **API de marketing** agregado y app unida al negocio soysanti__content_ia (7 nov). Nivel de acceso Limited = suficiente para cuentas propias | Santi | ✅ |
-| 3 | (8 nov: app Publicador Santi agregada a Configuración › Cuentas › Apps del negocio — sin eso el botón de usuarios del sistema sale gris) **Usuario del sistema** (admin) en el negocio + asignarle cuenta publicitaria, página, IG y la app | Santi | ✅ 8 nov: página (contenido, comunidad, mensajes, anuncios, estadísticas), ContentIA Ads (**solo Administrar campañas**, sin acceso total = no toca pagos), app (Desarrollar app), IG (todo) |
-| 4 | ✅ 8 nov `META_ADS_TOKEN` guardado y **probado** (`probarAnuncios` 21:05: ContentIA Ads · USD · Bogotá · activa). `Anuncios.gs` instalado en el proyecto de la hoja del plan. META_TOKEN reemplazado por token del robot de 7 permisos `probarConexion` OK 21:41 (faltaba marcar instagram_content_publish: el robot sí lo puede dar). `probarSubidaInstagram` OK 21:44. Code.gs nuevo (espera hasta FINISHED) instalado 21:51. **Paso 4 ✅.** ⚠️ Santi pegó primero ese token encima de `META_TOKEN` (le falta `instagram_content_publish`): se arregla con token nuevo del robot con 7 permisos en `META_TOKEN`. — Token del usuario del sistema (no vence) con `ads_management`, `ads_read`, `business_management` → Propiedades del script `META_ADS_TOKEN` | Santi (guiado) | ⏳ |
+| 3 | (7 nov: app Publicador Santi agregada a Configuración › Cuentas › Apps del negocio — sin eso el botón de usuarios del sistema sale gris) **Usuario del sistema** (admin) en el negocio + asignarle cuenta publicitaria, página, IG y la app | Santi | ✅ 7 nov: página (contenido, comunidad, mensajes, anuncios, estadísticas), ContentIA Ads (**solo Administrar campañas**, sin acceso total = no toca pagos), app (Desarrollar app), IG (todo) |
+| 4 | ✅ 7 nov noche `META_ADS_TOKEN` guardado y **probado** (`probarAnuncios` 21:05: ContentIA Ads · USD · Bogotá · activa). `Anuncios.gs` instalado en el proyecto de la hoja del plan. META_TOKEN reemplazado por token del robot de 7 permisos `probarConexion` OK 21:41 (faltaba marcar instagram_content_publish: el robot sí lo puede dar). `probarSubidaInstagram` OK 21:44. Code.gs nuevo (espera hasta FINISHED) instalado 21:51. **Paso 4 ✅.** ⚠️ Santi pegó primero ese token encima de `META_TOKEN` (le falta `instagram_content_publish`): se arregla con token nuevo del robot con 7 permisos en `META_TOKEN`. — Token del usuario del sistema (no vence) con `ads_management`, `ads_read`, `business_management` → Propiedades del script `META_ADS_TOKEN` | Santi (guiado) | ⏳ |
 | 5 | **Píxel** (Administrador de eventos › Conjunto de datos) → ID a este archivo | Santi | ⏳ |
 | 6 | Hoja **Tracker de anuncios** (pestañas Anuncios y Diario) + carpeta `5. Reportes` | Claude | ⏳ |
 | 7 | `Anuncios.gs`: reporte diario, subir en pausa, pausar a pedido | Claude | ⏳ |
@@ -58,7 +58,7 @@
 | 9 | Prueba: campaña y anuncio **en pausa** (sin gastar) | Claude + Santi | ⏳ |
 Portfolio comercial (negocio): **soysanti__content_ia** (2 páginas, 2 personas). Hay 2 negocios vacíos "Prueba 1" y "Prueba 1.1": no se usan.
 Cuenta publicitaria: **ContentIA Ads**, ID `1449021934086792` (en la API: `act_1449021934086792`).
-Usuario del sistema: **ig contentia** (Admin), ID `61596519503349` — creado 8 nov (Meta rechazó "Robot ContentIA" por mayúsculas).
+Usuario del sistema: **ig contentia** (Admin), ID `61596519503349` — creado 7 nov (Meta rechazó "Robot ContentIA" por mayúsculas).
 Datos (no secretos) cuando existan: ID de cuenta publicitaria (`act_…`), ID del píxel, ID del usuario del sistema.
 
 ## Dónde quedamos (7 nov, noche) → seguir el 8 nov
@@ -71,7 +71,7 @@ Datos (no secretos) cuando existan: ID de cuenta publicitaria (`act_…`), ID de
   "reporte de rentabilidad sincero, no se cambia el CTA" en Ajustes de Santi.
 - Guía en el chat: paso a paso con captura en cada pantalla (le funcionó bien).
 
-## Dónde quedamos (8 nov) → seguir cuando Santi vuelva
+## Dónde quedamos (7 nov tarde) → seguir cuando Santi vuelva
 - Pasos 1, 2 y 3 ✅. **Siguiente: paso 4, token** del usuario del sistema "ig contentia".
 - Parte A: abrir Apps Script de la hoja del plan › ⚙️ Configuración del proyecto › Propiedades del script (pestaña abierta).
 - Parte B: Usuarios del sistema › ig contentia › Generar token › app Publicador Santi › caducidad **Nunca** › permisos
@@ -87,4 +87,4 @@ Datos (no secretos) cuando existan: ID de cuenta publicitaria (`act_…`), ID de
   `contexto/instagram-meta.md` › "Cómo se sacó el token").
 - `META_ADS_TOKEN` está bien (probarAnuncios OK).
 
-## Siguiente (después del 8 nov): paso 5 píxel (Santi), luego pasos 6–9 (Claude: tracker, Anuncios.gs completo, píxel en la web, prueba en pausa).
+## Siguiente (8 nov): paso 5 píxel — Santi ya entendió qué es; se hace el 8 nov (Santi), luego pasos 6–9 (Claude: tracker, Anuncios.gs completo, píxel en la web, prueba en pausa).

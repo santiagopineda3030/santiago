@@ -1,9 +1,9 @@
 # Bitácora (lo más nuevo arriba, una línea por cosa hecha)
 
-## 8 nov 2026
+## 7 nov 2026 (noche, Bogotá) · Meta Ads pasos 3 y 4 (anotado antes como "8 nov" por el reloj UTC)
 - Code.gs: Instagram ahora espera hasta FINISHED (pregunta cada 15 s, máx. 4 min) en vez de una sola revisión. ✅ Instalado por Santi 21:51 (730 líneas, probarConexion OK). `probarSubidaInstagram` OK 21:44.
 - ✅ `META_TOKEN` arreglado (21:41): token del robot ig contentia con instagram_content_publish. probarConexion OK.
-- ⚠️ `META_TOKEN` sin permiso de publicar en IG (probarConexion 21:06 error #10). Hay que arreglarlo antes de las 11:00 del 9 nov. Pasos en `anuncios-meta.md`.
+- ⚠️ `META_TOKEN` sin permiso de publicar en IG (probarConexion 21:06 error #10). Hay que arreglarlo antes de las 11:00 del 8 nov. Pasos en `anuncios-meta.md`.
 - ✅ Meta: `probarAnuncios` OK (21:05) con META_ADS_TOKEN. `Anuncios.gs` instalado por Santi.
 - Meta paso 4: `META_ADS_TOKEN` creado. ⚠️ `META_TOKEN` quedó reemplazado por el token de anuncios (sin permiso de publicar en IG): arreglando con token del robot de 7 permisos antes de las 11:00.
 - Meta: pausa antes del paso 4 (token). Santi salió; instrucciones listas en `anuncios-meta.md` › "Dónde quedamos (8 nov)".

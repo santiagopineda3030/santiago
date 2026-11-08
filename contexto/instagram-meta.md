@@ -57,13 +57,13 @@ Si Meta responde error 190, el token venció o es inválido: repetir 3–5.
 - El motivo de cualquier rechazo queda escrito en "Link publicado" (con pista en español, `pistaIG_`).
 - TikTok.gs: `payload: file.getBlob()` (sí funciona en TikTok, probado 12:17).
 
-## 8 nov 2026 · Token nuevo: usuario del sistema "ig contentia" (no vence)
+## 7 nov 2026 (noche) · Token nuevo: usuario del sistema "ig contentia" (no vence)
 - `META_TOKEN` ahora es el token del **usuario del sistema** ig contentia (ID 61596519503349) del negocio soysanti__content_ia,
   app Publicador Santi, caducidad **Nunca**, 7 permisos: instagram_basic, instagram_content_publish, pages_show_list,
   pages_read_engagement, business_management, ads_management, ads_read. `probarConexion` OK 21:41.
 - Ojo al regenerarlo: buscar "instagram" en la lista y marcar `instagram_content_publish` (debe decir 7 seleccionadas).
   Sin ese permiso sale el error (#10) "Requires instagram_content_publish permission".
 - `META_ADS_TOKEN` (anuncios) es otro token del mismo robot. Detalle en `anuncios-meta.md`.
-- **Espera hasta FINISHED (8 nov, regla de Santi):** al llegar la hora, después de subir, `publicarPendientes` pregunta
+- **Espera hasta FINISHED (7 nov, regla de Santi):** al llegar la hora, después de subir, `publicarPendientes` pregunta
   cada 15 s (hasta 16 veces, sin pasar de 4 min desde el inicio de la vuelta) y publica apenas sale FINISHED.
   Antes revisaba una sola vez a los 30 s y, si seguía IN_PROGRESS, publicaba 15 min tarde.
