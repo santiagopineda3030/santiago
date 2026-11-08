@@ -171,6 +171,8 @@ def ass_v2(palabras, secciones, gancho, cta, ruta):
                        pop + f"{n}/{len(noticias)} · " + editar.ass_texto(s["etiqueta"])))
     ev.append((1, "CTA", cta[0], cta[1], pop + editar.ass_texto(cta[2])))
     cab = Path(__file__).with_name("estilos.ass").read_text(encoding="utf-8")
+    if A.ESTILO == "ia":
+        cab = cab.replace("&H002020E0", "&H00FF528C")  # cajas de título y CTA en violeta
     lineas = [f"Dialogue: {c},{editar.ass_tiempo(a)},{editar.ass_tiempo(b)},{st},,0,0,0,,{t}"
               for c, st, a, b, t in sorted(ev, key=lambda e: e[2])]
     Path(ruta).write_text(cab + "\n".join(lineas) + "\n", encoding="utf-8")
@@ -267,6 +269,7 @@ def main():
     ap.add_argument("--musica", help="WAV de música de fondo (48 kHz estéreo)")
     ap.add_argument("--musica-db", type=float, default=-21.0, help="nivel de la música bajo la voz (dB)")
     ap.add_argument("--centro-y", type=float, default=0.5)
+    ap.add_argument("--estilo", default="ia", help="'ia' (neón, por defecto desde el 7 nov) o 'clasico' (rojo)")
     ap.add_argument("--luz", default="", help="ajuste de luz: 'cine' o un filtro de ffmpeg")
     ap.add_argument("--adelanto", type=float, default=0.3, help="s que cada animación sale antes de su palabra")
     ap.add_argument("--zoom-base", type=float, default=1.0)
@@ -275,6 +278,9 @@ def main():
     editar.CENTRO_X = a.centro_x
     editar.CENTRO_Y = a.centro_y
     editar.ZOOM_BASE = a.zoom_base
+    A.aplicar_estilo(a.estilo)
+    if a.estilo == "ia":  # subtítulos: palabras clave en cian, títulos y CTA en violeta (BGR en ASS)
+        editar.ACENTO = "&H00FFE500"
     editar.COLOR = LUZ.get(a.luz, a.luz)
 
     edl = json.loads(Path(a.edl).read_text(encoding="utf-8"))

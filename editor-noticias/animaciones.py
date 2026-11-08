@@ -845,7 +845,7 @@ def g_hack_banco(dur, hasta=1_000_000, titulo="IAs ATACANDO BANCOS"):
 
     def cuadro(t):
         a, _ = _entrada_salida(t, dur, 0.1)
-        im = Image.new("RGBA", (W, H), (18, 4, 6, 255))
+        im = _fondo_oscuro() if ESTILO == "ia" else Image.new("RGBA", (W, H), (18, 4, 6, 255))
         d = ImageDraw.Draw(im)
         for x, fase, vel in cols:
             y0 = ((fase * 1400 + t * vel) % 1400) + 250
@@ -1046,7 +1046,7 @@ def g_app(dur, titulo="CURSOR CREA LA APP COMPLETA", pedido="Hazme una app de re
 # --------------------------------------------------------------------------- escenas v4 (7 nov)
 def g_llamada(dur, hasta=129_000_000, titulo="VOZ CLONADA CON IA", quien="El jefe"):
     """Gancho: celular sonando con una llamada del 'jefe', onda de voz y contador de dinero robado."""
-    fondo = Image.new("RGBA", (W, H), (14, 6, 8, 255))
+    fondo = _fondo_oscuro() if ESTILO == "ia" else Image.new("RGBA", (W, H), (14, 6, 8, 255))
     tel = tarjeta(420, 640, relleno=(20, 20, 26, 255), radio=56, borde=(255, 255, 255, 170))
     avatar = emoji("👔", 150)
     nom = texto_img(quien, 52, BLANCO)
@@ -1275,3 +1275,137 @@ def sonidos(sr=48000):
         "alerta": np.concatenate([tono(880, 880, 0.12, 4), tono(660, 660, 0.16, 4)]) * 0.5,
         "teclas": teclas(),
     }
+
+
+# --------------------------------------------------------------------------- estilo "IA" (neón tecnológico, 7 nov)
+# Pedido de Santi: menos rojo, más tecnológico y llamativo. aplicar_estilo("ia") cambia colores, fondos, tarjetas,
+# textos de color (degradado cian→magenta con brillo) y la transición. Las escenas no cambian su código.
+CIAN, MAGENTA, VIOLETA = (0, 229, 255), (255, 61, 240), (140, 82, 255)
+ESTILO = "clasico"
+_texto_img_base = texto_img
+_tarjeta_base = tarjeta
+
+
+def _degradado_h(w, h, c1=CIAN, c2=MAGENTA):
+    import numpy as np
+    k = np.linspace(0, 1, max(1, w))[None, :, None]
+    arr = (np.array(c1)[None, None, :] * (1 - k) + np.array(c2)[None, None, :] * k).repeat(h, 0)
+    return Image.fromarray(arr.astype("uint8"), "RGB").convert("RGBA")
+
+
+def _brillo(im, radio=10, fuerza=1.6):
+    glow = im.filter(ImageFilter.GaussianBlur(radio))
+    a = glow.getchannel("A").point(lambda v: min(255, int(v * fuerza)))
+    glow.putalpha(a)
+    pad = radio * 2
+    out = Image.new("RGBA", (im.width + pad * 2, im.height + pad * 2), (0, 0, 0, 0))
+    g2 = Image.new("RGBA", out.size, (0, 0, 0, 0))
+    g2.alpha_composite(im, (pad, pad))
+    g2 = g2.filter(ImageFilter.GaussianBlur(radio))
+    g2.putalpha(g2.getchannel("A").point(lambda v: min(255, int(v * fuerza))))
+    out.alpha_composite(g2)
+    out.alpha_composite(im, (pad, pad))
+    return out
+
+
+def _texto_ia(texto, tam, color=BLANCO, negra=True):
+    base = _texto_img_base(texto, tam, BLANCO, negra)
+    if color in (BLANCO, TINTA) or (isinstance(color, tuple) and len(color) == 3 and sum(color) < 200):
+        return _texto_img_base(texto, tam, color, negra)
+    if color in (ROJO, VIOLETA, CIAN, MAGENTA, (224, 32, 32)):
+        grad = _degradado_h(base.width, base.height)
+        grad.putalpha(base.getchannel("A"))
+        return _brillo(grad, max(6, tam // 9), 1.3)
+    t = _texto_img_base(texto, tam, color, negra)
+    return _brillo(t, max(5, tam // 10), 1.1)
+
+
+def _tarjeta_ia(ancho, alto, relleno=None, radio=34, borde=(255, 255, 255, 46)):
+    if relleno is None or relleno == (14, 14, 18, 238) or relleno[:3] in ((28, 28, 34), (20, 20, 26), (28, 28, 40), (8, 12, 10)):
+        im = Image.new("RGBA", (ancho, alto), (0, 0, 0, 0))
+        d = ImageDraw.Draw(im)
+        d.rounded_rectangle((0, 0, ancho - 1, alto - 1), radio, fill=(12, 16, 42, 222))
+        borde_img = Image.new("RGBA", (ancho, alto), (0, 0, 0, 0))
+        ImageDraw.Draw(borde_img).rounded_rectangle((1, 1, ancho - 2, alto - 2), radio, outline=(255, 255, 255, 255), width=3)
+        grad = _degradado_h(ancho, alto)
+        grad.putalpha(borde_img.getchannel("A"))
+        im.alpha_composite(grad)
+        return im
+    if relleno[:3] in ((224, 32, 32), (150, 14, 14)):
+        im = _degradado_h(ancho, alto, VIOLETA, MAGENTA)
+        m = Image.new("L", (ancho, alto), 0)
+        ImageDraw.Draw(m).rounded_rectangle((0, 0, ancho - 1, alto - 1), radio, fill=relleno[3] if len(relleno) > 3 else 255)
+        im.putalpha(m)
+        ImageDraw.Draw(im).rounded_rectangle((1, 1, ancho - 2, alto - 2), radio, outline=(255, 255, 255, 150), width=2)
+        return im
+    return _tarjeta_base(ancho, alto, relleno, radio, borde)
+
+
+def _fondo_ia():
+    import random
+    import numpy as np
+    rnd = random.Random(21)
+    y = np.linspace(0, 1, H)[:, None, None]
+    arr = (np.array((4, 6, 20))[None, None, :] * (1 - y) + np.array((22, 8, 46))[None, None, :] * y).repeat(W, 1)
+    im = Image.fromarray(arr.astype("uint8"), "RGB").convert("RGBA")
+    capa = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(capa)
+    d.ellipse((-300, 150, 600, 1050), fill=CIAN + (60,))
+    d.ellipse((500, 900, 1400, 1800), fill=MAGENTA + (55,))
+    capa = capa.filter(ImageFilter.GaussianBlur(160))
+    im.alpha_composite(capa)
+    g = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    dg = ImageDraw.Draw(g)
+    hz = 1180
+    for i in range(-12, 13):
+        dg.line((W / 2 + i * 40, hz, W / 2 + i * 260, H), fill=CIAN + (55,), width=2)
+    for k in range(12):
+        yy = hz + (H - hz) * (k / 12) ** 1.8
+        dg.line((0, yy, W, yy), fill=CIAN + (45,), width=2)
+    for _ in range(70):
+        x, yy, r = rnd.uniform(0, W), rnd.uniform(0, H), rnd.choice((2, 2, 3, 4))
+        dg.ellipse((x, yy, x + r, yy + r), fill=rnd.choice((CIAN, MAGENTA, BLANCO)) + (rnd.randint(80, 200),))
+    im.alpha_composite(g)
+    for yy in range(0, H, 6):
+        ImageDraw.Draw(im).line((0, yy, W, yy), fill=(0, 0, 0, 28))
+    return im
+
+
+_fondo_cache = {}
+
+
+def _fondo_oscuro_ia():
+    if "f" not in _fondo_cache:
+        _fondo_cache["f"] = _fondo_ia()
+    return _fondo_cache["f"].copy()
+
+
+def _transicion_ia(dur=0.32):
+    """Barrido de luz cian→magenta entre noticias."""
+    banda = _degradado_h(520, H)
+
+    def cuadro(t):
+        im = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        k = ease_in_out(clamp(t / dur))
+        x = int(-700 + (W + 1400) * k)
+        b = banda.copy()
+        m = Image.new("L", b.size, 0)
+        ImageDraw.Draw(m).polygon([(160, 0), (520, 0), (360, H), (0, H)], fill=255)
+        b.putalpha(m)
+        im.alpha_composite(b.filter(ImageFilter.GaussianBlur(6)), (x - 260, 0))
+        ImageDraw.Draw(im).line((x + 110, 0, x - 70, H), fill=BLANCO + (230,), width=10)
+        return im
+
+    return Grafico(dur, (0, 0, W, H), cuadro, "whoosh")
+
+
+def aplicar_estilo(nombre):
+    """'ia' = neón tecnológico (cian, violeta, magenta). 'clasico' = el rojo original."""
+    global ESTILO, ROJO, texto_img, tarjeta, _fondo_oscuro, g_transicion, FONDO_TARJETA
+    ESTILO = nombre
+    if nombre == "ia":
+        ROJO = VIOLETA
+        texto_img = _texto_ia
+        tarjeta = _tarjeta_ia
+        _fondo_oscuro = _fondo_oscuro_ia
+        g_transicion = _transicion_ia
