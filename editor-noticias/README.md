@@ -28,7 +28,8 @@ python3 mirada.py crudos-vN/<clip>.MP4 salida-vN/mirada.json "$(cat salida-vN/ra
 # 5. Render
 python3 editar_v2.py --videos crudos-vN --edl edl-vN.json --trozos salida-vN/trozos --assets assets-v2 \
   --salida salida-vN --mirada salida-vN/mirada.json --musica musica/lofi-energico.wav --musica-db -14 \
-  --luz cine --nombre "vN 1.0 tema.mp4" --centro-x 0.43 --centro-y 0.53 --zoom-base 1.4
+  --musica-intro musica/suspenso.wav --luz limpia --estilo ia --nombre "vN 1.0 tema.mp4" \
+  --centro-x 0.55 --centro-y 0.6 --zoom-base 2.0   # encuadre: probar con un cuadro antes (cambia cada día)
 ```
 - `--mirada`: recorta los bordes donde no mira a cámara y sostiene la imagen (el audio sigue). Lo que queda en medio
   de una frase se tapa con una escena a pantalla completa (`"cubrir": {"clip","desde","hasta"}` en el EDL).
@@ -40,7 +41,9 @@ python3 editar_v2.py --videos crudos-vN --edl edl-vN.json --trozos salida-vN/tro
 - Escenas (animaciones.py): hacker, fuga, versus, lluvia, carrera, precio, billetes, anuncio, igual, hack_banco, swat,
   paises, itinerario, resumen_ia, app. Emojis dentro de texto: usar `texto_emoji` (Inter no dibuja emojis).
 - Crudos 4K 120 fps (7,6 GB): no hacer hojas de cuadros del crudo completo (decodificar tarda muchísimo); medir solo rangos.
-- Subir a Drive: el buzón necesita `SUBIDA_URL` y `SUBIDA_CLAVE` en el entorno (pendiente). Mientras, Santi sube el MP4.
+- Subir a Drive: `subir-drive/subir_drive.sh "salida-vN/vN 1.x tema.mp4" "NOVIEMBRE 2026"` (funciona desde el 7 nov).
+- Reglas de Santi (7 nov): estilo `ia` (nada de tanto rojo), luz `limpia` (sin amarillo), nunca cortar audio por la mirada
+  (solo sostener imagen), suspenso en el gancho, noticias más fuertes primero.
 
 ## Uso (versión vieja, v1)
 ```bash
