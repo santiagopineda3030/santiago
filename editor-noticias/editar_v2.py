@@ -26,7 +26,7 @@ import animaciones as A
 import editar
 from editar import ffmpeg, normalizar, probar
 
-PRE, POST = 0.18, 0.18  # más aire: que ninguna palabra quede cortada (pedido de Santi, 7 nov)
+PRE, POST = 0.14, 0.14  # más aire: que ninguna palabra quede cortada (pedido de Santi, 7 nov)
 SIL_DB, SIL_MIN, SIL_MARGEN = -34, 0.16, 0.05
 GRUPO_MAX = 4.0          # cada ~4 s cambia el zoom
 COLA_CTA = 2.5
@@ -53,7 +53,7 @@ def voz_vad(clip):
     return [(t["start"] / 16000, t["end"] / 16000) for t in ts]
 
 
-def tramos_con_voz(a, b, voz, antes=0.16, despues=0.16, unir=0.12):
+def tramos_con_voz(a, b, voz, antes=0.14, despues=0.14, unir=0.65):  # 8 nov: no partir frases en pausas cortas (sonaba cortado)
     """Deja solo los momentos con voz dentro de [a, b] (con un poquito de aire) y une los muy cercanos."""
     tr = [(max(a, s - antes), min(b, e + despues)) for s, e in voz if e > a and s < b]
     out = []

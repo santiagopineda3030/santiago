@@ -52,6 +52,9 @@ python3 editar_v2.py --videos crudos-vN --edl edl-vN.json --trozos salida-vN/tro
   4. **Luz original** (`--luz ""`): Santi rechazó `cine` (amarillo) y `limpia` (pálido).
   5. Estilo `ia` (neón), suspenso en el gancho + golpe en cada cambio de noticia, música que se escuche (−14 dB).
   6. Nada de datos inventados en las animaciones (solo cifras del guion).
+  7. Voz seguida, sin microsilencios: no partir frases en pausas cortas (`unir=0.65`). Con ruido de fondo:
+     `trozos_vad.py` para transcribir y `--quitar-ruido` (ruido suave + EQ + compresor; el filtro fuerte suena raro).
+     Música que se escuche: `--musica-db -12`.
 - `"cubrir"` puede abarcar dos tomas seguidas (desde la 1.ª hasta el final de la 2.ª); nunca dura más que su tramo.
 
 ## Uso (versión vieja, v1)
