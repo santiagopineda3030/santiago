@@ -181,3 +181,4 @@
 - 8 nov 2026 · Santi regraba el v4 (render 1.5 cancelado). Hora de la fila v4 cambiada a 16:00 (sale a las 4 p. m. del 8 nov, pedido de Santi). Publicación sigue 'Listo' hasta que apruebe el video nuevo.
 - 8 nov 10:12 · Santi: solo por hoy el v4 sale a las 4:00 p. m. (aún lo está terminando). Hoja: Hora 16:00, Publicación 'Listo' (falta Publicar al aprobar la versión final). Revisión de Base movida a 4:20 p. m. Mañana vuelve a las 11:00.
 - 8 nov 10:45 · Calendario: evento '📰 Noticias IA · Video 4' movido de 11:00 a 4:00 p. m. (aviso 15 min antes, 3:45).
+- 8 nov 11:00 · Santi: hoy hace las encuestas y manda los resultados a Base. Ahora va al píxel en 📁 Anuncios (avisado). Papelera de Drive después del video.
