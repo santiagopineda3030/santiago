@@ -12,8 +12,8 @@
  *  5. Primero sale en Instagram; en las vueltas siguientes (cada 15 min) sale en YouTube Shorts (YouTube.gs) y llega a
  *     TikTok como borrador (TikTok.gs, columnas "TikTok" y "Link TikTok"). Un solo paso pesado por vuelta (límite de 6 min).
  *
- * El token de Meta (token de página que no vence) va en Configuración del proyecto › Propiedades del script
- * › META_TOKEN. Nunca en este código.
+ * El token de Meta (usuario del sistema "ig contentia", no vence) va en Configuración del proyecto › Propiedades del script
+ * › META_TOKEN. Nunca en este código. (Anuncios usan META_ADS_TOKEN, en Anuncios.gs.)
  */
 
 const CONFIG = {
