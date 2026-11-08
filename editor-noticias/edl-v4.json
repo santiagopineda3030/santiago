@@ -1,0 +1,426 @@
+{
+ "nota": "v4 1.0: Noticias IA del 7 nov, estilo 'ia' (neón). Sin la noticia del hacker (no se grabó).",
+ "gancho_texto": "Clonaron la voz con IA",
+ "cta": "Sígueme para no perderte ninguna",
+ "cta_emoji": "🔔",
+ "claves": [
+  "wall",
+  "street",
+  "nvidia",
+  "openai",
+  "perplexity",
+  "congreso",
+  "contabilidad",
+  "bancos",
+  "hospitales",
+  "clonaron",
+  "voz"
+ ],
+ "secciones": [
+  {
+   "titulo": "Gancho",
+   "tipo": "gancho",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 6.896,
+     "hasta": 10.273,
+     "texto": "Clonaron la voz con IA y se robaron más de 129 millones de dólares."
+    },
+    {
+     "clip": "0001",
+     "desde": 15.386,
+     "hasta": 19.165,
+     "texto": "Wall Street perdió más de 2,3 billones de dólares en tan solo un día."
+    },
+    {
+     "clip": "0001",
+     "desde": 27.505,
+     "hasta": 31.712,
+     "texto": "Estas son las 5 noticias de IA más importantes que pasaron el día de ayer, 7 de noviembre."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "llamada",
+     "en": "robaron",
+     "offset": -0.1,
+     "dur": 2.3,
+     "hasta": 129000000,
+     "titulo": "VOZ CLONADA CON IA",
+     "quien": "El jefe"
+    },
+    {
+     "tipo": "bolsa",
+     "en": "perdió",
+     "offset": -0.1,
+     "dur": 2.5,
+     "cifra": "-2,3 BILLONES",
+     "sub": "en un solo día",
+     "titulo": "WALL STREET SE DESPLOMA"
+    },
+    {
+     "tipo": "texto",
+     "en": "5",
+     "offset": -0.1,
+     "dur": 3.0,
+     "lineas": [
+      "TOP 5 NOTICIAS DE IA",
+      "7 de noviembre de 2026"
+     ],
+     "ch": "📰",
+     "y": 455
+    }
+   ]
+  },
+  {
+   "titulo": "Noticia 1 — Voz clonada",
+   "tipo": "noticia",
+   "etiqueta": "POLÉMICA · VOZ CLONADA",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 67.441,
+     "hasta": 70.578,
+     "texto": "Tres personas clonaron con IA la voz de directores y de abogados."
+    },
+    {
+     "clip": "0001",
+     "desde": 115.854,
+     "hasta": 120.733,
+     "texto": "Llamaban a las personas de contabilidad y les pedían el favor de que les transfieran un dinero."
+    },
+    {
+     "clip": "0001",
+     "desde": 152.035,
+     "hasta": 156.582,
+     "texto": "Con esta táctica clonaron a más de 100 personas y robaron más de 129 millones de dólares."
+    },
+    {
+     "clip": "0001",
+     "desde": 166.783,
+     "hasta": 170.166,
+     "texto": "A bancos, hospitales e incluso hasta una empresa de comida de perros."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "texto",
+     "en": "Tres",
+     "offset": 0,
+     "dur": 2.4,
+     "lineas": [
+      "3 PERSONAS",
+      "clonaron voces de jefes con IA"
+     ],
+     "ch": "🎭",
+     "y": 455
+    },
+    {
+     "tipo": "emoji",
+     "en": "Llamaban",
+     "dur": 1.4,
+     "ch": "📞",
+     "x": 840,
+     "y": 840
+    },
+    {
+     "tipo": "emoji",
+     "en": "transfieran",
+     "dur": 1.4,
+     "ch": "💸",
+     "x": 240,
+     "y": 860
+    },
+    {
+     "tipo": "contador",
+     "en": "129",
+     "offset": 0,
+     "dur": 2.6,
+     "desde": 0,
+     "hasta": 129,
+     "formato": "US${v:.0f} M",
+     "etiqueta": "millones de dólares robados",
+     "y": 455
+    },
+    {
+     "tipo": "texto",
+     "en": "bancos,",
+     "offset": 0,
+     "dur": 2.6,
+     "lineas": [
+      "BANCOS · HOSPITALES",
+      "y hasta comida de perros"
+     ],
+     "ch": "🐶",
+     "y": 455
+    }
+   ]
+  },
+  {
+   "titulo": "Noticia 2 — Wall Street",
+   "tipo": "noticia",
+   "etiqueta": "VIRAL · WALL STREET",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 184.33,
+     "hasta": 186.414,
+     "texto": "Wall Street, la bolsa más grande del mundo."
+    },
+    {
+     "clip": "0001",
+     "desde": 190.892,
+     "hasta": 194.314,
+     "texto": "Acaba de perder 2,3 billones de dólares en tan solo un día."
+    },
+    {
+     "clip": "0001",
+     "desde": 220.532,
+     "hasta": 223.855,
+     "texto": "Por miedo a que el nuevo Congreso les ponga las reglas en los centros de datos."
+    },
+    {
+     "clip": "0001",
+     "desde": 264.443,
+     "hasta": 267.77,
+     "texto": "Nvidia, la empresa que hace los chips más potentes del mundo."
+    },
+    {
+     "clip": "0001",
+     "desde": 277.452,
+     "hasta": 279.195,
+     "texto": "Cayó hasta un 9%."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "texto",
+     "en": "Wall",
+     "offset": 0,
+     "dur": 2.0,
+     "lineas": [
+      "WALL STREET",
+      "la bolsa más grande del mundo"
+     ],
+     "ch": "🏦",
+     "y": 455
+    },
+    {
+     "tipo": "bolsa",
+     "en": "perder",
+     "offset": -0.2,
+     "dur": 2.6,
+     "cifra": "-2,3 BILLONES",
+     "sub": "de dólares en un día",
+     "titulo": "WALL STREET"
+    },
+    {
+     "tipo": "texto",
+     "en": "Congreso",
+     "offset": 0,
+     "dur": 2.4,
+     "lineas": [
+      "NUEVAS REGLAS",
+      "para los centros de datos de IA"
+     ],
+     "ch": "🏛️",
+     "y": 455
+    },
+    {
+     "tipo": "logo",
+     "en": "Nvidia,",
+     "offset": 0,
+     "dur": 2.2,
+     "logo": "nvidia",
+     "texto": "los chips más potentes del mundo",
+     "y": 455
+    },
+    {
+     "tipo": "contador",
+     "en": "9%.",
+     "offset": 0,
+     "dur": 2.2,
+     "desde": 0,
+     "hasta": -9,
+     "formato": "{v:.0f} %",
+     "etiqueta": "cayó Nvidia",
+     "y": 455
+    }
+   ]
+  },
+  {
+   "titulo": "Noticia 3 — OpenAI",
+   "tipo": "noticia",
+   "etiqueta": "POLÉMICA · OPENAI",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 296.524,
+     "hasta": 301.047,
+     "texto": "OpenAI descubrió que su nuevo modelo de IA trabaja muy mal cuando se le pide una sola cosa."
+    },
+    {
+     "clip": "0001",
+     "desde": 306.45,
+     "hasta": 309.003,
+     "texto": "La cual es cómo hacer que la IA se vuelva más segura."
+    },
+    {
+     "clip": "0001",
+     "desde": 317.249,
+     "hasta": 319.459,
+     "texto": "Rinde hasta un 40 % menos."
+    },
+    {
+     "clip": "0001",
+     "desde": 321.847,
+     "hasta": 324.606,
+     "texto": "Lo más loco es que OpenAI no sabe por qué."
+    },
+    {
+     "clip": "0001",
+     "desde": 332.132,
+     "hasta": 334.97,
+     "texto": "Y cuando le pidieron el favor: ten cuidado y arregla tu problema,"
+    },
+    {
+     "clip": "0001",
+     "desde": 338.357,
+     "hasta": 339.783,
+     "texto": "lo hizo incluso peor."
+    },
+    {
+     "clip": "0001",
+     "desde": 342.551,
+     "hasta": 344.281,
+     "texto": "¿Será que la IA se va a descontrolar?"
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "logo",
+     "en": "OpenAI",
+     "n": 1,
+     "offset": 0,
+     "dur": 2.2,
+     "logo": "openai",
+     "texto": "su nuevo modelo de IA",
+     "y": 455
+    },
+    {
+     "tipo": "rebelde",
+     "en": "40",
+     "offset": -0.3,
+     "dur": 2.6,
+     "titulo": "TRABAJA MAL EN SEGURIDAD"
+    },
+    {
+     "tipo": "emoji",
+     "en": "sabe",
+     "dur": 1.4,
+     "ch": "🤷",
+     "x": 840,
+     "y": 840
+    },
+    {
+     "tipo": "emoji",
+     "en": "peor.",
+     "dur": 1.4,
+     "ch": "😬",
+     "x": 840,
+     "y": 840
+    },
+    {
+     "tipo": "alerta",
+     "en": "descontrolar?",
+     "offset": -0.4,
+     "dur": 2.2,
+     "texto": "¿SE VA A DESCONTROLAR?",
+     "y": 455
+    }
+   ]
+  },
+  {
+   "titulo": "Noticia 4 — Perplexity",
+   "tipo": "noticia",
+   "etiqueta": "ÚTIL · PERPLEXITY",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 360.421,
+     "hasta": 363.977,
+     "texto": "Perplexity lanzó un modelo de IA que trabaja 24 horas por ti."
+    },
+    {
+     "clip": "0001",
+     "desde": 391.54,
+     "hasta": 396.084,
+     "texto": "Pueden detectar al cliente que dejó de comprarte y hacer un plan completo para que lo vuelvas a recuperar."
+    },
+    {
+     "clip": "0001",
+     "desde": 419.119,
+     "hasta": 421.061,
+     "texto": "Y todo por tan solo 100 dólares al mes."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "logo",
+     "en": "Perplexity",
+     "offset": 0,
+     "dur": 1.6,
+     "logo": "perplexity",
+     "texto": "empleados de IA",
+     "y": 455
+    },
+    {
+     "tipo": "nunca_duerme",
+     "en": "24",
+     "offset": -0.2,
+     "dur": 2.8,
+     "logo": "perplexity",
+     "precio": "trabaja 24 horas por ti"
+    },
+    {
+     "tipo": "texto",
+     "en": "cliente",
+     "offset": 0,
+     "dur": 2.6,
+     "lineas": [
+      "CLIENTE PERDIDO",
+      "→ plan para recuperarlo"
+     ],
+     "ch": "🎯",
+     "y": 455
+    },
+    {
+     "tipo": "texto",
+     "en": "100",
+     "offset": 0,
+     "dur": 2.0,
+     "lineas": [
+      "100 DÓLARES",
+      "al mes"
+     ],
+     "ch": "💳",
+     "y": 455
+    }
+   ]
+  },
+  {
+   "titulo": "CTA",
+   "tipo": "cta",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 428.72,
+     "hasta": 430.24,
+     "texto": "Sígueme para ver más noticias diarias."
+    }
+   ],
+   "graficos": []
+  }
+ ]
+}
