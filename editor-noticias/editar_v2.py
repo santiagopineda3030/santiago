@@ -277,6 +277,10 @@ def construir(g, dur, assets):
         return A.g_nunca_duerme(dur, f"{assets}/logo_{g['logo']}.png" if g.get("logo") else None, g.get("precio", "200 dólares al mes"), g.get("titulo", "EL EMPLEADO QUE NUNCA DUERME"))
     if t == "rebelde":
         return A.g_rebelde(dur, g.get("titulo", "¿LA IA SE ESTÁ REBELANDO?"))
+    if t == "transferencia":
+        return A.g_transferencia(dur, g.get("monto", "US$ 250.000"), g.get("titulo", "TRANSFERENCIA URGENTE"))
+    if t == "plan_cliente":
+        return A.g_plan_cliente(dur, g.get("titulo", "RECUPERA AL CLIENTE"))
     if t == "transicion":
         return A.g_transicion(dur)
     raise ValueError(t)

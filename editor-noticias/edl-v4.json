@@ -1,5 +1,5 @@
 {
- "nota": "v4 1.1: orden Wall Street → OpenAI → Voz clonada → Perplexity; luz limpia; sin cortes de audio por mirada; suspenso en el gancho.",
+ "nota": "v4 1.2: más recortes por mirada (escenas que tapan 3 momentos + imagen sostenida hasta 1,2 s).",
  "gancho_texto": "Wall Street se desploma",
  "cta": "Sígueme para no perderte ninguna",
  "cta_emoji": "🔔",
@@ -221,9 +221,9 @@
     },
     {
      "tipo": "rebelde",
-     "en": "40",
-     "offset": -0.3,
-     "dur": 2.6,
+     "en": "cual",
+     "offset": -0.2,
+     "dur": 4.2,
      "titulo": "TRABAJA MAL EN SEGURIDAD"
     },
     {
@@ -296,14 +296,6 @@
      "y": 840
     },
     {
-     "tipo": "emoji",
-     "en": "transfieran",
-     "dur": 1.4,
-     "ch": "💸",
-     "x": 240,
-     "y": 860
-    },
-    {
      "tipo": "contador",
      "en": "129",
      "offset": 0,
@@ -325,6 +317,13 @@
      ],
      "ch": "🐶",
      "y": 455
+    },
+    {
+     "tipo": "transferencia",
+     "en": "favor",
+     "offset": -0.4,
+     "dur": 2.2,
+     "monto": "US$ ???.???"
     }
    ]
   },
@@ -372,18 +371,6 @@
     },
     {
      "tipo": "texto",
-     "en": "cliente",
-     "offset": 0,
-     "dur": 2.6,
-     "lineas": [
-      "CLIENTE PERDIDO",
-      "→ plan para recuperarlo"
-     ],
-     "ch": "🎯",
-     "y": 455
-    },
-    {
-     "tipo": "texto",
      "en": "100",
      "offset": 0,
      "dur": 2.0,
@@ -393,6 +380,12 @@
      ],
      "ch": "💳",
      "y": 455
+    },
+    {
+     "tipo": "plan_cliente",
+     "en": "cliente",
+     "offset": -0.5,
+     "dur": 3.4
     }
    ]
   },

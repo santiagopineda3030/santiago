@@ -1277,6 +1277,61 @@ def sonidos(sr=48000):
     }
 
 
+def g_transferencia(dur, monto="US$ 250.000", titulo="TRANSFERENCIA URGENTE"):
+    """Pantalla de banco: el monto se escribe, se presiona Enviar y aparece 'Enviado' (la estafa)."""
+    fondo = _fondo_oscuro()
+
+    def cuadro(t):
+        a, _ = _entrada_salida(t, dur)
+        im = fondo.copy()
+        _titulo_escena(im, titulo, 450)
+        p = tarjeta(760, 640)
+        pegar_centro(p, texto_emoji("🏦", "Banco · Contabilidad", 40), 380, 70)
+        pegar_centro(p, texto_img("Para: cuenta del \"jefe\"", 36, BLANCO, negra=False), 380, 170)
+        n = int(clamp(t / (dur * 0.4)) * len(monto))
+        pegar_centro(p, texto_img(monto[:n] or " ", 80, VIOLETA), 380, 290)
+        kb = clamp((t - dur * 0.45) / 0.15)
+        btn = tarjeta(420, 110, relleno=(224, 32, 32, 255), radio=55)
+        pegar_centro(btn, texto_img("ENVIAR", 48, BLANCO), 210, 55)
+        pegar_centro(p, escalar(btn, 1 - 0.08 * math.sin(math.pi * kb)), 380, 450)
+        ke = ease_out_back(clamp((t - dur * 0.62) / 0.2))
+        if ke > 0:
+            pegar_centro(p, escalar(texto_emoji("✅", "Enviado", 54, BLANCO), ke), 380, 570)
+        pegar_centro(im, p, W / 2, 900)
+        return con_alfa(im, a)
+
+    return Grafico(dur, (0, 0, W, H), cuadro, "ding")
+
+
+def g_plan_cliente(dur, titulo="RECUPERA AL CLIENTE"):
+    """Ficha de un cliente que dejó de comprar → la IA arma el plan paso a paso."""
+    fondo = _fondo_oscuro()
+    pasos = [("💬", "Mensaje personal"), ("🎁", "Oferta para volver"), ("📅", "Recordatorio en 7 días")]
+
+    def cuadro(t):
+        a, _ = _entrada_salida(t, dur)
+        im = fondo.copy()
+        _titulo_escena(im, titulo, 450)
+        f = tarjeta(820, 170)
+        pegar_centro(f, texto_emoji("👤", "Cliente: María", 46), 410, 60)
+        pegar_centro(f, texto_img("sin comprar hace 45 días", 36, VIOLETA), 410, 125)
+        k0 = ease_out_back(clamp(t / 0.3))
+        pegar_centro(im, escalar(f, k0), W / 2, 640)
+        ka = clamp((t - 0.4) / 0.3)
+        if ka > 0:
+            pegar_centro(im, con_alfa(texto_emoji("🤖", "plan de la IA", 44), ka), W / 2, 790)
+        for i, (ch, txt) in enumerate(pasos):
+            k = ease_out_back(clamp((t - 0.7 - i * 0.3) / 0.25))
+            if k > 0:
+                c = tarjeta(820, 110)
+                pegar_centro(c, texto_emoji(ch, txt, 44), 360, 55)
+                pegar_centro(c, texto_img("✓", 60, (90, 255, 140)), 760, 55)
+                pegar_centro(im, escalar(c, k), W / 2, 920 + i * 135)
+        return con_alfa(im, a)
+
+    return Grafico(dur, (0, 0, W, H), cuadro, "pop")
+
+
 # --------------------------------------------------------------------------- estilo "IA" (neón tecnológico, 7 nov)
 # Pedido de Santi: menos rojo, más tecnológico y llamativo. aplicar_estilo("ia") cambia colores, fondos, tarjetas,
 # textos de color (degradado cian→magenta con brillo) y la transición. Las escenas no cambian su código.
