@@ -430,6 +430,9 @@ def main():
             if "cubrir" in g:
                 cu = g["cubrir"]
                 t0, t1 = mapear(cod[cu["clip"]], cu["desde"]), mapear(cod[cu["clip"]], cu["hasta"])
+                bruto = cu["hasta"] - cu["desde"]
+                if t1 is None or t1 - t0 > bruto + 0.5:  # el final cayó en otra noticia: no puede durar más que el tramo
+                    t1 = t0 + bruto
                 eventos.append((t0, max(0.8, t1 - t0), g))
                 continue
             objetivo = normalizar(g["en"])
