@@ -1332,6 +1332,193 @@ def g_plan_cliente(dur, titulo="RECUPERA AL CLIENTE"):
     return Grafico(dur, (0, 0, W, H), cuadro, "pop")
 
 
+# --------------------------------------------------------------------------- escenas v4.4 (tapan tomas donde Santi lee el guion)
+def g_venta(dur, titulo="VENDEN TODO LO DE IA"):
+    """Órdenes de VENDER que caen sobre tarjetas de acciones de IA que se ponen en negativo."""
+    import random
+    rnd = random.Random(12)
+    fondo = _fondo_oscuro()
+    acciones = ["Acciones de chips", "Acciones de nube", "Acciones de IA", "Centros de datos"]
+    gotas = [(rnd.uniform(160, 920), rnd.uniform(0, 0.9)) for _ in range(14)]
+
+    def cuadro(t):
+        a, _ = _entrada_salida(t, dur)
+        im = fondo.copy()
+        _titulo_escena(im, titulo, 450)
+        for i, tk in enumerate(acciones):
+            k = ease_out_back(clamp((t - i * 0.12) / 0.25))
+            if k <= 0:
+                continue
+            c = tarjeta(820, 120)
+            pegar_centro(c, texto_img(tk, 44, BLANCO), 330, 60)
+            kf = clamp((t - 0.3 - i * 0.12) / 0.3)
+            if kf > 0:
+                pegar_centro(c, con_alfa(texto_img("▼▼", 50, VIOLETA), kf), 720, 60)
+            pegar_centro(im, escalar(c, k), W / 2, 620 + i * 150)
+        for x, t0 in gotas:
+            kk = clamp((t - t0) / 0.8)
+            if 0 < kk < 1:
+                b = tarjeta(170, 60, relleno=(224, 32, 32, 255), radio=30)
+                pegar_centro(b, texto_img("VENDER", 30, BLANCO), 85, 30)
+                pegar_centro(im, con_alfa(b, 1 - kk * 0.5), x, 500 + 900 * ease_in_out(kk))
+        return con_alfa(im, a)
+
+    return Grafico(dur, (0, 0, W, H), cuadro, "whoosh")
+
+
+def g_datacenter(dur, titulo="CENTROS DE DATOS", sello="NUEVAS REGLAS"):
+    """Pasillo de servidores con luces que parpadean; cae un sello con las reglas del Congreso."""
+    import random
+    rnd = random.Random(2)
+    fondo = _fondo_oscuro()
+    luces = [[(rnd.random(), rnd.choice((CIAN, MAGENTA, (90, 255, 140)))) for _ in range(10)] for _ in range(4)]
+    st = texto_img(sello, 70, BLANCO)
+    sl = _tarjeta_ia(st.width + 70, st.height + 50, relleno=(224, 32, 32, 255), radio=18) if ESTILO == "ia" else tarjeta(st.width + 70, st.height + 50, relleno=ROJO + (255,))
+    pegar_centro(sl, st, sl.width / 2, sl.height / 2)
+    sl = sl.rotate(-7, resample=Image.BICUBIC, expand=True)
+    edif = texto_emoji("🏢", "los edificios donde funciona la IA", 38)
+
+    def cuadro(t):
+        a, _ = _entrada_salida(t, dur)
+        im = fondo.copy()
+        _titulo_escena(im, titulo, 450)
+        d = ImageDraw.Draw(im)
+        for r in range(4):
+            x0 = 150 + r * 200
+            d.rounded_rectangle((x0, 560, x0 + 170, 1180), 14, fill=(16, 20, 44, 255), outline=CIAN + (120,), width=3)
+            for k, (fase, col) in enumerate(luces[r]):
+                y = 590 + k * 58
+                d.rectangle((x0 + 18, y, x0 + 152, y + 34), fill=(24, 30, 62, 255))
+                on = (t * 5 + fase * 7) % 1 < 0.6
+                d.ellipse((x0 + 126, y + 10, x0 + 140, y + 24), fill=col + ((255,) if on else (60,)))
+        pegar_centro(im, edif, W / 2, 1260)
+        ks = clamp((t - dur * 0.5) / 0.18)
+        if ks > 0:
+            pegar_centro(im, con_alfa(escalar(sl, 2.0 - ease_out(ks)), ks), W / 2, 860)
+        return con_alfa(im, a)
+
+    return Grafico(dur, (0, 0, W, H), cuadro, "golpe")
+
+
+def g_chip(dur, ruta_logo=None, pct=-9, titulo="NVIDIA"):
+    """Un chip que brilla (los más potentes del mundo) y luego se apaga mientras su acción cae."""
+    fondo = _fondo_oscuro()
+    lg = logo_blanco(ruta_logo, 90, 320) if ruta_logo else None
+
+    def cuadro(t):
+        a, _ = _entrada_salida(t, dur)
+        im = fondo.copy()
+        _titulo_escena(im, titulo, 450)
+        caida = clamp((t - dur * 0.55) / 0.4)
+        brillo = (0.6 + 0.4 * math.sin(t * 8)) * (1 - 0.8 * caida)
+        capa = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        dd = ImageDraw.Draw(capa)
+        dd.rounded_rectangle((300, 620, 780, 1100), 40, fill=CIAN + (int(150 * brillo),))
+        im.alpha_composite(capa.filter(ImageFilter.GaussianBlur(40)))
+        d = ImageDraw.Draw(im)
+        for k in range(9):
+            for x0, y0, x1, y1 in ((340 + k * 50, 590, 352 + k * 50, 630), (340 + k * 50, 1090, 352 + k * 50, 1130),
+                                   (270, 660 + k * 50, 310, 672 + k * 50), (770, 660 + k * 50, 810, 672 + k * 50)):
+                d.rectangle((x0, y0, x1, y1), fill=(170, 180, 200, 255))
+        d.rounded_rectangle((310, 630, 770, 1090), 36, fill=(18, 22, 46, 255), outline=CIAN + (int(120 + 135 * brillo),), width=6)
+        if lg:
+            pegar_centro(im, lg, W / 2, 800)
+        pegar_centro(im, texto_ajustado("los chips más potentes", 34, 400, BLANCO, negra=False), W / 2, 940)
+        if caida > 0:
+            pegar_centro(im, texto_img(f"{round(pct * ease_out(caida))} %", 120, VIOLETA), W / 2, 1270)
+        return con_alfa(im, a)
+
+    return Grafico(dur, (0, 0, W, H), cuadro, "ding")
+
+
+def g_misterio(dur, ruta_logo=None, titulo="OPENAI NO SABE POR QUÉ"):
+    """Un escáner recorre el modelo buscando la causa… y solo aparece un signo de pregunta."""
+    fondo = _fondo_oscuro()
+    lg = logo_blanco(ruta_logo, 150, 360) if ruta_logo else None
+    q = texto_img("?", 360, VIOLETA)
+
+    def cuadro(t):
+        a, _ = _entrada_salida(t, dur)
+        im = fondo.copy()
+        _titulo_escena(im, titulo, 450)
+        if lg:
+            pegar_centro(im, lg, W / 2, 800)
+        d = ImageDraw.Draw(im)
+        y = 600 + 420 * (0.5 - 0.5 * math.cos(t * 4))
+        d.rectangle((180, y - 3, 900, y + 3), fill=CIAN + (230,))
+        capa = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        ImageDraw.Draw(capa).rectangle((180, y - 30, 900, y + 30), fill=CIAN + (60,))
+        im.alpha_composite(capa.filter(ImageFilter.GaussianBlur(12)))
+        pegar_centro(im, texto_img("buscando la causa" + "." * (int(t * 4) % 4), 40, BLANCO, negra=False), W / 2, 1100)
+        kq = ease_out_back(clamp((t - dur * 0.5) / 0.3))
+        if kq > 0:
+            pegar_centro(im, escalar(q, kq), W / 2, 1250)
+        return con_alfa(im, a)
+
+    return Grafico(dur, (0, 0, W, H), cuadro, "alerta")
+
+
+def g_glitch(dur, texto="¿SE VA A DESCONTROLAR?"):
+    """Robot con falla de imagen (glitch): franjas desplazadas, colores separados y la pregunta."""
+    import random
+    rnd = random.Random(6)
+    fondo = _fondo_oscuro()
+    robot = emoji("🤖", 280)
+    tx = texto_ajustado(texto, 76, 880, VIOLETA)
+
+    def cuadro(t):
+        a, _ = _entrada_salida(t, dur)
+        im = fondo.copy()
+        capa = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        pegar_centro(capa, robot, W / 2, 800)
+        if int(t * 10) % 3 == 0:
+            r, g, b, al = capa.split()
+            capa = Image.merge("RGBA", (r, g, b, al))
+            for _ in range(6):
+                y0 = rnd.randint(640, 960); hh = rnd.randint(10, 50); dx = rnd.randint(-50, 50)
+                tira = capa.crop((0, y0, W, y0 + hh))
+                capa.paste((0, 0, 0, 0), (0, y0, W, y0 + hh))
+                capa.alpha_composite(tira, (dx, y0))
+            c1 = capa.copy(); c1.putalpha(capa.getchannel("A").point(lambda v: v // 2))
+            tint = Image.new("RGBA", (W, H), CIAN + (0,)); tint.putalpha(c1.getchannel("A"))
+            im.alpha_composite(tint, (-12, 0))
+            tint2 = Image.new("RGBA", (W, H), MAGENTA + (0,)); tint2.putalpha(c1.getchannel("A"))
+            im.alpha_composite(tint2, (12, 0))
+        im.alpha_composite(capa)
+        pegar_centro(im, tx, W / 2, 1150)
+        return con_alfa(im, a)
+
+    return Grafico(dur, (0, 0, W, H), cuadro, "alerta")
+
+
+def g_seguir(dur, usuario="@soysanti__content_ia", texto="Noticias de IA todos los días"):
+    """Tarjeta de perfil: el botón Seguir se presiona, cambia a Siguiendo y suena la campana."""
+    fondo = _fondo_oscuro()
+    camp = emoji("🔔", 130)
+
+    def cuadro(t):
+        a, _ = _entrada_salida(t, dur)
+        im = fondo.copy()
+        p = tarjeta(820, 520)
+        d = ImageDraw.Draw(p)
+        d.ellipse((330, 40, 490, 200), fill=VIOLETA + (255,), outline=CIAN + (255,), width=6)
+        pegar_centro(p, texto_img("S", 90, BLANCO), 410, 120)
+        pegar_centro(p, texto_img(usuario, 46, BLANCO), 410, 260)
+        pegar_centro(p, texto_img(texto, 34, (200, 205, 230), negra=False), 410, 320)
+        kp = clamp((t - dur * 0.45) / 0.15)
+        siguiendo = kp >= 1
+        b = tarjeta(460, 110, relleno=(28, 28, 34, 255) if siguiendo else (224, 32, 32, 255), radio=55)
+        pegar_centro(b, texto_img("Siguiendo ✓" if siguiendo else "Seguir", 50, BLANCO), 230, 55)
+        pegar_centro(p, escalar(b, 1 - 0.1 * math.sin(math.pi * kp)), 410, 430)
+        pegar_centro(im, p, W / 2, 850)
+        if siguiendo:
+            k = clamp((t - dur * 0.6) / 0.6)
+            pegar_centro(im, camp.rotate(25 * math.sin(t * 25) * (1 - k), expand=True), W / 2, 1230)
+        return con_alfa(im, a)
+
+    return Grafico(dur, (0, 0, W, H), cuadro, "pop")
+
+
 # --------------------------------------------------------------------------- estilo "IA" (neón tecnológico, 7 nov)
 # Pedido de Santi: menos rojo, más tecnológico y llamativo. aplicar_estilo("ia") cambia colores, fondos, tarjetas,
 # textos de color (degradado cian→magenta con brillo) y la transición. Las escenas no cambian su código.

@@ -1,5 +1,5 @@
 {
- "nota": "v4 1.3: tomas según el guion (vuelven las frases que explican cada noticia).",
+ "nota": "v4 1.4: donde Santi lee el guion o no sale en cuadro → animación a pantalla completa. Luz original.",
  "gancho_texto": "Wall Street se desploma",
  "cta": "Sígueme para no perderte ninguna",
  "cta_emoji": "🔔",
@@ -152,50 +152,6 @@
     },
     {
      "tipo": "texto",
-     "en": "Congreso",
-     "offset": 0,
-     "dur": 2.4,
-     "lineas": [
-      "NUEVAS REGLAS",
-      "para los centros de datos de IA"
-     ],
-     "ch": "🏛️",
-     "y": 455
-    },
-    {
-     "tipo": "logo",
-     "en": "Nvidia,",
-     "offset": 0,
-     "dur": 2.2,
-     "logo": "nvidia",
-     "texto": "los chips más potentes del mundo",
-     "y": 455
-    },
-    {
-     "tipo": "contador",
-     "en": "9%.",
-     "offset": 0,
-     "dur": 1.5,
-     "desde": 0,
-     "hasta": -9,
-     "formato": "{v:.0f} %",
-     "etiqueta": "cayó Nvidia",
-     "y": 455
-    },
-    {
-     "tipo": "texto",
-     "en": "edificios",
-     "offset": 0,
-     "dur": 2.0,
-     "lineas": [
-      "CENTROS DE DATOS",
-      "los edificios donde funciona la IA"
-     ],
-     "ch": "🏢",
-     "y": 455
-    },
-    {
-     "tipo": "texto",
      "en": "peor",
      "offset": 0,
      "dur": 2.2,
@@ -207,12 +163,33 @@
      "y": 455
     },
     {
-     "tipo": "emoji",
-     "en": "vendieron",
-     "dur": 1.4,
-     "ch": "💸",
-     "x": 840,
-     "y": 840
+     "tipo": "venta",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 213.0,
+      "hasta": 215.3
+     }
+    },
+    {
+     "tipo": "datacenter",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 220.4,
+      "hasta": 246.65
+     },
+     "titulo": "CENTROS DE DATOS",
+     "sello": "NUEVAS REGLAS"
+    },
+    {
+     "tipo": "chip",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 264.3,
+      "hasta": 279.3
+     },
+     "logo": "nvidia",
+     "pct": -9,
+     "titulo": "NVIDIA"
     }
    ]
   },
@@ -291,20 +268,22 @@
      "y": 840
     },
     {
-     "tipo": "alerta",
-     "en": "descontrolar?",
-     "offset": -0.4,
-     "dur": 1.5,
-     "texto": "¿SE VA A DESCONTROLAR?",
-     "y": 455
+     "tipo": "misterio",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 321.7,
+      "hasta": 324.7
+     },
+     "logo": "openai"
     },
     {
-     "tipo": "emoji",
-     "en": "sabe",
-     "dur": 1.4,
-     "ch": "🤷",
-     "x": 840,
-     "y": 840
+     "tipo": "glitch",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 342.45,
+      "hasta": 344.4
+     },
+     "texto": "¿SE VA A DESCONTROLAR?"
     }
    ]
   },
@@ -438,23 +417,6 @@
    ],
    "graficos": [
     {
-     "tipo": "logo",
-     "en": "Perplexity",
-     "offset": 0,
-     "dur": 1.6,
-     "logo": "perplexity",
-     "texto": "empleados de IA",
-     "y": 455
-    },
-    {
-     "tipo": "nunca_duerme",
-     "en": "24",
-     "offset": -0.2,
-     "dur": 2.8,
-     "logo": "perplexity",
-     "precio": "trabaja 24 horas por ti"
-    },
-    {
      "tipo": "texto",
      "en": "100",
      "offset": 0,
@@ -467,12 +429,6 @@
      "y": 455
     },
     {
-     "tipo": "plan_cliente",
-     "en": "cliente",
-     "offset": -0.5,
-     "dur": 3.4
-    },
-    {
      "tipo": "emoji",
      "en": "decidir.",
      "offset": -0.2,
@@ -480,6 +436,24 @@
      "ch": "📲",
      "x": 840,
      "y": 840
+    },
+    {
+     "tipo": "nunca_duerme",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 360.3,
+      "hasta": 364.1
+     },
+     "logo": "perplexity",
+     "precio": "trabaja 24 horas por ti"
+    },
+    {
+     "tipo": "plan_cliente",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 391.4,
+      "hasta": 396.2
+     }
     }
    ]
   },
@@ -494,7 +468,14 @@
      "texto": "Sígueme para ver más noticias diarias."
     }
    ],
-   "graficos": []
+   "graficos": [
+    {
+     "tipo": "seguir",
+     "en": "Sígueme",
+     "offset": -0.1,
+     "dur": 4.4
+    }
+   ]
   }
  ]
 }

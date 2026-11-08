@@ -281,6 +281,18 @@ def construir(g, dur, assets):
         return A.g_transferencia(dur, g.get("monto", "US$ 250.000"), g.get("titulo", "TRANSFERENCIA URGENTE"))
     if t == "plan_cliente":
         return A.g_plan_cliente(dur, g.get("titulo", "RECUPERA AL CLIENTE"))
+    if t == "venta":
+        return A.g_venta(dur, g.get("titulo", "VENDEN TODO LO DE IA"))
+    if t == "datacenter":
+        return A.g_datacenter(dur, g.get("titulo", "CENTROS DE DATOS"), g.get("sello", "NUEVAS REGLAS"))
+    if t == "chip":
+        return A.g_chip(dur, f"{assets}/logo_{g['logo']}.png" if g.get("logo") else None, g.get("pct", -9), g.get("titulo", "NVIDIA"))
+    if t == "misterio":
+        return A.g_misterio(dur, f"{assets}/logo_{g['logo']}.png" if g.get("logo") else None, g.get("titulo", "OPENAI NO SABE POR QUÉ"))
+    if t == "glitch":
+        return A.g_glitch(dur, g.get("texto", "¿SE VA A DESCONTROLAR?"))
+    if t == "seguir":
+        return A.g_seguir(dur, g.get("usuario", "@soysanti__content_ia"), g.get("texto", "Noticias de IA todos los días"))
     if t == "transicion":
         return A.g_transicion(dur)
     raise ValueError(t)
