@@ -56,3 +56,11 @@ Si Meta responde error 190, el token venció o es inválido: repetir 3–5.
 - Prueba sin publicar: menú Plan IG › Probar subida a Instagram (o `probarSubidaInstagram`, código en `PRUEBA_IG`).
 - El motivo de cualquier rechazo queda escrito en "Link publicado" (con pista en español, `pistaIG_`).
 - TikTok.gs: `payload: file.getBlob()` (sí funciona en TikTok, probado 12:17).
+
+## 8 nov 2026 · Token nuevo: usuario del sistema "ig contentia" (no vence)
+- `META_TOKEN` ahora es el token del **usuario del sistema** ig contentia (ID 61596519503349) del negocio soysanti__content_ia,
+  app Publicador Santi, caducidad **Nunca**, 7 permisos: instagram_basic, instagram_content_publish, pages_show_list,
+  pages_read_engagement, business_management, ads_management, ads_read. `probarConexion` OK 21:41.
+- Ojo al regenerarlo: buscar "instagram" en la lista y marcar `instagram_content_publish` (debe decir 7 seleccionadas).
+  Sin ese permiso sale el error (#10) "Requires instagram_content_publish permission".
+- `META_ADS_TOKEN` (anuncios) es otro token del mismo robot. Detalle en `anuncios-meta.md`.
