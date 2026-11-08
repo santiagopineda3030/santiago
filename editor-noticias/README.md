@@ -28,7 +28,7 @@ python3 mirada.py crudos-vN/<clip>.MP4 salida-vN/mirada.json "$(cat salida-vN/ra
 # 5. Render
 python3 editar_v2.py --videos crudos-vN --edl edl-vN.json --trozos salida-vN/trozos --assets assets-v2 \
   --salida salida-vN --mirada salida-vN/mirada.json --musica musica/lofi-energico.wav --musica-db -14 \
-  --musica-intro musica/suspenso.wav --luz limpia --estilo ia --nombre "vN 1.0 tema.mp4" \
+  --musica-intro musica/suspenso.wav --luz "" --estilo ia --nombre "vN 1.0 tema.mp4" \
   --centro-x 0.55 --centro-y 0.6 --zoom-base 2.0   # encuadre: probar con un cuadro antes (cambia cada día)
 ```
 - `--mirada`: recorta los bordes donde no mira a cámara y sostiene la imagen (el audio sigue). Lo que queda en medio
@@ -42,8 +42,17 @@ python3 editar_v2.py --videos crudos-vN --edl edl-vN.json --trozos salida-vN/tro
   paises, itinerario, resumen_ia, app. Emojis dentro de texto: usar `texto_emoji` (Inter no dibuja emojis).
 - Crudos 4K 120 fps (7,6 GB): no hacer hojas de cuadros del crudo completo (decodificar tarda muchísimo); medir solo rangos.
 - Subir a Drive: `subir-drive/subir_drive.sh "salida-vN/vN 1.x tema.mp4" "NOVIEMBRE 2026"` (funciona desde el 7 nov).
-- Reglas de Santi (7 nov): estilo `ia` (nada de tanto rojo), luz `limpia` (sin amarillo), nunca cortar audio por la mirada
-  (solo sostener imagen), suspenso en el gancho, noticias más fuertes primero.
+- Reglas de Santi (7 nov), en orden de importancia:
+  1. **Tomas según el guion**: cada frase del guion tiene que estar (si se quita una explicación, la noticia no se entiende).
+     El orden de las noticias: las más fuertes primero (Santi lo decide al revisar).
+  2. **Nunca mostrarlo leyendo el guion ni fuera de cuadro.** El detector (`mirada.py`, cabeza) NO ve cuando solo baja los ojos:
+     revisar a ojo cada toma con tiras de 8 cuadros de los ojos (crop de la cara del encuadre, ver bitácora 7 nov) y
+     donde lee o no sale → **animación a pantalla completa** con `"cubrir"` en vez de buscar otra toma.
+  3. Nunca cortar audio por la mirada (solo sostener imagen, `--congelar-max 1.2`); más aire en los cortes.
+  4. **Luz original** (`--luz ""`): Santi rechazó `cine` (amarillo) y `limpia` (pálido).
+  5. Estilo `ia` (neón), suspenso en el gancho + golpe en cada cambio de noticia, música que se escuche (−14 dB).
+  6. Nada de datos inventados en las animaciones (solo cifras del guion).
+- `"cubrir"` puede abarcar dos tomas seguidas (desde la 1.ª hasta el final de la 2.ª); nunca dura más que su tramo.
 
 ## Uso (versión vieja, v1)
 ```bash

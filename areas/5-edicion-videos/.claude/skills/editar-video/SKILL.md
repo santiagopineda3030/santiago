@@ -16,7 +16,8 @@ Un solo video sirve para **Instagram, TikTok y YouTube Shorts**. IDs en `areas/5
    subtítulos 2–4 palabras con clave en rojo, título por noticia, gancho en 3 s, −14 LUFS, H.264 ≤ 30 MB).
    Comando completo y opciones en `editor-noticias/README.md` › "Flujo actual". Lo que Santi pidió (5–7 nov) y es regla:
    cortes cuando mira a cámara (`--mirada`), muchas animaciones (gancho muy animado), zona segura, animación ANTES de la
-   palabra (`--adelanto`), luz `cine`, música original que SÍ se escuche (`lofi-energico`, −14 dB).
+   palabra (`--adelanto`), música original que SÍ se escuche (`lofi-energico`, −14 dB). Desde el 7 nov: tomas fieles al guion,
+   luz original, estilo `ia`, y donde lee el guion o no sale en cuadro → animación a pantalla completa (README › Reglas de Santi).
 3. **Auditar** antes de mostrar: igual que la skill `editar-instagram` paso 5.
 4. **Revisar juntos [OK]:** mandarle el video (SendUserFile) y una lista corta de qué hiciste. Corregir lo que diga
    (versión nueva 1.1, 1.2…). Si una corrección es regla → "Ajustes de Santi" de la Guía (Drive + `drive-respaldo/recursos/`).
