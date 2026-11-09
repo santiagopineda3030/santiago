@@ -74,3 +74,4 @@ Versión solo Instagram del script arreglado, sin datos de Santi (CONFIG vacío)
 | Plan hasta el 18 nov (9 nov) | ContentIA | `1ZsW9J9k2MZroeop9mlxMhJjaJz8fHtQA3qDC6ShQhaw` |
 | Lo legal paso a paso (9 nov) | ContentIA | `1X57nORHtCzjzHjaJMSHJ9SXvih4Ou5EpjbKREAeuohU` |
 | Lo que falta · lista (9 nov) | ContentIA | `11cMXoh_X4wI0ARtc1Mtnr8krlYFsf0GLaHIz4_OLdeg` |
+| Equipo de grabación (9 nov) | ContentIA | `1UOVlBktAuA77OkdLIP3LEsKHzPx7b0Xt-Pf7T5cRDQM` |
