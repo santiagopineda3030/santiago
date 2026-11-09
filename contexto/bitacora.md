@@ -216,3 +216,4 @@
 - 9 nov · Santi: las conexiones del cliente (Meta, YouTube, TikTok, plan de Claude) van como módulo del curso. Guardado en producto.md.
 - 9 nov 15:20 · Doc 'Inversión y legal · ContentIA' en ContentIA (1uQqe7O6pjq_kG-cyLkn2fgJhdhk_pd5XV6OjzZSIaoM): legal Colombia, permisos de plataformas, suscripciones, cobros, equipo de grabación, publicidad, orden recomendado. Precios aproximados; lo legal se confirma con contador. Santi decide mañana con su socia si lanzan a inicios de 2027 (probar todo primero).
 - 9 nov 15:22 · Doc 'Plan hasta el 18 de noviembre' (1ZsW9J9k2MZroeop9mlxMhJjaJz8fHtQA3qDC6ShQhaw): nueva meta probar todo antes de vender (posible venta inicio 2027, se confirma con la socia el 10 nov). Reemplaza la tabla de la hoja de ruta de CLAUDE.md.
+- 9 nov 15:24 · Doc 'Lo legal paso a paso' (1X57nORHtCzjzHjaJMSHJ9SXvih4Ou5EpjbKREAeuohU): 15 pasos simples en 4 bloques (empresa, socia, antes de vender, proteger). Complementa el doc de inversión.
