@@ -12,6 +12,11 @@
 - TikTok: publicar directo requiere aprobación/auditoría de la app (contexto/tiktok.md).
 - Encuestas: Santi las hace en persona (form https://forms.gle/BEE2ZSexndMxFYXN7) → estudio de mercado. Luego la oferta.
 
+## Regla hasta el jueves 12 (Santi, 9 nov)
+- NADA de código hasta el jueves. Lo técnico (web, Skool, plantillas, TikTok directo) va después del jueves.
+- Video: máximo 2 versiones; Santi manda un solo prompt con todo.
+- v5 sale hoy a las 11:30 (no 11:00).
+
 ## Orden del lunes 9 (Santi)
 1 guion v5 · 2 grabar · 3 editar y publicar 11:00 · 4 oferta · 5 Meta: píxel + tracker + prueba · 6 TikTok publicar solo · 7 encuestas · extra: 4:35 guion v6, vaciar papelera de Drive.
 
