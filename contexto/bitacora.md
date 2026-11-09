@@ -212,3 +212,4 @@
 - 9 nov 12:45 · TikTok del v5 en borradores (12:33). Falta que Santi lo publique (antes de 24 h).
 - 9 nov · Quedan ~10% del plan hasta el jueves. Propuesta: Santi edita en CapCut y sube a 2. Videos terminados; Claude solo guion 4:35 y poner Publicar; oferta, Meta y TikTok automático después del jueves. Santi lo piensa hoy.
 - 9 nov 14:52 · Doc 'Oferta · Cerebro de Contenido (borrador para Santi)' en ContentIA (1JnXbuB86J1SVlg7HPqaq7mHtmiD80Jb3aXYaOiwbxAw). Santi lo arregla hoy; lista para el 10 nov. Copia en drive-respaldo cuando quede final.
+- 9 nov · Santi editó el doc de la oferta; Claude le dio recomendaciones (montaje: decidir quién; garantía medible; promesa 'tú solo grabas'; cuotas; nicho; resultado concreto y ancla de precio). Mañana 10 nov la cierra con su socia.
