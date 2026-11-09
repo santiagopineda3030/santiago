@@ -12,6 +12,8 @@
 - TikTok: publicar directo requiere aprobación/auditoría de la app (contexto/tiktok.md).
 - Encuestas: Santi las hace en persona (form https://forms.gle/BEE2ZSexndMxFYXN7) → estudio de mercado. Luego la oferta.
 
+## Plan hasta el 18 nov: doc 1ZsW9J9k2MZroeop9mlxMhJjaJz8fHtQA3qDC6ShQhaw (meta: probar todo antes de vender). Oferta: 1JnXbuB86J1SVlg7HPqaq7mHtmiD80Jb3aXYaOiwbxAw. Inversión y legal: 1uQqe7O6pjq_kG-cyLkn2fgJhdhk_pd5XV6OjzZSIaoM.
+
 ## Regla hasta el jueves 12 (Santi, 9 nov)
 - NADA de código hasta el jueves. Lo técnico (web, Skool, plantillas, TikTok directo) va después del jueves.
 - Video: máximo 2 versiones; Santi manda un solo prompt con todo.

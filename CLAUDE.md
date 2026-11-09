@@ -123,7 +123,10 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
   **Listo desde el 7 nov:** `SUBIDA_URL` y `SUBIDA_CLAVE` están en el entorno (los leen los chats nuevos). Uso: `./subir_drive.sh "<video>.mp4" "NOVIEMBRE 2026"`.
 - Landing de la llamada: `src/` (React + Vite + Tailwind, estilo tecnológico cian, logo SPR en píxeles).
 
-## Hoja de ruta día por día hasta el 18 de nov 2026 (acordada con Santi, 6 nov) · TODO automatizado
+## Hoja de ruta hasta el 18 de nov 2026
+**PLAN NUEVO (9 nov): doc https://docs.google.com/document/d/1ZsW9J9k2MZroeop9mlxMhJjaJz8fHtQA3qDC6ShQhaw · meta: probar todo antes de vender (posible venta inicio 2027). La tabla de abajo es la vieja (6 nov).**
+
+### Hoja de ruta vieja (6 nov)
 Flujo: Santi sube crudos a "Videos en frío" → Claude edita, sube, organiza hoja y calendario → publica solo → Claude da ideas de guiones.
 Plan maestro (doc): https://claude.ai/artifact/PnzCmT7dUjbUxnE5Qtg7r1 · Hecho: estudio de mercado (`estudio-de-mercado.md`), oferta (`ai-work.md`), producto (`producto.md`), nombre de marca (ContentIA).
 **Todos los días:** prueba automática de las 11:00 (IG + YouTube, luego TikTok) y revisar el guion de las 4:35.
