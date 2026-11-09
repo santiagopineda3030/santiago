@@ -210,3 +210,4 @@
 - 9 nov 11:59 · Santi aprobó el v5 1.1 → subido a 2. Videos terminados (1WtxismN4w8eRa9oZA0wO0570zWjs96Dc). Hoja fila 6: Editado, link, descripción, título YouTube, Hora 12:00, Publicar. Sale a las 12:00 en IG, YouTube y TikTok (borradores).
 - 9 nov 12:22 · ✅ v5 1.1 publicado solo a las 12:00: IG (reel Dfh0ohvgWvs) y YouTube (-Jx1lsQitqw). TikTok 'Pendiente' (va a borradores en la siguiente vuelta). Calendar en verde. Papelera: 2 crudos IMG_4665.MOV (duplicados, 3 GB c/u), guion terminado e idea (copias en drive-respaldo/guiones/). El mp4 v5 se queda hasta que Santi publique el TikTok. Falta: Santi vacía la papelera. Sigue: la oferta.
 - 9 nov 12:45 · TikTok del v5 en borradores (12:33). Falta que Santi lo publique (antes de 24 h).
+- 9 nov · Quedan ~10% del plan hasta el jueves. Propuesta: Santi edita en CapCut y sube a 2. Videos terminados; Claude solo guion 4:35 y poner Publicar; oferta, Meta y TikTok automático después del jueves. Santi lo piensa hoy.
