@@ -200,3 +200,4 @@
 - 8 nov noche · Orden final lun 9 (Santi): 1 revisar guion v5 a primera hora · 2 grabar · 3 editar y publicar 11:00 · 4 oferta · 5 Meta: píxel + tracker + prueba de anuncio · 6 TikTok publicar solo · 7 encuestas (de últimas) · extra: 4:35 guion v6, vaciar papelera.
 - 9 nov 9:40 · Santi va al 80% del plan semanal: se crean chats nuevos (los viejos se archivan), estado-actual.md como resumen de arranque, tarea 4:35 a Sonnet, reglas para gastar menos.
 - 9 nov 9:37 · Chats nuevos creados (Base, Preguntas y 6 carpetas, con Sonnet/Opus según la regla) y 6 viejos archivados. IDs en CLAUDE.md y chats.md.
+- 9 nov 9:50 · Archivados (pedido de Santi) los chats viejos: Preguntas, Instagram, TikTok, YouTube, Anuncios, Edición y Guiones. El borrador del guion v5 de esta mañana quedó guardado en drive-respaldo/guiones/v5-guion-borrador-9nov.md. Falta: chats nuevos (los crea el organizador) y archivar este Base.
