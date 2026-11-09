@@ -214,3 +214,4 @@
 - 9 nov 14:52 · Doc 'Oferta · Cerebro de Contenido (borrador para Santi)' en ContentIA (1JnXbuB86J1SVlg7HPqaq7mHtmiD80Jb3aXYaOiwbxAw). Santi lo arregla hoy; lista para el 10 nov. Copia en drive-respaldo cuando quede final.
 - 9 nov · Santi editó el doc de la oferta; Claude le dio recomendaciones (montaje: decidir quién; garantía medible; promesa 'tú solo grabas'; cuotas; nicho; resultado concreto y ancla de precio). Mañana 10 nov la cierra con su socia.
 - 9 nov · Santi: las conexiones del cliente (Meta, YouTube, TikTok, plan de Claude) van como módulo del curso. Guardado en producto.md.
+- 9 nov 15:20 · Doc 'Inversión y legal · ContentIA' en ContentIA (1uQqe7O6pjq_kG-cyLkn2fgJhdhk_pd5XV6OjzZSIaoM): legal Colombia, permisos de plataformas, suscripciones, cobros, equipo de grabación, publicidad, orden recomendado. Precios aproximados; lo legal se confirma con contador. Santi decide mañana con su socia si lanzan a inicios de 2027 (probar todo primero).
