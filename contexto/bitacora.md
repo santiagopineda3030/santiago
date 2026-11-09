@@ -207,3 +207,4 @@
 - 9 nov 11:24 · v5 movido a las 11:45 (hoja L6 y calendario).
 - 9 nov 11:25 · v5 movido a las 12:00 (hoja L6 y calendario).
 - 9 nov 2026 · v5 1.1 (crudo iPhone 4K HDR IMG_4665.MOV 1FqE1oHVEYnRWXQMc7HVFeHpsWVsR7rbc, duplicado 1RUida2…) editado en estilo CYBERPUNK: nuevo `editor-noticias/cyber.py` (--estilo cyber: glitch RGB, HUD, escenas espia/valor/marcha/ley/veneno/puerta/hud), música original `musica_cyber.py` (synthwave 112 BPM), proxy SDR 1080×1920 (tonemap HLG→709), encuadre anclado a la cara (centro-x 0, centro-y 0.36, zoom 1.3), `alinear` con difflib. 108 s, −14 LUFS, 27,4 MB. Enviado a Santi; falta su OK para subir y programar. El crudo quedó compartido con enlace (Santi lo vuelve a Restringido).
+- 9 nov 11:59 · Santi aprobó el v5 1.1 → subido a 2. Videos terminados (1WtxismN4w8eRa9oZA0wO0570zWjs96Dc). Hoja fila 6: Editado, link, descripción, título YouTube, Hora 12:00, Publicar. Sale a las 12:00 en IG, YouTube y TikTok (borradores).
