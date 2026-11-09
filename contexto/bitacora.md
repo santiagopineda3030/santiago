@@ -211,3 +211,4 @@
 - 9 nov 12:22 · ✅ v5 1.1 publicado solo a las 12:00: IG (reel Dfh0ohvgWvs) y YouTube (-Jx1lsQitqw). TikTok 'Pendiente' (va a borradores en la siguiente vuelta). Calendar en verde. Papelera: 2 crudos IMG_4665.MOV (duplicados, 3 GB c/u), guion terminado e idea (copias en drive-respaldo/guiones/). El mp4 v5 se queda hasta que Santi publique el TikTok. Falta: Santi vacía la papelera. Sigue: la oferta.
 - 9 nov 12:45 · TikTok del v5 en borradores (12:33). Falta que Santi lo publique (antes de 24 h).
 - 9 nov · Quedan ~10% del plan hasta el jueves. Propuesta: Santi edita en CapCut y sube a 2. Videos terminados; Claude solo guion 4:35 y poner Publicar; oferta, Meta y TikTok automático después del jueves. Santi lo piensa hoy.
+- 9 nov 14:52 · Doc 'Oferta · Cerebro de Contenido (borrador para Santi)' en ContentIA (1JnXbuB86J1SVlg7HPqaq7mHtmiD80Jb3aXYaOiwbxAw). Santi lo arregla hoy; lista para el 10 nov. Copia en drive-respaldo cuando quede final.
