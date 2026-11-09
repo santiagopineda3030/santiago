@@ -3,22 +3,26 @@
 Regla (Kit ContentIA, skill `rutina-diaria`): un chat por pieza, con etiqueta `area:<red>`. Cuando la pieza termina y lo
 importante ya está en GitHub, el chat se **archiva** (no se borra; se puede reabrir desde Archivados).
 
-## Activos
-| Chat | ID | Carpeta | Para qué |
+## Activos (desde el 9 nov; chats nuevos y cortos para gastar menos)
+| Chat | ID | Modelo | Carpeta |
 |---|---|---|---|
-| Santi · Base | `session_01McnvqwgYFW5FkckcrCQLTM` | — (fijar arriba) | Empezar el día, priorizar, abrir chats por pieza, cerrar el día |
-| Santi · Preguntas | `session_01McnvqsAY6qsuVP5J8RGKgS` | — (fijar arriba) | Dudas de cómo funciona el sistema |
-| 📁 Instagram | `session_01Mcnvqs7Mruj2n8hLGHzTTS` | area:instagram | Reels de Instagram |
-| 📁 TikTok | `session_01Mcnvqun84DQpBZzc9mkVNF` | area:tiktok | Videos de TikTok |
-| 📁 YouTube | `session_01McnvqtEmdYchkSMiZkWiyW` | area:youtube | Shorts y videos largos |
-| 📁 Anuncios (Meta) | `session_01McnvqspjmNbL6TY5zg81DQ` | area:meta | Anuncios y VSL |
-| 📁 Guiones | `session_01McnvqsoboeaDTB6ormVrbC` | area:guiones | Revisar guiones en frío → terminados |
-| 📁 Edición de videos | `session_01McnvqvgdvcfNzme6m5dsJP` | area:edicion | Editar lo de Videos en frío, revisar, subir a Videos terminados y programar |
-| Guiones carpetas organización | `session_01McnvqvWmcNJ8fzpL6R6vhW` | area:guiones | Sesión del 5 nov que montó todo esto (ver abajo). Se puede archivar |
+| Santi · Base | `session_01McnvqtY4SNH4XF5G4QasW1` | Sonnet | santi:base (fijar arriba) |
+| Santi · Preguntas | `session_01Mcnvqsr7cQVf8UpPxL1ZY1` | Sonnet | santi:preguntas (fijar arriba) |
+| 📁 Edición de videos | `session_01McnvqtizmJTpTL89JpqEe6` | Opus | area:edicion |
+| 📁 Guiones | `session_01McnvqwUjMFUTZvojTZbCUK` | Sonnet | area:guiones |
+| 📁 Anuncios (Meta) | `session_01Mcnvqwiv8dmFwTWjVUCuyn` | Opus | area:meta |
+| 📁 TikTok | `session_01Mcnvqvevjb1aQM8gzqY6pm` | Opus | area:tiktok |
+| 📁 Instagram | `session_01McnvqwfzmSghJmxEYRD7gS` | Sonnet | area:instagram |
+| 📁 YouTube | `session_01Mcnvqvr5TmUS8T5vvYKsAm` | Sonnet | area:youtube |
+| Guiones carpetas organización (5 nov) | `session_01McnvqvWmcNJ8fzpL6R6vhW` | Opus | crea los chats nuevos al mismo nivel |
+
+Pendientes de archivar (los archiva Santi o el Base nuevo cuando terminen): Base viejo `session_01McnvqwgYFW5FkckcrCQLTM`,
+📁 Guiones viejo `session_01McnvqsoboeaDTB6ormVrbC`.
 
 ## Archivados (su trabajo está en GitHub)
 | Chat | ID | Carpeta | Qué quedó |
 |---|---|---|---|
+| Chats del 5–8 nov (archivados 9 nov) | Preguntas `…sAY6qsuVP5J8RGKgS` · Instagram `…s7Mruj2n8hLGHzTTS` · TikTok `…un84DQpBZzc9mkVNF` · YouTube `…tEmdYchkSMiZkWiyW` · Anuncios `…spjmNbL6TY5zg81DQ` · Edición `…vgdvcfNzme6m5dsJP` | — | Reemplazados por chats nuevos; su trabajo está en GitHub |
 | Insta automático | `session_01McnvqsAPBBVC6a9kGPqyFh` | area:instagram | Publicación automática en Instagram (Meta), memoria pasada a GitHub, landing. Ver `instagram-meta.md` |
 | YouTube Shorts automático | `session_01McnvquC3CtnNQ4LRG5PTeT` | area:youtube | YouTube Shorts automático probado (@santimediayt), TikTok plan A. Ver `youtube.md`, `tiktok.md` |
 | 5 carpetas viejas dentro de Base | (5 IDs) | — | Duplicadas y escondidas; reemplazadas por las de arriba |

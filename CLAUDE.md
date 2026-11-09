@@ -46,11 +46,12 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
   | `areas/3-youtube` | `editar-youtube` | Recursos y reglas · YouTube |
   | `areas/4-anuncios-meta` | `editar-anuncio` | Recursos y reglas · Anuncios (Meta) |
 | `areas/5-edicion-videos` | `editar-video` | Edita lo de `1. Videos en frío`, revisa con Santi, sube a `2. Videos terminados` y programa |
-- **Chats:** `Santi · Base` (`session_01McnvqwgYFW5FkckcrCQLTM`) y `Santi · Preguntas` (`session_01McnvqsAY6qsuVP5J8RGKgS`), fijados arriba a mano; un chat por pieza con etiqueta `area:<red>`.
-  - Carpetas (chats al mismo nivel que Base, cada uno se presenta en su primer mensaje): 📁 Instagram
-    `session_01Mcnvqs7Mruj2n8hLGHzTTS` · 📁 TikTok `session_01Mcnvqun84DQpBZzc9mkVNF` · 📁 YouTube `session_01McnvqtEmdYchkSMiZkWiyW` ·
-    📁 Anuncios (Meta) `session_01McnvqspjmNbL6TY5zg81DQ` · 📁 Guiones `session_01McnvqsoboeaDTB6ormVrbC` · 📁 Edición de videos `session_01McnvqvgdvcfNzme6m5dsJP`.
-    (Las creadas desde Base quedaban escondidas dentro de él: archivadas.) Los chats de cada pieza los abre Base.
+- **Chats (nuevos, 9 nov; al empezar leen `contexto/estado-actual.md`):** `Santi · Base` (`session_01McnvqtY4SNH4XF5G4QasW1`, Sonnet) y
+  `Santi · Preguntas` (`session_01Mcnvqsr7cQVf8UpPxL1ZY1`, Sonnet), fijados arriba a mano; un chat por pieza con etiqueta `area:<red>`.
+  - Carpetas: 📁 Edición de videos `session_01McnvqtizmJTpTL89JpqEe6` (Opus) · 📁 Guiones `session_01McnvqwUjMFUTZvojTZbCUK` (Sonnet) ·
+    📁 Anuncios (Meta) `session_01Mcnvqwiv8dmFwTWjVUCuyn` (Opus) · 📁 TikTok `session_01Mcnvqvevjb1aQM8gzqY6pm` (Opus) ·
+    📁 Instagram `session_01McnvqwfzmSghJmxEYRD7gS` (Sonnet) · 📁 YouTube `session_01Mcnvqvr5TmUS8T5vvYKsAm` (Sonnet).
+    Se crean desde la sesión del 5 nov (`session_01McnvqvWmcNJ8fzpL6R6vhW`) para que no queden escondidos. Viejos: `contexto/chats.md`.
 - **Videos viejos se borran** (regla de Santi, 7 nov): cuando un video ya se publicó, su crudo va a la papelera y se revisa el
   espacio de Drive; Santi vacía la papelera.
 - **Guiones viejos se borran** (regla de Santi, 5 nov): guion en frío → papelera al terminarlo; guion terminado + idea →
