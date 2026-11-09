@@ -7,7 +7,7 @@
 - Regla: Claude pone "Publicar" en la hoja solo cuando Santi dice "dale".
 
 ## En curso
-- v5 (fila 6 de Noviembre): idea 1UEXWH1uDNyFSCEv-jVBXyQjrfeC0M4GW4NzcW3uNw38, guion en frío 12oqgslT4sxOCKZsDTW1_139_zJmAIjZrCPBr5rC9sgQ. Borrador nuevo de esta mañana (del chat Guiones viejo, ya archivado): drive-respaldo/guiones/v5-guion-borrador-9nov.md. Hoy: revisar guion → grabar → editar → publicar 11:00.
+- v5 (fila 6 de Noviembre): guion TERMINADO (Guiones › Instagram › 3. Terminados, 12oqgslT4sxOCKZsDTW1_139_zJmAIjZrCPBr5rC9sgQ), hoja en Grabar. Falta ajustar apoyos visuales/descripciones (citan Claude Max y contraseñas). Hoy: grabar → editar → publicar.
 - Meta Ads (contexto/anuncios-meta.md): pasos 1–4 ✅, tracker creado; falta píxel (paso 5), prueba de anuncio en pausa con el v4 (paso 9).
 - TikTok: publicar directo requiere aprobación/auditoría de la app (contexto/tiktok.md).
 - Encuestas: Santi las hace en persona (form https://forms.gle/BEE2ZSexndMxFYXN7) → estudio de mercado. Luego la oferta.

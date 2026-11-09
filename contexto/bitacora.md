@@ -201,3 +201,4 @@
 - 9 nov 9:40 · Santi va al 80% del plan semanal: se crean chats nuevos (los viejos se archivan), estado-actual.md como resumen de arranque, tarea 4:35 a Sonnet, reglas para gastar menos.
 - 9 nov 9:37 · Chats nuevos creados (Base, Preguntas y 6 carpetas, con Sonnet/Opus según la regla) y 6 viejos archivados. IDs en CLAUDE.md y chats.md.
 - 9 nov 9:50 · Archivados (pedido de Santi) los chats viejos: Preguntas, Instagram, TikTok, YouTube, Anuncios, Edición y Guiones. El borrador del guion v5 de esta mañana quedó guardado en drive-respaldo/guiones/v5-guion-borrador-9nov.md. Falta: chats nuevos (los crea el organizador) y archivar este Base.
+- 9 nov · Guion v5 pasado a Guiones › Instagram › 3. Guiones terminados (id 12oqgslT4sxOCKZsDTW1_139_zJmAIjZrCPBr5rC9sgQ), un solo guion para IG/TikTok/Shorts. Hoja: fila v5 → Grabar. Copia: drive-respaldo/guiones/v5-noticias-ia-8-nov.md. Pendiente: apoyos visuales y descripciones del doc aún citan Claude Max y contraseñas.
