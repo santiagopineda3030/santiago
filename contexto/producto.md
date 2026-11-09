@@ -44,3 +44,6 @@ con los videos de Santi para dejarlo estable y venderlo. Clase 1 a 1: la da Sant
 - [ ] Protección contra duplicar/compartir (`licencias.md`).
 - [ ] **Tracker de alumnos** (tareas por módulo + análisis para la llamada semanal).
 - [ ] **Landing:** mejoras y subirla (la web existe en `src/`); grabar el **video gratis** que va en la página → agendar llamada.
+
+## Módulo de conexiones (decidido 9 nov, Santi)
+El curso enseña al cliente a conectar SU Cerebro: crear su app de Meta (Instagram), conectar YouTube, TikTok a borradores (publica a mano hasta que la app pase la auditoría), y qué plan de Claude necesita. Pendiente: probarlo antes del primer cliente en una cuenta ajena (socia) con plan de $20, para saber cuánto gasta editar.
