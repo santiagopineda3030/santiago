@@ -57,6 +57,14 @@ python3 editar_v2.py --videos crudos-vN --edl edl-vN.json --trozos salida-vN/tro
      Música que se escuche: `--musica-db -12`.
 - `"cubrir"` puede abarcar dos tomas seguidas (desde la 1.ª hasta el final de la 2.ª); nunca dura más que su tramo.
 
+## Estilo cyberpunk (v5, 9 nov) — `--estilo cyber`
+- `cyber.py`: estilo ia + transición glitch RGB, claves en amarillo neón, cajas magenta. Escenas nuevas: `espia`, `valor`,
+  `marcha`, `ley`, `veneno`, `puerta`, `hud` (ver `edl-v5.json`). Música: `python3 musica_cyber.py musica/cyber.wav 140 112`.
+- Crudo de iPhone (HEVC 10 bit HLG): hacer proxy SDR primero:
+  `ffmpeg -i X.MOV -vf "fps=30,zscale=w=1080:h=1920:f=bilinear:t=linear:npl=203,format=gbrpf32le,zscale=p=bt709,tonemap=hable:desat=0,zscale=t=bt709:m=bt709:r=tv,format=yuv420p" -c:v libx264 -crf 17 proxy.mp4`
+  y nombrarlo `V5_0001_D.mp4` (el editor busca `_0001_`). Transcribir con `trozos_vad.py` (busca *.MP4).
+- Santi sale a la izquierda: `--centro-x 0.0 --centro-y 0.36 --zoom-base 1.3` para que nunca se salga del cuadro.
+
 ## Uso (versión vieja, v1)
 ```bash
 pip install faster-whisper rapidfuzz      # una vez

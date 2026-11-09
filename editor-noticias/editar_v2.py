@@ -199,7 +199,7 @@ def ass_v2(palabras, secciones, gancho, cta, ruta):
     ev.append((1, "CTA", cta[0], cta[1], pop + editar.ass_texto(cta[2])))
     cab = Path(__file__).with_name("estilos.ass").read_text(encoding="utf-8")
     if A.ESTILO == "ia":
-        cab = cab.replace("&H002020E0", "&H00FF528C")  # cajas de título y CTA en violeta
+        cab = cab.replace("&H002020E0", "&H00C828FF" if getattr(A, "CYBER", False) else "&H00FF528C")  # cajas: magenta (cyber) o violeta
     lineas = [f"Dialogue: {c},{editar.ass_tiempo(a)},{editar.ass_tiempo(b)},{st},,0,0,0,,{t}"
               for c, st, a, b, t in sorted(ev, key=lambda e: e[2])]
     Path(ruta).write_text(cab + "\n".join(lineas) + "\n", encoding="utf-8")
@@ -208,6 +208,10 @@ def ass_v2(palabras, secciones, gancho, cta, ruta):
 # --------------------------------------------------------------------------- gráficos
 def construir(g, dur, assets):
     t = g["tipo"]
+    import cyber
+    gc = cyber.construir(g, dur, assets)
+    if gc is not None:
+        return gc
     if t == "logo":
         return A.g_logo(f"{assets}/logo_{g['logo']}.png", dur, cy=g.get("y", 560), texto=g.get("texto"))
     if t == "emoji":
@@ -323,7 +327,12 @@ def main():
     editar.CENTRO_X = a.centro_x
     editar.CENTRO_Y = a.centro_y
     editar.ZOOM_BASE = a.zoom_base
-    A.aplicar_estilo(a.estilo)
+    if a.estilo == "cyber":  # 9 nov: cyberpunk (ia + glitch + escenas de cyber.py); claves en amarillo neón
+        import cyber
+        cyber.aplicar()
+        editar.ACENTO = "&H001EECFF"
+    else:
+        A.aplicar_estilo(a.estilo)
     if a.estilo == "ia":  # subtítulos: palabras clave en cian, títulos y CTA en violeta (BGR en ASS)
         editar.ACENTO = "&H00FFE500"
     editar.COLOR = LUZ.get(a.luz, a.luz)

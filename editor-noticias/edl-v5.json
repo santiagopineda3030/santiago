@@ -1,0 +1,561 @@
+{
+ "nota": "v5 1.0 · estilo cyber (9 nov). Orden del guion.",
+ "gancho_texto": "¿Una espía de China?",
+ "cta": "Sígueme para no perderte ninguna",
+ "cta_emoji": "🔔",
+ "claves": [
+  "china",
+  "espía",
+  "nvidia",
+  "openai",
+  "billones",
+  "millones",
+  "canadá",
+  "anthropic",
+  "claude",
+  "firmas",
+  "filipinas",
+  "ley",
+  "seis",
+  "doble",
+  "indemnización",
+  "chatgpt",
+  "envenenarlo",
+  "10",
+  "homicidio",
+  "jensen",
+  "huang",
+  "congreso",
+  "cerradas",
+  "ocultando"
+ ],
+ "secciones": [
+  {
+   "titulo": "Gancho",
+   "tipo": "gancho",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 4.228,
+     "hasta": 7.228,
+     "texto": "China habría utilizado una espía para vigilar al jefe de Nvidia."
+    },
+    {
+     "clip": "0001",
+     "desde": 9.188,
+     "hasta": 12.412,
+     "texto": "OpenAI ya vale 1,25 billones de dólares."
+    },
+    {
+     "clip": "0001",
+     "desde": 14.148,
+     "hasta": 18.236,
+     "texto": "Estas son las 5 noticias de IA más importantes que pasaron el día de ayer, 8 de noviembre."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "espia",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 4.678,
+      "hasta": 7.278
+     },
+     "logo": "nvidia",
+     "titulo": "",
+     "objetivo": "OBJETIVO: JEFE DE NVIDIA"
+    },
+    {
+     "tipo": "valor",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 9.138,
+      "hasta": 12.462
+     },
+     "logo": "openai",
+     "cifra": "1,25 BILLONES",
+     "sub": "de dólares"
+    },
+    {
+     "tipo": "hud",
+     "en": "5",
+     "offset": -0.2,
+     "dur": 3.6,
+     "texto": "TOP 5 · NOTICIAS DE IA"
+    },
+    {
+     "tipo": "texto",
+     "en": "5",
+     "offset": -0.1,
+     "dur": 3.2,
+     "lineas": [
+      "TOP 5 NOTICIAS DE IA",
+      "8 de noviembre de 2026"
+     ],
+     "ch": "📰",
+     "y": 455
+    }
+   ]
+  },
+  {
+   "titulo": "OpenAI",
+   "tipo": "noticia",
+   "etiqueta": "VIRAL · OPENAI",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 29.54,
+     "hasta": 32.86,
+     "texto": "OpenAI acaba de recibir 11.000 millones de dólares de inversionistas."
+    },
+    {
+     "clip": "0001",
+     "desde": 38.5,
+     "hasta": 41.212,
+     "texto": "Y ahora vale 1,25 billones de dólares."
+    },
+    {
+     "clip": "0001",
+     "desde": 53.252,
+     "hasta": 57.564,
+     "texto": "Pero ojo, quería recibir 30.000 millones y valer 1,4 billones de dólares."
+    },
+    {
+     "clip": "0001",
+     "desde": 71.108,
+     "hasta": 74.108,
+     "texto": "Pero con la caída de las acciones de IA del pasado 7 de noviembre,"
+    },
+    {
+     "clip": "0001",
+     "desde": 95.876,
+     "hasta": 98.364,
+     "texto": "los inversionistas ya se asustaron y le tocó bajar el precio."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "logo",
+     "en": "OpenAI",
+     "offset": 0,
+     "dur": 2.0,
+     "logo": "openai",
+     "texto": "+11.000 millones de dólares",
+     "y": 455
+    },
+    {
+     "tipo": "valor",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 38.45,
+      "hasta": 41.262
+     },
+     "logo": "openai",
+     "cifra": "1,25 BILLONES",
+     "sub": "lo que vale hoy"
+    },
+    {
+     "tipo": "cambio",
+     "en": "ojo,",
+     "offset": 0.2,
+     "dur": 3.4,
+     "antes": "30.000 M",
+     "despues": "11.000 M",
+     "ch": "📉",
+     "y": 455
+    },
+    {
+     "tipo": "bolsa",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 71.058,
+      "hasta": 74.158
+     },
+     "cifra": "CAÍDA",
+     "sub": "7 de noviembre",
+     "titulo": "ACCIONES DE IA"
+    },
+    {
+     "tipo": "emoji",
+     "en": "asustaron",
+     "offset": 0,
+     "dur": 1.6,
+     "ch": "😱",
+     "x": 840,
+     "y": 840
+    }
+   ]
+  },
+  {
+   "titulo": "Canadá",
+   "tipo": "noticia",
+   "etiqueta": "POLÉMICA · CANADÁ",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 114.372,
+     "hasta": 118.908,
+     "texto": "En Canadá la gente está saliendo a marchar contra un centro de IA que vale más de 10.000 millones de dólares."
+    },
+    {
+     "clip": "0001",
+     "desde": 124.74,
+     "hasta": 126.812,
+     "texto": "Hecho por Anthropic, la empresa que creó Claude."
+    },
+    {
+     "clip": "0001",
+     "desde": 138.34,
+     "hasta": 140.796,
+     "texto": "Ya van más de 24.000 firmas para tratar de cerrarlo."
+    },
+    {
+     "clip": "0001",
+     "desde": 145.124,
+     "hasta": 148.124,
+     "texto": "Esto gracias a que dicen que va a gastar mucha energía y bastante agua."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "texto",
+     "en": "Canadá",
+     "offset": 0,
+     "dur": 2.4,
+     "lineas": [
+      "MARCHAS EN CANADÁ",
+      "contra un centro de datos de IA"
+     ],
+     "ch": "🇨🇦",
+     "y": 455
+    },
+    {
+     "tipo": "texto",
+     "en": "10.000",
+     "offset": 0,
+     "dur": 2.2,
+     "lineas": [
+      "10.000 MILLONES",
+      "de dólares"
+     ],
+     "ch": "💰",
+     "y": 455
+    },
+    {
+     "tipo": "logo",
+     "en": "Anthropic,",
+     "offset": 0,
+     "dur": 2.4,
+     "logo": "anthropic",
+     "texto": "la empresa de Claude",
+     "y": 455
+    },
+    {
+     "tipo": "marcha",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 138.29,
+      "hasta": 148.174
+     },
+     "titulo": "MARCHAS EN CANADÁ",
+     "firmas": 24000,
+     "monto": "10.000 MILLONES"
+    }
+   ]
+  },
+  {
+   "titulo": "Filipinas",
+   "tipo": "noticia",
+   "etiqueta": "LEY · FILIPINAS",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 161.668,
+     "hasta": 163.644,
+     "texto": "En Filipinas acaban de presentar una ley."
+    },
+    {
+     "clip": "0001",
+     "desde": 187.172,
+     "hasta": 190.108,
+     "texto": "Si alguna empresa decide despedir a alguien y reemplazarlo con IA,"
+    },
+    {
+     "clip": "0001",
+     "desde": 196.068,
+     "hasta": 197.948,
+     "texto": "tiene que avisar seis meses antes,"
+    },
+    {
+     "clip": "0001",
+     "desde": 203.716,
+     "hasta": 206.012,
+     "texto": "intentar capacitar a la persona mucho mejor"
+    },
+    {
+     "clip": "0001",
+     "desde": 243.972,
+     "hasta": 246.044,
+     "texto": "y tiene que pagar el doble de indemnización."
+    },
+    {
+     "clip": "0001",
+     "desde": 254.66,
+     "hasta": 256.252,
+     "texto": "Todavía no está 100 % aprobada,"
+    },
+    {
+     "clip": "0001",
+     "desde": 257.348,
+     "hasta": 259.036,
+     "texto": "pero para mí sería un gran avance."
+    },
+    {
+     "clip": "0001",
+     "desde": 265.828,
+     "hasta": 269.724,
+     "texto": "Ya que en mi opinión, cualquier persona funciona mejor que una inteligencia artificial."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "texto",
+     "en": "Filipinas",
+     "offset": 0,
+     "dur": 2.4,
+     "lineas": [
+      "NUEVA LEY EN FILIPINAS",
+      "contra los despidos por IA"
+     ],
+     "ch": "🇵🇭",
+     "y": 455
+    },
+    {
+     "tipo": "ley",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 196.018,
+      "hasta": 246.094
+     },
+     "titulo": "SI TE REEMPLAZAN CON IA"
+    },
+    {
+     "tipo": "sello",
+     "en": "aprobada,",
+     "offset": -0.3,
+     "dur": 1.6,
+     "texto": "AÚN NO APROBADA",
+     "y": 560
+    },
+    {
+     "tipo": "emoji",
+     "en": "persona",
+     "n": 2,
+     "offset": 0,
+     "dur": 1.8,
+     "ch": "🧠",
+     "x": 840,
+     "y": 840
+    }
+   ]
+  },
+  {
+   "titulo": "ChatGPT",
+   "tipo": "noticia",
+   "etiqueta": "POLÉMICA · CHATGPT",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 278.436,
+     "hasta": 282.844,
+     "texto": "Y otra demanda para OpenAI: una persona en Estados Unidos acaba de demandarlos."
+    },
+    {
+     "clip": "0001",
+     "desde": 294.724,
+     "hasta": 299.868,
+     "texto": "Y esa demanda está bastante loca: dice que ChatGPT le ayudó a su ex mujer a tratar de envenenarlo."
+    },
+    {
+     "clip": "0001",
+     "desde": 312.964,
+     "hasta": 316.732,
+     "texto": "Y no es el primer caso parecido: ya van más de 10 demandas en dos años"
+    },
+    {
+     "clip": "0001",
+     "desde": 331.556,
+     "hasta": 335.196,
+     "texto": "en los que acusan a ChatGPT de ayudar a tratar de cometer un homicidio."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "logo",
+     "en": "OpenAI:",
+     "offset": 0,
+     "dur": 2.2,
+     "logo": "openai",
+     "texto": "nueva demanda",
+     "y": 455
+    },
+    {
+     "tipo": "texto",
+     "en": "ChatGPT",
+     "offset": 0,
+     "dur": 2.8,
+     "lineas": [
+      "¿CHATGPT AYUDÓ?",
+      "a planear un envenenamiento"
+     ],
+     "ch": "🧪",
+     "y": 455
+    },
+    {
+     "tipo": "veneno",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 312.914,
+      "hasta": 335.246
+     },
+     "logo": "openai",
+     "titulo": "DEMANDAN A OPENAI",
+     "casos": 10,
+     "sub": "casos en menos de 2 años"
+    }
+   ]
+  },
+  {
+   "titulo": "Nvidia",
+   "tipo": "noticia",
+   "etiqueta": "ESPÍAS · NVIDIA",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 361.156,
+     "hasta": 365.436,
+     "texto": "La inteligencia de Estados Unidos cree que China reclutó a una ejecutiva"
+    },
+    {
+     "clip": "0001",
+     "desde": 375.364,
+     "hasta": 377.372,
+     "texto": "para tratar de acercarse a Jensen Huang,"
+    },
+    {
+     "clip": "0001",
+     "desde": 383.012,
+     "hasta": 384.956,
+     "texto": "el jefe y el CEO de Nvidia."
+    },
+    {
+     "clip": "0001",
+     "desde": 390.756,
+     "hasta": 393.116,
+     "texto": "Él mismo admitió que tuvo una relación cercana con ella."
+    },
+    {
+     "clip": "0001",
+     "desde": 401.22,
+     "hasta": 403.996,
+     "texto": "Ahora Nvidia lo está investigando y el Congreso de Estados Unidos"
+    },
+    {
+     "clip": "0001",
+     "desde": 420.036,
+     "hasta": 423.228,
+     "texto": "acaba de citar al jefe de Nvidia a una reunión a puertas cerradas."
+    },
+    {
+     "clip": "0001",
+     "desde": 439.14,
+     "hasta": 441.564,
+     "texto": "¿Qué estarán ocultando Nvidia, China y Estados Unidos?"
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "espia",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 361.106,
+      "hasta": 365.486
+     },
+     "logo": "nvidia",
+     "titulo": "¿CHINA RECLUTÓ UNA ESPÍA?",
+     "objetivo": "OBJETIVO: JENSEN HUANG"
+    },
+    {
+     "tipo": "logo",
+     "en": "Nvidia.",
+     "offset": -0.4,
+     "dur": 2.2,
+     "logo": "nvidia",
+     "texto": "Jensen Huang · CEO",
+     "y": 455
+    },
+    {
+     "tipo": "emoji",
+     "en": "admitió",
+     "offset": 0,
+     "dur": 1.8,
+     "ch": "😳",
+     "x": 840,
+     "y": 840
+    },
+    {
+     "tipo": "texto",
+     "en": "investigando",
+     "offset": 0,
+     "dur": 2.4,
+     "lineas": [
+      "BAJO INVESTIGACIÓN",
+      "Nvidia y el Congreso de EE. UU."
+     ],
+     "ch": "🔍",
+     "y": 455
+    },
+    {
+     "tipo": "puerta",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 419.986,
+      "hasta": 423.278
+     },
+     "logo": "nvidia",
+     "titulo": "EL CONGRESO LO CITÓ",
+     "sello": "A PUERTA CERRADA"
+    },
+    {
+     "tipo": "glitch",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 439.09,
+      "hasta": 441.614
+     },
+     "texto": "¿QUÉ ESTARÁN OCULTANDO?"
+    }
+   ]
+  },
+  {
+   "titulo": "CTA",
+   "tipo": "cta",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 452.964,
+     "hasta": 458.62,
+     "texto": "Y ya sabes, esas fueron las noticias más importantes de IA que pasaron el día de ayer. Sígueme para ver más noticias diarias."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "seguir",
+     "en": "Sígueme",
+     "offset": -0.1,
+     "dur": 4.4
+    }
+   ]
+  }
+ ]
+}

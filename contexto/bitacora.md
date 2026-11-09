@@ -206,3 +206,4 @@
 - 9 nov 10:22 · v5 movido a las 11:30 (hoja L6 y calendario). Santi: nada de código hasta el jueves (plan semanal); lo técnico va después. Video: máximo 2 versiones, un prompt con todo. Meta/TikTok: Claude guía corto. Sigue: cerrar la oferta.
 - 9 nov 11:24 · v5 movido a las 11:45 (hoja L6 y calendario).
 - 9 nov 11:25 · v5 movido a las 12:00 (hoja L6 y calendario).
+- 9 nov 2026 · v5 1.1 (crudo iPhone 4K HDR IMG_4665.MOV 1FqE1oHVEYnRWXQMc7HVFeHpsWVsR7rbc, duplicado 1RUida2…) editado en estilo CYBERPUNK: nuevo `editor-noticias/cyber.py` (--estilo cyber: glitch RGB, HUD, escenas espia/valor/marcha/ley/veneno/puerta/hud), música original `musica_cyber.py` (synthwave 112 BPM), proxy SDR 1080×1920 (tonemap HLG→709), encuadre anclado a la cara (centro-x 0, centro-y 0.36, zoom 1.3), `alinear` con difflib. 108 s, −14 LUFS, 27,4 MB. Enviado a Santi; falta su OK para subir y programar. El crudo quedó compartido con enlace (Santi lo vuelve a Restringido).

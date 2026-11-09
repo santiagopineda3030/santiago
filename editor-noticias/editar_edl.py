@@ -28,19 +28,46 @@ def palabras_de(trozos, ini, fin):
 
 
 def alinear(texto, ws, ini, fin):
-    """Asigna tiempos a las palabras del subtítulo corregido."""
+    """Asigna tiempos a las palabras del subtítulo corregido.
+    9 nov: si el nº de palabras no coincide, alinea con difflib (palabras iguales toman su tiempo real)
+    y reparte los huecos entre vecinos (antes se repartía todo por longitud y quedaba desfasado)."""
+    import difflib, re, unicodedata
     tokens = texto.split()
     if len(ws) == len(tokens):
         return [{"w": t, "s": w["s"], "e": w["e"]} for t, w in zip(tokens, ws)]
-    a = ws[0]["s"] if ws else ini
-    b = ws[-1]["e"] if ws else fin
-    total = sum(len(t) + 1 for t in tokens)
-    out, t = [], a
-    for tok in tokens:
-        d = (b - a) * (len(tok) + 1) / total
-        out.append({"w": tok, "s": round(t, 3), "e": round(t + d * 0.92, 3)})
-        t += d
-    return out
+    if not ws:
+        a, b = ini, fin
+        d = (b - a) / max(1, len(tokens))
+        return [{"w": t, "s": round(a + i * d, 3), "e": round(a + (i + 0.92) * d, 3)} for i, t in enumerate(tokens)]
+    nz = lambda x: re.sub(r"[^a-z0-9]", "", unicodedata.normalize("NFKD", x.lower()).encode("ascii", "ignore").decode())
+    A_, B_ = [nz(t) for t in tokens], [nz(w["w"]) for w in ws]
+    tiempos = [None] * len(tokens)
+    for op, i1, i2, j1, j2 in difflib.SequenceMatcher(None, A_, B_, autojunk=False).get_opcodes():
+        if op == "equal":
+            for k in range(i2 - i1):
+                tiempos[i1 + k] = (ws[j1 + k]["s"], ws[j1 + k]["e"])
+        elif op == "replace" or (op == "insert") or (op == "delete"):
+            if i2 > i1 and j2 > j1:  # bloque reemplazado: reparte el tramo de whisper entre los tokens
+                a, b = ws[j1]["s"], ws[j2 - 1]["e"]
+                n = i2 - i1
+                for k in range(n):
+                    tiempos[i1 + k] = (a + (b - a) * k / n, a + (b - a) * (k + 0.92) / n)
+    # huecos sin tiempo (delete puros): entre el vecino anterior y el siguiente
+    i = 0
+    while i < len(tokens):
+        if tiempos[i] is None:
+            j = i
+            while j < len(tokens) and tiempos[j] is None:
+                j += 1
+            a = tiempos[i - 1][1] if i > 0 else ws[0]["s"]
+            b = tiempos[j][0] if j < len(tokens) else ws[-1]["e"]
+            n = j - i
+            for k in range(n):
+                tiempos[i + k] = (a + (b - a) * k / n, a + (b - a) * (k + 0.92) / n)
+            i = j
+        else:
+            i += 1
+    return [{"w": t, "s": round(x, 3), "e": round(max(y, x + 0.05), 3)} for t, (x, y) in zip(tokens, tiempos)]
 
 
 def partir(corte, palabras):
