@@ -15,7 +15,7 @@
 ## Regla hasta el jueves 12 (Santi, 9 nov)
 - NADA de código hasta el jueves. Lo técnico (web, Skool, plantillas, TikTok directo) va después del jueves.
 - Video: máximo 2 versiones; Santi manda un solo prompt con todo.
-- v5 sale hoy a las 11:45 (no 11:00).
+- v5 sale hoy a las 12:00 (no 11:00).
 
 ## Orden del lunes 9 (Santi)
 1 guion v5 · 2 grabar · 3 editar y publicar 11:00 · 4 oferta · 5 Meta: píxel + tracker + prueba · 6 TikTok publicar solo · 7 encuestas · extra: 4:35 guion v6, vaciar papelera de Drive.

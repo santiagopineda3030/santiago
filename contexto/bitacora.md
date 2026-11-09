@@ -205,3 +205,4 @@
 - 9 nov · v5 corregido: apoyos visuales, fuentes y descripciones alineados con las 5 noticias; sección Edición con animación estilo Silver Phunk. Doc nuevo id 1trC1Uzs9B-WyDs4NlxO-4hXlx6DlE7v98ARgbfvQkxY (el anterior a la papelera); hoja C6 y G6 actualizadas. Faltan links de fuente de Filipinas y Nvidia.
 - 9 nov 10:22 · v5 movido a las 11:30 (hoja L6 y calendario). Santi: nada de código hasta el jueves (plan semanal); lo técnico va después. Video: máximo 2 versiones, un prompt con todo. Meta/TikTok: Claude guía corto. Sigue: cerrar la oferta.
 - 9 nov 11:24 · v5 movido a las 11:45 (hoja L6 y calendario).
+- 9 nov 11:25 · v5 movido a las 12:00 (hoja L6 y calendario).
