@@ -4,6 +4,7 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
 `claude/santiago-ia-landing-4q4ef1`, la rama principal del repositorio).
 
 ## Cómo usar la memoria (para gastar menos tokens)
+- **Al abrir un chat nuevo: leer primero `contexto/estado-actual.md`** (qué funciona, qué sigue, reglas para gastar menos).
 - Aquí va solo lo esencial. El detalle está en `contexto/`, y se lee **solo cuando la tarea lo necesita**:
   | Archivo | Cuándo leerlo |
   |---|---|
