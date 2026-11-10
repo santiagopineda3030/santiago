@@ -1,0 +1,208 @@
+{
+ "video": "trabajo/2026-10-27_C3/seg.mp4",
+ "words": "trabajo/2026-10-27_C3/words.json",
+ "salida": "salidas/2026-10-27_C3_error-rojo.mp4",
+ "camara": [
+  1588,
+  416,
+  328,
+  210
+ ],
+ "cola": 1.6,
+ "tramos": [
+  [
+   23.45,
+   33.55
+  ],
+  [
+   39.65,
+   59.0
+  ],
+  [
+   66.35,
+   70.95
+  ],
+  [
+   75.65,
+   79.2
+  ],
+  [
+   81.35,
+   84.3
+  ],
+  [
+   105.75,
+   108.4
+  ]
+ ],
+ "correcciones": {
+  "49.84": "compró",
+  "56.16": "agarré",
+  "78.08": "no",
+  "78.44": "en"
+ },
+ "clave": [
+  "SQL",
+  "correcta.",
+  "criterio",
+  "México",
+  "Aires.",
+  "mal,",
+  "rojito",
+  "peligroso",
+  "rojo.",
+  "inteligencia",
+  "artificial",
+  "query.",
+  "negocio."
+ ],
+ "escenas": [
+  {
+   "type": "hook",
+   "start": 0,
+   "end": 999,
+   "pill": "CLASE EN VIVO · WORK IN TECH",
+   "text": "El error más peligroso en datos <em>no sale en rojo</em>",
+   "fixed": true
+  },
+  {
+   "type": "card",
+   "ok": true,
+   "start": {
+    "tramo": 0,
+    "at": 3.2
+   },
+   "end": {
+    "tramo": 1,
+    "at": 0
+   },
+   "k": "✓ CONSULTA EJECUTADA",
+   "v": "…pero eso no significa que responda bien"
+  },
+  {
+   "type": "card",
+   "ok": true,
+   "start": {
+    "tramo": 1,
+    "at": 0
+   },
+   "end": {
+    "tramo": 1,
+    "at": 7.3
+   },
+   "k": "EL SCRIPT FUNCIONÓ",
+   "v": "Y dio un resultado"
+  },
+  {
+   "type": "card",
+   "start": {
+    "tramo": 1,
+    "at": 7.35
+   },
+   "end": {
+    "tramo": 1,
+    "at": 10.1
+   },
+   "k": "EL CRITERIO DEL ANALISTA",
+   "v": "¿Este resultado tiene sentido?"
+  },
+  {
+   "type": "card",
+   "alt": true,
+   "start": {
+    "tramo": 1,
+    "at": 10.15
+   },
+   "end": {
+    "tramo": 2,
+    "at": 0
+   },
+   "k": "ALGO NO CUADRA",
+   "v": "Vive en Buenos Aires → compró en Ciudad de México"
+  },
+  {
+   "type": "card",
+   "alt": true,
+   "start": {
+    "tramo": 2,
+    "at": 0
+   },
+   "end": {
+    "tramo": 3,
+    "at": 0
+   },
+   "k": "ERROR ROJO",
+   "v": "Se arregla rápido escribiendo mejor el query"
+  },
+  {
+   "type": "card",
+   "start": {
+    "tramo": 3,
+    "at": 0
+   },
+   "end": {
+    "tramo": 4,
+    "at": 0
+   },
+   "k": "EL PELIGROSO",
+   "v": "El que no sale en rojo"
+  },
+  {
+   "type": "card",
+   "ok": true,
+   "start": {
+    "tramo": 4,
+    "at": 0
+   },
+   "end": {
+    "tramo": 5,
+    "at": 0
+   },
+   "k": "HOY",
+   "v": "La IA te escribe el query"
+  },
+  {
+   "type": "end",
+   "start": {
+    "tramo": 5,
+    "at": 0
+   },
+   "text": "La IA te hace el query. <em>El criterio de negocio, no.</em>",
+   "cta": "Comenta TECH y te cuento cómo empezar"
+  }
+ ],
+ "cam_ref_zonas": [
+  [
+   [
+    1453,
+    430,
+    60,
+    150
+   ],
+   [
+    133,
+    158,
+    181
+   ]
+  ],
+  [
+   [
+    1773,
+    416,
+    140,
+    50
+   ],
+   [
+    158,
+    145,
+    128
+   ]
+  ]
+ ],
+ "presentacion": [
+  40,
+  229,
+  1360,
+  730
+ ]
+}

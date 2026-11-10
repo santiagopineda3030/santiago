@@ -1,0 +1,67 @@
+{
+  "_nota": "Ejemplo con las reglas de Work in Tech. Claude crea reglas.json para tu marca con la entrevista de instalación; este archivo solo sirve de referencia.",
+  "marca": {
+    "nombre": "Work in Tech",
+    "etiqueta": "CLASE EN VIVO · WORK IN TECH",
+    "colores": { "fondo": "#16170F", "acento": "#E4EC3A", "texto": "#EEEFE4", "alerta": "#EE7A70", "ok": "#5bc98a" },
+    "fuente": "-apple-system, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif",
+    "texto_privacidad": "<b>ESTUDIANTE</b> · voz y rostro protegidos por privacidad"
+  },
+  "grabaciones": {
+    "plataforma": "Google Meet",
+    "patron_titulo": "Sesiones en vivo",
+    "presenta": "Juanjo",
+    "idioma": "es",
+    "zona_horaria": "America/Bogota",
+    "carpeta_drive": "Grabaciones sesiones en vivo",
+    "carpeta_local": "~/Library/CloudStorage/GoogleDrive-<correo>/My Drive/Grabaciones sesiones en vivo",
+    "hoja_id": ""
+  },
+  "clips": {
+    "por_sesion": 3,
+    "duracion_seg": [35, 45],
+    "tipos": [
+      { "nombre": "Explicación", "busca": "un concepto explicado tan bien que se entiende sin saber del tema" },
+      { "nombre": "Respuesta", "busca": "la mejor respuesta a una pregunta de un alumno" },
+      { "nombre": "Criterio de negocio", "busca": "el momento más fuerte sobre cómo piensa un profesional del área" }
+    ],
+    "priorizar": ["opinión contraria", "caso de negocio del día a día", "explicación que se guarda"],
+    "evitar": ["soporte de accesos", "dictado de código", "logística de tareas", "venta directa", "cifras sin verificar"]
+  },
+  "voces": {
+    "solo_quien_presenta": true,
+    "pregunta_alumno": "con voz distorsionada si se entiende sola en 8 s o menos; si no, como texto en pantalla",
+    "nunca_nombres_de_alumnos": true
+  },
+  "privacidad": {
+    "difuminar_alumnos": true,
+    "deteccion": "fondo fijo de quien presenta (dos zonas de color); si no usa fondo fijo, marcar los tramos a mano con \"alumno\" en la spec"
+  },
+  "diseno": {
+    "gancho_fijo": true,
+    "gancho_max_palabras": 9,
+    "presentacion_arriba": true,
+    "bordes_redondeados": true,
+    "palabras_por_subtitulo": 3,
+    "tarjetas": "una por idea, 8 palabras máximo, verde = lo que funciona, coral = error o alerta",
+    "zona_segura": "x 120–960, y 250–1500 (Instagram Reels 1080x1920)"
+  },
+  "cierre": {
+    "texto": "cómo se ve la idea en el rol del analista de datos (12 palabras máximo)",
+    "cta": "Comenta TECH y te cuento cómo empezar"
+  },
+  "descripcion": {
+    "plantilla": "{copy}\n\nAsí se ve en una clase en vivo de Work in Tech.\n\nComenta TECH y te cuento cómo empezar 👇\n\n{hashtags}",
+    "hashtags": ["#analisisdedatos", "#dataanalyst", "#sql", "#python", "#trabajoremoto"]
+  },
+  "prohibido": [
+    { "no_decir": "closer", "decir": "asesor de admisiones" },
+    { "no_decir": "guárdalo", "decir": "Comenta TECH…" }
+  ],
+  "ideas_largas": {
+    "activo": true,
+    "cantidad": [4, 6],
+    "tipos": ["Educativo", "Nutrición", "Llamadas"]
+  },
+  "edicion": "automatica"
+}

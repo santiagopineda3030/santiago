@@ -38,3 +38,4 @@
 - **Video tipo VSL** como el de Sofía Contreras "Cómo VENDER 24/7 Con Un Sistema Que Lo Haga Por Vos" (youtube.com/watch?v=swpAmsEZO-Y): analizar su embudo y hacer uno con la misma estructura para el Cerebro (sin copiarlo).
 - **Mínimo 15 videos explicativos** del sistema entero.
 - **Landing terminada.**
+- Kit cascada ya en el repo: `kit-cascada/` (descomprimido del zip que subió Santi, 10 nov). Qué hace: de una sesión grabada (Meet) saca 3 clips (doc + filas en hoja) y los edita como reels (preparar_tramo.py → spec → armar_reel.py + render HTML con Chrome). Todo el criterio en `reglas.json` (no existe aún; ejemplo: `reglas.ejemplo.json` de Work in Tech). Skill: `kit-cascada/.claude/skills/cascada/SKILL.md` (modos A instalar, B procesar, C editar).

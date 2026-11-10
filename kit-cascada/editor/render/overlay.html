@@ -1,0 +1,130 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+  :root{--ink:#16170F;--lime:#E4EC3A;--cream:#EEEFE4;--coral:#EE7A70;--green:#5bc98a}
+  html,body{margin:0;width:1080px;height:1920px;background:transparent;overflow:hidden;
+    font-family:-apple-system,"SF Pro Display","Helvetica Neue",Arial,sans-serif;color:var(--cream)}
+  .abs{position:absolute;left:0;right:0}
+  /* Zona segura de Instagram Reels (1080x1920): arriba 250, abajo 420 y 120 a cada lado quedan
+     tapados por la interfaz. Todo el texto vive dentro de x 120–960, y 250–1500. */
+  /* gancho */
+  #hook{top:270px;left:110px;right:110px;padding:26px 30px 30px;text-align:center;
+    background:rgba(22,23,15,.94);border-radius:28px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+  #hook .pill{display:inline-block;background:var(--lime);color:var(--ink);font-weight:800;
+    font-size:24px;letter-spacing:2px;padding:8px 18px;border-radius:40px;margin-bottom:18px}
+  #hook h1{margin:0;font-size:60px;line-height:1.02;font-weight:900;letter-spacing:-2px;
+    text-shadow:0 6px 30px rgba(0,0,0,.55)}
+  #hook h1 em{font-style:normal;color:var(--lime)}
+  #hookfijo{top:254px;padding:0 120px;text-align:center}
+  #hookfijo .pill{display:inline-block;background:var(--lime);color:var(--ink);font-weight:800;font-size:20px;
+    letter-spacing:2px;padding:6px 14px;border-radius:30px;margin-bottom:8px}
+  #hookfijo h1{margin:0;font-size:46px;line-height:1.08;font-weight:900;letter-spacing:-1px;
+    text-shadow:0 4px 18px rgba(0,0,0,.7)}
+  #hookfijo h1 em{font-style:normal;color:var(--lime)}
+  /* marco de cámara y presentación (las esquinas ya vienen redondeadas desde ffmpeg) */
+  .marco{position:absolute;border:4px solid rgba(238,239,228,.85);border-radius:30px;
+    box-shadow:0 18px 50px rgba(0,0,0,.45)}
+  /* tarjetas de concepto */
+  .card{position:absolute;left:120px;right:120px;border-radius:28px;padding:24px 30px;
+    background:rgba(22,23,15,.92);border:3px solid var(--lime);box-shadow:0 20px 60px rgba(0,0,0,.45)}
+  .card .k{font-size:24px;font-weight:900;letter-spacing:3px;color:var(--lime)}
+  .card .v{font-size:38px;font-weight:800;line-height:1.05;margin-top:8px}
+  .card.alt{border-color:var(--coral)} .card.alt .k{color:var(--coral)}
+  .card.ok{border-color:var(--green)} .card.ok .k{color:var(--green)}
+  /* mapa estilo GPS */
+  #map{position:absolute;left:120px;right:120px;top:270px;height:320px;border-radius:34px;overflow:hidden;
+    background:#20221a;border:3px solid #34362b}
+  #map svg{position:absolute;inset:0}
+  #eta{position:absolute;right:26px;bottom:24px;background:var(--lime);color:var(--ink);font-weight:900;
+    font-size:32px;padding:10px 18px;border-radius:16px}
+  #etaL{position:absolute;left:22px;top:22px;font-size:22px;font-weight:700;color:#b9bca8;letter-spacing:2px}
+  /* subtítulos */
+  #subs{top:1345px;padding:0 120px;text-align:center;font-size:46px;font-weight:900;line-height:1.12;
+    letter-spacing:-1px;text-shadow:0 4px 0 rgba(0,0,0,.6),0 0 24px rgba(0,0,0,.6)}
+  #subs .w{display:inline-block;margin:0 3px;transition:none}
+  #subs .on{color:var(--lime);transform:scale(1.04)}
+  #subs .key{color:var(--lime)}
+  #subs .al{color:#c9cbb8;font-style:italic}   /* lo que dice el estudiante */
+  #subs .al.on{color:var(--cream)}
+  /* nota de privacidad sobre la cámara cuando habla un estudiante */
+  .priv{position:absolute;left:0;right:0;text-align:center}
+  .priv span{display:inline-block;background:rgba(22,23,15,.88);border:2px solid rgba(238,239,228,.5);
+    color:var(--cream);font-size:22px;font-weight:700;letter-spacing:1px;padding:8px 18px;border-radius:30px}
+  .priv b{color:var(--lime)}
+  /* marca y cierre */
+  #brand{display:none;bottom:60px;text-align:center;font-size:30px;font-weight:700;letter-spacing:3px;color:#d6d8c6}
+  #brand b{color:var(--lime)}
+  #end{top:0;bottom:0;background:rgba(22,23,15,.94);display:flex;flex-direction:column;
+    align-items:center;justify-content:center;text-align:center;padding:0 140px 180px}
+  #end h2{font-size:64px;line-height:1.02;margin:0;font-weight:900;letter-spacing:-2px}
+  #end h2 em{font-style:normal;color:var(--lime)}
+  #end p{font-size:34px;font-weight:700;color:var(--ink);background:var(--lime);padding:16px 34px;
+    border-radius:60px;margin-top:44px}
+</style></head>
+<body>
+<div id="root"></div>
+<script>
+// La línea de tiempo llega en window.TL (render.js la inyecta). setTime(t) dibuja el cuadro t (segundos).
+const E=(t,a,b)=>Math.max(0,Math.min(1,(t-a)/b));            // avance 0..1
+const ease=x=>1-Math.pow(1-x,3);
+const pop=(t,s,e,d=.35)=>{const i=ease(E(t,s,d)),o=1-ease(E(t,e-d,d));return Math.min(i,o)};
+// Marca (reglas.json → TL.marca): colores y fuente se aplican una vez sobre las variables de :root.
+const M=()=>TL.marca||{};
+let marcaLista=false;
+function marca(){if(marcaLista)return;marcaLista=true;const c=M().colores||{},r=document.documentElement.style;
+  [['fondo','--ink'],['acento','--lime'],['texto','--cream'],['alerta','--coral'],['ok','--green']].forEach(([k,v])=>{if(c[k])r.setProperty(v,c[k])});
+  if(M().fuente)document.body.style.fontFamily=M().fuente}
+
+// Gancho fijo: título que queda arriba todo el video (encima de la presentación).
+function hookFijo(t,s){const p=ease(E(t,0,.35));
+  const pos=TL.hookBottom?`top:auto;bottom:${TL.hookBottom}px`:'';     // pegado encima de la cámara
+  return `<div id="hookfijo" class="abs" style="opacity:${p};${pos}"><div class="pill">${s.pill||M().etiqueta||'CLASE EN VIVO'}</div><h1>${s.text}</h1></div>`}
+
+function hook(t,s){if(s.fixed)return hookFijo(t,s);const p=pop(t,s.start,s.end);if(p<=0)return'';
+  return `<div id="hook" class="abs" style="opacity:${p};transform:translateY(${(1-p)*40}px)">
+    <div class="pill">${s.pill||M().etiqueta||'CLASE EN VIVO'}</div><h1>${s.text}</h1></div>`}
+
+function card(t,s){const p=pop(t,s.start,s.end);if(p<=0)return'';
+  return `<div class="card ${s.alt?'alt':''} ${s.ok?'ok':''}" style="top:${s.top||TL.cardTop||270}px;opacity:${p};
+    transform:translateX(${(1-p)*(s.alt?120:-120)}px)"><div class="k">${s.k}</div><div class="v">${s.v}</div></div>`}
+
+function map(t,s){const p=pop(t,s.start,s.end);if(p<=0)return'';
+  const k=ease(E(t,s.start+.3,s.end-s.start-1));                 // avance de la ruta
+  const len=1400, eta=Math.round(s.from+(s.to-s.from)*k), r=s.drawn?1:k;
+  const alert=s.alert?`<div style="position:absolute;left:290px;top:110px;background:#EE7A70;color:#16170F;
+    font-weight:900;font-size:28px;padding:10px 18px;border-radius:16px;opacity:${ease(E(t,s.start+.4,.4))}">${s.alert}</div>`:'';
+  return `<div id="map" style="opacity:${p};${TL.presTop?`top:${TL.presTop}px;height:${TL.presH}px`:''}">
+   <svg viewBox="0 0 940 420" preserveAspectRatio="none"><g stroke="#2e3026" stroke-width="18" fill="none">
+     <path d="M0 90H940M0 250H940M0 370H940M120 0V420M360 0V420M600 0V420M820 0V420"/></g>
+     <path d="M80 360 C 200 360, 220 250, 360 250 S 560 90, 820 90" fill="none" stroke="#4a4d3e" stroke-width="14" stroke-linecap="round"/>
+     <path d="M80 360 C 200 360, 220 250, 360 250 S 560 90, 820 90" fill="none" stroke="#E4EC3A" stroke-width="14"
+       stroke-linecap="round" stroke-dasharray="${len}" stroke-dashoffset="${len*(1-r)}"/>
+     <circle cx="80" cy="360" r="16" fill="#EEEFE4"/><circle cx="820" cy="90" r="20" fill="#EE7A70"/></svg>
+   <div id="etaL">${s.label||'LLEGADA ESTIMADA'}</div><div id="eta" style="${s.alert?'background:#EE7A70':''}">${eta} min</div>${alert}</div>`}
+
+function priv(t,s){const p=pop(t,s.start,s.end,.25);if(p<=0)return'';
+  return `<div class="priv" style="top:${TL.privTop||1100}px;opacity:${p}"><span>${M().texto_privacidad||'<b>ESTUDIANTE</b> · voz y rostro protegidos por privacidad'}</span></div>`}
+
+function end(t,s){const p=ease(E(t,s.start,.4));if(t<s.start)return'';
+  return `<div id="end" class="abs" style="opacity:${p}"><h2>${s.text}</h2><p>${s.cta}</p></div>`}
+
+function subs(t){const W=TL.words;let i=W.findIndex(w=>t<w.end);if(i<0)return'';
+  if(t<W[i].start&&(i===0||W[i].start-W[i-1].end>0.7))return'';   // silencio: sin subtítulo
+  // grupos de n palabras; un grupo nuevo cuando cambia quien habla (estudiante / quien presenta)
+  if(!TL.grupos){const n=TL.subsGroup||4;TL.grupos=[];let c=0;
+    W.forEach((w,j)=>{if(j&&(c===n||w.al!==W[j-1].al))c=0;if(!c)TL.grupos.push(j);c++})}
+  const g=TL.grupos.filter(x=>x<=i).pop(), h=TL.grupos.find(x=>x>i)??W.length, grp=W.slice(g,h);
+  return `<div id="subs" class="abs" style="${TL.subsTop?`top:${TL.subsTop}px`:''}">${grp.map(w=>{const on=t>=w.start&&t<w.end;
+    return `<span class="w ${on?'on':''} ${w.key&&!w.al?'key':''} ${w.al?'al':''}">${w.w}</span>`})
+    .join(' ')}</div>`}
+
+window.setTime=t=>{
+  marca();
+  const S=TL.scenes, f={hook,card,map,end,priv};
+  const hideSubs=S.some(s=>s.type==='end'&&t>=s.start);
+  document.getElementById('root').innerHTML=
+    (TL.cajas||[]).filter(c=>c.length<6||(t>=c[4]&&t<c[5])).map(([x,y,w,h])=>`<div class="marco" style="left:${x-4}px;top:${y-4}px;width:${w}px;height:${h}px"></div>`).join('')+
+    S.map(s=>f[s.type](t,s)).join('')+(hideSubs?'':subs(t))+
+    `<div id="brand" class="abs">${M().nombre||''}</div>`;
+};
+</script></body></html>
