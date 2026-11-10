@@ -39,3 +39,8 @@
 - **Mínimo 15 videos explicativos** del sistema entero.
 - **Landing terminada.**
 - Kit cascada ya en el repo: `kit-cascada/` (descomprimido del zip que subió Santi, 10 nov). Qué hace: de una sesión grabada (Meet) saca 3 clips (doc + filas en hoja) y los edita como reels (preparar_tramo.py → spec → armar_reel.py + render HTML con Chrome). Todo el criterio en `reglas.json` (no existe aún; ejemplo: `reglas.ejemplo.json` de Work in Tech). Skill: `kit-cascada/.claude/skills/cascada/SKILL.md` (modos A instalar, B procesar, C editar).
+
+## Guiones del mes: en pausa hasta el jue 12 nov (Santi, 10 nov)
+- Listos: E1 (Drive 1NHqi5AFmUMpYSsh09xsXaDTmWQ2lijB_84LeVdu663c, fila 8 Por grabar) y S1.
+- Retomar con Y1 POR PARTES (borrador en drive-respaldo/guiones/Y1-publicar-todos-los-dias.md; falta OK de gancho + problema), luego L1, E2, L2 y filas 37–48.
+- Reglas: CTA "comenta SISTEMA" y respuesta por DM (aún no hay clase gratis); sección "Edición" al final de cada guion; mostrarle el guion completo, no resúmenes.
