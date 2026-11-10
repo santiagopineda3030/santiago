@@ -3,25 +3,25 @@
 Guion en frío (borrador para revisar con Santi) · Noticias del 9 nov · Instagram, TikTok y YouTube Shorts (mismo video). Drive estaba caído al escribirlo: pendiente subir a Guiones › Instagram › 2. Guiones en frío (`1xmfC0MN5kSMKIJMRpb4XSwhGZChCy0t5`).
 
 ## 🎣 Gancho
-“El jefe de Nvidia admitió una relación con una ejecutiva que Estados Unidos cree que China reclutó. Estas son las 5 noticias más importantes de la IA de ayer, 9 de noviembre.”
+“Una infidelidad que ya borró más de 200.000 millones de dólares de valor a Nvidia. Y Anthropic, más de 3.400 millones solo en generadores de gas. Estas son las 5 noticias más importantes de la IA de ayer, 9 de noviembre.”
 
 ## 1️⃣ Anthropic gasta 3.400 millones en energía
-“Anthropic, la empresa de Claude, habría gastado 3.400 millones de dólares en generadores de gas para sus centros de datos. Lo reveló el Financial Times; ellos no lo confirman.”
+“Anthropic habría gastado 3.400 millones de dólares en generadores de gas para sus centros de datos. Lo reveló el Financial Times; ellos todavía no lo han confirmado.”
 
 ## 2️⃣ El jefe de Nvidia y la espía: lo nuevo
-“Jensen Huang admitió una relación íntima con una ejecutiva de Megaspeed, empresa que Estados Unidos sospecha que ayuda a China con los chips. Nvidia dice que no se filtraron secretos, pero abrió una investigación. El Congreso le pidió una reunión a puerta cerrada el 18 de noviembre. Y la acción llegó a perder más de 200.000 millones de dólares de valor en un día. Cerró 4% abajo, y el 17 de noviembre presenta resultados.”
+“¿Recuerdan la noticia de Jensen Huang, el jefe de Nvidia? Resultó que tuvo una infidelidad con una ejecutiva de Megaspeed, empresa que Estados Unidos sospecha que ayuda a China con los chips. Nvidia dice que no se filtraron secretos, pero abrió una investigación. Y la acción llegó a caer cerca de 5%: más de 200.000 millones de dólares de valor.”
 
 ## 3️⃣ Disney y Adobe se alían
-“Disney y Adobe se aliaron para crear una IA entrenada con los personajes de Disney. O sea: una IA que dibuja como Disney.”
+“Disney y Adobe se aliaron para crear una IA entrenada con los personajes de Disney. O sea, una IA que dibuja como Disney. Ayudará a sus diseñadores con ideas nuevas. En mi opinión, pronto veremos películas de Disney hechas con ayuda de IA.”
 
 ## 4️⃣ Hackers con IA robaron certificados de Apple
-“Unos hackers pusieron agentes de IA a atacar casi solos. Sacaron más de 300 certificados de Apple y 190.000 credenciales de un videojuego. Solo unas 6.000 cuentas servían, pero el ataque a Apple les costó menos de 1.500 dólares.”
+“Y dale otra vez con los hackers. Pusieron agentes de IA a atacar casi solos y sacaron más de 300 certificados de Apple y 190.000 credenciales de un videojuego. Solo unas 6.000 cuentas servían, y el ataque a Apple les costó menos de 1.500 dólares. Para ellos no es nada. Pero si esto sigue así, puede costarles millones a las empresas.”
 
 ## 5️⃣ Apple empieza a cobrar por su IA
-“Apple empieza a cobrar por su IA: paquetes de 49,99 dólares, de pago único, que vencen a los 12 meses. Por ahora solo en Logic Pro.”
+“Apple empieza a cobrar por su inteligencia artificial: paquetes de 49,99 dólares, de pago único. Por ahora solo en Logic Pro, y se espera que lleguen a más apps y a Siri.”
 
 ## 📣 CTA
-“¿Cuál de estas te dio más miedo? Sígueme para ver las noticias de IA más importantes todos los días.”
+“Ya sabes, esas fueron las noticias más importantes de la IA de ayer, 9 de noviembre. ¿Cuál te dio más miedo? Sígueme para ver las noticias de IA todos los días.”
 
 -----
 
