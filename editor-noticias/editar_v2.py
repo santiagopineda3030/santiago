@@ -322,6 +322,8 @@ def main():
     ap.add_argument("--luz", default="", help="ajuste de luz: 'cine' o un filtro de ffmpeg")
     ap.add_argument("--adelanto", type=float, default=0.3, help="s que cada animación sale antes de su palabra")
     ap.add_argument("--zoom-base", type=float, default=1.0)
+    ap.add_argument("--aire", type=float, default=0.14, help="s de aire antes/después de cada tramo de voz (10 nov: 0.09 = habla seguido)")
+    ap.add_argument("--unir", type=float, default=0.65, help="pausas menores a esto no se cortan (10 nov: 0.4)")
     ap.add_argument("--centro-x", type=float, default=0.53)
     a = ap.parse_args()
     editar.CENTRO_X = a.centro_x
@@ -362,10 +364,10 @@ def main():
         secs.append(sec)
         for k, c in enumerate(s["cortes"]):
             ci = cod[c["clip"]]
-            ini, fin = max(0.0, c["desde"] - PRE), min(infos[ci]["dur"], c["hasta"] + POST)
+            ini, fin = max(0.0, c["desde"] - a.aire), min(infos[ci]["dur"], c["hasta"] + a.aire)
             ws = alinear(c["texto"], palabras_de(trozos[ci], c["desde"], c["hasta"]), c["desde"], c["hasta"])
             acum, zoom = 0.0, 1.0 if k == 0 else zooms[len(plan) % len(zooms)]
-            tramos = tramos_con_voz(ini, fin, vad[ci])
+            tramos = tramos_con_voz(ini, fin, vad[ci], a.aire, a.aire, a.unir)
             # (7 nov) ya NO se recorta el audio por la mirada: solo se sostiene la imagen (congelar), así no se corta ninguna palabra
             # cada palabra va al tramo más cercano (ninguna se pierde) y se ajusta a sus bordes
             asignadas = {i: [] for i in range(len(tramos))}

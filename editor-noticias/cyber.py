@@ -337,3 +337,121 @@ def construir(g, dur, assets):
     if t == "hud":
         return g_hud(dur, g.get("texto", "ALERTA · IA"))
     return None
+
+
+# --------------------------------------------------------------------------- escenas v6 (10 nov)
+def g_infiel(dur, ruta_logo=None, titulo="UNA INFIDELIDAD CARÍSIMA", cifra="-200.000 MILLONES"):
+    """Corazón neón que se parte en dos sobre el logo de Nvidia; la cifra cae en rojo."""
+    lg = _logo(ruta_logo, 120, 380)
+    cor = A.emoji("❤️", 300)
+    L = cor.crop((0, 0, cor.width // 2, cor.height)); R = cor.crop((cor.width // 2, 0, cor.width, cor.height))
+
+    def dib(im, t):
+        _titulo(im, titulo, color=MAGENTA)
+        k = A.ease_out(A.clamp((t - 0.45) / 0.35))
+        cy = 730 + 6 * math.sin(t * 7)
+        im.alpha_composite(L.rotate(14 * k, expand=True), (int(W / 2 - L.width - 60 * k), int(cy - L.height / 2 + 40 * k)))
+        im.alpha_composite(R.rotate(-14 * k, expand=True), (int(W / 2 + 60 * k), int(cy - R.height / 2 + 40 * k)))
+        if lg:
+            A.pegar_centro(im, lg, W / 2, 1010)
+        k2 = A.ease_out_back(A.clamp((t - dur * 0.45) / 0.3))
+        if k2 > 0:
+            A.pegar_centro(im, A.escalar(_ajustar(_neon_txt(cifra, 100, ROJO_N), 980), k2), W / 2, 1180)
+            A.pegar_centro(im, A._texto_img_base("de dólares en valor", 42, (230, 230, 240), False), W / 2, 1290)
+
+    return _escena(dur, dib, "golpe")
+
+
+def g_generador(dur, ruta_logo=None, titulo="GENERADORES DE GAS", cifra="3.400 MILLONES", sello="SIN CONFIRMAR"):
+    """Fila de generadores con rayos; contador de millones; sello amarillo."""
+    lg = _logo(ruta_logo, 100, 320)
+    rayo = A.emoji("⚡", 90)
+
+    def dib(im, t):
+        _titulo(im, titulo)
+        if lg:
+            A.pegar_centro(im, lg, W / 2, 600)
+        d = ImageDraw.Draw(im)
+        for i in range(3):
+            x0 = 150 + i * 270
+            d.rounded_rectangle((x0, 720, x0 + 230, 920), 18, fill=(30, 34, 60, 255), outline=CIAN + (220,), width=5)
+            for k in range(4):
+                d.line((x0 + 30, 760 + k * 35, x0 + 200, 760 + k * 35), fill=(70, 80, 120, 255), width=6)
+            if int(t * 8 + i) % 3 != 0:
+                A.pegar_centro(im, rayo, x0 + 115, 680 + 8 * math.sin(t * 12 + i))
+        k = A.ease_out(A.clamp((t - 0.3) / (dur * 0.45)))
+        A.pegar_centro(im, _ajustar(_neon_txt(f"{3400 * k:,.0f}".replace(",", ".") + " MILLONES", 96, AMARILLO), 980), W / 2, 1060)
+        A.pegar_centro(im, A._texto_img_base("de dólares en energía", 42, (230, 230, 240), False), W / 2, 1160)
+        ks = A.clamp((t - dur * 0.6) / 0.18)
+        if ks > 0:
+            st = A._texto_img_base(sello, 54, (20, 20, 20))
+            sl = Image.new("RGBA", (st.width + 60, st.height + 40), AMARILLO + (255,))
+            A.pegar_centro(sl, st, sl.width / 2, sl.height / 2)
+            sl = sl.rotate(-8, resample=Image.BICUBIC, expand=True)
+            A.pegar_centro(im, A.con_alfa(A.escalar(sl, 2 - A.ease_out(ks)), ks), W / 2, 1270)
+
+    return _escena(dur, dib, "golpe")
+
+
+def g_dibujo(dur, titulo="IA ENTRENADA CON DISNEY", izq="DISNEY", der="ADOBE"):
+    """Un pincel neón dibuja un castillo línea a línea; arriba las dos marcas unidas con un +."""
+    pincel = A.emoji("🖌️", 110)
+    trazo = [(300, 1150), (300, 850), (360, 850), (360, 760), (420, 700), (480, 760), (480, 850), (540, 650), (600, 850),
+             (600, 760), (660, 700), (720, 760), (720, 850), (780, 850), (780, 1150), (300, 1150)]
+
+    def dib(im, t):
+        _titulo(im, titulo)
+        A.pegar_centro(im, _neon_txt(f"{izq}  +  {der}", 64, CIAN), W / 2, 570)
+        k = A.clamp((t - 0.2) / (dur * 0.7))
+        n = (len(trazo) - 1) * k
+        d = ImageDraw.Draw(im)
+        pts = trazo[: int(n) + 1]
+        if int(n) < len(trazo) - 1:
+            a, b = trazo[int(n)], trazo[int(n) + 1]
+            f = n - int(n)
+            pts = pts + [(a[0] + (b[0] - a[0]) * f, a[1] + (b[1] - a[1]) * f)]
+        if len(pts) > 1:
+            capa = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+            ImageDraw.Draw(capa).line(pts, fill=MAGENTA + (255,), width=16, joint="curve")
+            im.alpha_composite(capa.filter(ImageFilter.GaussianBlur(10)))
+            d.line(pts, fill=(255, 255, 255, 255), width=7, joint="curve")
+            A.pegar_centro(im, pincel, pts[-1][0] + 40, pts[-1][1] - 40)
+
+    return _escena(dur, dib, "pop")
+
+
+def g_robo(dur, ruta_logo=None, titulo="HACKERS CON IA", datos=(("300+", "CERTIFICADOS DE APPLE"), ("190.000", "CREDENCIALES"), ("≈ $1.500", "LO QUE LES COSTÓ"))):
+    """Candado que se rompe sobre el logo y tres cifras que aparecen una a una."""
+    lg = _logo(ruta_logo, 110, 300)
+    candado, roto = A.emoji("🔒", 150), A.emoji("🔓", 150)
+
+    def dib(im, t):
+        _titulo(im, titulo, color=ROJO_N)
+        if lg:
+            A.pegar_centro(im, lg, W / 2 - 110, 650)
+        A.pegar_centro(im, roto if t > 0.6 else candado, W / 2 + 110 + (8 * math.sin(t * 40) if 0.4 < t < 0.6 else 0), 650)
+        for i, (num, et) in enumerate(datos):
+            k = A.ease_out_back(A.clamp((t - 0.6 - i * dur * 0.2) / 0.3))
+            if k > 0:
+                y = 850 + i * 160
+                A.pegar_centro(im, A.escalar(_neon_txt(num, 78, ROJO_N if i < 2 else AMARILLO), k), W / 2, y)
+                A.pegar_centro(im, A.con_alfa(A._texto_img_base(et, 36, (230, 230, 240), False), min(1, k)), W / 2, y + 62)
+
+    return _escena(dur, dib, "alerta")
+
+
+_construir_v5 = construir
+
+
+def construir(g, dur, assets):
+    t = g["tipo"]
+    lg = f"{assets}/logo_{g['logo']}.png" if g.get("logo") else None
+    if t == "infiel":
+        return g_infiel(dur, lg, g.get("titulo", "UNA INFIDELIDAD CARÍSIMA"), g.get("cifra", "-200.000 MILLONES"))
+    if t == "generador":
+        return g_generador(dur, lg, g.get("titulo", "GENERADORES DE GAS"), g.get("cifra", "3.400 MILLONES"), g.get("sello", "SIN CONFIRMAR"))
+    if t == "dibujo":
+        return g_dibujo(dur, g.get("titulo", "IA ENTRENADA CON DISNEY"))
+    if t == "robo":
+        return g_robo(dur, lg, g.get("titulo", "HACKERS CON IA"))
+    return _construir_v5(g, dur, assets)

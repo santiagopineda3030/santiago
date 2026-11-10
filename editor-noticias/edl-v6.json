@@ -1,0 +1,556 @@
+{
+ "nota": "v6 1.0 · estilo cyber, habla seguido (aire 0.09, unir 0.4)",
+ "gancho_texto": "Una infidelidad de 200.000 M",
+ "cta": "Sígueme para no perderte ninguna",
+ "cta_emoji": "🔔",
+ "claves": [
+  "infidelidad",
+  "200",
+  "anthropic",
+  "claude",
+  "3.400",
+  "generadores",
+  "gas",
+  "nvidia",
+  "jensen",
+  "huang",
+  "megaspeed",
+  "china",
+  "chips",
+  "investigación",
+  "5%",
+  "disney",
+  "adobe",
+  "hackers",
+  "apple",
+  "300",
+  "190",
+  "6.000",
+  "1500",
+  "millones",
+  "50",
+  "logic",
+  "siri"
+ ],
+ "secciones": [
+  {
+   "titulo": "Gancho",
+   "tipo": "gancho",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 2.756,
+     "hasta": 5.916,
+     "texto": "Una infidelidad que cuesta más de 200 mil millones de dólares."
+    },
+    {
+     "clip": "0001",
+     "desde": 15.236,
+     "hasta": 19.868,
+     "texto": "Anthropic gasta más de 3.400 millones de dólares tan solo en generadores de gas."
+    },
+    {
+     "clip": "0001",
+     "desde": 22.372,
+     "hasta": 26.524,
+     "texto": "Estas son las 5 noticias de IA más importantes que pasaron el día de ayer, 9 de noviembre."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "infiel",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 3.156,
+      "hasta": 5.966
+     },
+     "logo": "nvidia",
+     "titulo": "",
+     "cifra": "-200.000 MILLONES"
+    },
+    {
+     "tipo": "generador",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 15.186,
+      "hasta": 19.918
+     },
+     "logo": "anthropic",
+     "titulo": "GENERADORES DE GAS",
+     "sello": "SIN CONFIRMAR"
+    },
+    {
+     "tipo": "hud",
+     "en": "5",
+     "offset": -0.2,
+     "dur": 3.4,
+     "texto": "TOP 5 · NOTICIAS DE IA"
+    },
+    {
+     "tipo": "texto",
+     "en": "5",
+     "offset": -0.1,
+     "dur": 3.0,
+     "lineas": [
+      "TOP 5 NOTICIAS DE IA",
+      "9 de noviembre de 2026"
+     ],
+     "ch": "📰",
+     "y": 455
+    }
+   ]
+  },
+  {
+   "titulo": "Anthropic",
+   "tipo": "noticia",
+   "etiqueta": "VIRAL · ANTHROPIC",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 55.492,
+     "hasta": 62.748,
+     "texto": "Anthropic, la empresa que creó Claude, acaba de gastar más de 3.400 millones de dólares tan solo en generadores de gas para sus centros de datos."
+    },
+    {
+     "clip": "0001",
+     "desde": 78.468,
+     "hasta": 80.38,
+     "texto": "Lo acaba de revelar Financial Times."
+    },
+    {
+     "clip": "0001",
+     "desde": 87.204,
+     "hasta": 88.924,
+     "texto": "Pero ellos todavía no lo han confirmado."
+    },
+    {
+     "clip": "0001",
+     "desde": 102.436,
+     "hasta": 105.5,
+     "texto": "¿Qué opinas de ese gasto tan grande tan solo en generadores de gas?"
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "logo",
+     "en": "Anthropic,",
+     "offset": 0,
+     "dur": 2.0,
+     "logo": "anthropic",
+     "texto": "la empresa de Claude",
+     "y": 455
+    },
+    {
+     "tipo": "texto",
+     "en": "3.400",
+     "offset": 0,
+     "dur": 2.4,
+     "lineas": [
+      "3.400 MILLONES",
+      "en generadores de gas"
+     ],
+     "ch": "⚡",
+     "y": 455
+    },
+    {
+     "tipo": "texto",
+     "en": "Financial",
+     "offset": 0,
+     "dur": 1.8,
+     "lineas": [
+      "FINANCIAL TIMES",
+      "lo reveló"
+     ],
+     "ch": "📰",
+     "y": 455
+    },
+    {
+     "tipo": "sello",
+     "en": "confirmado.",
+     "offset": -0.4,
+     "dur": 1.6,
+     "texto": "SIN CONFIRMAR",
+     "y": 560
+    },
+    {
+     "tipo": "emoji",
+     "en": "opinas",
+     "offset": 0,
+     "dur": 1.8,
+     "ch": "🤔",
+     "x": 840,
+     "y": 840
+    }
+   ]
+  },
+  {
+   "titulo": "Nvidia",
+   "tipo": "noticia",
+   "etiqueta": "POLÉMICA · NVIDIA",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 113.444,
+     "hasta": 115.612,
+     "texto": "¿Y recuerdan la noticia de ayer de Jensen Huang?"
+    },
+    {
+     "clip": "0001",
+     "desde": 129.348,
+     "hasta": 132.956,
+     "texto": "Se acaba de confirmar que tuvo una infidelidad con una ejecutiva de Megaspeed,"
+    },
+    {
+     "clip": "0001",
+     "desde": 141.412,
+     "hasta": 143.036,
+     "texto": "empresa que Estados Unidos sospecha"
+    },
+    {
+     "clip": "0001",
+     "desde": 159.204,
+     "hasta": 161.404,
+     "texto": "que ayuda a China a saltarse las restricciones"
+    },
+    {
+     "clip": "0001",
+     "desde": 163.46,
+     "hasta": 165.532,
+     "texto": "para conseguir chips iguales a los de Nvidia."
+    },
+    {
+     "clip": "0001",
+     "desde": 178.82,
+     "hasta": 180.316,
+     "texto": "Se acaba de abrir una investigación"
+    },
+    {
+     "clip": "0001",
+     "desde": 184.516,
+     "hasta": 187.196,
+     "texto": "y las acciones de Nvidia acaban de caer hasta un 5 %,"
+    },
+    {
+     "clip": "0001",
+     "desde": 188.388,
+     "hasta": 191.58,
+     "texto": "lo que está equivaliendo a casi 200 mil millones de dólares."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "logo",
+     "en": "Jensen",
+     "offset": 0,
+     "dur": 2.0,
+     "logo": "nvidia",
+     "texto": "Jensen Huang · CEO",
+     "y": 455
+    },
+    {
+     "tipo": "emoji",
+     "en": "infidelidad",
+     "offset": 0,
+     "dur": 1.6,
+     "ch": "💔",
+     "x": 840,
+     "y": 840
+    },
+    {
+     "tipo": "espia",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 141.362,
+      "hasta": 165.582
+     },
+     "logo": "nvidia",
+     "titulo": "¿AYUDA A CHINA?",
+     "objetivo": "MEGASPEED → CHIPS PARA CHINA"
+    },
+    {
+     "tipo": "sello",
+     "en": "investigación",
+     "offset": -0.3,
+     "dur": 1.6,
+     "texto": "INVESTIGACIÓN",
+     "y": 560
+    },
+    {
+     "tipo": "chip",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 184.466,
+      "hasta": 191.63
+     },
+     "logo": "nvidia",
+     "pct": -5,
+     "titulo": "-200.000 MILLONES"
+    }
+   ]
+  },
+  {
+   "titulo": "Disney",
+   "tipo": "noticia",
+   "etiqueta": "VIRAL · DISNEY + ADOBE",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 223.46,
+     "hasta": 227.196,
+     "texto": "Pero bueno, tampoco todo es caos. Disney y Adobe se acaban de aliar para crear una IA"
+    },
+    {
+     "clip": "0001",
+     "desde": 231.236,
+     "hasta": 233.084,
+     "texto": "entrenada con los personajes de Disney."
+    },
+    {
+     "clip": "0001",
+     "desde": 242.404,
+     "hasta": 245.18,
+     "texto": "O sea, una IA que dibuja como los animadores de Disney."
+    },
+    {
+     "clip": "0001",
+     "desde": 259.012,
+     "hasta": 261.436,
+     "texto": "Esto ayudará a sus diseñadores con ideas nuevas."
+    },
+    {
+     "clip": "0001",
+     "desde": 280.9,
+     "hasta": 284.508,
+     "texto": "Y lo más posible es que ahora las películas de Disney estén hechas un poco con IA."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "texto",
+     "en": "Disney",
+     "offset": 0,
+     "dur": 2.4,
+     "lineas": [
+      "DISNEY + ADOBE",
+      "se aliaron"
+     ],
+     "ch": "🤝",
+     "y": 455
+    },
+    {
+     "tipo": "dibujo",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 231.186,
+      "hasta": 245.23
+     },
+     "titulo": "IA ENTRENADA CON DISNEY"
+    },
+    {
+     "tipo": "emoji",
+     "en": "ideas",
+     "offset": 0,
+     "dur": 1.6,
+     "ch": "💡",
+     "x": 840,
+     "y": 840
+    },
+    {
+     "tipo": "texto",
+     "en": "películas",
+     "offset": 0,
+     "dur": 2.4,
+     "lineas": [
+      "PELÍCULAS CON IA",
+      "¿pronto?"
+     ],
+     "ch": "🎬",
+     "y": 455
+    }
+   ]
+  },
+  {
+   "titulo": "Hackers",
+   "tipo": "noticia",
+   "etiqueta": "POLÉMICA · HACKERS",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 289.124,
+     "hasta": 291.1,
+     "texto": "Y dale otra vez con los hackers."
+    },
+    {
+     "clip": "0001",
+     "desde": 315.46,
+     "hasta": 318.268,
+     "texto": "Pusieron otra vez a agentes de IA a atacar casi solos"
+    },
+    {
+     "clip": "0001",
+     "desde": 352.132,
+     "hasta": 357.116,
+     "texto": "y sacaron más de 300 certificados de Apple y más de 190 mil certificados de un videojuego."
+    },
+    {
+     "clip": "0001",
+     "desde": 363.044,
+     "hasta": 365.884,
+     "texto": "Igualmente, tan solo unas 6.000 cuentas les servían a ellos."
+    },
+    {
+     "clip": "0001",
+     "desde": 373.604,
+     "hasta": 376.7,
+     "texto": "Y el ataque a Apple les costó más o menos unos 1.500 dólares."
+    },
+    {
+     "clip": "0001",
+     "desde": 389.028,
+     "hasta": 393.724,
+     "texto": "Para ellos eso ahorita no es nada, pero si esto sigue así, en un futuro les va a costar millones."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "emoji",
+     "en": "hackers.",
+     "offset": -0.2,
+     "dur": 1.6,
+     "ch": "👾",
+     "x": 840,
+     "y": 840
+    },
+    {
+     "tipo": "texto",
+     "en": "agentes",
+     "offset": 0,
+     "dur": 2.2,
+     "lineas": [
+      "AGENTES DE IA",
+      "atacando casi solos"
+     ],
+     "ch": "🤖",
+     "y": 455
+    },
+    {
+     "tipo": "robo",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 352.082,
+      "hasta": 376.75
+     },
+     "logo": "apple",
+     "titulo": "HACKERS CON IA"
+    },
+    {
+     "tipo": "texto",
+     "en": "millones.",
+     "offset": -0.6,
+     "dur": 2.0,
+     "lineas": [
+      "MILLONES",
+      "en el futuro"
+     ],
+     "ch": "💸",
+     "y": 455
+    }
+   ]
+  },
+  {
+   "titulo": "Apple",
+   "tipo": "noticia",
+   "etiqueta": "ÚTIL · APPLE",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 409.188,
+     "hasta": 409.97,
+     "texto": "Y como raro, Apple"
+    },
+    {
+     "clip": "0001",
+     "desde": 412.74,
+     "hasta": 415.84,
+     "texto": "comenzará a cobrar por su inteligencia artificial unos 50 dólares."
+    },
+    {
+     "clip": "0001",
+     "desde": 421.38,
+     "hasta": 424.54,
+     "texto": "Por ahora solamente estará disponible en una aplicación que se llama Logic Pro."
+    },
+    {
+     "clip": "0001",
+     "desde": 429.284,
+     "hasta": 432.028,
+     "texto": "Pero se espera que en un futuro lleguen a más apps y hasta Siri."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "logo",
+     "en": "Apple",
+     "offset": 0,
+     "dur": 2.2,
+     "logo": "apple",
+     "texto": "cobra por su IA",
+     "y": 455
+    },
+    {
+     "tipo": "texto",
+     "en": "50",
+     "offset": -0.2,
+     "dur": 2.4,
+     "lineas": [
+      "≈ 50 DÓLARES",
+      "por su IA"
+     ],
+     "ch": "💸",
+     "y": 455
+    },
+    {
+     "tipo": "texto",
+     "en": "Logic",
+     "offset": 0,
+     "dur": 2.0,
+     "lineas": [
+      "LOGIC PRO",
+      "por ahora"
+     ],
+     "ch": "🎹",
+     "y": 455
+    },
+    {
+     "tipo": "emoji",
+     "en": "Siri.",
+     "offset": -0.3,
+     "dur": 1.6,
+     "ch": "📱",
+     "x": 840,
+     "y": 840
+    }
+   ]
+  },
+  {
+   "titulo": "CTA",
+   "tipo": "cta",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 456.196,
+     "hasta": 462.908,
+     "texto": "Ya sabes, estas fueron las 5 noticias de IA más importantes que pasaron el día de ayer, 9 de noviembre. No te olvides de seguirme para ver más noticias diarias."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "seguir",
+     "en": "seguirme",
+     "offset": -0.1,
+     "dur": 4.0
+    }
+   ]
+  }
+ ]
+}
