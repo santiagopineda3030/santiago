@@ -15,7 +15,7 @@
 ## Plan hasta el 18 nov: doc 1ZsW9J9k2MZroeop9mlxMhJjaJz8fHtQA3qDC6ShQhaw (meta: probar todo antes de vender). Oferta: 1JnXbuB86J1SVlg7HPqaq7mHtmiD80Jb3aXYaOiwbxAw. Inversión y legal: 1uQqe7O6pjq_kG-cyLkn2fgJhdhk_pd5XV6OjzZSIaoM.
 
 ## Regla hasta el jueves 12 (Santi, 9 nov)
-- NADA de código hasta el jueves. Lo técnico (web, Skool, plantillas, TikTok directo) va después del jueves.
+- Hasta el jueves 12: solo definir y subir videos (1 versión). Desde el jueves: todo lo técnico (web, píxel, Anuncios.gs, YouTube largo, Cerebro para cualquier negocio, plantilla, auditoría TikTok).
 - Video: máximo 2 versiones; Santi manda un solo prompt con todo.
 - v5 sale hoy a las 12:00 (no 11:00).
 
