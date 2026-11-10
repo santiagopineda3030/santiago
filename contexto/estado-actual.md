@@ -29,3 +29,12 @@
 - Video: Santi da todas las correcciones juntas; máximo 2 versiones por video.
 - Sonnet para lo simple (Base, Preguntas, Guiones, Instagram, YouTube); Opus solo para código y edición (Edición, Anuncios, TikTok).
 - Menos recordatorios y revisiones; respuestas cortas.
+
+## Reunión con la socia (10 nov) — decisiones
+- Esta semana: TERMINAR TODO LO TÉCNICO. Después: oferta, estudio de mercado, avatar.
+- El píxel no convence: hacer un **tracker de anuncios muy bueno** (saber si el anuncio funciona).
+- **Agenda de contenido mensual** en la hoja: todo lo que hay que grabar en el mes (no solo noticias), con fecha de publicación, y que se publique solo.
+- **Cascada de contenido**: kit de la socia (Juanita, juanita@amworkintech.com) `kit-cascada.zip` en Drive `1mRKXdE57VfYCUgKuQJLVza3ng-9WAyHf`. Trae: ingesta/Code.gs, skill `cascada`, editor (armar_reel.py, preparar_tramo.py, render overlay.html/render.js), plantillas (cascada-ejemplo-wit.md, cascada-sesion.md, spec-ejemplo.json), reglas.ejemplo.json, "EMPIEZA AQUÍ.md", CLAUDE.md. Falta leerlo descomprimido (el conector solo da el zip en base64).
+- **Video tipo VSL** como el de Sofía Contreras "Cómo VENDER 24/7 Con Un Sistema Que Lo Haga Por Vos" (youtube.com/watch?v=swpAmsEZO-Y): analizar su embudo y hacer uno con la misma estructura para el Cerebro (sin copiarlo).
+- **Mínimo 15 videos explicativos** del sistema entero.
+- **Landing terminada.**
