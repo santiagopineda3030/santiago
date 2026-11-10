@@ -222,3 +222,4 @@
 - 9 nov tarde · Cierre de Base: hoy Santi revisa el guion v6 (4:35) y graba; edición hoy o mañana. Mañana 10 nov en la mañana: reunión con la socia (oferta, fecha, legal) y después avanzar todo lo posible. Santi va a comprar el plan Max.
 - 9 nov noche · Acordado con Santi: hasta el jueves 12 solo definir (oferta, socia, estudio, guiones de venta) y subir videos (1 versión). Desde el jueves (plan renovado): todo lo técnico (web, píxel, Anuncios.gs, YouTube largo, Cerebro para cualquier negocio, plantilla, auditoría TikTok).
 - 9 nov noche · TikTok v5 publicado por Santi (hoja U6). Prioridad nueva de Santi: PRIMERO todo lo técnico y las pruebas; DESPUÉS vender y lo legal. Hoy solo guiones (v6).
+- 9 nov noche · mp4 v5 1.1 (1WtxismN4w8eRa9oZA0wO0570zWjs96Dc) a la papelera: ya salió en IG, YouTube y TikTok. No queda nada del v5 en Drive.
