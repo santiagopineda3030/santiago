@@ -1,4 +1,4 @@
-# Kit de contenido mensual (acordado con Santi, 10 nov 2026) — se monta desde el jueves 12
+# Kit de contenido mensual (acordado con Santi, 10 nov 2026) — arranca el 11 nov (Santi)
 
 ## Idea
 Todo el contenido del mes en la hoja, con fecha, hora, tipo y guion. Santi solo graba y sube el crudo. El sistema edita,

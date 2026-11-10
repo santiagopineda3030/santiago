@@ -230,3 +230,4 @@
 - 10 nov · Reunión con la socia: semana 100% técnica (tracker de anuncios, agenda de contenido mensual con publicación automática, cascada de contenido con el kit de Juanita, VSL tipo Sofía Contreras, 15 videos explicativos, landing). Guardado en estado-actual.md.
 - 10 nov · Kit cascada de Juanita descomprimido en kit-cascada/ (14 archivos, completo). Analizado y explicado a Santi.
 - 10 nov · Diseño del kit de contenido mensual acordado (contexto/agenda-mensual.md): agenda en la hoja, Santi sube crudo con código, robot edita, aviso 'Video X listo', Santi revisa siempre, sale a su hora. Se monta desde el jueves.
+- 10 nov · Santi: el kit de contenido mensual arranca desde el 11 nov (no el jueves).
