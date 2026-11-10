@@ -236,3 +236,4 @@
 - 10 nov 11:11 · Pestaña VIDEOS MES creada (QUERY de Noviembre). v6 publicado en IG (DfkSkFoDHC4) → evento ✅ en Calendar; revisión de YouTube/TikTok y limpieza programada 11:57.
 - 10 nov 11:16 · Noticias v7–v26 (11–30 nov) agregadas a la hoja (filas 17–36) y tarea de las 4:35 ajustada para llenar esa fila (código desde la fila, no del máximo de #).
 - 10 nov 11:20 · Agenda 19–30 nov (filas 37–48: Y2, E3, C4, L3, E4, C5, E5, Y3, L4, C6, E6, C7). Pedido a 📁 Guiones: guiones de todo el mes con sección 'Edición'. Regla de edición según Agenda en areas/5-edicion-videos/CLAUDE.md.
+- 10 nov 11:40 · Guion S1 (VSL estructura Sofía Contreras, 13 partes analizadas → 10 partes nuestras + sección Edición) en Guiones › Instagram › 3. Terminados: 1OyRKjhWnngM-09Zi4Je8Uv_NZGidfBT8WHKFH7C6zqc. Hoja fila 14 → Por grabar + link. Faltan [DATO REAL] de Santi (días publicando, experiencia, precio de editor/agencia).
