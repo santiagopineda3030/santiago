@@ -16,6 +16,7 @@
 
 ## Regla hasta el jueves 12 (Santi, 9 nov)
 - Hasta el jueves 12: solo definir y subir videos (1 versión). Desde el jueves: todo lo técnico (web, píxel, Anuncios.gs, YouTube largo, Cerebro para cualquier negocio, plantilla, auditoría TikTok).
+- ORDEN (Santi, 9 nov noche): 1) todo lo técnico y las pruebas, 2) vender, 3) lo legal. Nada de vender antes de probar todo.
 - Video: máximo 2 versiones; Santi manda un solo prompt con todo.
 - v5 sale hoy a las 12:00 (no 11:00).
 
