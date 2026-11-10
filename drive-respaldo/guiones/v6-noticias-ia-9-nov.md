@@ -9,7 +9,7 @@ Guion en frío (borrador para revisar con Santi) · Noticias del 9 nov · Instag
 “Anthropic, la empresa de Claude, habría gastado 3.400 millones de dólares en generadores de gas para sus centros de datos. Lo reveló el Financial Times; ellos no lo confirman.”
 
 ## 2️⃣ El jefe de Nvidia y la espía: lo nuevo
-“Jensen Huang admitió una relación íntima con una ejecutiva de Megaspeed, empresa que Estados Unidos sospecha que ayuda a China con los chips. Nvidia dice que no se filtraron secretos, pero abrió una investigación. El Congreso le pidió una reunión a puerta cerrada el 18 de noviembre. Y la acción llegó a caer 5%.”
+“Jensen Huang admitió una relación íntima con una ejecutiva de Megaspeed, empresa que Estados Unidos sospecha que ayuda a China con los chips. Nvidia dice que no se filtraron secretos, pero abrió una investigación. El Congreso le pidió una reunión a puerta cerrada el 18 de noviembre. Y la acción llegó a perder más de 200.000 millones de dólares de valor en un día. Cerró 4% abajo, y el 17 de noviembre presenta resultados.”
 
 ## 3️⃣ Disney y Adobe se alían
 “Disney y Adobe se aliaron para crear una IA entrenada con los personajes de Disney. O sea: una IA que dibuja como Disney.”
@@ -30,7 +30,8 @@ Guion en frío (borrador para revisar con Santi) · Noticias del 9 nov · Instag
 - Disney y Adobe: https://news.adobe.com/news/2026/11/adobe-and-the-walt-disney-company-alliance
 - Nvidia (CNBC): https://www.cnbc.com/2026/11/08/jensen-huang-nvidia-china-spy-congress.html
 - Nvidia (junta): https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors
-- Nvidia (caída en bolsa): https://www.semafor.com/article/11/09/2026/with-a-weak-board-and-no-successor-nvidia-confronts-a-governance-crisis
+- Nvidia (cierre -4,27%): https://www.cnbc.com/2026/11/09/nvidia-jensen-huang-chinese-spy-investigation.html
+- Nvidia (más de 200.000 M de valor en la tarde, junta, sucesión): https://www.semafor.com/article/11/09/2026/with-a-weak-board-and-no-successor-nvidia-confronts-a-governance-crisis
 - Hackers (Check Point): https://research.checkpoint.com/2026/hacking-on-autopilot-inside-artex-cybercrime-campaigns/
 - Apple: https://9to5mac.com/2026/11/09/apple-launches-50-intelligence-usage-packs-for-select-ai-features/
 
@@ -42,7 +43,7 @@ Guion en frío (borrador para revisar con Santi) · Noticias del 9 nov · Instag
 - Gancho: logo de Nvidia + “INVESTIGACIÓN” en rojo; “3.400 M” de Anthropic.
 - 1 · Anthropic: logo de Anthropic/Claude + “3.400 MILLONES” en rojo + “1,7 GW”; sello “SIN CONFIRMAR”.
 - 2 · Disney y Adobe: logos de Disney y Adobe + “IA ENTRENADA CON DISNEY” en rojo.
-- 3 · Nvidia: logo de Nvidia + “18 DE NOVIEMBRE” y “-5% / 200.000 M” en rojo; sin fotos de las personas.
+- 3 · Nvidia: logo de Nvidia + “18 DE NOVIEMBRE” y “-200.000 M” y “-4,27%” en rojo; sin fotos de las personas.
 - 4 · Hackers: ícono de manzana + candado roto + “300+ CERTIFICADOS”, “190.000 CREDENCIALES” y “< $1.500” en rojo.
 - 5 · Apple: logo de Apple Intelligence + “$49,99” en rojo + “VENCE EN 12 MESES”.
 - CTA: “SÍGUEME” con el usuario @soysanti__content_ia.
