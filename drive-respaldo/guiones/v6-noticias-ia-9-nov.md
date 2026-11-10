@@ -1,27 +1,27 @@
-# v6 · Noticias IA · 9 nov (publica 10 nov 11:00 a. m.) — guion en frío
+# v6 · Noticias IA · 9 nov (publica 10 nov 11:00 a. m.) — guion APROBADO por Santi (10 nov)
 
-Guion en frío (borrador para revisar con Santi) · Noticias del 9 nov · Instagram, TikTok y YouTube Shorts (mismo video). Drive estaba caído al escribirlo: pendiente subir a Guiones › Instagram › 2. Guiones en frío (`1xmfC0MN5kSMKIJMRpb4XSwhGZChCy0t5`).
+Drive: Guiones › Instagram › 3. Guiones terminados · id `1hH_Ws66cJb1wcffD_Bz5LTRPTeoCYChPIBOWzB14khM` (un solo guion para IG, TikTok y Shorts). Reemplaza al guion en frío automático de las 4:35 (id `1AJbK4tIeq1tTFpYI5AN3kioaTFRkMz_85ZxKpt6aEfc`, a la papelera). La idea automática (`1lffY-uZbwyWgN0d9XsVdlT_UOU_7wxnxFwoGfx_z540`) tiene otras noticias y sigue en 1. Ideas.
 
 ## 🎣 Gancho
-“Una infidelidad que ya borró más de 200.000 millones de dólares de valor a Nvidia. Y Anthropic, más de 3.400 millones solo en generadores de gas. Estas son las 5 noticias más importantes de la IA de ayer, 9 de noviembre.”
+“Una infidelidad que llegó a costar más de 200 mil millones de dólares. Anthropic gasta más de 3.400 millones solo en generadores de gas. Estas son las 5 noticias más importantes de la IA de ayer, 9 de noviembre.”
 
 ## 1️⃣ Anthropic gasta 3.400 millones en energía
-“Anthropic habría gastado 3.400 millones de dólares en generadores de gas para sus centros de datos. Lo reveló el Financial Times; ellos todavía no lo han confirmado.”
+“Anthropic habría gastado más de 3.400 millones de dólares tan solo en generadores de gas para sus centros de datos. Lo reveló el Financial Times; ellos no lo han confirmado. ¿Qué opinas de ese gasto tan grande solamente para generadores?”
 
 ## 2️⃣ El jefe de Nvidia y la espía: lo nuevo
-“¿Recuerdan la noticia de Jensen Huang, el jefe de Nvidia? Resultó que tuvo una infidelidad con una ejecutiva de Megaspeed, empresa que Estados Unidos sospecha que ayuda a China con los chips. Nvidia dice que no se filtraron secretos, pero abrió una investigación. Y la acción llegó a caer cerca de 5%: más de 200.000 millones de dólares de valor.”
+“¿Recuerdan la noticia de ayer de Jensen Huang? El jefe de Nvidia tuvo una infidelidad con una ejecutiva de Megaspeed, empresa que Estados Unidos sospecha que ayuda a China a saltarse las restricciones para conseguir chips. Se abrió una investigación y la acción de Nvidia llegó a caer cerca de 5%: más de 200 mil millones de dólares en valor.”
 
 ## 3️⃣ Disney y Adobe se alían
-“Disney y Adobe se aliaron para crear una IA entrenada con los personajes de Disney. O sea, una IA que dibuja como Disney. Ayudará a sus diseñadores con ideas nuevas. En mi opinión, pronto veremos películas de Disney hechas con ayuda de IA.”
+“Disney y Adobe se aliaron para crear una IA entrenada con los personajes de Disney. O sea, una IA que dibuja como Disney. Ayudará a sus diseñadores con ideas nuevas. En mi opinión, pronto veremos películas de Disney hechas con IA.”
 
 ## 4️⃣ Hackers con IA robaron certificados de Apple
-“Y dale otra vez con los hackers. Pusieron agentes de IA a atacar casi solos y sacaron más de 300 certificados de Apple y 190.000 credenciales de un videojuego. Solo unas 6.000 cuentas servían, y el ataque a Apple les costó menos de 1.500 dólares. Para ellos no es nada. Pero si esto sigue así, puede costarles millones a las empresas.”
+“Y dale otra vez con los hackers. Pusieron agentes de IA a atacar casi solos y sacaron más de 300 certificados de Apple y 190.000 credenciales de un videojuego. Solo unas 6.000 cuentas servían, y el ataque a Apple les costó menos de 1.500 dólares. Para ellos no es nada, pero si esto sigue así, puede costarles millones en el futuro.”
 
 ## 5️⃣ Apple empieza a cobrar por su IA
-“Apple empieza a cobrar por su inteligencia artificial: paquetes de 49,99 dólares, de pago único. Por ahora solo en Logic Pro, y se espera que lleguen a más apps y a Siri.”
+“Apple comenzará a cobrar por su inteligencia artificial: paquetes de 49,99 dólares, de pago único. Por ahora solo en Logic Pro, y se espera que lleguen a más apps y a Siri.”
 
 ## 📣 CTA
-“Ya sabes, esas fueron las noticias más importantes de la IA de ayer, 9 de noviembre. ¿Cuál te dio más miedo? Sígueme para ver las noticias de IA todos los días.”
+“Y ya sabes, esas fueron las 5 noticias más importantes de la IA de ayer, 9 de noviembre. Sígueme para ver más noticias diarias.”
 
 -----
 
