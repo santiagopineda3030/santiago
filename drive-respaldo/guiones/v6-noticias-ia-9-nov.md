@@ -8,11 +8,11 @@ Guion en frío (borrador para revisar con Santi) · Noticias del 9 nov · Instag
 ## 1️⃣ Anthropic gasta 3.400 millones en energía
 “Anthropic, la empresa de Claude, habría gastado 3.400 millones de dólares en generadores de gas para sus centros de datos. Lo reveló el Financial Times; ellos no lo confirman.”
 
-## 2️⃣ Disney y Adobe se alían
-“Disney y Adobe se aliaron para crear una IA entrenada con los personajes de Disney. O sea: una IA que dibuja como Disney.”
-
-## 3️⃣ El jefe de Nvidia y la espía: lo nuevo
+## 2️⃣ El jefe de Nvidia y la espía: lo nuevo
 “Jensen Huang admitió una relación íntima con una ejecutiva de Megaspeed, empresa que Estados Unidos sospecha que ayuda a China con los chips. Nvidia dice que no se filtraron secretos, pero abrió una investigación. El Congreso le pidió una reunión a puerta cerrada el 18 de noviembre. Y la acción llegó a caer 5%.”
+
+## 3️⃣ Disney y Adobe se alían
+“Disney y Adobe se aliaron para crear una IA entrenada con los personajes de Disney. O sea: una IA que dibuja como Disney.”
 
 ## 4️⃣ Hackers con IA robaron certificados de Apple
 “Unos hackers pusieron agentes de IA a atacar casi solos. Sacaron más de 300 certificados de Apple y 190.000 credenciales de un videojuego. Solo unas 6.000 cuentas servían, pero el ataque a Apple les costó menos de 1.500 dólares.”
