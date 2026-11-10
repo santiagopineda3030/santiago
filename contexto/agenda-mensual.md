@@ -31,3 +31,10 @@ Estados: Por guion → Por grabar → Grabado → Editando → Listo para revisa
 - Noticias NO se pueden grabar por lote (son del día anterior): se graban a diario.
 - OJO espacio: crudos del iPhone en 4K HDR pesan ~3 GB; 40 = ~120 GB. Grabar en 1080p 30 fps (~200–400 MB c/u) o ampliar Drive.
 - Horas aprobadas: 11:00 noticias, 6:00 p. m. lo demás. Agenda 11–18 nov aprobada (v7–v14, E1, Y1 12 nov, C1–C3, L1–L2, E2, S1 17 nov).
+
+## Montado (10 nov)
+- La Agenda es la misma pestaña **Noviembre** (el script ya publica a la Fecha + Hora de cada fila; las noticias las crea la tarea de las 4:35).
+- Filas 8–16: E1 (11), Y1 (12), C1 (13), L1 (14), E2 (15), C2 (16), S1 (17), L2 (18), C3 (18, 20:00). Hora 18:00. Estado `Por guion` / `Sale de Y1`. Columna Tipo: Explicativo, YouTube largo, Clip cascada, Lead, VSL (Code.gs CONFIG.TIPOS solo tiene 'Noticias IA': agregar los nuevos en el bloque 2).
+- Fechas: escribir como texto dd/mm/aaaa (la hoja está en español: =DATE con comas da #ERROR).
+- Calendar: 9 eventos "🎬 <código> · …" (ids o36dtsqi…, 1468l40c…, pel9p7bl…, svcupnlb…, qp16kgd1…, 8se56at0…, 7vncno2c…, 1c5r0fkk…, ob84brn8…).
+- Falta del bloque 1: guiones de E1, Y1, L1, E2, S1, L2 (link en la columna Guion) y la Agenda del 19 al 30.

@@ -232,3 +232,4 @@
 - 10 nov · Diseño del kit de contenido mensual acordado (contexto/agenda-mensual.md): agenda en la hoja, Santi sube crudo con código, robot edita, aviso 'Video X listo', Santi revisa siempre, sale a su hora. Se monta desde el jueves.
 - 10 nov · Santi: el kit de contenido mensual arranca desde el 11 nov (no el jueves).
 - 10 nov · Agenda 11–18 nov aprobada por Santi. Grabación por lotes acordada (ver agenda-mensual.md).
+- 10 nov 11:05 · Bloque 1: Agenda 11–18 nov montada en la hoja (filas 8–16) y en Calendar (9 eventos). Faltan guiones y del 19 al 30.
