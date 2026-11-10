@@ -41,3 +41,4 @@ Estados: Por guion → Por grabar → Grabado → Editando → Listo para revisa
 - Pestaña **VIDEOS MES** (sheetId 4, 2.ª pestaña): lista del mes que se llena sola con `=QUERY(Noviembre!A2:U; "select J, O, A, L, F, B, M, G, H, N, R, S, T where A is not null order by A, L"; 0)` en A4. Columnas: Código, Tipo, Fecha, Hora, Pieza, Producción, Publicación, Guion, Video editado, Instagram, YouTube, Link YouTube, TikTok. No escribir ahí. Para diciembre: cambiar `Noviembre` por `Diciembre`.
 - CAL IG (calendario visual) ya muestra las piezas nuevas solo.
 - Ojo: fórmulas en esta hoja van con `;` (hoja en español).
+- Noticias del mes pre-creadas: filas 17–36 de Noviembre (v7 11 nov … v26 30 nov, 11:00, Estado `Por guion`). La tarea de las 4:35 llena la fila del día siguiente (ajustada el 10 nov). Para diciembre: crear las filas v27… igual a inicio de mes.

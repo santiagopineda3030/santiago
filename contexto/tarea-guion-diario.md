@@ -1,6 +1,7 @@
 # Tarea "Guion diario noticias IA" (copia exacta del texto, 5 nov 2026)
 - ID: `trig_01Tui42SjjCMBURNMXnotpz4` · horario `CRON_TZ=America/Bogota 35 16 * * *` (4:35 p. m. todos los días)
 - Abre una sesión nueva cada vez, aviso push al celular al terminar. Modelo Opus.
+- **Cambio del 10 nov (pedido de Santi, Base):** las filas de noticias del mes ya vienen creadas en la hoja (v7–v26, 11–30 nov). Paso 2: el código v<N> sale de la fila con Fecha = mañana y Tipo Noticias IA (NO del máximo de la columna #). Paso 6: si esa fila existe, actualiza solo B, C, F y G; si no, agrega una. Tampoco toca la pestaña VIDEOS MES. El texto de abajo es el viejo: el vigente está en la tarea (get_trigger).
 - Es de Santiago: Claude solo la corrige si él lo pide. Si se borra, se puede recrear con este texto.
 - Cambio del 5 nov (5:30 p. m., pedido por Santi): **un solo guion en frío** para Instagram, TikTok y YouTube Shorts (mismo video),
   guardado solo en Guiones › Instagram (idea + guion). Ya no escribe versiones por red. YouTube largo va aparte.
