@@ -38,3 +38,6 @@ Estados: Por guion → Por grabar → Grabado → Editando → Listo para revisa
 - Fechas: escribir como texto dd/mm/aaaa (la hoja está en español: =DATE con comas da #ERROR).
 - Calendar: 9 eventos "🎬 <código> · …" (ids o36dtsqi…, 1468l40c…, pel9p7bl…, svcupnlb…, qp16kgd1…, 8se56at0…, 7vncno2c…, 1c5r0fkk…, ob84brn8…).
 - Falta del bloque 1: guiones de E1, Y1, L1, E2, S1, L2 (link en la columna Guion) y la Agenda del 19 al 30.
+- Pestaña **VIDEOS MES** (sheetId 4, 2.ª pestaña): lista del mes que se llena sola con `=QUERY(Noviembre!A2:U; "select J, O, A, L, F, B, M, G, H, N, R, S, T where A is not null order by A, L"; 0)` en A4. Columnas: Código, Tipo, Fecha, Hora, Pieza, Producción, Publicación, Guion, Video editado, Instagram, YouTube, Link YouTube, TikTok. No escribir ahí. Para diciembre: cambiar `Noviembre` por `Diciembre`.
+- CAL IG (calendario visual) ya muestra las piezas nuevas solo.
+- Ojo: fórmulas en esta hoja van con `;` (hoja en español).
