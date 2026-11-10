@@ -223,3 +223,4 @@
 - 9 nov noche · Acordado con Santi: hasta el jueves 12 solo definir (oferta, socia, estudio, guiones de venta) y subir videos (1 versión). Desde el jueves (plan renovado): todo lo técnico (web, píxel, Anuncios.gs, YouTube largo, Cerebro para cualquier negocio, plantilla, auditoría TikTok).
 - 9 nov noche · TikTok v5 publicado por Santi (hoja U6). Prioridad nueva de Santi: PRIMERO todo lo técnico y las pruebas; DESPUÉS vender y lo legal. Hoy solo guiones (v6).
 - 9 nov noche · mp4 v5 1.1 (1WtxismN4w8eRa9oZA0wO0570zWjs96Dc) a la papelera: ya salió en IG, YouTube y TikTok. No queda nada del v5 en Drive.
+- 10 nov · Guion en frío v6 (noticias del 9 nov: Nvidia gancho, Anthropic 3.400 M, Disney+Adobe, Nvidia/Congreso, hackers ARTEX, Apple 49,99) escrito con Santi en drive-respaldo/guiones/v6-noticias-ia-9-nov.md. Drive caído: falta subirlo a Guiones › Instagram › 2. Guiones en frío, crear idea y fila en la hoja.
