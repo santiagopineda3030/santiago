@@ -24,3 +24,10 @@ Estados: Por guion → Por grabar → Grabado → Editando → Listo para revisa
 - Code.gs: leer la Agenda (hoy lee la pestaña Noviembre) y subir YouTube largo (no probado; ojo peso).
 - Robot de edición: tarea programada + reglas por tipo de video.
 - Encajar la cascada (kit-cascada/): sus clips caen como filas de la Agenda.
+
+## Grabación por lotes (Santi, 10 nov)
+- Santi graba todo el mes de una vez (ej. 40 crudos) y los sube a Videos en frío con el código adelante.
+- Claude edita en orden de fecha de publicación (lo más cercano primero), ~2 días antes, y avisa "Video X listo".
+- Noticias NO se pueden grabar por lote (son del día anterior): se graban a diario.
+- OJO espacio: crudos del iPhone en 4K HDR pesan ~3 GB; 40 = ~120 GB. Grabar en 1080p 30 fps (~200–400 MB c/u) o ampliar Drive.
+- Horas aprobadas: 11:00 noticias, 6:00 p. m. lo demás. Agenda 11–18 nov aprobada (v7–v14, E1, Y1 12 nov, C1–C3, L1–L2, E2, S1 17 nov).

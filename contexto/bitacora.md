@@ -231,3 +231,4 @@
 - 10 nov · Kit cascada de Juanita descomprimido en kit-cascada/ (14 archivos, completo). Analizado y explicado a Santi.
 - 10 nov · Diseño del kit de contenido mensual acordado (contexto/agenda-mensual.md): agenda en la hoja, Santi sube crudo con código, robot edita, aviso 'Video X listo', Santi revisa siempre, sale a su hora. Se monta desde el jueves.
 - 10 nov · Santi: el kit de contenido mensual arranca desde el 11 nov (no el jueves).
+- 10 nov · Agenda 11–18 nov aprobada por Santi. Grabación por lotes acordada (ver agenda-mensual.md).
