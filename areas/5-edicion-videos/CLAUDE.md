@@ -12,3 +12,9 @@ Paso a paso: skill `editar-video` (`.claude/skills/editar-video/SKILL.md` de est
 - **Guion:** Guiones › Instagram › `3. Guiones terminados` (un solo guion sirve para las 3 redes).
 - **Videos largos de YouTube (16:9):** también se editan aquí, pero se entregan en YouTube › `4. Contenido editado` y Santi
   los sube a mano en Studio (ver `areas/3-youtube/CLAUDE.md`).
+
+## Regla del 10 nov (Santi): editar según la Agenda
+- Cada crudo se llama con su código (v7, E1, Y1, L1, S1…). Busca su fila en la pestaña del mes (columna #).
+- El guion está en la columna G ("Guion: <link>"). Edita con ese guion **y su sección "Edición"** (indicaciones de estilo, pantalla, b-roll, música, duración) más lo que Santi diga.
+- Orden: lo que se publica más pronto primero. Al terminar: subir a 2. Videos terminados, estado `Listo`, y avisar "🎬 <código> listo, míralo". Santi revisa siempre (máx. 2 versiones).
+- YouTube largo (Y): 16:9. Clips (C): salen de la cascada (kit-cascada/) del Y correspondiente. Detalle: contexto/agenda-mensual.md.
