@@ -8,6 +8,7 @@ Raíz **ContentIA** · `1LvKFGptavlfPDXzj48OVJZR7Yos2VIFC`
 | **0. Sistema** | `1SlcWLrDd6LfoA_PRwedJ4MeVFIL_0HxL` |
 | ↳ Code.gs · appsscript.json · Subidas.gs · PROMPT_PLAN_ORGANICO.md · LEEME.txt | copias en `drive-respaldo/sistema/` y `google-apps-script/` |
 | **Leads** | `1YoGliudQkQKcDuNbPqfxBUzQdVEs0Vyl` |
+| ↳ Leads - ContentIA (hoja, 11 nov) | `1a_GEgOia5tNyVp9rBDv9hyV0K_BSmOMK-vu-s7lGBFE` |
 
 ## Guiones (carpeta nueva, 5 nov) · `15J5tBsxY1o98Eee_v0jEH98mE720Ql8s`
 | Red | Carpeta red | 1. Ideas | 2. Guiones en frío | 3. Guiones terminados |

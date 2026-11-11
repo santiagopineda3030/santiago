@@ -100,3 +100,18 @@ Datos (no secretos) cuando existan: ID de cuenta publicitaria (`act_…`), ID de
 - Santi: **hoy NO se sube el v4 a Meta Ads ni se crea ningún anuncio.** La prueba del anuncio en pausa pasa al **9 nov**.
 - Video a usar: **v4 2.2 noticias-7-nov.mp4** (Drive `1MnxyZS2-OT2y9ZMV4nD0qlkl3jKniLdS`), no el 1.2. Orgánico: 8 nov 18:00.
 - Píxel (paso 5): cuando Santi diga "hagamos el píxel".
+
+## Tracker de anuncios cada 3 días (11 nov, punto 5 del plan; Santi: cada 3 días, no diario)
+- `Anuncios.gs` (`google-apps-script/plan-contenido/`): `instalarTracker()` programa `reporteAnuncios()` cada 3 días a las 7 a. m.
+  Solo LEE de Meta (GET). Escribe en el Tracker: pestaña **Cada 3 días** (antes "Diario"; una fila por anuncio por periodo) y
+  **Veredicto** (toda la vida del anuncio: Funciona / Probar más / Apagar + por qué). Manda un correo corto a Santi.
+  ⚠️ `instalar()` de Code.gs borra todos los relojes: después correr `instalarTracker()` otra vez.
+- **Leads sin píxel:** hoja **Leads - ContentIA** `1a_GEgOia5tNyVp9rBDv9hyV0K_BSmOMK-vu-s7lGBFE` (Drive › ContentIA › Leads).
+  Columnas: Fecha … Origen (UTM), **Anuncio (código)**, utm_source/medium/campaign/content, fbclid, Agendó, Fecha de la llamada, Asistió, Cerró, Notas.
+  La landing (`src/components/Agenda.jsx`) manda los utm (guardados en la sesión); `google-apps-script/Code.gs` saca el código de utm_content.
+  **Agendó** = el correo del lead aparece como invitado en el Calendar principal (lo marca el tracker) o a mano.
+- **Link de cada anuncio:** `https://<dominio>/?utm_source=meta&utm_medium=paid&utm_campaign=contentia&utm_content=A1`
+  (en Meta: anuncio › Parámetros de URL). El nombre del anuncio en Meta lleva el código (`CO_DUEÑOS_A1_v1`).
+- **Reglas** (pestaña "Cómo leerlo", columna B, Santi las cambia): CPL objetivo **$10** (propuesta), máximo $20, apagar con $30 sin leads,
+  CTR link mínimo 0,8 %, gancho mínimo 25 %, 2.000 impresiones para juzgar, 3 leads para "Funciona", no se juzga antes del día 4.
+- Falta (Santi): pegar Anuncios.gs y correr `instalarTracker()`; confirmar el CPL objetivo; el script de leads se instala con la web.

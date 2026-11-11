@@ -23,11 +23,30 @@ function validar(d) {
   return e
 }
 
-/* Guarda de dónde viene la visita (ej: ?utm_source=instagram) */
-function origen() {
+/* Guarda de dónde viene la visita. Cada anuncio trae su etiqueta:
+   ?utm_source=meta&utm_medium=paid&utm_campaign=contentia&utm_content=A1
+   Se guarda en la sesión para no perderla si la persona navega antes de llenar el formulario. */
+const UTM = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'fbclid']
+function etiquetas() {
   const p = new URLSearchParams(window.location.search)
-  return ['utm_source', 'utm_medium', 'utm_campaign']
-    .map((k) => p.get(k))
+  let guardado = {}
+  try {
+    guardado = JSON.parse(sessionStorage.getItem('contentia_utm') || '{}')
+  } catch {
+    guardado = {}
+  }
+  const ahora = Object.fromEntries(UTM.map((k) => [k, p.get(k)]).filter(([, v]) => v))
+  const final = Object.keys(ahora).length ? ahora : guardado
+  try {
+    sessionStorage.setItem('contentia_utm', JSON.stringify(final))
+  } catch {
+    /* sin almacenamiento: seguimos con lo de la URL */
+  }
+  return final
+}
+function origen(t) {
+  return ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content']
+    .map((k) => t[k])
     .filter(Boolean)
     .join(' / ')
 }
@@ -49,6 +68,7 @@ export default function Agenda() {
   const [datos, setDatos] = useState(INICIAL)
   const [errores, setErrores] = useState({})
   const [estado, setEstado] = useState('idle') // idle | enviando | listo | error
+  const [utm] = useState(etiquetas)
   const formRef = useRef(null)
   const exitoRef = useRef(null)
 
@@ -93,7 +113,12 @@ export default function Agenda() {
             negocio: datos.negocio.trim(),
             redes: datos.redes.join(', '),
             inversion: datos.inversion,
-            origen: origen(),
+            origen: origen(utm),
+            utm_source: utm.utm_source || '',
+            utm_medium: utm.utm_medium || '',
+            utm_campaign: utm.utm_campaign || '',
+            utm_content: utm.utm_content || '',
+            fbclid: utm.fbclid || '',
           }),
         })
       } else {

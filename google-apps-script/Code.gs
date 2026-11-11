@@ -19,7 +19,16 @@ const COLUMNAS = [
   ['redes', 'Redes donde publica'],
   ['inversion', '¿Puede invertir?'],
   ['origen', 'Origen (UTM)'],
+  ['anuncio', 'Anuncio (código)'],   // = utm_content (A1, A2…). Lo usa el Tracker de anuncios
+  ['utm_source', 'utm_source'],
+  ['utm_medium', 'utm_medium'],
+  ['utm_campaign', 'utm_campaign'],
+  ['utm_content', 'utm_content'],
+  ['fbclid', 'fbclid'],
+  // Después vienen columnas que se llenan a mano o las llena el tracker:
+  // Agendó · Fecha de la llamada · Asistió · Cerró · Notas
 ];
+// Hoja de leads: "Leads - ContentIA" (Drive › ContentIA › Leads) 1a_GEgOia5tNyVp9rBDv9hyV0K_BSmOMK-vu-s7lGBFE
 
 function doPost(e) {
   const lock = LockService.getScriptLock();
@@ -28,6 +37,8 @@ function doPost(e) {
     const hoja = obtenerHoja_();
     const datos = Object.assign({}, (e && e.parameter) || {});
     datos.fecha = new Date();
+    const m = String(datos.utm_content || '').toUpperCase().match(/(?:^|[_\s-])(A\d+)(?=$|[_\s-])/);
+    datos.anuncio = m ? m[1] : '';
 
     const fila = COLUMNAS.map(([clave]) => limpiar_(datos[clave]));
     hoja.appendRow(fila);
@@ -56,6 +67,7 @@ function doGet() {
 function obtenerHoja_() {
   const libro = SpreadsheetApp.getActiveSpreadsheet();
   let hoja = libro.getSheetByName(NOMBRE_HOJA);
+  if (!hoja && String(libro.getSheets()[0].getRange('A1').getValue()) === 'Fecha') hoja = libro.getSheets()[0].setName(NOMBRE_HOJA);
   if (!hoja) hoja = libro.insertSheet(NOMBRE_HOJA);
   if (hoja.getLastRow() === 0) {
     hoja.appendRow(COLUMNAS.map(([, titulo]) => titulo));
