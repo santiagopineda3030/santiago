@@ -63,6 +63,7 @@ function probarYouTube() {
 function youtubeFila_(f, i, aprobada) {
   if (!YT.ACTIVO || !f.col.yt) return;
   const est = String(f.v(i, 'yt')).trim();
+  if (esLargo_(f, i)) { if (['Publicar', 'Pendiente', 'Subiendo'].includes(est)) youtubeLargo_(f, i); return; }
   // "Pendiente" = Instagram ya arrancó con esta fila y YouTube va en la vuelta siguiente (lo pone publicarPendientes).
   if (!(est === 'Publicar' || est === 'Pendiente' || (est === '' && aprobada))) return;
   f.set(i, 'yt', 'Subiendo');
@@ -97,10 +98,69 @@ function tituloYouTube_(f, i) {
 /** Descripción de Instagram + #Shorts (YouTube la reconoce como Short por ser vertical y corta). */
 function descripcionYouTube_(f, i) {
   const d = String(f.v(i, 'desc')).replace(/[<>]/g, '').trim();
+  if (esLargo_(f, i)) return d.slice(0, 4900); // video largo: sin #Shorts
   return (/#shorts\b/i.test(d) ? d : d + '\n\n#Shorts').slice(0, 4900);
 }
 
 function hashtags_(texto) {
   return (String(texto).match(/#[\p{L}\d_]+/gu) || []).map(h => h.slice(1))
     .filter((h, k, l) => !/^shorts$/i.test(h) && l.findIndex(x => x.toLowerCase() === h.toLowerCase()) === k).slice(0, 15);
+}
+
+/* ───────────── YouTube largo (16:9, pesado) ─────────────
+ * Tipo "YouTube largo": sube por partes de 16 MB (UrlFetch no pasa de 50 MB) con la subida reanudable de YouTube.
+ * Cada vuelta sube ~4 min y guarda dónde quedó (Propiedades del script › YTL_<id del archivo>); la siguiente sigue.
+ * Mientras sube: columna YouTube = "Subiendo" y Link YouTube = "Subiendo video largo: N%".
+ */
+const LARGO_PARTE = 16 * 1024 * 1024; // múltiplo de 256 KB
+
+function esLargo_(f, i) { return String(f.v(i, 'tipo')).trim() === 'YouTube largo'; }
+
+function youtubeLargo_(f, i) {
+  const inicio = Date.now(), props = PropertiesService.getScriptProperties(), token = ScriptApp.getOAuthToken();
+  let clave = '';
+  try {
+    const file = archivo_(f.v(i, 'video')), size = file.getSize();
+    clave = 'YTL_' + file.getId();
+    let s = JSON.parse(props.getProperty(clave) || 'null');
+    if (!s) {
+      const meta = {
+        snippet: { title: tituloYouTube_(f, i), description: descripcionYouTube_(f, i), tags: hashtags_(f.v(i, 'desc')),
+          categoryId: YT.CATEGORIA, defaultLanguage: YT.IDIOMA, defaultAudioLanguage: YT.IDIOMA },
+        status: { privacyStatus: YT.PRIVACIDAD, selfDeclaredMadeForKids: false, embeddable: true } };
+      const r = UrlFetchApp.fetch('https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status', {
+        method: 'post', contentType: 'application/json; charset=UTF-8', payload: JSON.stringify(meta), muteHttpExceptions: true,
+        headers: { Authorization: 'Bearer ' + token, 'X-Upload-Content-Length': String(size), 'X-Upload-Content-Type': 'video/mp4' } });
+      const h = r.getHeaders();
+      if (r.getResponseCode() !== 200 || !(h.Location || h.location)) throw new Error('No abrió la subida: ' + r.getContentText().slice(0, 200));
+      s = { url: h.Location || h.location, off: 0 };
+      props.setProperty(clave, JSON.stringify(s));
+    }
+    f.set(i, 'yt', 'Subiendo'); SpreadsheetApp.flush();
+    while (Date.now() - inicio < 4 * 60 * 1000) {
+      const fin = Math.min(s.off + LARGO_PARTE, size) - 1;
+      const parte = UrlFetchApp.fetch('https://www.googleapis.com/drive/v3/files/' + file.getId() + '?alt=media', {
+        headers: { Authorization: 'Bearer ' + token, Range: 'bytes=' + s.off + '-' + fin }, muteHttpExceptions: true });
+      if ([200, 206].indexOf(parte.getResponseCode()) < 0) throw new Error('Drive no dio la parte: ' + parte.getResponseCode());
+      const r = UrlFetchApp.fetch(s.url, { method: 'put', contentType: 'application/octet-stream', payload: parte.getContent(),
+        headers: { Authorization: 'Bearer ' + token, 'Content-Range': 'bytes ' + s.off + '-' + fin + '/' + size }, muteHttpExceptions: true });
+      const code = r.getResponseCode();
+      if (code === 200 || code === 201) {
+        const v = JSON.parse(r.getContentText()), link = 'https://youtu.be/' + v.id, priv = v.status && v.status.privacyStatus;
+        props.deleteProperty(clave);
+        f.set(i, 'yt', 'Publicado');
+        f.set(i, 'ytlink', priv && priv !== YT.PRIVACIDAD ? link + ' · ⚠ YouTube lo dejó ' + priv : link);
+        return;
+      }
+      if (code !== 308) throw new Error('YouTube respondió ' + code + ': ' + r.getContentText().slice(0, 200));
+      const h = r.getHeaders(), rango = h.Range || h.range;
+      s.off = rango ? Number(String(rango).split('-')[1]) + 1 : fin + 1;
+      props.setProperty(clave, JSON.stringify(s));
+      f.set(i, 'ytlink', 'Subiendo video largo: ' + Math.round(s.off * 100 / size) + '%'); SpreadsheetApp.flush();
+    }
+  } catch (e) {
+    if (clave) props.deleteProperty(clave);
+    f.set(i, 'yt', 'Error');
+    f.set(i, 'ytlink', ('YouTube largo: ' + (e.message || e)).slice(0, 300));
+  }
 }

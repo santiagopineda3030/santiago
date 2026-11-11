@@ -33,3 +33,9 @@ YouTube deja **privados (bloqueados)** los videos subidos por proyectos de API s
 Link YouTube dice "⚠ YouTube lo dejó private". Solución: pasar el script a un proyecto de Google Cloud propio y pedir
 la auditoría de la API de YouTube (formulario de Google, tarda días). Mientras tanto se publica a mano desde Studio.
 Cupo: 10.000 unidades/día; cada subida ~1.600 → hasta 6 por día.
+
+## YouTube largo (11 nov)
+- Tipo "YouTube largo" en la hoja → va SOLO a YouTube (TikTok = "No", Instagram no), sin #Shorts, link youtu.be/<id>.
+- Sube por partes de 16 MB con la subida reanudable (UrlFetch máx. 50 MB): ~4 min por vuelta, guarda el avance en Propiedades del script `YTL_<id del archivo>`. Mientras sube: YouTube = "Subiendo", Link YouTube = "Subiendo video largo: N%".
+- La fila principal queda "Publicado" con link "Solo YouTube (video largo)". Si falla: "Error" → poner "Publicar" en la columna YouTube para reintentar.
+- Código: YouTube.gs (youtubeLargo_, esLargo_) + Code.gs (publicarPendientes). Primera prueba real: Y1, sáb 14 nov 18:00.

@@ -23,7 +23,7 @@ const CONFIG = {
   HORA: '11:00',                                         // hora por defecto (Bogotá)
   PRIMER_CODIGO: 1,
   MAX_MB: 30,
-  TIPOS: { 'Noticias IA': '📰' },
+  TIPOS: { 'Noticias IA': '📰', 'Explicativo': '🧠', 'YouTube largo': '▶️', 'Lead': '🎯', 'VSL': '💰', 'Clip cascada': '✂️' },
   // Todos los días: Noticias IA (0 = domingo … 6 = sábado)
   PLANTILLA: { 0: ['Noticias IA'], 1: ['Noticias IA'], 2: ['Noticias IA'], 3: ['Noticias IA'], 4: ['Noticias IA'], 5: ['Noticias IA'], 6: ['Noticias IA'] },
   COLOR: '#dc2626',
@@ -369,7 +369,8 @@ function publicarPendientes() {
       const est = f.v(i, 'estado');
       const yt = String(f.v(i, 'yt')).trim();
       // YouTube: pedido a mano ("Publicar") o pendiente porque Instagram ya arrancó ("Pendiente").
-      if ((yt === 'Publicar' || yt === 'Pendiente') && puedo()) { youtubeFila_(f, i, true); pesado = true; }
+      // "Subiendo" solo se retoma en YouTube largo (sube por partes en varias vueltas).
+      if ((yt === 'Publicar' || yt === 'Pendiente' || (yt === 'Subiendo' && esLargo_(f, i))) && puedo()) { youtubeFila_(f, i, true); pesado = true; }
       // TikTok: pedido a mano, "Pendiente" porque Instagram ya arrancó, o revisar si ya publicaste el borrador.
       if (typeof tiktokFila_ === 'function' && puedo() && tiktokFila_(f, i)) pesado = true;
       if (!['Publicar', 'Programado', 'Publicando'].includes(est)) return;
@@ -382,6 +383,13 @@ function publicarPendientes() {
           return;
         }
         if (!puedo()) return; // ya hubo un paso pesado en esta vuelta: sigue en la próxima
+        // YouTube largo (16:9): va SOLO a YouTube, nunca a Instagram ni TikTok. Se sube por partes en las próximas vueltas.
+        if (esLargo_(f, i)) {
+          if (f.col.yt && (yt === '' || yt === 'Publicar')) f.set(i, 'yt', 'Pendiente');
+          if (f.col.tt) f.set(i, 'tt', 'No');
+          f.set(i, 'estado', 'Publicado'); f.set(i, 'link', 'Solo YouTube (video largo): ver columna YouTube');
+          return;
+        }
         // Llegó la hora: primero Instagram (lo más importante). YouTube y TikTok quedan "Pendiente" para las próximas vueltas.
         if (f.col.yt && yt === '') f.set(i, 'yt', 'Pendiente');
         if (f.col.tt && String(f.v(i, 'tt')).trim() === '') f.set(i, 'tt', 'Pendiente');

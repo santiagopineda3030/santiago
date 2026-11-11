@@ -46,8 +46,8 @@
 - Reglas: CTA "comenta SISTEMA" y respuesta por DM (aún no hay clase gratis); sección "Edición" al final de cada guion; mostrarle el guion completo, no resúmenes.
 ## Plan desde el mié 11 nov (límite renovado, Santi) — AHORRAR límite
 Orden técnico (un chat nuevo y corto por tarea, cada uno lee este archivo + agenda-mensual.md):
-1. 📁 Instagram/Edición: Code.gs publique todos los Tipos (CONFIG.TIPOS + Explicativo, YouTube largo, Lead, VSL, Clip cascada) desde la pestaña del mes.
-2. 📁 YouTube: subida de YouTube largo 16:9 (Y1 sale sáb 14).
+1. ✅ (11 nov, en Base) Tipos nuevos en CONFIG.TIPOS; las verticales ya salían solas. Falta que Santi pegue Code.gs y YouTube.gs en Apps Script.
+2. ✅ (11 nov) YouTube largo por partes (ver youtube.md). Prueba real: Y1 sáb 14.
 3. 📁 Edición: robot de edición (tarea programada que ve Videos en frío por código) + aviso "🎬 X listo".
 4. 📁 Edición: cascada (kit-cascada/) con reglas de ContentIA; C1 sale dom 15 desde Y1.
 5. 📁 Anuncios: tracker de anuncios (links con etiqueta → hoja de leads + reporte diario Meta).
