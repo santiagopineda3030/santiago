@@ -271,3 +271,4 @@
 - 11 nov · Cascada: kit-cascada/reglas.json de ContentIA con las respuestas de Santi (CONTENTIA, colores por tipo, 3 clips 15–20 s, clips de todo, sin CTA). Falta montar el editor del kit en la nube.
 - 11 nov · Punto 4 (cascada): kit-cascada/reglas.json con las respuestas de Santi (CONTENTIA; cian Y/E/clase, rojo noticias, amarillo lead; 3 clips de 15–20 s de los momentos más fuertes; sin CTA; sin herramientas; descripción = texto + 5 hashtags). El robot la hace: sección Cascada en la skill editar-video (crea las filas C en la COLA al terminar el origen).
 - 11 nov · Nuevo chat Santi · Base 2 (session_01McnvqvoHXuH9paY43dMMXW) reemplaza al Base viejo (session_01McnvqtY4SNH4XF5G4QasW1). Anotado en CLAUDE.md.
+- 11 nov · Tracker de anuncios listo (aviso de 📁 Anuncios): Anuncios.gs, reporte cada 3 días, hoja Leads - ContentIA. Pendiente de Santi: pegar Anuncios.gs, correr instalarTracker(), confirmar CPL $10. Detalle: contexto/anuncios-meta.md.
