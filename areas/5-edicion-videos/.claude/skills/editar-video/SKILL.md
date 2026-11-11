@@ -30,3 +30,6 @@ Un solo video sirve para **Instagram, TikTok y YouTube Shorts**. IDs en `areas/5
      dejar `Listo` y preguntarle. Nunca `Publicar` si el video no está en `2. Videos terminados`.
    - El script publica solo a la hora y marca Calendar (`✅ Publicado · …`).
 7. **Cerrar:** decirle en 3 líneas qué quedó programado, en qué redes y a qué hora. Línea en `contexto/bitacora.md` + commit + push.
+
+## Referentes (11 nov)
+Antes de editar: skill `referentes-edicion` (estilo por tipo, hojas de cuadros en `referentes/`).

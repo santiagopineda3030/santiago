@@ -21,3 +21,7 @@ Paso a paso: skill `editar-video` (`.claude/skills/editar-video/SKILL.md` de est
 - **Desde el 11 nov el ROBOT edita solo** (Robot.gs + tarea "Robot edicion", ver `contexto/robot-edicion.md`). Este chat es el
   **puente de correcciones**: Santi revisa lo que mandó el robot y aquí da las correcciones juntas (Claude saca la versión
   nueva, máx. 2) o el "dale" (Claude pone `Publicar`). Toda regla nueva va al README del editor para que el robot la siga.
+
+## Referentes de edición (11 nov, Santi) — OBLIGATORIO
+Antes de editar cualquier video usa la skill **`referentes-edicion`** (`.claude/skills/referentes-edicion/SKILL.md`):
+lee la sección del tipo en `contexto/referentes-edicion.md` y mira la hoja de cuadros del referente en `referentes/`.

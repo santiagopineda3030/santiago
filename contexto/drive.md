@@ -76,3 +76,4 @@ Versión solo Instagram del script arreglado, sin datos de Santi (CONFIG vacío)
 | Lo que falta · lista (9 nov) | ContentIA | `11cMXoh_X4wI0ARtc1Mtnr8krlYFsf0GLaHIz4_OLdeg` |
 | Equipo de grabación (9 nov) | ContentIA | `1UOVlBktAuA77OkdLIP3LEsKHzPx7b0Xt-Pf7T5cRDQM` |
 | Guion S1 VSL (10 nov) | Guiones › Instagram › 3. Terminados | `1OyRKjhWnngM-09Zi4Je8Uv_NZGidfBT8WHKFH7C6zqc` |
+| Referentes de edición (11 nov) | Instagram › 3. Recursos | `1hIAUPnKht_dWbRwhPaDLJav1Ozu3V87UIYWGSUdxEME` |
