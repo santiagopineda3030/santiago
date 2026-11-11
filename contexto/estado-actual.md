@@ -44,3 +44,13 @@
 - Listos: E1 (Drive 1NHqi5AFmUMpYSsh09xsXaDTmWQ2lijB_84LeVdu663c, fila 8 Por grabar) y S1.
 - Retomar con Y1 POR PARTES (borrador en drive-respaldo/guiones/Y1-publicar-todos-los-dias.md; falta OK de gancho + problema), luego L1, E2, L2 y filas 37–48.
 - Reglas: CTA "comenta SISTEMA" y respuesta por DM (aún no hay clase gratis); sección "Edición" al final de cada guion; mostrarle el guion completo, no resúmenes.
+## Plan desde el mié 11 nov (límite renovado, Santi) — AHORRAR límite
+Orden técnico (un chat nuevo y corto por tarea, cada uno lee este archivo + agenda-mensual.md):
+1. 📁 Instagram/Edición: Code.gs publique todos los Tipos (CONFIG.TIPOS + Explicativo, YouTube largo, Lead, VSL, Clip cascada) desde la pestaña del mes.
+2. 📁 YouTube: subida de YouTube largo 16:9 (Y1 sale sáb 14).
+3. 📁 Edición: robot de edición (tarea programada que ve Videos en frío por código) + aviso "🎬 X listo".
+4. 📁 Edición: cascada (kit-cascada/) con reglas de ContentIA; C1 sale dom 15 desde Y1.
+5. 📁 Anuncios: tracker de anuncios (links con etiqueta → hoja de leads + reporte diario Meta).
+6. Chat Web: landing terminada + dominio. 7. 📁 TikTok: auditoría.
+Agenda actual: E1 13, Y1 14, C1 15, L1 16, E2 17, C2 18, S1 19, L2/C3 20 (+ Y2 19, E3 20 … ver VIDEOS MES). Noticias diarias 11:00 (v7 = 11 nov).
+Pendientes chicos: mover eventos de Calendar 11–18 (+2 días); limpieza v6 (crudo 1Xwn818ay0OgJ-mthE8QA1WvHeKx_z_Zu, guion, idea, mp4).
