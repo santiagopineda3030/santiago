@@ -22,3 +22,13 @@ Sirve para las **escenas animadas** que tapan o acompañan cada noticia (no para
 - **Diagrama:** un nodo que se abre en varias líneas hacia una lista (1 → muchos).
 - **Cuadrícula:** cuadritos que se llenan uno a uno para mostrar cantidad.
 - **Ritmo:** cada idea 2–3 s, transiciones suaves (fundidos y zooms), nada de cortes bruscos en las animaciones.
+
+## Lead (L)
+### ref1 · `referentes/lead-ref1.mp4` (15 s, vertical) · `lead-ref1-cuadros.jpg`
+- **Gancho:** pregunta en una píldora negra redondeada arriba ("¿Qué es GitHub?"), palabra clave en amarillo; debajo aparecen chips pequeños con el contexto ("para ser analista de datos", "2027" en amarillo).
+- **Pantalla dividida:** mitad de arriba negra con la animación de la idea; mitad de abajo la cara hablando. Alterna con plano completo de la cara.
+- **Animación de arriba:** palabra grande en sans muy negrita (amarilla o blanca) que aparece palabra por palabra; la palabra clave con **resaltador amarillo** detrás ("del código", "Limpias", "Nadie"); íconos de línea fina (carpeta, archivo, laptop, barras); mini maquetas que se escriben solas (tabla, código, nombre de archivo).
+- **Transición:** destello naranja/amarillo a pantalla completa para cambiar de parte.
+- **Subtítulos:** muy pequeños, con la palabra clave en amarillo.
+- **Ritmo:** una idea cada 1–2 s; frases cortas que se arman en pantalla mientras las dice.
+- Para ContentIA: misma estructura (pregunta arriba + idea animada + cara), con nuestros colores (cian) o amarillo si Santi lo pide.
