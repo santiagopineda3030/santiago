@@ -268,3 +268,4 @@
 - 11 nov · Referente de edición 4 (Clip cascada / clase en vivo, estilo kit-cascada) guardado: referentes/clip-ref1.mp4.
 - 11 nov · Referente de edición 5 (YouTube largo, título detrás de la persona + b-roll con lupa) guardado: referentes/youtube-largo-ref1.mp4.
 - 11 nov · Skill referentes-edicion (.claude/skills/) + doc Drive 'Referentes de edición · ContentIA' (1hIAUPnK…) + instrucción en areas/5-edicion-videos (el robot la lee sin cambiar su tarea). 5 referentes: E, v, L, C, Y.
+- 11 nov · Cascada: kit-cascada/reglas.json de ContentIA con las respuestas de Santi (CONTENTIA, colores por tipo, 3 clips 15–20 s, clips de todo, sin CTA). Falta montar el editor del kit en la nube.

@@ -1,0 +1,73 @@
+{
+  "_nota": "Reglas de ContentIA (entrevista con Santi, 11 nov 2026). Las lee la skill cascada y el robot de edición.",
+  "marca": {
+    "nombre": "ContentIA",
+    "etiqueta": "CONTENTIA",
+    "colores": { "fondo": "#0B1120", "acento": "#22D3EE", "texto": "#F1F5F9", "alerta": "#F87171", "ok": "#5bc98a" },
+    "colores_por_tipo": {
+      "_regla": "Santi: los colores van según el tipo de video del que sale el clip. Si no está aquí, usar 'colores'.",
+      "YouTube largo": { "acento": "#22D3EE" },
+      "Explicativo": { "acento": "#22D3EE" },
+      "Sesión de clase": { "acento": "#22D3EE" },
+      "Noticias IA": { "acento": "#DC2626" },
+      "Lead": { "acento": "#FACC15" }
+    },
+    "fuente": "-apple-system, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif",
+    "texto_privacidad": "<b>PARTICIPANTE</b> · voz y rostro protegidos por privacidad"
+  },
+  "grabaciones": {
+    "fuentes": "1) Videos largos de la Agenda (código Y: el crudo en Edición de videos › 1. Videos en frío; su fila en la pestaña del mes). 2) Más adelante: sesiones en vivo con clientes (Google Meet).",
+    "plataforma": "Drive (crudos) · Google Meet (sesiones, después)",
+    "presenta": "Santiago",
+    "idioma": "es",
+    "zona_horaria": "America/Bogota",
+    "carpeta_drive": "Edición de videos › 1. Videos en frío (1GFl-0CSYI8afA0tzKGa0AVmM7FC-d4ON)",
+    "hoja_id": "1lvs82vX8Pj3rHmVZyUj9cUh6dOm5srjbVDwzvWUyku4",
+    "salida": "Cada clip es una fila C<n> de la pestaña del mes (Tipo 'Clip cascada'); el mp4 va a 2. Videos terminados con el código C<n> adelante."
+  },
+  "clips": {
+    "por_sesion": 3,
+    "duracion_seg": [15, 20],
+    "tipos": [
+      { "nombre": "Libre", "busca": "Santi: clips de todo. Leer el video COMPLETO y escoger los 3 momentos más fuertes, sea explicación, resultado, consejo, opinión o historia. Cada clip se entiende solo, sin contexto." }
+    ],
+    "priorizar": ["gancho fuerte en la primera frase", "resultado concreto del sistema", "idea que se entiende sola en 15–20 s", "frase que da ganas de compartir"],
+    "evitar": ["mostrar herramientas o configuración por dentro", "nombres de programas en pantalla", "cifras sin verificar", "frases cortadas a la mitad", "rodeos y re-arranques"]
+  },
+  "voces": {
+    "solo_quien_presenta": true,
+    "pregunta_alumno": "en sesiones: como texto en pantalla",
+    "nunca_nombres_de_alumnos": true
+  },
+  "privacidad": {
+    "difuminar_alumnos": true,
+    "deteccion": "en videos de Santi no aplica; en sesiones marcar los tramos a mano con \"alumno\" en la spec"
+  },
+  "diseno": {
+    "gancho_fijo": true,
+    "gancho_max_palabras": 9,
+    "presentacion_arriba": true,
+    "bordes_redondeados": true,
+    "palabras_por_subtitulo": 3,
+    "tarjetas": "una por idea, 8 palabras máximo, verde = lo que funciona, coral = error o alerta",
+    "zona_segura": "x 120–960, y 250–1500 (Instagram Reels 1080x1920)",
+    "referente": "contexto/referentes-edicion.md › Clip cascada (referentes/clip-ref1.mp4)"
+  },
+  "cierre": {
+    "texto": "",
+    "cta": "",
+    "_regla": "Santi, 11 nov: SIN CTA. El clip termina con la última idea; no se agrega cierre ni llamado a la acción."
+  },
+  "descripcion": {
+    "plantilla": "{copy}\n\n{hashtags}",
+    "hashtags": ["#inteligenciaartificial", "#contenido", "#automatizacion", "#emprendedores", "#marketingdigital"]
+  },
+  "prohibido": [
+    { "no_decir": "guárdalo", "decir": "" },
+    { "no_decir": "comenta", "decir": "" }
+  ],
+  "ideas_largas": {
+    "activo": false
+  },
+  "edicion": "automatica"
+}
