@@ -6,7 +6,7 @@ importante ya está en GitHub, el chat se **archiva** (no se borra; se puede rea
 ## Activos (desde el 9 nov; chats nuevos y cortos para gastar menos)
 | Chat | ID | Modelo | Carpeta |
 |---|---|---|---|
-| Santi · Base | `session_01McnvqtY4SNH4XF5G4QasW1` | Sonnet | santi:base (fijar arriba) |
+| Santi · Base 2 | `session_01McnvqvoHXuH9paY43dMMXW` | Sonnet | santi:base (fijar arriba) · 11 nov; Base anterior `session_01McnvqtY4SNH4XF5G4QasW1` archivado |
 | Santi · Preguntas | `session_01Mcnvqsr7cQVf8UpPxL1ZY1` | Sonnet | santi:preguntas (fijar arriba) |
 | 📁 Edición de videos | `session_01McnvqtizmJTpTL89JpqEe6` | Opus | area:edicion |
 | 📁 Guiones | `session_01McnvqwUjMFUTZvojTZbCUK` | Sonnet | area:guiones |

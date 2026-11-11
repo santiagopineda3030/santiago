@@ -49,7 +49,7 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
   | `areas/3-youtube` | `editar-youtube` | Recursos y reglas · YouTube |
   | `areas/4-anuncios-meta` | `editar-anuncio` | Recursos y reglas · Anuncios (Meta) |
 | `areas/5-edicion-videos` | `editar-video` | Edita lo de `1. Videos en frío`, revisa con Santi, sube a `2. Videos terminados` y programa |
-- **Chats (nuevos, 9 nov; al empezar leen `contexto/estado-actual.md`):** `Santi · Base` (`session_01McnvqtY4SNH4XF5G4QasW1`, Sonnet) y
+- **Chats (nuevos, 9 nov; al empezar leen `contexto/estado-actual.md`):** `Santi · Base 2` (`session_01McnvqvoHXuH9paY43dMMXW`, 11 nov; el Base anterior se archivó) y
   `Santi · Preguntas` (`session_01Mcnvqsr7cQVf8UpPxL1ZY1`, Sonnet), fijados arriba a mano; un chat por pieza con etiqueta `area:<red>`.
   - Carpetas: 📁 Edición de videos `session_01McnvqtizmJTpTL89JpqEe6` (Opus) · 📁 Guiones `session_01McnvqwUjMFUTZvojTZbCUK` (Sonnet) ·
     📁 Anuncios (Meta) `session_01Mcnvqwiv8dmFwTWjVUCuyn` (Opus) · 📁 TikTok `session_01Mcnvqvevjb1aQM8gzqY6pm` (Opus) ·

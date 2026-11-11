@@ -272,3 +272,4 @@
 - 11 nov · Punto 4 (cascada): kit-cascada/reglas.json con las respuestas de Santi (CONTENTIA; cian Y/E/clase, rojo noticias, amarillo lead; 3 clips de 15–20 s de los momentos más fuertes; sin CTA; sin herramientas; descripción = texto + 5 hashtags). El robot la hace: sección Cascada en la skill editar-video (crea las filas C en la COLA al terminar el origen).
 - 11 nov · Nuevo chat Santi · Base 2 (session_01McnvqvoHXuH9paY43dMMXW, Sonnet) creado desde el Base viejo, que quedó muy largo. El Base viejo ya no se usa.
 - 11 nov · Tracker de anuncios cada 3 días (Anuncios.gs: reporte Meta solo lectura + veredicto Funciona/Probar más/Apagar), hoja Leads - ContentIA con código de anuncio (utm_content), landing guarda los utm, reglas en 'Cómo leerlo' (CPL objetivo propuesto $10). Falta: Santi pega Anuncios.gs y corre instalarTracker().
+- 11 nov · El chat Base ahora es Santi · Base 2 (session_01McnvqvoHXuH9paY43dMMXW); el anterior se archivó.
