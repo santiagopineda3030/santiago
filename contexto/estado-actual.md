@@ -48,7 +48,7 @@
 Orden técnico (un chat nuevo y corto por tarea, cada uno lee este archivo + agenda-mensual.md):
 1. ✅ (11 nov, en Base) Tipos nuevos en CONFIG.TIPOS; las verticales ya salían solas. ✅ Santi lo instaló el 11 nov.
 2. ✅ (11 nov) YouTube largo por partes (ver youtube.md). Prueba real: Y1 sáb 14.
-3. 🟡 (11 nov) Robot de edición montado: Robot.gs + tarea trig_01Hf9JW6Q1ToNban24k5F9nw EN PAUSA. Falta (Santi): instalarRobot() y agregarle repo + conectores Drive/Sheets a la tarea. Ver robot-edicion.md.
+3. 🟡 (11 nov) Robot de edición montado: Robot.gs + tarea trig_01Hf9JW6Q1ToNban24k5F9nw EN PAUSA. ✅ Robot.gs instalado (11 nov 12:09). Falta (Santi): agregarle repo + conectores Drive/Sheets a la tarea. Ver robot-edicion.md.
 4. 📁 Edición: cascada (kit-cascada/) con reglas de ContentIA; C1 sale dom 15 desde Y1.
 5. 📁 Anuncios: tracker de anuncios (links con etiqueta → hoja de leads + reporte diario Meta).
 6. Chat Web: landing terminada + dominio. 7. 📁 TikTok: auditoría.

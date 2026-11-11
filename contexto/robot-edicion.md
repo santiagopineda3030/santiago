@@ -26,7 +26,7 @@ Eres el robot de edición de videos de Santiago (ContentIA). Repo santiagopineda
 Español, frases cortas. Si algo falla (no hay guion, el crudo no baja), pon la COLA en "Corrección" con la nota y avísalo en el último mensaje.
 
 ## Estado (11 nov)
-- Robot.gs en el repo (`google-apps-script/plan-contenido/Robot.gs`). **Falta: Santi lo pega en el proyecto de la hoja y ejecuta `instalarRobot()`.**
+- Robot.gs en el repo (`google-apps-script/plan-contenido/Robot.gs`). ✅ Instalado por Santi 11 nov 12:09 (instalarRobot OK, 0 crudos en la carpeta).
 - Tarea programada `trig_01Hf9JW6Q1ToNban24k5F9nw` "🎬 Robot de edición" creada **en pausa**: se creó sin conectores ni repo
   (la herramienta no deja pasarlos). **Falta: Santi la abre en claude.ai › Rutinas/Tareas programadas, le agrega el repo
   santiagopineda3030/santiago y los conectores Google Drive y Google Sheets, y la activa.**
