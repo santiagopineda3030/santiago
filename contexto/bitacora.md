@@ -261,3 +261,4 @@
 - 11 nov · Punto 3 (robot de edición): Robot.gs (vigila Videos en frío cada 15 min → COLA 'Por editar', fila 'Grabado'; código o fecha del nombre) + tarea programada trig_01Hf9JW6Q1ToNban24k5F9nw (4/día, sesión nueva, aviso push) EN PAUSA hasta que Santi le agregue repo y conectores. Detalle: contexto/robot-edicion.md.
 - 11 nov 12:09 · Santi instaló Robot.gs (instalarRobot OK). Falta: repo + conectores en la tarea trig_01Hf9JW6Q1ToNban24k5F9nw y activarla.
 - 11 nov · Punto 3 ✅: Santi creó la tarea 'Robot edicion' en claude.ai; la de Claude (trig_01Hf9…) borrada.
+- 11 nov · Rol del chat 📁 Edición de videos: puente de correcciones y 'dale' (el robot edita solo).

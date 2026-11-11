@@ -18,3 +18,6 @@ Paso a paso: skill `editar-video` (`.claude/skills/editar-video/SKILL.md` de est
 - El guion está en la columna G ("Guion: <link>"). Edita con ese guion **y su sección "Edición"** (indicaciones de estilo, pantalla, b-roll, música, duración) más lo que Santi diga.
 - Orden: lo que se publica más pronto primero. Al terminar: subir a 2. Videos terminados, estado `Listo`, y avisar "🎬 <código> listo, míralo". Santi revisa siempre (máx. 2 versiones).
 - YouTube largo (Y): 16:9. Clips (C): salen de la cascada (kit-cascada/) del Y correspondiente. Detalle: contexto/agenda-mensual.md.
+- **Desde el 11 nov el ROBOT edita solo** (Robot.gs + tarea "Robot edicion", ver `contexto/robot-edicion.md`). Este chat es el
+  **puente de correcciones**: Santi revisa lo que mandó el robot y aquí da las correcciones juntas (Claude saca la versión
+  nueva, máx. 2) o el "dale" (Claude pone `Publicar`). Toda regla nueva va al README del editor para que el robot la siga.
