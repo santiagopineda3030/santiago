@@ -27,6 +27,5 @@ Español, frases cortas. Si algo falla (no hay guion, el crudo no baja), pon la 
 
 ## Estado (11 nov)
 - Robot.gs en el repo (`google-apps-script/plan-contenido/Robot.gs`). ✅ Instalado por Santi 11 nov 12:09 (instalarRobot OK, 0 crudos en la carpeta).
-- Tarea programada `trig_01Hf9JW6Q1ToNban24k5F9nw` "🎬 Robot de edición" creada **en pausa**: se creó sin conectores ni repo
-  (la herramienta no deja pasarlos). **Falta: Santi la abre en claude.ai › Rutinas/Tareas programadas, le agrega el repo
-  santiagopineda3030/santiago y los conectores Google Drive y Google Sheets, y la activa.**
+- La tarea creada por Claude (trig_01Hf9JW6Q1ToNban24k5F9nw) se BORRÓ: no dejaba agregar repo ni conectores.
+- ✅ 11 nov: Santi creó la tarea **"Robot edicion"** desde claude.ai (con repo + Google Drive + Google Sheets y el PROMPT de arriba). No aparece en list_triggers desde el chat (se creó en otra superficie); para cambiarla, Santi la edita en claude.ai.
