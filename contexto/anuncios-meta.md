@@ -53,7 +53,7 @@
 | 4 | ✅ 7 nov noche `META_ADS_TOKEN` guardado y **probado** (`probarAnuncios` 21:05: ContentIA Ads · USD · Bogotá · activa). `Anuncios.gs` instalado en el proyecto de la hoja del plan. META_TOKEN reemplazado por token del robot de 7 permisos `probarConexion` OK 21:41 (faltaba marcar instagram_content_publish: el robot sí lo puede dar). `probarSubidaInstagram` OK 21:44. Code.gs nuevo (espera hasta FINISHED) instalado 21:51. **Paso 4 ✅.** ⚠️ Santi pegó primero ese token encima de `META_TOKEN` (le falta `instagram_content_publish`): se arregla con token nuevo del robot con 7 permisos en `META_TOKEN`. — Token del usuario del sistema (no vence) con `ads_management`, `ads_read`, `business_management` → Propiedades del script `META_ADS_TOKEN` | Santi (guiado) | ⏳ |
 | 5 | **Píxel** (Administrador de eventos › Conjunto de datos) → ID a este archivo | Santi | ⏳ |
 | 6 | Hoja **Tracker de anuncios - ContentIA** `1rpHemhgypm3j85Nb1qx6yXvRIJchrbkZTT6Y84QkS2k` (pestañas Anuncios, Diario, Cómo leerlo; es_CO, Bogotá) + carpeta `5. Reportes` `1xWrXUpbmS47qvypWRcIZNylwiWMVLesn`, ambas en Anuncios (Meta). Falta el costo por lead objetivo | Claude | ✅ 8 nov |
-| 7 | `Anuncios.gs`: reporte diario, subir en pausa, pausar a pedido | Claude | ⏳ |
+| 7 | `Anuncios.gs`: tracker cada 3 días ✅ instalado 11 nov · falta subir en pausa y pausar a pedido | Claude | ⏳ |
 | 8 | Píxel en la web (`src/`) | Claude | ⏳ |
 | 9 | Prueba: campaña y anuncio **en pausa** (sin gastar) | Claude + Santi | ⏳ |
 Portfolio comercial (negocio): **soysanti__content_ia** (2 páginas, 2 personas). Hay 2 negocios vacíos "Prueba 1" y "Prueba 1.1": no se usan.
@@ -114,4 +114,4 @@ Datos (no secretos) cuando existan: ID de cuenta publicitaria (`act_…`), ID de
   (en Meta: anuncio › Parámetros de URL). El nombre del anuncio en Meta lleva el código (`CO_DUEÑOS_A1_v1`).
 - **Reglas** (pestaña "Cómo leerlo", columna B, Santi las cambia): CPL objetivo **$10** (propuesta), máximo $20, apagar con $30 sin leads,
   CTR link mínimo 0,8 %, gancho mínimo 25 %, 2.000 impresiones para juzgar, 3 leads para "Funciona", no se juzga antes del día 4.
-- Falta (Santi): pegar Anuncios.gs y correr `instalarTracker()`; confirmar el CPL objetivo; el script de leads se instala con la web.
+- ✅ 11 nov 15:43 Santi instaló Anuncios.gs y corrió `instalarTracker()` (probarAnuncios OK). Falta: confirmar el CPL objetivo; el script de leads se instala con la web.

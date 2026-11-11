@@ -275,3 +275,4 @@
 - 11 nov · El chat Base ahora es Santi · Base 2 (session_01McnvqvoHXuH9paY43dMMXW); el anterior se archivó.
 - 11 nov · Nuevo chat Santi · Base 2 (session_01McnvqvoHXuH9paY43dMMXW) reemplaza al Base viejo (session_01McnvqtY4SNH4XF5G4QasW1). Anotado en CLAUDE.md.
 - 11 nov · Tracker de anuncios listo (aviso de 📁 Anuncios): Anuncios.gs, reporte cada 3 días, hoja Leads - ContentIA. Pendiente de Santi: pegar Anuncios.gs, correr instalarTracker(), confirmar CPL $10. Detalle: contexto/anuncios-meta.md.
+- 11 nov 15:43 · Tracker instalado por Santi (instalarTracker OK). Primer reporte solo a las 7 a. m. dentro de 3 días.
