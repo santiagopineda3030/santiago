@@ -13,7 +13,7 @@
 const ADS = {
   CUENTA: 'act_1449021934086792', // ContentIA Ads (USD, America/Bogota)
   API: 'https://graph.facebook.com/v23.0/',
-  TRACKER: '1rpHemhgypm3j85Nb1qx6yXvRIJchrbkZTT6Y84QkS2k', // Tracker de anuncios - ContentIA
+  TRACKER: '1rpHemhgypm3j85Nb1qx6yXvRIJchrbkZTT6Y84QkS2k', // Tracker ContentIA
   LEADS: '1a_GEgOia5tNyVp9rBDv9hyV0K_BSmOMK-vu-s7lGBFE',   // Leads - ContentIA (pestaña "Leads")
   DIAS: 3,
 };
