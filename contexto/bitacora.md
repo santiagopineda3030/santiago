@@ -263,3 +263,4 @@
 - 11 nov · Punto 3 ✅: Santi creó la tarea 'Robot edicion' en claude.ai; la de Claude (trig_01Hf9…) borrada.
 - 11 nov · Rol del chat 📁 Edición de videos: puente de correcciones y 'dale' (el robot edita solo).
 - 11 nov · Referente de edición 1 (Explicativo) analizado y guardado: referentes/explicativo-ref1.mp4 + contexto/referentes-edicion.md.
+- 11 nov · Referente de edición 2 (Noticias, animación neón roja) guardado: referentes/noticias-ref1.mp4.
