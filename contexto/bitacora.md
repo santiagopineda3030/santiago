@@ -273,3 +273,4 @@
 - 11 nov · Nuevo chat Santi · Base 2 (session_01McnvqvoHXuH9paY43dMMXW, Sonnet) creado desde el Base viejo, que quedó muy largo. El Base viejo ya no se usa.
 - 11 nov · Tracker de anuncios cada 3 días (Anuncios.gs: reporte Meta solo lectura + veredicto Funciona/Probar más/Apagar), hoja Leads - ContentIA con código de anuncio (utm_content), landing guarda los utm, reglas en 'Cómo leerlo' (CPL objetivo propuesto $10). Falta: Santi pega Anuncios.gs y corre instalarTracker().
 - 11 nov · El chat Base ahora es Santi · Base 2 (session_01McnvqvoHXuH9paY43dMMXW); el anterior se archivó.
+- 11 nov · Nuevo chat Santi · Base 2 (session_01McnvqvoHXuH9paY43dMMXW) reemplaza al Base viejo (session_01McnvqtY4SNH4XF5G4QasW1). Anotado en CLAUDE.md.
