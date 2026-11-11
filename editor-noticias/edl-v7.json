@@ -34,8 +34,20 @@
     {
      "clip": "0001",
      "desde": 8.1,
-     "hasta": 16.732,
-     "texto": "Fable 5.2, el nuevo modelo de Claude, acaba de resolver problemas matemáticos que ya iban sin resolverse desde el 2003 y con este se resolvieron tan solo en horas."
+     "hasta": 12.12,
+     "texto": "Fable 5.2, el nuevo modelo de Claude, acaba de resolver problemas matemáticos"
+    },
+    {
+     "clip": "0001",
+     "desde": 79.72,
+     "hasta": 81.75,
+     "texto": "que llevaban sin resolverse desde el 2003"
+    },
+    {
+     "clip": "0001",
+     "desde": 14.16,
+     "hasta": 16.73,
+     "texto": "y con este se resolvieron tan solo en horas."
     },
     {
      "clip": "0001",
@@ -56,7 +68,7 @@
      "cubrir": {
       "clip": "0001",
       "desde": 8.4,
-      "hasta": 12.2
+      "hasta": 12.12
      },
      "logo": "claude",
      "titulo": "FABLE 5.2",
@@ -112,9 +124,9 @@
    "cortes": [
     {
      "clip": "0001",
-     "desde": 50.884,
-     "hasta": 53.436,
-     "texto": "Anthropic presentó a Claude Fable 5.2,"
+     "desde": 50.88,
+     "hasta": 51.95,
+     "texto": "Anthropic presentó a Claude"
     },
     {
      "clip": "0001",
@@ -140,9 +152,9 @@
      "tipo": "logo",
      "en": "Anthropic",
      "offset": 0,
-     "dur": 2.2,
+     "dur": 2.6,
      "logo": "claude",
-     "texto": "Claude Fable 5.2",
+     "texto": "CLAUDE FABLE 5.2",
      "y": 455
     },
     {
@@ -215,7 +227,7 @@
     },
     {
      "clip": "0001",
-     "desde": 212.228,
+     "desde": 213.83,
      "hasta": 216.54,
      "texto": "Eso significa que tendremos a Claude por mucho tiempo más."
     }
@@ -277,8 +289,8 @@
     {
      "clip": "0001",
      "desde": 252.932,
-     "hasta": 255.15,
-     "texto": "Estaba investigando unos datos sobre salud pública.",
+     "hasta": 257.85,
+     "texto": "Estaba investigando unos datos sobre salud pública y sin querer terminó en el portal del gobierno de Australia.",
      "bn": true
     },
     {
@@ -290,7 +302,7 @@
     },
     {
      "clip": "0001",
-     "desde": 321.732,
+     "desde": 322.79,
      "hasta": 329.18,
      "texto": "Pero el caso encendió muchas alarmas. Australia ya está proponiendo reportar estos casos de IA y colocarles unas restricciones.",
      "bn": true
