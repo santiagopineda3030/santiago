@@ -270,3 +270,4 @@
 - 11 nov · Skill referentes-edicion (.claude/skills/) + doc Drive 'Referentes de edición · ContentIA' (1hIAUPnK…) + instrucción en areas/5-edicion-videos (el robot la lee sin cambiar su tarea). 5 referentes: E, v, L, C, Y.
 - 11 nov · Cascada: kit-cascada/reglas.json de ContentIA con las respuestas de Santi (CONTENTIA, colores por tipo, 3 clips 15–20 s, clips de todo, sin CTA). Falta montar el editor del kit en la nube.
 - 11 nov · Punto 4 (cascada): kit-cascada/reglas.json con las respuestas de Santi (CONTENTIA; cian Y/E/clase, rojo noticias, amarillo lead; 3 clips de 15–20 s de los momentos más fuertes; sin CTA; sin herramientas; descripción = texto + 5 hashtags). El robot la hace: sección Cascada en la skill editar-video (crea las filas C en la COLA al terminar el origen).
+- 11 nov · Nuevo chat Santi · Base 2 (session_01McnvqvoHXuH9paY43dMMXW, Sonnet) creado desde el Base viejo, que quedó muy largo. El Base viejo ya no se usa.
