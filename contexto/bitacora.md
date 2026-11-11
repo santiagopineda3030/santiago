@@ -266,3 +266,4 @@
 - 11 nov · Referente de edición 2 (Noticias, animación neón roja) guardado: referentes/noticias-ref1.mp4.
 - 11 nov · Referente de edición 3 (Lead, pantalla dividida + resaltador amarillo) guardado: referentes/lead-ref1.mp4.
 - 11 nov · Referente de edición 4 (Clip cascada / clase en vivo, estilo kit-cascada) guardado: referentes/clip-ref1.mp4.
+- 11 nov · Referente de edición 5 (YouTube largo, título detrás de la persona + b-roll con lupa) guardado: referentes/youtube-largo-ref1.mp4.

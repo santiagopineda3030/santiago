@@ -42,3 +42,12 @@ Es exactamente el estilo que produce el kit de Juanita (`kit-cascada/editor/rend
 - **Tarjeta de idea:** recuadro con borde verde y check ("✓ CONSULTA EJECUTADA · …pero eso no significa que responda bien") que aparece cuando lo dice.
 - **Subtítulos:** 2–3 palabras abajo, blancos con la palabra clave en amarillo.
 - Si no hay pantalla compartida (YouTube largo con solo cara): cámara en la tarjeta grande y tarjetas de idea encima.
+
+## YouTube largo (Y)
+### ref1 · `referentes/youtube-largo-ref1.mp4` (25 s, 16:9) · `youtube-largo-ref1-cuadros.jpg`
+- **Plano principal:** sentado, plano abierto que muestra el lugar (se ve el espacio, no solo la cara). Corte a plano más cerrado para frases importantes. Color cálido y cinematográfico.
+- **Título detrás de la persona:** texto gigante en negrita ("TODA MI HISTORIA", rojo + blanco) puesto DETRÁS del cuerpo (efecto profundidad: la persona tapa parte de las letras). Se usa para el título del video o de cada capítulo.
+- **Subtítulos:** frases de 4–6 palabras en itálica blanca, centradas abajo, con la palabra clave en negrita ("real", "fin", "camino"); entran con fundido.
+- **B-roll entre frases:** clips tipo vlog cámara en mano (a veces en blanco y negro), fotos de archivo reveladas con una **lupa** que pasa por encima, collage de fotos sobre fondo rojo oscuro, clips emotivos. Cada inserto 1–3 s.
+- **Ritmo:** pausado comparado con los verticales: plano principal largo + insertos que ilustran lo que dice.
+- Para ContentIA (Y1 "Cómo publico todos los días sin editar"): título detrás de Santi con cian + blanco; b-roll de grabando, del calendario lleno, de notificaciones de "publicado" (sin mostrar herramientas por dentro).
