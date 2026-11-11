@@ -24,6 +24,8 @@
 6. Hoja › Plan IG › Conectar TikTok › Autorizar. Luego Plan IG › Probar conexión con TikTok.
 7. Pedir la auditoría (necesita páginas de Términos y Privacidad públicas y un video demo) para pasar a directo.
 
+> **Auditoría (11 nov):** todo preparado en `contexto/tiktok-auditoria.md` (reglas, textos, demo, pasos de Santi). Falta el panel "Aprobar para TikTok".
+
 ## Pendiente / dudas
 - 6 nov: **app creada** en developers.tiktok.com. El error de ayer era que ahora TikTok exige una *organización*.
   - Organización **ContentIA** (Org ID `7705137509315019796`) › app **ContentIA Publicador** (tipo Other).

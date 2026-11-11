@@ -278,3 +278,4 @@
 - 11 nov 15:43 · Tracker instalado por Santi (instalarTracker OK). Primer reporte solo a las 7 a. m. dentro de 3 días.
 - 11 nov · Tracker movido a Drive › ContentIA (raíz) y renombrado "Tracker ContentIA" (mismo ID, el script sigue igual).
 - 11 nov · Eventos de Calendar E1…C3 movidos +2 días (E1 13 … S1 19, L2 y C3 20). v6 ya estaba limpio. Landing → chat Web (session_01Mcnvqv1P2nUJkHxEaE2d7r); auditoría TikTok → 📁 TikTok.
+- 11 nov · TikTok auditoría preparada (contexto/tiktok-auditoria.md): TikTok rechaza apps de uso personal y exige pantalla de publicar con privacidad sin defecto, interacciones, divulgación comercial y consentimiento. Falta construir el panel 'Aprobar para TikTok' (necesita OK de Santi) y grabar el demo. Pasos del portal avisados a Base 2.
