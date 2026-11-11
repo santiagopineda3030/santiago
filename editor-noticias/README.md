@@ -65,6 +65,8 @@ python3 editar_v2.py --videos crudos-vN --edl edl-vN.json --trozos salida-vN/tro
   y nombrarlo `V5_0001_D.mp4` (el editor busca `_0001_`). Transcribir con `trozos_vad.py` (busca *.MP4).
 - Santi sale a la izquierda: `--centro-x 0.0 --centro-y 0.36 --zoom-base 1.3` para que nunca se salga del cuadro.
 
+- Blanco y negro por partes (11 nov, referente de Santi): `"bn": true` en un corte del EDL.
+
 ## Uso (versión vieja, v1)
 ```bash
 pip install faster-whisper rapidfuzz      # una vez

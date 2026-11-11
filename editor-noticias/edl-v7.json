@@ -185,7 +185,8 @@
      "clip": "0001",
      "desde": 136.804,
      "hasta": 139.836,
-     "texto": "Alquiló un campus gigantesco en Texas por 15 años"
+     "texto": "Alquiló un campus gigantesco en Texas por 15 años",
+     "bn": true
     },
     {
      "clip": "0001",
@@ -203,7 +204,8 @@
      "clip": "0001",
      "desde": 168.548,
      "hasta": 170.268,
-     "texto": "Y la razón de ellos es clarísima:"
+     "texto": "Y la razón de ellos es clarísima:",
+     "bn": true
     },
     {
      "clip": "0001",
@@ -275,20 +277,23 @@
     {
      "clip": "0001",
      "desde": 252.932,
-     "hasta": 257.948,
-     "texto": "Estaba investigando unos datos sobre salud pública y sin querer terminó en el portal del gobierno de Australia."
+     "hasta": 255.15,
+     "texto": "Estaba investigando unos datos sobre salud pública.",
+     "bn": true
     },
     {
      "clip": "0001",
      "desde": 287.012,
      "hasta": 289.756,
-     "texto": "Por suerte no pasó nada, no sacó datos sensibles ni nada."
+     "texto": "Por suerte no pasó nada, no sacó datos sensibles ni nada.",
+     "bn": true
     },
     {
      "clip": "0001",
      "desde": 321.732,
      "hasta": 329.18,
-     "texto": "Pero el caso encendió muchas alarmas. Australia ya está proponiendo reportar estos casos de IA y colocarles unas restricciones."
+     "texto": "Pero el caso encendió muchas alarmas. Australia ya está proponiendo reportar estos casos de IA y colocarles unas restricciones.",
+     "bn": true
     }
    ],
    "graficos": [
@@ -346,7 +351,8 @@
      "clip": "0001",
      "desde": 350.276,
      "hasta": 352.988,
-     "texto": "Y la publicidad está llegando hasta las plataformas de IA."
+     "texto": "Y la publicidad está llegando hasta las plataformas de IA.",
+     "bn": true
     },
     {
      "clip": "0001",
@@ -422,7 +428,8 @@
      "clip": "0001",
      "desde": 424.644,
      "hasta": 429.532,
-     "texto": "Pero ojo, las personas que lo están probando dicen que es muy lento todavía y que necesita mucha supervisión."
+     "texto": "Pero ojo, las personas que lo están probando dicen que es muy lento todavía y que necesita mucha supervisión.",
+     "bn": true
     },
     {
      "clip": "0001",
@@ -434,7 +441,8 @@
      "clip": "0001",
      "desde": 460.95,
      "hasta": 466.748,
-     "texto": "Y ten mucho cuidado si tienes alguna información sensible en tu computador. Uno nunca sabe si te hackean o puede pasar algo."
+     "texto": "Y ten mucho cuidado si tienes alguna información sensible en tu computador. Uno nunca sabe si te hackean o puede pasar algo.",
+     "bn": true
     }
    ],
    "graficos": [

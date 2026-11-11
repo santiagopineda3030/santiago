@@ -358,7 +358,7 @@ def render(plan, clips, infos, tmp):
         fade = min(0.02, dur / 4)
         ffmpeg("-ss", f"{pz['ini']:.3f}", "-t", f"{dur + 0.1:.3f}", "-i", str(clips[pz["clip"]]),
                "-map", "0:v:0", "-map", "0:a:0",
-               "-vf", congelar(pz, dur) + filtro_encuadre(infos[pz["clip"]], pz["zoom"]), "-frames:v", str(n),
+               "-vf", congelar(pz, dur) + filtro_encuadre(infos[pz["clip"]], pz["zoom"]) + (",hue=s=0,eq=contrast=1.3:brightness=-0.03" if pz.get("bn") else ""), "-frames:v", str(n),
                "-af", f"aresample=48000,apad,atrim=0:{dur:.6f},afade=t=in:d={fade:.3f},"
                       f"afade=t=out:st={max(0, dur - fade):.4f}:d={fade:.3f}",
                "-ac", "2", "-c:v", "libx264", "-preset", "veryfast", "-crf", "16",

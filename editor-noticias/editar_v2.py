@@ -381,7 +381,7 @@ def main():
                 if acum > GRUPO_MAX:
                     zoom, acum = zooms[(zooms.index(zoom) + 1) % len(zooms)], 0.0
                 pz = {"seccion": s["titulo"], "clip": ci, "ini": round(x, 3), "fin": round(y, 3), "zoom": zoom,
-                      "palabras": asignadas[i]}
+                      "palabras": asignadas[i], "bn": bool(c.get("bn"))}  # 11 nov: tramos en blanco y negro (referente)
                 plan.append(pz)
                 sec["piezas"].append(pz)
                 acum += y - x
