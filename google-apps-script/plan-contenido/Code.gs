@@ -4,7 +4,7 @@
  *
  * Pestañas: <Mes> (Noviembre, Diciembre…) · COLA POR EDITAR · CAL IG (la crea el script).
  * Flujo:
- *  1. El video editado se sube a CARPETA_EDITADOS con el código al inicio: "v7 1.0 tema.mp4".
+ *  1. El video editado se sube a CARPETA_EDITADOS con el código al inicio: "v7 1.0 tema.mp4" (o E1, Y1, L1, S1, C1).
  *  2. traerVideosNuevos (cada hora): pega el link en la fila de esa idea → Publicación = "Escribiendo descripción".
  *  3. Se escribe la descripción y se pasa a "Listo". Lo "Listo" sin fecha recibe el siguiente día libre a la HORA.
  *  4. Quien aprueba cambia Publicación → "Publicar". A la fecha y hora de la fila se publica solo en Instagram
@@ -260,10 +260,11 @@ function listarVideos_(carpeta) {
   return out;
 }
 
-/** "v7 1.0 tema.mp4" → "v7". */
+/** "v7 1.0 tema.mp4" → "v7" · "E1 1.0 tema.mp4" → "e1". Letras: v noticias, e explicativo, y YouTube largo,
+ *  l lead, s VSL, c clip de cascada (buscarCodigo_ compara en minúsculas). */
 function codigoDe_(nombre) {
-  const m = String(nombre).match(/^\s*v\s*0*(\d+)(?=[\s._-]|$)/i);
-  return m ? 'v' + m[1] : '';
+  const m = String(nombre).match(/^\s*([veylsc])\s*0*(\d+)(?=[\s._-]|$)/i);
+  return m ? m[1].toLowerCase() + m[2] : '';
 }
 
 function buscarCodigo_(planes, cod) {

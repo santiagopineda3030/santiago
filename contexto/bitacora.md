@@ -256,3 +256,4 @@
 - 11 nov · ✅ v7 publicado en las 3 redes: IG Dfm3XTmnLo5, YouTube UN7AEhhYEdY, TikTok 7706955747200011000. Evento verde en Calendar. Limpieza v6 y v7 pendiente (la hace 📁 Edición).
 - 11 nov · Limpieza v6 y v7: a la papelera crudos (1Xwn818…, 1dkhvTu…), guiones, ideas y mp4 (12rPzjy…, 1mKNPlj…). Copias en drive-respaldo/guiones/ (v7-idea.md nuevo). Hoja G7/G17 actualizada. Santi vacía la papelera.
 - 11 nov · Pasos 1 y 2 del plan técnico: tipos nuevos (Explicativo, YouTube largo, Lead, VSL, Clip cascada) y YouTube largo solo a YouTube, subido por partes de 16 MB en varias vueltas. Falta que Santi pegue Code.gs y YouTube.gs en Apps Script.
+- 11 nov · Code.gs: codigoDe_ ahora reconoce E/Y/L/S/C además de v (antes solo v: los videos E1, Y1… no se habrían unido a su fila).
