@@ -32,3 +32,13 @@ Sirve para las **escenas animadas** que tapan o acompañan cada noticia (no para
 - **Subtítulos:** muy pequeños, con la palabra clave en amarillo.
 - **Ritmo:** una idea cada 1–2 s; frases cortas que se arman en pantalla mientras las dice.
 - Para ContentIA: misma estructura (pregunta arriba + idea animada + cara), con nuestros colores (cian) o amarillo si Santi lo pide.
+
+## Clip cascada (C) · clips de YouTube largo o de sesiones de clase
+### ref1 · `referentes/clip-ref1.mp4` (8,7 s, vertical) · `clip-ref1-cuadros.jpg`
+Es exactamente el estilo que produce el kit de Juanita (`kit-cascada/editor/render/overlay.html`): usarlo tal cual, con colores de ContentIA.
+- **Fondo:** la misma toma muy desenfocada llenando la pantalla vertical.
+- **Arriba, fijo todo el video:** etiqueta en píldora pequeña ("CLASE EN VIVO · WORK IN TECH" → para nosotros "CEREBRO DE CONTENIDO · CONTENTIA") + gancho de 2 líneas en blanco con la parte clave en color ("no sale en rojo").
+- **Centro:** la presentación/pantalla en una tarjeta redondeada (con el cursor visible); debajo, la cámara en otra tarjeta más pequeña.
+- **Tarjeta de idea:** recuadro con borde verde y check ("✓ CONSULTA EJECUTADA · …pero eso no significa que responda bien") que aparece cuando lo dice.
+- **Subtítulos:** 2–3 palabras abajo, blancos con la palabra clave en amarillo.
+- Si no hay pantalla compartida (YouTube largo con solo cara): cámara en la tarjeta grande y tarjetas de idea encima.
