@@ -455,3 +455,152 @@ def construir(g, dur, assets):
     if t == "robo":
         return g_robo(dur, lg, g.get("titulo", "HACKERS CON IA"))
     return _construir_v5(g, dur, assets)
+
+
+# --------------------------------------------------------------------------- escenas v7 (11 nov)
+def g_agujero(dur, titulo="FABLE 5.2", sub="el nuevo modelo de Claude", ruta_logo=None):
+    """Agujero negro con disco de acreción girando y el nombre del modelo enorme encima."""
+    lg = _logo(ruta_logo, 90, 260)
+
+    def dib(im, t):
+        capa = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        d = ImageDraw.Draw(capa)
+        cx, cy = W / 2, 900
+        for k in range(26):
+            a = t * 2.2 + k * 0.5
+            r = 170 + k * 9
+            col = (AMARILLO if k % 3 == 0 else MAGENTA if k % 3 == 1 else CIAN) + (150,)
+            d.arc((cx - r * 1.6, cy - r * 0.55, cx + r * 1.6, cy + r * 0.55), math.degrees(a) % 360, (math.degrees(a) + 90) % 360, fill=col, width=5)
+        im.alpha_composite(capa.filter(ImageFilter.GaussianBlur(3)))
+        ImageDraw.Draw(im).ellipse((cx - 150, cy - 150, cx + 150, cy + 150), fill=(0, 0, 0, 255), outline=AMARILLO + (255,), width=4)
+        if lg:
+            A.pegar_centro(im, lg, cx, cy)
+        k = A.ease_out_back(A.clamp((t - 0.1) / 0.35))
+        if k > 0:
+            A.pegar_centro(im, A.escalar(_ajustar(_neon_txt(titulo, 150, AMARILLO), 980), k), W / 2, 560)
+        q = A.clamp((t - 0.5) / 0.3)
+        if q > 0:
+            A.pegar_centro(im, A.con_alfa(A._texto_img_base(sub, 46, (240, 240, 250), False), q), W / 2, 1200)
+
+    return _escena(dur, dib, "golpe")
+
+
+def _bandera_australia(w=320):
+    h = w // 2
+    im = Image.new("RGBA", (w, h), (0, 0, 139, 255))
+    d = ImageDraw.Draw(im)
+    q = (0, 0, w // 2, h // 2)
+    d.line((0, 0, q[2], q[3]), fill=(255, 255, 255, 255), width=10); d.line((0, q[3], q[2], 0), fill=(255, 255, 255, 255), width=10)
+    d.line((0, 0, q[2], q[3]), fill=(200, 16, 46, 255), width=4); d.line((0, q[3], q[2], 0), fill=(200, 16, 46, 255), width=4)
+    d.rectangle((q[2] / 2 - 9, 0, q[2] / 2 + 9, q[3]), fill=(255, 255, 255, 255)); d.rectangle((0, q[3] / 2 - 9, q[2], q[3] / 2 + 9), fill=(255, 255, 255, 255))
+    d.rectangle((q[2] / 2 - 5, 0, q[2] / 2 + 5, q[3]), fill=(200, 16, 46, 255)); d.rectangle((0, q[3] / 2 - 5, q[2], q[3] / 2 + 5), fill=(200, 16, 46, 255))
+
+    def estrella(x, y, r):
+        pts = [(x + (r if i % 2 == 0 else r * 0.45) * math.cos(-math.pi / 2 + i * math.pi / 7), y + (r if i % 2 == 0 else r * 0.45) * math.sin(-math.pi / 2 + i * math.pi / 7)) for i in range(14)]
+        d.polygon(pts, fill=(255, 255, 255, 255))
+    estrella(w * 0.25, h * 0.75, h * 0.14)
+    for x, y in ((0.75, 0.2), (0.62, 0.45), (0.86, 0.4), (0.75, 0.8)):
+        estrella(w * x, h * y, h * 0.07)
+    return im
+
+
+def g_australia(dur, ruta_logo=None, titulo="ENTRÓ SIN PERMISO", sub="portal del gobierno de Australia"):
+    """Bandera de Australia, portal bloqueado que se 'rompe' y sello rojo SIN PERMISO."""
+    band = _bandera_australia(360)
+    lg = _logo(ruta_logo, 90, 260)
+
+    def dib(im, t):
+        A.pegar_centro(im, band, W / 2, 600)
+        p = A._tarjeta_ia(760, 300)
+        A.pegar_centro(p, A._texto_img_base("ACCESO RESTRINGIDO", 44, (255, 255, 255)), 380, 80)
+        bar = int(620 * A.clamp((t - 0.2) / (dur * 0.4)))
+        ImageDraw.Draw(p).rectangle((70, 160, 70 + bar, 200), fill=ROJO_N + (255,))
+        if lg:
+            A.pegar_centro(p, lg, 380, 250)
+        A.pegar_centro(im, _glitch(p, t, 0.7) if A.clamp((t - dur * 0.4) / 0.2) > 0 and int(t * 10) % 3 == 0 else p, W / 2, 900)
+        ks = A.clamp((t - dur * 0.45) / 0.18)
+        if ks > 0:
+            st = _neon_txt(titulo, 76, (255, 255, 255))
+            sl = A._tarjeta_ia(st.width + 70, st.height + 50, relleno=(224, 32, 32, 255), radio=18)
+            A.pegar_centro(sl, st, sl.width / 2, sl.height / 2)
+            A.pegar_centro(im, A.con_alfa(A.escalar(sl.rotate(-6, resample=Image.BICUBIC, expand=True), 2 - A.ease_out(ks)), ks), W / 2, 1150)
+            A.pegar_centro(im, A.con_alfa(A._texto_img_base(sub, 40, (230, 230, 240), False), ks), W / 2, 1290)
+
+    return _escena(dur, dib, "alerta")
+
+
+def g_aviso(dur, ruta_logo=None, cifra="1.200 MILLONES", sub="de usuarios cada semana"):
+    """Ventana de chat 'creando imagen…' con barra de progreso; aparece un anuncio dentro; luego la cifra."""
+    lg = _logo(ruta_logo, 70, 220)
+
+    def dib(im, t):
+        v = A._tarjeta_ia(860, 520)
+        d = ImageDraw.Draw(v)
+        if lg:
+            A.pegar_centro(v, lg, 120, 70)
+        v.alpha_composite(A._texto_img_base("Creando tu imagen" + "." * (int(t * 4) % 4), 40, (255, 255, 255), False), (200, 50))
+        pr = A.clamp(t / (dur * 0.8))
+        d.rounded_rectangle((60, 140, 800, 175), 16, fill=(40, 44, 80, 255))
+        d.rounded_rectangle((60, 140, 60 + 740 * pr, 175), 16, fill=CIAN + (255,))
+        ka = A.ease_out_back(A.clamp((t - 0.5) / 0.35))
+        if ka > 0:
+            ad = Image.new("RGBA", (740, 260), (0, 0, 0, 0))
+            ImageDraw.Draw(ad).rounded_rectangle((0, 0, 739, 259), 22, fill=(250, 250, 250, 255), outline=AMARILLO + (255,), width=6)
+            ad.alpha_composite(A._texto_img_base("ANUNCIO", 30, (120, 120, 120)), (30, 24))
+            A.pegar_centro(ad, A._texto_img_base("Here's an ad while", 52, (20, 20, 30)), 370, 120)
+            A.pegar_centro(ad, A._texto_img_base("we create your image", 52, (20, 20, 30)), 370, 190)
+            A.pegar_centro(v, A.escalar(ad, ka), 430, 360)
+        A.pegar_centro(im, v, W / 2, 820)
+        kc = A.ease_out_back(A.clamp((t - dur * 0.55) / 0.3))
+        if kc > 0:
+            A.pegar_centro(im, A.escalar(_ajustar(_neon_txt(cifra, 100, ROJO_N), 980), kc), W / 2, 1180)
+            A.pegar_centro(im, A._texto_img_base(sub, 42, (230, 230, 240), False), W / 2, 1280)
+
+    return _escena(dur, dib, "pop")
+
+
+def g_cursor(dur, titulo="UN EMPLEADO DE IA EN TU PC", sello="HAY QUE SUPERVISARLO"):
+    """Escritorio con ventanas; un cursor se mueve solo y hace clic; al final un sello."""
+    flecha = Image.new("RGBA", (60, 80), (0, 0, 0, 0))
+    ImageDraw.Draw(flecha).polygon([(0, 0), (0, 64), (16, 50), (28, 78), (38, 74), (26, 46), (46, 46)], fill=(255, 255, 255, 255), outline=(0, 0, 0, 255))
+    ruta = [(260, 700), (700, 640), (520, 900), (820, 1000), (360, 1040)]
+
+    def dib(im, t):
+        _titulo(im, titulo)
+        d = ImageDraw.Draw(im)
+        d.rounded_rectangle((120, 560, 960, 1180), 24, fill=(18, 22, 48, 255), outline=CIAN + (200,), width=5)
+        for i, (x0, y0) in enumerate(((170, 620), (560, 610), (200, 900), (600, 900))):
+            d.rounded_rectangle((x0, y0, x0 + 330, y0 + 220), 14, fill=(32, 38, 80, 255), outline=(MAGENTA if i % 2 else CIAN) + (180,), width=3)
+            for k in range(3):
+                d.line((x0 + 25, y0 + 60 + k * 45, x0 + 300 - k * 60, y0 + 60 + k * 45), fill=(90, 100, 150, 255), width=8)
+        k = (t / dur) * (len(ruta) - 1)
+        i = min(int(k), len(ruta) - 2); f = A.ease_in_out(k - i)
+        x = ruta[i][0] + (ruta[i + 1][0] - ruta[i][0]) * f; y = ruta[i][1] + (ruta[i + 1][1] - ruta[i][1]) * f
+        if f > 0.9:
+            d.ellipse((x - 30, y - 30, x + 30, y + 30), outline=AMARILLO + (255,), width=4)
+        im.alpha_composite(flecha, (int(x), int(y)))
+        ks = A.clamp((t - dur * 0.6) / 0.18)
+        if ks > 0:
+            st = _neon_txt(sello, 56, (255, 255, 255))
+            sl = A._tarjeta_ia(st.width + 60, st.height + 40, relleno=(224, 32, 32, 255), radio=18)
+            A.pegar_centro(sl, st, sl.width / 2, sl.height / 2)
+            A.pegar_centro(im, A.con_alfa(A.escalar(sl.rotate(-5, resample=Image.BICUBIC, expand=True), 2 - A.ease_out(ks)), ks), W / 2, 1270)
+
+    return _escena(dur, dib, "teclas")
+
+
+_construir_v6 = construir
+
+
+def construir(g, dur, assets):
+    t = g["tipo"]
+    lg = f"{assets}/logo_{g['logo']}.png" if g.get("logo") else None
+    if t == "agujero":
+        return g_agujero(dur, g.get("titulo", "FABLE 5.2"), g.get("sub", "el nuevo modelo de Claude"), lg)
+    if t == "australia":
+        return g_australia(dur, lg, g.get("titulo", "ENTRÓ SIN PERMISO"), g.get("sub", "portal del gobierno de Australia"))
+    if t == "aviso":
+        return g_aviso(dur, lg, g.get("cifra", "1.200 MILLONES"), g.get("sub", "de usuarios cada semana"))
+    if t == "cursor":
+        return g_cursor(dur, g.get("titulo", "UN EMPLEADO DE IA EN TU PC"), g.get("sello", "HAY QUE SUPERVISARLO"))
+    return _construir_v6(g, dur, assets)

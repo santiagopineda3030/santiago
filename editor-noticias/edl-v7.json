@@ -1,0 +1,500 @@
+{
+ "nota": "v7 1.0 · cyber, voz seguida (aire 0.05, unir 0.3)",
+ "gancho_texto": "¿Resolvió lo imposible?",
+ "cta": "Sígueme para no perderte ninguna",
+ "cta_emoji": "🔔",
+ "claves": [
+  "fable",
+  "5.2",
+  "claude",
+  "anthropic",
+  "openai",
+  "chatgpt",
+  "australia",
+  "texas",
+  "2003",
+  "horas",
+  "física",
+  "1.000",
+  "30",
+  "28.000",
+  "1.800",
+  "15",
+  "1.200",
+  "anuncios",
+  "permiso",
+  "supervisarlo",
+  "lento"
+ ],
+ "secciones": [
+  {
+   "titulo": "Gancho",
+   "tipo": "gancho",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 8.1,
+     "hasta": 16.732,
+     "texto": "Fable 5.2, el nuevo modelo de Claude, acaba de resolver problemas matemáticos que ya iban sin resolverse desde el 2003 y con este se resolvieron tan solo en horas."
+    },
+    {
+     "clip": "0001",
+     "desde": 26.244,
+     "hasta": 30.46,
+     "texto": "Un agente de OpenAI acaba de entrar a un portal del gobierno australiano sin permiso."
+    },
+    {
+     "clip": "0001",
+     "desde": 32.484,
+     "hasta": 36.54,
+     "texto": "Estas son las 5 noticias de IA más importantes que pasaron el día de ayer, 10 de noviembre."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "agujero",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 8.4,
+      "hasta": 12.2
+     },
+     "logo": "claude",
+     "titulo": "FABLE 5.2",
+     "sub": "el nuevo modelo de Claude"
+    },
+    {
+     "tipo": "texto",
+     "en": "2003",
+     "offset": -0.1,
+     "dur": 2.6,
+     "lineas": [
+      "DESDE EL 2003",
+      "resuelto en horas"
+     ],
+     "ch": "⏱️",
+     "y": 455
+    },
+    {
+     "tipo": "australia",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 26.194,
+      "hasta": 30.51
+     },
+     "logo": "openai",
+     "titulo": "ENTRÓ SIN PERMISO"
+    },
+    {
+     "tipo": "hud",
+     "en": "5",
+     "offset": -0.2,
+     "dur": 3.4,
+     "texto": "TOP 5 · NOTICIAS DE IA"
+    },
+    {
+     "tipo": "texto",
+     "en": "5",
+     "offset": -0.1,
+     "dur": 3.0,
+     "lineas": [
+      "TOP 5 NOTICIAS DE IA",
+      "10 de noviembre de 2026"
+     ],
+     "ch": "📰",
+     "y": 455
+    }
+   ]
+  },
+  {
+   "titulo": "Fable",
+   "tipo": "noticia",
+   "etiqueta": "VIRAL · CLAUDE FABLE 5.2",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 50.884,
+     "hasta": 53.436,
+     "texto": "Anthropic presentó a Claude Fable 5.2,"
+    },
+    {
+     "clip": "0001",
+     "desde": 60.964,
+     "hasta": 67.292,
+     "texto": "un nuevo modelo de IA que busca revolucionar el desarrollo del software y la automatización."
+    },
+    {
+     "clip": "0001",
+     "desde": 76.868,
+     "hasta": 81.916,
+     "texto": "Según Anthropic, ya resolvió dos problemas de física abiertos que llevaban sin resolverse desde el 2003."
+    },
+    {
+     "clip": "0001",
+     "desde": 98.212,
+     "hasta": 101.628,
+     "texto": "Y más de 1.000 agentes de este modelo lo resolvieron tan solo en 30 horas."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "logo",
+     "en": "Anthropic",
+     "offset": 0,
+     "dur": 2.2,
+     "logo": "claude",
+     "texto": "Claude Fable 5.2",
+     "y": 455
+    },
+    {
+     "tipo": "texto",
+     "en": "física",
+     "offset": -0.2,
+     "dur": 2.6,
+     "lineas": [
+      "2 PROBLEMAS DE FÍSICA",
+      "agujeros negros"
+     ],
+     "ch": "🕳️",
+     "y": 455
+    },
+    {
+     "tipo": "contador",
+     "en": "1.000",
+     "offset": -0.2,
+     "dur": 2.8,
+     "desde": 0,
+     "hasta": 1000,
+     "formato": "{v:.0f}",
+     "etiqueta": "agentes · en 30 horas",
+     "y": 455
+    }
+   ]
+  },
+  {
+   "titulo": "Texas",
+   "tipo": "noticia",
+   "etiqueta": "VIRAL · ANTHROPIC EN TEXAS",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 124.74,
+     "hasta": 128.028,
+     "texto": "A su vez, Anthropic acaba de hacer una apuesta gigante por el futuro de la IA."
+    },
+    {
+     "clip": "0001",
+     "desde": 136.804,
+     "hasta": 139.836,
+     "texto": "Alquiló un campus gigantesco en Texas por 15 años"
+    },
+    {
+     "clip": "0001",
+     "desde": 148.452,
+     "hasta": 151.164,
+     "texto": "con un compromiso de 28.000 millones de dólares."
+    },
+    {
+     "clip": "0001",
+     "desde": 158.948,
+     "hasta": 162.268,
+     "texto": "Eso equivale a casi 1.800 millones de dólares por año."
+    },
+    {
+     "clip": "0001",
+     "desde": 168.548,
+     "hasta": 170.268,
+     "texto": "Y la razón de ellos es clarísima:"
+    },
+    {
+     "clip": "0001",
+     "desde": 200.388,
+     "hasta": 205.34,
+     "texto": "cada vez necesita más espacio para poder probar sus modelos y volverlos a desarrollar cada vez mejor."
+    },
+    {
+     "clip": "0001",
+     "desde": 212.228,
+     "hasta": 216.54,
+     "texto": "Eso significa que tendremos a Claude por mucho tiempo más."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "texto",
+     "en": "Texas",
+     "offset": 0,
+     "dur": 2.4,
+     "lineas": [
+      "CAMPUS EN TEXAS",
+      "por 15 años"
+     ],
+     "ch": "📍",
+     "y": 455
+    },
+    {
+     "tipo": "datacenter",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 148.402,
+      "hasta": 162.318
+     },
+     "titulo": "28.000 MILLONES",
+     "sello": "1.800 M POR AÑO"
+    },
+    {
+     "tipo": "emoji",
+     "en": "clarísima:",
+     "offset": -0.2,
+     "dur": 1.4,
+     "ch": "💡",
+     "x": 840,
+     "y": 840
+    },
+    {
+     "tipo": "logo",
+     "en": "Claude",
+     "offset": -0.2,
+     "dur": 2.2,
+     "logo": "claude",
+     "texto": "para rato",
+     "y": 455
+    }
+   ]
+  },
+  {
+   "titulo": "Australia",
+   "tipo": "noticia",
+   "etiqueta": "POLÉMICA · OPENAI",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 229.252,
+     "hasta": 233.756,
+     "texto": "Un agente de inteligencia artificial de OpenAI acaba de entrar al portal de Australia sin permiso."
+    },
+    {
+     "clip": "0001",
+     "desde": 252.932,
+     "hasta": 257.948,
+     "texto": "Estaba investigando unos datos sobre salud pública y sin querer terminó en el portal del gobierno de Australia."
+    },
+    {
+     "clip": "0001",
+     "desde": 287.012,
+     "hasta": 289.756,
+     "texto": "Por suerte no pasó nada, no sacó datos sensibles ni nada."
+    },
+    {
+     "clip": "0001",
+     "desde": 321.732,
+     "hasta": 329.18,
+     "texto": "Pero el caso encendió muchas alarmas. Australia ya está proponiendo reportar estos casos de IA y colocarles unas restricciones."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "australia",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 229.202,
+      "hasta": 233.806
+     },
+     "logo": "openai",
+     "titulo": "ENTRÓ SIN PERMISO"
+    },
+    {
+     "tipo": "emoji",
+     "en": "salud",
+     "offset": 0,
+     "dur": 1.6,
+     "ch": "🏥",
+     "x": 840,
+     "y": 840
+    },
+    {
+     "tipo": "texto",
+     "en": "suerte",
+     "offset": 0,
+     "dur": 2.4,
+     "lineas": [
+      "SIN DATOS SENSIBLES",
+      "por suerte"
+     ],
+     "ch": "😮‍💨",
+     "y": 455
+    },
+    {
+     "tipo": "texto",
+     "en": "alarmas.",
+     "offset": -0.2,
+     "dur": 3.0,
+     "lineas": [
+      "REGULADOR DE IA",
+      "Australia propone reglas"
+     ],
+     "ch": "🚨",
+     "y": 455
+    }
+   ]
+  },
+  {
+   "titulo": "ChatGPT",
+   "tipo": "noticia",
+   "etiqueta": "POLÉMICA · CHATGPT",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 350.276,
+     "hasta": 352.988,
+     "texto": "Y la publicidad está llegando hasta las plataformas de IA."
+    },
+    {
+     "clip": "0001",
+     "desde": 358.692,
+     "hasta": 361.884,
+     "texto": "ChatGPT ya te está mostrando anuncios cuando vas a generar una imagen."
+    },
+    {
+     "clip": "0001",
+     "desde": 369.828,
+     "hasta": 373.436,
+     "texto": "Y como OpenAI tiene más de 1.200 millones de usuarios semanales,"
+    },
+    {
+     "clip": "0001",
+     "desde": 389.572,
+     "hasta": 392.988,
+     "texto": "la publicidad podría convertirse en un negocio gigantesco para ellos."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "emoji",
+     "en": "publicidad",
+     "offset": 0,
+     "dur": 1.6,
+     "ch": "📢",
+     "x": 840,
+     "y": 840
+    },
+    {
+     "tipo": "aviso",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 358.642,
+      "hasta": 373.486
+     },
+     "logo": "openai",
+     "cifra": "1.200 MILLONES"
+    },
+    {
+     "tipo": "texto",
+     "en": "negocio",
+     "offset": -0.2,
+     "dur": 2.4,
+     "lineas": [
+      "NEGOCIO GIGANTE",
+      "para OpenAI"
+     ],
+     "ch": "💰",
+     "y": 455
+    }
+   ]
+  },
+  {
+   "titulo": "Agente",
+   "tipo": "noticia",
+   "etiqueta": "ÚTIL · AGENTE EN TU PC",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 398.852,
+     "hasta": 402.62,
+     "texto": "OpenAI ya permite que sus agentes trabajen directamente en tu computador."
+    },
+    {
+     "clip": "0001",
+     "desde": 413.86,
+     "hasta": 417.98,
+     "texto": "La idea es que usen tus aplicaciones y completen tareas que normalmente hacen los humanos."
+    },
+    {
+     "clip": "0001",
+     "desde": 424.644,
+     "hasta": 429.532,
+     "texto": "Pero ojo, las personas que lo están probando dicen que es muy lento todavía y que necesita mucha supervisión."
+    },
+    {
+     "clip": "0001",
+     "desde": 448.58,
+     "hasta": 452.092,
+     "texto": "Es como si contrataras un empleado nuevo. Ayuda, pero hay que supervisarlo."
+    },
+    {
+     "clip": "0001",
+     "desde": 460.95,
+     "hasta": 466.748,
+     "texto": "Y ten mucho cuidado si tienes alguna información sensible en tu computador. Uno nunca sabe si te hackean o puede pasar algo."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "logo",
+     "en": "OpenAI",
+     "offset": 0,
+     "dur": 2.0,
+     "logo": "openai",
+     "texto": "agentes en tu computador",
+     "y": 455
+    },
+    {
+     "tipo": "cursor",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 413.81,
+      "hasta": 418.03
+     },
+     "titulo": "UN EMPLEADO DE IA EN TU PC",
+     "sello": "HAY QUE SUPERVISARLO"
+    },
+    {
+     "tipo": "sello",
+     "en": "lento",
+     "offset": -0.2,
+     "dur": 1.6,
+     "texto": "LENTO",
+     "y": 560
+    },
+    {
+     "tipo": "emoji",
+     "en": "cuidado",
+     "offset": 0,
+     "dur": 2.0,
+     "ch": "🔒",
+     "x": 840,
+     "y": 840
+    }
+   ]
+  },
+  {
+   "titulo": "CTA",
+   "tipo": "cta",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 469.06,
+     "hasta": 475.068,
+     "texto": "Ya sabes, estas fueron las 5 noticias de IA más importantes que pasaron el día de ayer. No te olvides de seguirme para ver más noticias diarias."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "seguir",
+     "en": "seguirme",
+     "offset": -0.1,
+     "dur": 4.0
+    }
+   ]
+  }
+ ]
+}
