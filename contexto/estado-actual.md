@@ -53,4 +53,4 @@ Orden técnico (un chat nuevo y corto por tarea, cada uno lee este archivo + age
 5. 📁 Anuncios: tracker de anuncios (links con etiqueta → hoja de leads + reporte diario Meta).
 6. Chat Web: landing terminada + dominio. 7. 📁 TikTok: auditoría.
 Agenda actual: E1 13, Y1 14, C1 15, L1 16, E2 17, C2 18, S1 19, L2/C3 20 (+ Y2 19, E3 20 … ver VIDEOS MES). Noticias diarias 11:00 (v7 = 11 nov).
-Pendientes chicos: mover eventos de Calendar 11–18 (+2 días); limpieza v6 (crudo 1Xwn818ay0OgJ-mthE8QA1WvHeKx_z_Zu, guion, idea, mp4).
+Hecho 11 nov: eventos de Calendar movidos +2 días; v6 ya estaba limpio en Drive. Tracker de anuncios completo (falta que Santi pegue Anuncios.gs, corra instalarTracker() y confirme CPL $10). En curso: chat Web (session_01Mcnvqv1P2nUJkHxEaE2d7r) termina landing + dominio; 📁 TikTok prepara la auditoría.
