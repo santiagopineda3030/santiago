@@ -34,20 +34,8 @@
     {
      "clip": "0001",
      "desde": 8.1,
-     "hasta": 12.12,
-     "texto": "Fable 5.2, el nuevo modelo de Claude, acaba de resolver problemas matemáticos"
-    },
-    {
-     "clip": "0001",
-     "desde": 79.72,
-     "hasta": 81.75,
-     "texto": "que llevaban sin resolverse desde el 2003"
-    },
-    {
-     "clip": "0001",
-     "desde": 14.16,
-     "hasta": 16.73,
-     "texto": "y con este se resolvieron tan solo en horas."
+     "hasta": 16.732,
+     "texto": "Fable 5.2, el nuevo modelo de Claude, acaba de resolver problemas matemáticos que ya van a ir a resolverse desde el 2003 y con este se resolvieron tan solo en horas."
     },
     {
      "clip": "0001",
@@ -68,7 +56,7 @@
      "cubrir": {
       "clip": "0001",
       "desde": 8.4,
-      "hasta": 12.12
+      "hasta": 12.2
      },
      "logo": "claude",
      "titulo": "FABLE 5.2",
@@ -125,12 +113,12 @@
     {
      "clip": "0001",
      "desde": 50.88,
-     "hasta": 51.95,
-     "texto": "Anthropic presentó a Claude"
+     "hasta": 53.44,
+     "texto": "Anthropic presentó a Claude Fable 5.2,"
     },
     {
      "clip": "0001",
-     "desde": 60.964,
+     "desde": 63.05,
      "hasta": 67.292,
      "texto": "un nuevo modelo de IA que busca revolucionar el desarrollo del software y la automatización."
     },

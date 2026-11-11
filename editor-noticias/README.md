@@ -67,6 +67,8 @@ python3 editar_v2.py --videos crudos-vN --edl edl-vN.json --trozos salida-vN/tro
 
 - Blanco y negro por partes (11 nov, referente de Santi): `"bn": true` en un corte del EDL.
 
+- **Trabas (11 nov, regla):** Whisper normal limpia las repeticiones. Revisar cada corte con `initial_prompt` de muletillas ("Eh... este, este... Fa- Fable, eh, el el nuevo...") y `word_timestamps`; cortar donde una frase se repite dentro de la toma. Verificar el video final igual.
+
 ## Uso (versión vieja, v1)
 ```bash
 pip install faster-whisper rapidfuzz      # una vez
