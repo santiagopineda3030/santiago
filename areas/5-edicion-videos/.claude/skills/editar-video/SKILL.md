@@ -33,3 +33,20 @@ Un solo video sirve para **Instagram, TikTok y YouTube Shorts**. IDs en `areas/5
 
 ## Referentes (11 nov)
 Antes de editar: skill `referentes-edicion` (estilo por tipo, hojas de cuadros en `referentes/`).
+
+## Cascada (clips C1, C2…) — 11 nov, reglas de Santi en `kit-cascada/reglas.json`
+- **Cuándo:** al terminar de editar un video de origen (Y, E, v o L), mira en la pestaña del mes si hay filas Tipo
+  "Clip cascada" que digan "Sale de <código>" (columna Estado o Elementos adicionales). Si las hay y están vacías, agrega una
+  fila por clip en COLA POR EDITAR: Código C<n>, Categoría "Clip cascada", Crudo = link del video de origen YA EDITADO,
+  Estado "Por editar". Si el origen no tiene filas C, no crees ninguna.
+- **Editar un C:** baja el video de origen editado, transcríbelo completo (literal, con muletillas) y escoge los
+  **3 momentos más fuertes** (explicación, resultado, consejo, opinión o historia), **15–20 s cada uno**, que se entiendan
+  solos. Un C = un momento (C1 el más fuerte, C2, C3). Corta en frase completa, sin trabas ni silencios.
+- **Diseño:** vertical 1080×1920, etiqueta **CONTENTIA** arriba, gancho fijo (≤ 9 palabras) arriba todo el clip,
+  subtítulos de 3 palabras. Color de acento según el origen: **cian** YouTube largo, explicativo o clase; **rojo** noticias;
+  **amarillo** lead. Estilo cyber del editor (`editar_v2.py --estilo cyber` con un EDL de un solo corte) o el editor del
+  kit (`kit-cascada/editor/armar_reel.py`).
+- **Sin CTA:** termina con la última idea; nada de "comenta" ni cierre. Nunca mostrar herramientas ni configuración.
+- **Descripción:** el texto del clip + 5 hashtags de `reglas.json`, sin llamado a la acción.
+- Nombre: `C<n> 1.0 <tema>.mp4`. Mismo final que siempre: sube, fila en `Listo` (nunca `Publicar`), COLA `Revisión`, aviso
+  "🎬 C<n> listo, míralo".
