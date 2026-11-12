@@ -30,5 +30,8 @@ Borradores visuales en `landing-borrador/`.
 ## Test (aprobado)
 Datos: nombre, WhatsApp, correo. Preguntas filtro: 1) ¿Qué negocio tienes? 2) ¿Cuántas veces publicas contenido a la semana hoy? 3) ¿Estás listo para invertir en un sistema así? (Sí / No / Necesito más información)
 
+## Botón (aprobado)
+Botón principal **"Agendar llamada"** (abre el test) + enlace secundario **"o escríbenos directamente a WhatsApp"**. Línea chica: Llamada gratis de 15 minutos · Sin compromiso.
+
 ## Pendiente
-- Texto del botón (paso 4), antes y después, número de WhatsApp, captura de Arzurus, captura IG 7 días, privacidad y términos (los escribe Claude y Santi aprueba).
+- antes y después, número de WhatsApp, captura de Arzurus, captura IG 7 días, privacidad y términos (los escribe Claude y Santi aprueba).
