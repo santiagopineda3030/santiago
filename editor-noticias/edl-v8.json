@@ -1,0 +1,89 @@
+{
+ "nota": "v8 1.0 · cyber + escenas del referente rojo (ref_rojo.py), voz seguida (aire 0.05, unir 0.3), polémicas en B/N",
+ "gancho_texto": "¿Venden todo?",
+ "cta": "Sígueme para no perderte ninguna",
+ "cta_emoji": "🔔",
+ "claves": ["anthropic","claude","openai","chatgpt","qantas","australia","india","grok","elon","musk","cowbell","1.000","1.4","1.3","1.700","250","10.000","11.000","doble","850","800","35.000","contraseña","fábrica","seguro","agentes","dinero"],
+ "secciones": [
+  {"titulo": "Gancho", "tipo": "gancho",
+   "cortes": [
+    {"clip": "0001", "desde": 3.45, "hasta": 6.95, "texto": "Los fundadores de Anthropic van a vender más de 1 .000 millones de dólares en acciones."},
+    {"clip": "0001", "desde": 38.85, "hasta": 43.2, "texto": "Una aerolínea despide a más de 800 personas con la excusa de implementar la IA en su negocio."},
+    {"clip": "0001", "desde": 49.8, "hasta": 53.75, "texto": "Estas son las 5 noticias IA más importantes que pasaron el día ayer, 11 de noviembre."}
+   ],
+   "graficos": [
+    {"tipo": "ref_cifra", "cubrir": {"clip": "0001", "desde": 3.5, "hasta": 6.9}, "logo": "anthropic", "arriba": "Los fundadores de Anthropic", "grande": "venden en acciones", "desde": 0, "hasta": 1000, "formato": "+{v:,.0f}", "sufijo": "MILLONES DE DÓLARES"},
+    {"tipo": "emoji", "en": "aerolínea", "offset": 0, "dur": 2.4, "ch": "✈️", "x": 860, "y": 760},
+    {"tipo": "texto", "en": "800", "offset": -0.1, "dur": 2.8, "lineas": ["+800 DESPIDOS", "con la excusa de la IA"], "ch": "📉", "y": 455},
+    {"tipo": "ref_titulo", "cubrir": {"clip": "0001", "desde": 49.86, "hasta": 53.7}, "arriba": "Las 5 noticias de IA", "grande": "del 11 de noviembre", "sub": "las más importantes de ayer"}
+   ]},
+  {"titulo": "Anthropic", "tipo": "noticia", "etiqueta": "VIRAL · ANTHROPIC EN LA BOLSA",
+   "cortes": [
+    {"clip": "0001", "desde": 64.2, "hasta": 69.45, "texto": "Anthropic, la empresa que creó Claude, acaba de salir a la bolsa y ya vale más de 1 ,4 billones de dólares."},
+    {"clip": "0001", "desde": 82.2, "hasta": 86.15, "texto": "Un poco más que su competencia OpenAI que vale 1 ,3 billones de dólares."},
+    {"clip": "0001", "desde": 94.8, "hasta": 98.85, "texto": "Sus siete fundadores van a vender más de 1 .700 millones de dólares en acciones."},
+    {"clip": "0001", "desde": 101.7, "hasta": 104.6, "texto": "Eso equivale a más de 250 millones cada uno."}
+   ],
+   "graficos": [
+    {"tipo": "logo", "en": "Anthropic,", "offset": 0, "dur": 2.4, "logo": "anthropic", "texto": "SALE A LA BOLSA", "y": 455},
+    {"tipo": "ref_cifra", "cubrir": {"clip": "0001", "desde": 66.9, "hasta": 69.4}, "logo": "anthropic", "arriba": "Ya vale", "grande": "más que nunca", "desde": 0, "hasta": 1.4, "formato": "{v:.1f}", "sufijo": "BILLONES DE DÓLARES"},
+    {"tipo": "ref_vs", "cubrir": {"clip": "0001", "desde": 82.25, "hasta": 86.1}, "logo": "anthropic", "logo_b": "openai", "a_val": 1.4, "b_val": 1.3, "arriba": "Un poco más que", "grande": "su competencia"},
+    {"tipo": "ref_cifra", "cubrir": {"clip": "0001", "desde": 94.85, "hasta": 98.8}, "arriba": "Sus 7 fundadores venden", "grande": "sus acciones", "desde": 0, "hasta": 1700, "formato": "+{v:,.0f}", "sufijo": "MILLONES DE DÓLARES"},
+    {"tipo": "ref_onda", "cubrir": {"clip": "0001", "desde": 101.75, "hasta": 104.55}, "n": 7, "arriba": "Para cada uno de los", "grande": "7 fundadores", "cifra": "+250 M", "sub": "de dólares cada uno"}
+   ]},
+  {"titulo": "OpenAI", "tipo": "noticia", "etiqueta": "VIRAL · OPENAI PIERDE MILLONES",
+   "cortes": [
+    {"clip": "0001", "desde": 118.45, "hasta": 123.3, "texto": "OpenAI, la empresa de ChatGPT, acaba de facturar 10 .000 millones de dólares tan solo en 3 meses."},
+    {"clip": "0001", "desde": 127.95, "hasta": 130.4, "texto": "Y aun así perdió casi 11 .000 millones."},
+    {"clip": "0001", "desde": 135.85, "hasta": 137.85, "texto": "o sea, gastó más del doble de lo que ganó."},
+    {"clip": "0001", "desde": 143.3, "hasta": 146.8, "texto": "Y todavía no dan la respuesta clara de por qué esa pérdida tan inmensa."}
+   ],
+   "graficos": [
+    {"tipo": "logo", "en": "OpenAI,", "offset": 0, "dur": 2.0, "logo": "openai", "texto": "LA EMPRESA DE CHATGPT", "y": 455},
+    {"tipo": "ref_perdida", "cubrir": {"clip": "0001", "desde": 120.3, "hasta": 130.35}, "logo": "openai", "arriba": "Facturó", "grande": "en solo 3 meses", "antes": "+10.000 M", "despues": "-11.000 M", "sub": "de dólares en pérdidas"},
+    {"tipo": "texto", "en": "doble", "offset": -0.2, "dur": 2.2, "lineas": ["GASTÓ MÁS DEL DOBLE", "de lo que ganó"], "ch": "💸", "y": 455},
+    {"tipo": "texto", "en": "qué", "offset": -0.3, "dur": 2.0, "lineas": ["¿POR QUÉ?", "sin respuesta clara"], "ch": "🤔", "y": 455}
+   ]},
+  {"titulo": "Qantas", "tipo": "noticia", "etiqueta": "POLÉMICA · QANTAS DESPIDE A 850",
+   "cortes": [
+    {"clip": "0001", "desde": 153.8, "hasta": 159.1, "texto": "Qantas, la aerolínea más grande de Australia, va a despedir a más de 850 personas de su oficina.", "bn": true},
+    {"clip": "0001", "desde": 169.0, "hasta": 171.75, "texto": "Su nuevo trabajo se desplazará hasta India.", "bn": true},
+    {"clip": "0001", "desde": 175.6, "hasta": 178.45, "texto": "La excusa que ellos tienen es modernizarse con IA.", "bn": true},
+    {"clip": "0001", "desde": 197.7, "hasta": 203.2, "texto": "Más de 850 personas se quedarán sin ingresos tan solo por la excusa de implementar la IA en su negocio.", "bn": true}
+   ],
+   "graficos": [
+    {"tipo": "ref_despidos", "cubrir": {"clip": "0001", "desde": 156.2, "hasta": 171.7}, "arriba": "Qantas despide a", "grande": "850 empleados"},
+    {"tipo": "texto", "en": "excusa", "offset": -0.2, "dur": 2.6, "lineas": ["LA EXCUSA:", "modernizarse con IA"], "ch": "🤖", "y": 455},
+    {"tipo": "sello", "en": "ingresos", "offset": -0.2, "dur": 2.4, "texto": "850 SIN INGRESOS", "y": 520}
+   ]},
+  {"titulo": "Grok", "tipo": "noticia", "etiqueta": "POLÉMICA · GROK EXPONE DATOS",
+   "cortes": [
+    {"clip": "0001", "desde": 222.3, "hasta": 227.75, "texto": "Grok, la IA de Elon Musk, acaba de dejar a más de 35 .000 aplicaciones abiertas para cualquier persona.", "bn": true},
+    {"clip": "0001", "desde": 234.3, "hasta": 238.1, "texto": "Sin contraseña, y más de 850 tenían datos sensibles.", "bn": true},
+    {"clip": "0001", "desde": 250.5, "hasta": 252.95, "texto": "Todo por un ajuste que venía activado desde fábrica.", "bn": true},
+    {"clip": "0001", "desde": 257.7, "hasta": 260.8, "texto": "Un solo error dejó ver datos que nunca se debieron ver a la luz.", "bn": true}
+   ],
+   "graficos": [
+    {"tipo": "ref_candado", "cubrir": {"clip": "0001", "desde": 223.9, "hasta": 238.05}, "arriba": "Grok, la IA de Elon Musk", "grande": "35.000 apps abiertas", "hasta": 35000, "sello": "DATOS SENSIBLES", "sub": "sin contraseña"},
+    {"tipo": "texto", "en": "ajuste", "offset": -0.2, "dur": 2.4, "lineas": ["UN SOLO AJUSTE", "activado de fábrica"], "ch": "⚙️", "y": 455},
+    {"tipo": "emoji", "en": "error", "offset": -0.1, "dur": 2.2, "ch": "⚠️", "x": 860, "y": 760}
+   ]},
+  {"titulo": "Seguro", "tipo": "noticia", "etiqueta": "ÚTIL · SEGURO PARA TU IA",
+   "cortes": [
+    {"clip": "0001", "desde": 273.35, "hasta": 275.55, "texto": "Ya existe un seguro para cuando la IA se equivoca."},
+    {"clip": "0001", "desde": 280.3, "hasta": 282.35, "texto": "La aseguradora Cowbell en Estados Unidos"},
+    {"clip": "0001", "desde": 303.55, "hasta": 306.3, "texto": "lanzó un seguro para negocios que utilizan agentes de IA,"},
+    {"clip": "0001", "desde": 320.05, "hasta": 324.65, "texto": "por si algún día la IA comete algún error y les hace perder dinero, ahí está ese seguro."}
+   ],
+   "graficos": [
+    {"tipo": "ref_seguro", "cubrir": {"clip": "0001", "desde": 273.4, "hasta": 282.3}, "arriba": "Ya existe un", "grande": "seguro para tu IA", "sello": "POR SI LA IA SE EQUIVOCA", "sub": "Cowbell · Estados Unidos"},
+    {"tipo": "texto", "en": "agentes", "offset": -0.3, "dur": 2.4, "lineas": ["PARA NEGOCIOS", "que usan agentes de IA"], "ch": "🛡️", "y": 455},
+    {"tipo": "emoji", "en": "dinero,", "offset": -0.2, "dur": 2.0, "ch": "💸", "x": 860, "y": 760}
+   ]},
+  {"titulo": "CTA", "tipo": "cta",
+   "cortes": [
+    {"clip": "0001", "desde": 336.15, "hasta": 342.95, "texto": "ya sabes, esas fueron las 5 noticias de IA más importantes que pasaron el día ayer, 11 de noviembre. No te olvides de seguirme para ver más noticias diarias."}
+   ],
+   "graficos": [{"tipo": "seguir", "en": "seguirme", "offset": -0.1, "dur": 4.0}]}
+ ]
+}
