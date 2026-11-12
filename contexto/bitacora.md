@@ -292,3 +292,4 @@
 - 12 nov 14:40 · Limpieza v8 (Santi): a la papelera el crudo V8.MOV (17nOu7J…), guion terminado (1D8JOv_…) e idea (19f-tcn…). Copias: drive-respaldo/guiones/v8-noticias-ia-11-nov.md y v8-idea.md (nueva). Hoja G18 y COLA E9 actualizadas. En Drive solo queda v8 1.2 (1iGVZho…). Santi vacía la papelera.
 - 12 nov · v8 movido en Calendar a las 14:40 (Santi lo programó a esa hora). Plan de Santi para hoy: mejorar guion E1 y Y1, grabar E1 y v9 (suben mañana); definir la landing en Web · Landing (sin dominio todavía).
 - 12 nov · PENDIENTE (después, Santi): reels de prueba (Trial reels) de Instagram automáticos: columna 'Prueba' Sí/No en la hoja → Code.gs sube a IG como reel de prueba (solo a no seguidores). Lo hace 📁 Instagram cuando Santi diga.
+- 12 nov · Web · Landing: definición en curso con Santi (contexto/landing.md): titular, Cerebro, collage y calendario visual (15 min, L–V 10–8) aprobados; borradores en landing-borrador/. Nada conectado.
