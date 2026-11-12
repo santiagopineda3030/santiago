@@ -169,7 +169,9 @@ def sin_pausas(a, b, sil):
 
 
 # --------------------------------------------------------------------------- subtítulos (ASS v2)
-def ass_v2(palabras, secciones, gancho, cta, ruta):
+def ass_v2(palabras, secciones, gancho, cta, ruta, colores=None):
+    """colores: {"santi": "&H00FFFFFF", "otro": "&H0000E6FF"} (ASS BGR). 12 nov (E1): cada persona con su color."""
+    colores = dict({"santi": editar.BLANCO, "otro": "&H0000E6FF", "otra": "&H00FF9AF5"}, **(colores or {}))
     claves = {"anthropic", "claude", "seti", "google", "gemini", "apple", "siri", "revolut", "ia", "ias", "uber"} | CLAVES_EXTRA
     grupos, actual = [], []
     for i, w in enumerate(palabras):
@@ -177,6 +179,7 @@ def ass_v2(palabras, secciones, gancho, cta, ruta):
         sig = palabras[i + 1] if i + 1 < len(palabras) else None
         largo = len(" ".join(x["w"] for x in actual))
         if (len(actual) >= 4 or (sig and largo + 1 + len(sig["w"]) > 17) or not sig
+                or (sig and sig.get("h", "santi") != w.get("h", "santi"))
                 or re.search(r"[.?!…]$", w["w"]) or (len(actual) >= 2 and (re.search(r"[,;:]$", w["w"]) or sig["s"] - w["e"] > 0.35))):
             grupos.append(actual)
             actual = []
@@ -184,8 +187,10 @@ def ass_v2(palabras, secciones, gancho, cta, ruta):
     for gi, g in enumerate(grupos):
         ini = g[0]["s"]
         fin = min(grupos[gi + 1][0]["s"] if gi + 1 < len(grupos) else g[-1]["e"] + 0.4, g[-1]["e"] + 0.6)
-        txt = " ".join((f"{{\\c{editar.ACENTO}}}{editar.ass_texto(w['w'])}{{\\c{editar.BLANCO}}}"
-                        if editar.es_clave(w["w"], claves) else editar.ass_texto(w["w"])) for w in g)
+        base = colores.get(g[0].get("h", "santi"), editar.BLANCO)
+        otro = g[0].get("h", "santi") != "santi"
+        txt = f"{{\\c{base}}}" + " ".join((f"{{\\c{editar.ACENTO}}}{editar.ass_texto(w['w'])}{{\\c{base}}}"
+                        if editar.es_clave(w["w"], claves) and not otro else editar.ass_texto(w["w"])) for w in g)
         ev.append((0, "Sub", ini, max(fin, ini + 0.3), "{\\fscx82\\fscy82\\t(0,90,\\fscx100\\fscy100)}" + txt))
     pop = "{\\fad(60,160)\\fscx70\\fscy70\\t(0,140,\\fscx108\\fscy108)\\t(140,240,\\fscx100\\fscy100)}"
     noticias = [s for s in secciones if s["tipo"] == "noticia"]
@@ -326,6 +331,8 @@ def main():
     ap.add_argument("--aire", type=float, default=0.14, help="s de aire antes/después de cada tramo de voz (10 nov: 0.09 = habla seguido)")
     ap.add_argument("--unir", type=float, default=0.65, help="pausas menores a esto no se cortan (10 nov: 0.4)")
     ap.add_argument("--centro-x", type=float, default=0.53)
+    ap.add_argument("--fluido", action="store_true", help="12 nov (E1): sin cambios de zoom entre cortes (video que se sienta de una sola toma)")
+    ap.add_argument("--sfx-cortes", default="", help="12 nov (E1): efecto de sonido en cada cambio de corte: whoosh, pop, golpe…")
     a = ap.parse_args()
     editar.CENTRO_X = a.centro_x
     editar.CENTRO_Y = a.centro_y
@@ -367,22 +374,24 @@ def main():
             ci = cod[c["clip"]]
             ini, fin = max(0.0, c["desde"] - a.aire), min(infos[ci]["dur"], c["hasta"] + a.aire)
             ws = alinear(c["texto"], palabras_de(trozos[ci], c["desde"], c["hasta"]), c["desde"], c["hasta"])
-            acum, zoom = 0.0, 1.0 if k == 0 else zooms[len(plan) % len(zooms)]
+            acum, zoom = 0.0, 1.0 if (k == 0 or a.fluido) else zooms[len(plan) % len(zooms)]
             tramos = tramos_con_voz(ini, fin, vad[ci], a.aire, a.aire, a.unir)
             # (7 nov) ya NO se recorta el audio por la mirada: solo se sostiene la imagen (congelar), así no se corta ninguna palabra
             # cada palabra va al tramo más cercano (ninguna se pierde) y se ajusta a sus bordes
             asignadas = {i: [] for i in range(len(tramos))}
+            hab = c.get("hablante", "santi")  # 12 nov (E1): quién habla en este corte → color del subtítulo
             for w in ws:
                 m = (w["s"] + w["e"]) / 2
                 i = min(range(len(tramos)), key=lambda i: 0 if tramos[i][0] <= m <= tramos[i][1]
                         else min(abs(m - tramos[i][0]), abs(m - tramos[i][1])))
                 x, y = tramos[i]
-                asignadas[i].append(dict(w, s=min(max(w["s"], x), y - 0.05), e=max(min(w["e"], y), x + 0.05)))
+                asignadas[i].append(dict(w, s=min(max(w["s"], x), y - 0.05), e=max(min(w["e"], y), x + 0.05), h=hab))
             for i, (x, y) in enumerate(tramos):
-                if acum > GRUPO_MAX:
+                if acum > GRUPO_MAX and not a.fluido:
                     zoom, acum = zooms[(zooms.index(zoom) + 1) % len(zooms)], 0.0
                 pz = {"seccion": s["titulo"], "clip": ci, "ini": round(x, 3), "fin": round(y, 3), "zoom": zoom,
-                      "palabras": asignadas[i], "bn": bool(c.get("bn"))}  # 11 nov: tramos en blanco y negro (referente)
+                      "palabras": asignadas[i], "bn": bool(c.get("bn")), "corte_ini": i == 0,
+                      "zoom_fijo": a.fluido}  # 11 nov: tramos en blanco y negro (referente)
                 plan.append(pz)
                 sec["piezas"].append(pz)
                 acum += y - x
@@ -471,12 +480,16 @@ def main():
         graficos.append((t0, gr.caja, ruta))
         if gr.sonido:
             sfx.append((t0, gr.sonido))
+    if a.sfx_cortes:  # 12 nov (E1): efecto de sonido en cada cambio de toma/escena, sin animación
+        for k, pz in enumerate(plan):
+            if k and pz.get("corte_ini"):
+                sfx.append((max(0.0, pz["o_ini"] - 0.12), a.sfx_cortes))
     print(f"· {len(graficos)} gráficos animados", flush=True)
 
     # ---------------------------------------------------------------- 5. subtítulos
     ass = salida / "subtitulos_v2.ass"
     palabras = [w for p in plan for w in p["palabras_o"]]
-    ass_v2(palabras, secs, edl.get("gancho_texto"), (cta_ini, total + COLA_CTA, edl["cta"]), ass)
+    ass_v2(palabras, secs, edl.get("gancho_texto"), (cta_ini, total + COLA_CTA, edl["cta"]), ass, edl.get("colores"))
 
     # ---------------------------------------------------------------- 6. audio: voz + efectos
     # Voz (8 nov): el filtro fuerte dejaba la voz "rara" (efecto agua). Ahora: ruido suave + ecualizador + compresor.

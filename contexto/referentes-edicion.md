@@ -10,6 +10,9 @@ Videos en `referentes/` (repo). Por tipo de video de la Agenda. Copiar el ESTILO
 - **Gráficos:** fotos tipo tarjeta (esquinas redondeadas, algo inclinadas) que aparecen flotando alrededor de la cara cuando nombra ejemplos ("como estos"); fila de logos/íconos bajo el subtítulo cuando dice una categoría ("Inteligencia Artificial"), con el fondo oscurecido; logo animado (asterisco de Claude) bajo el subtítulo al nombrar la marca.
 - **Regla ContentIA:** en nuestros videos no mostrar la configuración ni las herramientas por dentro; los logos solo como ilustración.
 
+
+> **12 nov · E1 (Santi):** los explicativos con escenas (varias personas) van **muy fluidos, sin animaciones**: subtítulos de un color por persona (Santi blanco, la otra persona amarillo), efectos de sonido en cada transición (`--fluido --sfx-cortes whoosh`). Detalle: `editor-noticias/README.md` › "Videos con escenas y varias personas".
+
 ## Noticias (v)
 ### ref1 · `referentes/noticias-ref1.mp4` (15,6 s, solo animación, sin cara) · `noticias-ref1-cuadros.jpg`
 Sirve para las **escenas animadas** que tapan o acompañan cada noticia (no para el plano de Santi).

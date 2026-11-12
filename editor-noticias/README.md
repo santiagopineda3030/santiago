@@ -81,3 +81,14 @@ más lenta), `--pausa 0.4` (deja pausas más largas), `--gancho-texto "..."`, `-
 ## Pendiente (no incluido todavía)
 - B-roll (logos, capturas, clips de stock), música de fondo y efectos de sonido: necesitan los archivos.
   Si los dejas en Drive (carpeta *3. Recursos*), se pueden agregar.
+
+## Videos con escenas y varias personas (E1, 12 nov · regla de Santi)
+Para explicativos/leads con escenas (otra persona habla, Santi entra, cambio de toma), además de la sección "Edición" del guion:
+- **Muy fluido, sin que se noten los cortes:** `--fluido` (sin cambios de zoom entre cortes) + voz seguida (`--aire 0.05 --unir 0.3`).
+  Nada de imagen sostenida por mirada salvo que sea necesario. Sigue el ORDEN DE ESCENAS del guion.
+- **Identificar quién habla** en cada toma (mirar cuadros de cada corte: Santi u otra persona) y marcarlo en el EDL:
+  `"hablante": "santi"` (por defecto) u `"otro"` / `"otra"` en cada corte.
+- **Subtítulos de un color por persona:** Santi en blanco (claves en rojo/amarillo), la otra persona en amarillo (`otro`) o rosado
+  (`otra`). Se cambia con `"colores": {"otro": "&H0000E6FF"}` (ASS BGR) en el EDL.
+- **Efectos de sonido en las transiciones, SIN animaciones:** `--sfx-cortes whoosh` (suena en cada cambio de toma/escena).
+  No poner gráficos ni escenas animadas en estos videos; solo subtítulos + sonidos (+ música suave).
