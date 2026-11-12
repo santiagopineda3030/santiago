@@ -51,6 +51,6 @@ Orden técnico (un chat nuevo y corto por tarea, cada uno lee este archivo + age
 3. ✅ (11 nov) Robot de edición: Robot.gs instalado + tarea "Robot edicion" creada por Santi en claude.ai. Subir crudos con el código adelante (v8.mov). Ver robot-edicion.md.
 4. ✅ (11 nov) Cascada: reglas.json de ContentIA (otro chat, entrevista con Santi) + el robot la hace (skill editar-video › Cascada: crea las filas C en la COLA al terminar el origen y edita cada clip con editar_v2 en la nube). Prueba real: C1 dom 15 desde Y1.
 5. 📁 Anuncios: tracker de anuncios (links con etiqueta → hoja de leads + reporte diario Meta).
-6. Chat Web: landing terminada + dominio. 7. 📁 TikTok: auditoría.
+6. Chat Web: landing terminada + dominio. 7. 📁 TikTok: auditoría. 8. (Después) 📁 Instagram: reels de prueba automáticos (columna "Prueba" en la hoja).
 Agenda actual: E1 13, Y1 14, C1 15, L1 16, E2 17, C2 18, S1 19, L2/C3 20 (+ Y2 19, E3 20 … ver VIDEOS MES). Noticias diarias 11:00 (v7 = 11 nov).
 Hecho 11 nov: eventos de Calendar movidos +2 días; v6 ya estaba limpio en Drive. Tracker de anuncios completo (falta que Santi pegue Anuncios.gs, corra instalarTracker() y confirme CPL $10). En curso: chat Web (session_01Mcnvqv1P2nUJkHxEaE2d7r) termina landing + dominio; 📁 TikTok prepara la auditoría.
