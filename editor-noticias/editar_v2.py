@@ -209,7 +209,8 @@ def ass_v2(palabras, secciones, gancho, cta, ruta):
 def construir(g, dur, assets):
     t = g["tipo"]
     import cyber
-    gc = cyber.construir(g, dur, assets)
+    import ref_rojo  # 12 nov: escenas del referente de noticias (fondo negro + rojo neón)
+    gc = ref_rojo.construir(g, dur, assets) or cyber.construir(g, dur, assets)
     if gc is not None:
         return gc
     if t == "logo":

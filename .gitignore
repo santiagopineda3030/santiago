@@ -16,3 +16,5 @@ editor-noticias/__pycache__/
 editor-noticias/assets-v2/*.svg
 editor-noticias/proxy*
 editor-noticias/musica/
+editor-noticias/audio-*/
+editor-noticias/proxy-*/
