@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cerebro de Contenido · Santi</title>
+<meta name="description" content="Tu contenido se escribe, se edita y se publica solo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,800;1,900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#05080b; --panel:#0b1117; --panel2:#0e161d; --line:#17222c; --borde:#1d2b36;
+    --txt:#e8f1f5; --sub:#8a9aa6; --cian:#22d3ee; --cian2:#0891b2; --rojo:#f43f5e; --verde:#22c55e;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--txt);font-family:Inter,system-ui,sans-serif;overflow-x:hidden;
+       background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+       background-size:48px 48px;background-position:center top}
+  a{color:inherit}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+  section{padding:72px 0}
+  .etq{font-family:'JetBrains Mono',monospace;color:var(--cian);font-size:12px;letter-spacing:.22em;text-transform:uppercase;text-align:center}
+  h2{text-align:center;font-size:clamp(26px,4.4vw,40px);line-height:1.15;margin:10px 0 0;font-weight:800}
+  h2 span,.cian{color:var(--cian)}
+  .glow{box-shadow:0 0 0 1px rgba(34,211,238,.08),0 0 60px rgba(34,211,238,.10)}
+
+  /* barra arriba */
+  .top{position:sticky;top:0;z-index:20;background:rgba(5,8,11,.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .marca{display:flex;align-items:center;gap:10px;font-weight:800}
+  .logo{width:36px;height:36px;border-radius:50%;background:#000;border:2px solid var(--cian);display:grid;place-items:center;
+        font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--cian);font-size:11px;box-shadow:0 0 16px rgba(34,211,238,.35)}
+  .btn{display:inline-flex;align-items:center;gap:8px;background:var(--cian);color:#001218;border:0;border-radius:999px;
+       padding:14px 26px;font-weight:800;font-size:16px;cursor:pointer;text-decoration:none;box-shadow:0 0 26px rgba(34,211,238,.45);transition:transform .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn.chico{padding:10px 18px;font-size:14px}
+
+  /* hero */
+  .hero{padding:70px 0 40px;text-align:center}
+  .hero h1{font-size:clamp(34px,6.4vw,64px);line-height:1.05;margin:16px auto 0;max-width:900px;font-weight:900;letter-spacing:-.02em}
+  .hero p.sub{color:var(--sub);font-size:clamp(16px,2.2vw,20px);margin:18px 0 34px}
+  .video{max-width:860px;margin:0 auto;aspect-ratio:16/9;border-radius:18px;border:1px solid var(--borde);background:
+         radial-gradient(circle at 50% 45%,rgba(34,211,238,.14),transparent 60%),var(--panel);display:grid;place-items:center;position:relative;overflow:hidden}
+  .play{width:84px;height:84px;border-radius:50%;background:var(--cian);display:grid;place-items:center;box-shadow:0 0 40px rgba(34,211,238,.6)}
+  .play::after{content:"";border-left:24px solid #001218;border-top:15px solid transparent;border-bottom:15px solid transparent;margin-left:6px}
+  .video .barra{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;padding:12px 18px;
+         font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--sub);border-top:1px solid var(--line);background:rgba(0,0,0,.35)}
+  .video .pronto{position:absolute;top:16px;left:18px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--cian)}
+
+  /* cerebro */
+  .cerebro{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .cerebro h2{text-align:left}
+  .cerebro .intro{color:var(--sub);font-size:18px;margin:14px 0 0}
+  .lista{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+  .lista li{display:flex;align-items:center;gap:14px;background:var(--panel);border:1px solid var(--borde);border-radius:14px;padding:18px 20px;font-size:18px;font-weight:600}
+  .lista li .ico{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;background:rgba(34,211,238,.1);color:var(--cian);flex:none}
+  .lista li.final{background:linear-gradient(90deg,rgba(34,211,238,.18),rgba(34,211,238,.05));border-color:var(--cian2);font-weight:800}
+  .lista svg{width:20px;height:20px}
+
+  /* collage estilo Arzurus */
+  .resultados{padding-bottom:40px}
+  .numero{text-align:center;margin:18px 0 0;font-size:clamp(44px,8vw,84px);font-weight:900;font-style:italic;color:var(--cian);
+          text-shadow:0 0 34px rgba(34,211,238,.45);line-height:1}
+  .numero small{display:block;font-size:16px;font-style:normal;font-weight:500;color:var(--sub);margin-top:8px;text-shadow:none}
+  .cinta{margin-top:40px;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+  .fila{display:flex;gap:18px;width:max-content;animation:correr 60s linear infinite}
+  .fila.dos{animation-direction:reverse;animation-duration:70s;margin-top:18px}
+  .cinta:hover .fila{animation-play-state:paused}
+  @keyframes correr{to{transform:translateX(-50%)}}
+  .tarjeta{width:300px;height:380px;flex:none;border-radius:16px;background:var(--panel2);border:1px solid var(--borde);
+           position:relative;overflow:hidden;display:flex;flex-direction:column}
+  .tarjeta .foto{flex:1;overflow:hidden;display:grid;place-items:center;padding:14px 14px 0}
+  .tarjeta .foto img{width:100%;height:100%;object-fit:cover;border-radius:10px;display:block}
+  .tarjeta.stats .foto img{object-fit:contain;height:auto}
+  .tarjeta .pie{padding:14px 16px 18px;text-align:center;font-weight:900;font-style:italic;font-size:17px;line-height:1.25;text-transform:uppercase}
+  .tarjeta .pie em{display:block;font-style:italic;color:var(--cian);font-size:15px}
+  .tarjeta .chip{position:absolute;top:22px;left:22px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;
+           background:rgba(0,0,0,.7);border:1px solid var(--cian2);color:var(--cian);padding:4px 8px;border-radius:6px}
+
+  /* antes y despues */
+  .ad{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:36px}
+  .col{border-radius:18px;padding:28px;border:1px solid var(--borde);background:var(--panel)}
+  .col h3{margin:0 0 16px;font-size:22px;display:flex;align-items:center;gap:10px}
+  .col ul{margin:0;padding:0;list-style:none;display:grid;gap:12px;font-size:16px;color:var(--sub)}
+  .col li{display:flex;gap:10px}
+  .col.antes h3{color:var(--rojo)}
+  .col.antes li::before{content:"✕";color:var(--rojo);font-weight:800}
+  .col.despues{border-color:var(--cian2);background:linear-gradient(180deg,rgba(34,211,238,.10),var(--panel) 60%)}
+  .col.despues h3{color:var(--cian)}
+  .col.despues li{color:var(--txt)}
+  .col.despues li::before{content:"✓";color:var(--cian);font-weight:800}
+
+  /* cta */
+  .cta{text-align:center}
+  .cta .btn{font-size:19px;padding:18px 40px}
+  .cta .ws{display:block;margin-top:16px;color:var(--sub);font-size:15px}
+  .cta .ws a{color:var(--verde);font-weight:700;text-decoration:none}
+  .cta .nota{margin-top:10px;font-size:13px;color:var(--sub);font-family:'JetBrains Mono',monospace}
+
+  /* test */
+  .test{max-width:640px;margin:36px auto 0;background:var(--panel);border:1px solid var(--borde);border-radius:20px;padding:30px}
+  .prog{display:flex;gap:6px;margin-bottom:26px}
+  .prog i{flex:1;height:4px;border-radius:4px;background:var(--line)}
+  .prog i.on{background:var(--cian);box-shadow:0 0 10px rgba(34,211,238,.6)}
+  .paso{display:none}
+  .paso.on{display:block;animation:entra .3s ease}
+  @keyframes entra{from{opacity:0;transform:translateY(8px)}}
+  .paso .n{font-family:'JetBrains Mono',monospace;color:var(--cian);font-size:12px;letter-spacing:.15em}
+  .paso h3{font-size:24px;margin:8px 0 20px}
+  .campo{display:grid;gap:6px;margin-bottom:14px}
+  .campo label{font-size:14px;color:var(--sub)}
+  .campo input{background:#060a0e;border:1px solid var(--borde);border-radius:12px;padding:14px 16px;color:var(--txt);font-size:16px;font-family:inherit}
+  .campo input:focus{outline:none;border-color:var(--cian);box-shadow:0 0 0 3px rgba(34,211,238,.15)}
+  .opciones{display:grid;gap:10px}
+  .op{text-align:left;background:#060a0e;border:1px solid var(--borde);border-radius:12px;padding:15px 16px;color:var(--txt);font-size:16px;cursor:pointer;font-family:inherit}
+  .op:hover,.op.sel{border-color:var(--cian);background:rgba(34,211,238,.08)}
+  .nav{display:flex;justify-content:space-between;align-items:center;margin-top:22px}
+  .atras{background:none;border:0;color:var(--sub);cursor:pointer;font-size:15px;font-family:inherit}
+
+  /* calendario */
+  .cal{display:grid;grid-template-columns:320px 1fr;background:var(--panel);border:1px solid var(--borde);border-radius:18px;overflow:hidden;margin-top:36px}
+  .cal .izq{padding:28px;border-right:1px solid var(--line)}
+  .cal .izq .logo{width:68px;height:68px;font-size:17px}
+  .cal .izq h3{font-size:20px;margin:16px 0 14px}
+  .dato{display:flex;gap:10px;align-items:center;color:var(--sub);font-size:14px;margin:8px 0}
+  .dato svg{width:17px;height:17px;stroke:var(--cian);flex:none}
+  .cal .izq p{color:var(--sub);font-size:14px;line-height:1.6;margin:18px 0 0}
+  .cal .izq p b{color:var(--txt)}
+  .cal .der{padding:28px}
+  .cal .der h4{margin:0 0 18px;font-size:17px}
+  .zona{display:grid;grid-template-columns:1fr 190px;gap:22px}
+  .mes{display:flex;align-items:center;justify-content:center;gap:24px;margin-bottom:14px;font-weight:600}
+  .flecha{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line);color:var(--cian);cursor:pointer;background:none;font-size:18px}
+  .dias{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;text-align:center}
+  .dias .nd{color:var(--sub);font-size:12px;padding-bottom:6px}
+  .d{aspect-ratio:1;display:grid;place-items:center;border-radius:50%;font-size:14px;color:#33434f;border:0;background:none;font-family:inherit}
+  .d.ok{color:var(--txt);background:rgba(34,211,238,.08);cursor:pointer}
+  .d.ok:hover{background:rgba(34,211,238,.2)}
+  .d.sel{background:var(--cian);color:#001218;font-weight:700;box-shadow:0 0 18px rgba(34,211,238,.55)}
+  .horas .t{font-size:13px;color:var(--sub);margin-bottom:10px}
+  .lh{display:flex;flex-direction:column;gap:9px;max-height:300px;overflow-y:auto;padding-right:6px}
+  .lh::-webkit-scrollbar{width:6px}.lh::-webkit-scrollbar-thumb{background:var(--borde);border-radius:6px}
+  .h{border:1px solid var(--cian2);color:var(--cian);border-radius:10px;padding:11px;text-align:center;font-weight:600;cursor:pointer;background:none;font-family:inherit;font-size:15px}
+  .h:hover{background:rgba(34,211,238,.12)}
+  .h.sel{background:var(--cian);color:#001218;border-color:var(--cian)}
+  .confirmar{margin-top:14px;width:100%;justify-content:center;font-size:15px;padding:12px}
+  .tz{margin-top:20px;font-size:13px;color:var(--sub)}
+  .tz b{color:var(--txt);font-weight:500}
+  .bajo{text-align:center;color:var(--sub);font-size:13px;margin:18px auto 0;max-width:560px;line-height:1.6}
+  .wsbox{margin:20px auto 0;max-width:760px;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;
+         background:var(--panel);border:1px solid var(--borde);border-radius:16px;padding:16px;text-align:center}
+  .wsbox span{font-weight:600}
+  .wsbox a{background:var(--verde);color:#03140a;text-decoration:none;font-weight:800;border-radius:999px;padding:11px 20px;font-size:14px}
+
+  footer{border-top:1px solid var(--line);padding:36px 0 110px;margin-top:40px;color:var(--sub);font-size:14px}
+  footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+  footer nav{display:flex;gap:20px;flex-wrap:wrap}
+  footer a{text-decoration:none}
+  footer a:hover{color:var(--cian)}
+  .estado{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--verde)}
+  .estado::before{content:"● "}
+
+  .fijo{display:none}
+  .borrador{position:fixed;bottom:14px;left:14px;z-index:30;font-family:'JetBrains Mono',monospace;font-size:11px;background:#1a1205;color:#fbbf24;border:1px solid #a16207;padding:6px 10px;border-radius:8px}
+
+  @media (max-width:820px){
+    section{padding:56px 0}
+    .cerebro,.ad{grid-template-columns:1fr}
+    .cerebro h2{text-align:center}.cerebro .intro{text-align:center}
+    .cal{grid-template-columns:1fr}.cal .izq{border-right:0;border-bottom:1px solid var(--line)}
+    .zona{grid-template-columns:1fr}
+    .lh{flex-direction:row;flex-wrap:wrap;max-height:none}.lh .h{flex:1 0 30%}
+    .tarjeta{width:240px;height:320px}
+    .top .btn{display:none}
+    .fijo{display:block;position:fixed;left:16px;right:16px;bottom:14px;z-index:25}
+    .fijo .btn{width:100%;justify-content:center}
+    .borrador{bottom:80px}
+  }
+</style>
+</head>
+<body>
+
+<div class="borrador">BORRADOR · solo visual, sin conectar</div>
+
+<header class="top">
+  <div class="wrap">
+    <div class="marca"><div class="logo">SPR</div>Cerebro de Contenido</div>
+    <a class="btn chico" href="#agenda">Agendar llamada</a>
+  </div>
+</header>
+
+<!-- 1. TITULAR + VIDEO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="etq">IA · Contenido · Redes</div>
+    <h1>Tu contenido se <span class="cian">escribe</span>, se <span class="cian">edita</span> y se <span class="cian">publica solo</span></h1>
+    <p class="sub">Mira el video de abajo, ahí te explico mejor.</p>
+    <div class="video glow">
+      <div class="pronto">// video en camino</div>
+      <div class="play" aria-label="Video"></div>
+      <div class="barra"><span>intro.mp4</span><span>HD · 16:9</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. QUÉ ES EL CEREBRO -->
+<section>
+  <div class="wrap cerebro">
+    <div>
+      <div class="etq" style="text-align:left">Qué es</div>
+      <h2>El <span>Cerebro de Contenido</span></h2>
+      <p class="intro">Un sistema que trabaja por ti:</p>
+    </div>
+    <ul class="lista">
+      <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h4L19 9l-4-4L4 16v4z"/></svg></span>Escribe tus guiones</li>
+      <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M10 9l5 3-5 3z"/></svg></span>Edita tus videos</li>
+      <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l16-8-6 16-3-7-7-1z"/></svg></span>Publica solo</li>
+      <li class="final"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg></span>Tú solo grabas y apruebas</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 3. RESULTADOS (collage estilo Arzurus) -->
+<section class="resultados">
+  <div class="wrap">
+    <div class="etq">Resultados</div>
+    <h2>Esto ya está <span>funcionando</span></h2>
+    <div class="numero">+45 mil<small>reproducciones con el Cerebro de Contenido</small></div>
+  </div>
+
+  <div class="cinta">
+    <div class="fila" id="fila1"></div>
+    <div class="fila dos" id="fila2"></div>
+  </div>
+
+  <!-- antes y después -->
+  <div class="wrap">
+    <div class="ad">
+      <div class="col antes">
+        <h3>Antes</h3>
+        <ul>
+          <li>Pensar todos los días qué publicar</li>
+          <li>Horas editando cada video</li>
+          <li>Subir a mano a cada red</li>
+          <li>Días sin publicar nada</li>
+        </ul>
+      </div>
+      <div class="col despues">
+        <h3>Con el Cerebro</h3>
+        <ul>
+          <li>Los guiones llegan listos</li>
+          <li>Grabas y el video se edita solo</li>
+          <li>Sale en Instagram, TikTok y YouTube</li>
+          <li>Publicas todos los días</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. BOTÓN -->
+<section class="cta" style="padding-top:20px">
+  <div class="wrap">
+    <a class="btn" href="#test">Agendar llamada →</a>
+    <span class="ws">o <a href="#" onclick="return false">escríbenos directamente a WhatsApp</a></span>
+    <div class="nota">Llamada gratis de 15 minutos · Sin compromiso</div>
+  </div>
+</section>
+
+<!-- 5. TEST -->
+<section id="test" style="padding-top:30px">
+  <div class="wrap">
+    <div class="etq">Paso 1 de 2</div>
+    <h2>Cuéntanos de ti</h2>
+    <div class="test glow">
+      <div class="prog"><i class="on"></i><i></i><i></i><i></i></div>
+
+      <div class="paso on">
+        <div class="n">01 / 04</div>
+        <h3>Tus datos</h3>
+        <div class="campo"><label>Nombre</label><input placeholder="Tu nombre"></div>
+        <div class="campo"><label>WhatsApp</label><input placeholder="+57 300 123 4567"></div>
+        <div class="campo"><label>Correo</label><input placeholder="tu@correo.com"></div>
+        <div class="nav"><span></span><button class="btn chico sig">Siguiente →</button></div>
+      </div>
+
+      <div class="paso">
+        <div class="n">02 / 04</div>
+        <h3>¿Qué negocio tienes?</h3>
+        <div class="campo"><input placeholder="Ej: restaurante, consultorio, tienda de ropa…"></div>
+        <div class="nav"><button class="atras">← Atrás</button><button class="btn chico sig">Siguiente →</button></div>
+      </div>
+
+      <div class="paso">
+        <div class="n">03 / 04</div>
+        <h3>¿Cuántas veces publicas contenido a la semana hoy?</h3>
+        <div class="opciones">
+          <button class="op">Nunca o casi nunca</button>
+          <button class="op">1 o 2 veces</button>
+          <button class="op">3 a 5 veces</button>
+          <button class="op">Todos los días</button>
+        </div>
+        <div class="nav"><button class="atras">← Atrás</button><button class="btn chico sig">Siguiente →</button></div>
+      </div>
+
+      <div class="paso">
+        <div class="n">04 / 04</div>
+        <h3>¿Estás listo para invertir en un sistema así?</h3>
+        <div class="opciones">
+          <button class="op">Sí</button>
+          <button class="op">No</button>
+          <button class="op">Necesito más información</button>
+        </div>
+        <div class="nav"><button class="atras">← Atrás</button><a class="btn chico" href="#agenda">Elegir horario →</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. CALENDARIO -->
+<section id="agenda" style="padding-top:30px">
+  <div class="wrap">
+    <div class="etq">Paso 2 de 2 · Agenda</div>
+    <h2>Agenda tu <span>llamada</span></h2>
+    <div class="cal glow">
+      <div class="izq">
+        <div class="logo">SPR</div>
+        <h3>Llamada · Cerebro de Contenido</h3>
+        <div class="dato"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>15 min</div>
+        <div class="dato"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span id="resumen">Elige un día y una hora</span></div>
+        <div class="dato"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M15 10l4.5-3v10L15 14"/><rect x="3" y="6" width="12" height="12" rx="2"/></svg>Videollamada (Google Meet)</div>
+        <p><b>El siguiente paso.</b><br>
+        En esta llamada vemos tu negocio y te mostramos cómo el Cerebro de Contenido escribe, edita y publica por ti.<br><br>
+        No es para todo el mundo: si no es tu momento, te lo decimos con honestidad. Sin compromiso.</p>
+      </div>
+      <div class="der">
+        <h4>Elige el día y la hora</h4>
+        <div class="zona">
+          <div>
+            <div class="mes"><button class="flecha" id="prev">‹</button><span id="nombreMes"></span><button class="flecha" id="next">›</button></div>
+            <div class="dias" id="dias"></div>
+            <div class="tz">🌐 Zona horaria: <b>Bogotá (GMT-5)</b></div>
+          </div>
+          <div class="horas">
+            <div class="t" id="diaTxt">Elige un día</div>
+            <div class="lh" id="horas"></div>
+            <button class="btn confirmar">Confirmar llamada →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="bajo">La llamada dura unos 15 minutos. Atiendo de lunes a viernes, de 10:00 a. m. a 8:00 p. m. Te llega la confirmación a tu correo y por WhatsApp.</p>
+    <div class="wsbox"><span>¿No encuentras un espacio en el calendario?</span><a href="#" onclick="return false">Escríbeme por WhatsApp →</a></div>
+  </div>
+</section>
+
+<!-- 7. PIE -->
+<footer>
+  <div class="wrap">
+    <div class="marca"><div class="logo">SPR</div><div>Cerebro de Contenido<br><span class="estado">Sistema activo</span></div></div>
+    <nav>
+      <a href="https://instagram.com/soysanti__content_ia" target="_blank" rel="noopener">Instagram</a>
+      <a href="#" onclick="return false">WhatsApp</a>
+      <a href="#" onclick="return false">Privacidad</a>
+      <a href="#" onclick="return false">Términos</a>
+    </nav>
+  </div>
+</footer>
+
+<div class="fijo"><a class="btn" href="#test">Agendar llamada</a></div>
+
+<script>
+/* ---------- collage ---------- */
+const tarjetas1 = [
+  {img:'img/ig-stats.jpg', cls:'stats', chip:'INSTAGRAM · 30 DÍAS', pie:'Santi', em:'+45 mil reproducciones'},
+  {img:'img/santi-1.jpg', chip:'PUBLICADO SOLO', pie:'Santi', em:'Noticias de IA · todos los días'},
+  {img:'img/socio-1.jpg', chip:'WORK IN TECH', pie:'Socios', em:'Contenido con el sistema'},
+  {img:'img/santi-2.jpg', chip:'PUBLICADO SOLO', pie:'Santi', em:'IG · TikTok · YouTube'},
+  {img:'img/socio-14.jpg', chip:'WORK IN TECH', pie:'Socios', em:'Contenido con el sistema'},
+  {img:'img/santi-3.jpg', chip:'EDITADO CON IA', pie:'Santi', em:'Tú grabas, él edita'},
+  {img:'img/socio-33.jpg', chip:'WORK IN TECH', pie:'Socios', em:'Contenido con el sistema'},
+];
+const tarjetas2 = [
+  {img:'img/santi-5.jpg', chip:'EDITADO CON IA', pie:'Santi', em:'Sin editor'},
+  {img:'img/socio-5.jpg', chip:'WORK IN TECH', pie:'Socios', em:'Contenido con el sistema'},
+  {img:'img/santi-6.jpg', chip:'PUBLICADO SOLO', pie:'Santi', em:'Sale a su hora'},
+  {img:'img/socio-18.jpg', chip:'WORK IN TECH', pie:'Socios', em:'Contenido con el sistema'},
+  {img:'img/santi-7.jpg', chip:'PUBLICADO SOLO', pie:'Santi', em:'IG · TikTok · YouTube'},
+  {img:'img/socio-24.jpg', chip:'WORK IN TECH', pie:'Socios', em:'Contenido con el sistema'},
+  {img:'img/santi-8.jpg', chip:'EDITADO CON IA', pie:'Santi', em:'Todos los días'},
+];
+function pintar(id, lista){
+  const html = lista.map(t => `
+    <div class="tarjeta ${t.cls||''}">
+      <span class="chip">${t.chip}</span>
+      <div class="foto"><img src="${t.img}" alt="" loading="lazy"></div>
+      <div class="pie">${t.pie}<em>${t.em}</em></div>
+    </div>`).join('');
+  document.getElementById(id).innerHTML = html + html; // doble para que la cinta no se corte
+}
+pintar('fila1', tarjetas1); pintar('fila2', tarjetas2);
+
+/* ---------- test paso a paso (sin enviar nada) ---------- */
+const pasos = [...document.querySelectorAll('.paso')];
+const barras = [...document.querySelectorAll('.prog i')];
+let actual = 0;
+function ir(n){
+  actual = Math.max(0, Math.min(pasos.length-1, n));
+  pasos.forEach((p,i)=>p.classList.toggle('on', i===actual));
+  barras.forEach((b,i)=>b.classList.toggle('on', i<=actual));
+}
+document.querySelectorAll('.sig').forEach(b=>b.onclick=()=>ir(actual+1));
+document.querySelectorAll('.atras').forEach(b=>b.onclick=()=>ir(actual-1));
+document.querySelectorAll('.opciones').forEach(g=>g.querySelectorAll('.op').forEach(o=>o.onclick=()=>{
+  g.querySelectorAll('.op').forEach(x=>x.classList.remove('sel')); o.classList.add('sel');
+}));
+
+/* ---------- calendario (solo visual) ---------- */
+const MESES=['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+const DSEM=['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
+const hoy=new Date(); hoy.setHours(0,0,0,0);
+let vista=new Date(hoy.getFullYear(), hoy.getMonth(), 1), elegido=null, hora=null;
+function horas(){
+  const r=[]; for(let h=10;h<20;h++) for(const m of [0,15,30,45]){
+    const hh=h>12?h-12:h; r.push(`${hh}:${String(m).padStart(2,'0')} ${h<12?'a. m.':'p. m.'}`);
+  } return r;
+}
+function resumen(){
+  document.getElementById('resumen').textContent = elegido
+    ? `${DSEM[elegido.getDay()].slice(0,3)}, ${elegido.getDate()} ${MESES[elegido.getMonth()].slice(0,3).toLowerCase()} ${elegido.getFullYear()}${hora?' · '+hora:''}`
+    : 'Elige un día y una hora';
+}
+function pintarHoras(){
+  const c=document.getElementById('horas');
+  document.getElementById('diaTxt').textContent = elegido ? `${DSEM[elegido.getDay()]} ${elegido.getDate()}` : 'Elige un día';
+  c.innerHTML = elegido ? horas().map(h=>`<button class="h${h===hora?' sel':''}">${h}</button>`).join('') : '';
+  c.querySelectorAll('.h').forEach(b=>b.onclick=()=>{hora=b.textContent; pintarHoras(); resumen();});
+}
+function pintarMes(){
+  document.getElementById('nombreMes').textContent = `${MESES[vista.getMonth()]} ${vista.getFullYear()}`;
+  const d=document.getElementById('dias');
+  let html=['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'].map(x=>`<div class="nd">${x}</div>`).join('');
+  const primero=vista.getDay(), total=new Date(vista.getFullYear(), vista.getMonth()+1, 0).getDate();
+  for(let i=0;i<primero;i++) html+='<div></div>';
+  for(let n=1;n<=total;n++){
+    const f=new Date(vista.getFullYear(), vista.getMonth(), n), dia=f.getDay();
+    const ok = f>hoy && dia>0 && dia<6;
+    const sel = elegido && f.getTime()===elegido.getTime();
+    html+=`<button class="d${ok?' ok':''}${sel?' sel':''}" ${ok?`data-n="${n}"`:'disabled'}>${n}</button>`;
+  }
+  d.innerHTML=html;
+  d.querySelectorAll('.d.ok').forEach(b=>b.onclick=()=>{
+    elegido=new Date(vista.getFullYear(), vista.getMonth(), +b.dataset.n); hora=null;
+    pintarMes(); pintarHoras(); resumen();
+  });
+}
+document.getElementById('prev').onclick=()=>{vista.setMonth(vista.getMonth()-1); pintarMes();};
+document.getElementById('next').onclick=()=>{vista.setMonth(vista.getMonth()+1); pintarMes();};
+pintarMes(); pintarHoras();
+</script>
+</body>
+</html>

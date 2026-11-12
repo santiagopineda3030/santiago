@@ -1,6 +1,7 @@
 # Landing (un solo index.html) — definición con Santi (12 nov 2026, chat Web · Landing)
 
 Regla: no se escribe código final ni se conecta nada hasta que Santi apruebe toda la definición. Sin dominio por ahora.
+**Borrador visual completo (12 nov):** `landing-borrador/index.html` · vista en claude.ai: https://claude.ai/artifact/DUm9TayxmRMW8VXuFaShhj (privado). Nada conectado.
 Borradores visuales en `landing-borrador/`.
 
 ## Orden de la página (aprobado)
