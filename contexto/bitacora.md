@@ -284,3 +284,4 @@
 - 12 nov · v8: noticia 5 acortada (Santi). Guion terminado nuevo 1D8JOv_pCQ_8DrQIZOcimfx6GIVPZgKDvBB_2xJScsFY (el anterior a la papelera); link en la fila 18.
 - 11 nov · v8 reprogramado (Santi): sale jue 12 a las 16:30 (antes 11:00). Regla de Santi: al cerrar el día se renuevan TODOS los chats (Base, Preguntas, Edición, Guiones, Anuncios, TikTok, Instagram, YouTube, Web) en Opus 5.5, los viejos se archivan. Landing: se deja como HTML por ahora; dominio y TikTok después.
 - 12 nov (cierre 11 nov noche) · Chats renovados: 9 nuevos en Opus 5.5 con repo (IDs en CLAUDE.md y chats.md); viejos archivados. Base 2 queda para que Santi lo archive. Lección: create_session sin source_url crea chats sin memoria.
+- 12 nov · Calendar: evento '📰 Noticias IA · Video 8' movido a hoy 16:30–16:45 (antes 11:00). Santi archivó los chats viejos (Base 2 y el del 5 nov).
