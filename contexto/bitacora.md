@@ -287,3 +287,4 @@
 - 12 nov · Calendar: evento '📰 Noticias IA · Video 8' movido a hoy 16:30–16:45 (antes 11:00). Santi archivó los chats viejos (Base 2 y el del 5 nov).
 - 12 nov · V8.MOV en Videos en frío (12:34); Robot.gs aún no creaba la fila en la COLA. Base 3 mandó el v8 a 📁 Edición de videos para editar ya (sale 16:30). Hoy 4:35 Santi sube E1; por la noche graba v9.
 - 12 nov 13:30 · v8 1.1 editado (📁 Edición, con permiso de Santi): escenas nuevas estilo referente rojo (ref_rojo.py: cifra, vs, onda, pérdida, despidos, candado, seguro, título), polémicas en B/N, trabas fuera, 90,8 s, −14 LUFS, 27 MB. Drive 1FYbn2b_FRxKbTojn3y0nRRUxldx-9X_r. Fila 18: Editado + Listo (16:30). COLA fila 9: Revisión. Falta el 'dale' de Santi y volver el crudo a Restringido.
+- 12 nov 13:40 · v8 1.2 (Santi: menos B/N al final): en Grok solo 'Un solo error…' va en B/N. Drive 1iGVZhoqFXtEWHHjx0L2YZXTHOreFL44l; fila 18 y COLA actualizadas; sigue Listo. 1.1 (1FYbn2b…) para la papelera.

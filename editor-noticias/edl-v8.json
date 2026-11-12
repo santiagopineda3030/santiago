@@ -1,5 +1,5 @@
 {
- "nota": "v8 1.1 · cyber + escenas del referente rojo (ref_rojo.py), voz seguida (aire 0.05, unir 0.3), polémicas en B/N",
+ "nota": "v8 1.2 · cyber + escenas del referente rojo (ref_rojo.py), voz seguida (aire 0.05, unir 0.3), polémicas en B/N",
  "gancho_texto": "",
  "cta": "Sígueme para no perderte ninguna",
  "cta_emoji": "🔔",
@@ -360,22 +360,19 @@
      "clip": "0001",
      "desde": 222.3,
      "hasta": 227.75,
-     "texto": "Grok, la IA de Elon Musk, acaba de dejar a más de 35.000 aplicaciones abiertas para cualquier persona.",
-     "bn": true
+     "texto": "Grok, la IA de Elon Musk, acaba de dejar a más de 35.000 aplicaciones abiertas para cualquier persona."
     },
     {
      "clip": "0001",
      "desde": 234.3,
      "hasta": 238.1,
-     "texto": "Sin contraseña, y más de 850 tenían datos sensibles.",
-     "bn": true
+     "texto": "Sin contraseña, y más de 850 tenían datos sensibles."
     },
     {
      "clip": "0001",
      "desde": 250.5,
      "hasta": 252.95,
-     "texto": "Todo por un ajuste que venía activado desde fábrica.",
-     "bn": true
+     "texto": "Todo por un ajuste que venía activado desde fábrica."
     },
     {
      "clip": "0001",
