@@ -73,7 +73,7 @@ def _fade(t, dur, ent=0.3, sal=0.25):
     return A.clamp(t / ent) * A.clamp((dur - t) / sal)
 
 
-def _titulo(im, t, arriba, grande, y=330, ini=0.0):
+def _titulo(im, t, arriba, grande, y=430, ini=0.0):
     """Palabra corta sans blanca + frase serif itálica grande con subrayado rojo; aparecen con fundido."""
     if arriba:
         a = A.clamp((t - ini) / 0.3)
@@ -186,18 +186,18 @@ def g_ref_cifra(dur, ruta_logo=None, arriba="", grande="", desde=0, hasta=1000, 
         d = ImageDraw.Draw(im)
         if lg:
             k = A.ease_out_back(A.clamp((t - 0.1) / 0.4))
-            _circulo(d, W / 2, 820, 150)
-            A.pegar_centro(im, A.escalar(_glow(lg, 10, 1.2), max(0.05, k)), W / 2, 820)
+            _circulo(d, W / 2, 850, 150)
+            A.pegar_centro(im, A.escalar(_glow(lg, 10, 1.2), max(0.05, k)), W / 2, 850)
         kc = A.clamp((t - 0.35) / max(0.6, dur * 0.55))
         if t > 0.35:
             num = _fmt(_contar(desde, hasta, kc), formato)
-            A.pegar_centro(im, _ajustar(_cifra(num, 170, color), 980), W / 2, 1110)
+            A.pegar_centro(im, _ajustar(_cifra(num, 170, color), 980), W / 2, 1130)
             if sufijo:
-                A.pegar_centro(im, _ajustar(_sans(sufijo, 64, ROJO), 900), W / 2, 1250)
+                A.pegar_centro(im, _ajustar(_sans(sufijo, 56, ROJO), 900), W / 2, 1260)
         if sub:
             a = A.clamp((t - 0.8) / 0.3)
             if a > 0:
-                A.pegar_centro(im, A.con_alfa(_ajustar(_sans(sub, 42, GRIS, False), 900), a), W / 2, 1350)
+                A.pegar_centro(im, A.con_alfa(_ajustar(_sans(sub, 42, GRIS, False), 900), a), W / 2, 1590)
 
     return _escena(dur, dib, "pop")
 
@@ -210,12 +210,12 @@ def g_ref_vs(dur, ruta_a=None, ruta_b=None, a_txt="ANTHROPIC", b_txt="OPENAI", a
     def dib(im, t):
         _titulo(im, t, arriba, grande)
         d = ImageDraw.Draw(im)
-        base = 1420
+        base = 1220
         mx = max(a_val, b_val)
         for i, (lg, nom, val, col) in enumerate(((la, a_txt, a_val, ROJO), (lb, b_txt, b_val, (120, 120, 135)))):
             cx = 330 + i * 420
             k = A.ease_out(A.clamp((t - 0.4 - i * 0.2) / 0.9))
-            h = 640 * (val / mx) * k
+            h = 480 * (val / mx) * k
             capa = Image.new("RGBA", (W, H), (0, 0, 0, 0))
             ImageDraw.Draw(capa).rounded_rectangle((cx - 110, base - h, cx + 110, base), 22, fill=col + (255,))
             if i == 0:
@@ -224,11 +224,11 @@ def g_ref_vs(dur, ruta_a=None, ruta_b=None, a_txt="ANTHROPIC", b_txt="OPENAI", a
             if k > 0.05:
                 A.pegar_centro(im, _cifra(_fmt(val * k, "{v:.2f}").rstrip("0").rstrip(","), 84), cx, base - h - 70)
             if lg:
-                A.pegar_centro(im, lg, cx, base + 90)
-            A.pegar_centro(im, _sans(nom, 36, BLANCO if i == 0 else GRIS), cx, base + 180)
+                A.pegar_centro(im, A.escalar(lg, 0.6), cx, base + 50)
+            A.pegar_centro(im, _sans(nom, 30, BLANCO if i == 0 else GRIS), cx, base + 115)
         a = A.clamp((t - 1.2) / 0.3)
         if a > 0:
-            A.pegar_centro(im, A.con_alfa(_sans(unidad.upper() + " DE DÓLARES", 40, GRIS, False), a), W / 2, 600)
+            A.pegar_centro(im, A.con_alfa(_sans(unidad.upper() + " DE DÓLARES", 40, GRIS, False), a), W / 2, 1580)
 
     return _escena(dur, dib, "pop", zoom=0.02)
 
@@ -239,7 +239,7 @@ def g_ref_onda(dur, n=7, arriba="Sus", grande="7 fundadores", cifra="250 M", sub
     def dib(im, t):
         _titulo(im, t, arriba, grande)
         act = int(A.clamp((t - 0.3) / max(0.5, dur * 0.55)) * n + 0.999) if t > 0.3 else 0
-        _onda(im, t, 880, n, act, etiquetas)
+        _onda(im, t, 900, n, act, etiquetas)
         a = A.ease_out_back(A.clamp((t - dur * 0.55) / 0.4))
         if a > 0:
             A.pegar_centro(im, A.escalar(_ajustar(_cifra(cifra, 170), 980), a), W / 2, 1170)
@@ -261,8 +261,8 @@ def g_ref_perdida(dur, ruta_logo=None, arriba="Facturó", grande="en solo 3 mese
             _titulo(im, t - cambio, "Y aun así", "perdió casi", ini=0)
         d = ImageDraw.Draw(im)
         if lg:
-            _circulo(d, W / 2, 760, 120)
-            A.pegar_centro(im, lg, W / 2, 760)
+            _circulo(d, W / 2, 790, 120)
+            A.pegar_centro(im, lg, W / 2, 790)
         k = (t - cambio) / 0.3
         if k < 0:
             img = _cifra(antes, 170, VERDE)
@@ -275,16 +275,16 @@ def g_ref_perdida(dur, ruta_logo=None, arriba="Facturó", grande="en solo 3 mese
         e = A.ease_out_back(A.clamp((t - 0.2) / 0.4))
         img = _ajustar(img, 980)
         img = img.resize((max(1, int(img.width * e)), max(1, int(img.height * max(0.05, sy) * e))), Image.BILINEAR)
-        A.pegar_centro(im, img, W / 2, 1080)
+        A.pegar_centro(im, img, W / 2, 1090)
         flecha = Image.new("RGBA", (120, 120), (0, 0, 0, 0))
         dd = ImageDraw.Draw(flecha)
         if k >= 0:
             dd.polygon([(60, 115), (10, 45), (40, 45), (40, 5), (80, 5), (80, 45), (110, 45)], fill=ROJO + (255,))
         else:
             dd.polygon([(60, 5), (10, 75), (40, 75), (40, 115), (80, 115), (80, 75), (110, 75)], fill=VERDE + (255,))
-        A.pegar_centro(im, _glow(flecha, 8, 1.4), W / 2, 1250)
+        A.pegar_centro(im, _glow(flecha, 8, 1.4), W / 2, 1265)
         if k > 1 and sub:
-            A.pegar_centro(im, A.con_alfa(_sans(sub, 46, GRIS, False), A.clamp(k - 1)), W / 2, 1370)
+            A.pegar_centro(im, A.con_alfa(_sans(sub, 46, GRIS, False), A.clamp(k - 1)), W / 2, 1590)
 
     return _escena(dur, dib, "alerta", zoom=0.03)
 
@@ -304,33 +304,33 @@ def g_ref_despidos(dur, arriba="Qantas despide a", grande="850 empleados", total
                    sub="de oficina"):
     """Cuadrícula de 850 que se va apagando (empleos) + avión que va de Australia a India."""
     av = _glow(_avion(170), 8, 1.3)
-    cols, filas = 34, 25  # 850 cuadritos
+    cols = 50  # 50 x 17 = 850 cuadritos
 
     def dib(im, t):
         _titulo(im, t, arriba, grande)
         d = ImageDraw.Draw(im)
         k = A.clamp((t - 0.3) / max(0.6, dur * 0.5))
-        lado, gap = 22, 6
+        lado, gap = 15, 5
         x0 = (W - (cols * (lado + gap) - gap)) / 2
-        y0 = 620
+        y0 = 870
         enc = int(total * k)
         for i in range(total):
             c, f = i % cols, i // cols
             x, y = x0 + c * (lado + gap), y0 + f * (lado + gap)
             col = ROJO + (255,) if i < enc else (70, 70, 80, 255)
-            d.rounded_rectangle((x, y, x + lado, y + lado), 5, fill=col)
+            d.rectangle((x, y, x + lado, y + lado), fill=col)
         num = _fmt(int(total * k), "{v:,.0f}")
-        A.pegar_centro(im, _cifra(num, 120, ROJO), W / 2, 1400)
-        A.pegar_centro(im, _sans("EMPLEOS " + sub.upper(), 40, GRIS, False), W / 2, 1500)
+        A.pegar_centro(im, _cifra(num, 120, ROJO), W / 2, 700)
+        A.pegar_centro(im, _sans("EMPLEOS " + sub.upper(), 36, GRIS, False), W / 2, 800)
         kr = A.clamp((t - dur * 0.45) / (dur * 0.45))
         if kr > 0:
-            ya = 1640
+            ya = 1270
             d.line((180, ya, 900, ya), fill=(255, 255, 255, 90), width=3)
-            A.pegar_centro(im, _sans(de, 34), 180, ya + 50)
-            A.pegar_centro(im, _sans(a, 34, ROJO), 900, ya + 50)
+            A.pegar_centro(im, _sans(de, 32), 180, ya + 45)
+            A.pegar_centro(im, _sans(a, 32, ROJO), 900, ya + 45)
             _circulo(d, 180, ya, 12, BLANCO + (255,), 5)
             _circulo(d, 900, ya, 12, ROJO + (255,), 5)
-            A.pegar_centro(im, A.escalar(av, 0.55), 180 + 720 * A.ease_in_out(kr), ya - 10)
+            A.pegar_centro(im, A.escalar(av, 0.5), 180 + 720 * A.ease_in_out(kr), ya - 10)
 
     return _escena(dur, dib, "alerta", zoom=0.02)
 
@@ -366,15 +366,15 @@ def g_ref_candado(dur, arriba="Grok dejó", grande="35.000 apps abiertas", hasta
     def dib(im, t):
         _titulo(im, t, arriba, grande)
         ab = A.ease_out_back(A.clamp((t - 0.3) / 0.5))
-        A.pegar_centro(im, _glow(_candado(230, ab), 14, 1.4), W / 2, 820)
+        A.pegar_centro(im, _glow(_candado(210, ab), 14, 1.4), W / 2, 760)
         k = A.clamp((t - 0.4) / max(0.6, dur * 0.5))
-        A.pegar_centro(im, _cifra(_fmt(hasta * A.ease_out(k), "{v:,.0f}"), 150), W / 2, 1110)
-        A.pegar_centro(im, _sans("APPS · " + sub.upper(), 40, GRIS, False), W / 2, 1220)
+        A.pegar_centro(im, _cifra(_fmt(hasta * A.ease_out(k), "{v:,.0f}"), 150), W / 2, 1050)
+        A.pegar_centro(im, _sans("APPS · " + sub.upper(), 40, GRIS, False), W / 2, 1150)
         d = ImageDraw.Draw(im)
-        n = 12
+        n = 6
         for i in range(n):
             c, f = i % 6, i // 6
-            x, y = 150 + c * 140, 1310 + f * 130
+            x, y = 150 + c * 140, 1215 + f * 130
             on = i < int(n * k)
             d.rounded_rectangle((x, y, x + 100, y + 100), 22, fill=(30, 14, 18, 255), outline=(ROJO if on else (80, 80, 90)) + (255,), width=4)
             if on:
@@ -387,7 +387,7 @@ def g_ref_candado(dur, arriba="Grok dejó", grande="35.000 apps abiertas", hasta
             ImageDraw.Draw(sl).rounded_rectangle((0, 0, sl.width - 1, sl.height - 1), 16, fill=ROJO + (255,))
             A.pegar_centro(sl, st, sl.width / 2, sl.height / 2)
             sl = sl.rotate(-6, resample=Image.BICUBIC, expand=True)
-            A.pegar_centro(im, A.con_alfa(A.escalar(sl, 2 - A.ease_out(ks)), ks), W / 2, 1640)
+            A.pegar_centro(im, A.con_alfa(A.escalar(sl, 2 - A.ease_out(ks)), ks), W / 2, 1600)
 
     return _escena(dur, dib, "alerta", zoom=0.02)
 
@@ -431,8 +431,8 @@ def g_ref_seguro(dur, arriba="Ya existe un", grande="seguro para tu IA", sello="
             dd.ellipse((0, 0, 159, 159), fill=VERDE + (255,))
             dd.line([(40, 85), (70, 115), (122, 50)], fill=BLANCO + (255,), width=16, joint="curve")
             A.pegar_centro(im, A.escalar(c, A.ease_out_back(kc)), W / 2 + 190, 1180)
-            A.pegar_centro(im, A.con_alfa(_ajustar(_sans(sello, 54, BLANCO), 960), kc), W / 2, 1420)
-            A.pegar_centro(im, A.con_alfa(_sans(sub, 40, GRIS, False), kc), W / 2, 1500)
+            A.pegar_centro(im, A.con_alfa(_ajustar(_sans(sello, 54, BLANCO), 960), kc), W / 2, 1590)
+            A.pegar_centro(im, A.con_alfa(_sans(sub, 40, GRIS, False), kc), W / 2, 1665)
 
     return _escena(dur, dib, "pop", zoom=0.03)
 
@@ -441,12 +441,12 @@ def g_ref_titulo(dur, arriba="", grande="", sub="", ch=None):
     """Solo título del referente, grande y centrado (para el gancho y el cierre)."""
 
     def dib(im, t):
-        _titulo(im, t, arriba, grande, y=780)
-        _onda(im, t, 1250, 5, int(A.clamp(t / max(0.4, dur * 0.7)) * 5 + 0.999), ())
+        _titulo(im, t, arriba, grande, y=700)
+        _onda(im, t, 1150, 5, int(A.clamp(t / max(0.4, dur * 0.7)) * 5 + 0.999), ())
         if sub:
             a = A.clamp((t - 0.6) / 0.3)
             if a > 0:
-                A.pegar_centro(im, A.con_alfa(_ajustar(_sans(sub, 48, GRIS, False), 940), a), W / 2, 1450)
+                A.pegar_centro(im, A.con_alfa(_ajustar(_sans(sub, 48, GRIS, False), 940), a), W / 2, 1590)
 
     return _escena(dur, dib, "golpe", zoom=0.03)
 
