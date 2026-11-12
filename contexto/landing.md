@@ -27,5 +27,8 @@ Borradores visuales en `landing-borrador/`.
 - Llamada de **15 min**, **lunes a viernes 10:00 a. m. – 8:00 p. m.** (Bogotá), Google Meet. Botón WhatsApp "¿No encuentras un espacio?".
 - Después: conectar a una hoja donde aparezca quién agenda (Santi, 12 nov). Aún NO conectar.
 
+## Test (aprobado)
+Datos: nombre, WhatsApp, correo. Preguntas filtro: 1) ¿Qué negocio tienes? 2) ¿Cuántas veces publicas contenido a la semana hoy? 3) ¿Estás listo para invertir en un sistema así? (Sí / No / Necesito más información)
+
 ## Pendiente
-- Texto del botón (paso 4), 3 preguntas filtro, antes y después, número de WhatsApp, captura de Arzurus, captura IG 7 días, privacidad y términos (los escribe Claude y Santi aprueba).
+- Texto del botón (paso 4), antes y después, número de WhatsApp, captura de Arzurus, captura IG 7 días, privacidad y términos (los escribe Claude y Santi aprueba).
