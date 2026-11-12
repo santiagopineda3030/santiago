@@ -49,12 +49,12 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
   | `areas/3-youtube` | `editar-youtube` | Recursos y reglas · YouTube |
   | `areas/4-anuncios-meta` | `editar-anuncio` | Recursos y reglas · Anuncios (Meta) |
 | `areas/5-edicion-videos` | `editar-video` | Edita lo de `1. Videos en frío`, revisa con Santi, sube a `2. Videos terminados` y programa |
-- **Chats (nuevos, 9 nov; al empezar leen `contexto/estado-actual.md`):** `Santi · Base 2` (`session_01McnvqvoHXuH9paY43dMMXW`, 11 nov; el Base anterior se archivó) y
-  `Santi · Preguntas` (`session_01Mcnvqsr7cQVf8UpPxL1ZY1`, Sonnet), fijados arriba a mano; un chat por pieza con etiqueta `area:<red>`.
-  - Carpetas: 📁 Edición de videos `session_01McnvqtizmJTpTL89JpqEe6` (Opus) · 📁 Guiones `session_01McnvqwUjMFUTZvojTZbCUK` (Sonnet) ·
-    📁 Anuncios (Meta) `session_01Mcnvqwiv8dmFwTWjVUCuyn` (Opus) · 📁 TikTok `session_01Mcnvqvevjb1aQM8gzqY6pm` (Opus) ·
-    📁 Instagram `session_01McnvqwfzmSghJmxEYRD7gS` (Sonnet) · 📁 YouTube `session_01Mcnvqvr5TmUS8T5vvYKsAm` (Sonnet).
-    Se crean desde la sesión del 5 nov (`session_01McnvqvWmcNJ8fzpL6R6vhW`) para que no queden escondidos. Viejos: `contexto/chats.md`.
+- **Chats (renovados 12 nov, TODOS en Opus 5.5; al empezar leen `contexto/estado-actual.md`; regla de Santi: no hacer nada sin su permiso):**
+  `Santi · Base 3` (`session_01McnvqtDPHNYbE9DQ8iQJeH`) · `Santi · Preguntas` (`session_01Mcnvqvgpb4vJdHLWw8g5tF`) ·
+  📁 Edición de videos `session_01Mcnvqw535MF9WSXKXT5Cgs` · 📁 Guiones `session_01McnvqvLLYGtXVTA9bDdCQW` ·
+  📁 Anuncios (Meta) `session_01McnvqsMdqqqXtnJVikQRtp` · 📁 TikTok `session_01McnvqvdnHAnmk3XpmCv1th` ·
+  📁 Instagram `session_01McnvqvSeKF6PQgmxb8TMbh` · 📁 YouTube `session_01Mcnvqv6MuyBBGX1vcj7n1C` · Web · Landing `session_01Mcnvqshyy1YTa2uLZAZ2tP`.
+  Al cerrar cada día se renuevan todos (nuevos y cortos, viejos archivados). Al crearlos con create_session SIEMPRE poner `source_url` (repo) y `source_revision`, o salen sin memoria. Viejos: `contexto/chats.md`.
 - **Videos viejos se borran** (regla de Santi, 7 nov): cuando un video ya se publicó, su crudo va a la papelera y se revisa el
   espacio de Drive; Santi vacía la papelera.
 - **Guiones viejos se borran** (regla de Santi, 5 nov): guion en frío → papelera al terminarlo; guion terminado + idea →

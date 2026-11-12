@@ -3,21 +3,21 @@
 Regla (Kit ContentIA, skill `rutina-diaria`): un chat por pieza, con etiqueta `area:<red>`. Cuando la pieza termina y lo
 importante ya está en GitHub, el chat se **archiva** (no se borra; se puede reabrir desde Archivados).
 
-## Activos (desde el 9 nov; chats nuevos y cortos para gastar menos)
-| Chat | ID | Modelo | Carpeta |
-|---|---|---|---|
-| Santi · Base 2 | `session_01McnvqvoHXuH9paY43dMMXW` | Sonnet | santi:base (fijar arriba) · 11 nov; Base anterior `session_01McnvqtY4SNH4XF5G4QasW1` archivado |
-| Santi · Preguntas | `session_01Mcnvqsr7cQVf8UpPxL1ZY1` | Sonnet | santi:preguntas (fijar arriba) |
-| 📁 Edición de videos | `session_01McnvqtizmJTpTL89JpqEe6` | Opus | area:edicion |
-| 📁 Guiones | `session_01McnvqwUjMFUTZvojTZbCUK` | Sonnet | area:guiones |
-| 📁 Anuncios (Meta) | `session_01Mcnvqwiv8dmFwTWjVUCuyn` | Opus | area:meta |
-| 📁 TikTok | `session_01Mcnvqvevjb1aQM8gzqY6pm` | Opus | area:tiktok |
-| 📁 Instagram | `session_01McnvqwfzmSghJmxEYRD7gS` | Sonnet | area:instagram |
-| 📁 YouTube | `session_01Mcnvqvr5TmUS8T5vvYKsAm` | Sonnet | area:youtube |
-| Guiones carpetas organización (5 nov) | `session_01McnvqvWmcNJ8fzpL6R6vhW` | Opus | crea los chats nuevos al mismo nivel |
+## Activos (renovados 12 nov 2026, todos Opus 5.5, con repo)
+| Chat | ID |
+|---|---|
+| Santi · Base 3 | `session_01McnvqtDPHNYbE9DQ8iQJeH` |
+| Santi · Preguntas | `session_01Mcnvqvgpb4vJdHLWw8g5tF` |
+| 📁 Edición de videos | `session_01Mcnvqw535MF9WSXKXT5Cgs` |
+| 📁 Guiones | `session_01McnvqvLLYGtXVTA9bDdCQW` |
+| 📁 Anuncios (Meta) | `session_01McnvqsMdqqqXtnJVikQRtp` |
+| 📁 TikTok | `session_01McnvqvdnHAnmk3XpmCv1th` |
+| 📁 Instagram | `session_01McnvqvSeKF6PQgmxb8TMbh` |
+| 📁 YouTube | `session_01Mcnvqv6MuyBBGX1vcj7n1C` |
+| Web · Landing | `session_01Mcnvqshyy1YTa2uLZAZ2tP` |
 
-Pendientes de archivar (los archiva Santi o el Base nuevo cuando terminen): Base viejo `session_01McnvqwgYFW5FkckcrCQLTM`,
-📁 Guiones viejo `session_01McnvqsoboeaDTB6ormVrbC`.
+Regla (Santi, 11 nov): al cerrar el día se renuevan TODOS los chats en Opus 5.5 y los viejos se archivan. Crear con `source_url` + `source_revision` (si no, salen sin repo).
+Archivados el 12 nov: Base 2 (`session_01McnvqvoHXuH9paY43dMMXW`, lo archiva Santi), Preguntas `…Pqsr7cQVf8UpPxL1ZY1`, Edición `…tizmJTpTL89JpqEe6`, Guiones `…wUjMFUTZvojTZbCUK`, Anuncios `…wiv8dmFwTWjVUCuyn`, TikTok `…vevjb1aQM8gzqY6pm`, Instagram `…wfzmSghJmxEYRD7gS`, YouTube `…vr5TmUS8T5vvYKsAm`, Web `…v1P2nUJkHxEaE2d7r`.
 
 ## Archivados (su trabajo está en GitHub)
 | Chat | ID | Carpeta | Qué quedó |
