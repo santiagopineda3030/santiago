@@ -294,3 +294,4 @@
 - 12 nov · PENDIENTE (después, Santi): reels de prueba (Trial reels) de Instagram automáticos: columna 'Prueba' Sí/No en la hoja → Code.gs sube a IG como reel de prueba (solo a no seguidores). Lo hace 📁 Instagram cuando Santi diga.
 - 12 nov · Web · Landing: definición en curso con Santi (contexto/landing.md): titular, Cerebro, collage y calendario visual (15 min, L–V 10–8) aprobados; borradores en landing-borrador/. Nada conectado.
 - 12 nov · Web · Landing: borrador visual completo de la página (landing-borrador/index.html, artifact DUm9TayxmRMW8VXuFaShhj). Botón 'Agendar llamada' + WhatsApp, preguntas filtro aprobadas. Sin conectar, sin número.
+- 12 nov · Web · Landing: Santi APROBÓ el borrador visual. Siguiente (con su permiso): conectar test → hoja Leads (utm), calendario → hoja de agendados, número de WhatsApp, privacidad/términos, video S1, subir la página.
