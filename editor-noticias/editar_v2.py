@@ -38,7 +38,7 @@ LUZ = {  # ajustes de luz con nombre
             "colorbalance=rs=-0.06:gs=-0.01:bs=0.1:rh=0.08:gh=0.02:bh=-0.05,vignette=PI/5,unsharp=5:5:0.7",
 }
 CLAVES_EXTRA = set()   # palabras clave en rojo que agrega cada EDL ("claves": [...])
-GANANCIA_SFX = {"whoosh": 0.32, "pop": 0.28, "ding": 0.22, "golpe": 0.42, "alerta": 0.22, "teclas": 0.3}
+GANANCIA_SFX = {"swipe": 0.3, "boom": 0.5, "brillo": 0.18, "reves": 0.3, "whoosh": 0.32, "pop": 0.28, "ding": 0.22, "golpe": 0.42, "alerta": 0.22, "teclas": 0.3}
 
 
 # --------------------------------------------------------------------------- audio
@@ -169,10 +169,11 @@ def sin_pausas(a, b, sil):
 
 
 # --------------------------------------------------------------------------- subtítulos (ASS v2)
-def ass_v2(palabras, secciones, gancho, cta, ruta, colores=None):
+def ass_v2(palabras, secciones, gancho, cta, ruta, colores=None, opciones=None):
     """colores: {"santi": "&H00FFFFFF", "otro": "&H0000E6FF"} (ASS BGR). 12 nov (E1): cada persona con su color."""
     colores = dict({"santi": editar.BLANCO, "otro": "&H0000E6FF", "otra": "&H00FF9AF5"}, **(colores or {}))
     claves = {"anthropic", "claude", "seti", "google", "gemini", "apple", "siri", "revolut", "ia", "ias", "uber"} | CLAVES_EXTRA
+    op = opciones or {}
     grupos, actual = [], []
     for i, w in enumerate(palabras):
         actual.append(w)
@@ -183,6 +184,10 @@ def ass_v2(palabras, secciones, gancho, cta, ruta, colores=None):
                 or re.search(r"[.?!…]$", w["w"]) or (len(actual) >= 2 and (re.search(r"[,;:]$", w["w"]) or sig["s"] - w["e"] > 0.35))):
             grupos.append(actual)
             actual = []
+    if op.get("sin_puntuacion"):  # 13 nov (E1, Santi): sin comas ni puntos (se agrupa antes, así no se juntan frases)
+        grupos = [[dict(w, w=re.sub(r"[.,;:…]+", "", w["w"])) for w in g] for g in grupos]
+        grupos = [[w for w in g if w["w"].strip()] for g in grupos]
+        grupos = [g for g in grupos if g]
     ev = []
     for gi, g in enumerate(grupos):
         ini = g[0]["s"]
@@ -203,6 +208,15 @@ def ass_v2(palabras, secciones, gancho, cta, ruta, colores=None):
                        pop + f"{n}/{len(noticias)} · " + editar.ass_texto(s["etiqueta"])))
     ev.append((1, "CTA", cta[0], cta[1], pop + editar.ass_texto(cta[2])))
     cab = Path(__file__).with_name("estilos.ass").read_text(encoding="utf-8")
+    if op.get("fuente_sub") or op.get("sub_margen"):  # 13 nov (E1): tipografía y altura de los subtítulos
+        lin = next(l for l in cab.splitlines() if l.startswith("Style: Sub,"))
+        p = lin.split(",")
+        if op.get("fuente_sub"):
+            p[1] = op["fuente_sub"]
+            p[2] = str(op.get("sub_tam", p[2]))
+        if op.get("sub_margen"):
+            p[21] = str(op["sub_margen"])
+        cab = cab.replace(lin, ",".join(p))
     if A.ESTILO == "ia":
         cab = cab.replace("&H002020E0", "&H00C828FF" if getattr(A, "CYBER", False) else "&H00FF528C")  # cajas: magenta (cyber) o violeta
     lineas = [f"Dialogue: {c},{editar.ass_tiempo(a)},{editar.ass_tiempo(b)},{st},,0,0,0,,{t}"
@@ -377,7 +391,8 @@ def main():
             ini, fin = max(0.0, c["desde"] - a.aire), min(infos[ci]["dur"], c["hasta"] + a.aire)
             ws = alinear(c["texto"], palabras_de(trozos[ci], c["desde"], c["hasta"]), c["desde"], c["hasta"])
             acum, zoom = 0.0, 1.0 if (k == 0 or a.fluido) else zooms[len(plan) % len(zooms)]
-            tramos = tramos_con_voz(ini, fin, vad[ci], a.aire, a.aire, a.unir)
+            tramos = ([(c["desde"], min(infos[ci]["dur"], c["hasta"]))] if c.get("completo")  # 13 nov (E1): sin recortar (final completo)
+                      else tramos_con_voz(ini, fin, vad[ci], a.aire, a.aire, a.unir))
             # (7 nov) ya NO se recorta el audio por la mirada: solo se sostiene la imagen (congelar), así no se corta ninguna palabra
             # cada palabra va al tramo más cercano (ninguna se pierde) y se ajusta a sus bordes
             asignadas = {i: [] for i in range(len(tramos))}
@@ -485,13 +500,15 @@ def main():
     if a.sfx_cortes:  # 12 nov (E1): efecto de sonido en cada cambio de toma/escena, sin animación
         for k, pz in enumerate(plan):
             if k and pz.get("corte_ini"):
-                sfx.append((max(0.0, pz["o_ini"] - 0.12), a.sfx_cortes))
+                lista = [x.strip() for x in a.sfx_cortes.split(",") if x.strip()]  # 13 nov: varios sonidos que se turnan
+                n = sum(1 for _ in sfx if _[1] in lista)
+                sfx.append((max(0.0, pz["o_ini"] - 0.12), lista[n % len(lista)]))
     print(f"· {len(graficos)} gráficos animados", flush=True)
 
     # ---------------------------------------------------------------- 5. subtítulos
     ass = salida / "subtitulos_v2.ass"
     palabras = [w for p in plan for w in p["palabras_o"]]
-    ass_v2(palabras, secs, edl.get("gancho_texto"), (cta_ini, total + COLA_CTA, edl["cta"]), ass, edl.get("colores"))
+    ass_v2(palabras, secs, edl.get("gancho_texto"), (cta_ini, total + COLA_CTA, edl["cta"]), ass, edl.get("colores"), edl)
 
     # ---------------------------------------------------------------- 6. audio: voz + efectos
     # Voz (8 nov): el filtro fuerte dejaba la voz "rara" (efecto agua). Ahora: ruido suave + ecualizador + compresor.
@@ -507,6 +524,8 @@ def main():
         mezcla += musica_de_fondo(a.musica, voz, a.musica_db, intro=a.musica_intro, corte=corte,
                                   golpes=[s_["ini"] for s_ in secs if s_["tipo"] == "noticia"])
     banco = A.sonidos(SR)
+    from sfx_extra import sonidos_extra  # 13 nov: swipe, boom, brillo, reves
+    banco.update(sonidos_extra(SR, banco))
     for t0, nombre in sfx:
         s = banco[nombre] * GANANCIA_SFX.get(nombre, 0.3)
         i0 = int(t0 * SR)
@@ -530,7 +549,8 @@ def main():
         filtros.append(f"{ult}[g{k}]overlay={x}:{y}:eof_action=pass:format=auto[v{k}]")
         ult = f"[v{k}]"
     ass_esc = str(ass).replace("\\", "/").replace(":", "\\:").replace("'", "\\'")
-    filtros.append(f"{ult}ass='{ass_esc}',format=yuv420p[vout]")
+    fdir = str(Path(__file__).with_name("fuentes")).replace(":", "\\:")
+    filtros.append(f"{ult}ass='{ass_esc}':fontsdir='{fdir}',format=yuv420p[vout]")
     entradas += ["-i", str(wav)]
     script = tmp / "filtros.txt"
     script.write_text(";\n".join(filtros))

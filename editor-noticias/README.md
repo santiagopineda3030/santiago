@@ -94,3 +94,7 @@ Para explicativos/leads con escenas (otra persona habla, Santi entra, cambio de 
   No poner gráficos ni escenas animadas en estos videos; solo subtítulos + sonidos (+ música suave).
 - En el EDL: `"continua": true` en un corte que sigue la misma toma (solo cambia quién habla) → sin sonido de transición ahí.
   `"acento": "&H002020E0"` cambia el color de las palabras clave (rojo).
+- **Estilo de subtítulos de Santi (13 nov, E1):** tipografía **Montserrat Black** (en `fuentes/`, licencia OFL), **sin comas ni puntos**,
+  más arriba, cerca del mentón. En el EDL: `"fuente_sub": "Montserrat Black", "sub_tam": 86, "sub_margen": 700, "sin_puntuacion": true`.
+- **Sonidos variados** en las transiciones: `--sfx-cortes "swipe,boom,whoosh,brillo,reves,golpe"` (se turnan; `sfx_extra.py`).
+- **Final completo:** `"completo": true` en el último corte (no se recorta al terminar la voz).
