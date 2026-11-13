@@ -303,3 +303,4 @@
 - 13 nov · E1 1.4 (Santi): orden original (azul primero), color corregido (--luz 'colortemperature=temperature=4800:mix=0.8,eq=brightness=0.04:gamma=1.12:contrast=1.04'), subtítulos más abajo (630; 'buen video' 520); 22 s. Drive 161W2kp7CUaBmTMSA44-WvuNFR25NDeBf; fila 8 y COLA actualizadas, sigue Listo. 1.0–1.3 para la papelera.
 - 13 nov · Santi dio 'dale' al E1 1.4 → fila 8: Publicar hoy 13/11 18:00. Versiones 1.0–1.3 a la papelera. COLA fila 9: Entregado 13/11. Cuando salga: crudo e1.mov (1IQvBIpy…) y guion (1NHqi5…, con copia nueva en drive-respaldo) a la papelera.
 - 13 nov · Santi: quitar el robot de edición; edita el chat 📁 Edición cuando Santi avisa. La tarea 'Robot edicion' la borra Santi en claude.ai (no la veo desde aquí). v9: Santi manda el crudo mañana por la mañana.
+- 13 nov 01:05 · v9 reprogramado (Santi): sale hoy 13 nov a las 14:30 (antes 11:00). Hoja fila 19 Hora 14:30; evento de Calendar 'Noticias IA · Video 9' movido a 14:30–14:45.
