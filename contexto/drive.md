@@ -81,3 +81,4 @@ Versión solo Instagram del script arreglado, sin datos de Santi (CONFIG vacío)
 
 ## Cerebros de guiones (13 nov)
 - Guiones › Cerebros `1lU7gDM54TSB1CTnFtkS80iH-b5YDyYqx` · 1. Viral `1gh7_8X9VHl5eXH7Y8LWvXNw2bofB95wn` · 2. Leads `1c-6Xx8EHXngNDJUQJXdHKe0_oFNBhzrA` · 3. Explicativo `11nCWuwMj78gKJxKv1HpqBj4o-fJaGeCw`
+- Doc **Cerebro viral · Reglas** (en 1. Viral): `1Hnw7JXVq-3_CsgG3KCyK5c8KDuahilYBnzGFnMFly_k` (copia de `cerebro-guiones/viral.md`, 13 nov). Falta OK de Santi.
