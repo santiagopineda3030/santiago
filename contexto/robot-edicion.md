@@ -1,5 +1,10 @@
 # Robot de edición (11 nov 2026) — punto 3 del plan
 
+> **13 nov · SE QUITA EL ROBOT (Santi):** la tarea "Robot edicion" de claude.ai no editó el E1 (vuelta de las 20:47 sin hacer nada).
+> Santi: "prefiero eliminar el robot y que tú lo hagas". Desde ahora **edita el chat 📁 Edición de videos** cuando Santi avisa
+> que subió el crudo. La tarea la borra Santi en claude.ai (no aparece en list_triggers). Robot.gs (Apps Script) puede seguir
+> creando la fila en la COLA; si Santi quiere quitarlo también: Apps Script › Activadores › borrar el de Robot.gs.
+
 ## Cómo funciona
 1. **Santi** sube el crudo a Edición de videos › 1. Videos en frío, con el código adelante (`v8.mov`, `E1.mov`) o con la
    fecha (`10 nov` = noticias que salen el 11 nov).
