@@ -23,11 +23,15 @@
 ## Orden del lunes 9 (Santi)
 1 guion v5 · 2 grabar · 3 editar y publicar 11:00 · 4 oferta · 5 Meta: píxel + tracker + prueba · 6 TikTok publicar solo · 7 encuestas · extra: 4:35 guion v6, vaciar papelera de Drive.
 
+## FOCO HASTA EL JUEVES 19 (Santi, 13 nov; límite casi agotado)
+Solo 3 cosas: 1) terminar el cerebro de guiones (🧠 Cerebro viral; Santi graba 3 guiones modelo: viral, lead, explicativo, y los sube a Drive › Guiones › Cerebros), 2) terminar la landing (Web · Landing), 3) seguir subiendo videos (noticias 11:00 + video de las 18:00), 1 versión por video. YouTube largo Y1: se graba el jue 19 y sale el vie 20.
+Referentes propuestos (Santi los vio, por confirmar): Viral = Victor Heras, Kallaway, Brendan Kane · Leads/pauta = Alex Hormozi, Sabri Suby, Russell Brunson · Explicativo = Ali Abdaal, Dan Koe, Sofía Contreras · YouTube = MrBeast, Paddy Galloway, Ali Abdaal. Leads será sobre todo PAUTA.
+
 ## CALENDARIO NUEVO (13 nov, Santi)
 - 11:00 todos los días: 📰 Noticias (v10, v11…).
 - 18:00 cada semana: 3 🔥 virales (F1, F2… — F de fueguito; la V es de noticias), 3 🎯 leads (L), 1 🧠 explicativo (E). Orden: F, L, F, E, L, F, L (sáb→vie).
-- Sábado 15:00: ▶️ YouTube largo (Y1, Y2…), 10–15 min, uno por semana.
-- Cada 3 días 20:00: ✂️ clip de la cascada del YouTube de esa semana (C1, C2…).
+- VIERNES 15:00: ▶️ YouTube largo (Y1 vie 20, Y2 vie 27), 10–15 min, uno por semana; se graba el jueves.
+- Cada 3 días 20:00: ✂️ clip de la cascada (C1 lun 23 y C2 jue 26 de Y1; C3 dom 29 de Y2).
 - S1 (VSL) fuera del calendario: solo va en la landing (guion 1OyRKjhWnngM-09Zi4Je8Uv_NZGidfBT8WHKFH7C6zqc).
 - Hoja Noviembre y Calendar ya armados hasta el 30 nov. Code.gs (repo) ya acepta tipo Viral y código F: Santi lo pega cuando pueda (no urgente; Edición pone los links a mano).
 - Orden de trabajo: 1) calendario ✅ 2) los 3 cerebros (viral en curso, leads y explicativo después) 3) guiones de cada semana en 📁 Guiones.
