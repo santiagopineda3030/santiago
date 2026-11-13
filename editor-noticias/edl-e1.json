@@ -1,0 +1,33 @@
+{
+ "nota": "E1 1.0 · escenas con 2 personas: fluido, subtítulos por persona (Santi blanco con claves rojas, el otro amarillo), whoosh en cada cambio de escena, sin animaciones",
+ "gancho_texto": "",
+ "cta": "Comenta CONTENIDO",
+ "cta_emoji": "💬",
+ "acento": "&H002020E0",
+ "colores": {"otro": "&H0000E6FF"},
+ "claves": ["sirve","tampoco","30","segundos","marca","video","estrategia","constante","sistema","guiones","edita","publica","contenido","información"],
+ "secciones": [
+  {"titulo": "Escenas", "tipo": "gancho",
+   "cortes": [
+    {"clip": "0001", "desde": 3.0, "hasta": 4.1, "texto": "Top 5 maneras de...", "hablante": "otro"},
+    {"clip": "0001", "desde": 4.2, "hasta": 4.95, "texto": "Esto no sirve.", "continua": true},
+    {"clip": "0001", "desde": 10.2, "hasta": 11.6, "texto": "Hola, mi nombre es Juan Pa...", "hablante": "otro"},
+    {"clip": "0001", "desde": 11.7, "hasta": 12.95, "texto": "Esto tampoco sirve.", "continua": true},
+    {"clip": "0001", "desde": 14.9, "hasta": 16.35, "texto": "¿Cómo puedo hacer un buen video?", "hablante": "otro"},
+    {"clip": "0001", "desde": 16.45, "hasta": 18.0, "texto": "Ven, te lo explico en menos de 30 segundos.", "continua": true}
+   ],
+   "graficos": []},
+  {"titulo": "Explicación", "tipo": "parte",
+   "cortes": [
+    {"clip": "0001", "desde": 24.6, "hasta": 31.3, "texto": "Para tener una buena marca, necesitas un buen video, y para tener un buen video, necesitas una buena estrategia, y para tener una buena estrategia, necesitas ser constante."},
+    {"clip": "0001", "desde": 35.45, "hasta": 39.93, "texto": "He creado un sistema que hace todo eso por ti: crea los guiones, edita los videos y publica el contenido por ti."}
+   ],
+   "graficos": []},
+  {"titulo": "CTA", "tipo": "cta",
+   "cortes": [
+    {"clip": "0001", "desde": 40.03, "hasta": 40.85, "texto": "¿Y cómo puedo tenerlo?", "hablante": "otro"},
+    {"clip": "0001", "desde": 41.05, "hasta": 42.98, "texto": "Comenta acá CONTENIDO y te doy toda la información.", "continua": true}
+   ],
+   "graficos": []}
+ ]
+}

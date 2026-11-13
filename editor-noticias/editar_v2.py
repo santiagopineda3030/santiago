@@ -349,6 +349,8 @@ def main():
 
     edl = json.loads(Path(a.edl).read_text(encoding="utf-8"))
     CLAVES_EXTRA.update(normalizar(c) for c in edl.get("claves", []))
+    if edl.get("acento"):  # 12 nov (E1): color de las palabras clave (ASS BGR), p. ej. rojo "&H002020E0"
+        editar.ACENTO = edl["acento"]
     clips = sorted(p for p in Path(a.videos).iterdir() if p.suffix.lower() == ".mp4")
     cod = {re.search(r"_(\d{4})_", c.name).group(1): i for i, c in enumerate(clips)}
     infos = [probar(c) for c in clips]
@@ -390,7 +392,7 @@ def main():
                 if acum > GRUPO_MAX and not a.fluido:
                     zoom, acum = zooms[(zooms.index(zoom) + 1) % len(zooms)], 0.0
                 pz = {"seccion": s["titulo"], "clip": ci, "ini": round(x, 3), "fin": round(y, 3), "zoom": zoom,
-                      "palabras": asignadas[i], "bn": bool(c.get("bn")), "corte_ini": i == 0,
+                      "palabras": asignadas[i], "bn": bool(c.get("bn")), "corte_ini": i == 0 and not c.get("continua"),
                       "zoom_fijo": a.fluido}  # 11 nov: tramos en blanco y negro (referente)
                 plan.append(pz)
                 sec["piezas"].append(pz)

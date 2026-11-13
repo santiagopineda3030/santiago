@@ -92,3 +92,5 @@ Para explicativos/leads con escenas (otra persona habla, Santi entra, cambio de 
   (`otra`). Se cambia con `"colores": {"otro": "&H0000E6FF"}` (ASS BGR) en el EDL.
 - **Efectos de sonido en las transiciones, SIN animaciones:** `--sfx-cortes whoosh` (suena en cada cambio de toma/escena).
   No poner gráficos ni escenas animadas en estos videos; solo subtítulos + sonidos (+ música suave).
+- En el EDL: `"continua": true` en un corte que sigue la misma toma (solo cambia quién habla) → sin sonido de transición ahí.
+  `"acento": "&H002020E0"` cambia el color de las palabras clave (rojo).
