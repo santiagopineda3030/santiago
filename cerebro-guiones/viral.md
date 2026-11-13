@@ -1,6 +1,6 @@
 # 🧠 Cerebro viral · Reglas para guiones virales (ContentIA)
 
-Versión 1 · 13 nov 2026 · Base: método de Víctor Heras (@herasmedia / @victorherasemprendedor), con nuestras palabras
+Versión 1.1 · 13 nov 2026 (ajustada con indicaciones de Santi) · Base: método de Víctor Heras (@herasmedia / @victorherasemprendedor), con nuestras palabras
 y adaptado a ContentIA (dueños de negocio sin tiempo + IA). **Pendiente del OK de Santi.**
 
 Fuentes usadas (crudas en `cerebro-guiones/fuentes/viral/`): 4 reels de Instagram transcritos, índice de su libro
@@ -9,6 +9,23 @@ Fuentes usadas (crudas en `cerebro-guiones/fuentes/viral/`): 4 reels de Instagra
 
 > Para qué sirve: un video viral NO vende. Trae gente nueva que no te conoce. Su trabajo es parar el scroll,
 > retener hasta el final y dejar una razón para seguir, guardar o mandar a un amigo.
+
+## 0. Regla de ContentIA: el viral muestra lo que hacemos (Santi, 13 nov)
+- **No es viral genérico.** Cada video muestra **nuestro sistema con IA que hace el contenido del negocio**
+  (ideas, guiones, edición, publicación) **con resultados**: "este video lo hizo el sistema", "un video al día sin editar".
+- **Nunca** herramientas, pantallas de configuración ni nombres de apps. Se ve el resultado, no el cómo.
+- La IA y las noticias son la puerta; el sistema es la prueba. Si el guion funcionaría igual para cualquier cuenta de IA, falta lo nuestro.
+
+### Tipos de video (todos mezclan, pero cada uno tiene un enfoque principal)
+| Código | Tipo | Enfoque principal | Gancho típico (de este cerebro) |
+|---|---|---|---|
+| **v** | Viral | Alcance: gente nueva (nivel 0–1) | Noticia de impacto, "la peor forma…", escena rara |
+| **L** | Lead | Que comente / pida info (nivel 2–3) | Resultado primero, diagnóstico en preguntas, "¿cómo hacen otros…?" |
+| **E** | Explicativo | Que entienda el sistema (nivel 1–2) | "Te lo explico en 30 s", "X reglas para…", "¿qué es mejor, X o Y?" |
+| **Y** | YouTube largo | Confianza y profundidad (todos) | Resultado + promesa clara en los primeros 15 s, y re-ganchos cada 1–2 min |
+
+→ **Las fórmulas de gancho (sección 3) y la retención (sección 4) sirven para los 4 tipos.** El cuerpo y el CTA de L y E
+tendrán su propio cerebro (leads.md, explicativo.md).
 
 ---
 
@@ -30,7 +47,7 @@ Fuentes usadas (crudas en `cerebro-guiones/fuentes/viral/`): 4 reels de Instagra
 | 3 | Sabe que tú eres la solución | Leads |
 | 4 | Sabe qué producto comprar | Venta / llamada |
 
-→ Este cerebro es para **0 y 1**. Leads y explicativo tienen su propio cerebro.
+→ El video viral completo es para **0 y 1**. Los ganchos sirven para todos los niveles.
 
 ## 2. Estructura del guion viral (gancho → historia → moraleja → CTA)
 | Parte | Tiempo | Qué hace |
@@ -111,34 +128,63 @@ y que lo que se VE en el primer segundo ya cuente algo (texto grande, gesto, obj
 
 ---
 
-## 8. Tres guiones de ejemplo (ContentIA)
+## 8. Análisis del guion E1 (ejemplo "más o menos bueno")
+E1 · Qué es el Cerebro de Contenido (Drive `1NHqi5AFmUMpYSsh09xsXaDTmWQ2lijB_84LeVdu663c`).
 
-### Ejemplo 1 · Lista "En 2026 la peor forma…" (nivel 0) · ~50 s
-**Gancho (texto en pantalla):** En 2026 la peor forma de hacer contenido para tu negocio… es la más común.
-**Re-gancho:** Y seguro la estás usando. Te digo 3 señales.
-**1.** Grabas cuando "tienes tiempo". O sea: nunca. Los negocios que crecen publican todos los días, aunque el dueño no esté.
-**2.** Cada video empieza de cero: idea, guion, edición… todo a mano. Eso son horas por semana que no le das a tus clientes.
-**3.** Y la peor: publicas y no sabes si funcionó. Sin datos, repites lo que no sirve.
-**Moraleja:** No te falta tiempo. Te falta un sistema que trabaje mientras tú atiendes tu negocio.
-**CTA:** Si quieres ver cómo se ve eso en un negocio como el tuyo, comenta SISTEMA y te lo mando. Comenta SISTEMA.
+**Qué tiene bien**
 
-### Ejemplo 2 · "¿Qué es mejor, X o Y?" (nivel 1) · ~55 s
-**Gancho:** ¿Qué es mejor para tu negocio: contratar un community manager… o una IA?
-**Re-gancho:** La respuesta no es la que piensas.
-**Cuerpo:** Un community manager cuesta entre 300 y 800 dólares al mes [verificar cifra para Colombia antes de grabar],
-se enferma, se va de vacaciones y necesita que le expliques tu negocio cada semana.
-La IA sola tampoco sirve: si no la entrenas con tu negocio, escribe igual que la de todos.
-Lo que funciona es lo del medio: una IA que aprende cómo hablas tú y una persona que revisa antes de publicar.
-**Moraleja:** No es humano o IA. Es tu voz, multiplicada.
-**CTA:** Comenta SISTEMA y te explico cómo se arma para tu negocio. Comenta SISTEMA.
+- Gancho de **resultado primero** y además prueba: "Este video está editado, publicado y guionizado por IA". Muestra lo nuestro desde el segundo 1.
+- Las escenas "Esto no sirve" (alguien haciendo un video malo y Santi lo para) son una **escena rara + enemigo común**: paran el scroll.
+- Muestra **resultados, no herramientas**. Prueba real: "mis redes funcionan así hoy".
+- Corto (35–40 s) y con **un solo CTA** por DM.
 
-### Ejemplo 3 · Diagnóstico en preguntas + analogía (nivel 0–1) · ~55 s
-**Gancho (dos personas o Santi haciendo las dos voces):** — ¿Publicas al menos 3 veces por semana? — No.
-**Ritmo rápido:** — ¿Tus videos tienen gancho? — No. — ¿Sabes cuál te trajo clientes? — No. — ¿Lo hace alguien por ti? — No… — Ok, ya entiendo todo.
-**Historia/analogía:** Tener un negocio sin contenido es como tener el mejor local… en una calle sin luz. Está ahí, pero nadie lo ve.
-Y la gente hoy no camina por la calle: camina por Instagram.
-**Moraleja:** Si no publicas, para tu cliente no existes. Y publicar ya no tiene que quitarte tiempo.
-**CTA:** Comenta SISTEMA y te muestro cómo hacer que tu negocio publique solo. Comenta SISTEMA.
+**Qué mejoraría (método Heras)**
+
+1. **Gancho largo** (~20 palabras) → dejarlo en ≤ 12: "Este video lo escribió, editó y publicó una IA."
+2. **Dos ganchos compitiendo** ("Este video está editado…" y "Te enseño a ser constante…"): elegir uno; el otro pasa a re-gancho.
+3. **Falta re-gancho / bucle abierto** antes de los 8 s ("y lo mejor no es eso…").
+4. **"Qué es" suena a folleto.** Contarlo como historia o caso: antes / después, con un número (horas ahorradas, videos al mes).
+5. **La prueba sin números.** "Un video todos los días" → "30 videos este mes y no edité ninguno".
+6. **Las escenas "esto no sirve" no dicen por qué.** Darles una razón en una línea ("nadie se queda a ver un top 5 sin gancho").
+7. **Falta moraleja** de una frase antes del CTA.
+8. **Contradicción:** "sin mover un dedo" vs. "tú grabas". Ser honestos: "tú solo grabas".
+9. **Palabra del CTA inconsistente** (CONTENIDO en las notas, SISTEMA al final): una sola, **SISTEMA**, dicha dos veces.
+10. Para un viral (v) arranca muy pronto en "el sistema" (nivel 2–3). Para gente nueva, abrir con el dolor o la sorpresa y revelar el sistema después.
+
+## 9. Tres guiones de ejemplo (base E1, mostrando lo nuestro)
+
+### Ejemplo 1 · v · Resultado primero (nivel 0) · ~45 s
+**Gancho (Santi a cámara, texto grande):** Este video lo escribió, editó y publicó una IA.
+**Re-gancho:** Y eso no es lo más loco. Lo loco es cuánto tiempo me devuelve.
+**Historia:** Antes yo hacía todo: pensaba la idea, escribía, editaba, subía. Tres horas por video.
+Hoy el sistema me trae la idea y el guion. Yo grabo 5 minutos. Y sale editado y publicado en Instagram, TikTok y YouTube.
+**Prueba (pantalla con el perfil):** Un video nuevo cada día este mes. No edité ninguno. [poner el número real antes de grabar]
+**Moraleja:** No te falta tiempo para redes. Te falta que alguien haga la parte pesada.
+**CTA:** Comenta SISTEMA y te muestro cómo se vería en tu negocio. Comenta SISTEMA.
+
+### Ejemplo 2 · v/E · "Esto no sirve" + la peor forma (nivel 0–1) · ~50 s
+**Escena 1 (alguien a cámara):** "Top 5 cosas que…" → **Santi entra:** Esto no sirve. Nadie se queda sin un gancho.
+**Escena 2 (alguien en selfie en la calle):** "Hola, mi nombre es…" → **Santi:** Esto tampoco. A nadie le importa tu nombre en el segundo 1.
+**Gancho dicho:** En 2026 la peor forma de hacer contenido para tu negocio… es la más común: hacerlo cuando tienes tiempo.
+**Re-gancho:** Te muestro lo que hago yo en vez de eso.
+**Cuerpo:** Tengo un sistema con IA que piensa las ideas, escribe el guion, edita y publica. Yo solo grabo.
+Resultado: publico todos los días, aunque esté atendiendo clientes.
+**Moraleja:** Ser constante no es fuerza de voluntad. Es tener un sistema.
+**CTA:** Comenta SISTEMA y te explico cómo armarlo para tu negocio. Comenta SISTEMA.
+
+### Ejemplo 3 · L · Diagnóstico en preguntas (nivel 1–2) · ~50 s
+**Gancho (Santi hace las dos voces):** — ¿Publicas 3 veces por semana? — No.
+**Ritmo rápido:** — ¿Tus videos tienen gancho? — No. — ¿Sabes cuál te trajo clientes? — No. — Ok, ya entiendo todo.
+**Analogía:** Un negocio sin contenido es el mejor local… en una calle sin luz. Está ahí, pero nadie lo ve.
+**Giro / lo nuestro:** Por eso armé un sistema que prende la luz por ti: ideas, guion, edición y publicación. Tú solo grabas.
+**Prueba:** Este video salió de ahí.
+**Moraleja:** Si no publicas, para tu cliente no existes.
+**CTA:** Comenta SISTEMA y te digo cómo hacerlo en tu negocio. Comenta SISTEMA.
+
+### Ganchos listos para L, E y Y
+- **L:** "Este negocio pasó de publicar 0 a 30 videos al mes. El dueño solo grabó." [solo con caso real]
+- **E:** "Te explico en 30 segundos cómo una IA hace el contenido de tu negocio."
+- **Y:** "Este mes publiqué un video al día sin editar ni uno. En este video te muestro el sistema completo, de la idea al video publicado."
 
 ---
 *Cerebros hermanos (después): `cerebro-guiones/leads.md` (nivel 2–3) y `cerebro-guiones/explicativo.md`.*
