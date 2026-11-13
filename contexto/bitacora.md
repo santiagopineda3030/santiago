@@ -311,3 +311,4 @@
 - 13 nov · v9: Viral 1 Amazon → Microsoft caído en 74 países (Santi); gancho nuevo con Microsoft; visuales, edición y descripciones ajustados.
 - 13 nov 10:20 · v9 en Drive › Guiones › Instagram › 3. Guiones terminados (1gGDsT4JQFMOyzDAmk6JroxCbazl2-i2ji_J74jibxs0). En frío (1sTx5dC…) a la papelera. Hoja fila 19: Grabar, ángulo nuevo, Referente R2, link del guion en G. Falta: ficha R2 en la Guía de edición de Drive.
 - 13 nov · Robot de edición ELIMINADO (Santi): borrados contexto/robot-edicion.md y Robot.gs; edita solo 📁 Edición de videos. Santi borra en claude.ai la tarea 'Robot edicion' y en Apps Script el activador de vigilarVideosEnFrio. Hoja Noviembre ordenada por fecha y hora (v7–v9 ya salen en orden) y filtro sobre toda la tabla.
+- 13 nov · Santi borró en Apps Script el activador vigilarVideosEnFrio y Robot.gs, y la tarea del robot en claude.ai. Robot apagado del todo; solo queda la tarea de las 4:35 (Guion diario).
