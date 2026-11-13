@@ -26,6 +26,18 @@ Sirve para las **escenas animadas** que tapan o acompañan cada noticia (no para
 - **Cuadrícula:** cuadritos que se llenan uno a uno para mostrar cantidad.
 - **Ritmo:** cada idea 2–3 s, transiciones suaves (fundidos y zooms), nada de cortes bruscos en las animaciones.
 
+### ref2 · `referentes/noticias-ref2.mp4` (27,7 s, vertical, con cara) · `noticias-ref2-cuadros.jpg` · aprobado por Santi 13 nov (v9 en adelante)
+Formato completo del video de noticias (plano de Santi + animaciones). **En ROJO, no en verde** (Santi, 13 nov).
+- **Título grande arriba** en mayúsculas con brillo neón, entra palabra por palabra (gancho).
+- **Subtítulos 2 pisos:** primera parte chica en blanco + palabra clave abajo, grande, negrita y con glow (rojo).
+- **Tarjetas animadas** (esquinas redondas, fondo oscuro) que se llenan paso a paso: barra de progreso con íconos, velocímetro que cae a rojo, lista que se marca con ✓/✗.
+- **Blanco y negro** en las frases de reflexión o dolor (solo esa frase).
+- **Destello de luz cálida** como transición entre partes.
+- **Pantallas completas sin la cara:** fondo oscuro con objeto 3D (globo, billetes, servidores) o fondo claro con logos que entran uno a uno en tarjetas blancas.
+- **Palabra negativa en rojo fuerte** en los contrastes.
+- Foto de perfil fija en una esquina.
+- **Qué NO copiar:** el verde, el voseo, el contenido. Traducir a la marca: acento rojo, CTA de la marca, mostrar resultados y no herramientas.
+
 ## Lead (L)
 ### ref1 · `referentes/lead-ref1.mp4` (15 s, vertical) · `lead-ref1-cuadros.jpg`
 - **Gancho:** pregunta en una píldora negra redondeada arriba ("¿Qué es GitHub?"), palabra clave en amarillo; debajo aparecen chips pequeños con el contexto ("para ser analista de datos", "2027" en amarillo).

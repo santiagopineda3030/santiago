@@ -5,6 +5,7 @@ Copiada el 5 nov 2026. Si Santiago la cambia en Drive, el original manda.
 *Para que Claude edite los videos de noticias de IA siempre con el mismo estilo. Publicación: todos los días a las 11:00 a. m. (Instagram y TikTok), con las noticias del día anterior.*
 
 ## 1. Referentes
+- **R2 · Noticias con cara + tarjetas animadas** (9:16) — video que subió Santi el 13 nov (`referentes/noticias-ref2.mp4`, sin link). Cuándo: todos los videos de noticias desde el v9. Qué tomar: título neón arriba palabra por palabra, subtítulos de 2 pisos con palabra clave grande, tarjetas que se llenan (barra, velocímetro, lista ✓/✗), B/N en frases de dolor, destello entre partes, pantallas con logos o 3D. Qué NO copiar: el verde (va en ROJO), el voseo, el contenido. Aprobado por Santi: 13 nov 2026. Ficha completa: `contexto/referentes-edicion.md`.
 - **Jon Hernández** — noticias de IA. Instagram @jonhernandezia · YouTube @la_inteligencia_artificial. Referente más cercano al formato de noticias.
 - **Xavier Mitjana** — IA práctica, comparativas y tutoriales. YouTube @xaviermitjana.
 - **Carlos Santana (DotCSV)** — explicación clara de temas técnicos de IA.
