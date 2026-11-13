@@ -100,3 +100,6 @@ Para explicativos/leads con escenas (otra persona habla, Santi entra, cambio de 
 - **Final completo:** `"completo": true` en el último corte (no se recorta al terminar la voz).
 - `"sub_margen": 560` en un corte → subtítulos más abajo solo en ese corte (13 nov, E1).
 - **Color para tomas muy azules u oscuras (13 nov, E1):** `--luz "colortemperature=temperature=4800:mix=0.8,eq=brightness=0.04:gamma=1.12:contrast=1.04:saturation=1.0"`.
+- **Cortes sin voz cortada (13 nov, v9):** antes de renderizar, transcribir cada corte con ±0,6 s de margen (initial_prompt de
+  muletillas) y poner `desde` = inicio de la 1.ª palabra y `hasta` = fin de la última (Whisper de trozos se queda corto al final).
+  Usar `--aire 0.1 --unir 0.45`. Si antes del corte hay una traba ("la…", "también…", "Y…"), arrancar justo después de ella.

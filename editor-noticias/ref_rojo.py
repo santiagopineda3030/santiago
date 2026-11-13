@@ -442,7 +442,7 @@ def g_ref_titulo(dur, arriba="", grande="", sub="", ch=None):
 
     def dib(im, t):
         _titulo(im, t, arriba, grande, y=700)
-        _onda(im, t, 1150, 5, int(A.clamp(t / max(0.4, dur * 0.7)) * 5 + 0.999), ())
+        _onda(im, t, 1400, 5, int(A.clamp(t / max(0.4, dur * 0.7)) * 5 + 0.999), ())
         if sub:
             a = A.clamp((t - 0.6) / 0.3)
             if a > 0:
