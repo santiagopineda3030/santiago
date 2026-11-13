@@ -324,3 +324,4 @@
 - 13 nov · Calendario nuevo (Santi): noticias 11:00 diario; 18:00 3 virales (F), 3 leads (L), 1 explicativo (E) por semana; YouTube largo sáb 15:00; clip cascada cada 3 días 20:00. Hoja Noviembre rehecha (25 filas F/L/E/Y/C del 14 al 30 nov, validación Tipo con 'Viral') y Calendar (8 eventos viejos borrados, 25 nuevos). S1 solo en la landing. Code.gs: tipo Viral + código f (falta pegarlo).
 - 13 nov 15:53 · E1 adelantado (Santi): Hora 15:55 en la hoja (fila 11, ya en Programado) y evento de Calendar movido. v9 salió a la 1:10 (Publicado).
 - 13 nov · Límite casi agotado: Y1 pasa a vie 20 15:00 (graba jue 19), Y2 vie 27; C1 23, C2 26, C3 29; C4, C5 y Y3 quitados (hoja + Calendar). Foco hasta el jue 19: cerebro, landing y videos. Base 3 se cierra; nuevo Santi · Base 4 en Sonnet.
+- 13 nov · Santi · Base 4 (session_01Mcnvqsniy4E3PwFkKD6G4A) abierto en Sonnet; reemplaza a Base 3. Foco hasta el jue 19: cerebro de guiones, landing, videos diarios.

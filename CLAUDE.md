@@ -49,7 +49,7 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
   | `areas/4-anuncios-meta` | `editar-anuncio` | Recursos y reglas · Anuncios (Meta) |
 | `areas/5-edicion-videos` | `editar-video` | (Sin robot desde 13 nov: lo edita SOLO el chat 📁 Edición de videos) Edita lo de `1. Videos en frío`, revisa con Santi, sube a `2. Videos terminados` y programa |
 - **Chats (renovados 12 nov, TODOS en Opus 5.5; al empezar leen `contexto/estado-actual.md`; regla de Santi: no hacer nada sin su permiso):**
-  `Santi · Base 3` (`session_01McnvqtDPHNYbE9DQ8iQJeH`) · `Santi · Preguntas` (`session_01Mcnvqvgpb4vJdHLWw8g5tF`) ·
+  `Santi · Base 4` (`session_01Mcnvqsniy4E3PwFkKD6G4A`) · `Santi · Preguntas` (`session_01Mcnvqvgpb4vJdHLWw8g5tF`) ·
   📁 Edición de videos `session_01Mcnvqw535MF9WSXKXT5Cgs` · 📁 Guiones `session_01McnvqvLLYGtXVTA9bDdCQW` ·
   📁 Anuncios (Meta) `session_01McnvqsMdqqqXtnJVikQRtp` · 📁 TikTok `session_01McnvqvdnHAnmk3XpmCv1th` ·
   📁 Instagram `session_01McnvqvSeKF6PQgmxb8TMbh` · 📁 YouTube `session_01Mcnvqv6MuyBBGX1vcj7n1C` · Web · Landing `session_01Mcnvqshyy1YTa2uLZAZ2tP` · 🧠 Cerebro viral `session_01McnvqwGMxfMuoz8myeug2m` (13 nov).
