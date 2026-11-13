@@ -53,7 +53,7 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
   📁 Edición de videos `session_01Mcnvqw535MF9WSXKXT5Cgs` · 📁 Guiones `session_01McnvqvLLYGtXVTA9bDdCQW` ·
   📁 Anuncios (Meta) `session_01McnvqsMdqqqXtnJVikQRtp` · 📁 TikTok `session_01McnvqvdnHAnmk3XpmCv1th` ·
   📁 Instagram `session_01McnvqvSeKF6PQgmxb8TMbh` · 📁 YouTube `session_01Mcnvqv6MuyBBGX1vcj7n1C` · Web · Landing `session_01Mcnvqshyy1YTa2uLZAZ2tP` · 🧠 Cerebro viral `session_01McnvqwGMxfMuoz8myeug2m` (13 nov).
-  Al cerrar cada día se renuevan todos (nuevos y cortos, viejos archivados). Al crearlos con create_session SIEMPRE poner `source_url` (repo) y `source_revision`, o salen sin memoria. Viejos: `contexto/chats.md`.
+  **AHORRO (13 nov):** ya NO se renuevan cada día; Opus solo Edición y código, el resto Sonnet (ver estado-actual.md). Al crearlos con create_session SIEMPRE poner `source_url` (repo) y `source_revision`, o salen sin memoria. Viejos: `contexto/chats.md`.
 - **Videos viejos se borran** (regla de Santi, 7 nov): cuando un video ya se publicó, su crudo va a la papelera y se revisa el
   espacio de Drive; Santi vacía la papelera.
 - **Guiones viejos se borran** (regla de Santi, 5 nov): guion en frío → papelera al terminarlo; guion terminado + idea →
