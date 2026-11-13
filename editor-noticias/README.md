@@ -99,3 +99,4 @@ Para explicativos/leads con escenas (otra persona habla, Santi entra, cambio de 
 - **Sonidos variados** en las transiciones: `--sfx-cortes "swipe,boom,whoosh,brillo,reves,golpe"` (se turnan; `sfx_extra.py`).
 - **Final completo:** `"completo": true` en el último corte (no se recorta al terminar la voz).
 - `"sub_margen": 560` en un corte → subtítulos más abajo solo en ese corte (13 nov, E1).
+- **Color para tomas muy azules u oscuras (13 nov, E1):** `--luz "colortemperature=temperature=4800:mix=0.8,eq=brightness=0.04:gamma=1.12:contrast=1.04:saturation=1.0"`.

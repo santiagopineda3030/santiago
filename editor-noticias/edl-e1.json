@@ -1,5 +1,5 @@
 {
- "nota": "E1 1.3 · escena de afuera primero, azul segundo; subtítulos más abajo en '¿Cómo puedo hacer un buen video?'; hasta el final de la voz",
+ "nota": "E1 1.4 · orden original (azul primero), color corregido (menos azul, más luz), subtítulos un poco más abajo",
  "gancho_texto": "",
  "cta": "Comenta CONTENIDO",
  "cta_emoji": "💬",
@@ -30,20 +30,6 @@
    "cortes": [
     {
      "clip": "0001",
-     "desde": 10.2,
-     "hasta": 11.6,
-     "texto": "Hola, mi nombre es Juan Pa...",
-     "hablante": "otro"
-    },
-    {
-     "clip": "0001",
-     "desde": 11.7,
-     "hasta": 12.95,
-     "texto": "Esto tampoco sirve.",
-     "continua": true
-    },
-    {
-     "clip": "0001",
      "desde": 3.0,
      "hasta": 4.1,
      "texto": "Top 5 maneras de...",
@@ -58,11 +44,25 @@
     },
     {
      "clip": "0001",
+     "desde": 10.2,
+     "hasta": 11.6,
+     "texto": "Hola, mi nombre es Juan Pa...",
+     "hablante": "otro"
+    },
+    {
+     "clip": "0001",
+     "desde": 11.7,
+     "hasta": 12.95,
+     "texto": "Esto tampoco sirve.",
+     "continua": true
+    },
+    {
+     "clip": "0001",
      "desde": 14.9,
      "hasta": 16.35,
      "texto": "¿Cómo puedo hacer un buen video?",
      "hablante": "otro",
-     "sub_margen": 560
+     "sub_margen": 520
     },
     {
      "clip": "0001",
@@ -118,6 +118,6 @@
  ],
  "fuente_sub": "Montserrat Black",
  "sub_tam": 86,
- "sub_margen": 700,
+ "sub_margen": 630,
  "sin_puntuacion": true
 }
