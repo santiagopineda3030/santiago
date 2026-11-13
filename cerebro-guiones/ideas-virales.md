@@ -1,5 +1,12 @@
 # Ideas de videos virales · ContentIA
 
+## Lista 3 · 13 nov 2026 · lo viral de hoy, TAL CUAL (sin adaptar, pedido de Santi)
+Fuentes: ViralRemix (top 50 TikTok del 13 nov, videos nuevos por día), SocialPilot, NewEngen (TikTok e Instagram), SameButMe (plantillas IA), Pepper Agency, Volume.
+Bailes: Ba Ba Ba (42K videos/día), Baby Doll (sube), Under Arrest ILLIT (sube), Dame Hombro / Bulin 47 (3.700 M de vistas), Dime Dime Baby (1.200 M), Christian Dior, Chipmunks, Toc Toc, Hey Boo Come Slide (nuevo), La Mujer del Pelotero (nuevo).
+Formatos: Y Entiende Corazón (Prince Royce, de niño a hoy), Shoulder Carry (dos fotos), Ain't You My Gangsta (sube 58 %), Pray For Me slow mo, I'm So Sorry carrusel, Paid Me No Mind, Go Go Go, My Moon My Man, Fan transition, Costume loading, No no no… sí, War Is Over, letra pequeñita, "el dinero no compra la felicidad pero…", Lately on my SD card, It's Time (Mariah), Add to Cart, Housewife (Tate McRae), Kylie Angel Walk.
+IA: Magic Double (dibujo que baila contigo), Single Camel, Infinity Pool Floatie (+100 %), Police Chase, Kitten Parade (nuevo), Kung Fu Cat, Rugrats (sube), Stormzy freestyle (nuevo), Window Serenade, cafetería elegante, mono y manzana, cortar la rama, Grinch Pet, Santa Nice List, bebé en reno.
+Series y temas: zombis en segunda persona por episodios, AI vs. hecho a mano, Movember, Black Friday (27 nov), Thanksgiving (tablas en forma de pavo).
+
 ## Lista 2 · 13 nov 2026 · basada en lo que funciona HOY (regla de Santi: no solo nuestro nicho)
 Fuentes (13 nov): Volume (formatos de negocios y de tecnología/IA de esta semana, vistas = veces lo normal de cada cuenta),
 NewEngen (tendencias de Instagram), Pepper Agency y SocialPilot (TikTok/Instagram de noviembre), noticias de la semana.

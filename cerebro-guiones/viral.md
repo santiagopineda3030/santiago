@@ -33,6 +33,7 @@ tendrán su propio cerebro (leads.md, explicativo.md).
 - Las ideas salen de **videos y formatos que están funcionando HOY** (tendencias de la semana, sonidos, memes, noticias,
   formatos con más vistas de lo normal), **no solo de nuestro nicho cerrado**. El tema puede ser amplio (IA, dinero,
   trabajo, negocios, tecnología, cultura) y **el guion lo conecta con lo nuestro**.
+- **Cuando Santi pide "ideas virales": dar SOLO lo viral de hoy, tal cual, SIN adaptarlo a ContentIA ni al nicho** (él decide después cómo usarlo).
 - Cada vez que se pidan ideas: buscar primero qué funciona esta semana (TikTok/Instagram, trackers de tendencias,
   noticias del día) y poner al lado de cada idea **qué tendencia o formato copia** y de dónde salió.
 
