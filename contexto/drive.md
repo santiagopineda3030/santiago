@@ -78,3 +78,6 @@ Versión solo Instagram del script arreglado, sin datos de Santi (CONFIG vacío)
 | Equipo de grabación (9 nov) | ContentIA | `1UOVlBktAuA77OkdLIP3LEsKHzPx7b0Xt-Pf7T5cRDQM` |
 | Guion S1 VSL (10 nov) | Guiones › Instagram › 3. Terminados | `1OyRKjhWnngM-09Zi4Je8Uv_NZGidfBT8WHKFH7C6zqc` |
 | Referentes de edición (11 nov) | Instagram › 3. Recursos | `1hIAUPnKht_dWbRwhPaDLJav1Ozu3V87UIYWGSUdxEME` |
+
+## Cerebros de guiones (13 nov)
+- Guiones › Cerebros `1lU7gDM54TSB1CTnFtkS80iH-b5YDyYqx` · 1. Viral `1gh7_8X9VHl5eXH7Y8LWvXNw2bofB95wn` · 2. Leads `1c-6Xx8EHXngNDJUQJXdHKe0_oFNBhzrA` · 3. Explicativo `11nCWuwMj78gKJxKv1HpqBj4o-fJaGeCw`
