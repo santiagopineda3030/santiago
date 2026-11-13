@@ -196,7 +196,7 @@ def ass_v2(palabras, secciones, gancho, cta, ruta, colores=None, opciones=None):
         otro = g[0].get("h", "santi") != "santi"
         txt = f"{{\\c{base}}}" + " ".join((f"{{\\c{editar.ACENTO}}}{editar.ass_texto(w['w'])}{{\\c{base}}}"
                         if editar.es_clave(w["w"], claves) and not otro else editar.ass_texto(w["w"])) for w in g)
-        ev.append((0, "Sub", ini, max(fin, ini + 0.3), "{\\fscx82\\fscy82\\t(0,90,\\fscx100\\fscy100)}" + txt))
+        ev.append((0, "Sub", ini, max(fin, ini + 0.3), "{\\fscx82\\fscy82\\t(0,90,\\fscx100\\fscy100)}" + txt, g[0].get("mv")))
     pop = "{\\fad(60,160)\\fscx70\\fscy70\\t(0,140,\\fscx108\\fscy108)\\t(140,240,\\fscx100\\fscy100)}"
     noticias = [s for s in secciones if s["tipo"] == "noticia"]
     for s in secciones:
@@ -219,8 +219,9 @@ def ass_v2(palabras, secciones, gancho, cta, ruta, colores=None, opciones=None):
         cab = cab.replace(lin, ",".join(p))
     if A.ESTILO == "ia":
         cab = cab.replace("&H002020E0", "&H00C828FF" if getattr(A, "CYBER", False) else "&H00FF528C")  # cajas: magenta (cyber) o violeta
-    lineas = [f"Dialogue: {c},{editar.ass_tiempo(a)},{editar.ass_tiempo(b)},{st},,0,0,0,,{t}"
-              for c, st, a, b, t in sorted(ev, key=lambda e: e[2])]
+    ev = [e if len(e) == 6 else e + (None,) for e in ev]
+    lineas = [f"Dialogue: {c},{editar.ass_tiempo(a)},{editar.ass_tiempo(b)},{st},,0,0,{mv or 0},,{t}"  # 13 nov: altura por corte
+              for c, st, a, b, t, mv in sorted(ev, key=lambda e: e[2])]
     Path(ruta).write_text(cab + "\n".join(lineas) + "\n", encoding="utf-8")
 
 
@@ -402,7 +403,7 @@ def main():
                 i = min(range(len(tramos)), key=lambda i: 0 if tramos[i][0] <= m <= tramos[i][1]
                         else min(abs(m - tramos[i][0]), abs(m - tramos[i][1])))
                 x, y = tramos[i]
-                asignadas[i].append(dict(w, s=min(max(w["s"], x), y - 0.05), e=max(min(w["e"], y), x + 0.05), h=hab))
+                asignadas[i].append(dict(w, s=min(max(w["s"], x), y - 0.05), e=max(min(w["e"], y), x + 0.05), h=hab, mv=c.get("sub_margen")))
             for i, (x, y) in enumerate(tramos):
                 if acum > GRUPO_MAX and not a.fluido:
                     zoom, acum = zooms[(zooms.index(zoom) + 1) % len(zooms)], 0.0

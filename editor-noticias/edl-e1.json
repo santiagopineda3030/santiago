@@ -1,5 +1,5 @@
 {
- "nota": "E1 1.1 · Montserrat, sin comas ni puntos, subtítulos más arriba (cerca del mentón), sonidos variados, final completo",
+ "nota": "E1 1.3 · escena de afuera primero, azul segundo; subtítulos más abajo en '¿Cómo puedo hacer un buen video?'; hasta el final de la voz",
  "gancho_texto": "",
  "cta": "Comenta CONTENIDO",
  "cta_emoji": "💬",
@@ -30,20 +30,6 @@
    "cortes": [
     {
      "clip": "0001",
-     "desde": 3.0,
-     "hasta": 4.1,
-     "texto": "Top 5 maneras de...",
-     "hablante": "otro"
-    },
-    {
-     "clip": "0001",
-     "desde": 4.2,
-     "hasta": 4.95,
-     "texto": "Esto no sirve.",
-     "continua": true
-    },
-    {
-     "clip": "0001",
      "desde": 10.2,
      "hasta": 11.6,
      "texto": "Hola, mi nombre es Juan Pa...",
@@ -58,10 +44,25 @@
     },
     {
      "clip": "0001",
+     "desde": 3.0,
+     "hasta": 4.1,
+     "texto": "Top 5 maneras de...",
+     "hablante": "otro"
+    },
+    {
+     "clip": "0001",
+     "desde": 4.2,
+     "hasta": 4.95,
+     "texto": "Esto no sirve.",
+     "continua": true
+    },
+    {
+     "clip": "0001",
      "desde": 14.9,
      "hasta": 16.35,
      "texto": "¿Cómo puedo hacer un buen video?",
-     "hablante": "otro"
+     "hablante": "otro",
+     "sub_margen": 560
     },
     {
      "clip": "0001",

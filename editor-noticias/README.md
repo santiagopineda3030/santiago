@@ -98,3 +98,4 @@ Para explicativos/leads con escenas (otra persona habla, Santi entra, cambio de 
   más arriba, cerca del mentón. En el EDL: `"fuente_sub": "Montserrat Black", "sub_tam": 86, "sub_margen": 700, "sin_puntuacion": true`.
 - **Sonidos variados** en las transiciones: `--sfx-cortes "swipe,boom,whoosh,brillo,reves,golpe"` (se turnan; `sfx_extra.py`).
 - **Final completo:** `"completo": true` en el último corte (no se recorta al terminar la voz).
+- `"sub_margen": 560` en un corte → subtítulos más abajo solo en ese corte (13 nov, E1).
