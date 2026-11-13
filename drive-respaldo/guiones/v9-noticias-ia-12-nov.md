@@ -1,60 +1,67 @@
-# v9 · Noticias IA · 12 nov (publica 13 nov 11:00 a. m.)
-Guion terminado (revisado con Santi en 📁 Guiones). Un solo guion para Instagram, TikTok y YouTube Shorts.
-Cambios frente al en frío automático (1sTx5dCqnIUbk1cpRJDh9tD0gGJOZ0YmgWe84PPgYXPo): Viral 1 Nvidia → Amazon sin código;
-Viral 2 swatting 911 → Anthropic/AMD en 3 días; Útil ChatGPT agentes → MIT 95 %; gancho nuevo; "SpaceXSI" → SpaceX; CTA SISTEMA; sección Edición.
+# v9 · Noticias IA · 12 nov (publica 13 nov 14:30)
+Guion terminado (revisado noticia por noticia con Santi en 📁 Guiones, 13 nov). Un solo guion para Instagram, TikTok y YouTube Shorts.
+Reemplaza al en frío automático (1sTx5dCqnIUbk1cpRJDh9tD0gGJOZ0YmgWe84PPgYXPo). CTA sin "comenta SISTEMA": excepción de Santi solo para este video.
 
 ## Gancho
-Amazon creó un programa entero… y su equipo no escribió ni una línea de código. Estas son las 5 noticias de IA que nadie te está contando.
+Amazon creó un programa entero… y nadie escribió ni una línea de código, el 95 % de las empresas que usan IA no ha ganado nada con ella. Estas son las 5 noticias de IA que pasaron ayer, 12 de noviembre.
 
 ## Viral 1 · Amazon sin código
-Amazon lanzó una herramienta gratis que imita más de 200 servicios de su nube. La hicieron agentes de IA. El equipo dice que no escribió ni revisó el código. Ni una línea.
+Amazon lanzó un programa gratis que copia más de 200 de sus servicios en la nube. ¿Quién lo hizo? Agentes de IA. El equipo dice que no escribió ni revisó el código. Imagínate: una de las empresas más grandes del mundo creando un programa 100 % hecho con IA.
 
-## Viral 2 · Anthropic en 3 días
-Y hay más. Según reportes, la IA de Anthropic pasó Claude a los chips de AMD en solo tres días y escribió casi todo el código. Si es cierto, Nvidia ya no es la única opción. Ojo: el dato viene de inversionistas, no está confirmado.
+## Viral 2 · OpenAI
+¿Te acuerdas de la noticia de OpenAI? Facturó más de 10.000 millones de dólares en un trimestre… y aun así perdió casi 11.000 millones. Ahora Bloomberg lo confirma: por cada dólar que gana, gasta casi dos. ¿En qué? Según reportes, sobre todo en los servidores que hacen funcionar ChatGPT.
 
 ## Polémica 1 · La demanda
-Cuatro organizaciones demandaron a Anthropic, Google, Meta, OpenAI y SpaceX. Le piden a un juez que no los deje sacar modelos nuevos. Dicen que van camino a un desastre.
+Cuatro organizaciones demandaron a Anthropic, Google, Meta, OpenAI y SpaceX. Le piden a un juez que les prohíba crear o sacar modelos de IA nuevos. Dicen que estas empresas van "camino a un desastre". ¿Tú qué opinas: hay que frenar la IA o no?
 
-## Polémica 2 · United Airlines
-United prohíbe que asistentes de IA compren o cambien tus tiquetes. Dice que darle tus claves a una IA puede exponer tus datos. Delta sí los deja. Dos aerolíneas, dos reglas contrarias.
+## Polémica 2 · La IA del hospital
+En los hospitales públicos de Nueva York, la IA hace los resúmenes de los pacientes. Un estudio encontró que en casi el 25 % de los casos se le olvidó poner el examen del azúcar en la sangre, el que se usa para controlar la diabetes. Y a los pacientes más enfermos les pasó tres veces más. ¿Cómo vas a dejar la salud de las personas en manos de una IA?
 
 ## Útil · El 95 %
-Un estudio del MIT encontró que el 95 % de las empresas no ganó nada con IA en 2025. Y Gartner cree que más del 40 % de los proyectos con agentes se van a cancelar. ¿El problema? Usan la IA sin un sistema. La IA sola no te da resultados; un sistema sí.
+Según un estudio del MIT, el 95 % de las empresas no ganó nada con IA en 2025. Y Gartner cree que más del 40 % de los proyectos con agentes se van a cancelar. ¿El problema? Usan la IA sin un sistema. Así que no es solo OpenAI: la mayoría de empresas gasta como loca en IA… y no gana nada.
 
 ## CTA
-Si quieres ver el sistema que yo uso para mi contenido, comenta SISTEMA y te lo mando por DM.
+Y ya sabes, estas fueron las 5 noticias de IA más importantes de ayer. Sígueme para más noticias diarias.
 
-(~200 palabras, 70–75 s)
+(~290 palabras, ~95–100 s)
 
 ## Fuentes
-- Amazon (emulador AWS), Anthropic/AMD, MIT/Gartner: https://riorundown.substack.com/p/ai-news-nov-12-2026-ai-agents-infrastructure
-- United/Delta: https://sergioiker.substack.com/p/the-digital-pulse-thursday-november
-- Demanda: https://www.bnnbloomberg.ca/business/artificial-intelligence/2026/11/12/advocacy-groups-sue-ai-giants-to-freeze-new-models-warning-of-catastrophic-risks/
+- Amazon (emulador AWS, GeekWire/Unite.AI), hospital (Commonwealth Fund), MIT/Gartner: https://riorundown.substack.com/p/ai-news-nov-12-2026-ai-agents-infrastructure
+- OpenAI (Bloomberg vía TechCrunch: >10.000 M en el trimestre, margen ajustado −109 %): https://sergioiker.substack.com/p/the-digital-pulse-thursday-november
+- OpenAI, gasto en cómputo (reportes): https://newmarketpitch.com/blogs/news/frontier-ai-labs-openai-profitability
+- Demanda (San Francisco Superior Court; Public Citizen, Heat Initiative, Alliance for Secure AI, Irreplaceable Education Fund): https://www.bnnbloomberg.ca/business/artificial-intelligence/2026/11/12/advocacy-groups-sue-ai-giants-to-freeze-new-models-warning-of-catastrophic-risks/
 
 ## Apoyos visuales
 - Amazon: logo AWS + "0 líneas de código" grande en rojo.
-- Anthropic: logos Claude y AMD + "3 días" en rojo + sello "SIN CONFIRMAR".
+- OpenAI: "+10.000 M" y luego "−11.000 M" en rojo + servidores.
 - Demanda: los 5 logos con un martillo de juez.
-- United: logos United y Delta con "No" y "Sí".
+- Hospital: "25 %" gigante en rojo + ficha médica con un hueco.
 - MIT: "95 %" gigante en rojo, luego "40 % cancelados".
 
 ## Edición
-Estilo noticias, referente rojo (como v8): cifras grandes, título por noticia, animaciones neón rojas. Subtítulos de 2–4 palabras,
-palabras clave en rojo. Polémicas: blanco y negro solo en la frase más fuerte. 1080×1920, −14 LUFS, gancho en los primeros 3 s.
+Referente **R2** (`referentes/noticias-ref2.mp4`, ficha en `contexto/referentes-edicion.md`), **en ROJO, no en verde**.
+- Gancho: "AMAZON CREÓ UN PROGRAMA ENTERO" arriba en neón, palabra por palabra; tarjeta "0 líneas de código" con contador que baja.
+- Amazon: pantalla clara con logos que entran en tarjetas (AWS, 200 servicios); "100 % hecho con IA" en neón.
+- OpenAI: tarjeta con barra que sube "+10.000 M" y cae a "−11.000 M" en rojo; en "¿En qué?", pantalla oscura con servidores 3D.
+- Demanda: pantalla clara con los 5 logos entrando uno a uno + martillo; la pregunta en B/N.
+- Hospital: tarjeta "ficha del paciente" con lista ✓ ✓ ✗ (falta el examen del azúcar), "25 %" en rojo; "¿Cómo vas a dejar la salud…?" en B/N.
+- 95 %: velocímetro que cae a rojo en "95 % no ganó nada", luego "40 % cancelados".
+- Cierre: destello y "Sígueme" en neón.
+- Subtítulos de 2 pisos (frase chica blanca + palabra clave grande roja con glow). 1080×1920, −14 LUFS, gancho en los primeros 3 s.
 
 ## Descripción de Instagram
 Amazon creó un programa entero sin escribir una línea de código.
-Además: la IA de Anthropic que hizo en 3 días el trabajo de meses, la demanda para frenar a los gigantes de la IA, United contra los asistentes de IA y por qué el 95 % de las empresas no gana nada con IA.
-Comenta SISTEMA y te mando el mío 👇
-#inteligenciaartificial #noticiasIA #IA #Anthropic #Amazon
+Además: OpenAI factura 10.000 millones y pierde casi 11.000, demandan a los gigantes de la IA, la IA de un hospital que olvida datos clave y por qué el 95 % de las empresas no gana nada con IA.
+Sígueme para más noticias de IA cada día 👇
+#inteligenciaartificial #noticiasIA #IA #OpenAI #Amazon
 
 ## Descripción de TikTok
-Amazon creó un programa sin escribir una línea de código. Además: la IA de Anthropic en 3 días y la demanda para frenar a los gigantes de la IA. Comenta SISTEMA 👇 #inteligenciaartificial #noticiasIA #IA #Anthropic #Amazon
+Amazon creó un programa sin escribir una línea de código. Además: OpenAI pierde casi 11.000 millones y demandan a los gigantes de la IA. Sígueme para más 👇 #inteligenciaartificial #noticiasIA #IA #OpenAI #Amazon
 
 ## Título de YouTube Shorts
 Amazon creó un programa sin escribir una línea de código
 
 ## Descripción de YouTube Shorts
-Las 5 noticias de IA del 12 de noviembre: Amazon sin código, la IA de Anthropic en 3 días, la demanda para frenar los modelos nuevos, United contra los asistentes de IA y el 95 % de empresas sin resultados.
-Comenta SISTEMA 👇
-#Shorts #inteligenciaartificial #noticiasIA #IA #Amazon
+Las 5 noticias de IA del 12 de noviembre: Amazon sin código, OpenAI factura 10.000 millones y pierde casi 11.000, la demanda para frenar los modelos nuevos, la IA del hospital que olvida datos y el 95 % de empresas sin resultados.
+Sígueme para más noticias de IA cada día 👇
+#Shorts #inteligenciaartificial #noticiasIA #IA #OpenAI
