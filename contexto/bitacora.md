@@ -304,3 +304,4 @@
 - 13 nov · Santi dio 'dale' al E1 1.4 → fila 8: Publicar hoy 13/11 18:00. Versiones 1.0–1.3 a la papelera. COLA fila 9: Entregado 13/11. Cuando salga: crudo e1.mov (1IQvBIpy…) y guion (1NHqi5…, con copia nueva en drive-respaldo) a la papelera.
 - 13 nov · Santi: quitar el robot de edición; edita el chat 📁 Edición cuando Santi avisa. La tarea 'Robot edicion' la borra Santi en claude.ai (no la veo desde aquí). v9: Santi manda el crudo mañana por la mañana.
 - 13 nov 01:05 · v9 reprogramado (Santi): sale hoy 13 nov a las 14:30 (antes 11:00). Hoja fila 19 Hora 14:30; evento de Calendar 'Noticias IA · Video 9' movido a 14:30–14:45.
+- 13 nov · Guion v9 organizado con Santi (Viral 1 Amazon sin código, Viral 2 Anthropic/AMD 3 días, Polémicas demanda + United, Útil MIT 95 %, CTA SISTEMA). Copia: drive-respaldo/guiones/v9-noticias-ia-12-nov.md. Pendiente (Drive/Sheets sin conexión): pasar a Guiones terminados, en frío 1sTx5dC… a la papelera, fila v9 → Grabar.
