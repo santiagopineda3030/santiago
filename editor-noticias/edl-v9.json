@@ -5,7 +5,7 @@
  "dos_pisos": true,
  "sin_titulos": true,
  "sin_puntuacion": true,
- "fuente_sub": "Montserrat SemiBold",
+ "fuente_sub": "Montserrat ExtraBold",
  "cta": "Sígueme para más noticias de IA",
  "cta_emoji": "🔔",
  "claves": [
@@ -324,7 +324,7 @@
      "clip": "0001",
      "desde": 241.98,
      "hasta": 244.95,
-     "texto": "Y le piden a un juez que no les deje sacar nuevos modelos de IA."
+     "texto": "Y le piden a un juez que dejen de sacar nuevos modelos de IA."
     },
     {
      "clip": "0001",
@@ -417,7 +417,7 @@
     },
     {
      "clip": "0001",
-     "desde": 350.82,
+     "desde": 350.96,
      "hasta": 352.95,
      "texto": "¿Cómo vas a dejar la salud en manos de una IA?",
      "bn": true
@@ -584,5 +584,5 @@
    ]
   }
  ],
- "dos_pisos_y": 990
+ "dos_pisos_y": 1060
 }

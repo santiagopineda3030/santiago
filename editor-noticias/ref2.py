@@ -71,7 +71,7 @@ def _pop(t, t0, d=0.28):
     return A.ease_out_back(A.clamp((t - t0) / d))
 
 
-CAJA = (0, 1180, 1080, 640)  # abajo, ancho completo (no lo mueve la zona segura); la cara queda libre arriba
+CAJA = (0, 1250, 1080, 640)  # abajo, ancho completo (no lo mueve la zona segura); la cara queda libre arriba
 
 
 def _grafico_tarjeta(dur, dibujar, sonido="pop", caja=CAJA):
@@ -232,7 +232,7 @@ def _imagen(nombre, tam):
 
 def g_objeto(dur, emojis=("🌍",), puntos=0, texto_arriba="", texto_abajo=""):
     """Fondo oscuro con un objeto grande tipo 3D (emoji con sombra y brillo) que flota; opcional: puntos rojos que se apagan."""
-    grandes = [_imagen(e, 520 if i == 0 else 300) for i, e in enumerate(emojis)]
+    grandes = [_imagen(e, 440 if i == 0 else 250) for i, e in enumerate(emojis)]
 
     def dib(im, t):
         flot = 14 * math.sin(t * 2.2)
@@ -240,27 +240,27 @@ def g_objeto(dur, emojis=("🌍",), puntos=0, texto_arriba="", texto_abajo=""):
         base = grandes[0]
         sombra = Image.new("RGBA", (W, 200), (0, 0, 0, 0))
         ImageDraw.Draw(sombra).ellipse((W / 2 - 230, 60, W / 2 + 230, 140), fill=(0, 0, 0, 150))
-        im.alpha_composite(sombra.filter(ImageFilter.GaussianBlur(24)), (0, 1180))
-        A.pegar_centro(im, A.escalar(base, max(0.05, 0.85 + 0.15 * k)), W / 2, 900 + flot)
+        im.alpha_composite(sombra.filter(ImageFilter.GaussianBlur(24)), (0, 900))
+        A.pegar_centro(im, A.escalar(base, max(0.05, 0.85 + 0.15 * k)), W / 2, 760 + flot)
         for i, g in enumerate(grandes[1:]):
             kk = A.ease_out_back(A.clamp((t - 0.25 - i * 0.15) / 0.4))
             if kk > 0:
-                A.pegar_centro(im, A.escalar(g, max(0.05, kk)), W / 2 + 230 - i * 40, 1080 + flot * 0.6 + i * 30)
+                A.pegar_centro(im, A.escalar(g, max(0.05, kk)), W / 2 + 200 - i * 40, 900 + flot * 0.6 + i * 30)
         if puntos:
             d = ImageDraw.Draw(im)
             import random
             rnd = random.Random(5)
             for j in range(puntos):
                 a = rnd.uniform(0, 2 * math.pi); rr = rnd.uniform(40, 200)
-                x, y = W / 2 + rr * math.cos(a), 900 + flot + rr * math.sin(a) * 0.9
+                x, y = W / 2 + rr * 0.85 * math.cos(a), 760 + flot + rr * 0.85 * math.sin(a) * 0.9
                 on = t < 0.4 + j * (dur * 0.6 / puntos)
                 col = ROJO if on else (60, 60, 60)
                 d.ellipse((x - 12, y - 12, x + 12, y + 12), fill=col + (255,))
         if texto_arriba:
-            im.alpha_composite(_sans(texto_arriba, 54, BLANCO, False), (90, 430))
+            im.alpha_composite(_sans(texto_arriba, 56, BLANCO, False), (90, 330))
         if texto_abajo and t > 0.5:
             q = A.clamp((t - 0.5) / 0.3)
-            im.alpha_composite(A.con_alfa(A._brillo(_sans(texto_abajo, 92, ROJO), 10, 1.4), q), (80, 1330))
+            im.alpha_composite(A.con_alfa(A._brillo(_sans(texto_abajo, 92, ROJO), 10, 1.4), q), (80, 1290))
 
     return _pantalla(dur, _fondo_oscuro, dib)
 
@@ -268,7 +268,7 @@ def g_objeto(dur, emojis=("🌍",), puntos=0, texto_arriba="", texto_abajo=""):
 def g_logos(dur, arriba="", grande="", items=(), martillo=True, assets="assets-v2"):
     """Fondo claro con tarjetas blancas (logo o nombre) que entran una a una; texto arriba con palabra grande en rojo."""
     def tarjeta(it):
-        c = Image.new("RGBA", (300, 300), (0, 0, 0, 0))
+        c = Image.new("RGBA", (300, 300), (0, 0, 0, 0))  # se escala a 0,8 al pegar
         s = Image.new("RGBA", (300, 300), (0, 0, 0, 0))
         ImageDraw.Draw(s).rounded_rectangle((20, 30, 280, 290), 40, fill=(0, 0, 0, 60))
         c.alpha_composite(s.filter(ImageFilter.GaussianBlur(12)))
@@ -283,7 +283,8 @@ def g_logos(dur, arriba="", grande="", items=(), martillo=True, assets="assets-v
         return c
 
     cards = [tarjeta(i) for i in items]
-    pos = [(W / 2 - 170, 760), (W / 2 + 170, 760), (W / 2 - 170, 1090), (W / 2 + 170, 1090), (W / 2, 1400)][: len(cards)]
+    cards = [A.escalar(c, 0.8) for c in cards]
+    pos = [(W / 2 - 140, 650), (W / 2 + 140, 650), (W / 2 - 140, 920), (W / 2 + 140, 920), (W / 2, 1300)][: len(cards)]
     mart = _imagen("balance_scale", 230) if martillo else None
 
     def dib(im, t):
@@ -297,7 +298,7 @@ def g_logos(dur, arriba="", grande="", items=(), martillo=True, assets="assets-v
                 A.pegar_centro(im, A.escalar(c, max(0.05, k)), x, y)
         if mart is not None and t > 0.15 + len(cards) * 0.22:
             k = _pop(t, 0.15 + len(cards) * 0.22, 0.3)
-            A.pegar_centro(im, A.escalar(mart, max(0.05, k)).rotate(-15 * (1 - k), resample=Image.BICUBIC, expand=True), W / 2 + 330, 1500)
+            A.pegar_centro(im, A.escalar(mart, max(0.05, k)).rotate(-15 * (1 - k), resample=Image.BICUBIC, expand=True), W / 2 + 330, 1330)
 
     return _pantalla(dur, _fondo_claro, dib, "pop")
 

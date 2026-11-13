@@ -203,7 +203,7 @@ def ass_v2(palabras, secciones, gancho, cta, ruta, colores=None, opciones=None):
             mv = g[0].get("mv")
             yy = y0 if not mv else 1920 - int(mv) - 120
             if arriba:
-                ev.append((0, "Sub", ini, fin, f"{{\\an5\\pos(540,{yy})\\fn{op.get('fuente_sub', 'Montserrat SemiBold')}\\fs54\\bord3\\shad0\\c&H00FFFFFF&\\3c&H00000000&\\fad(80,0)}}"
+                ev.append((0, "Sub", ini, fin, f"{{\\an5\\pos(540,{yy})\\fn{op.get('fuente_sub', 'Montserrat ExtraBold')}\\fs66\\bord5\\shad2\\4c&H80000000&\\c&H00FFFFFF&\\3c&H00000000&\\fad(80,0)}}"
                            + " ".join(editar.ass_texto(w["w"]) for w in arriba), None))
             t1 = abajo[0]["s"]
             txt = " ".join(editar.ass_texto(w["w"]) for w in abajo)
