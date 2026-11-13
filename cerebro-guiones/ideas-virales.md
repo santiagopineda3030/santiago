@@ -1,64 +1,59 @@
-# 40 ideas de videos virales (v) · ContentIA · 13 nov 2026
+# Ideas de videos virales · ContentIA
 
-Hechas con `cerebro-guiones/viral.md` (v1.1): cada una tiene su gancho, es para nivel de conciencia 0–1 y muestra el sistema con resultados, nunca herramientas.
-[dato real] = antes de grabar hay que poner el número real.
+## Lista 2 · 13 nov 2026 · basada en lo que funciona HOY (regla de Santi: no solo nuestro nicho)
+Fuentes (13 nov): Volume (formatos de negocios y de tecnología/IA de esta semana, vistas = veces lo normal de cada cuenta),
+NewEngen (tendencias de Instagram), Pepper Agency y SocialPilot (TikTok/Instagram de noviembre), noticias de la semana.
+Formato: **Tendencia que copia** → idea → gancho. El tema es amplio; el cierre lo conecta con el sistema.
 
-## A. Resultado primero / prueba
-1. "Este video lo escribió, editó y publicó una IA." → Antes y después: 3 h por video vs. 5 min grabando.
-2. "30 videos este mes. No edité ni uno." [dato real] → Pantalla con el perfil lleno + qué hace el sistema.
-3. "Grabé 5 minutos y salieron 3 videos para 3 redes." → Un crudo → Instagram, TikTok y YouTube.
-4. "Mi editor no cobra, no se enferma y trabaja a las 3 a. m." → El sistema editando mientras duermes.
-5. "Esto es lo único que hice hoy para mis redes." → Santi grabando 2 minutos; el resto lo hizo el sistema.
-6. "Le di a una IA mi peor video y mira lo que hizo." → Crudo malo vs. versión editada.
+### Formatos de negocio que hoy rinden más (Volume, negocios)
+1. **Guion palabra por palabra (20x)** → "Lo que tienes que decir cuando un cliente te dice 'está caro'." Gancho: "Cuando un cliente te diga 'está caro', dile exactamente esto."
+2. **Guion palabra por palabra** → "Qué responder cuando te piden descuento." Gancho: "Nunca respondas 'te lo dejo en…'. Di esto."
+3. **"NUNCA termines con estas 5 palabras" (40x)** → Mensajes de WhatsApp que espantan clientes. Gancho: "Nunca termines un mensaje a un cliente con estas 5 palabras."
+4. **Burlarse de la regla sagrada del nicho y voltearla (42x)** → "Publica todos los días" es mentira si no hay sistema. Gancho: "'Publica todos los días'. El peor consejo de redes… a medias."
+5. **Actuar la frase cliché y luego el arreglo (8x)** → Santi actúa "hola, bienvenidos a mi canal" y lo corrige. Gancho: "Si tu video empieza así, ya perdiste."
+6. **Comparar mal vs. bien lado a lado (11x)** → El mismo video con gancho malo vs. bueno. Gancho: "Mismo video. Uno tuvo 300 vistas, el otro 30 mil. La diferencia son 3 segundos." [dato real]
+7. **Abrir con la cifra exacta en dinero (7x)** → "Lo que cuesta de verdad tener redes para tu negocio." Gancho: "Tener redes te está costando 1.200 dólares al mes y no lo sabes." [cifra verificada]
+8. **Lista gratis que reemplaza algo pagado (13x)** → "Lo que hacía una agencia de 800 dólares y hoy hace un sistema." Gancho: "Esto antes costaba 800 dólares al mes."
+9. **Inventar un concepto con nombre propio (13x)** → "El impuesto del 'después lo hago'." Gancho: "Tu negocio paga un impuesto que no sale en ninguna factura."
+10. **Clip corto en loop + todo en la descripción (15x)** → 8 s con una frase fuerte; las 10 lecciones en el texto. Gancho: "10 años de consejos de contenido en 10 segundos."
+11. **Lista rápida para pausar y hacer captura (8x)** → "20 ideas de videos para cualquier negocio." Gancho: "Haz captura. Son 20 ideas de videos para tu negocio."
+12. **"¿Se te acabaron las ideas?" (109x, hook top 10)** → Gancho: "¿No sabes qué publicar? Mira esto." → 5 ideas que saca el sistema.
+13. **Prueba en el primer segundo (11x)** → Pantalla con estadísticas de un video del sistema. Gancho: "Este video lo hizo un sistema. Mira las vistas." [dato real]
+14. **Mensaje de voz que garantiza respuesta (67x, hook top 10)** → "El audio de WhatsApp que hace que el cliente te conteste." Gancho: "Manda este audio y el cliente te responde."
 
-## B. "La peor forma… y es la más común"
-7. "En 2026 la peor forma de hacer contenido es la más común: cuando tienes tiempo."
-8. "La peor forma de contratar un community manager… y casi todos la usan."
-9. "La forma más cara de tener redes es hacerlo tú mismo." → Lo que vale tu hora vs. el sistema.
-10. "El error que mata las cuentas de negocios: publicar 10 días y desaparecer 2 meses."
+### Formatos de tecnología e IA que hoy rinden más (Volume, tech/IA)
+15. **Resultado terminado en el segundo 1 (15x)** → El video final primero; luego "esto salió de 2 minutos grabando". Gancho: "Este video lo armé con 2 minutos de grabación."
+16. **"Un ajuste por defecto te está espiando" (19x)** → "Tu celular escucha… y la IA ya sabe qué te gusta. Así lo usan los negocios." Gancho: "Tu celular sabe qué vas a comprar antes que tú."
+17. **Ajustes al estrenar algo (45x)** → "Las 5 primeras cosas que tiene que hacer un negocio nuevo en redes." Gancho: "¿Abriste negocio? Haz estas 5 cosas antes de publicar."
+18. **Tarjetas para guardar (30x)** → Carrusel "Códigos de ganchos que funcionan". Gancho: "Guarda esto: 10 ganchos que paran el scroll."
+19. **Ocultar el nombre hasta el final (10x)** → "Esta herramienta hace el trabajo de 3 personas…" y al final: es el sistema (sin mostrar apps). Gancho: "Esto hace el trabajo de 3 empleados. Te digo qué es al final."
+20. **Actualización de IA que asusta + arreglo rápido (11x)** → "La IA ya hace videos sola. Esto es lo que tu negocio debe hacer hoy." Gancho: "La IA ya hace videos sin humanos. Y eso es un problema para tu negocio."
+21. **Pedir una palabra para mandar el recurso (51x)** → Cualquier lista útil + "comenta SISTEMA y te la mando". Gancho: "Te regalo los 30 ganchos que uso. Comenta SISTEMA."
+22. **Serie "Día N" (16x)** → "Día 1 dejando que una IA maneje mi negocio." Gancho: "Día 1: le entregué mis redes a una IA."
 
-## C. "¿Qué es mejor, X o Y?"
-11. "¿Qué es mejor: contratar un community manager o una IA?" → Ninguno solo: tu voz + IA + revisión.
-12. "¿Qué vende más: un video perfecto al mes o uno normal todos los días?"
-13. "¿Grabar tú o contratar actores para tu negocio?" → La cara del dueño vende más; el sistema hace el resto.
-14. "¿ChatGPT o un sistema entrenado con tu negocio?" → Lo genérico suena igual que todos (sin mostrar apps).
+### Tendencias de Instagram y TikTok de este mes (sonidos y formatos)
+23. **"No, no, no… ¡sí!"** → No: editar 3 h. No: escribir guiones a medianoche. No: olvidar publicar. Sí: el sistema publica. (Menos de 12 s.)
+24. **"Be your own housewife" / "I just wanna" (Tate McRae)** → Texto de vida soñada + el trabajo real detrás + el sistema que te devuelve el tiempo. (Sonido: verificar si la cuenta de negocio lo puede usar; si no, audio propio.)
+25. **"Add to cart"** → Te pasan tareas una a una (editar, guion, publicar, responder) y a cada una: "a la IA". Gancho escrito: "Cosas que ya no hago yo."
+26. **"It's time" (antes/después)** → Perfil vacío → cambio en el golpe del audio → perfil lleno de videos. 7–12 s.
+27. **"War is over" (una pequeña victoria)** → "Hoy no edité ningún video. La guerra terminó." 6–10 s.
+28. **Revelación con letra pequeñita** → Texto diminuto: "este video lo hizo una IA". La gente hace zoom y comenta.
+29. **"Razones por las que no necesitas…" (audio ahogado, broma)** → "Razones por las que no necesitas un sistema de contenido:" … (nada). Humor sin vender.
+30. **"El dinero no compra la felicidad, pero…"** → "…sí compra 10 horas libres a la semana." Montaje de Santi haciendo otras cosas mientras se publica solo.
+31. **"Lately on my SD card" (resumen rápido)** → Clips de la semana del negocio: grabar, el sistema trabajando, videos publicados.
+32. **"Paid me no mind" (exagerar algo pequeño)** → "Cuando subes un video y a la hora tiene 12 vistas." Lip-sync con reacción cada vez más grande.
+33. **Cinematográfico con audio al revés** → Algo aburrido (grabar con el celular) hecho épico, termina en el video ya publicado.
 
-## D. Reglas / listas
-15. "5 reglas para que tu negocio publique todos los días sin que tú edites."
-16. "3 cosas que nunca debes hacer con la IA en tu negocio."
-17. "3 señales de que tu negocio necesita un sistema de contenido (la 3 duele)."
-18. "4 tareas de tu negocio que una IA ya hace mejor que tú." → Ideas, guiones, edición, publicar.
-19. "Lo que hago cada lunes para tener contenido toda la semana." → Rutina de 20 min.
+### Noticias y temas de esta semana (amplios, no solo nicho)
+34. **Black Friday (27 nov; TikTok sube desde el 11 nov)** → "El error que van a cometer todos los negocios este Black Friday." Gancho: "Este Black Friday vas a perder ventas por esto."
+35. **Microsoft caído en 74 países (semana del v9)** → "Si mañana se cae internet, ¿tu negocio sigue vendiendo?" Gancho: "Microsoft se cayó en 74 países. ¿Tu negocio aguantaría?"
+36. **Videos con IA desde una foto (6192x en TikTok)** → "Hice un video de mi negocio con una sola foto." Mostrar el resultado, no la app. Gancho: "Una foto. Un video. Cero edición."
+37. **Memes y videos falsos con IA de famosos (esta semana)** → "Cómo saber si un video es falso en 5 segundos." Gancho: "Este video es falso. ¿Te diste cuenta?" (sin usar caras de famosos; ejemplo propio)
+38. **"Los títulos no te van a salvar el trabajo" (81x, Daniel Priestley)** → "La IA no te va a quitar el trabajo. Alguien que sabe usarla, sí." Gancho: "Tu título no te va a salvar el trabajo."
+39. **Millones se hacen en el punto medio (28x)** → "Ni perfecto ni nada: lo normal publicado todos los días gana." Gancho: "Los millones están en lo mediocre… publicado todos los días."
+40. **"Tu cringe no me asusta" (53x)** → Santi muestra sus primeros videos malos vs. los de hoy. Gancho: "Mis primeros videos daban vergüenza. Mira la diferencia."
 
-## E. Diagnóstico en preguntas
-20. "¿Publicas 3 veces por semana? No. ¿Usas ganchos? No. Ya entiendo todo." → Calle sin luz + sistema.
-21. "Te hago 5 preguntas y te digo si tu negocio existe en redes."
-22. "¿Cuántas horas le dedicaste a redes esta semana?" → Comparar con 20 min.
+---
 
-## F. Escena rara / "Esto no sirve"
-23. Escenas "Esto no sirve" (top 5 sin gancho, "hola, mi nombre es…") → Santi corta → el sistema.
-24. "Mi vecino publica todos los días y nunca lo he visto grabar." → El secreto es un sistema.
-25. Santi se duerme en el escritorio; el celular sigue publicando → "Mientras duermes, tu negocio publica."
-26. Santi le "pasa el trabajo" a la IA como a un empleado nuevo → Primer día del empleado que no cobra.
-
-## G. Noticias de IA + lo nuestro
-27. "Microsoft se cayó en 74 países. Mi negocio siguió publicando." → Por qué un sistema no depende de ti.
-28. "La IA ya hace videos solos. Lo que nadie dice es esto." → Sin tu voz no vende; el sistema usa la tuya.
-29. "Las empresas grandes ya hacen esto. Los negocios pequeños, no." → Brecha + cómo cerrarla.
-30. "Esta semana salieron 5 noticias de IA. Solo una le sirve a tu negocio." → Útil = contenido automático.
-
-## H. Dolor / "algún día"
-31. "Algún día voy a publicar todos los días…" → El "algún día" no llega; el sistema sí.
-32. "Abriste el negocio para atender clientes, no para editar videos."
-33. "Tu competencia no es mejor que tú. Solo publica más."
-34. "Si tu negocio no está en redes, para tu cliente no existe."
-
-## I. Enemigo común / mentiras
-35. "Te dijeron que necesitas un equipo para tener redes. Mentira."
-36. "Te dijeron que para crecer hay que bailar en TikTok. Mentira."
-37. "Te dijeron que la IA iba a reemplazar a tu marketing. Lo hizo mejor: lo multiplicó."
-
-## J. Reto / "Conviérteme X en Y"
-38. "Le pedí a una IA que convierta 1 video en 10 publicaciones." → Cascada de contenido.
-39. "Reto: un mes publicando todos los días sin abrir un editor." [dato real] → Resultado del mes.
-40. "Dame tu negocio en una frase y te digo 3 videos que deberías grabar." → El sistema saca ideas (CTA natural: comenta SISTEMA).
+## Lista 1 · 13 nov (descartada por Santi: era solo del nicho cerrado, no de lo que funciona hoy)
+Se borró; queda en el historial de GitHub (commit "40 ideas de videos virales").
