@@ -1,6 +1,6 @@
 # v9 · Noticias IA · 12 nov (publica 13 nov 14:30)
 Guion terminado (revisado noticia por noticia con Santi en 📁 Guiones, 13 nov). Un solo guion para Instagram, TikTok y YouTube Shorts.
-Reemplaza al en frío automático (1sTx5dCqnIUbk1cpRJDh9tD0gGJOZ0YmgWe84PPgYXPo). CTA sin "comenta SISTEMA": excepción de Santi solo para este video.
+Drive (terminados): 1gGDsT4JQFMOyzDAmk6JroxCbazl2-i2ji_J74jibxs0. En frío automático (1sTx5dC…) a la papelera. CTA sin "comenta SISTEMA": excepción de Santi solo para este video.
 
 ## Gancho
 Microsoft se cayó en todo el mundo, y el 95 % de las empresas que usan IA no ha ganado nada con ella. Estas son las 5 noticias de IA que pasaron ayer, 12 de noviembre.
