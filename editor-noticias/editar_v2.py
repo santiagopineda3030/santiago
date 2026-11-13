@@ -189,6 +189,28 @@ def ass_v2(palabras, secciones, gancho, cta, ruta, colores=None, opciones=None):
         grupos = [[w for w in g if w["w"].strip()] for g in grupos]
         grupos = [g for g in grupos if g]
     ev = []
+    if op.get("dos_pisos"):  # 13 nov (R2): frase chica blanca arriba + palabra clave grande roja con brillo abajo
+        y0 = int(op.get("dos_pisos_y", 1180))
+        rojo = editar.ACENTO
+        for gi, g in enumerate(grupos):
+            ini = g[0]["s"]
+            fin = min(grupos[gi + 1][0]["s"] if gi + 1 < len(grupos) else g[-1]["e"] + 0.4, g[-1]["e"] + 0.6)
+            fin = max(fin, ini + 0.3)
+            idx = next((i for i, w in enumerate(g) if editar.es_clave(w["w"], claves)), None)
+            if idx is None or idx == 0:
+                idx = max(1, len(g) // 2) if len(g) > 1 else 0
+            arriba, abajo = g[:idx], g[idx:]
+            mv = g[0].get("mv")
+            yy = y0 if not mv else 1920 - int(mv) - 120
+            if arriba:
+                ev.append((0, "Sub", ini, fin, f"{{\\an5\\pos(540,{yy})\\fn{op.get('fuente_sub', 'Montserrat SemiBold')}\\fs54\\bord3\\shad0\\c&H00FFFFFF&\\3c&H00000000&\\fad(80,0)}}"
+                           + " ".join(editar.ass_texto(w["w"]) for w in arriba), None))
+            t1 = abajo[0]["s"]
+            txt = " ".join(editar.ass_texto(w["w"]) for w in abajo)
+            fuente = op.get("fuente_clave", "Montserrat Black")
+            ev.append((0, "Sub", t1, fin, f"{{\\an5\\pos(540,{yy + 92})\\fn{fuente}\\fs104\\bord14\\blur14\\shad0\\c{rojo}\\3c{rojo}\\alpha&H00&\\3a&H70&\\fscx80\\fscy80\\t(0,120,\\fscx100\\fscy100)}}" + txt, None))
+            ev.append((1, "Sub", t1, fin, f"{{\\an5\\pos(540,{yy + 92})\\fn{fuente}\\fs104\\bord2\\shad0\\c{rojo}\\3c&H00101060&\\fscx80\\fscy80\\t(0,120,\\fscx100\\fscy100)}}" + txt, None))
+        grupos = []
     for gi, g in enumerate(grupos):
         ini = g[0]["s"]
         fin = min(grupos[gi + 1][0]["s"] if gi + 1 < len(grupos) else g[-1]["e"] + 0.4, g[-1]["e"] + 0.6)
@@ -200,9 +222,18 @@ def ass_v2(palabras, secciones, gancho, cta, ruta, colores=None, opciones=None):
     pop = "{\\fad(60,160)\\fscx70\\fscy70\\t(0,140,\\fscx108\\fscy108)\\t(140,240,\\fscx100\\fscy100)}"
     noticias = [s for s in secciones if s["tipo"] == "noticia"]
     for s in secciones:
-        if s["tipo"] == "gancho" and gancho:
+        if s["tipo"] == "gancho" and op.get("gancho_neon"):  # 13 nov (R2): título grande arriba, palabra por palabra, rojo neón
+            pal = op["gancho_neon"].upper().split()
+            fin_g = min(s["ini"] + op.get("gancho_dur", 3.2), s["fin"])
+            for k in range(len(pal)):
+                a0 = s["ini"] + 0.1 + k * 0.22
+                b0 = s["ini"] + 0.1 + (k + 1) * 0.22 if k + 1 < len(pal) else fin_g
+                t_ = " ".join(pal[: k + 1])
+                for capa, est in ((2, "\\bord16\\blur18\\3a&H50&"), (3, "\\bord3\\3c&H00101070&")):
+                    ev.append((capa, "Gancho", a0, b0, f"{{\\an8\\pos(540,250)\\fnMontserrat Black\\fs118\\c{editar.ACENTO}\\3c{editar.ACENTO}{est}\\shad0}}" + t_, None))
+        elif s["tipo"] == "gancho" and gancho:
             ev.append((1, "Gancho", s["ini"], min(s["ini"] + 2.7, s["fin"]), pop + editar.ass_texto(gancho.upper())))
-        elif s["tipo"] == "noticia":
+        elif s["tipo"] == "noticia" and not op.get("sin_titulos"):
             n = noticias.index(s) + 1
             ev.append((1, "Titulo", s["ini"] + 0.15, min(s["ini"] + 2.4, s["fin"]),
                        pop + f"{n}/{len(noticias)} · " + editar.ass_texto(s["etiqueta"])))
@@ -230,7 +261,8 @@ def construir(g, dur, assets):
     t = g["tipo"]
     import cyber
     import ref_rojo  # 12 nov: escenas del referente de noticias (fondo negro + rojo neón)
-    gc = ref_rojo.construir(g, dur, assets) or cyber.construir(g, dur, assets)
+    import ref2  # 13 nov: referente R2 (tarjetas, objeto 3D, logos)
+    gc = ref2.construir(g, dur, assets) or ref_rojo.construir(g, dur, assets) or cyber.construir(g, dur, assets)
     if gc is not None:
         return gc
     if t == "logo":
@@ -356,6 +388,10 @@ def main():
         import cyber
         cyber.aplicar()
         editar.ACENTO = "&H001EECFF"
+    elif a.estilo == "r2":  # 13 nov: referente R2 de noticias (ref2.py), en rojo
+        import ref2
+        ref2.aplicar()
+        editar.ACENTO = "&H003A30FF"
     else:
         A.aplicar_estilo(a.estilo)
     if a.estilo == "ia":  # subtítulos: palabras clave en cian, títulos y CTA en violeta (BGR en ASS)
