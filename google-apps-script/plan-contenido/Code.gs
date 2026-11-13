@@ -23,7 +23,7 @@ const CONFIG = {
   HORA: '11:00',                                         // hora por defecto (Bogotá)
   PRIMER_CODIGO: 1,
   MAX_MB: 30,
-  TIPOS: { 'Noticias IA': '📰', 'Explicativo': '🧠', 'YouTube largo': '▶️', 'Lead': '🎯', 'VSL': '💰', 'Clip cascada': '✂️' },
+  TIPOS: { 'Noticias IA': '📰', 'Viral': '🔥', 'Explicativo': '🧠', 'YouTube largo': '▶️', 'Lead': '🎯', 'VSL': '💰', 'Clip cascada': '✂️' },
   // Todos los días: Noticias IA (0 = domingo … 6 = sábado)
   PLANTILLA: { 0: ['Noticias IA'], 1: ['Noticias IA'], 2: ['Noticias IA'], 3: ['Noticias IA'], 4: ['Noticias IA'], 5: ['Noticias IA'], 6: ['Noticias IA'] },
   COLOR: '#dc2626',
@@ -263,7 +263,7 @@ function listarVideos_(carpeta) {
 /** "v7 1.0 tema.mp4" → "v7" · "E1 1.0 tema.mp4" → "e1". Letras: v noticias, e explicativo, y YouTube largo,
  *  l lead, s VSL, c clip de cascada (buscarCodigo_ compara en minúsculas). */
 function codigoDe_(nombre) {
-  const m = String(nombre).match(/^\s*([veylsc])\s*0*(\d+)(?=[\s._-]|$)/i);
+  const m = String(nombre).match(/^\s*([veylscf])\s*0*(\d+)(?=[\s._-]|$)/i);
   return m ? m[1].toLowerCase() + m[2] : '';
 }
 

@@ -23,6 +23,15 @@
 ## Orden del lunes 9 (Santi)
 1 guion v5 · 2 grabar · 3 editar y publicar 11:00 · 4 oferta · 5 Meta: píxel + tracker + prueba · 6 TikTok publicar solo · 7 encuestas · extra: 4:35 guion v6, vaciar papelera de Drive.
 
+## CALENDARIO NUEVO (13 nov, Santi)
+- 11:00 todos los días: 📰 Noticias (v10, v11…).
+- 18:00 cada semana: 3 🔥 virales (F1, F2… — F de fueguito; la V es de noticias), 3 🎯 leads (L), 1 🧠 explicativo (E). Orden: F, L, F, E, L, F, L (sáb→vie).
+- Sábado 15:00: ▶️ YouTube largo (Y1, Y2…), 10–15 min, uno por semana.
+- Cada 3 días 20:00: ✂️ clip de la cascada del YouTube de esa semana (C1, C2…).
+- S1 (VSL) fuera del calendario: solo va en la landing (guion 1OyRKjhWnngM-09Zi4Je8Uv_NZGidfBT8WHKFH7C6zqc).
+- Hoja Noviembre y Calendar ya armados hasta el 30 nov. Code.gs (repo) ya acepta tipo Viral y código F: Santi lo pega cuando pueda (no urgente; Edición pone los links a mano).
+- Orden de trabajo: 1) calendario ✅ 2) los 3 cerebros (viral en curso, leads y explicativo después) 3) guiones de cada semana en 📁 Guiones.
+
 ## AHORRO FUERTE (Santi, 13 nov: 21 % del límite semanal en 1 día)
 - Modelos (Santi, 13 nov): Santi · Base en Opus · 📁 Edición de videos en Fable 5.2 hasta el 16 nov (luego se decide) · TODOS los demás en Sonnet. No archivar nada sin permiso.
 - Ya NO se renuevan los chats cada día: un chat se renueva solo cuando está muy largo. Chats sin uso → archivados.
