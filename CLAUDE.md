@@ -20,8 +20,7 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
   | `contexto/anuncios-meta.md` | Anuncios Meta: flujo acordado, plan de automatización, qué falta |
   | `contexto/tiktok.md` | TikTok: borrador automático (plan A), app de TikTok, auditoría |
   | `contexto/referentes-edicion.md` | Estilo por tipo de video (referentes de Santi); skill `referentes-edicion`, videos en `referentes/` |
-  | `contexto/robot-edicion.md` | Robot de edición: Robot.gs + tarea programada que edita lo de Videos en frío |
-  | `contexto/agenda-mensual.md` | Kit de contenido mensual: agenda en la hoja, robot de edición, aviso para revisar |
+  | `contexto/agenda-mensual.md` | Kit de contenido mensual: agenda en la hoja, aviso para revisar |
   | `contexto/licencias.md` | Plan para entregar carpetas a clientes sin que las compartan (se monta al final) |
   | `contexto/ai-work.md` | Oferta, embudo, entrega, pendientes del negocio |
   | `contexto/producto.md` | Qué recibe el cliente: carpetas plantilla, módulos de Skool, requisitos |
@@ -48,7 +47,7 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
   | `areas/2-tiktok` | `editar-tiktok` | Recursos y reglas · TikTok |
   | `areas/3-youtube` | `editar-youtube` | Recursos y reglas · YouTube |
   | `areas/4-anuncios-meta` | `editar-anuncio` | Recursos y reglas · Anuncios (Meta) |
-| `areas/5-edicion-videos` | `editar-video` | Edita lo de `1. Videos en frío`, revisa con Santi, sube a `2. Videos terminados` y programa |
+| `areas/5-edicion-videos` | `editar-video` | (Sin robot desde 13 nov: lo edita SOLO el chat 📁 Edición de videos) Edita lo de `1. Videos en frío`, revisa con Santi, sube a `2. Videos terminados` y programa |
 - **Chats (renovados 12 nov, TODOS en Opus 5.5; al empezar leen `contexto/estado-actual.md`; regla de Santi: no hacer nada sin su permiso):**
   `Santi · Base 3` (`session_01McnvqtDPHNYbE9DQ8iQJeH`) · `Santi · Preguntas` (`session_01Mcnvqvgpb4vJdHLWw8g5tF`) ·
   📁 Edición de videos `session_01Mcnvqw535MF9WSXKXT5Cgs` · 📁 Guiones `session_01McnvqvLLYGtXVTA9bDdCQW` ·

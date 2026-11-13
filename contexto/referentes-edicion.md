@@ -1,4 +1,4 @@
-# Referentes de edición (los lee el robot de edición antes de editar)
+# Referentes de edición (los lee el chat de edición antes de editar)
 Videos en `referentes/` (repo). Por tipo de video de la Agenda. Copiar el ESTILO, no el contenido.
 
 ## Explicativo (E)

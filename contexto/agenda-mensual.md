@@ -9,7 +9,7 @@ avisa para revisar y, con el OK de Santi, publica solo a la hora de la fila. Se 
    explicativos, YouTube largo, anuncios, clips de cascada) y escribe sus guiones (link en la fila).
    Ej.: 12 nov → YouTube largo, ya queda programado para YouTube.
 2. **Santi** graba y sube el crudo a Edición de videos › 1. Videos en frío, con el código adelante (`v7.mov`, `L2.mov`, `Y1.mov`).
-3. **Robot de edición** (tarea programada cada pocas horas): ve el crudo nuevo, busca su fila por código, edita según
+3. **(Robot eliminado 13 nov: lo hace el chat 📁 Edición de videos)** : ve el crudo nuevo, busca su fila por código, edita según
    guion y tipo (vertical 9:16 o YouTube largo 16:9), sube a 2. Videos terminados, pone estado `Listo para revisar`.
 4. **Aviso a Santi:** "🎬 Video 7 listo, míralo" (notificación al celular + link). SIEMPRE con revisión (regla de Santi).
 5. Santi revisa → correcciones juntas (máx. 2 versiones) → "dale" → Claude pone `Publicar`.
@@ -22,7 +22,7 @@ Estados: Por guion → Por grabar → Grabado → Editando → Listo para revisa
 
 ## Pendiente
 - Code.gs: leer la Agenda (hoy lee la pestaña Noviembre) y subir YouTube largo (no probado; ojo peso).
-- Robot de edición: tarea programada + reglas por tipo de video.
+- Edición: chat 📁 Edición de videos + reglas por tipo de video.
 - Encajar la cascada (kit-cascada/): sus clips caen como filas de la Agenda.
 
 ## Grabación por lotes (Santi, 10 nov)
