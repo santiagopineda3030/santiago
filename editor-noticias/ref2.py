@@ -71,7 +71,7 @@ def _pop(t, t0, d=0.28):
     return A.ease_out_back(A.clamp((t - t0) / d))
 
 
-CAJA = (60, 250, 960, 600)  # arriba, sin tapar la cara
+CAJA = (0, 1180, 1080, 640)  # abajo, ancho completo (no lo mueve la zona segura); la cara queda libre arriba
 
 
 def _grafico_tarjeta(dur, dibujar, sonido="pop", caja=CAJA):

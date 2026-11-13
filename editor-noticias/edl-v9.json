@@ -1,0 +1,588 @@
+{
+ "nota": "v9 1.0 · estilo R2 (ref2.py) en rojo: subtítulos de 2 pisos, tarjetas, imágenes 3D de internet, logos, destello, B/N en las preguntas",
+ "gancho_texto": "",
+ "gancho_neon": "Microsoft se cayó",
+ "dos_pisos": true,
+ "sin_titulos": true,
+ "sin_puntuacion": true,
+ "fuente_sub": "Montserrat SemiBold",
+ "cta": "Sígueme para más noticias de IA",
+ "cta_emoji": "🔔",
+ "claves": [
+  "microsoft",
+  "mundo",
+  "95",
+  "nada",
+  "noticias",
+  "noviembre",
+  "outlook",
+  "teams",
+  "copilot",
+  "74",
+  "países",
+  "100.000",
+  "reportes",
+  "hospitales",
+  "aeropuertos",
+  "causa",
+  "hackeo",
+  "servidores",
+  "openai",
+  "10.000",
+  "11.000",
+  "trimestre",
+  "bloomberg",
+  "dos",
+  "demandan",
+  "juez",
+  "modelos",
+  "desastre",
+  "frenar",
+  "york",
+  "25",
+  "olvidó",
+  "diabetes",
+  "tres",
+  "salud",
+  "mit",
+  "40",
+  "cancelar",
+  "sistema",
+  "retorno",
+  "seguirme"
+ ],
+ "secciones": [
+  {
+   "titulo": "Gancho",
+   "tipo": "gancho",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 14.97,
+     "hasta": 16.85,
+     "texto": "Microsoft se cayó en todo el mundo"
+    },
+    {
+     "clip": "0001",
+     "desde": 30.75,
+     "hasta": 34.85,
+     "texto": "Y más del 95 % de las empresas que usan la IA no han ganado nada con ella."
+    },
+    {
+     "clip": "0001",
+     "desde": 49.4,
+     "hasta": 53.4,
+     "texto": "Estas son las 5 noticias de IA más importantes que pasaron el día de ayer, 12 de noviembre."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "r2_gauge",
+     "en": "95",
+     "offset": -0.2,
+     "dur": 3.4,
+     "titulo": "Empresas que ganan con IA",
+     "valor": "95 %",
+     "sub": "no ganó nada"
+    },
+    {
+     "tipo": "r2_objeto",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 49.45,
+      "hasta": 51.4
+     },
+     "emojis": [
+      "globe_showing_americas",
+      "brain"
+     ],
+     "arriba": "Las 5 noticias de IA",
+     "abajo": "de ayer"
+    }
+   ]
+  },
+  {
+   "titulo": "Microsoft",
+   "tipo": "noticia",
+   "etiqueta": "VIRAL · MICROSOFT",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 86.9,
+     "hasta": 90.75,
+     "texto": "Ayer Microsoft se cayó en todo el mundo. Outlook, Teams y Copilot, su IA,"
+    },
+    {
+     "clip": "0001",
+     "desde": 96.95,
+     "hasta": 99.35,
+     "texto": "dejaron de funcionar en más de 74 países."
+    },
+    {
+     "clip": "0001",
+     "desde": 106.85,
+     "hasta": 108.85,
+     "texto": "Y hubo hasta más de 100.000 reportes."
+    },
+    {
+     "clip": "0001",
+     "desde": 114.4,
+     "hasta": 117.2,
+     "texto": "Y hospitales y aeropuertos tuvieron problemas por esto."
+    },
+    {
+     "clip": "0001",
+     "desde": 123.95,
+     "hasta": 126.95,
+     "texto": "¿Y cuál fue la causa? Microsoft dice que no fue un hackeo."
+    },
+    {
+     "clip": "0001",
+     "desde": 136.86,
+     "hasta": 139.95,
+     "texto": "Dicen que fue una mala actualización configurada en sus servidores."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "r2_estado",
+     "en": "Outlook,",
+     "offset": -0.2,
+     "dur": 2.4,
+     "titulo": "Estado de Microsoft",
+     "items": [
+      [
+       "Outlook",
+       false
+      ],
+      [
+       "Teams",
+       false
+      ],
+      [
+       "Copilot",
+       false
+      ]
+     ],
+     "logos": [
+      "microsoftoutlook",
+      "microsoftteams",
+      "microsoft"
+     ]
+    },
+    {
+     "tipo": "r2_objeto",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 97.02,
+      "hasta": 99.3
+     },
+     "emojis": [
+      "globe_showing_americas"
+     ],
+     "puntos": 14,
+     "arriba": "Dejaron de funcionar en",
+     "abajo": "+74 países"
+    },
+    {
+     "tipo": "r2_objeto",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 107.2,
+      "hasta": 108.8
+     },
+     "emojis": [
+      "warning",
+      "satellite_antenna"
+     ],
+     "arriba": "Hubo más de",
+     "abajo": "100.000 reportes"
+    },
+    {
+     "tipo": "r2_estado",
+     "en": "hospitales",
+     "offset": -0.2,
+     "dur": 2.6,
+     "titulo": "Afectados",
+     "items": [
+      [
+       "Hospitales",
+       false
+      ],
+      [
+       "Aeropuertos",
+       false
+      ]
+     ]
+    },
+    {
+     "tipo": "r2_objeto",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 137.9,
+      "hasta": 139.9
+     },
+     "emojis": [
+      "desktop_computer",
+      "gear"
+     ],
+     "arriba": "Una mala actualización",
+     "abajo": "en sus servidores"
+    }
+   ]
+  },
+  {
+   "titulo": "OpenAI",
+   "tipo": "noticia",
+   "etiqueta": "VIRAL · OPENAI",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 147.75,
+     "hasta": 149.85,
+     "texto": "¿Y recuerdas la noticia de ayer de OpenAI?"
+    },
+    {
+     "clip": "0001",
+     "desde": 155.55,
+     "hasta": 160.85,
+     "texto": "Facturó más de 10.000 millones de dólares en tan solo un trimestre, y aun así perdió casi 11.000 millones."
+    },
+    {
+     "clip": "0001",
+     "desde": 180.7,
+     "hasta": 182.25,
+     "texto": "Y ahora Bloomberg confirma el porqué:"
+    },
+    {
+     "clip": "0001",
+     "desde": 185.9,
+     "hasta": 188.7,
+     "texto": "por cada dólar que gana, gasta casi dos dólares."
+    },
+    {
+     "clip": "0001",
+     "desde": 196.0,
+     "hasta": 199.6,
+     "texto": "¿En qué? Según reportes, es gracias a sus grandes servidores."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "r2_barra",
+     "en": "Facturó",
+     "offset": -0.2,
+     "dur": 5.2,
+     "titulo": "OpenAI · 3 meses",
+     "antes": "+10.000 M",
+     "despues": "-11.000 M",
+     "et_antes": "Facturó",
+     "et_despues": "Perdió casi"
+    },
+    {
+     "tipo": "r2_objeto",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 186.3,
+      "hasta": 188.65
+     },
+     "emojis": [
+      "money_with_wings",
+      "dollar_banknote"
+     ],
+     "arriba": "Por cada dólar que gana",
+     "abajo": "gasta casi 2"
+    },
+    {
+     "tipo": "r2_objeto",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 197.0,
+      "hasta": 199.55
+     },
+     "emojis": [
+      "desktop_computer",
+      "electric_plug"
+     ],
+     "arriba": "Según reportes",
+     "abajo": "sus servidores"
+    }
+   ]
+  },
+  {
+   "titulo": "Demanda",
+   "tipo": "noticia",
+   "etiqueta": "POLÉMICA · DEMANDA",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 226.72,
+     "hasta": 230.7,
+     "texto": "Cuatro organizaciones demandan a Meta, OpenAI, Anthropic y SpaceX."
+    },
+    {
+     "clip": "0001",
+     "desde": 241.98,
+     "hasta": 244.95,
+     "texto": "Y le piden a un juez que no les deje sacar nuevos modelos de IA."
+    },
+    {
+     "clip": "0001",
+     "desde": 268.32,
+     "hasta": 270.7,
+     "texto": "Dicen que esas empresas van a causar un desastre."
+    },
+    {
+     "clip": "0001",
+     "desde": 274.9,
+     "hasta": 277.5,
+     "texto": "¿Tú qué dices? ¿Hay que frenar los modelos de IA o no?",
+     "bn": true
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "r2_logos",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 227.7,
+      "hasta": 230.65
+     },
+     "arriba": "4 organizaciones demandan a",
+     "grande": "los gigantes de la IA",
+     "items": [
+      "meta",
+      "openai",
+      "anthropic",
+      "spacex"
+     ]
+    },
+    {
+     "tipo": "r2_objeto",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 242.6,
+      "hasta": 244.9
+     },
+     "emojis": [
+      "balance_scale",
+      "hammer"
+     ],
+     "arriba": "Le piden a un juez",
+     "abajo": "frenar la IA"
+    },
+    {
+     "tipo": "r2_objeto",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 269.4,
+      "hasta": 270.65
+     },
+     "emojis": [
+      "fire"
+     ],
+     "arriba": "Dicen que van a causar",
+     "abajo": "un desastre"
+    }
+   ]
+  },
+  {
+   "titulo": "Hospital",
+   "tipo": "noticia",
+   "etiqueta": "POLÉMICA · HOSPITAL",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 287.9,
+     "hasta": 291.4,
+     "texto": "En los hospitales públicos de Nueva York, la IA hace los resúmenes de los pacientes."
+    },
+    {
+     "clip": "0001",
+     "desde": 300.12,
+     "hasta": 304.6,
+     "texto": "Un estudio reciente muestra que en casi el 25 % de los casos a la IA se le olvidó"
+    },
+    {
+     "clip": "0001",
+     "desde": 330.46,
+     "hasta": 334.6,
+     "texto": "Un ejemplo de esto es que se le olvidó poner el examen de sangre para los pacientes con diabetes."
+    },
+    {
+     "clip": "0001",
+     "desde": 344.32,
+     "hasta": 347.25,
+     "texto": "Y a los pacientes más enfermos les pasó esto tres veces más."
+    },
+    {
+     "clip": "0001",
+     "desde": 350.82,
+     "hasta": 352.95,
+     "texto": "¿Cómo vas a dejar la salud en manos de una IA?",
+     "bn": true
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "r2_objeto",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 288.3,
+      "hasta": 291.35
+     },
+     "emojis": [
+      "hospital",
+      "stethoscope"
+     ],
+     "arriba": "Hospitales públicos",
+     "abajo": "de Nueva York"
+    },
+    {
+     "tipo": "r2_objeto",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 301.9,
+      "hasta": 304.55
+     },
+     "emojis": [
+      "clipboard",
+      "warning"
+     ],
+     "arriba": "En casi el",
+     "abajo": "25 % de los casos"
+    },
+    {
+     "tipo": "r2_ficha",
+     "en": "ejemplo",
+     "offset": -0.2,
+     "dur": 4.0,
+     "titulo": "Ficha del paciente",
+     "items": [
+      [
+       "Datos del paciente",
+       true
+      ],
+      [
+       "Medicamentos",
+       true
+      ],
+      [
+       "Examen de sangre",
+       false
+      ]
+     ],
+     "cifra": "25 %",
+     "sub": "de los casos"
+    },
+    {
+     "tipo": "r2_estado",
+     "en": "tres",
+     "offset": -0.3,
+     "dur": 2.0,
+     "titulo": "Pacientes más enfermos",
+     "items": [
+      [
+       "3 veces más errores",
+       false
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "titulo": "95",
+   "tipo": "noticia",
+   "etiqueta": "ÚTIL · EL 95 %",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 362.4,
+     "hasta": 367.95,
+     "texto": "Según un estudio reciente del MIT, más del 95 % de las empresas no facturó nada con la IA."
+    },
+    {
+     "clip": "0001",
+     "desde": 381.88,
+     "hasta": 387.65,
+     "texto": "Y Gartner cree que el 40 % de los proyectos con IA se van a cancelar."
+    },
+    {
+     "clip": "0001",
+     "desde": 396.38,
+     "hasta": 398.95,
+     "texto": "El problema es que usan la IA sin un sistema completo."
+    },
+    {
+     "clip": "0001",
+     "desde": 416.92,
+     "hasta": 422.9,
+     "texto": "Entonces no solamente OpenAI: la mayoría de empresas invierten mucho en IA, pero no tienen un sistema que les ayude a recoger un retorno."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "r2_gauge",
+     "en": "95",
+     "offset": -0.3,
+     "dur": 3.2,
+     "titulo": "Estudio del MIT",
+     "valor": "95 %",
+     "sub": "no ganó nada"
+    },
+    {
+     "tipo": "r2_objeto",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 385.0,
+      "hasta": 387.6
+     },
+     "emojis": [
+      "chart_decreasing",
+      "cross_mark"
+     ],
+     "arriba": "Gartner cree que",
+     "abajo": "40 % se cancela"
+    },
+    {
+     "tipo": "r2_estado",
+     "en": "sistema",
+     "offset": -0.2,
+     "dur": 2.2,
+     "titulo": "El problema",
+     "items": [
+      [
+       "Usan IA",
+       true
+      ],
+      [
+       "Tienen un sistema",
+       false
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "titulo": "CTA",
+   "tipo": "cta",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 431.93,
+     "hasta": 437.6,
+     "texto": "Y ya sabes, estas fueron las 5 noticias de IA más importantes de ayer. No te olvides de seguirme para ver más noticias diarias."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "seguir",
+     "en": "seguirme",
+     "offset": -0.1,
+     "dur": 3.4
+    }
+   ]
+  }
+ ],
+ "dos_pisos_y": 990
+}
