@@ -220,9 +220,19 @@ def _pantalla(dur, fondo, dib, sonido="whoosh"):
     return A.Grafico(dur, (0, 0, W, H), cuadro, sonido)
 
 
+def _imagen(nombre, tam):
+    """Imagen 3D de internet (editor-noticias/imagenes/, Fluent Emoji 3D de Microsoft, licencia MIT) o emoji si no existe."""
+    import os
+    ruta = os.path.join(os.path.dirname(__file__), "imagenes", f"{nombre}.png")
+    if os.path.exists(ruta):
+        im = Image.open(ruta).convert("RGBA")
+        return im.resize((tam, int(tam * im.height / im.width)), Image.LANCZOS)
+    return A.emoji(nombre, tam)
+
+
 def g_objeto(dur, emojis=("🌍",), puntos=0, texto_arriba="", texto_abajo=""):
     """Fondo oscuro con un objeto grande tipo 3D (emoji con sombra y brillo) que flota; opcional: puntos rojos que se apagan."""
-    grandes = [A.emoji(e, 520 if i == 0 else 300) for i, e in enumerate(emojis)]
+    grandes = [_imagen(e, 520 if i == 0 else 300) for i, e in enumerate(emojis)]
 
     def dib(im, t):
         flot = 14 * math.sin(t * 2.2)
@@ -274,7 +284,7 @@ def g_logos(dur, arriba="", grande="", items=(), martillo=True, assets="assets-v
 
     cards = [tarjeta(i) for i in items]
     pos = [(W / 2 - 170, 760), (W / 2 + 170, 760), (W / 2 - 170, 1090), (W / 2 + 170, 1090), (W / 2, 1400)][: len(cards)]
-    mart = A.emoji("⚖️", 200) if martillo else None
+    mart = _imagen("balance_scale", 230) if martillo else None
 
     def dib(im, t):
         if arriba:
