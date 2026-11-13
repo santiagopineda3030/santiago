@@ -1,5 +1,5 @@
 {
- "nota": "v9 1.1 · cortes con la palabra completa (sin voz cortada), trabas fuera (toma buena de 100.000 reportes), carrusel 1-5 en el inicio",
+ "nota": "v9 1.2 · 'Cuál fue la causa' sin la Y cortada, servidores de la toma limpia, Gartner sin el 'queee'",
  "gancho_texto": "",
  "gancho_neon": "Microsoft se cayó",
  "dos_pisos": true,
@@ -129,9 +129,9 @@
     },
     {
      "clip": "0001",
-     "desde": 124.12,
+     "desde": 124.47,
      "hasta": 126.95,
-     "texto": "¿Y cuál fue la causa? Microsoft dice que no fue un hackeo."
+     "texto": "¿Cuál fue la causa? Microsoft dice que no fue un hackeo."
     },
     {
      "clip": "0001",
@@ -260,8 +260,14 @@
     {
      "clip": "0001",
      "desde": 196.12,
-     "hasta": 199.5,
-     "texto": "¿En qué? Según reportes, es gracias a sus grandes servidores."
+     "hasta": 197.72,
+     "texto": "¿En qué? Según reportes,"
+    },
+    {
+     "clip": "0001",
+     "desde": 202.16,
+     "hasta": 203.55,
+     "texto": "es gracias a sus grandes servidores."
     }
    ],
    "graficos": [
@@ -294,8 +300,8 @@
      "tipo": "r2_objeto",
      "cubrir": {
       "clip": "0001",
-      "desde": 197.0,
-      "hasta": 199.55
+      "desde": 202.2,
+      "hasta": 203.5
      },
      "emojis": [
       "desktop_computer",
@@ -501,8 +507,14 @@
     {
      "clip": "0001",
      "desde": 382.04,
+     "hasta": 383.3,
+     "texto": "Y Gartner cree que"
+    },
+    {
+     "clip": "0001",
+     "desde": 385.04,
      "hasta": 387.95,
-     "texto": "Y Gartner cree que el 40 % de los proyectos con IA se van a cancelar."
+     "texto": "el 40 % de los proyectos con IA se van a cancelar."
     },
     {
      "clip": "0001",
