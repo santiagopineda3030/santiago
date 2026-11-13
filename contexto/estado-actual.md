@@ -24,7 +24,7 @@
 1 guion v5 · 2 grabar · 3 editar y publicar 11:00 · 4 oferta · 5 Meta: píxel + tracker + prueba · 6 TikTok publicar solo · 7 encuestas · extra: 4:35 guion v6, vaciar papelera de Drive.
 
 ## AHORRO FUERTE (Santi, 13 nov: 21 % del límite semanal en 1 día)
-- Opus SOLO en 📁 Edición de videos y código. Todo lo demás (Base, Preguntas, Guiones, Cerebros, Instagram, YouTube, TikTok, Anuncios, Web si no hay código) en Sonnet.
+- Modelos (Santi, 13 nov): Santi · Base en Opus · 📁 Edición de videos en Fable 5.2 hasta el 16 nov (luego se decide) · TODOS los demás en Sonnet. No archivar nada sin permiso.
 - Ya NO se renuevan los chats cada día: un chat se renueva solo cuando está muy largo. Chats sin uso → archivados.
 - Respuestas cortas, sin revisar cosas que Santi no pidió, sin leer archivos de más.
 - Video: correcciones juntas, máximo 2 versiones.
