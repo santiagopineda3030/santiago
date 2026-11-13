@@ -325,3 +325,4 @@
 - 13 nov 15:53 · E1 adelantado (Santi): Hora 15:55 en la hoja (fila 11, ya en Programado) y evento de Calendar movido. v9 salió a la 1:10 (Publicado).
 - 13 nov · Límite casi agotado: Y1 pasa a vie 20 15:00 (graba jue 19), Y2 vie 27; C1 23, C2 26, C3 29; C4, C5 y Y3 quitados (hoja + Calendar). Foco hasta el jue 19: cerebro, landing y videos. Base 3 se cierra; nuevo Santi · Base 4 en Sonnet.
 - 13 nov · Santi · Base 4 (session_01Mcnvqsniy4E3PwFkKD6G4A) abierto en Sonnet; reemplaza a Base 3. Foco hasta el jue 19: cerebro de guiones, landing, videos diarios.
+- 13 nov · Base 4: limpieza de Drive (a papelera): crudo v9.mov, idea y guion terminado v9, v9 1.0/1.1, v7 1.1/1.2. Quedan v7 1.3, v8 1.2, v9 1.2 (finales), E1 1.4, e1.mov, v10 idea/guion, E1 y S1. Santi vacía la papelera.
