@@ -330,3 +330,4 @@
 - 13 nov · Cerebro viral: 40 ideas de videos virales en `cerebro-guiones/ideas-virales.md` (10 tipos de gancho, todas muestran el sistema). Santi elige y armamos el guion.
 - 13 nov · Regla de Santi: las ideas virales salen de lo que funciona HOY (tendencias, formatos, noticias), no solo del nicho cerrado; guardada en viral.md. Lista 2 de 40 ideas con tendencia de origen en cerebro-guiones/ideas-virales.md.
 - 13 nov · Regla de Santi: "ideas virales" = lo viral de hoy tal cual, sin adaptarlo al nicho. Lista 3 en ideas-virales.md.
+- 13 nov · Regla de Santi: nada de bailes en ideas virales. Lista 4 (formatos hablados que funcionan hoy) en ideas-virales.md.
