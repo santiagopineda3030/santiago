@@ -23,4 +23,13 @@ Columnas: # código | cuenta | vistas | comentarios | duración | tema | gancho 
 19 DfplmKTODny | @jayshetty | 1,9M | 870 (17,4k compartidos) | 38s | "Some people are bridges, not destinations" | caminando por un puente en B/N | voz en off + b-roll | cortes ~3 s, música | compartir
 20 DfqZ2hUzlea | @9gag | 1,7M | 185 (20,3k compartidos) | 54s | cachorro "de patata a oso polar" | "How big will this little floof get in 1 year?" | time-lapse antes/después | pregunta fija arriba, clips cada ~2 s | —
 
-(Parte 2: patrones, top temas/formatos/ganchos, estilo de edición, duración, lo quemado — pendiente del chat 📁 Manejo PC Cloud.)
+
+
+# Parte 2 · patrones de los 20 reels (14 nov 2026)
+**Top 5 temas:** 1) sorpresa visual o caos imposible (IA/CGI, retos): #1, #3, #6 · 2) mentalidad y relaciones, muy compartidos: #12, #14, #16, #19 · 3) dato útil de experto "esto deberías saberlo" (médico, piloto): #9, #13 · 4) humor casero y animales con giro: #7, #8, #17, #20 · 5) historias íntimas/tabú y noticias que afectan la vida diaria: #15, #18 (hoy: caos de vuelos en EE. UU. por la falla de la FAA).
+**Top 5 formatos:** 1) clip de pódcast/entrevista con experto, título fijo arriba · 2) texto sobre b-roll con música · 3) reto o tráiler con cortes rápidos · 4) debate en pantalla dividida / "This or That" · 5) selfie a cámara con dato en texto grande.
+**Top 5 ganchos:** 1) titular en caja que promete revelación · 2) escena visual imposible sin palabras · 3) "This man was shocked by my response" (curiosidad por una reacción) · 4) pregunta polarizante / elección · 5) dato que duele (6 h de pantalla = 1/4 de tu vida).
+**Edición dominante:** título fijo arriba en caja de color (blanca, roja o morada) todo el vídeo · subtítulos por palabra/frase, blancos o amarillos, bold, centro inferior · cortes cada 2-4 s en hablados; los virales visuales son 1 plano · música emocional en mentalidad · sin memes ni efectos recargados.
+**Duración:** entretenimiento 10-35 s · educativos/pódcast 50-100 s · mediana ~35 s.
+**CTA:** palabra clave en comentarios (Mel Robbins "WOMEN": 11,6k comentarios, 175k compartidos). La mayoría de los virales grandes no tienen CTA: viven de los compartidos.
+**Quemado/ausente:** "Hola, hoy os enseño…" · listas de "5 tips" a cámara sin titular · subtítulos multicolor recargados, memes y transiciones llamativas · textos largos antes de ver algo · tutoriales de herramientas IA a cámara (ninguno en el top).
