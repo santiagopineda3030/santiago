@@ -347,3 +347,4 @@
 - 14 nov · Base 4: análisis viral de hoy parte 1 (20 reels IG 12-14 nov, cualquier tema) en cerebro-guiones/analisis-viral-hoy.md (copia en contexto/). Falta parte 2 (patrones) antes de escribir el guion.
 - 14 nov · Base 4: análisis viral de hoy parte 2 (patrones) guardado. Siguiente: guion construido sobre esos patrones, con OK de Santi.
 - 14 nov · Base 4: guion viral v1 construido sobre lo viral de hoy ('Dos meses de tu año') en cerebro-guiones/guion-viral-hoy-v1.md. Falta OK de Santi.
+- 14 nov · Base 4: guion viral v2 'Me desperté y ya estaba publicado' (historia con giro, sin regaño; Santi rechazó el v1 por tono de regaño) en cerebro-guiones/guion-viral-hoy-v2.md.
