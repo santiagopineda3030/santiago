@@ -356,3 +356,4 @@
 - 14 nov · Base 4: guion viral v1 método Víctor con las notas completas (entrevista '¿Qué prefieres?' + calculadora + plantilla) en cerebro-guiones/guion-viral-victor-v1.md. Falta OK de Santi.
 - 14 nov · Base 4: versión '10 de 10' del guion de Santi (entrevista ¿Qué prefieres?) en cerebro-guiones/guion-viral-10de10.md. Falta OK y confirmar datos (⚠).
 - 14 nov · Base 4: guion de Santi como base (~8) + 5 opciones en su voz en cerebro-guiones/guiones-santi-5-opciones.md. Regla: su voz humana > versiones 'IA'. Falta que elija.
+- 14 nov · Base 4: guion armado '120 horas' (voz de Santi) en cerebro-guiones/guion-120-horas.md. Falta OK y confirmar datos.
