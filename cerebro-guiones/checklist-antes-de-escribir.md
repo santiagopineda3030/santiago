@@ -7,3 +7,6 @@ Santi: "cada que vayas a crear un guion, ve a GitHub y mira toda la info de Víc
 5. Voz de Santi: primera persona, simple, hablada; esqueleto de su guion (gancho → respuestas reales → regancho "en menos de 30 s" → "creé un sistema" → antes/después → moraleja → CTA escasez). Nada de eslóganes ni frases "armadas".
 6. Sin cifras ni casos inventados (⚠ para que Santi confirme), sin promesas de ingresos, sin nombrar herramientas.
 7. Pregunta final a mí mismo: "¿Víctor lo aprobaría? ¿Cuál de sus ejemplos del curso se le parece?" Si no hay uno parecido, descartarlo.
+
+## REGLA DE ORO DEL GANCHO (Santi, 14 nov, enojado con razón)
+El gancho debe ser MUY ABIERTO: lo que le gusta a TODA la gente = FAMA, DINERO, EMPRESAS FAMOSAS (y personas famosas, lujo, historias increíbles). Muy poca gente hace contenido para redes: un gancho sobre seguidores, redes, videos, edición u horas de contenido NO le interesa a casi nadie. Lo que sí funciona (y a Santi le gustó): una comparación de dinero que sorprende ("tener 1.000 X te puede dar más plata que 100.000"). El nicho (sistema/contenido) entra DESPUÉS del seg 30, en el giro. Verificar los datos de empresas/famosos con una búsqueda antes de escribir.
