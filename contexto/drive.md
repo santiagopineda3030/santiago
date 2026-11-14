@@ -82,3 +82,7 @@ Versión solo Instagram del script arreglado, sin datos de Santi (CONFIG vacío)
 ## Cerebros de guiones (13 nov)
 - Guiones › Cerebros `1lU7gDM54TSB1CTnFtkS80iH-b5YDyYqx` · 1. Viral `1gh7_8X9VHl5eXH7Y8LWvXNw2bofB95wn` · 2. Leads `1c-6Xx8EHXngNDJUQJXdHKe0_oFNBhzrA` · 3. Explicativo `11nCWuwMj78gKJxKv1HpqBj4o-fJaGeCw`
 - Doc **Cerebro viral · Reglas** (en 1. Viral): `1QE8H9Bev6ipmq4Xuwasl48tyxjPFiciQrwEGyw5-GDo` (v1.1, copia de `cerebro-guiones/viral.md`, 13 nov). Falta OK de Santi. La v1 vieja (`1Hnw7JXVq-3_CsgG3KCyK5c8KDuahilYBnzGFnMFly_k`) quedó renombrada "(v1 vieja, se puede borrar)": Santi la borra.
+
+## Documento de guiones virales (14 nov 2026)
+- **5 videos virales** (Google Doc, en Guiones): ID `1EJn78yBDYjkk7T7T_3iEurysOKPPCQNIqTiRVU7vjdA` · https://docs.google.com/document/d/1EJn78yBDYjkk7T7T_3iEurysOKPPCQNIqTiRVU7vjdA/edit · copia: `drive-respaldo/5-videos-virales.html`.
+- En Guiones quedan también 2 archivos viejos de hoy ('Referencias virales IG · 12-14 nov 2026' `1fBmZUgYrQdac2XMsZ3kdfsCL3nkuwEc3` y 'Guiones virales 1 · 14 nov 2026' `1ABjz4y0yqIcS5ytER5QlNBn_Bjg3PC4V`): versiones viejas, pendientes de borrar con permiso de Santi.

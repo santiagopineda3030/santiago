@@ -373,3 +373,4 @@
 - 14 nov · Base 4: GUION FINAL 'Ronaldo por minuto' (texto de Santi) en cerebro-guiones/guion-final-ronaldo.md. Con el 'Millonarios' ya hay 2 guiones finales. Faltan los demás: Base 4 los hace sola con el checklist.
 - 14 nov · Base 4: guion hecho solo con el checklist: 'MrBeast gana más con chocolates que con videos' (7/7) en cerebro-guiones/guion-mrbeast-chocolates.md. Falta OK de Santi y confirmar ⚠.
 - 14 nov · Base 4: MrBeast chocolates APROBADO por Santi. Nuevo guion hecho solo: 'Jensen Huang lavaba platos en un Denny's' (Nvidia, historia tipo Phelps, 7/7) en cerebro-guiones/guion-nvidia-denny.md. Falta OK.
+- 14 nov · Base 4: creado el Google Doc '5 videos virales' en Drive › Guiones (ID 1EJn78yBDYjkk7T7T_3iEurysOKPPCQNIqTiRVU7vjdA) con los 5 guiones (¿Qué prefieres?, Millonarios, Ronaldo, MrBeast, Nvidia/Denny's); copia en drive-respaldo/5-videos-virales.html; IDs en contexto/drive.md.
