@@ -342,3 +342,4 @@
 - 14 nov · Base 4: guiones virales v4 (voz hablada de experto en viralidad, sin eslóganes; V1 '61 días', V2 'Tu video no se hace viral por esto'). En Drive sigue la versión vieja.
 - 14 nov · Base 4: guiones virales 2 (formato de los referentes de Santi: Phelps, Nelson, Top Miami). 12 ideas abiertas; elegidos Messi/servilleta (prueba mañana), 3 negocios sin lo que venden, corto 'Deja de hacerlo todo tú'. Datos reales marcados ⚠ a verificar.
 - 14 nov · Base 4: cerebro-guiones/guion-prueba-messi.md (calco del guion Phelps de Santi; v2 sin eslóganes). Falta OK de Santi y verificar datos.
+- 14 nov · Base 4: guion viral 'Kasparov y los dos aficionados' (cerebro de IA, meta 10 mil vistas) en cerebro-guiones/guion-viral-cerebro-ia.md, con 10 ideas candidatas, checklist y A/B de gancho. Búsqueda web sin datos fechados de esta semana. Datos ⚠ por verificar antes de grabar.
