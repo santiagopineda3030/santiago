@@ -331,3 +331,4 @@
 - 13 nov · Regla de Santi: las ideas virales salen de lo que funciona HOY (tendencias, formatos, noticias), no solo del nicho cerrado; guardada en viral.md. Lista 2 de 40 ideas con tendencia de origen en cerebro-guiones/ideas-virales.md.
 - 13 nov · Regla de Santi: "ideas virales" = lo viral de hoy tal cual, sin adaptarlo al nicho. Lista 3 en ideas-virales.md.
 - 13 nov · Regla de Santi: nada de bailes en ideas virales. Lista 4 (formatos hablados que funcionan hoy) en ideas-virales.md.
+- 14 nov · Base 4: PDF 'Ganchos Virales' (49 ganchos + estructura viral) guardado en contexto/ganchos-virales.md. Falta analizar el curso de Skool: Claude no tiene acceso (no hay computador de Santi conectado a la sesión).
