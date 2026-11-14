@@ -10,3 +10,6 @@ Santi: "cada que vayas a crear un guion, ve a GitHub y mira toda la info de Víc
 
 ## REGLA DE ORO DEL GANCHO (Santi, 14 nov, enojado con razón)
 El gancho debe ser MUY ABIERTO: lo que le gusta a TODA la gente = FAMA, DINERO, EMPRESAS FAMOSAS (y personas famosas, lujo, historias increíbles). Muy poca gente hace contenido para redes: un gancho sobre seguidores, redes, videos, edición u horas de contenido NO le interesa a casi nadie. Lo que sí funciona (y a Santi le gustó): una comparación de dinero que sorprende ("tener 1.000 X te puede dar más plata que 100.000"). El nicho (sistema/contenido) entra DESPUÉS del seg 30, en el giro. Verificar los datos de empresas/famosos con una búsqueda antes de escribir.
+
+## REGLA DE ORO 2 (Santi, 14 nov): un viral cumple TODO
+Para ser viral debe ser TENDENCIA AHORITA MISMO y CONTROVERSIAL, además del resto de la calculadora. Si UN solo criterio falla, el guion queda mal: no se entrega. Antes de escribir: (1) buscar en la web qué es tendencia HOY (noticias de la semana, con fecha) y verificar los datos; (2) elegir un tema que divida (¿verdad o excusa?, ¿quién tiene razón?); (3) mostrar la calculadora con los 7 criterios todos en ✔; (4) si falla alguno, cambiar de idea, no entregar.

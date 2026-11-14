@@ -364,3 +364,4 @@
 - 14 nov · Base 4: guion '1.000 seguidores' v2 estilo Víctor (razones, regla de 3, revelación al seg 30) en cerebro-guiones/guion-1000-seguidores-camara-v2.md.
 - 14 nov · Base 4: guion 'Top 3 razones 1.000 seguidores > 100.000' con 5 ganchos que no hablan del tema, en cerebro-guiones/guion-top3-1000-seguidores.md.
 - 14 nov · Base 4: REGLA DE ORO del gancho (abierto: fama, dinero, empresas famosas; poca gente hace contenido) en cerebro-guiones/checklist-antes-de-escribir.md. Guion 'Top 3 empresas con poquísima gente' (datos verificados: Instagram 13 empleados, WhatsApp 55) en cerebro-guiones/guion-empresas-poca-gente.md.
+- 14 nov · Base 4: REGLA DE ORO 2 (viral = tendencia hoy + controversial + TODA la calculadora en ✔) y guion '¿IA o excusa?' (Canva 22 %, Uber 10 %) en cerebro-guiones/guion-ia-quita-trabajo.md.
