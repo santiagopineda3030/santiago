@@ -361,3 +361,4 @@
 - 14 nov · Base 4: checklist obligatorio antes de escribir guiones virales (cerebro-guiones/checklist-antes-de-escribir.md) y regla en CLAUDE.md, a pedido de Santi.
 - 14 nov · Base 4: guion armado '¿Cuánto se gana con 1.000 seguidores?' (idea 4, reencuadre de Víctor C3, pasó el checklist) en cerebro-guiones/guion-1000-seguidores.md. Falta OK de Santi y confirmar datos.
 - 14 nov · Base 4: versión sentado a cámara (H2) del guion '1.000 seguidores' en cerebro-guiones/guion-1000-seguidores-camara.md (Santi: no todo debe ser entrevista).
+- 14 nov · Base 4: guion '1.000 seguidores' v2 estilo Víctor (razones, regla de 3, revelación al seg 30) en cerebro-guiones/guion-1000-seguidores-camara-v2.md.
