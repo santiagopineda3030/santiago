@@ -1,0 +1,617 @@
+{
+ "nota": "v10 1.0 · estilo R2 en rojo, CTA de seguir a la mitad, sin cierre al final",
+ "gancho_texto": "",
+ "gancho_neon": "Nvidia sin jefe",
+ "dos_pisos": true,
+ "dos_pisos_y": 1060,
+ "sin_titulos": true,
+ "sin_puntuacion": true,
+ "fuente_sub": "Montserrat ExtraBold",
+ "cta": " ",
+ "cta_emoji": "",
+ "claves": [
+  "jefe",
+  "ia",
+  "mundo",
+  "renunció",
+  "claude",
+  "día",
+  "noticias",
+  "noviembre",
+  "nvidia",
+  "chips",
+  "potentes",
+  "video",
+  "otro",
+  "personal",
+  "infidelidad",
+  "200",
+  "millones",
+  "presión",
+  "financiera",
+  "kress",
+  "seguirme",
+  "microsoft",
+  "arrastró",
+  "sesión",
+  "horas",
+  "drive",
+  "calendar",
+  "sheets",
+  "trabajar",
+  "peligrosos",
+  "perplexity",
+  "15",
+  "chatgpt",
+  "8",
+  "gemini",
+  "4",
+  "tiendas",
+  "datos",
+  "juez",
+  "abogados",
+  "existieron",
+  "años",
+  "multa",
+  "inventar",
+  "emily",
+  "llamadas",
+  "2,2",
+  "cuatro",
+  "global"
+ ],
+ "secciones": [
+  {
+   "titulo": "Gancho",
+   "tipo": "gancho",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 16.05,
+     "hasta": 19.86,
+     "texto": "El jefe de la empresa de IA más importante del mundo renunció de un día para el otro."
+    },
+    {
+     "clip": "0001",
+     "desde": 36.5,
+     "hasta": 40.2,
+     "texto": "Claude, una de las IAs más importantes del mundo, se cayó casi todo el día."
+    },
+    {
+     "clip": "0001",
+     "desde": 52.85,
+     "hasta": 56.85,
+     "texto": "Estas son las 5 noticias de IA más importantes que pasaron el día de ayer, 13 de noviembre."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "r2_objeto",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 36.55,
+      "hasta": 38.8
+     },
+     "emojis": [
+      "logo:claude",
+      "warning"
+     ],
+     "arriba": "Claude",
+     "abajo": "se cayó todo el día"
+    },
+    {
+     "tipo": "ref_titulo",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 52.9,
+      "hasta": 56.8
+     },
+     "arriba": "Las 5 noticias de IA",
+     "grande": "del 13 de noviembre",
+     "sub": "las más importantes de ayer"
+    }
+   ]
+  },
+  {
+   "titulo": "Nvidia",
+   "tipo": "noticia",
+   "etiqueta": "VIRAL · NVIDIA",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 91.55,
+     "hasta": 99.77,
+     "texto": "Jensen Huang, el jefe de Nvidia, la empresa que hace los chips más potentes del mundo, con los que funciona la IA y muchos de los aparatos con los que estás viendo este video,"
+    },
+    {
+     "clip": "0001",
+     "desde": 109.83,
+     "hasta": 111.93,
+     "texto": "renunció a su cargo de un día para otro."
+    },
+    {
+     "clip": "0001",
+     "desde": 117.6,
+     "hasta": 121.69,
+     "texto": "Esto, gracias a que hubo reportes sobre su vida personal. Todos ya sabemos cuáles son:"
+    },
+    {
+     "clip": "0001",
+     "desde": 125.6,
+     "hasta": 129.06,
+     "texto": "una infidelidad que le costó casi 200 millones de dólares."
+    },
+    {
+     "clip": "0001",
+     "desde": 140.5,
+     "hasta": 142.77,
+     "texto": "Yo creo que fue la presión lo que lo hizo renunciar.",
+     "bn": true
+    },
+    {
+     "clip": "0001",
+     "desde": 152.95,
+     "hasta": 155.35,
+     "texto": "Ahora a Nvidia la maneja la directora financiera,"
+    },
+    {
+     "clip": "0001",
+     "desde": 159.3,
+     "hasta": 160.0,
+     "texto": "Colette Kress."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "r2_objeto",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 92.7,
+      "hasta": 96.5
+     },
+     "emojis": [
+      "logo:nvidia",
+      "crown"
+     ],
+     "arriba": "El jefe de Nvidia",
+     "abajo": "los chips de la IA"
+    },
+    {
+     "tipo": "r2_objeto",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 109.85,
+      "hasta": 111.9
+     },
+     "emojis": [
+      "bust_in_silhouette",
+      "door"
+     ],
+     "arriba": "De un día para otro",
+     "abajo": "renunció"
+    },
+    {
+     "tipo": "r2_objeto",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 126.0,
+      "hasta": 129.0
+     },
+     "emojis": [
+      "money_with_wings",
+      "dollar_banknote"
+     ],
+     "arriba": "Una infidelidad de",
+     "abajo": "casi 200 millones"
+    },
+    {
+     "tipo": "r2_estado",
+     "en": "directora",
+     "offset": -0.2,
+     "dur": 3.6,
+     "titulo": "Quién manda en Nvidia",
+     "items": [
+      [
+       "Jensen Huang · CEO",
+       false
+      ],
+      [
+       "Colette Kress · interina",
+       true
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "titulo": "Seguir",
+   "tipo": "noticia",
+   "etiqueta": "SÍGUEME",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 171.55,
+     "hasta": 175.78,
+     "texto": "Antes de seguir, recuerda seguirme: todos los días te doy las noticias más importantes de IA."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "seguir",
+     "en": "seguirme,",
+     "offset": -0.1,
+     "dur": 3.4
+    }
+   ]
+  },
+  {
+   "titulo": "Claude",
+   "tipo": "noticia",
+   "etiqueta": "VIRAL · CLAUDE",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 184.85,
+     "hasta": 187.26,
+     "texto": "¿Te acuerdas de la noticia de ayer de la caída de Microsoft?"
+    },
+    {
+     "clip": "0001",
+     "desde": 194.2,
+     "hasta": 195.83,
+     "texto": "Ayer arrastró también a Claude."
+    },
+    {
+     "clip": "0001",
+     "desde": 204.49,
+     "hasta": 206.67,
+     "texto": "Primero, nadie podía iniciar sesión ni podía entrar."
+    },
+    {
+     "clip": "0001",
+     "desde": 210.05,
+     "hasta": 212.04,
+     "texto": "Y después volvió a fallar por muchas horas."
+    },
+    {
+     "clip": "0001",
+     "desde": 216.47,
+     "hasta": 222.01,
+     "texto": "A mí, por ejemplo, se me cayó la conexión con Drive, con Calendar y con Sheets por muchísimas horas. Casi no puedo trabajar."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "r2_objeto",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 185.4,
+      "hasta": 187.2
+     },
+     "emojis": [
+      "logo:microsoft",
+      "warning"
+     ],
+     "arriba": "¿Te acuerdas de",
+     "abajo": "la caída de Microsoft?"
+    },
+    {
+     "tipo": "r2_objeto",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 194.4,
+      "hasta": 195.8
+     },
+     "emojis": [
+      "logo:microsoft",
+      "logo:claude"
+     ],
+     "arriba": "Ayer también",
+     "abajo": "arrastró a Claude"
+    },
+    {
+     "tipo": "r2_estado",
+     "en": "Primero,",
+     "offset": -0.2,
+     "dur": 2.4,
+     "titulo": "Estado de Claude",
+     "items": [
+      [
+       "Iniciar sesión",
+       false
+      ],
+      [
+       "Chat",
+       false
+      ]
+     ],
+     "logos": [
+      "claude",
+      "claude"
+     ]
+    },
+    {
+     "tipo": "r2_estado",
+     "en": "Drive,",
+     "offset": -0.3,
+     "dur": 3.2,
+     "titulo": "Mis conexiones",
+     "items": [
+      [
+       "Drive",
+       false
+      ],
+      [
+       "Calendar",
+       false
+      ],
+      [
+       "Sheets",
+       false
+      ]
+     ],
+     "logos": [
+      "google",
+      "google",
+      "google"
+     ]
+    }
+   ]
+  },
+  {
+   "titulo": "Tiendas",
+   "tipo": "noticia",
+   "etiqueta": "POLÉMICA · TIENDAS",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 239.42,
+     "hasta": 242.9,
+     "texto": "Una empresa hizo pruebas y encontró que la IA te puede mandar a"
+    },
+    {
+     "clip": "0001",
+     "desde": 249.38,
+     "hasta": 251.12,
+     "texto": "sitios web muy peligrosos."
+    },
+    {
+     "clip": "0001",
+     "desde": 257.52,
+     "hasta": 260.2,
+     "texto": "Perplexity, por ejemplo, lo hizo en el 15 % de las respuestas;"
+    },
+    {
+     "clip": "0001",
+     "desde": 264.26,
+     "hasta": 266.82,
+     "texto": "ChatGPT tan solo en el 8 % de las respuestas"
+    },
+    {
+     "clip": "0001",
+     "desde": 275.62,
+     "hasta": 277.4,
+     "texto": "y Gemini tan solo en el 4 %."
+    },
+    {
+     "clip": "0001",
+     "desde": 287.13,
+     "hasta": 293.93,
+     "texto": "Pero eso equivale a que a muchísimas personas las mandaron a tiendas muy peligrosas, donde les pueden robar datos e información muy necesaria para ellos."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "r2_objeto",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 249.4,
+      "hasta": 251.05
+     },
+     "emojis": [
+      "shopping_cart",
+      "warning"
+     ],
+     "arriba": "La IA te puede mandar a",
+     "abajo": "sitios peligrosos"
+    },
+    {
+     "tipo": "r2_barras",
+     "en": "Perplexity,",
+     "offset": -0.2,
+     "dur": 7.6,
+     "titulo": "Te manda a sitios peligrosos",
+     "items": [
+      [
+       "Perplexity",
+       15
+      ],
+      [
+       "ChatGPT",
+       8
+      ],
+      [
+       "Gemini",
+       4
+      ]
+     ]
+    },
+    {
+     "tipo": "r2_objeto",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 288.9,
+      "hasta": 291.6
+     },
+     "emojis": [
+      "shopping_bags",
+      "police_car_light"
+     ],
+     "arriba": "Muchísimas personas en",
+     "abajo": "tiendas peligrosas"
+    }
+   ]
+  },
+  {
+   "titulo": "Abogados",
+   "tipo": "noticia",
+   "etiqueta": "POLÉMICA · ABOGADOS",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 304.8,
+     "hasta": 307.54,
+     "texto": "En Estados Unidos, un juez castigó a cuatro abogados"
+    },
+    {
+     "clip": "0001",
+     "desde": 341.47,
+     "hasta": 344.28,
+     "texto": "porque utilizaron la IA para crear casos que nunca existieron."
+    },
+    {
+     "clip": "0001",
+     "desde": 353.15,
+     "hasta": 355.84,
+     "texto": "A dos se les prohibió trabajar en tribunales por dos años,"
+    },
+    {
+     "clip": "0001",
+     "desde": 360.4,
+     "hasta": 362.0,
+     "texto": "y a otro se le puso una multa."
+    },
+    {
+     "clip": "0001",
+     "desde": 367.04,
+     "hasta": 369.42,
+     "texto": "Sabiendo que son abogados, ¿cómo se van a inventar casos con IA?",
+     "bn": true
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "r2_objeto",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 305.9,
+      "hasta": 307.5
+     },
+     "emojis": [
+      "balance_scale",
+      "briefcase"
+     ],
+     "arriba": "Un juez castigó a",
+     "abajo": "4 abogados"
+    },
+    {
+     "tipo": "r2_objeto",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 342.7,
+      "hasta": 344.25
+     },
+     "emojis": [
+      "page_facing_up",
+      "balance_scale"
+     ],
+     "arriba": "Casos que",
+     "abajo": "nunca existieron",
+     "sello": "INVENTADO"
+    },
+    {
+     "tipo": "r2_estado",
+     "en": "prohibió",
+     "offset": -0.4,
+     "dur": 4.2,
+     "titulo": "El castigo",
+     "items": [
+      [
+       "2 años sin trabajar",
+       false
+      ],
+      [
+       "Multa",
+       false
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "titulo": "Emily",
+   "tipo": "noticia",
+   "etiqueta": "ÚTIL · EMILY",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 413.72,
+     "hasta": 417.54,
+     "texto": "Ahora los hospitales en Estados Unidos tienen una empleada de IA llamada Emily,"
+    },
+    {
+     "clip": "0001",
+     "desde": 422.5,
+     "hasta": 424.08,
+     "texto": "la cual se encarga de atender llamadas."
+    },
+    {
+     "clip": "0001",
+     "desde": 424.62,
+     "hasta": 427.44,
+     "texto": "Ya atendió a más de 2,2 millones de estadounidenses,"
+    },
+    {
+     "clip": "0001",
+     "desde": 437.72,
+     "hasta": 440.74,
+     "texto": "y maneja una de cada cuatro llamadas de pacientes a nivel global."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "r2_objeto",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 415.5,
+      "hasta": 417.5
+     },
+     "emojis": [
+      "robot",
+      "telephone_receiver"
+     ],
+     "arriba": "Una empleada de IA",
+     "abajo": "llamada Emily"
+    },
+    {
+     "tipo": "r2_objeto",
+     "cubrir": {
+      "clip": "0001",
+      "desde": 425.6,
+      "hasta": 427.4
+     },
+     "emojis": [
+      "telephone_receiver",
+      "hospital"
+     ],
+     "arriba": "Ya atendió a más de",
+     "abajo": "2,2 millones"
+    },
+    {
+     "tipo": "r2_barras",
+     "en": "cuatro",
+     "offset": -0.3,
+     "dur": 2.6,
+     "titulo": "Llamadas de pacientes",
+     "items": [
+      [
+       "Las atiende Emily",
+       25
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "sin_cola": true
+}

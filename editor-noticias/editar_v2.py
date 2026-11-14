@@ -399,6 +399,9 @@ def main():
     editar.COLOR = LUZ.get(a.luz, a.luz)
 
     edl = json.loads(Path(a.edl).read_text(encoding="utf-8"))
+    global COLA_CTA
+    if edl.get("sin_cola"):  # 14 nov (v10): sin cierre; el video termina en la última frase
+        COLA_CTA = 0.05
     CLAVES_EXTRA.update(normalizar(c) for c in edl.get("claves", []))
     if edl.get("acento"):  # 12 nov (E1): color de las palabras clave (ASS BGR), p. ej. rojo "&H002020E0"
         editar.ACENTO = edl["acento"]
@@ -518,7 +521,8 @@ def main():
                 continue
             eventos.append((hits[g.get("n", 1) - 1]["s"] + g.get("offset", 0.0) - a.adelanto, g["dur"] + a.adelanto, g))
     cta_ini = total - 0.1  # la pregunta aparece justo cuando termina de hablar
-    eventos.append((cta_ini + 0.15, COLA_CTA - 0.1, {"tipo": "emoji", "ch": edl.get("cta_emoji", "💬"), "x": 870, "y": 840,
+    if not edl.get("sin_cola"):
+      eventos.append((cta_ini + 0.15, COLA_CTA - 0.1, {"tipo": "emoji", "ch": edl.get("cta_emoji", "💬"), "x": 870, "y": 840,
                                                     "tam": 200}))
     graficos = []
     for i, (t0, dur, g) in enumerate(sorted(eventos, key=lambda e: e[0])):
