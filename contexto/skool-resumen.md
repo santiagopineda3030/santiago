@@ -64,3 +64,11 @@ Curiosidad (abrir huecos y cerrarlos tarde); emoción y polarización (nada neut
 ## 7. Errores y reglas
 Errores: nicho estrecho o técnico; el producto al principio; contenido neutro; ganchos flojos ("hola, hoy os enseño"); CTA sin razón; resultados sin prueba; ChatGPT como base; grabar sin preparar; mezclar temas o idiomas; cuenta vacía, seguidores comprados, rendirse en semana 2; IG+FB juntos; publicar poco; repetir lo que no funcionó.
 Reglas: 1) la idea lo es todo; 2) filtro 5-50 y conciencia 0-1; 3) SSDD; 4) gancho → contexto → moraleja → CTA; 5) buscar información (10× media); 6) 80% variaciones validadas / 20% experimentos; 7) consistencia, grabar el mes en un día; 8) mostrar > decir; 9) simple > complejo; 10) todo o nada.
+
+## Anexo 14 nov · por qué los ganchos de Santi sonaban "cerrados" y "de IA" (según 📁 Manejo PC Cloud)
+- Se le hablaba al 10 % que ya conoce el tema (conciencia 2-4: "automatiza con IA"). El método pide hablar al 90 % (conciencia 0-1). Filtro 5-50: ¿lo entiende un niño de 5 años? ¿le interesa a 50 de cada 100 personas en la calle? Si el gancho dice "IA", "automatización", "agente", "workflow", casi seguro no pasa.
+- Regla de dinero/negocios: primero el resultado o el dinero, la herramienta después (seg 20-30). Nunca abrir con la herramienta.
+- Abre el nicho para atraer, filtra al cliente después.
+- Proceso de la sección G: cliente → objetivo → idea ganadora (vídeo con ojos cerrados, casi siempre referencia viral de OTRO nicho reencuadrada) → calculadora (≥6-7) → guion (gancho palabra por palabra → regancho que sube miedo/curiosidad → historia con credibilidad antes/después con fecha, curiosidad hasta ~30 s → revelación → moraleja → CTA con palabra clave o "sígueme" con razón) → formato según la idea. El valor técnico lo pone el experto; ChatGPT solo apoya (por eso suena "de IA").
+- Tono de Víctor: directo, de tú a tú, humor y palabrotas suaves, se ríe de sí mismo, analogías cotidianas (calle con carteles, coche que arranca, patear un árbol), repite conceptos y cifras concretas. Para imitarlo: frases cortas, ejemplos de la vida diaria, números concretos, cero jerga, opinión fuerte o polémica.
+- Las notas lección por lección (~58 KB, en palabras del chat) están en el PC de Santi; el curso es de pago, no se copia textual.
