@@ -359,3 +359,4 @@
 - 14 nov · Base 4: guion armado '120 horas' (voz de Santi) en cerebro-guiones/guion-120-horas.md. Falta OK y confirmar datos.
 - 14 nov · Base 4: regla de Santi: el gancho debe ser entretenimiento universal, no hablar de 'mis videos/horas'. 5 opciones entretenidas en cerebro-guiones/guiones-santi-5-entretenidos.md (en construcción).
 - 14 nov · Base 4: checklist obligatorio antes de escribir guiones virales (cerebro-guiones/checklist-antes-de-escribir.md) y regla en CLAUDE.md, a pedido de Santi.
+- 14 nov · Base 4: guion armado '¿Cuánto se gana con 1.000 seguidores?' (idea 4, reencuadre de Víctor C3, pasó el checklist) en cerebro-guiones/guion-1000-seguidores.md. Falta OK de Santi y confirmar datos.
