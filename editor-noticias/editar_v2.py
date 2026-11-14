@@ -185,7 +185,7 @@ def ass_v2(palabras, secciones, gancho, cta, ruta, colores=None, opciones=None):
             grupos.append(actual)
             actual = []
     if op.get("sin_puntuacion"):  # 13 nov (E1, Santi): sin comas ni puntos (se agrupa antes, así no se juntan frases)
-        grupos = [[dict(w, w=re.sub(r"[.,;:…]+", "", w["w"])) for w in g] for g in grupos]
+        grupos = [[dict(w, w=re.sub(r"(?<!\d)[.,;:…]+|[.,;:…]+(?!\d)", "", w["w"])) for w in g] for g in grupos]
         grupos = [[w for w in g if w["w"].strip()] for g in grupos]
         grupos = [g for g in grupos if g]
     ev = []

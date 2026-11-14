@@ -377,7 +377,7 @@
     },
     {
      "clip": "0001",
-     "desde": 257.52,
+     "desde": 257.36,
      "hasta": 260.2,
      "texto": "Perplexity, por ejemplo, lo hizo en el 15 % de las respuestas;"
     },
@@ -483,7 +483,7 @@
     },
     {
      "clip": "0001",
-     "desde": 367.04,
+     "desde": 366.94,
      "hasta": 369.42,
      "texto": "Sabiendo que son abogados, ¿cómo se van a inventar casos con IA?",
      "bn": true
