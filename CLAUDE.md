@@ -60,6 +60,9 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
   papelera cuando el video se publica (antes, copia en `drive-respaldo/guiones/`). Nunca la clase gratis. Detalle: `contexto/guiones.md`.
 - **Correcciones que son regla** → "Ajustes de Santi" del documento de la red (Drive + copia en `drive-respaldo/recursos/`) + bitácora.
 
+## Guiones virales: checklist obligatorio (regla de Santi, 14 nov)
+Antes de escribir CUALQUIER guion viral, leer en GitHub `cerebro-guiones/checklist-antes-de-escribir.md` y lo que pide (notas del curso de Víctor `contexto/skool-notas-detalladas.md`, los 49 ganchos `contexto/ganchos-virales.md`, referencias `cerebro-guiones/referencias-virales-ig.md` y `analisis-viral-hoy.md`). Gancho = entretenimiento universal sobre el espectador (no "mis videos/mis horas"), idea = reencuadre de un viral de otro nicho, voz de Santi.
+
 ## Quién es y cómo hablarle
 - **Santiago Pineda** (santiagopineda3030@gmail.com), Colombia, zona horaria **America/Bogota**.
 - **Siempre en español**, tuteo, frases cortas y simples. Explicar paso a paso, con capturas si hace falta.
