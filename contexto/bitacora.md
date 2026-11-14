@@ -367,3 +367,4 @@
 - 14 nov · Base 4: REGLA DE ORO 2 (viral = tendencia hoy + controversial + TODA la calculadora en ✔) y guion '¿IA o excusa?' (Canva 22 %, Uber 10 %) en cerebro-guiones/guion-ia-quita-trabajo.md.
 - 14 nov · Base 4: guion 'Lo que los millonarios nunca te cuentan' (construido paso a paso con Santi) en cerebro-guiones/guion-millonarios-nunca-te-cuentan.md. Falta decidir línea de IA (tendencia) y OK.
 - 14 nov · Base 4: guion millonarios V2 (sin giro, moraleja = el video es el sistema funcionando) en el mismo archivo. Falta OK.
+- 14 nov · Base 4: GUION FINAL APROBADO por Santi: 'Lo que los millonarios nunca te cuentan' (cerebro-guiones/guion-final-millonarios.md). Método paso a paso agregado al checklist. Pendiente: grabar, confirmar datos, subir a Drive y publicar con 'dale'.

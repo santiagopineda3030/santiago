@@ -13,3 +13,6 @@ El gancho debe ser MUY ABIERTO: lo que le gusta a TODA la gente = FAMA, DINERO, 
 
 ## REGLA DE ORO 2 (Santi, 14 nov): un viral cumple TODO
 Para ser viral debe ser TENDENCIA AHORITA MISMO y CONTROVERSIAL, además del resto de la calculadora. Si UN solo criterio falla, el guion queda mal: no se entrega. Antes de escribir: (1) buscar en la web qué es tendencia HOY (noticias de la semana, con fecha) y verificar los datos; (2) elegir un tema que divida (¿verdad o excusa?, ¿quién tiene razón?); (3) mostrar la calculadora con los 7 criterios todos en ✔; (4) si falla alguno, cambiar de idea, no entregar.
+
+## MÉTODO PASO A PASO (funcionó con Santi, 14 nov): construir el guion junto a él, no entregar guiones enteros
+1) Elegir la idea que YA funciona (morbo, dinero, famosos, dopamina) → 2) gancho: dar 5-6 opciones con la referencia que ya funciona y la prueba de 3 (pega en 1 s, se entiende sin contexto, deja un hueco); Santi elige → 3) decidir el "secreto"/contenido que cumple la promesa (verdadero, controversial, con datos verificados por búsqueda) → 4) regancho → 5) giro/moraleja/CTA → 6) calculadora 7/7 (tendencia hoy y controversia) → 7) leer en voz alta (voz de Santi). Un paso a la vez; Santi corrige y yo aprendo su gusto.
