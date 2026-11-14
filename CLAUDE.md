@@ -52,7 +52,7 @@ Este archivo lo lee Claude al empezar cada sesión. Es la memoria en la nube (Gi
   `Santi · Base 4` (`session_01Mcnvqsniy4E3PwFkKD6G4A`) · `Santi · Preguntas` (`session_01Mcnvqvgpb4vJdHLWw8g5tF`) ·
   📁 Edición de videos `session_01Mcnvqw535MF9WSXKXT5Cgs` · 📁 Guiones `session_01McnvqvLLYGtXVTA9bDdCQW` ·
   📁 Anuncios (Meta) `session_01McnvqsMdqqqXtnJVikQRtp` · 📁 TikTok `session_01McnvqvdnHAnmk3XpmCv1th` ·
-  📁 Instagram `session_01McnvqvSeKF6PQgmxb8TMbh` · 📁 YouTube `session_01Mcnvqv6MuyBBGX1vcj7n1C` · Web · Landing `session_01Mcnvqshyy1YTa2uLZAZ2tP` · 🧠 Cerebro viral `session_01McnvqwGMxfMuoz8myeug2m` (13 nov).
+  📁 Instagram `session_01McnvqvSeKF6PQgmxb8TMbh` · 📁 YouTube `session_01Mcnvqv6MuyBBGX1vcj7n1C` · Web · Landing `session_01Mcnvqshyy1YTa2uLZAZ2tP` · 🧠 Cerebro viral `session_01McnvqwGMxfMuoz8myeug2m` (13 nov) · 📁 Manejo PC Cloud `session_01Mcnvqtj9S1Ho8vsAtNBzmo` (14 nov, corre en el PC de Santi, único chat que ve su navegador; antes "Resumen curso Skool viral").
   **AHORRO (13 nov):** ya NO se renuevan cada día; Base en Opus, Edición en Fable 5.2 hasta el 16 nov, el resto Sonnet (ver estado-actual.md). Al crearlos con create_session SIEMPRE poner `source_url` (repo) y `source_revision`, o salen sin memoria. Viejos: `contexto/chats.md`.
 - **Videos viejos se borran** (regla de Santi, 7 nov): cuando un video ya se publicó, su crudo va a la papelera y se revisa el
   espacio de Drive; Santi vacía la papelera.

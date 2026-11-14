@@ -333,3 +333,4 @@
 - 13 nov · Regla de Santi: nada de bailes en ideas virales. Lista 4 (formatos hablados que funcionan hoy) en ideas-virales.md.
 - 14 nov · Base 4: PDF 'Ganchos Virales' (49 ganchos + estructura viral) guardado en contexto/ganchos-virales.md. Falta analizar el curso de Skool: Claude no tiene acceso (no hay computador de Santi conectado a la sesión).
 - 14 nov · Base 4: resumen del curso Skool 'Viralidad.com' (142/143 lecciones; lo hizo otro chat) en contexto/skool-resumen.md (copia en rama memoria/skool-resumen). Úsalo con contexto/ganchos-virales.md para guiones virales.
+- 14 nov · Base 4: el chat 'Resumen curso Skool viral' pasa a llamarse 📁 Manejo PC Cloud (session_01Mcnvqtj9S1Ho8vsAtNBzmo): corre en el PC de Santi y es el único que puede abrir su navegador (Skool, Instagram). Instagram sigue sin autorizar: Santi debe darle el permiso en ese chat.
