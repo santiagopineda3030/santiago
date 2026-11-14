@@ -1,62 +1,38 @@
-# Guiones virales 1 · 14 nov 2026 · 100 % método del curso Viralidad.com
-Base: contexto/skool-resumen.md (curso) + contexto/ganchos-virales.md (49 ganchos) + referencias-virales-ig.md (reels de hoy). Nicho: dueños de negocio sin tiempo para contenido (Cerebro de Contenido). Seguidor ideal: dueño de negocio, conciencia 0-1 (lenguaje simple, sin "IA", "automatización" ni herramientas). Deseo SSDD: **Dinero** (+ tiempo). Objetivo: viral (25 % del mes). Regla: mostrar resultados, no herramientas. Los datos del curso se usan como método; las cifras se verifican antes de grabar.
+# Guiones virales 1 · v2 · 14 nov 2026 · estilo Víctor Heras (curso Viralidad.com)
+Corrección de Santi: el tema debe ser ABIERTO (lo entiende cualquiera, filtro 5-50 años, conciencia 0-1) y se va CERRANDO hacia dueños de negocio. Tono Víctor: hablado, directo, frases cortas, ego, número concreto, ejemplo cotidiano, sin frases de eslogan ni listas "perfectas" (eso suena a IA). Nada de herramientas ni "IA" en el vídeo.
+Base: contexto/skool-resumen.md, contexto/ganchos-virales.md, referencias #10 (dato que duele) y #9 (revela por qué).
+Embudo del guion: tema de todos (Dinero/tiempo) → situación cotidiana → giro → "esto te pasa a ti, dueño de negocio" → CTA.
 
-## Elección de las 2 referencias (de las 10)
-- **#10 Luisito** (dato con número que duele) → mejor de todas para el nicho: se traduce 1 a 1 a tiempo = dinero.
-- **#9 LADbible, piloto** (experto revela por qué) → segunda: el hueco de curiosidad sirve para "por qué publicar todos los días no te trae clientes".
-Descartadas: #1 y #8 (puro visual, no sostienen la moraleja), #2 y #7 (emoción/humor ajenos), #3 y #6 (retos que requieren producción), #4 anuncio, #5 debate (buena, queda de reserva).
+## VÍDEO 1 · PRUEBA DE MAÑANA · "2 meses al año mirando una pantalla"
+- Referencia #10 (Luisito). Gancho: Fact + número (#17). Objetivo: viral. Formato: selfie de noche, texto grande, plano fijo, ~45-50 s.
+- **Gancho (0-3 s, texto en pantalla = lo que dices):**
+  "Si usas el celular 4 horas al día, llevas dos meses al año mirando una pantalla."
+  (4 h × 365 = 1.460 h ÷ 24 = 60,8 días.) Texto: **61 DÍAS**
+- **Regancho (3-8 s):** "Dos meses. Y lo peor no es eso. Lo peor es en qué los gastas."
+- **Contexto (8-28 s, sigue abierto):**
+  "Ahorita estás viendo videos de gente que se ganó la vida haciendo videos. Tú miras, ellos graban. Misma pantalla, mismas horas, y ellos cobran por eso y tú no."
+- **Giro hacia el nicho (28-40 s):**
+  "Y si tienes un negocio, peor. Porque tus clientes están ahí, esas mismas cuatro horas. Están viendo a tu competencia. A ti no te ven, porque tú no apareces. ¿Y por qué no apareces? Porque no tienes tiempo, ¿verdad?"
+- **Moraleja (40-47 s):** "Tu cliente ya está en el celular. Lo único que falta es que te vea a ti."
+- **CTA (47-52 s):** "Si quieres aparecer sin pasarte el día grabando, comenta SISTEMA y te lo mando por mensaje."
+- **Cierre en bucle:** última imagen vuelve al número 61 y se tacha.
+- **Edición (curso):** una sola fuente; cifra en pantalla; subtítulos 2-4 palabras con la clave en rojo; interrupción de patrón cada 5-10 s; silencios cortos antes del giro; audio limpio.
+- **Variantes de gancho (A/B):** (a) "Llevas dos meses al año mirando una pantalla. Haz la cuenta." (b) "Si usas el celular 4 horas al día, esto te va a doler." (c) "¿Sabías que dos meses de tu año los pasas viendo el celular?"
 
-## Calculadora de viralidad (curso: pasa con ≥ 6-7 de 7)
-| Criterio | V1 "45 días" | V2 "3 razones" |
-|---|---|---|
-| Lo entiende un niño de 5 años | ✔ | ✔ |
-| Regla 50/100 (50 % lo entiende, 100 % le sirve a alguien del nicho) | ✔ | ✔ |
-| Referencia viral reciente | ✔ (#10) | ✔ (#9) |
-| Mercado SSDD (Dinero) | ✔ | ✔ |
-| Tendencia | ✔ dato con número | ✔ "revela por qué" |
-| Controversia | ✔ "tu tiempo vale oro y lo regalas" | ✔ "publicar todos los días NO sirve" |
-| Formato probado | ✔ selfie + texto grande | ✔ hablando a cámara + subtítulos |
-Total: 7/7 y 7/7.
+## VÍDEO 2 · "Por qué ese negocio malo está lleno y el tuyo no"
+- Referencia #9 (LADbible, revela por qué). Gancho: Hoyo (#3) + Enemigo común (#11). Objetivo: viral. Formato: hablando a cámara + subtítulos grandes, ~50 s.
+- **Gancho (0-3 s):** "Hay un negocio malísimo en tu ciudad que siempre está lleno. Y el tuyo, que es mejor, está vacío. Te voy a decir por qué."
+- **Regancho (3-8 s):** "Y no es la ubicación. Y no es el precio."
+- **Contexto (8-30 s, abierto):**
+  "Seguro conoces uno. El restaurante que no es tan bueno, pero siempre hay cola. La barbería que corta regular, pero está llena. Y tú te preguntas: ¿cómo pueden?"
+  (aquí NO se revela la razón todavía)
+- **Revelación (30-40 s):** "El cliente no compra al mejor. Compra al que ve. Al que le sale en el celular, al que ya conoce de verlo diez veces."
+- **Giro hacia el nicho (40-48 s):** "Si tienes un negocio y nadie sabe que existes, no te falta calidad. Te falta que te vean. Y sí, lo sé, no tienes tiempo."
+- **Moraleja + CTA (48-55 s):** "Eso se arregla sin que tú grabes todos los días. Comenta SISTEMA y te cuento cómo."
+- **Cierre en bucle:** vuelve a "el negocio malo lleno" (imagen de la cola).
+- **Verificar antes de grabar:** el ejemplo del restaurante/barbería es genérico (no afirmes datos de un negocio real).
 
----
-## VÍDEO 1 · PRUEBA DE MAÑANA · "45 días al año"
-- **Idea ganadora (ojos cerrados):** Santi en selfie, de noche en el coche (como #10), cámara fija; en pantalla un número enorme "45 DÍAS". Dice el dato, lo explica con una cuenta simple y cierra con el CTA.
-- **Objetivo:** viral. **Quién graba:** Santi. **Dónde:** coche o cuarto con luz cálida, plano medio. **Atrezo:** celular en la mano mostrando WhatsApp (solo el ícono, sin chats reales).
-- **Gancho (palabra por palabra, 0-3 s). Tipo: Fact + número (#17):**
-  Texto en pantalla (rojo, grande): **45 DÍAS**
-  "Si contestas WhatsApp 3 horas al día, pierdes 45 días al año. Completos. Sin dormir."
-  (3 h × 365 = 1.095 h ÷ 24 = 45,6 días.)
-- **Regancho (3-8 s):** "Y no es lo peor. Lo peor es lo que NO haces mientras contestas."
-- **Historia / contexto (8-30 s, curiosidad sin revelar):**
-  - Dueño de negocio: todo el día apagando incendios, respondiendo, atendiendo.
-  - Mientras tanto el contenido queda para "después"; ese después nunca llega.
-  - Pregunta al espectador: "¿Cuántas horas al día le dedicas a tu negocio… y cuántas a que te encuentren clientes?"
-  - Cuenta en pantalla: 3 h al día = 45 días; "¿y cuántos clientes nuevos se pierden en esos 45 días?"
-- **Desarrollo (30-42 s):** la revelación: el problema no es el WhatsApp, es que todo en tu negocio depende de ti.
-- **Moraleja (42-50 s, te posiciona):** "Tu tiempo vale dinero. Lo que depende de ti se detiene cuando tú te detienes. Lo que se repite, se convierte en un sistema."
-- **CTA (50-55 s), con razón y palabra clave:** "Comenta SISTEMA y te mando cómo sacar el contenido de tu negocio sin sentarte a hacerlo." (respuesta por DM)
-- **Loop:** última frase vuelve a la primera ("…o seguir regalando 45 días al año").
-- **Edición (curso):** una sola fuente en subtítulos, 2-4 palabras con la clave en rojo; cifra siempre en pantalla; interrupción de patrón cada 5-10 s (zoom, corte, icono); silencios intencionales; audio = 50 % (voz limpia, sin música fuerte); mostrar > decir (reloj/calendario con los 45 días tachándose).
-
----
-## VÍDEO 2 · "3 razones por las que publicar todos los días no te trae clientes"
-- **Idea ganadora:** Santi a cámara, subtítulos grandes (como #9, estilo "te revelo por qué"). En pantalla aparecen 3 números; la tercera razón se guarda hasta el seg 30.
-- **Objetivo:** viral. **Quién graba:** Santi. **Dónde:** set limpio, luz suave, fondo del negocio/oficina.
-- **Gancho (0-3 s). Tipo: Razones (#22) + Hoyo (#3) + Contra corriente (#13):**
-  "Publicar todos los días no te trae clientes. Hay 3 razones, y la tercera nadie te la dice."
-- **Regancho (3-8 s):** "Si publicas todos los días y nada pasa, esto te va a incomodar."
-- **Historia / contexto (8-30 s):**
-  - Razón 1: tus primeros 3 segundos. Si no frenan el scroll, nada de lo demás importa.
-  - Razón 2: hablas de ti, no de lo que quiere el cliente (resultado, no producto).
-  - Hueco de curiosidad: "La tercera es la que más duele…" (no se revela todavía).
-- **Desarrollo (30-45 s):** razón 3: publicas sin sistema, entonces un día no tienes ideas, otro día no tienes tiempo, y a la semana desapareces.
-- **Moraleja (45-52 s):** "Constancia sin sistema es cansancio. La constancia la hace el sistema, no tú."
-- **CTA (52-58 s):** "Comenta SISTEMA y te muestro cómo se arma uno para tu negocio."
-- **Loop:** vuelve a "publicar todos los días no te trae clientes… el sistema sí".
-- **Edición:** igual que V1; los números 1, 2, 3 grandes; la 3 aparece con un golpe de sonido al revelar.
-- **Verificar antes de grabar:** que cada razón se sostenga con lo que dice el curso (retención/gancho, resultado para el cliente, consistencia por sistema).
-
----
-## Plan de pruebas (curso: variaciones)
-- Grabar V1 y V2 el mismo día (batching). Si uno hace 3× la media, rehacer en otro formato y subir trial reels.
-- Variantes del gancho para V1: (a) "Contestar WhatsApp te quita 45 días al año." (b) "¿Sabías que contestar WhatsApp te cuesta 45 días al año?" (c) "Tus mensajes de WhatsApp valen 45 días de tu vida cada año."
+## Qué cambió vs. la v1 (para no repetir el error)
+- Abierto → cerrado: el gancho ya no habla de WhatsApp ni de dueños de negocio; llega al nicho a los ~28-40 s.
+- Menos "voz de IA": sin eslóganes tipo "constancia sin sistema es cansancio", sin tríadas perfectas, con muletillas habladas ("¿verdad?", "ahorita", "seguro conoces uno").
+- Mantiene el curso: 7/7 en calculadora de viralidad (niño de 5 años, 50/100, referencia, SSDD Dinero, tendencia, controversia, formato), gancho + contexto + moraleja + CTA, bucle y A/B.

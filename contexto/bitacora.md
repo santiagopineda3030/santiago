@@ -337,3 +337,4 @@
 - 14 nov · Base 4: referencias virales de IG (10 reels 12–14 nov, hechas por 📁 Manejo PC Cloud) en cerebro-guiones/referencias-virales-ig.md y 3 guiones virales en cerebro-guiones/guiones-virales-1.md. G1 '45 días al año' = guion de la prueba de mañana. Falta: Santi aprueba y se sube a Drive › Guiones.
 - 14 nov · Base 4: copia de las referencias virales de IG en contexto/referencias-virales-ig.md (junto a skool-resumen.md), a pedido de Santi.
 - 14 nov · Base 4: guiones virales 1 reescritos 100 % con el método del curso (calculadora de viralidad, plantilla de guion, 2 referencias: #10 y #9). V1 '45 días al año' = prueba de mañana. Falta OK de Santi; en Drive › Guiones quedó la versión VIEJA (actualizar o borrar tras su OK).
+- 14 nov · Base 4: guiones virales 1 v2 (estilo Víctor: tema abierto que se cierra al nicho, tono hablado). V1 '2 meses al año mirando una pantalla' = prueba de mañana; V2 'negocio malo lleno'. En Drive › Guiones sigue la versión vieja.
