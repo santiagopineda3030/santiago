@@ -341,3 +341,4 @@
 - 14 nov · Base 4: guiones virales v3 (100 % abiertos, nicho solo en el CTA; V1 'Dos meses al año', V2 'Por qué los mediocres ganan más'). En Drive sigue la versión vieja.
 - 14 nov · Base 4: guiones virales v4 (voz hablada de experto en viralidad, sin eslóganes; V1 '61 días', V2 'Tu video no se hace viral por esto'). En Drive sigue la versión vieja.
 - 14 nov · Base 4: guiones virales 2 (formato de los referentes de Santi: Phelps, Nelson, Top Miami). 12 ideas abiertas; elegidos Messi/servilleta (prueba mañana), 3 negocios sin lo que venden, corto 'Deja de hacerlo todo tú'. Datos reales marcados ⚠ a verificar.
+- 14 nov · Base 4: cerebro-guiones/guion-prueba-messi.md (calco del guion Phelps de Santi; v2 sin eslóganes). Falta OK de Santi y verificar datos.
