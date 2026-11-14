@@ -353,3 +353,4 @@
 - 14 nov · Santi dio 'dale' al v10 1.1 → fila 12: Publicar 14/11 11:00 (el evento de Calendar ya estaba a las 11:00). v10 1.0 a la papelera. COLA fila 11: Entregado. Tras publicar: crudo V10.MOV (19ayqKy…), guion (15z-InO…) e idea (1qtMssQ…) a la papelera con copia en drive-respaldo.
 - 14 nov · Base 4: 3 guiones virales de 📁 Manejo PC Cloud guardados como BORRADOR en cerebro-guiones/guiones-cerebro-de-contenido.md (sin OK verificado de Santi; ojo: son cerrados al negocio).
 - 14 nov · Base 4: notas detalladas del curso Viralidad.com (pegadas por Santi, hechas por 📁 Manejo PC Cloud) guardadas COMPLETAS en contexto/skool-notas-detalladas.md. Siguiente: guion desde cero con esas notas.
+- 14 nov · Base 4: guion viral v1 método Víctor con las notas completas (entrevista '¿Qué prefieres?' + calculadora + plantilla) en cerebro-guiones/guion-viral-victor-v1.md. Falta OK de Santi.
