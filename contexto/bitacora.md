@@ -354,3 +354,4 @@
 - 14 nov · Base 4: 3 guiones virales de 📁 Manejo PC Cloud guardados como BORRADOR en cerebro-guiones/guiones-cerebro-de-contenido.md (sin OK verificado de Santi; ojo: son cerrados al negocio).
 - 14 nov · Base 4: notas detalladas del curso Viralidad.com (pegadas por Santi, hechas por 📁 Manejo PC Cloud) guardadas COMPLETAS en contexto/skool-notas-detalladas.md. Siguiente: guion desde cero con esas notas.
 - 14 nov · Base 4: guion viral v1 método Víctor con las notas completas (entrevista '¿Qué prefieres?' + calculadora + plantilla) en cerebro-guiones/guion-viral-victor-v1.md. Falta OK de Santi.
+- 14 nov · Base 4: versión '10 de 10' del guion de Santi (entrevista ¿Qué prefieres?) en cerebro-guiones/guion-viral-10de10.md. Falta OK y confirmar datos (⚠).
