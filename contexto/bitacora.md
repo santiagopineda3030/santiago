@@ -348,3 +348,4 @@
 - 14 nov · Base 4: análisis viral de hoy parte 2 (patrones) guardado. Siguiente: guion construido sobre esos patrones, con OK de Santi.
 - 14 nov · Base 4: guion viral v1 construido sobre lo viral de hoy ('Dos meses de tu año') en cerebro-guiones/guion-viral-hoy-v1.md. Falta OK de Santi.
 - 14 nov · Base 4: guion viral v2 'Me desperté y ya estaba publicado' (historia con giro, sin regaño; Santi rechazó el v1 por tono de regaño) en cerebro-guiones/guion-viral-hoy-v2.md.
+- 14 nov · v10 1.1 (Santi: 'increíblemente bien editado, me gustó mucho'): se agrega el CTA final (446,4–452,3) con el 'Sígueme' y la campana. 109 s. Drive 1qn2_84NlNxTQGAll05Z23ivTJvZmySCJ; fila 12 y COLA actualizadas, sigue Listo 11:00. Regla: aunque el guion diga 'sin cierre', si Santi lo grabó, va. 1.0 (1YfgPWC…) para la papelera.

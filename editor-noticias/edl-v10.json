@@ -1,5 +1,5 @@
 {
- "nota": "v10 1.0 · estilo R2 en rojo, CTA de seguir a la mitad, sin cierre al final",
+ "nota": "v10 1.1 · con el CTA final (pedido de Santi)",
  "gancho_texto": "",
  "gancho_neon": "Nvidia sin jefe",
  "dos_pisos": true,
@@ -7,8 +7,8 @@
  "sin_titulos": true,
  "sin_puntuacion": true,
  "fuente_sub": "Montserrat ExtraBold",
- "cta": " ",
- "cta_emoji": "",
+ "cta": "Sígueme para más noticias de IA",
+ "cta_emoji": "🔔",
  "claves": [
   "jefe",
   "ia",
@@ -611,7 +611,26 @@
      ]
     }
    ]
+  },
+  {
+   "titulo": "CTA",
+   "tipo": "cta",
+   "cortes": [
+    {
+     "clip": "0001",
+     "desde": 446.4,
+     "hasta": 452.3,
+     "texto": "Ya sabes, estas fueron las 5 noticias de IA más importantes que pasaron el día de ayer. No te olvides de seguirme para ver más noticias de IA."
+    }
+   ],
+   "graficos": [
+    {
+     "tipo": "seguir",
+     "en": "seguirme",
+     "offset": -0.1,
+     "dur": 3.0
+    }
+   ]
   }
- ],
- "sin_cola": true
+ ]
 }
