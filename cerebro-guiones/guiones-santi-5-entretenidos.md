@@ -1,0 +1,3 @@
+# 5 opciones ENTRETENIDAS en la voz de Santi · 14 nov 2026
+REGLA DE SANTI (14 nov, enojado con razón): el gancho es entretenimiento universal, sobre ELLOS y no sobre mí. Nunca abrir con "mis videos", "mis horas", "mi sistema": nadie se queda por eso. Primero entretiene (pregunta/dilema/juego/escena con gente real), después el giro a nuestro sistema (seg 20-30), el antes/después y el CTA. Los guiones "120 horas", "10 días", "equipo" quedan descartados por cerrados.
+Esqueleto de Santi (el que sí funciona): gancho entretenido → respuestas reales → regancho "te lo enseño en menos de 30 segundos" → "creé un sistema que…" → revelación 3-4 h → 10 min → moraleja → CTA (20 primeras personas, clase gratis). ⚠ Santi confirma datos y que la clase gratis exista.
