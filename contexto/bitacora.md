@@ -368,3 +368,4 @@
 - 14 nov · Base 4: guion 'Lo que los millonarios nunca te cuentan' (construido paso a paso con Santi) en cerebro-guiones/guion-millonarios-nunca-te-cuentan.md. Falta decidir línea de IA (tendencia) y OK.
 - 14 nov · Base 4: guion millonarios V2 (sin giro, moraleja = el video es el sistema funcionando) en el mismo archivo. Falta OK.
 - 14 nov · Base 4: GUION FINAL APROBADO por Santi: 'Lo que los millonarios nunca te cuentan' (cerebro-guiones/guion-final-millonarios.md). Método paso a paso agregado al checklist. Pendiente: grabar, confirmar datos, subir a Drive y publicar con 'dale'.
+- 14 nov · Base 4: idea 2 organizada ('un solo sistema paró un país', FAA ground stop 13 nov, datos verificados) en cerebro-guiones/idea-2-fallo-vuelos.md. Falta que Santi elija gancho y armar guion paso a paso.
