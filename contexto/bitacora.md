@@ -371,3 +371,4 @@
 - 14 nov · Base 4: idea 2 organizada ('un solo sistema paró un país', FAA ground stop 13 nov, datos verificados) en cerebro-guiones/idea-2-fallo-vuelos.md. Falta que Santi elija gancho y armar guion paso a paso.
 - 14 nov · Base 4: guion 'Ronaldo por minuto' (escrito por Santi, pulido: cuenta corregida a 500 USD, según Forbes) en cerebro-guiones/guion-ronaldo-por-minuto.md. Pendiente confirmar datos ⚠ y OK.
 - 14 nov · Base 4: GUION FINAL 'Ronaldo por minuto' (texto de Santi) en cerebro-guiones/guion-final-ronaldo.md. Con el 'Millonarios' ya hay 2 guiones finales. Faltan los demás: Base 4 los hace sola con el checklist.
+- 14 nov · Base 4: guion hecho solo con el checklist: 'MrBeast gana más con chocolates que con videos' (7/7) en cerebro-guiones/guion-mrbeast-chocolates.md. Falta OK de Santi y confirmar ⚠.
