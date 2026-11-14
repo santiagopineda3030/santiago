@@ -1,5 +1,5 @@
 # GUION (hecho por Claude solo, con el checklist) · "¿De dónde saca su dinero el youtuber más famoso del mundo?" · MrBeast · ~60 s · sentado a cámara · 14 nov 2026
-Estado: pendiente de OK de Santi. Voz y esqueleto de Santi (Ronaldo/Millonarios): gancho pregunta → regancho "no es solo X, te explico en menos de 30 s" → la cuenta (números) → revelación (el giro) → moraleja simple → prueba + CTA (el sistema, clase gratis).
+Estado: APROBADO por Santi (14 nov: "lo apruebo"). Pendiente: grabar, confirmar ⚠ y publicar con su "dale". Voz y esqueleto de Santi (Ronaldo/Millonarios): gancho pregunta → regancho "no es solo X, te explico en menos de 30 s" → la cuenta (números) → revelación (el giro) → moraleja simple → prueba + CTA (el sistema, clase gratis).
 Checklist: reencuadre de un viral que YA funciona hoy: MrBeast en Instagram esta semana (8,6 M y 4,5 M de vistas, 12-13 nov, análisis de 📁 Manejo PC Cloud) + Top de Santi (fama y dinero) + gancho Conexiones discordantes/Hoyo (G5/G3 de Víctor: "¿qué tiene que ver la Coca-Cola con el Área 51?").
 
 ## DATOS VERIFICADOS (búsqueda 14 nov; son reportes/documentos a inversionistas, no balances auditados → decir "según reportes")
