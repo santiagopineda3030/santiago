@@ -31,7 +31,7 @@ for clip in sorted(crudos.glob("*.MP4")):
     for i, (a, b) in enumerate(voz):
         seg = audio[int(max(0, a - 0.15) * 16000):int(min(dur, b + 0.15) * 16000)]
         res, _ = wm.transcribe(seg, language="es", word_timestamps=True, condition_on_previous_text=False,
-                               beam_size=5, initial_prompt="Eh... este, este... no... o sea... Mi- Microsoft, eh, el el... IA, Microsoft, Outlook, Teams, Copilot, OpenAI, ChatGPT, Bloomberg, Anthropic, Google, Meta, SpaceX, Nueva York, MIT, Gartner, 74 países, 100.000 reportes, 10.000 millones, 11.000 millones, 25 %, 95 %, 40 %.")
+                               beam_size=5, initial_prompt="Eh... este, este... no... o sea... Nv- Nvidia, eh, el el... IA, Nvidia, Jensen Huang, Colette Kress, Claude, Anthropic, Microsoft, Drive, Perplexity, ChatGPT, Gemini, Estados Unidos, Emily, 15 %, 8 %, 4 %, 2,2 millones.")
         off = max(0, a - 0.15)
         words = [{"w": w.word.strip(), "s": round(off + w.start, 3), "e": round(off + w.end, 3)}
                  for s in res for w in (s.words or []) if w.word.strip()]

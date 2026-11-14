@@ -184,6 +184,27 @@ def g_gauge(dur, titulo="Empresas que ganan con IA", valor="95 %", sub="no ganó
     return _grafico_tarjeta(dur, dib, "alerta")
 
 
+def g_barras(dur, titulo="", items=(("Perplexity", 15), ("ChatGPT", 8), ("Gemini", 4))):
+    """Barras horizontales rojas que crecen una por una con su porcentaje (14 nov, v10)."""
+    mx = max(v for _, v in items) or 1
+
+    def dib(im, t):
+        card, pad = _tarjeta(880, 110 + 125 * len(items), titulo)
+        d = ImageDraw.Draw(card)
+        for i, (nom, v) in enumerate(items):
+            y = pad + 80 + i * 125
+            card.alpha_composite(_sans(nom, 38), (pad + 40, y))
+            k = A.ease_out(A.clamp((t - 0.3 - i * 0.3) / 0.6))
+            x0, ww = pad + 40, 620
+            d.rounded_rectangle((x0, y + 56, x0 + ww, y + 92), 18, fill=(50, 44, 48, 255))
+            if k > 0:
+                d.rounded_rectangle((x0, y + 56, x0 + max(36, ww * v / mx * k), y + 92), 18, fill=ROJO + (255,))
+                card.alpha_composite(A._brillo(_sans(f"{round(v * k)} %", 54, ROJO), 8, 1.3), (pad + 690, y + 30))
+        A.pegar_centro(im, card, im.width / 2, card.height / 2 + 10)
+
+    return _grafico_tarjeta(dur, dib, "pop")
+
+
 # --------------------------------------------------------------------------- pantallas completas
 _cache = {}
 
@@ -223,6 +244,14 @@ def _pantalla(dur, fondo, dib, sonido="whoosh"):
 def _imagen(nombre, tam):
     """Imagen 3D de internet (editor-noticias/imagenes/, Fluent Emoji 3D de Microsoft, licencia MIT) o emoji si no existe."""
     import os
+    if nombre.startswith("logo:"):  # 14 nov: logo de marca en blanco con brillo, dentro de un círculo oscuro
+        ruta = os.path.join(os.path.dirname(__file__), "assets-v2", f"logo_{nombre[5:]}.png")
+        lg = A.logo_blanco(ruta, int(tam * 0.5), int(tam * 0.6))
+        c = Image.new("RGBA", (tam, tam), (0, 0, 0, 0))
+        d = ImageDraw.Draw(c)
+        d.ellipse((6, 6, tam - 6, tam - 6), fill=(30, 26, 30, 255), outline=(255, 255, 255, 120), width=4)
+        A.pegar_centro(c, lg, tam / 2, tam / 2)
+        return A._brillo(c, 10, 1.2)
     ruta = os.path.join(os.path.dirname(__file__), "imagenes", f"{nombre}.png")
     if os.path.exists(ruta):
         im = Image.open(ruta).convert("RGBA")
@@ -230,7 +259,7 @@ def _imagen(nombre, tam):
     return A.emoji(nombre, tam)
 
 
-def g_objeto(dur, emojis=("🌍",), puntos=0, texto_arriba="", texto_abajo=""):
+def g_objeto(dur, emojis=("🌍",), puntos=0, texto_arriba="", texto_abajo="", sello="", cae=False):
     """Fondo oscuro con un objeto grande tipo 3D (emoji con sombra y brillo) que flota; opcional: puntos rojos que se apagan."""
     grandes = [_imagen(e, 440 if i == 0 else 250) for i, e in enumerate(emojis)]
 
@@ -256,11 +285,22 @@ def g_objeto(dur, emojis=("🌍",), puntos=0, texto_arriba="", texto_abajo=""):
                 on = t < 0.4 + j * (dur * 0.6 / puntos)
                 col = ROJO if on else (60, 60, 60)
                 d.ellipse((x - 12, y - 12, x + 12, y + 12), fill=col + (255,))
+        if cae and len(grandes) > 1 and t > 0.5:  # 14 nov: el segundo objeto cae arrastrado (Microsoft arrastra a Claude)
+            pass
         if texto_arriba:
             im.alpha_composite(_sans(texto_arriba, 56, BLANCO, False), (90, 330))
+        if sello:
+            ks = A.clamp((t - dur * 0.5) / 0.18)
+            if ks > 0:
+                st = _sans(sello, 76, BLANCO)
+                sl = Image.new("RGBA", (st.width + 70, st.height + 44), (0, 0, 0, 0))
+                ImageDraw.Draw(sl).rounded_rectangle((0, 0, sl.width - 1, sl.height - 1), 16, fill=ROJO + (255,))
+                A.pegar_centro(sl, st, sl.width / 2, sl.height / 2)
+                sl = sl.rotate(-8, resample=Image.BICUBIC, expand=True)
+                A.pegar_centro(im, A.con_alfa(A.escalar(sl, 2 - A.ease_out(ks)), ks), W / 2 + 60, 1000)
         if texto_abajo and t > 0.5:
             q = A.clamp((t - 0.5) / 0.3)
-            im.alpha_composite(A.con_alfa(A._brillo(_sans(texto_abajo, 92, ROJO), 10, 1.4), q), (80, 1290))
+            im.alpha_composite(A.con_alfa(_ajustar(A._brillo(_sans(texto_abajo, 92, ROJO), 10, 1.4), 940), q), (70, 1290))
 
     return _pantalla(dur, _fondo_oscuro, dib)
 
@@ -338,7 +378,9 @@ def construir(g, dur, assets):
     if t == "r2_gauge":
         return g_gauge(dur, g.get("titulo", "Empresas que ganan con IA"), g.get("valor", "95 %"), g.get("sub", "no ganó nada"), g.get("segundo"))
     if t == "r2_objeto":
-        return g_objeto(dur, tuple(g.get("emojis", ["🌍"])), g.get("puntos", 0), g.get("arriba", ""), g.get("abajo", ""))
+        return g_objeto(dur, tuple(g.get("emojis", ["🌍"])), g.get("puntos", 0), g.get("arriba", ""), g.get("abajo", ""), g.get("sello", ""))
+    if t == "r2_barras":
+        return g_barras(dur, g.get("titulo", ""), [tuple(x) for x in g.get("items", [])])
     if t == "r2_logos":
         return g_logos(dur, g.get("arriba", ""), g.get("grande", ""), tuple(g.get("items", [])), g.get("martillo", True), assets)
     return None
