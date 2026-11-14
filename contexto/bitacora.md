@@ -362,3 +362,4 @@
 - 14 nov · Base 4: guion armado '¿Cuánto se gana con 1.000 seguidores?' (idea 4, reencuadre de Víctor C3, pasó el checklist) en cerebro-guiones/guion-1000-seguidores.md. Falta OK de Santi y confirmar datos.
 - 14 nov · Base 4: versión sentado a cámara (H2) del guion '1.000 seguidores' en cerebro-guiones/guion-1000-seguidores-camara.md (Santi: no todo debe ser entrevista).
 - 14 nov · Base 4: guion '1.000 seguidores' v2 estilo Víctor (razones, regla de 3, revelación al seg 30) en cerebro-guiones/guion-1000-seguidores-camara-v2.md.
+- 14 nov · Base 4: guion 'Top 3 razones 1.000 seguidores > 100.000' con 5 ganchos que no hablan del tema, en cerebro-guiones/guion-top3-1000-seguidores.md.
